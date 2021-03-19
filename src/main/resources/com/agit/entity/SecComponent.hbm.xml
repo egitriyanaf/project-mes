@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.agit.entity.security.JdcAdpMstComponent" table="jdcuam_mstcomponent">
+    <id name="id" type="long">
+      <column name="menu_comp_id"/>
+      <generator class="sequence">
+        <param name="sequence">seq_component</param>
+      </generator>
+    </id>
+    <property name="name" type="string">
+      <column length="20" name="menu_comp_name" not-null="true" unique="true"/>
+    </property>
+    <property name="description" type="string">
+      <column length="255" name="menu_comp_desc"/>
+    </property>
+    <property name="icon" type="string">
+      <column length="50" name="menu_comp_icon"/>
+    </property>
+    <many-to-one class="com.agit.entity.security.JdcAdpMstMenu" fetch="select" name="menu">
+      <column name="menu_id"/>
+    </many-to-one>
+  </class>
+</hibernate-mapping>

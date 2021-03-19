@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.agit.entity.security.JdcAdpMstUserrole" table="jdcuam_mstuserole">
+    <id name="id" type="long">
+      <column name="userrole_id"/>
+      <generator class="sequence">
+        <param name="sequence">seq_userole</param>
+      </generator>
+    </id>
+    <many-to-one class="com.agit.entity.security.JdcAdpMstUser" fetch="select" name="user">
+      <column name="user_id"/>
+    </many-to-one>
+    <many-to-one class="com.agit.entity.security.JdcAdpMstRole" fetch="select" name="role">
+      <column name="role_id"/>
+    </many-to-one>
+    <property name="createdBy" type="long">
+      <column name="CREATED_BY"/>
+    </property>
+    <property name="createdDate" type="timestamp">
+      <column name="CREATED_DATE"/>
+    </property>
+    <property name="lastUpdatedBy" type="long">
+      <column name="LAST_UPDATED_BY"/>
+    </property>
+    <property name="lastUpdatedDate" type="timestamp">
+      <column name="LAST_UPDATED_DATE"/>
+    </property>
+  </class>
+</hibernate-mapping>
