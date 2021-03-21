@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.agit.entity.security.JdcAdpMstUser" table="jdcuam_mstuser">
+		<id name="id" type="long">
+			<column name="usr_id" />
+			<generator class="sequence">
+				<param name="sequence">seq_user</param>
+			</generator>
+		</id>
+		<property name="usrLogin" type="string">
+			<column length="50" name="usr_loginname" not-null="true" />
+		</property>
+		<property name="usrPassword" type="string">
+			<column length="120" name="usr_password" />
+		</property>
+		<property name="usrLastName" type="string">
+			<column length="100" name="usr_lastname" />
+		</property>
+		<property name="usrFirstName" type="string">
+			<column length="100" name="usr_firstname" />
+		</property>
+		<property name="usrEmail" type="string">
+			<column length="100" name="usr_email" />
+		</property>
+		<property name="usrPhone" type="string">
+			<column length="20" name="usr_phone" />
+		</property>
+		<property name="createdDate" type="java.util.Date">
+			<column name="creation_date" />
+		</property>
+		<property name="createdBy" type="long">
+			<column name="created_by" />
+		</property>
+		<property name="lastUpdatedBy" type="long">
+			<column name="last_updated_by" />
+		</property>
+		<property name="lastUpdatedDate" type="java.util.Date">
+			<column name="last_updated_date" />
+		</property>
+		<property name="usrType" type="string">
+			<column name="usr_type" />
+		</property>
+		<property name="enabled" type="string">
+			<column name="enabled" />
+		</property>
+		<property name="dptId" type="long">
+			<column name="departement_id" />
+		</property>
+		<many-to-one name="departement" class="com.agit.entity.JdcAdpMstdepartement"
+			fetch="join" insert="false" update="false">
+			<column name="departement_id" />
+		</many-to-one>
+		<set inverse="true" name="userroles">
+			<key>
+				<column name="usr_id" />
+			</key>
+			<one-to-many class="com.agit.entity.security.JdcAdpMstUserrole" />
+		</set>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.agit.entity.security.JdcAdpMstMenu" table="jdcuam_mstmenu">
+    <id name="id" type="long">
+      <column name="menu_id"/>
+      <generator class="sequence">
+        <param name="sequence">seq_menu</param>
+      </generator>
+    </id>
+    <property name="name" type="string">
+      <column length="50" name="menu_name" not-null="true" unique="true"/>
+    </property>
+    <property name="url" type="string">
+      <column length="255" name="menu_url"/>
+    </property>
+    <property name="icon" type="string">
+      <column length="50" name="menu_icon"/>
+    </property>
+    <property name="description" type="string">
+      <column length="50" name="menu_desc"/>
+    </property>
+    <property name="sequence" type="java.lang.Integer">
+      <column name="menu_seq_no"/>
+    </property>
+    <property name="enabled" type="java.lang.Integer">
+      <column name="menu_enabled" not-null="true"/>
+    </property>
+    <property name="parentName" type="string">
+      <column name="menu_parent_name" not-null="true"/>
+    </property>
+    <many-to-one class="com.agit.entity.security.JdcAdpMstMenu" fetch="select" name="parent">
+      <column name="menu_parent_id"/>
+    </many-to-one>
+    <set inverse="true" name="childs">
+      <key>
+        <column name="menu_parent_id"/>
+      </key>
+      <one-to-many class="com.agit.entity.security.JdcAdpMstMenu"/>
+    </set>
+    <set inverse="true" name="components">
+      <key>
+        <column name="menu_id"/>
+      </key>
+      <one-to-many class="com.agit.entity.security.JdcAdpMstComponent"/>
+    </set>
+  </class>
+</hibernate-mapping>

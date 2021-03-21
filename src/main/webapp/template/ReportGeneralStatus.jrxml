@@ -1,0 +1,2292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.11.0.final using JasperReports Library version 6.11.0-0c4056ccaa4d25a5a8c45672d2f764ea3498bebb  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReportGeneralStatus" pageWidth="1008" pageHeight="612" orientation="Landscape" columnWidth="968" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b2a65bf4-cff5-4df1-b20d-af7861c0d0d6">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="taping_date" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+	view_report_gnr.po_no AS po_no,
+	view_report_gnr.po_item AS po_item,
+	view_report_gnr.line_code AS line_code,
+	view_report_gnr.demand_class AS demand,
+		to_char(view_report_gnr.taping_date, 'DD-Mon-YYYY') AS date,
+
+	
+	(SELECT SUM (qty) FROM jdcadp_mstproduksi WHERE demand_class = view_report_gnr.demand_class AND line_code = view_report_gnr.line_code AND po_no =view_report_gnr.po_no AND po_item = view_report_gnr.po_item ) AS qty,
+	(SELECT jo_ppic AS jo_ppic FROM jdcadp_mstproduksi WHERE demand_class = view_report_gnr.demand_class AND po_no = view_report_gnr.po_no AND line_code = view_report_gnr.line_code AND po_item = view_report_gnr.po_item GROUP BY jo_ppic ),
+	( SELECT product_desc AS product_desc FROM jdcadp_mstproduksi WHERE demand_class = view_report_gnr.demand_class AND po_no = view_report_gnr.po_no AND line_code = view_report_gnr.line_code AND po_item = view_report_gnr.po_item GROUP BY product_desc ),
+	COALESCE ( SUM ( ct_in_size_1 ), 0 ) AS ct_1_in,
+	COALESCE ( SUM ( ct_out_size_1 ), 0 ) AS ct_1_out,
+	COALESCE ( SUM ( prep_in_size_1 ), 0 ) AS pr_1_in,
+	COALESCE ( SUM ( prep_out_size_1 ), 0 ) AS pr_1_out,
+	COALESCE ( SUM ( st_in_size_1 ), 0 ) AS st_1_in,
+	COALESCE ( SUM ( st_out_size_1 ), 0 ) AS st_1_out,
+	COALESCE ( SUM ( os_in_size_1 ), 0 ) AS os_1_in,
+	COALESCE ( SUM ( os_out_size_1 ), 0 ) AS os_1_out,
+	COALESCE ( SUM ( as_in_size_1 ), 0 ) AS as_1_in,
+	COALESCE ( SUM ( as_out_size_1 ), 0 ) AS as_1_out,
+	COALESCE ( SUM ( ct_in_size_1_t ), 0 ) AS ct_1_t_in,
+	COALESCE ( SUM ( ct_out_size_1_t ), 0 ) AS ct_1_t_out,
+	COALESCE ( SUM ( prep_in_size_1_t ), 0 ) AS pr_1_t_in,
+	COALESCE ( SUM ( prep_out_size_1_t ), 0 ) AS pr_1_t_out,
+	COALESCE ( SUM ( st_in_size_1_t ), 0 ) AS st_1_t_in,
+	COALESCE ( SUM ( st_out_size_1_t ), 0 ) AS st_1_t_out,
+	COALESCE ( SUM ( os_in_size_1_t ), 0 ) AS os_1_t_in,
+	COALESCE ( SUM ( os_out_size_1_t ), 0 ) AS os_1_t_out,
+	COALESCE ( SUM ( as_in_size_1_t ), 0 ) AS as_1_t_in,
+	COALESCE ( SUM ( as_out_size_1_t ), 0 ) AS as_1_t_out,
+	COALESCE ( SUM ( ct_in_size_2 ), 0 ) AS ct_2_in,
+	COALESCE ( SUM ( ct_out_size_2 ), 0 ) AS ct_2_out,
+	COALESCE ( SUM ( prep_in_size_2 ), 0 ) AS pr_2_in,
+	COALESCE ( SUM ( prep_out_size_2 ), 0 ) AS pr_2_out,
+	COALESCE ( SUM ( st_in_size_2 ), 0 ) AS st_2_in,
+	COALESCE ( SUM ( st_out_size_2 ), 0 ) AS st_2_out,
+	COALESCE ( SUM ( os_in_size_2 ), 0 ) AS os_2_in,
+	COALESCE ( SUM ( os_out_size_2 ), 0 ) AS os_2_out,
+	COALESCE ( SUM ( as_in_size_2 ), 0 ) AS as_2_in,
+	COALESCE ( SUM ( as_out_size_2 ), 0 ) AS as_2_out,
+	COALESCE ( SUM ( ct_in_size_2_t ), 0 ) AS ct_2_t_in,
+	COALESCE ( SUM ( ct_out_size_2_t ), 0 ) AS ct_2_t_out,
+	COALESCE ( SUM ( prep_in_size_2_t ), 0 ) AS pr_2_t_in,
+	COALESCE ( SUM ( prep_out_size_2_t ), 0 ) AS pr_2_t_out,
+	COALESCE ( SUM ( st_in_size_2_t ), 0 ) AS st_2_t_in,
+	COALESCE ( SUM ( st_out_size_2_t ), 0 ) AS st_2_t_out,
+	COALESCE ( SUM ( os_in_size_2_t ), 0 ) AS os_2_t_in,
+	COALESCE ( SUM ( os_out_size_2_t ), 0 ) AS os_2_t_out,
+	COALESCE ( SUM ( as_in_size_2_t ), 0 ) AS as_2_t_in,
+	COALESCE ( SUM ( as_out_size_2_t ), 0 ) AS as_2_t_out,
+	COALESCE ( SUM ( ct_in_size_3 ), 0 ) AS ct_3_in,
+	COALESCE ( SUM ( ct_out_size_3 ), 0 ) AS ct_3_out,
+	COALESCE ( SUM ( prep_in_size_3 ), 0 ) AS pr_3_in,
+	COALESCE ( SUM ( prep_out_size_3 ), 0 ) AS pr_3_out,
+	COALESCE ( SUM ( st_in_size_3 ), 0 ) AS st_3_in,
+	COALESCE ( SUM ( st_out_size_3 ), 0 ) AS st_3_out,
+	COALESCE ( SUM ( os_in_size_3 ), 0 ) AS os_3_in,
+	COALESCE ( SUM ( os_out_size_3 ), 0 ) AS os_3_out,
+	COALESCE ( SUM ( as_in_size_3 ), 0 ) AS as_3_in,
+	COALESCE ( SUM ( as_out_size_3 ), 0 ) AS as_3_out,
+	COALESCE ( SUM ( ct_in_size_3_t ), 0 ) AS ct_3_t_in,
+	COALESCE ( SUM ( ct_out_size_3_t ), 0 ) AS ct_3_t_out,
+	COALESCE ( SUM ( prep_in_size_3_t ), 0 ) AS pr_3_t_in,
+	COALESCE ( SUM ( prep_out_size_3_t ), 0 ) AS pr_3_t_out,
+	COALESCE ( SUM ( st_in_size_3_t ), 0 ) AS st_3_t_in,
+	COALESCE ( SUM ( st_out_size_3_t ), 0 ) AS st_3_t_out,
+	COALESCE ( SUM ( os_in_size_3_t ), 0 ) AS os_3_t_in,
+	COALESCE ( SUM ( os_out_size_3_t ), 0 ) AS os_3_t_out,
+	COALESCE ( SUM ( as_in_size_3_t ), 0 ) AS as_3_t_in,
+	COALESCE ( SUM ( as_out_size_3_t ), 0 ) AS as_3_t_out,
+	COALESCE ( SUM ( ct_in_size_4 ), 0 ) AS ct_4_in,
+	COALESCE ( SUM ( ct_out_size_4 ), 0 ) AS ct_4_out,
+	COALESCE ( SUM ( prep_in_size_4 ), 0 ) AS pr_4_in,
+	COALESCE ( SUM ( prep_out_size_4 ), 0 ) AS pr_4_out,
+	COALESCE ( SUM ( st_in_size_4 ), 0 ) AS st_4_in,
+	COALESCE ( SUM ( st_out_size_4 ), 0 ) AS st_4_out,
+	COALESCE ( SUM ( os_in_size_4 ), 0 ) AS os_4_in,
+	COALESCE ( SUM ( os_out_size_4 ), 0 ) AS os_4_out,
+	COALESCE ( SUM ( as_in_size_4 ), 0 ) AS as_4_in,
+	COALESCE ( SUM ( as_out_size_4 ), 0 ) AS as_4_out,
+	COALESCE ( SUM ( ct_in_size_4_t ), 0 ) AS ct_4_t_in,
+	COALESCE ( SUM ( ct_out_size_4_t ), 0 ) AS ct_4_t_out,
+	COALESCE ( SUM ( prep_in_size_4_t ), 0 ) AS pr_4_t_in,
+	COALESCE ( SUM ( prep_out_size_4_t ), 0 ) AS pr_4_t_out,
+	COALESCE ( SUM ( st_in_size_4_t ), 0 ) AS st_4_t_in,
+	COALESCE ( SUM ( st_out_size_4_t ), 0 ) AS st_4_t_out,
+	COALESCE ( SUM ( os_in_size_4_t ), 0 ) AS os_4_t_in,
+	COALESCE ( SUM ( os_out_size_4_t ), 0 ) AS os_4_t_out,
+	COALESCE ( SUM ( as_in_size_4_t ), 0 ) AS as_4_t_in,
+	COALESCE ( SUM ( as_out_size_4_t ), 0 ) AS as_4_t_out,
+	COALESCE ( SUM ( ct_in_size_5 ), 0 ) AS ct_5_in,
+	COALESCE ( SUM ( ct_out_size_5 ), 0 ) AS ct_5_out,
+	COALESCE ( SUM ( prep_in_size_5 ), 0 ) AS pr_5_in,
+	COALESCE ( SUM ( prep_out_size_5 ), 0 ) AS pr_5_out,
+	COALESCE ( SUM ( st_in_size_5 ), 0 ) AS st_5_in,
+	COALESCE ( SUM ( st_out_size_5 ), 0 ) AS st_5_out,
+	COALESCE ( SUM ( os_in_size_5 ), 0 ) AS os_5_in,
+	COALESCE ( SUM ( os_out_size_5 ), 0 ) AS os_5_out,
+	COALESCE ( SUM ( as_in_size_5 ), 0 ) AS as_5_in,
+	COALESCE ( SUM ( as_out_size_5 ), 0 ) AS as_5_out,
+	COALESCE ( SUM ( ct_in_size_5_t ), 0 ) AS ct_5_t_in,
+	COALESCE ( SUM ( ct_out_size_5_t ), 0 ) AS ct_5_t_out,
+	COALESCE ( SUM ( prep_in_size_5_t ), 0 ) AS pr_5_t_in,
+	COALESCE ( SUM ( prep_out_size_5_t ), 0 ) AS pr_5_t_out,
+	COALESCE ( SUM ( st_in_size_5_t ), 0 ) AS st_5_t_in,
+	COALESCE ( SUM ( st_out_size_5_t ), 0 ) AS st_5_t_out,
+	COALESCE ( SUM ( os_in_size_5_t ), 0 ) AS os_5_t_in,
+	COALESCE ( SUM ( os_out_size_5_t ), 0 ) AS os_5_t_out,
+	COALESCE ( SUM ( as_in_size_5_t ), 0 ) AS as_5_t_in,
+	COALESCE ( SUM ( as_out_size_5_t ), 0 ) AS as_5_t_out,
+	COALESCE ( SUM ( ct_in_size_6 ), 0 ) AS ct_6_in,
+	COALESCE ( SUM ( ct_out_size_6 ), 0 ) AS ct_6_out,
+	COALESCE ( SUM ( prep_in_size_6 ), 0 ) AS pr_6_in,
+	COALESCE ( SUM ( prep_out_size_6 ), 0 ) AS pr_6_out,
+	COALESCE ( SUM ( st_in_size_6 ), 0 ) AS st_6_in,
+	COALESCE ( SUM ( st_out_size_6 ), 0 ) AS st_6_out,
+	COALESCE ( SUM ( os_in_size_6 ), 0 ) AS os_6_in,
+	COALESCE ( SUM ( os_out_size_6 ), 0 ) AS os_6_out,
+	COALESCE ( SUM ( as_in_size_6 ), 0 ) AS as_6_in,
+	COALESCE ( SUM ( as_out_size_6 ), 0 ) AS as_6_out,
+	COALESCE ( SUM ( ct_in_size_6_t ), 0 ) AS ct_6_t_in,
+	COALESCE ( SUM ( ct_out_size_6_t ), 0 ) AS ct_6_t_out,
+	COALESCE ( SUM ( prep_in_size_6_t ), 0 ) AS pr_6_t_in,
+	COALESCE ( SUM ( prep_out_size_6_t ), 0 ) AS pr_6_t_out,
+	COALESCE ( SUM ( st_in_size_6_t ), 0 ) AS st_6_t_in,
+	COALESCE ( SUM ( st_out_size_6_t ), 0 ) AS st_6_t_out,
+	COALESCE ( SUM ( os_in_size_6_t ), 0 ) AS os_6_t_in,
+	COALESCE ( SUM ( os_out_size_6_t ), 0 ) AS os_6_t_out,
+	COALESCE ( SUM ( as_in_size_6_t ), 0 ) AS as_6_t_in,
+	COALESCE ( SUM ( as_out_size_6_t ), 0 ) AS as_6_t_out,
+	COALESCE ( SUM ( ct_in_size_7 ), 0 ) AS ct_7_in,
+	COALESCE ( SUM ( ct_out_size_7 ), 0 ) AS ct_7_out,
+	COALESCE ( SUM ( prep_in_size_7 ), 0 ) AS pr_7_in,
+	COALESCE ( SUM ( prep_out_size_7 ), 0 ) AS pr_7_out,
+	COALESCE ( SUM ( st_in_size_7 ), 0 ) AS st_7_in,
+	COALESCE ( SUM ( st_out_size_7 ), 0 ) AS st_7_out,
+	COALESCE ( SUM ( os_in_size_7 ), 0 ) AS os_7_in,
+	COALESCE ( SUM ( os_out_size_7 ), 0 ) AS os_7_out,
+	COALESCE ( SUM ( as_in_size_7 ), 0 ) AS as_7_in,
+	COALESCE ( SUM ( as_out_size_7 ), 0 ) AS as_7_out,
+	COALESCE ( SUM ( ct_in_size_7_t ), 0 ) AS ct_7_t_in,
+	COALESCE ( SUM ( ct_out_size_7_t ), 0 ) AS ct_7_t_out,
+	COALESCE ( SUM ( prep_in_size_7_t ), 0 ) AS pr_7_t_in,
+	COALESCE ( SUM ( prep_out_size_7_t ), 0 ) AS pr_7_t_out,
+	COALESCE ( SUM ( st_in_size_7_t ), 0 ) AS st_7_t_in,
+	COALESCE ( SUM ( st_out_size_7_t ), 0 ) AS st_7_t_out,
+	COALESCE ( SUM ( os_in_size_7_t ), 0 ) AS os_7_t_in,
+	COALESCE ( SUM ( os_out_size_7_t ), 0 ) AS os_7_t_out,
+	COALESCE ( SUM ( as_in_size_7_t ), 0 ) AS as_7_t_in,
+	COALESCE ( SUM ( as_out_size_7_t ), 0 ) AS as_7_t_out,
+	COALESCE ( SUM ( ct_in_size_8 ), 0 ) AS ct_8_in,
+	COALESCE ( SUM ( ct_out_size_8 ), 0 ) AS ct_8_out,
+	COALESCE ( SUM ( prep_in_size_8 ), 0 ) AS pr_8_in,
+	COALESCE ( SUM ( prep_out_size_8 ), 0 ) AS pr_8_out,
+	COALESCE ( SUM ( st_in_size_8 ), 0 ) AS st_8_in,
+	COALESCE ( SUM ( st_out_size_8 ), 0 ) AS st_8_out,
+	COALESCE ( SUM ( os_in_size_8 ), 0 ) AS os_8_in,
+	COALESCE ( SUM ( os_out_size_8 ), 0 ) AS os_8_out,
+	COALESCE ( SUM ( as_in_size_8 ), 0 ) AS as_8_in,
+	COALESCE ( SUM ( as_out_size_8 ), 0 ) AS as_8_out,
+	COALESCE ( SUM ( ct_in_size_8_t ), 0 ) AS ct_8_t_in,
+	COALESCE ( SUM ( ct_out_size_8_t ), 0 ) AS ct_8_t_out,
+	COALESCE ( SUM ( prep_in_size_8_t ), 0 ) AS pr_8_t_in,
+	COALESCE ( SUM ( prep_out_size_8_t ), 0 ) AS pr_8_t_out,
+	COALESCE ( SUM ( st_in_size_8_t ), 0 ) AS st_8_t_in,
+	COALESCE ( SUM ( st_out_size_8_t ), 0 ) AS st_8_t_out,
+	COALESCE ( SUM ( os_in_size_8_t ), 0 ) AS os_8_t_in,
+	COALESCE ( SUM ( os_out_size_8_t ), 0 ) AS os_8_t_out,
+	COALESCE ( SUM ( as_in_size_8_t ), 0 ) AS as_8_t_in,
+	COALESCE ( SUM ( as_out_size_8_t ), 0 ) AS as_8_t_out,
+	COALESCE ( SUM ( ct_in_size_9 ), 0 ) AS ct_9_in,
+	COALESCE ( SUM ( ct_out_size_9 ), 0 ) AS ct_9_out,
+	COALESCE ( SUM ( prep_in_size_9 ), 0 ) AS pr_9_in,
+	COALESCE ( SUM ( prep_out_size_9 ), 0 ) AS pr_9_out,
+	COALESCE ( SUM ( st_in_size_9 ), 0 ) AS st_9_in,
+	COALESCE ( SUM ( st_out_size_9 ), 0 ) AS st_9_out,
+	COALESCE ( SUM ( os_in_size_9 ), 0 ) AS os_9_in,
+	COALESCE ( SUM ( os_out_size_9 ), 0 ) AS os_9_out,
+	COALESCE ( SUM ( as_in_size_9 ), 0 ) AS as_9_in,
+	COALESCE ( SUM ( as_out_size_9 ), 0 ) AS as_9_out,
+	COALESCE ( SUM ( ct_in_size_9_t ), 0 ) AS ct_9_t_in,
+	COALESCE ( SUM ( ct_out_size_9_t ), 0 ) AS ct_9_t_out,
+	COALESCE ( SUM ( prep_in_size_9_t ), 0 ) AS pr_9_t_in,
+	COALESCE ( SUM ( prep_out_size_9_t ), 0 ) AS pr_9_t_out,
+	COALESCE ( SUM ( st_in_size_9_t ), 0 ) AS st_9_t_in,
+	COALESCE ( SUM ( st_out_size_9_t ), 0 ) AS st_9_t_out,
+	COALESCE ( SUM ( os_in_size_9_t ), 0 ) AS os_9_t_in,
+	COALESCE ( SUM ( os_out_size_9_t ), 0 ) AS os_9_t_out,
+	COALESCE ( SUM ( as_in_size_9_t ), 0 ) AS as_9_t_in,
+	COALESCE ( SUM ( as_out_size_9_t ), 0 ) AS as_9_t_out,
+	COALESCE ( SUM ( ct_in_size_10 ), 0 ) AS ct_10_in,
+	COALESCE ( SUM ( ct_out_size_10 ), 0 ) AS ct_10_out,
+	COALESCE ( SUM ( prep_in_size_10 ), 0 ) AS pr_10_in,
+	COALESCE ( SUM ( prep_out_size_10 ), 0 ) AS pr_10_out,
+	COALESCE ( SUM ( st_in_size_10 ), 0 ) AS st_10_in,
+	COALESCE ( SUM ( st_out_size_10 ), 0 ) AS st_10_out,
+	COALESCE ( SUM ( os_in_size_10 ), 0 ) AS os_10_in,
+	COALESCE ( SUM ( os_out_size_10 ), 0 ) AS os_10_out,
+	COALESCE ( SUM ( as_in_size_10 ), 0 ) AS as_10_in,
+	COALESCE ( SUM ( as_out_size_10 ), 0 ) AS as_10_out,
+	COALESCE ( SUM ( ct_in_size_10_t ), 0 ) AS ct_10_t_in,
+	COALESCE ( SUM ( ct_out_size_10_t ), 0 ) AS ct_10_t_out,
+	COALESCE ( SUM ( prep_in_size_10_t ), 0 ) AS pr_10_t_in,
+	COALESCE ( SUM ( prep_out_size_10_t ), 0 ) AS pr_10_t_out,
+	COALESCE ( SUM ( st_in_size_10_t ), 0 ) AS st_10_t_in,
+	COALESCE ( SUM ( st_out_size_10_t ), 0 ) AS st_10_t_out,
+	COALESCE ( SUM ( os_in_size_10_t ), 0 ) AS os_10_t_in,
+	COALESCE ( SUM ( os_out_size_10_t ), 0 ) AS os_10_t_out,
+	COALESCE ( SUM ( as_in_size_10_t ), 0 ) AS as_10_t_in,
+	COALESCE ( SUM ( as_out_size_10_t ), 0 ) AS as_10_t_out,
+	COALESCE ( SUM ( ct_in_size_11 ), 0 ) AS ct_11_in,
+	COALESCE ( SUM ( ct_out_size_11 ), 0 ) AS ct_11_out,
+	COALESCE ( SUM ( prep_in_size_11 ), 0 ) AS pr_11_in,
+	COALESCE ( SUM ( prep_out_size_11 ), 0 ) AS pr_11_out,
+	COALESCE ( SUM ( st_in_size_11 ), 0 ) AS st_11_in,
+	COALESCE ( SUM ( st_out_size_11 ), 0 ) AS st_11_out,
+	COALESCE ( SUM ( os_in_size_11 ), 0 ) AS os_11_in,
+	COALESCE ( SUM ( os_out_size_11 ), 0 ) AS os_11_out,
+	COALESCE ( SUM ( as_in_size_11 ), 0 ) AS as_11_in,
+	COALESCE ( SUM ( as_out_size_11 ), 0 ) AS as_11_out,
+	COALESCE ( SUM ( ct_in_size_11_t ), 0 ) AS ct_11_t_in,
+	COALESCE ( SUM ( ct_out_size_11_t ), 0 ) AS ct_11_t_out,
+	COALESCE ( SUM ( prep_in_size_11_t ), 0 ) AS pr_11_t_in,
+	COALESCE ( SUM ( prep_out_size_11_t ), 0 ) AS pr_11_t_out,
+	COALESCE ( SUM ( st_in_size_11_t ), 0 ) AS st_11_t_in,
+	COALESCE ( SUM ( st_out_size_11_t ), 0 ) AS st_11_t_out,
+	COALESCE ( SUM ( os_in_size_11_t ), 0 ) AS os_11_t_in,
+	COALESCE ( SUM ( os_out_size_11_t ), 0 ) AS os_11_t_out,
+	COALESCE ( SUM ( as_in_size_11_t ), 0 ) AS as_11_t_in,
+	COALESCE ( SUM ( as_out_size_11_t ), 0 ) AS as_11_t_out,
+	COALESCE ( SUM ( ct_in_size_12 ), 0 ) AS ct_12_in,
+	COALESCE ( SUM ( ct_out_size_12 ), 0 ) AS ct_12_out,
+	COALESCE ( SUM ( prep_in_size_12 ), 0 ) AS pr_12_in,
+	COALESCE ( SUM ( prep_out_size_12 ), 0 ) AS pr_12_out,
+	COALESCE ( SUM ( st_in_size_12 ), 0 ) AS st_12_in,
+	COALESCE ( SUM ( st_out_size_12 ), 0 ) AS st_12_out,
+	COALESCE ( SUM ( os_in_size_12 ), 0 ) AS os_12_in,
+	COALESCE ( SUM ( os_out_size_12 ), 0 ) AS os_12_out,
+	COALESCE ( SUM ( as_in_size_12 ), 0 ) AS as_12_in,
+	COALESCE ( SUM ( as_out_size_12 ), 0 ) AS as_12_out,
+	COALESCE ( SUM ( ct_in_size_12_t ), 0 ) AS ct_12_t_in,
+	COALESCE ( SUM ( ct_out_size_12_t ), 0 ) AS ct_12_t_out,
+	COALESCE ( SUM ( prep_in_size_12_t ), 0 ) AS pr_12_t_in,
+	COALESCE ( SUM ( prep_out_size_12_t ), 0 ) AS pr_12_t_out,
+	COALESCE ( SUM ( st_in_size_12_t ), 0 ) AS st_12_t_in,
+	COALESCE ( SUM ( st_out_size_12_t ), 0 ) AS st_12_t_out,
+	COALESCE ( SUM ( os_in_size_12_t ), 0 ) AS os_12_t_in,
+	COALESCE ( SUM ( os_out_size_12_t ), 0 ) AS os_12_t_out,
+	COALESCE ( SUM ( as_in_size_12_t ), 0 ) AS as_12_t_in,
+	COALESCE ( SUM ( as_out_size_12_t ), 0 ) AS as_12_t_out,
+	COALESCE ( SUM ( ct_in_size_13 ), 0 ) AS ct_13_in,
+	COALESCE ( SUM ( ct_out_size_13 ), 0 ) AS ct_13_out,
+	COALESCE ( SUM ( prep_in_size_13 ), 0 ) AS pr_13_in,
+	COALESCE ( SUM ( prep_out_size_13 ), 0 ) AS pr_13_out,
+	COALESCE ( SUM ( st_in_size_13 ), 0 ) AS st_13_in,
+	COALESCE ( SUM ( st_out_size_13 ), 0 ) AS st_13_out,
+	COALESCE ( SUM ( os_in_size_13 ), 0 ) AS os_13_in,
+	COALESCE ( SUM ( os_out_size_13 ), 0 ) AS os_13_out,
+	COALESCE ( SUM ( as_in_size_13 ), 0 ) AS as_13_in,
+	COALESCE ( SUM ( as_out_size_13 ), 0 ) AS as_13_out,
+	COALESCE ( SUM ( ct_in_size_13_t ), 0 ) AS ct_13_t_in,
+	COALESCE ( SUM ( ct_out_size_13_t ), 0 ) AS ct_13_t_out,
+	COALESCE ( SUM ( prep_in_size_13_t ), 0 ) AS pr_13_t_in,
+	COALESCE ( SUM ( prep_out_size_13_t ), 0 ) AS pr_13_t_out,
+	COALESCE ( SUM ( st_in_size_13_t ), 0 ) AS st_13_t_in,
+	COALESCE ( SUM ( st_out_size_13_t ), 0 ) AS st_13_t_out,
+	COALESCE ( SUM ( os_in_size_13_t ), 0 ) AS os_13_t_in,
+	COALESCE ( SUM ( os_out_size_13_t ), 0 ) AS os_13_t_out,
+	COALESCE ( SUM ( as_in_size_13_t ), 0 ) AS as_13_t_in,
+	COALESCE ( SUM ( as_out_size_13_t ), 0 ) AS as_13_t_out,
+	COALESCE ( SUM ( ct_in_size_14 ), 0 ) AS ct_14_in,
+	COALESCE ( SUM ( ct_out_size_14 ), 0 ) AS ct_14_out,
+	COALESCE ( SUM ( prep_in_size_14 ), 0 ) AS pr_14_in,
+	COALESCE ( SUM ( prep_out_size_14 ), 0 ) AS pr_14_out,
+	COALESCE ( SUM ( st_in_size_14 ), 0 ) AS st_14_in,
+	COALESCE ( SUM ( st_out_size_14 ), 0 ) AS st_14_out,
+	COALESCE ( SUM ( os_in_size_14 ), 0 ) AS os_14_in,
+	COALESCE ( SUM ( os_out_size_14 ), 0 ) AS os_14_out,
+	COALESCE ( SUM ( as_in_size_14 ), 0 ) AS as_14_in,
+	COALESCE ( SUM ( as_out_size_14 ), 0 ) AS as_14_out,
+	COALESCE ( SUM ( ct_in_size_15 ), 0 ) AS ct_15_in,
+	COALESCE ( SUM ( ct_out_size_15 ), 0 ) AS ct_15_out,
+	COALESCE ( SUM ( prep_in_size_15 ), 0 ) AS pr_15_in,
+	COALESCE ( SUM ( prep_out_size_15 ), 0 ) AS pr_15_out,
+	COALESCE ( SUM ( st_in_size_15 ), 0 ) AS st_15_in,
+	COALESCE ( SUM ( st_out_size_15 ), 0 ) AS st_15_out,
+	COALESCE ( SUM ( os_in_size_15 ), 0 ) AS os_15_in,
+	COALESCE ( SUM ( os_out_size_15 ), 0 ) AS os_15_out,
+	COALESCE ( SUM ( as_in_size_15 ), 0 ) AS as_15_in,
+	COALESCE ( SUM ( as_out_size_15 ), 0 ) AS as_15_out,
+	COALESCE ( SUM ( ct_in_size_16 ), 0 ) AS ct_16_in,
+	COALESCE ( SUM ( ct_out_size_16 ), 0 ) AS ct_16_out,
+	COALESCE ( SUM ( prep_in_size_16 ), 0 ) AS pr_16_in,
+	COALESCE ( SUM ( prep_out_size_16 ), 0 ) AS pr_16_out,
+	COALESCE ( SUM ( st_in_size_16 ), 0 ) AS st_16_in,
+	COALESCE ( SUM ( st_out_size_16 ), 0 ) AS st_16_out,
+	COALESCE ( SUM ( os_in_size_16 ), 0 ) AS os_16_in,
+	COALESCE ( SUM ( os_out_size_16 ), 0 ) AS os_16_out,
+	COALESCE ( SUM ( as_in_size_16 ), 0 ) AS as_16_in,
+	COALESCE ( SUM ( as_out_size_16 ), 0 ) AS as_16_out,
+	COALESCE ( SUM ( ct_in_size_17 ), 0 ) AS ct_17_in,
+	COALESCE ( SUM ( ct_out_size_17 ), 0 ) AS ct_17_out,
+	COALESCE ( SUM ( prep_in_size_17 ), 0 ) AS pr_17_in,
+	COALESCE ( SUM ( prep_out_size_17 ), 0 ) AS pr_17_out,
+	COALESCE ( SUM ( st_in_size_17 ), 0 ) AS st_17_in,
+	COALESCE ( SUM ( st_out_size_17 ), 0 ) AS st_17_out,
+	COALESCE ( SUM ( os_in_size_17 ), 0 ) AS os_17_in,
+	COALESCE ( SUM ( os_out_size_17 ), 0 ) AS os_17_out,
+	COALESCE ( SUM ( as_in_size_17 ), 0 ) AS as_17_in,
+	COALESCE ( SUM ( as_out_size_17 ), 0 ) AS as_17_out,
+	COALESCE ( SUM ( ct_in_size_18 ), 0 ) AS ct_18_in,
+	COALESCE ( SUM ( ct_out_size_18 ), 0 ) AS ct_18_out,
+	COALESCE ( SUM ( prep_in_size_18 ), 0 ) AS pr_18_in,
+	COALESCE ( SUM ( prep_out_size_18 ), 0 ) AS pr_18_out,
+	COALESCE ( SUM ( st_in_size_18 ), 0 ) AS st_18_in,
+	COALESCE ( SUM ( st_out_size_18 ), 0 ) AS st_18_out,
+	COALESCE ( SUM ( os_in_size_18 ), 0 ) AS os_18_in,
+	COALESCE ( SUM ( os_out_size_18 ), 0 ) AS os_18_out,
+	COALESCE ( SUM ( as_in_size_18 ), 0 ) AS as_18_in,
+	COALESCE ( SUM ( as_out_size_18 ), 0 ) AS as_18_out
+	
+FROM
+	view_report_gnr
+WHERE
+
+to_char(taping_date, 'DD-Mon-YYYY') =  $P{taping_date} 
+GROUP BY
+	po_no,
+	demand_class,
+	line_code,
+	po_item,
+	taping_date]]>
+	</queryString>
+	<field name="po_no" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="po_no"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="view_report_gnr"/>
+	</field>
+	<field name="po_item" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="po_item"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="view_report_gnr"/>
+	</field>
+	<field name="line_code" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="line_code"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="view_report_gnr"/>
+	</field>
+	<field name="demand" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="demand"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="view_report_gnr"/>
+	</field>
+	<field name="date" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="date"/>
+	</field>
+	<field name="qty" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="qty"/>
+	</field>
+	<field name="jo_ppic" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="jo_ppic"/>
+	</field>
+	<field name="product_desc" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="product_desc"/>
+	</field>
+	<field name="ct_1_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_1_in"/>
+	</field>
+	<field name="ct_1_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_1_out"/>
+	</field>
+	<field name="pr_1_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_1_in"/>
+	</field>
+	<field name="pr_1_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_1_out"/>
+	</field>
+	<field name="st_1_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_1_in"/>
+	</field>
+	<field name="st_1_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_1_out"/>
+	</field>
+	<field name="os_1_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_1_in"/>
+	</field>
+	<field name="os_1_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_1_out"/>
+	</field>
+	<field name="as_1_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_1_in"/>
+	</field>
+	<field name="as_1_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_1_out"/>
+	</field>
+	<field name="ct_1_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_1_t_in"/>
+	</field>
+	<field name="ct_1_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_1_t_out"/>
+	</field>
+	<field name="pr_1_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_1_t_in"/>
+	</field>
+	<field name="pr_1_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_1_t_out"/>
+	</field>
+	<field name="st_1_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_1_t_in"/>
+	</field>
+	<field name="st_1_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_1_t_out"/>
+	</field>
+	<field name="os_1_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_1_t_in"/>
+	</field>
+	<field name="os_1_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_1_t_out"/>
+	</field>
+	<field name="as_1_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_1_t_in"/>
+	</field>
+	<field name="as_1_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_1_t_out"/>
+	</field>
+	<field name="ct_2_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_2_in"/>
+	</field>
+	<field name="ct_2_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_2_out"/>
+	</field>
+	<field name="pr_2_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_2_in"/>
+	</field>
+	<field name="pr_2_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_2_out"/>
+	</field>
+	<field name="st_2_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_2_in"/>
+	</field>
+	<field name="st_2_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_2_out"/>
+	</field>
+	<field name="os_2_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_2_in"/>
+	</field>
+	<field name="os_2_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_2_out"/>
+	</field>
+	<field name="as_2_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_2_in"/>
+	</field>
+	<field name="as_2_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_2_out"/>
+	</field>
+	<field name="ct_2_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_2_t_in"/>
+	</field>
+	<field name="ct_2_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_2_t_out"/>
+	</field>
+	<field name="pr_2_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_2_t_in"/>
+	</field>
+	<field name="pr_2_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_2_t_out"/>
+	</field>
+	<field name="st_2_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_2_t_in"/>
+	</field>
+	<field name="st_2_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_2_t_out"/>
+	</field>
+	<field name="os_2_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_2_t_in"/>
+	</field>
+	<field name="os_2_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_2_t_out"/>
+	</field>
+	<field name="as_2_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_2_t_in"/>
+	</field>
+	<field name="as_2_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_2_t_out"/>
+	</field>
+	<field name="ct_3_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_3_in"/>
+	</field>
+	<field name="ct_3_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_3_out"/>
+	</field>
+	<field name="pr_3_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_3_in"/>
+	</field>
+	<field name="pr_3_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_3_out"/>
+	</field>
+	<field name="st_3_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_3_in"/>
+	</field>
+	<field name="st_3_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_3_out"/>
+	</field>
+	<field name="os_3_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_3_in"/>
+	</field>
+	<field name="os_3_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_3_out"/>
+	</field>
+	<field name="as_3_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_3_in"/>
+	</field>
+	<field name="as_3_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_3_out"/>
+	</field>
+	<field name="ct_3_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_3_t_in"/>
+	</field>
+	<field name="ct_3_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_3_t_out"/>
+	</field>
+	<field name="pr_3_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_3_t_in"/>
+	</field>
+	<field name="pr_3_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_3_t_out"/>
+	</field>
+	<field name="st_3_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_3_t_in"/>
+	</field>
+	<field name="st_3_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_3_t_out"/>
+	</field>
+	<field name="os_3_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_3_t_in"/>
+	</field>
+	<field name="os_3_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_3_t_out"/>
+	</field>
+	<field name="as_3_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_3_t_in"/>
+	</field>
+	<field name="as_3_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_3_t_out"/>
+	</field>
+	<field name="ct_4_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_4_in"/>
+	</field>
+	<field name="ct_4_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_4_out"/>
+	</field>
+	<field name="pr_4_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_4_in"/>
+	</field>
+	<field name="pr_4_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_4_out"/>
+	</field>
+	<field name="st_4_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_4_in"/>
+	</field>
+	<field name="st_4_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_4_out"/>
+	</field>
+	<field name="os_4_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_4_in"/>
+	</field>
+	<field name="os_4_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_4_out"/>
+	</field>
+	<field name="as_4_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_4_in"/>
+	</field>
+	<field name="as_4_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_4_out"/>
+	</field>
+	<field name="ct_4_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_4_t_in"/>
+	</field>
+	<field name="ct_4_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_4_t_out"/>
+	</field>
+	<field name="pr_4_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_4_t_in"/>
+	</field>
+	<field name="pr_4_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_4_t_out"/>
+	</field>
+	<field name="st_4_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_4_t_in"/>
+	</field>
+	<field name="st_4_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_4_t_out"/>
+	</field>
+	<field name="os_4_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_4_t_in"/>
+	</field>
+	<field name="os_4_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_4_t_out"/>
+	</field>
+	<field name="as_4_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_4_t_in"/>
+	</field>
+	<field name="as_4_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_4_t_out"/>
+	</field>
+	<field name="ct_5_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_5_in"/>
+	</field>
+	<field name="ct_5_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_5_out"/>
+	</field>
+	<field name="pr_5_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_5_in"/>
+	</field>
+	<field name="pr_5_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_5_out"/>
+	</field>
+	<field name="st_5_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_5_in"/>
+	</field>
+	<field name="st_5_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_5_out"/>
+	</field>
+	<field name="os_5_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_5_in"/>
+	</field>
+	<field name="os_5_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_5_out"/>
+	</field>
+	<field name="as_5_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_5_in"/>
+	</field>
+	<field name="as_5_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_5_out"/>
+	</field>
+	<field name="ct_5_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_5_t_in"/>
+	</field>
+	<field name="ct_5_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_5_t_out"/>
+	</field>
+	<field name="pr_5_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_5_t_in"/>
+	</field>
+	<field name="pr_5_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_5_t_out"/>
+	</field>
+	<field name="st_5_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_5_t_in"/>
+	</field>
+	<field name="st_5_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_5_t_out"/>
+	</field>
+	<field name="os_5_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_5_t_in"/>
+	</field>
+	<field name="os_5_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_5_t_out"/>
+	</field>
+	<field name="as_5_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_5_t_in"/>
+	</field>
+	<field name="as_5_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_5_t_out"/>
+	</field>
+	<field name="ct_6_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_6_in"/>
+	</field>
+	<field name="ct_6_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_6_out"/>
+	</field>
+	<field name="pr_6_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_6_in"/>
+	</field>
+	<field name="pr_6_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_6_out"/>
+	</field>
+	<field name="st_6_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_6_in"/>
+	</field>
+	<field name="st_6_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_6_out"/>
+	</field>
+	<field name="os_6_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_6_in"/>
+	</field>
+	<field name="os_6_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_6_out"/>
+	</field>
+	<field name="as_6_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_6_in"/>
+	</field>
+	<field name="as_6_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_6_out"/>
+	</field>
+	<field name="ct_6_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_6_t_in"/>
+	</field>
+	<field name="ct_6_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_6_t_out"/>
+	</field>
+	<field name="pr_6_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_6_t_in"/>
+	</field>
+	<field name="pr_6_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_6_t_out"/>
+	</field>
+	<field name="st_6_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_6_t_in"/>
+	</field>
+	<field name="st_6_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_6_t_out"/>
+	</field>
+	<field name="os_6_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_6_t_in"/>
+	</field>
+	<field name="os_6_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_6_t_out"/>
+	</field>
+	<field name="as_6_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_6_t_in"/>
+	</field>
+	<field name="as_6_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_6_t_out"/>
+	</field>
+	<field name="ct_7_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_7_in"/>
+	</field>
+	<field name="ct_7_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_7_out"/>
+	</field>
+	<field name="pr_7_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_7_in"/>
+	</field>
+	<field name="pr_7_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_7_out"/>
+	</field>
+	<field name="st_7_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_7_in"/>
+	</field>
+	<field name="st_7_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_7_out"/>
+	</field>
+	<field name="os_7_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_7_in"/>
+	</field>
+	<field name="os_7_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_7_out"/>
+	</field>
+	<field name="as_7_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_7_in"/>
+	</field>
+	<field name="as_7_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_7_out"/>
+	</field>
+	<field name="ct_7_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_7_t_in"/>
+	</field>
+	<field name="ct_7_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_7_t_out"/>
+	</field>
+	<field name="pr_7_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_7_t_in"/>
+	</field>
+	<field name="pr_7_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_7_t_out"/>
+	</field>
+	<field name="st_7_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_7_t_in"/>
+	</field>
+	<field name="st_7_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_7_t_out"/>
+	</field>
+	<field name="os_7_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_7_t_in"/>
+	</field>
+	<field name="os_7_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_7_t_out"/>
+	</field>
+	<field name="as_7_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_7_t_in"/>
+	</field>
+	<field name="as_7_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_7_t_out"/>
+	</field>
+	<field name="ct_8_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_8_in"/>
+	</field>
+	<field name="ct_8_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_8_out"/>
+	</field>
+	<field name="pr_8_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_8_in"/>
+	</field>
+	<field name="pr_8_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_8_out"/>
+	</field>
+	<field name="st_8_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_8_in"/>
+	</field>
+	<field name="st_8_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_8_out"/>
+	</field>
+	<field name="os_8_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_8_in"/>
+	</field>
+	<field name="os_8_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_8_out"/>
+	</field>
+	<field name="as_8_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_8_in"/>
+	</field>
+	<field name="as_8_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_8_out"/>
+	</field>
+	<field name="ct_8_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_8_t_in"/>
+	</field>
+	<field name="ct_8_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_8_t_out"/>
+	</field>
+	<field name="pr_8_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_8_t_in"/>
+	</field>
+	<field name="pr_8_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_8_t_out"/>
+	</field>
+	<field name="st_8_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_8_t_in"/>
+	</field>
+	<field name="st_8_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_8_t_out"/>
+	</field>
+	<field name="os_8_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_8_t_in"/>
+	</field>
+	<field name="os_8_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_8_t_out"/>
+	</field>
+	<field name="as_8_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_8_t_in"/>
+	</field>
+	<field name="as_8_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_8_t_out"/>
+	</field>
+	<field name="ct_9_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_9_in"/>
+	</field>
+	<field name="ct_9_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_9_out"/>
+	</field>
+	<field name="pr_9_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_9_in"/>
+	</field>
+	<field name="pr_9_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_9_out"/>
+	</field>
+	<field name="st_9_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_9_in"/>
+	</field>
+	<field name="st_9_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_9_out"/>
+	</field>
+	<field name="os_9_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_9_in"/>
+	</field>
+	<field name="os_9_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_9_out"/>
+	</field>
+	<field name="as_9_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_9_in"/>
+	</field>
+	<field name="as_9_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_9_out"/>
+	</field>
+	<field name="ct_9_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_9_t_in"/>
+	</field>
+	<field name="ct_9_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_9_t_out"/>
+	</field>
+	<field name="pr_9_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_9_t_in"/>
+	</field>
+	<field name="pr_9_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_9_t_out"/>
+	</field>
+	<field name="st_9_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_9_t_in"/>
+	</field>
+	<field name="st_9_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_9_t_out"/>
+	</field>
+	<field name="os_9_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_9_t_in"/>
+	</field>
+	<field name="os_9_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_9_t_out"/>
+	</field>
+	<field name="as_9_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_9_t_in"/>
+	</field>
+	<field name="as_9_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_9_t_out"/>
+	</field>
+	<field name="ct_10_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_10_in"/>
+	</field>
+	<field name="ct_10_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_10_out"/>
+	</field>
+	<field name="pr_10_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_10_in"/>
+	</field>
+	<field name="pr_10_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_10_out"/>
+	</field>
+	<field name="st_10_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_10_in"/>
+	</field>
+	<field name="st_10_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_10_out"/>
+	</field>
+	<field name="os_10_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_10_in"/>
+	</field>
+	<field name="os_10_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_10_out"/>
+	</field>
+	<field name="as_10_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_10_in"/>
+	</field>
+	<field name="as_10_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_10_out"/>
+	</field>
+	<field name="ct_10_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_10_t_in"/>
+	</field>
+	<field name="ct_10_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_10_t_out"/>
+	</field>
+	<field name="pr_10_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_10_t_in"/>
+	</field>
+	<field name="pr_10_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_10_t_out"/>
+	</field>
+	<field name="st_10_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_10_t_in"/>
+	</field>
+	<field name="st_10_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_10_t_out"/>
+	</field>
+	<field name="os_10_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_10_t_in"/>
+	</field>
+	<field name="os_10_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_10_t_out"/>
+	</field>
+	<field name="as_10_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_10_t_in"/>
+	</field>
+	<field name="as_10_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_10_t_out"/>
+	</field>
+	<field name="ct_11_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_11_in"/>
+	</field>
+	<field name="ct_11_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_11_out"/>
+	</field>
+	<field name="pr_11_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_11_in"/>
+	</field>
+	<field name="pr_11_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_11_out"/>
+	</field>
+	<field name="st_11_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_11_in"/>
+	</field>
+	<field name="st_11_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_11_out"/>
+	</field>
+	<field name="os_11_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_11_in"/>
+	</field>
+	<field name="os_11_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_11_out"/>
+	</field>
+	<field name="as_11_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_11_in"/>
+	</field>
+	<field name="as_11_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_11_out"/>
+	</field>
+	<field name="ct_11_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_11_t_in"/>
+	</field>
+	<field name="ct_11_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_11_t_out"/>
+	</field>
+	<field name="pr_11_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_11_t_in"/>
+	</field>
+	<field name="pr_11_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_11_t_out"/>
+	</field>
+	<field name="st_11_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_11_t_in"/>
+	</field>
+	<field name="st_11_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_11_t_out"/>
+	</field>
+	<field name="os_11_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_11_t_in"/>
+	</field>
+	<field name="os_11_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_11_t_out"/>
+	</field>
+	<field name="as_11_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_11_t_in"/>
+	</field>
+	<field name="as_11_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_11_t_out"/>
+	</field>
+	<field name="ct_12_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_12_in"/>
+	</field>
+	<field name="ct_12_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_12_out"/>
+	</field>
+	<field name="pr_12_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_12_in"/>
+	</field>
+	<field name="pr_12_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_12_out"/>
+	</field>
+	<field name="st_12_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_12_in"/>
+	</field>
+	<field name="st_12_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_12_out"/>
+	</field>
+	<field name="os_12_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_12_in"/>
+	</field>
+	<field name="os_12_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_12_out"/>
+	</field>
+	<field name="as_12_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_12_in"/>
+	</field>
+	<field name="as_12_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_12_out"/>
+	</field>
+	<field name="ct_12_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_12_t_in"/>
+	</field>
+	<field name="ct_12_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_12_t_out"/>
+	</field>
+	<field name="pr_12_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_12_t_in"/>
+	</field>
+	<field name="pr_12_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_12_t_out"/>
+	</field>
+	<field name="st_12_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_12_t_in"/>
+	</field>
+	<field name="st_12_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_12_t_out"/>
+	</field>
+	<field name="os_12_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_12_t_in"/>
+	</field>
+	<field name="os_12_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_12_t_out"/>
+	</field>
+	<field name="as_12_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_12_t_in"/>
+	</field>
+	<field name="as_12_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_12_t_out"/>
+	</field>
+	<field name="ct_13_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_13_in"/>
+	</field>
+	<field name="ct_13_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_13_out"/>
+	</field>
+	<field name="pr_13_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_13_in"/>
+	</field>
+	<field name="pr_13_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_13_out"/>
+	</field>
+	<field name="st_13_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_13_in"/>
+	</field>
+	<field name="st_13_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_13_out"/>
+	</field>
+	<field name="os_13_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_13_in"/>
+	</field>
+	<field name="os_13_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_13_out"/>
+	</field>
+	<field name="as_13_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_13_in"/>
+	</field>
+	<field name="as_13_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_13_out"/>
+	</field>
+	<field name="ct_13_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_13_t_in"/>
+	</field>
+	<field name="ct_13_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_13_t_out"/>
+	</field>
+	<field name="pr_13_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_13_t_in"/>
+	</field>
+	<field name="pr_13_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_13_t_out"/>
+	</field>
+	<field name="st_13_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_13_t_in"/>
+	</field>
+	<field name="st_13_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_13_t_out"/>
+	</field>
+	<field name="os_13_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_13_t_in"/>
+	</field>
+	<field name="os_13_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_13_t_out"/>
+	</field>
+	<field name="as_13_t_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_13_t_in"/>
+	</field>
+	<field name="as_13_t_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_13_t_out"/>
+	</field>
+	<field name="ct_14_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_14_in"/>
+	</field>
+	<field name="ct_14_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_14_out"/>
+	</field>
+	<field name="pr_14_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_14_in"/>
+	</field>
+	<field name="pr_14_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_14_out"/>
+	</field>
+	<field name="st_14_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_14_in"/>
+	</field>
+	<field name="st_14_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_14_out"/>
+	</field>
+	<field name="os_14_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_14_in"/>
+	</field>
+	<field name="os_14_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_14_out"/>
+	</field>
+	<field name="as_14_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_14_in"/>
+	</field>
+	<field name="as_14_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_14_out"/>
+	</field>
+	<field name="ct_15_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_15_in"/>
+	</field>
+	<field name="ct_15_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_15_out"/>
+	</field>
+	<field name="pr_15_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_15_in"/>
+	</field>
+	<field name="pr_15_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_15_out"/>
+	</field>
+	<field name="st_15_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_15_in"/>
+	</field>
+	<field name="st_15_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_15_out"/>
+	</field>
+	<field name="os_15_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_15_in"/>
+	</field>
+	<field name="os_15_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_15_out"/>
+	</field>
+	<field name="as_15_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_15_in"/>
+	</field>
+	<field name="as_15_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_15_out"/>
+	</field>
+	<field name="ct_16_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_16_in"/>
+	</field>
+	<field name="ct_16_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_16_out"/>
+	</field>
+	<field name="pr_16_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_16_in"/>
+	</field>
+	<field name="pr_16_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_16_out"/>
+	</field>
+	<field name="st_16_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_16_in"/>
+	</field>
+	<field name="st_16_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_16_out"/>
+	</field>
+	<field name="os_16_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_16_in"/>
+	</field>
+	<field name="os_16_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_16_out"/>
+	</field>
+	<field name="as_16_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_16_in"/>
+	</field>
+	<field name="as_16_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_16_out"/>
+	</field>
+	<field name="ct_17_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_17_in"/>
+	</field>
+	<field name="ct_17_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_17_out"/>
+	</field>
+	<field name="pr_17_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_17_in"/>
+	</field>
+	<field name="pr_17_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_17_out"/>
+	</field>
+	<field name="st_17_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_17_in"/>
+	</field>
+	<field name="st_17_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_17_out"/>
+	</field>
+	<field name="os_17_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_17_in"/>
+	</field>
+	<field name="os_17_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_17_out"/>
+	</field>
+	<field name="as_17_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_17_in"/>
+	</field>
+	<field name="as_17_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_17_out"/>
+	</field>
+	<field name="ct_18_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_18_in"/>
+	</field>
+	<field name="ct_18_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ct_18_out"/>
+	</field>
+	<field name="pr_18_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_18_in"/>
+	</field>
+	<field name="pr_18_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="pr_18_out"/>
+	</field>
+	<field name="st_18_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_18_in"/>
+	</field>
+	<field name="st_18_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="st_18_out"/>
+	</field>
+	<field name="os_18_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_18_in"/>
+	</field>
+	<field name="os_18_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="os_18_out"/>
+	</field>
+	<field name="as_18_in" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_18_in"/>
+	</field>
+	<field name="as_18_out" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="as_18_out"/>
+	</field>
+	<variable name="qty1" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{qty}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="132" splitType="Stretch">
+			<staticText>
+				<reportElement x="375" y="50" width="250" height="31" uuid="16492767-be57-4c1a-9260-4a05e975c89c"/>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[Report General Status]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="39" y="112" width="100" height="20" uuid="88aaf6b6-bef3-4ea4-a1a6-e714ed3610f0"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-1" y="112" width="39" height="20" uuid="19094501-a530-4ee4-96cd-00491b57c79a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[DATE]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="71" splitType="Stretch">
+			<staticText>
+				<reportElement x="450" y="0" width="100" height="40" uuid="7c90117b-225b-481f-9d2d-8583666fa766"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Cutting]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="550" y="0" width="121" height="40" uuid="d65ff640-89ee-4b93-883d-7b146ccb97fc"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Preparation]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="450" y="40" width="30" height="30" uuid="34532a14-18d5-4f82-8fa4-ab356481d361"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None"/>
+				<text><![CDATA[In]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="671" y="0" width="100" height="40" uuid="fb47b031-e017-420d-b3e0-92ed72a0270e"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Stitching]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="771" y="0" width="100" height="40" uuid="59eaa94c-bc24-4163-932a-cc01914f65e6"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Outsole]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="480" y="40" width="30" height="30" uuid="fed9cb46-168b-4d3b-9370-be4453d457c4"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None"/>
+				<text><![CDATA[Out]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="550" y="40" width="40" height="30" uuid="6021d6d3-1d2d-4a7e-ac94-49d91305e827"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None"/>
+				<text><![CDATA[In]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="590" y="40" width="30" height="30" uuid="334c52f8-0a98-4dc6-a3d8-f70a85d130eb"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None"/>
+				<text><![CDATA[Out]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="671" y="40" width="29" height="30" uuid="f397ce98-a3a5-4736-934e-dc0552a26b69"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None"/>
+				<text><![CDATA[In]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="700" y="40" width="31" height="30" uuid="0792e28c-295c-47be-bc86-3606ab0aa85c"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None"/>
+				<text><![CDATA[Out]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="771" y="40" width="30" height="30" uuid="0d076c75-939f-4191-9590-3108a53e5986"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None"/>
+				<text><![CDATA[In]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="801" y="40" width="30" height="30" uuid="f520d8a8-0000-45ab-a5a3-aa9af37cabec"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None"/>
+				<text><![CDATA[Out]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="870" y="0" width="108" height="40" uuid="fb1130b5-a0ba-45d5-99f2-b047299ebab3"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Assembly]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="870" y="40" width="30" height="30" uuid="3b0be3ac-8318-42aa-afbd-0073819d8e7f"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None"/>
+				<text><![CDATA[In]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="900" y="40" width="38" height="30" uuid="292658ce-f9b5-44d1-99e1-ad6525ff4728"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None"/>
+				<text><![CDATA[Out]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="109" y="0" width="60" height="70" uuid="ffdaa000-f0d5-40b8-80fe-a377646ec947"/>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Line]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="69" y="0" width="40" height="70" uuid="44fa810f-ce4d-48b0-9081-fca538b4ae48"/>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Style]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-1" y="0" width="70" height="70" uuid="96054575-1311-45f0-a274-30a9b36e4142"/>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Bucket]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="0" width="50" height="70" uuid="e8d01b88-9911-4028-b98b-fc4dbd77b022"/>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Org
+QTY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="169" y="0" width="231" height="70" uuid="9a0670f7-95a4-4ce8-b470-c9d7b9baeff5"/>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Desc]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="510" y="40" width="40" height="30" uuid="140e912e-6707-4e86-b2c6-bac9e1d18aba"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None"/>
+				<text><![CDATA[Balance]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="621" y="40" width="50" height="30" uuid="f1f3af53-9f8f-4b5c-bcc1-dc198d0b5411"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None"/>
+				<text><![CDATA[Balance]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="731" y="40" width="40" height="30" uuid="b0d4a48a-bd8d-4c92-9bc7-0b513883da7d"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None"/>
+				<text><![CDATA[Balance]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="831" y="40" width="40" height="30" uuid="fbd9d688-45dd-4cff-a83c-74666be0f665"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None"/>
+				<text><![CDATA[Balance]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="938" y="40" width="40" height="30" uuid="43211cee-2714-4ff1-8f53-d55d16476808"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None"/>
+				<text><![CDATA[Balance]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="590" y="0" width="30" height="20" uuid="3ce20f7d-2806-4805-88e4-4a110d1c7b6d"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[($F{pr_1_out}.doubleValue()+
+$F{pr_1_t_out}.doubleValue()+
+$F{pr_2_out}.doubleValue()+
+$F{pr_2_t_out}.doubleValue()+
+$F{pr_3_out}.doubleValue()+
+$F{pr_3_t_out}.doubleValue()+
+$F{pr_4_out}.doubleValue()+
+$F{pr_4_t_out}.doubleValue()+
+$F{pr_5_out}.doubleValue()+
+$F{pr_5_t_out}.doubleValue()+
+$F{pr_6_out}.doubleValue()+
+$F{pr_6_t_out}.doubleValue()+
+$F{pr_7_out}.doubleValue()+
+$F{pr_7_t_out}.doubleValue()+
+$F{pr_8_out}.doubleValue()+
+$F{pr_8_t_out}.doubleValue()+
+$F{pr_9_out}.doubleValue()+
+$F{pr_9_t_out}.doubleValue()+
+$F{pr_10_out}.doubleValue()+
+$F{pr_10_t_out}.doubleValue()+
+$F{pr_11_out}.doubleValue()+
+$F{pr_11_t_out}.doubleValue()+
+$F{pr_12_out}.doubleValue()+
+$F{pr_12_t_out}.doubleValue()+
+$F{pr_13_out}.doubleValue()+
+$F{pr_13_t_out}.doubleValue()+
+$F{pr_14_out}.doubleValue()+
+$F{pr_15_out}.doubleValue()+
+$F{pr_16_out}.doubleValue()+
+$F{pr_17_out}.doubleValue()+
+$F{pr_18_out}.doubleValue())]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" x="450" y="0" width="30" height="20" uuid="8d57de9f-61c8-43e4-8a45-5925f4d7c422"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[($F{ct_1_in}.doubleValue()+
+$F{ct_1_t_in}.doubleValue()+
+$F{ct_2_in}.doubleValue()+
+$F{ct_2_t_in}.doubleValue()+
+$F{ct_3_in}.doubleValue()+
+$F{ct_3_t_in}.doubleValue()+
+$F{ct_4_in}.doubleValue()+
+$F{ct_4_t_in}.doubleValue()+
+$F{ct_5_in}.doubleValue()+
+$F{ct_5_t_in}.doubleValue()+
+$F{ct_6_in}.doubleValue()+
+$F{ct_6_t_in}.doubleValue()+
+$F{ct_7_in}.doubleValue()+
+$F{ct_7_t_in}.doubleValue()+
+$F{ct_8_in}.doubleValue()+
+$F{ct_8_t_in}.doubleValue()+
+$F{ct_9_in}.doubleValue()+
+$F{ct_9_t_in}.doubleValue()+
+$F{ct_10_in}.doubleValue()+
+$F{ct_10_t_in}.doubleValue()+
+$F{ct_11_in}.doubleValue()+
+$F{ct_11_t_in}.doubleValue()+
+$F{ct_12_in}.doubleValue()+
+$F{ct_12_t_in}.doubleValue()+
+$F{ct_13_in}.doubleValue()+
+$F{ct_13_t_in}.doubleValue()+
+$F{ct_14_in}.doubleValue()+
+$F{ct_15_in}.doubleValue()+
+$F{ct_16_in}.doubleValue()+
+$F{ct_17_in}.doubleValue()+
+$F{ct_18_in}.doubleValue())]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="480" y="0" width="30" height="20" uuid="873240f3-bc13-4e91-b2ce-d539f90a063e"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[($F{ct_1_out}.doubleValue()+
+$F{ct_1_t_out}.doubleValue()+
+$F{ct_2_out}.doubleValue()+
+$F{ct_2_t_out}.doubleValue()+
+$F{ct_3_out}.doubleValue()+
+$F{ct_3_t_out}.doubleValue()+
+$F{ct_4_out}.doubleValue()+
+$F{ct_4_t_out}.doubleValue()+
+$F{ct_5_out}.doubleValue()+
+$F{ct_5_t_out}.doubleValue()+
+$F{ct_6_out}.doubleValue()+
+$F{ct_6_t_out}.doubleValue()+
+$F{ct_7_out}.doubleValue()+
+$F{ct_7_t_out}.doubleValue()+
+$F{ct_8_out}.doubleValue()+
+$F{ct_8_t_out}.doubleValue()+
+$F{ct_9_out}.doubleValue()+
+$F{ct_9_t_out}.doubleValue()+
+$F{ct_10_out}.doubleValue()+
+$F{ct_10_t_out}.doubleValue()+
+$F{ct_11_out}.doubleValue()+
+$F{ct_11_t_out}.doubleValue()+
+$F{ct_12_out}.doubleValue()+
+$F{ct_12_t_out}.doubleValue()+
+$F{ct_13_out}.doubleValue()+
+$F{ct_13_t_out}.doubleValue()+
+$F{ct_14_out}.doubleValue()+
+$F{ct_15_out}.doubleValue()+
+$F{ct_16_out}.doubleValue()+
+$F{ct_17_out}.doubleValue()+
+$F{ct_18_out}.doubleValue())]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="550" y="0" width="40" height="20" uuid="03c06e2c-e3e3-4570-ac1c-49e2303ddc9e"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[($F{pr_1_in}.doubleValue()+
+$F{pr_1_t_in}.doubleValue()+
+$F{pr_2_in}.doubleValue()+
+$F{pr_2_t_in}.doubleValue()+
+$F{pr_3_in}.doubleValue()+
+$F{pr_3_t_in}.doubleValue()+
+$F{pr_4_in}.doubleValue()+
+$F{pr_4_t_in}.doubleValue()+
+$F{pr_5_in}.doubleValue()+
+$F{pr_5_t_in}.doubleValue()+
+$F{pr_6_in}.doubleValue()+
+$F{pr_6_t_in}.doubleValue()+
+$F{pr_7_in}.doubleValue()+
+$F{pr_7_t_in}.doubleValue()+
+$F{pr_8_in}.doubleValue()+
+$F{pr_8_t_in}.doubleValue()+
+$F{pr_9_in}.doubleValue()+
+$F{pr_9_t_in}.doubleValue()+
+$F{pr_10_in}.doubleValue()+
+$F{pr_10_t_in}.doubleValue()+
+$F{pr_11_in}.doubleValue()+
+$F{pr_11_t_in}.doubleValue()+
+$F{pr_12_in}.doubleValue()+
+$F{pr_12_t_in}.doubleValue()+
+$F{pr_13_in}.doubleValue()+
+$F{pr_13_t_in}.doubleValue()+
+$F{pr_14_in}.doubleValue()+
+$F{pr_15_in}.doubleValue()+
+$F{pr_16_in}.doubleValue()+
+$F{pr_17_in}.doubleValue()+
+$F{pr_18_in}.doubleValue())]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="671" y="0" width="29" height="20" uuid="59ce9d7c-2c86-4540-a949-8197565fd3e8"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[($F{st_1_in}.doubleValue()+
+$F{st_1_t_in}.doubleValue()+
+$F{st_2_in}.doubleValue()+
+$F{st_2_t_in}.doubleValue()+
+$F{st_3_in}.doubleValue()+
+$F{st_3_t_in}.doubleValue()+
+$F{st_4_in}.doubleValue()+
+$F{st_4_t_in}.doubleValue()+
+$F{st_5_in}.doubleValue()+
+$F{st_5_t_in}.doubleValue()+
+$F{st_6_in}.doubleValue()+
+$F{st_6_t_in}.doubleValue()+
+$F{st_7_in}.doubleValue()+
+$F{st_7_t_in}.doubleValue()+
+$F{st_8_in}.doubleValue()+
+$F{st_8_t_in}.doubleValue()+
+$F{st_9_in}.doubleValue()+
+$F{st_9_t_in}.doubleValue()+
+$F{st_10_in}.doubleValue()+
+$F{st_10_t_in}.doubleValue()+
+$F{st_11_in}.doubleValue()+
+$F{st_11_t_in}.doubleValue()+
+$F{st_12_in}.doubleValue()+
+$F{st_12_t_in}.doubleValue()+
+$F{st_13_in}.doubleValue()+
+$F{st_13_t_in}.doubleValue()+
+$F{st_14_in}.doubleValue()+
+$F{st_15_in}.doubleValue()+
+$F{st_16_in}.doubleValue()+
+$F{st_17_in}.doubleValue()+
+$F{st_18_in}.doubleValue())]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="700" y="0" width="31" height="20" uuid="5cba5e91-b5a1-4399-b1bf-7a97fd76f0b9"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[($F{st_1_out}.doubleValue()+
+$F{st_1_t_out}.doubleValue()+
+$F{st_2_out}.doubleValue()+
+$F{st_2_t_out}.doubleValue()+
+$F{st_3_out}.doubleValue()+
+$F{st_3_t_out}.doubleValue()+
+$F{st_4_out}.doubleValue()+
+$F{st_4_t_out}.doubleValue()+
+$F{st_5_out}.doubleValue()+
+$F{st_5_t_out}.doubleValue()+
+$F{st_6_out}.doubleValue()+
+$F{st_6_t_out}.doubleValue()+
+$F{st_7_out}.doubleValue()+
+$F{st_7_t_out}.doubleValue()+
+$F{st_8_out}.doubleValue()+
+$F{st_8_t_out}.doubleValue()+
+$F{st_9_out}.doubleValue()+
+$F{st_9_t_out}.doubleValue()+
+$F{st_10_out}.doubleValue()+
+$F{st_10_t_out}.doubleValue()+
+$F{st_11_out}.doubleValue()+
+$F{st_11_t_out}.doubleValue()+
+$F{st_12_out}.doubleValue()+
+$F{st_12_t_out}.doubleValue()+
+$F{st_13_out}.doubleValue()+
+$F{st_13_t_out}.doubleValue()+
+$F{st_14_out}.doubleValue()+
+$F{st_15_out}.doubleValue()+
+$F{st_16_out}.doubleValue()+
+$F{st_17_out}.doubleValue()+
+$F{st_18_out}.doubleValue())]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="771" y="0" width="30" height="20" uuid="7aebed63-6576-4bd7-a562-f1e5aff98be6"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[($F{os_1_in}.doubleValue()+
+$F{os_1_t_in}.doubleValue()+
+$F{os_2_in}.doubleValue()+
+$F{os_2_t_in}.doubleValue()+
+$F{os_3_in}.doubleValue()+
+$F{os_3_t_in}.doubleValue()+
+$F{os_4_in}.doubleValue()+
+$F{os_4_t_in}.doubleValue()+
+$F{os_5_in}.doubleValue()+
+$F{os_5_t_in}.doubleValue()+
+$F{os_6_in}.doubleValue()+
+$F{os_6_t_in}.doubleValue()+
+$F{os_7_in}.doubleValue()+
+$F{os_7_t_in}.doubleValue()+
+$F{os_8_in}.doubleValue()+
+$F{os_8_t_in}.doubleValue()+
+$F{os_9_in}.doubleValue()+
+$F{os_9_t_in}.doubleValue()+
+$F{os_10_in}.doubleValue()+
+$F{os_10_t_in}.doubleValue()+
+$F{os_11_in}.doubleValue()+
+$F{os_11_t_in}.doubleValue()+
+$F{os_12_in}.doubleValue()+
+$F{os_12_t_in}.doubleValue()+
+$F{os_13_in}.doubleValue()+
+$F{os_13_t_in}.doubleValue()+
+$F{os_14_in}.doubleValue()+
+$F{os_15_in}.doubleValue()+
+$F{os_16_in}.doubleValue()+
+$F{os_17_in}.doubleValue()+
+$F{os_18_in}.doubleValue())]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="801" y="0" width="30" height="20" uuid="3de64ae9-6d41-49a2-98bd-25728c0797a7"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[($F{os_1_out}.doubleValue()+
+$F{os_1_t_out}.doubleValue()+
+$F{os_2_out}.doubleValue()+
+$F{os_2_t_out}.doubleValue()+
+$F{os_3_out}.doubleValue()+
+$F{os_3_t_out}.doubleValue()+
+$F{os_4_out}.doubleValue()+
+$F{os_4_t_out}.doubleValue()+
+$F{os_5_out}.doubleValue()+
+$F{os_5_t_out}.doubleValue()+
+$F{os_6_out}.doubleValue()+
+$F{os_6_t_out}.doubleValue()+
+$F{os_7_out}.doubleValue()+
+$F{os_7_t_out}.doubleValue()+
+$F{os_8_out}.doubleValue()+
+$F{os_8_t_out}.doubleValue()+
+$F{os_9_out}.doubleValue()+
+$F{os_9_t_out}.doubleValue()+
+$F{os_10_out}.doubleValue()+
+$F{os_10_t_out}.doubleValue()+
+$F{os_11_out}.doubleValue()+
+$F{os_11_t_out}.doubleValue()+
+$F{os_12_out}.doubleValue()+
+$F{os_12_t_out}.doubleValue()+
+$F{os_13_out}.doubleValue()+
+$F{os_13_t_out}.doubleValue()+
+$F{os_14_out}.doubleValue()+
+$F{os_15_out}.doubleValue()+
+$F{os_16_out}.doubleValue()+
+$F{os_17_out}.doubleValue()+
+$F{os_18_out}.doubleValue())]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="870" y="0" width="30" height="20" uuid="a5a144b0-7bde-4254-a5ec-e601e4d4c801"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[($F{as_1_in}.doubleValue()+
+$F{as_1_t_in}.doubleValue()+
+$F{as_2_in}.doubleValue()+
+$F{as_2_t_in}.doubleValue()+
+$F{as_3_in}.doubleValue()+
+$F{as_3_t_in}.doubleValue()+
+$F{as_4_in}.doubleValue()+
+$F{as_4_t_in}.doubleValue()+
+$F{as_5_in}.doubleValue()+
+$F{as_5_t_in}.doubleValue()+
+$F{as_6_in}.doubleValue()+
+$F{as_6_t_in}.doubleValue()+
+$F{as_7_in}.doubleValue()+
+$F{as_7_t_in}.doubleValue()+
+$F{as_8_in}.doubleValue()+
+$F{as_8_t_in}.doubleValue()+
+$F{as_9_in}.doubleValue()+
+$F{as_9_t_in}.doubleValue()+
+$F{as_10_in}.doubleValue()+
+$F{as_10_t_in}.doubleValue()+
+$F{as_11_in}.doubleValue()+
+$F{as_11_t_in}.doubleValue()+
+$F{as_12_in}.doubleValue()+
+$F{as_12_t_in}.doubleValue()+
+$F{as_13_in}.doubleValue()+
+$F{as_13_t_in}.doubleValue()+
+$F{as_14_in}.doubleValue()+
+$F{as_15_in}.doubleValue()+
+$F{as_16_in}.doubleValue()+
+$F{as_17_in}.doubleValue()+
+$F{as_18_in}.doubleValue())]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="900" y="0" width="38" height="20" uuid="94a3ad60-c283-462a-9244-1eb2a6601576"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[($F{as_1_out}.doubleValue()+
+$F{as_1_t_out}.doubleValue()+
+$F{as_2_out}.doubleValue()+
+$F{as_2_t_out}.doubleValue()+
+$F{as_3_out}.doubleValue()+
+$F{as_3_t_out}.doubleValue()+
+$F{as_4_out}.doubleValue()+
+$F{as_4_t_out}.doubleValue()+
+$F{as_5_out}.doubleValue()+
+$F{as_5_t_out}.doubleValue()+
+$F{as_6_out}.doubleValue()+
+$F{as_6_t_out}.doubleValue()+
+$F{as_7_out}.doubleValue()+
+$F{as_7_t_out}.doubleValue()+
+$F{as_8_out}.doubleValue()+
+$F{as_8_t_out}.doubleValue()+
+$F{as_9_out}.doubleValue()+
+$F{as_9_t_out}.doubleValue()+
+$F{as_10_out}.doubleValue()+
+$F{as_10_t_out}.doubleValue()+
+$F{as_11_out}.doubleValue()+
+$F{as_11_t_out}.doubleValue()+
+$F{as_12_out}.doubleValue()+
+$F{as_12_t_out}.doubleValue()+
+$F{as_13_out}.doubleValue()+
+$F{as_13_t_out}.doubleValue()+
+$F{as_14_out}.doubleValue()+
+$F{as_15_out}.doubleValue()+
+$F{as_16_out}.doubleValue()+
+$F{as_17_out}.doubleValue()+
+$F{as_18_out}.doubleValue())]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="109" y="0" width="60" height="20" uuid="7734d78a-ff85-45c4-aec4-a802cd4aebcc"/>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{line_code}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="69" y="0" width="40" height="20" uuid="fb8234b4-6200-428f-b0c0-e32f9c8f03f3"/>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{jo_ppic}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-1" y="0" width="70" height="20" uuid="b1ba3b04-035f-4483-86c6-17fd649ca7cd"/>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{demand}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="0" width="50" height="20" isRemoveLineWhenBlank="true" uuid="6419c209-5242-4350-a838-7268da393c70"/>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{qty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="169" y="0" width="231" height="20" uuid="e4aeaf4f-0f5c-4250-8df3-184b5c6bd47b"/>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{product_desc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="510" y="0" width="40" height="20" uuid="322080d6-8c91-438e-939b-97af8d87b1b5"/>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[($F{qty}.doubleValue())-($F{ct_1_in}.doubleValue()+
+$F{ct_1_t_in}.doubleValue()+
+$F{ct_2_in}.doubleValue()+
+$F{ct_2_t_in}.doubleValue()+
+$F{ct_3_in}.doubleValue()+
+$F{ct_3_t_in}.doubleValue()+
+$F{ct_4_in}.doubleValue()+
+$F{ct_4_t_in}.doubleValue()+
+$F{ct_5_in}.doubleValue()+
+$F{ct_5_t_in}.doubleValue()+
+$F{ct_6_in}.doubleValue()+
+$F{ct_6_t_in}.doubleValue()+
+$F{ct_7_in}.doubleValue()+
+$F{ct_7_t_in}.doubleValue()+
+$F{ct_8_in}.doubleValue()+
+$F{ct_8_t_in}.doubleValue()+
+$F{ct_9_in}.doubleValue()+
+$F{ct_9_t_in}.doubleValue()+
+$F{ct_10_in}.doubleValue()+
+$F{ct_10_t_in}.doubleValue()+
+$F{ct_11_in}.doubleValue()+
+$F{ct_11_t_in}.doubleValue()+
+$F{ct_12_in}.doubleValue()+
+$F{ct_12_t_in}.doubleValue()+
+$F{ct_13_in}.doubleValue()+
+$F{ct_13_t_in}.doubleValue()+
+$F{ct_14_in}.doubleValue()+
+$F{ct_15_in}.doubleValue()+
+$F{ct_16_in}.doubleValue()+
+$F{ct_17_in}.doubleValue()+
+$F{ct_18_in}.doubleValue())]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="621" y="0" width="50" height="20" uuid="864a2816-ef0a-46e2-8ef3-8bc145c295bd"/>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[($F{qty}.doubleValue())-($F{pr_1_in}.doubleValue()+
+$F{pr_1_t_in}.doubleValue()+
+$F{pr_2_in}.doubleValue()+
+$F{pr_2_t_in}.doubleValue()+
+$F{pr_3_in}.doubleValue()+
+$F{pr_3_t_in}.doubleValue()+
+$F{pr_4_in}.doubleValue()+
+$F{pr_4_t_in}.doubleValue()+
+$F{pr_5_in}.doubleValue()+
+$F{pr_5_t_in}.doubleValue()+
+$F{pr_6_in}.doubleValue()+
+$F{pr_6_t_in}.doubleValue()+
+$F{pr_7_in}.doubleValue()+
+$F{pr_7_t_in}.doubleValue()+
+$F{pr_8_in}.doubleValue()+
+$F{pr_8_t_in}.doubleValue()+
+$F{pr_9_in}.doubleValue()+
+$F{pr_9_t_in}.doubleValue()+
+$F{pr_10_in}.doubleValue()+
+$F{pr_10_t_in}.doubleValue()+
+$F{pr_11_in}.doubleValue()+
+$F{pr_11_t_in}.doubleValue()+
+$F{pr_12_in}.doubleValue()+
+$F{pr_12_t_in}.doubleValue()+
+$F{pr_13_in}.doubleValue()+
+$F{pr_13_t_in}.doubleValue()+
+$F{pr_14_in}.doubleValue()+
+$F{pr_15_in}.doubleValue()+
+$F{pr_16_in}.doubleValue()+
+$F{pr_17_in}.doubleValue()+
+$F{pr_18_in}.doubleValue())]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="731" y="0" width="40" height="20" uuid="20aafdb7-a815-4100-be76-1f97145c7803"/>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[($F{qty}.doubleValue())-($F{st_1_in}.doubleValue()+
+$F{st_1_t_in}.doubleValue()+
+$F{st_2_in}.doubleValue()+
+$F{st_2_t_in}.doubleValue()+
+$F{st_3_in}.doubleValue()+
+$F{st_3_t_in}.doubleValue()+
+$F{st_4_in}.doubleValue()+
+$F{st_4_t_in}.doubleValue()+
+$F{st_5_in}.doubleValue()+
+$F{st_5_t_in}.doubleValue()+
+$F{st_6_in}.doubleValue()+
+$F{st_6_t_in}.doubleValue()+
+$F{st_7_in}.doubleValue()+
+$F{st_7_t_in}.doubleValue()+
+$F{st_8_in}.doubleValue()+
+$F{st_8_t_in}.doubleValue()+
+$F{st_9_in}.doubleValue()+
+$F{st_9_t_in}.doubleValue()+
+$F{st_10_in}.doubleValue()+
+$F{st_10_t_in}.doubleValue()+
+$F{st_11_in}.doubleValue()+
+$F{st_11_t_in}.doubleValue()+
+$F{st_12_in}.doubleValue()+
+$F{st_12_t_in}.doubleValue()+
+$F{st_13_in}.doubleValue()+
+$F{st_13_t_in}.doubleValue()+
+$F{st_14_in}.doubleValue()+
+$F{st_15_in}.doubleValue()+
+$F{st_16_in}.doubleValue()+
+$F{st_17_in}.doubleValue()+
+$F{st_18_in}.doubleValue())]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="831" y="0" width="39" height="20" uuid="b8170b44-7724-4f17-8c30-d7a37298533d"/>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[($F{qty}.doubleValue())-($F{os_1_in}.doubleValue()+
+$F{os_1_t_in}.doubleValue()+
+$F{os_2_in}.doubleValue()+
+$F{os_2_t_in}.doubleValue()+
+$F{os_3_in}.doubleValue()+
+$F{os_3_t_in}.doubleValue()+
+$F{os_4_in}.doubleValue()+
+$F{os_4_t_in}.doubleValue()+
+$F{os_5_in}.doubleValue()+
+$F{os_5_t_in}.doubleValue()+
+$F{os_6_in}.doubleValue()+
+$F{os_6_t_in}.doubleValue()+
+$F{os_7_in}.doubleValue()+
+$F{os_7_t_in}.doubleValue()+
+$F{os_8_in}.doubleValue()+
+$F{os_8_t_in}.doubleValue()+
+$F{os_9_in}.doubleValue()+
+$F{os_9_t_in}.doubleValue()+
+$F{os_10_in}.doubleValue()+
+$F{os_10_t_in}.doubleValue()+
+$F{os_11_in}.doubleValue()+
+$F{os_11_t_in}.doubleValue()+
+$F{os_12_in}.doubleValue()+
+$F{os_12_t_in}.doubleValue()+
+$F{os_13_in}.doubleValue()+
+$F{os_13_t_in}.doubleValue()+
+$F{os_14_in}.doubleValue()+
+$F{os_15_in}.doubleValue()+
+$F{os_16_in}.doubleValue()+
+$F{os_17_in}.doubleValue()+
+$F{os_18_in}.doubleValue())]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="938" y="0" width="40" height="20" uuid="2a5b645b-db1c-4a0e-9369-8a74046c2455"/>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[($F{qty}.doubleValue())-($F{as_1_in}.doubleValue()+
+$F{as_1_t_in}.doubleValue()+
+$F{as_2_in}.doubleValue()+
+$F{as_2_t_in}.doubleValue()+
+$F{as_3_in}.doubleValue()+
+$F{as_3_t_in}.doubleValue()+
+$F{as_4_in}.doubleValue()+
+$F{as_4_t_in}.doubleValue()+
+$F{as_5_in}.doubleValue()+
+$F{as_5_t_in}.doubleValue()+
+$F{as_6_in}.doubleValue()+
+$F{as_6_t_in}.doubleValue()+
+$F{as_7_in}.doubleValue()+
+$F{as_7_t_in}.doubleValue()+
+$F{as_8_in}.doubleValue()+
+$F{as_8_t_in}.doubleValue()+
+$F{as_9_in}.doubleValue()+
+$F{as_9_t_in}.doubleValue()+
+$F{as_10_in}.doubleValue()+
+$F{as_10_t_in}.doubleValue()+
+$F{as_11_in}.doubleValue()+
+$F{as_11_t_in}.doubleValue()+
+$F{as_12_in}.doubleValue()+
+$F{as_12_t_in}.doubleValue()+
+$F{as_13_in}.doubleValue()+
+$F{as_13_t_in}.doubleValue()+
+$F{as_14_in}.doubleValue()+
+$F{as_15_in}.doubleValue()+
+$F{as_16_in}.doubleValue()+
+$F{as_17_in}.doubleValue()+
+$F{as_18_in}.doubleValue())]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="28" splitType="Stretch"/>
+	</summary>
+</jasperReport>

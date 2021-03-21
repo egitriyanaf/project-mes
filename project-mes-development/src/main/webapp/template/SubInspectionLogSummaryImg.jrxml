@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SubInspectionLogSummaryImg" language="groovy" columnDirection="RTL" pageWidth="595" pageHeight="842" whenNoDataType="NoDataSection" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isFloatColumnFooter="true" uuid="d555b3ef-e864-4872-aaa4-b750faf55d63">
+	<property name="ireport.zoom" value="1.0000000000000013"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="diamond_mark" class="java.lang.String">
+		<defaultValueExpression><![CDATA[$P{diamond_mark}]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT * FROM jdcfnd_mstimages
+WHERE image_code = $P{diamond_mark}]]>
+	</queryString>
+	<field name="image_code" class="java.lang.String"/>
+	<field name="image_path" class="java.lang.String"/>
+	<field name="image_name" class="java.lang.String"/>
+	<field name="image_flag" class="java.lang.String"/>
+	<field name="created_date" class="java.sql.Date"/>
+	<field name="created_by" class="java.lang.Long"/>
+	<field name="last_updated_date" class="java.sql.Date"/>
+	<field name="last_updated_by" class="java.lang.Long"/>
+	<field name="image_status" class="java.lang.String"/>
+	<field name="code_name" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="59" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="cc02e37b-fddd-482f-9f58-ad5e39fd2cc8" x="0" y="0" width="202" height="59"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Accesories/ Sticker Sample]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="146">
+			<image scaleImage="RetainShape">
+				<reportElement uuid="a26cb786-20a6-4641-aa07-45ecc8bd215e" x="0" y="0" width="202" height="139"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<imageExpression><![CDATA[$F{image_path}]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

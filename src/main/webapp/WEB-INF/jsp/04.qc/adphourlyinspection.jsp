@@ -1,0 +1,1217 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <Title>${dptName} Inspection | QC</Title>
+        <script type="text/javascript">
+            var contextPath = location.origin;
+            $(document).ready(function () {
+                var $CounterStatus = [
+                    $('#barAgrade'),
+                    $('#barBgrade'),
+                    $('#barCgrade'),
+                    $('#barRewok'),
+                    $('#notif')
+                ];
+                var $barAgrade = $('#barAgrade');
+                var $barBgrade = $('#barBgrade');
+                var $barCgrade = $('#barCgrade');
+                var $barRewok = $('#barRewok');
+                var $notif = $('#notif');
+
+
+                var $Clean = $('#Clean');
+                var $Cosmetic = $('#Cosmetic');
+                var $Straight = $('#Straight');
+                var $Strong = $('#Strong');
+                var $Other = $('#Other');
+                var $product = $('#product');
+                var clean = 0;
+                var cosmetic = 0;
+                var straight = 0;
+                var strong = 0;
+                var other = 0;
+                var valCategory = "";
+                var flagDefact = false;
+                var disabledButton = $('button');
+                var dptId = $("#dptId").val();
+                var styleVal = 0;
+                var sumBarcode = 0;
+                var counterAll = 0;
+                counterCategory();
+                counterStatusBar();
+
+
+                function counterStatusBar() {
+                    var data = {
+                        search: {
+                            lineCode: $('#listNcvs').val()
+                        }
+                    };
+                    _fw_post('${pageContext.request.contextPath}/qc/hourlyinspection/get-counter-new', data, function (data) {
+                        console.log(JSON.stringify(data));
+                        var agrade = 0;
+                        var bgrade = 0;
+                        var cgrade = 0;
+                        var rewok = 0;
+                        var counter = 0;
+                        var progressAgrade = 0;
+                        var progressBgrade = 0;
+                        var progressCgrade = 0;
+                        var progressRewok = 0;
+
+                        if (data.agrade !== null && data.counter !== null) {
+                            progressAgrade = (data.agrade / data.counter) * 100;
+                            agrade = data.agrade;
+                        }
+
+                        if (data.bgrade !== null && data.counter !== null) {
+                            progressBgrade = (data.bgrade / data.counter) * 100;
+                            bgrade = data.bgrade;
+                        }
+
+                        if (data.cgrade !== null && data.counter !== null) {
+                            progressCgrade = (data.cgrade / data.counter) * 100;
+                            cgrade = data.cgrade;
+                        }
+
+                        if (data.rewok !== null && data.counter !== null) {
+                            progressRewok = (data.rewok / data.counter) * 100;
+                            rewok = data.rewok;
+                        }
+//                        progressRewok = 7;//erwin
+                        if (progressRewok >= 7) {
+                             $("#peringatan").show();
+                             $notif.html(progressRewok.toFixed(1) + '%');
+                        }else{
+                             $("#peringatan").hide();
+                         }
+                        //panggil 
+                        if (data.counter !== null) {
+                            counter = data.counter;
+                        }
+
+                        $barAgrade.parent().css('pointer-events', 'auto');
+                        $barAgrade.parents('p').next().children().css('width', progressAgrade + '%');
+                        $barAgrade.parents('p').next().children().attr('title', progressAgrade.toFixed(2) + '%');
+                        $barAgrade.html(agrade + " / " + counter + " " + progressAgrade.toFixed(1) + '%');
+
+                        $barBgrade.parent().css('pointer-events', 'auto');
+                        $barBgrade.parents('p').next().children().css('width', progressBgrade + '%');
+                        $barBgrade.parents('p').next().children().attr('title', progressBgrade.toFixed(2) + '%');
+                        $barBgrade.html(bgrade + " / " + counter + " " + progressBgrade.toFixed(1) + '%');
+
+                        $barCgrade.parent().css('pointer-events', 'auto');
+                        $barCgrade.parents('p').next().children().css('width', progressCgrade + '%');
+                        $barCgrade.parents('p').next().children().attr('title', progressCgrade.toFixed(2) + '%');
+                        $barCgrade.html(cgrade + " / " + counter + " " + progressCgrade.toFixed(1) + '%');
+
+                        $barRewok.parent().css('pointer-events', 'auto');
+                        $barRewok.parents('p').next().children().css('width', progressRewok + '%');
+                        $barRewok.parents('p').next().children().attr('title', progressRewok.toFixed(2) + '%');
+                        $barRewok.html(rewok + " / " + counter + " " + progressRewok.toFixed(1) + '%');
+
+                    });
+                }
+
+                if (dptId === '1') {
+                    $("#counterStyleId").show();
+                } else if (dptId === '2') {
+                    $("#counterStyleId").show();
+                } else if (dptId === '3') {
+                    $("#counterStyleId").show();
+                } else if (dptId === '5') {
+                    $("#counterStyleId").show();
+                } else {
+                    $("#counterStyleId").hide();
+                }
+
+                $('#Other').click(function () {
+                    valCategory = "Other"
+                });
+
+                $('#Clean').click(function () {
+                    valCategory = "Clean"
+                });
+
+                $('#Cosmetic').click(function () {
+                    valCategory = "Cosmetic"
+                });
+
+                $('#Straight').click(function () {
+                    valCategory = "Straight"
+                });
+
+                $('#Strong').click(function () {
+                    valCategory = "Strong"
+                });
+
+                for (let x = 0; x < disabledButton.length; x++) {
+                    disabledButton[x].disabled = true
+                }
+
+                function counterCategory() {
+                    var data = {};
+                    var cleanPersentase = 0;
+                    var cosmeticPersentase = 0;
+                    var straightPersentase = 0;
+                    var strongPersentase = 0;
+                    var otherPersentase = 0;
+                    var sampleVal = 0;
+                    var counterFunc = _fw_post('${pageContext.request.contextPath}/qc/hourlyinspection/counter', data, function (res) {
+                        console.log(res)
+                        var datas = [];
+                        if (res.length != 0) {
+                            for (var x = 0; x < res.length; x++) {
+                                datas = res[x]
+                                if (datas[1] == "Clean") {
+                                    clean = datas[0];
+                                }
+
+                                if (datas[1] == "Cosmetic") {
+                                    cosmetic = datas[0];
+                                }
+
+                                if (datas[1] == "Straight") {
+                                    straight = datas[0];
+                                }
+
+                                if (datas[1] == "Strong") {
+                                    strong = datas[0];
+                                }
+                                if (datas[1] == "Other") {
+                                    other = datas[0];
+                                }
+                            }
+
+                            counterAll = clean + cosmetic + straight + strong + other;
+
+
+                            if (styleVal == 1) {
+                                sampleVal = $("#sampleId").val()
+                                console.log(sampleVal);
+                                cleanPersentase = (clean / sampleVal) * 100;
+                                cosmeticPersentase = (cosmetic / sampleVal) * 100;
+                                straightPersentase = (straight / sampleVal) * 100;
+                                strongPersentase = (strong / sampleVal) * 100;
+                                otherPersentase = (other / sampleVal) * 100;
+                            } else if (styleVal == 2) {
+                                var dataSend = {};
+                                _fw_post('${pageContext.request.contextPath}/qc/hourlyinspection/get-countfullgrade', dataSend, function (res) {
+                                    if (res != null) {
+                                        sumBarcode = res
+                                        console.log("data count A-Grade ", res);
+                                    }
+                                    cleanPersentase = (clean / sumBarcode) * 100;
+                                    cosmeticPersentase = (cosmetic / sumBarcode) * 100;
+                                    straightPersentase = (straight / sumBarcode) * 100;
+                                    strongPersentase = (strong / sumBarcode) * 100;
+                                    otherPersentase = (other / sumBarcode) * 100;
+                                });
+
+                            } else {
+
+                                cleanPersentase = (clean / counterAll) * 100;
+                                console.log("data " + cleanPersentase + clean);
+                                cosmeticPersentase = (cosmetic / counterAll) * 100;
+                                straightPersentase = (straight / counterAll) * 100;
+                                strongPersentase = (strong / counterAll) * 100;
+                                otherPersentase = (other / counterAll) * 100;
+                            }
+
+                            if (Number.isFinite(cleanPersentase)) {
+                                document.getElementById("cleanCountId").innerHTML = cleanPersentase.toFixed(1) + "%";
+                            } else {
+                                document.getElementById("cleanCountId").innerHTML = 0 + "%";
+                            }
+                            if (Number.isFinite(cosmeticPersentase)) {
+                                document.getElementById("cosmeticCountId").innerHTML = cosmeticPersentase.toFixed(1) + "%";
+                            } else {
+                                document.getElementById("cosmeticCountId").innerHTML = 0 + "%";
+                            }
+                            if (Number.isFinite(straightPersentase)) {
+                                document.getElementById("straightCountId").innerHTML = straightPersentase.toFixed(1) + "%";
+                            } else {
+                                document.getElementById("straightCountId").innerHTML = 0 + "%";
+                            }
+                            if (Number.isFinite(strongPersentase)) {
+                                document.getElementById("strongCountId").innerHTML = strongPersentase.toFixed(1) + "%";
+                            } else {
+                                document.getElementById("strongCountId").innerHTML = 0 + "%";
+                            }
+                            if (Number.isFinite(otherPersentase)) {
+                                document.getElementById("otherCountId").innerHTML = otherPersentase.toFixed(1) + "%";
+                            } else {
+                                document.getElementById("otherCountId").innerHTML = 0 + "%";
+                            }
+//                            document.getElementById("cleanCountId").innerHTML = cleanPersentase.toFixed(1) + "%";
+//                            document.getElementById("cosmeticCountId").innerHTML = cosmeticPersentase.toFixed(1) + "%";
+//                            document.getElementById("straightCountId").innerHTML = straightPersentase.toFixed(1) + "%";
+//                            document.getElementById("strongCountId").innerHTML = strongPersentase.toFixed(1) + "%";
+//                            document.getElementById("otherCountId").innerHTML = otherPersentase.toFixed(1) + "%";
+                        } else {
+                            document.getElementById("cleanCountId").innerHTML = clean.toFixed(1) + "%";
+                            document.getElementById("cosmeticCountId").innerHTML = cosmetic.toFixed(1) + "%";
+                            document.getElementById("straightCountId").innerHTML = straight.toFixed(1) + "%";
+                            document.getElementById("strongCountId").innerHTML = strong.toFixed(1) + "%";
+                            document.getElementById("otherCountId").innerHTML = other.toFixed(1) + "%";
+                        }
+                    });
+                }
+                ;
+
+                $('button[name=buttonRework]').click(function () {
+                    var valDefect = $('input[type=radio][name=idDefact]:checked');
+                    var valPoNo = $('input[type=radio][name=idProduct]:checked');
+                    var valProductCd = valPoNo[0].attributes[5].value;
+                    var dataJson = {
+                        lineCode: $('#listNcvs').val(),
+                        poNo: valPoNo[0].value,
+                        defect: valDefect[0].value,
+                        position: $('input[type=radio][name=position]:checked').val(),
+                        category: valCategory,
+                        type: "Rework",
+                        poItem: valPoNo[0].attributes[4].value,
+                        productCode: valPoNo[0].attributes[5].value,
+                        demandClass: $("#demandId").val(),
+                        area: $('#userType').val()
+                    }
+
+                    console.log(dataJson);
+                    submit('${pageContext.request.contextPath}/qc/hourlyinspection/save', JSON.stringify(dataJson), function (data) {
+                        console.log(data);
+                        $("input[name='id']").val(data.id);
+                        counterCategory();
+                        counterStatusBar();
+                    });
+                });
+
+                $('button[name=buttonBgrade]').click(function () {
+                    var valDefect = $('input[type=radio][name=idDefact]:checked');
+                    var valPoNo = $('input[type=radio][name=idProduct]:checked');
+                    var valProductCd = valPoNo[0].attributes[5].value;
+                    var dataJson = {
+                        lineCode: $('#listNcvs').val(),
+                        poNo: valPoNo[0].value,
+                        defect: valDefect[0].value,
+                        position: $('input[type=radio][name=position]:checked').val(),
+                        category: valCategory,
+                        type: "B-Grade",
+                        poItem: valPoNo[0].attributes[4].value,
+                        productCode: valPoNo[0].attributes[5].value,
+                        demandClass: $("#demandId").val(),
+                        area: $('#userType').val()
+                    };
+
+                    console.log(dataJson);
+                    submit('${pageContext.request.contextPath}/qc/hourlyinspection/save', JSON.stringify(dataJson), function (data) {
+                        $("input[name='id']").val(data.id);
+                        counterCategory();
+                        counterStatusBar()
+                    });
+                });
+
+                $('button[name=buttonCgrade]').click(function () {
+                    var valDefect = $('input[type=radio][name=idDefact]:checked');
+                    var valPoNo = $('input[type=radio][name=idProduct]:checked');
+                    var valProductCd = valPoNo[0].attributes[5].value;
+                    var dataJson = {
+                        lineCode: $('#listNcvs').val(),
+                        poNo: valPoNo[0].value,
+                        defect: valDefect[0].value,
+                        position: $('input[type=radio][name=position]:checked').val(),
+                        category: valCategory,
+                        type: "C-Grade",
+                        poItem: valPoNo[0].attributes[4].value,
+                        productCode: valPoNo[0].attributes[5].value,
+                        demandClass: $("#demandId").val(),
+                        area: $('#userType').val()
+                    };
+
+                    console.log(dataJson);
+                    submit('${pageContext.request.contextPath}/qc/hourlyinspection/save', JSON.stringify(dataJson), function (data) {
+                        $("input[name='id']").val(data.id);
+                        counterCategory();
+                        counterStatusBar()
+                    });
+                });
+
+                $('button[name=buttonAGrade]').click(function () {
+                    // var valDefect = $('input[type=radio][name=idDefact]:checked');
+                    var valPoNo = $('input[type=radio][name=idProduct]:checked');
+                    var valProductCd = valPoNo[0].attributes[5].value;
+                    var dataJson = {
+                        lineCode: $('#listNcvs').val(),
+                        poNo: valPoNo[0].value,
+                        defect: null,
+                        position: null,
+                        category: null,
+                        type: "A-Grade",
+                        poItem: valPoNo[0].attributes[4].value,
+                        productCode: valPoNo[0].attributes[5].value,
+                        demandClass: $("#demandId").val(),
+                        area: $('#userType').val()
+                    };
+
+                    console.log(dataJson);
+                    submit('${pageContext.request.contextPath}/qc/hourlyinspection/save', JSON.stringify(dataJson), function (data) {
+                        $("input[name='id']").val(data.id);
+                        counterCategory();
+                        counterStatusBar()
+                    });
+                })
+
+                $('#logoFile').change(function () {
+                    var $previewContainer = $('#imageAgent');
+                    var input = this;
+                    var file = input.files[0];
+                    console.log(input, file);
+                    isLogoValid(file, $previewContainer).then(function (imageStr) {
+                        if (imageStr) {
+                            imageBase64 = imageStr;
+                        } else {
+                            $('#logoFile').val('');
+                        }
+                    });
+                });
+
+                (function () {
+                    var data = {
+                        search: {
+                            "value": "Clean"
+                        }
+                    };
+                    var stringElement = '';
+                    _fw_post('${pageContext.request.contextPath}/qc/hourlyinspection/defect', data, function (res) {
+                        if (res.length !== 0) {
+                            res.forEach(function (defect) {
+                                stringElement += '<label id ="Clean" class="btnQcDefact">' + defect.description + '<input id="idDefact" name="idDefact" type="radio" value="' + defect.description + '" disabled="true" hidden /></label>';
+                            });
+                        }
+
+                        $Clean.html(stringElement);
+                    });
+                })();
+
+                (function () {
+                    var data = {
+                        search: {
+                            "value": "Cosmetic"
+                        }
+                    };
+                    var stringElement = '';
+                    _fw_post('${pageContext.request.contextPath}/qc/hourlyinspection/defect', data, function (res) {
+                        if (res.length !== 0) {
+                            res.forEach(function (defect) {
+                                stringElement += '<label id="Cosmetic" class="btnQcDefact">' + defect.description + '<input id="idDefact" name="idDefact" type="radio" value="' + defect.description + '" disabled="true" hidden/></label>';
+                            });
+                        }
+
+                        $Cosmetic.html(stringElement);
+                    });
+                })();
+
+                (function () {
+                    var data = {
+                        search: {
+                            "value": "Straight"
+                        }
+                    };
+                    var stringElement = '';
+                    _fw_post('${pageContext.request.contextPath}/qc/hourlyinspection/defect', data, function (res) {
+                        if (res.length !== 0) {
+                            res.forEach(function (defect) {
+                                stringElement += '<label id ="Straight" class="btnQcDefact">' + defect.description + '<input id="idDefact" name="idDefact" type="radio" value="' + defect.description + '" disabled="true" hidden /></label>';
+                            });
+                        }
+
+                        $Straight.html(stringElement);
+                    });
+                })();
+
+                (function () {
+                    var data = {
+                        search: {
+                            "value": "Strong"
+                        }
+                    };
+                    var stringElement = '';
+                    _fw_post('${pageContext.request.contextPath}/qc/hourlyinspection/defect', data, function (res) {
+                        if (res.length !== 0) {
+                            res.forEach(function (defect) {
+                                stringElement += '<label id ="Strong" class="btnQcDefact">' + defect.description + '<input id="idDefact" name="idDefact" type="radio" value="' + defect.description + '" disabled="true" hidden /></label>';
+                            });
+                        }
+
+                        $Strong.html(stringElement);
+                    });
+                })();
+
+                (function () {
+                    var data = {
+                        search: {
+                            "value": "Others"
+                        }
+                    };
+                    var stringElement = '';
+                    _fw_post('${pageContext.request.contextPath}/qc/hourlyinspection/defect', data, function (res) {
+                        if (res.length !== 0) {
+                            res.forEach(function (defect) {
+                                stringElement += '<label id="OtherLabel" class="btnQcDefact" >' + defect.description + '<input id="idDefact" name="idDefact" type="radio" value="' + defect.description + '" disabled="true" hidden /></label>';
+                            });
+                        }
+
+                        $Other.html(stringElement);
+                    });
+                })();
+
+
+                var headerOther = document.getElementById("Other");
+                var btnsOther = headerOther.getElementsByClassName("btnQcDefact");
+                for (var i = 0; i < btnsOther.length; i++) {
+                    btnsOther[i].addEventListener("click", function () {
+                        if (flagDefact == true) {
+                            var current = document.getElementsByClassName("activeRadioDefact");
+                            if (current.length > 0) {
+                                current[0].className = current[0].className.replace(" activeRadioDefact", "");
+                            }
+                            this.className += " activeRadioDefact";
+                            var positionDisable = document.getElementsByName('position');
+                            for (let i = 0; i < positionDisable.length; i++) {
+                                positionDisable[i].disabled = false
+                            }
+                        }
+                    });
+                }
+
+                var headerStrong = document.getElementById("Strong");
+                var btnsStrong = headerStrong.getElementsByClassName("btnQcDefact");
+                for (var i = 0; i < btnsStrong.length; i++) {
+                    btnsStrong[i].addEventListener("click", function () {
+                        if (flagDefact == true) {
+                            var current = document.getElementsByClassName("activeRadioDefact");
+                            if (current.length > 0) {
+                                current[0].className = current[0].className.replace(" activeRadioDefact", "");
+                            }
+                            this.className += " activeRadioDefact";
+                            var positionDisable = document.getElementsByName('position');
+                            for (let i = 0; i < positionDisable.length; i++) {
+                                positionDisable[i].disabled = false
+                            }
+                        }
+                    });
+                }
+
+                var headerStraight = document.getElementById("Straight");
+                var btnsStraight = headerStraight.getElementsByClassName("btnQcDefact");
+                for (var i = 0; i < btnsStraight.length; i++) {
+                    btnsStraight[i].addEventListener("click", function () {
+                        if (flagDefact == true) {
+                            var current = document.getElementsByClassName("activeRadioDefact");
+                            if (current.length > 0) {
+                                current[0].className = current[0].className.replace(" activeRadioDefact", "");
+                            }
+                            this.className += " activeRadioDefact";
+                            var positionDisable = document.getElementsByName('position');
+                            for (let i = 0; i < positionDisable.length; i++) {
+                                positionDisable[i].disabled = false
+                            }
+                        }
+                    });
+                }
+
+                var headerCosmetic = document.getElementById("Cosmetic");
+                var btnsCosmetic = headerCosmetic.getElementsByClassName("btnQcDefact");
+                for (var i = 0; i < btnsCosmetic.length; i++) {
+                    btnsCosmetic[i].addEventListener("click", function () {
+                        if (flagDefact == true) {
+                            var current = document.getElementsByClassName("activeRadioDefact");
+                            if (current.length > 0) {
+                                current[0].className = current[0].className.replace(" activeRadioDefact", "");
+                            }
+                            this.className += " activeRadioDefact";
+                            var positionDisable = document.getElementsByName('position');
+                            for (let i = 0; i < positionDisable.length; i++) {
+                                positionDisable[i].disabled = false
+                            }
+                        }
+                    });
+                }
+
+                var headerClean = document.getElementById("Clean");
+                var btnsClean = headerClean.getElementsByClassName("btnQcDefact");
+                for (var i = 0; i < btnsClean.length; i++) {
+                    btnsClean[i].addEventListener("click", function () {
+                        if (flagDefact == true) {
+                            var current = document.getElementsByClassName("activeRadioDefact");
+                            if (current.length > 0) {
+                                current[0].className = current[0].className.replace(" activeRadioDefact", "");
+                            }
+                            this.className += " activeRadioDefact";
+                            var positionDisable = document.getElementsByName('position');
+                            for (let i = 0; i < positionDisable.length; i++) {
+                                positionDisable[i].disabled = false
+                            }
+                        }
+                    });
+                }
+
+                $('input[name=position]').click(function () {
+                    for (let i = 0; i < disabledButton.length; i++) {
+                        disabledButton[i].disabled = false;
+                    }
+                });
+                $('#product').click(function () {
+                    var valPoNo = $('input[type=radio][name=idProduct]:checked');
+                    var valProductCd = valPoNo[0].attributes[5].value;
+                    var productCode = valProductCd;
+                    _fw_get('${pageContext.request.contextPath}/file/get-image/' + productCode, function (res) {
+                        $('#imageAgent').attr('src', `data:image/jpg;base64,` + res);
+                    });
+                    var headerProduct = document.getElementById("product");
+                    var btnsProduct = headerProduct.getElementsByClassName("btnQcProduct");
+                    for (var i = 0; i < btnsProduct.length; i++) {
+                        btnsProduct[i].addEventListener("click", function () {
+                            var current = document.getElementsByClassName("activeRadioProduct");
+                            if (current.length > 0) {
+                                current[0].className = current[0].className.replace(" activeRadioProduct", "");
+                            }
+                            this.className += " activeRadioProduct";
+                        });
+                    }
+                    flagDefact = true;
+                    var defactDisable = document.getElementsByName('idDefact');
+                    var buttonAGrade = $('button[name=buttonAGrade]')
+                    for (let i = 0; i < defactDisable.length; i++) {
+                        defactDisable[i].disabled = false
+                    }
+                    buttonAGrade[0].disabled = false;
+                })
+
+                $("#styleId").change(function () {
+                    styleVal = $("#styleId").val();
+                    if (styleVal == 1) {
+                        $("#sampleId").attr('readonly', false);
+                    } else {
+                        $("#sampleId").attr('readonly', true);
+                        $("#sampleId").val("");
+                    }
+                    // counterCategory();
+                });
+
+                $("#sampleId").change(function () {
+                    counterCategory();
+                });
+
+                $("#listNcvs").autocomplete({
+                    source: function (request, response) {
+                        var payload = {
+                            search: {
+                                
+                                term: request.term
+                            }
+                        };
+                        $.ajax({
+                            url: "${pageContext.request.contextPath}/qc/hourlyinspection/get-ncvs",
+                            contentType: "application/json",
+                            type: "post",
+                            dataType: "json",
+                            data: JSON.stringify(payload)
+                        }).done(function (data) {
+                            const kanwil = data.map(d => ({
+                                    value: d.id,
+                                    label: d.lineCode
+                                }));
+                            response(kanwil);
+                        });
+                    },
+                    minLength: 3,
+                    focus: function (event, ui) {
+                        $("#listNcvs").val(ui.item.label);
+                        return false;
+                    },
+                    select: function (event, ui) {
+                        $("#listNcvs").val(ui.item.label);
+                         $("#demandId").attr('disabled', false);
+                        
+                        return false;
+                    }
+                });
+                
+               
+                $("#listpoNo").autocomplete({
+                    source: function (request, response) {
+                        var payload = {
+                            search: {
+                                 "ncvs": $('#listNcvs').val(),
+                                 "demand": $('#demandId').val(),
+                                  term: request.term
+                            }
+                        };
+                        $.ajax({
+                            url: "${pageContext.request.contextPath}/qc/hourlyinspection/get-pon",
+                            contentType: "application/json",
+                            type: "post",
+                            dataType: "json",
+                            data: JSON.stringify(payload)
+                        }).done(function (data) {
+                            const kanwil = data.map(d => ({
+                                value: d.poNo,
+                                label: d.poNo
+                                }));
+                            response(kanwil);
+                        });
+                    },
+                     minLength: 0,
+                    focus: function (event, ui) {
+                        $("#listpoNo").val(ui.item.label);
+                        return false;
+                    },
+                    select: function (event, ui) {
+                        $("#listpoNo").val(ui.item.label);
+                     
+                        $("#listpoItem").attr("disabled", false);
+                        return false;
+                    }
+                });
+                
+ 
+                
+                $("#listpoItem").autocomplete({
+                    source: function (request, response) {
+                        var payload = {
+                            search: {
+                                 "poNo": $('#listpoNo').val(),
+                                 "ncvs": $('#listNcvs').val(),
+                                 "demand": $('#demandId').val(),
+                                 term: request.term
+                            }
+                        };
+                        $.ajax({
+                            url: "${pageContext.request.contextPath}/qc/hourlyinspection/po_item_new",
+                            contentType: "application/json",
+                            type: "post",
+                            dataType: "json",
+                            data: JSON.stringify(payload)
+                        }).done(function (data) {
+                            const kanwil = data.map(d => ({
+                                value: d.poItem,
+                                label: d.poItem
+                                }));
+                            response(kanwil);
+                        });
+                    },
+                     minLength: 0,
+                    focus: function (event, ui) {
+                        $("#listpoItem").val(ui.item.label);
+                        return false;
+                    },
+                    select: function (event, ui) {
+                        $("#listpoItem").val(ui.item.label);
+                        (function () {
+                            var data = {
+                                search: {
+                                 "poNo": $('#listpoNo').val(),
+                                 "ncvs": $('#listNcvs').val(),
+                                 "demand": $('#demandId').val(),
+                                 "poItem": $('#listpoItem').val()
+                                }
+                            };
+                            var stringElement = '';
+                            _fw_post('${pageContext.request.contextPath}/qc/hourlyinspection/product', data, function (res) {
+                                if (res.length !== 0) {
+                                    res.forEach(function (data) {
+                                        stringElement += '<label class="btnQcProduct">' + data.joPpic + '<input id="idProduct" name="idProduct" type="radio" value="' + data.poNo + '" poItem="' + data.poItem + '" productCode="' + data.joPpic + '" hidden/></label>';
+                                    });
+                                }
+
+                                $product.html(stringElement);
+                            });
+                        })();
+                     
+                        return false;
+                    }
+                });
+                
+
+                
+
+                $("#demandId").autocomplete({
+                    source: function (request, response) {
+                        var payload = {
+                            search: {
+                                ncvs: $("#listNcvs").val(),
+                                term: request.term
+                            }
+                        };
+                        $.ajax({
+                            url: "${pageContext.request.contextPath}/qc/hourlyinspection/get-demandClassNew",
+                            contentType: "application/json",
+                            type: "post",
+                            dataType: "json",
+                            data: JSON.stringify(payload)
+                        }).done(function (data) {
+                            console.log(data)
+                            const kanwil = data.map(d => ({
+                                    value: d.demandClass,
+                                    label: d.demandClass
+                                }));
+                            response(kanwil);
+                        });
+                    },
+                    minLength: 2,
+                    focus: function (event, ui) {
+                        $("#demandId").val(ui.item.label);
+                        return false;
+                    },
+                    select: function (event, ui) {
+                        $("#demandId").val(ui.item.label);
+                        $("#listpoNo").attr('disabled', false);
+                        return false;
+                    }
+                });
+
+                $("#demandId").change(function () {
+                    if ($("#demandId").val() === "") {
+                        $("#listNcvs").val("");
+                        $product.html("");
+                    }
+                });
+
+                $("#listNcvs").change(function () {
+                    if ($("#listNcvs").val() === "") {
+                        $product.html("");
+                    }
+                });
+                
+                $("#listpoNo").change(function () {
+                    if ($("#listpoNo").val() === "") {
+                        $product.html("");
+                    }
+                });
+                
+                $("#listpoItem").change(function () {
+                    if ($("#listpoItem").val() === "") {
+                        $product.html("");
+                    }
+                });
+               
+
+            });
+        </script>
+        <style>
+            .btnQcDefact {
+                border: 2px solid #2A74EE;
+                /* outline: none; */
+                padding: 10px 12px;
+                background-color: white;
+                cursor: pointer;
+                font-size: 13px;
+                width: 150px;
+                text-align: center;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                height: 40px;
+            }
+
+            .activeRadioDefact,
+            .btnQcDefact:hover {
+                background-color: #2A74EE;
+                overflow: visible;
+                white-space: normal;
+                line-height: 1.5em;
+                height: 60px; 
+                color: white;
+            }
+
+            .btnQcProduct {
+                border: 2px solid #2A74EE;
+                /* outline: none; */
+                padding: 10px 12px;
+                background-color: white;
+                cursor: pointer;
+                font-size: 13px;
+                width: 100%;
+                text-align: center;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                height: 40px;
+            }
+
+            .activeRadioProduct,
+            .btnQcProduct:hover {
+                background-color: #2A74EE;
+                color: white;
+                overflow: visible;
+                word-wrap: break-word;
+                height: auto;
+                white-space: normal;
+            }
+
+            .btnBgrade {
+                border: 2px solid #2A74EE;
+                /* outline: none; */
+                padding: 10px 12px;
+                background-color: orange;
+                cursor: pointer;
+                font-size: 13px;
+                width: 110px;
+                text-align: center;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                height: 40px;
+            }
+
+            .activeRadioDefact,
+            .btnBgrade:hover {
+                background-color: #2A74EE;
+                color: white;
+            }
+
+            .btnCgrade {
+                border: 2px solid #2A74EE;
+                /* outline: none; */
+                padding: 10px 12px;
+                background-color: greenyellow;
+                cursor: pointer;
+                font-size: 13px;
+                width: 110px;
+                text-align: center;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                height: 40px;
+            }
+
+            .activeRadioDefact,
+            .btnCgrade:hover {
+                background-color: #2A74EE;
+                color: white;
+            }
+
+            .btnAgrade {
+                border: 2px solid #2A74EE;
+                /* outline: none; */
+                padding: 10px 12px;
+                background-color: lightsalmon;
+                cursor: pointer;
+                font-size: 13px;
+                width: 110px;
+                text-align: center;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                height: 40px;
+            }
+
+            .activeRadioDefact,
+            .btnAgrade:hover {
+                background-color: #2A74EE;
+                color: white;
+            }
+
+            .btnRework {
+                border: 2px solid #2A74EE;
+                color: black;
+                /* outline: none; */
+                padding: 10px 12px;
+                cursor: pointer;
+                font-size: 13px;
+                width: 110px;
+                text-align: center;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                height: 40px;
+            }
+
+            .activeRadioDefact,
+            .btnRework {
+                background-color: #2A74EE;
+                color: black;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="content"> 
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="main-header">
+                        <ul class="breadcrumb">
+                            <li><i class="fa fa-home"></i></li>
+                            <li>QC</li>
+                            <li class="active"> ${dptName} Inspection</li>
+                        </ul>
+                        <h3><i class="fa fa-bullhorn fa-fw"></i> ${dptName} Inspection</h3><em>QC</em>
+                    </div>
+                </div>
+            </div>
+<!--            <div class="alert alert-warning" style="display:none" id="peringatan">
+                <a href="#" class="close" data-dismiss="alert">&times;</a>
+                <p style="color:#CE7B11"><strong>Warning!</strong> Your Rework exceeds the limit, please fix it.  percentage : <span id="notif"></span></p>
+           </div>-->
+        </div>
+        <div id="counterStyleId">
+            <div class="main-content row">
+                <div class="widget widget-table">
+                    <div class="widget-header">
+                        <h3 style="color: white"><i class="fa fa-list" style="color: white"></i>Counter Style</h3>
+                    </div>
+                    <form class="row form-group" style="margin-top: 5px">
+                        <div class="col-sm-6">
+                            <select id="styleId" class="form-control" style="background-color: white">
+                                <option value="0">- Choose Style -</option>
+                                <option value="1">Sample</option>
+                                <option value="2">100%</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="hidden" id="sumBcId" placeholder="Sample" value="${sumBarcode}" readonly class="form-control" />
+                            <input type="number" id="sampleId" placeholder="Sample" readonly class="form-control" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- main -->
+        <div class="main-content row">
+            <div class="widget widget-table">
+                <div class="widget-header">
+                    <h3 style="color: white"><i class="fa fa-list" style="color: white"></i> ${dptName} Inspection </h3>
+                </div>
+                <div class="widget-content">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-10">
+                                    <img id="imageAgent" style="width: 100%; height: 100%;" src="${pageContext.request.contextPath}/assets/img/no-profile-image.png" class="thumbnail rounded-img-circle-with-top-margin previewImage" alt="photo" width="100px" height="100px">
+                                    <!-- <c:choose>
+                                        <c:when test="${logoMitra.logo_url != null}">
+                                            <img id="imageAgent" style="width: 100%; height: 100%;" src="${pageContext.request.contextPath}/file/get/logo?name=${logoMitra.logo_url}" class="thumbnail rounded-img-circle-with-top-margin previewImage" alt="photo" width="100px" height="100px">
+                                        </c:when>
+                                        <c:otherwise>
+                                            <img id="imageAgent" style="width: 100%; height: 100%;" src="${pageContext.request.contextPath}/assets/img/no-profile-image.png" class="thumbnail rounded-img-circle-with-top-margin previewImage" alt="photo" width="100px" height="100px">
+                                            <img id="imageAgent" style="width: 100%; height: 100%;" src="${pageContext.request.contextPath}/assets/img/sepatu1.png" class="thumbnail rounded-img-circle-with-top-margin previewImage" alt="photo" width="100px" height="100px">
+                                        </c:otherwise>
+                                    </c:choose> -->
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-10">
+                                    <input id="dptId" type="hidden" value="${dptId}" />
+                                    <input id="userType" type="hidden" value="${dptName}" />
+                                     <div class="form-group">
+                                        <label class="control-label">NCVS </label>
+                                        <input  type="text" placeholder="NCVS" id="listNcvs" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Bucket </label>
+                                        <input disabled="true" type="text" placeholder="Bucket " id="demandId" name="demandClass" class="form-control">
+                                    </div>
+                                   
+                                    
+                                    <div class="form-group">
+                                        <label class="control-label">Po No </label>
+                                        <input disabled="true" type="text" placeholder="Po No" id="listpoNo"  class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Po Item </label>
+                                        <input disabled="true" type="text" placeholder="Po Item" id="listpoItem" class="form-control">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="row" style="margin-bottom: 10px;">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-10">
+                                    <div>
+                                        <label>Product</label>
+                                    </div>
+                                    <div id="product">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-10">
+                            <div class="row">
+                                <div class="col-sm-2">
+                                    <div class="col-sm-12">
+                                        <label>Clean</label>
+                                    </div>
+                                    <div class="col-sm-12" id="Clean">
+
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <div class="col-sm-12">
+                                        <label>Cosmetic</label>
+                                    </div>
+                                    <div class="col-sm-12" id="Cosmetic">
+
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <div class="col-sm-12">
+                                        <label>Straight</label>
+                                    </div>
+                                    <div class="col-sm-12" id="Straight">
+
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <div class="col-sm-12">
+                                        <label>Strong</label>
+                                    </div>
+                                    <div class="col-sm-12" id="Strong">
+
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <div class="col-sm-12">
+                                        <label>Other</label>
+                                    </div>
+                                    <div class="col-sm-12" id="Other">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4 text-center"></div>
+                        <div class="col-sm-4 text-center">
+                            <div>
+                                <input disabled="true" id="position" style="width: 20px; height: 20px;" name="position" type="radio" value="Left" /><label style="font-size: x-large">Left</label>
+                                <input disabled="true" id="position" style="width: 20px; height: 20px;" name="position" type="radio" value="Right" /><label style="font-size: x-large">Right</label>
+                                <input disabled="true" id="position" style="width: 20px; height: 20px;" name="position" type="radio" value="Pairs" /><label style="font-size: x-large">Pairs</label>
+                            </div>
+
+                            <div>
+                                <button id="buttonDefact" name="buttonRework" class="btnRework" value="Rework" style="background: yellow;width: 70px; padding: 0px 0px;">Rework</button>
+                            </div>
+                            <div style="margin-top: 10px">
+                                <button id="buttonDefact" name="buttonAGrade" class="btnAgrade" value="A-Grade" style="background: green;width: 70px; padding: 0px 0px">A-Grade</button>
+                                <button id="buttonDefact" name="buttonBgrade" class="btnBgrade" value="B-Grade" style="background: blue;width: 70px; padding: 0px 0px">B-Grade</button>
+                                <button id="buttonDefact" name="buttonCgrade" class="btnCgrade " value="C-Grade" style="background: red;width: 70px; padding: 0px 0px">C-Grade</button>
+                            </div>
+                        </div>
+                        <div class="col-sm-4" style="width: fit-content">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="alert alert-warning" style="display:none" id="peringatan">
+            <p style="color:#CE7B11"><strong>Warning!</strong> Rework kamu melebihi limit, segera tekan ANDON.  <br>Persentase Rework : <span id="notif"></span></p>
+        </div>
+        <div class="row">
+            <div class="main-content">
+                <div class="widget">
+                    <div class="widget-header">
+                        <h3 style="color: white"><i class="fa fa-list" style="color: white"></i>Counter</h3>
+                    </div>
+                    <div class="widget-content row text-center" style="padding-top: 5px ;">
+                        <div class="col-sm-3">
+                            <label style="margin-top: 0px;">Clean</label>
+                            <h4 id="cleanCountId" style="margin-top: 0px;">0</h4>
+                        </div>
+                        <div class="col-sm-2">
+                            <label style="margin-top: 0px;">Cosmetic</label>
+                            <h4 id="cosmeticCountId" style="margin-top: 0px;">0</h4>
+                        </div>
+                        <div class="col-sm-2">
+                            <label style="margin-top: 0px;">Straight</label>
+                            <h4 id="straightCountId" style="margin-top: 0px;">0</h4>
+                        </div>
+                        <div class="col-sm-2">
+                            <label style="margin-top: 0px;">Strong</label>
+                            <h4 id="strongCountId" style="margin-top: 0px;">0</h4>
+                        </div>
+                        <div class="col-sm-3">
+                            <label style="margin-top: 0px;">Other</label>
+                            <h4 id="otherCountId" style="margin-top: 0px;">0</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="main-content">
+                <div class="widget">
+                    <div class="widget-header">
+                        <h3 style="color: white"><i class="fa fa-list" style="color: white"></i>Counter</h3>
+                    </div>
+                    <div class="widget-content form">
+                        <div class="form-body">
+                            <ul class="task-list">
+                                <div class="col">
+                                    <li>
+                                        <p>
+                                            <a href="#">
+                                                A-Grade <span class="label label-danger" id="barAgrade"></span>
+                                            </a>
+                                        </p>
+                                        <div class="progress progress-xs">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="200" style="width: 0%">
+                                                <span class="sr-only">20% Complete</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            <a href="#">
+                                                B-Grade <span class="label label-danger" id="barBgrade"></span>
+                                            </a>
+                                        </p>
+                                        <div class="progress progress-xs">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="200" style="width: 0%">
+                                                <span class="sr-only">20% Complete</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            <a href="#">
+                                                C-Grade <span class="label label-danger" id="barCgrade"></span>
+                                            </a>
+                                        </p>
+                                        <div class="progress progress-xs">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="200" style="width: 0%">
+                                                <span class="sr-only">20% Complete</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            <a href="#">
+                                                Rework <span class="label label-danger" id="barRewok"></span>
+                                            </a>
+                                        </p>
+                                        <div class="progress progress-xs">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="200" style="width: 0%">
+                                                <span class="sr-only">20% Complete</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>                           
+
+    </body>
+
+</html>

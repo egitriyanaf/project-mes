@@ -1,0 +1,1517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.10.0.final using JasperReports Library version 6.10.0-unknown  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Defect" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="17d7daf2-a53c-427c-a288-5b3ce03560c4">
+	<property name="ireport.zoom" value="1.3310000000000042"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="tgl" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="demand_class" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="line_code" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="product_code" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="userType" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="path" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     '07.30-08.30' AS work_time,
+     COALESCE(SUM(clean_over_cement),0) AS clean_over_cement,
+     COALESCE(SUM(clean_stain_upper),0) AS clean_stain_upper,
+     COALESCE(SUM(clean_stain_gauge_marking),0) AS clean_stain_gauge_marking,
+     COALESCE(SUM(clean_stain_outsole),0) AS clean_stain_outsole,
+     COALESCE(SUM(clean_stain_lace),0) AS clean_stain_lace,
+     COALESCE(SUM(clean_poor_trimm_thread),0) AS clean_poor_trimm_thread,
+     COALESCE(SUM(straight_crooked),0) AS straight_crooked,
+     COALESCE(SUM(straight_diff_toe_heel),0) AS straight_diff_toe_heel,
+     COALESCE(SUM(straight_line_up),0) AS straight_line_up,
+     COALESCE(SUM(straight_collar_tongue_shape),0) AS straight_collar_tongue_shape,
+     COALESCE(SUM(strong_bond_gap_o_to_u),0) AS strong_bond_gap_o_to_u,
+     COALESCE(SUM(strong_bond_gap_o_to_m),0) AS strong_bond_gap_o_to_m,
+     COALESCE(SUM(strong_broken_stitching),0) AS strong_broken_stitching,
+     COALESCE(SUM(strong_ariance),0) AS strong_ariance,
+     COALESCE(SUM(strong_peel_off),0) AS strong_peel_off,
+	 COALESCE(SUM(strong_material_failure),0) AS strong_material_failure,
+     COALESCE(SUM(cosmetic_over_buffing),0) AS cosmetic_over_buffing,
+     COALESCE(SUM(cosmetic_over_color),0) AS cosmetic_over_color,
+     COALESCE(SUM(cosmetic_wrinkle_upper),0) AS cosmetic_wrinkle_upper,
+     COALESCE(SUM(cosmetic_x_ray),0) AS cosmetic_x_ray,
+     COALESCE(SUM(cosmetic_painting),0) AS cosmetic_painting,
+	 COALESCE(SUM(cosmetic_double_skin_o_s_yellowing),0) AS cosmetic_double_skin_o_s_yellowing,
+	 COALESCE(SUM(cosmetic_diff_color),0) AS cosmetic_diff_color,
+     COALESCE(SUM(other_sockliner),0) AS other_sockliner,
+     COALESCE(SUM(other_doc_date),0) AS other_doc_date,
+     COALESCE(SUM(other_others),0) AS other_others,
+	( SELECT SUM ( qty ) FROM jdcadp_mstproduksi WHERE demand_class = $P{demand_class} AND line_code = $P{line_code} AND jo_ppic = $P{product_code} ) AS output_qc
+FROM
+     view_qc_assembly
+WHERE
+     tgl = $P{tgl}
+ AND jam >= '07.30'
+ AND jam < '08:30'
+ AND demand_class = $P{demand_class}
+ AND line_code = $P{line_code}
+ AND product_code = $P{product_code}
+ AND area = $P{userType}
+UNION
+SELECT
+     '08.30-09.30' AS work_time,
+     COALESCE(SUM(clean_over_cement),0) AS clean_over_cement,
+     COALESCE(SUM(clean_stain_upper),0) AS clean_stain_upper,
+     COALESCE(SUM(clean_stain_gauge_marking),0) AS clean_stain_gauge_marking,
+     COALESCE(SUM(clean_stain_outsole),0) AS clean_stain_outsole,
+     COALESCE(SUM(clean_stain_lace),0) AS clean_stain_lace,
+     COALESCE(SUM(clean_poor_trimm_thread),0) AS clean_poor_trimm_thread,
+     COALESCE(SUM(straight_crooked),0) AS straight_crooked,
+     COALESCE(SUM(straight_diff_toe_heel),0) AS straight_diff_toe_heel,
+     COALESCE(SUM(straight_line_up),0) AS straight_line_up,
+     COALESCE(SUM(straight_collar_tongue_shape),0) AS straight_collar_tongue_shape,
+     COALESCE(SUM(strong_bond_gap_o_to_u),0) AS strong_bond_gap_o_to_u,
+     COALESCE(SUM(strong_bond_gap_o_to_m),0) AS strong_bond_gap_o_to_m,
+     COALESCE(SUM(strong_broken_stitching),0) AS strong_broken_stitching,
+     COALESCE(SUM(strong_ariance),0) AS strong_ariance,
+     COALESCE(SUM(strong_peel_off),0) AS strong_peel_off,
+	 COALESCE(SUM(strong_material_failure),0) AS strong_material_failure,
+     COALESCE(SUM(cosmetic_over_buffing),0) AS cosmetic_over_buffing,
+     COALESCE(SUM(cosmetic_over_color),0) AS cosmetic_over_color,
+     COALESCE(SUM(cosmetic_wrinkle_upper),0) AS cosmetic_wrinkle_upper,
+     COALESCE(SUM(cosmetic_x_ray),0) AS cosmetic_x_ray,
+     COALESCE(SUM(cosmetic_painting),0) AS cosmetic_painting,
+	 COALESCE(SUM(cosmetic_double_skin_o_s_yellowing),0) AS cosmetic_double_skin_o_s_yellowing,
+	 COALESCE(SUM(cosmetic_diff_color),0) AS cosmetic_diff_color,
+     COALESCE(SUM(other_sockliner),0) AS other_sockliner,
+     COALESCE(SUM(other_doc_date),0) AS other_doc_date,
+     COALESCE(SUM(other_others),0) AS other_others,
+	( SELECT SUM ( qty ) FROM jdcadp_mstproduksi WHERE demand_class = $P{demand_class} AND line_code = $P{line_code} AND jo_ppic = $P{product_code} ) AS output_qc
+FROM
+     view_qc_assembly
+WHERE
+     tgl = $P{tgl}
+ AND jam >= '08.30'
+ AND jam < '09:30'
+ AND demand_class = $P{demand_class}
+ AND line_code = $P{line_code}
+ AND product_code = $P{product_code}
+AND area = $P{userType}
+UNION
+SELECT
+     '09.30-10.30' AS work_time,
+     COALESCE(SUM(clean_over_cement),0) AS clean_over_cement,
+     COALESCE(SUM(clean_stain_upper),0) AS clean_stain_upper,
+     COALESCE(SUM(clean_stain_gauge_marking),0) AS clean_stain_gauge_marking,
+     COALESCE(SUM(clean_stain_outsole),0) AS clean_stain_outsole,
+     COALESCE(SUM(clean_stain_lace),0) AS clean_stain_lace,
+     COALESCE(SUM(clean_poor_trimm_thread),0) AS clean_poor_trimm_thread,
+     COALESCE(SUM(straight_crooked),0) AS straight_crooked,
+     COALESCE(SUM(straight_diff_toe_heel),0) AS straight_diff_toe_heel,
+     COALESCE(SUM(straight_line_up),0) AS straight_line_up,
+     COALESCE(SUM(straight_collar_tongue_shape),0) AS straight_collar_tongue_shape,
+     COALESCE(SUM(strong_bond_gap_o_to_u),0) AS strong_bond_gap_o_to_u,
+     COALESCE(SUM(strong_bond_gap_o_to_m),0) AS strong_bond_gap_o_to_m,
+     COALESCE(SUM(strong_broken_stitching),0) AS strong_broken_stitching,
+     COALESCE(SUM(strong_ariance),0) AS strong_ariance,
+     COALESCE(SUM(strong_peel_off),0) AS strong_peel_off,
+	 COALESCE(SUM(strong_material_failure),0) AS strong_material_failure,
+     COALESCE(SUM(cosmetic_over_buffing),0) AS cosmetic_over_buffing,
+     COALESCE(SUM(cosmetic_over_color),0) AS cosmetic_over_color,
+     COALESCE(SUM(cosmetic_wrinkle_upper),0) AS cosmetic_wrinkle_upper,
+     COALESCE(SUM(cosmetic_x_ray),0) AS cosmetic_x_ray,
+     COALESCE(SUM(cosmetic_painting),0) AS cosmetic_painting,
+	 COALESCE(SUM(cosmetic_double_skin_o_s_yellowing),0) AS cosmetic_double_skin_o_s_yellowing,
+	 COALESCE(SUM(cosmetic_diff_color),0) AS cosmetic_diff_color,
+     COALESCE(SUM(other_sockliner),0) AS other_sockliner,
+     COALESCE(SUM(other_doc_date),0) AS other_doc_date,
+     COALESCE(SUM(other_others),0) AS other_others,
+	( SELECT SUM ( qty ) FROM jdcadp_mstproduksi WHERE demand_class = $P{demand_class} AND line_code = $P{line_code} AND jo_ppic = $P{product_code} ) AS output_qc
+FROM
+     view_qc_assembly
+WHERE
+     tgl = $P{tgl}
+ AND jam >= '09.30'
+ AND jam < '10:30'
+ AND demand_class = $P{demand_class}
+ AND line_code = $P{line_code}
+ AND product_code = $P{product_code}
+AND area = $P{userType}
+UNION
+SELECT
+     '10.30-11.30' AS work_time,
+     COALESCE(SUM(clean_over_cement),0) AS clean_over_cement,
+     COALESCE(SUM(clean_stain_upper),0) AS clean_stain_upper,
+     COALESCE(SUM(clean_stain_gauge_marking),0) AS clean_stain_gauge_marking,
+     COALESCE(SUM(clean_stain_outsole),0) AS clean_stain_outsole,
+     COALESCE(SUM(clean_stain_lace),0) AS clean_stain_lace,
+     COALESCE(SUM(clean_poor_trimm_thread),0) AS clean_poor_trimm_thread,
+     COALESCE(SUM(straight_crooked),0) AS straight_crooked,
+     COALESCE(SUM(straight_diff_toe_heel),0) AS straight_diff_toe_heel,
+     COALESCE(SUM(straight_line_up),0) AS straight_line_up,
+     COALESCE(SUM(straight_collar_tongue_shape),0) AS straight_collar_tongue_shape,
+     COALESCE(SUM(strong_bond_gap_o_to_u),0) AS strong_bond_gap_o_to_u,
+     COALESCE(SUM(strong_bond_gap_o_to_m),0) AS strong_bond_gap_o_to_m,
+     COALESCE(SUM(strong_broken_stitching),0) AS strong_broken_stitching,
+     COALESCE(SUM(strong_ariance),0) AS strong_ariance,
+     COALESCE(SUM(strong_peel_off),0) AS strong_peel_off,
+	 COALESCE(SUM(strong_material_failure),0) AS strong_material_failure,
+     COALESCE(SUM(cosmetic_over_buffing),0) AS cosmetic_over_buffing,
+     COALESCE(SUM(cosmetic_over_color),0) AS cosmetic_over_color,
+     COALESCE(SUM(cosmetic_wrinkle_upper),0) AS cosmetic_wrinkle_upper,
+     COALESCE(SUM(cosmetic_x_ray),0) AS cosmetic_x_ray,
+     COALESCE(SUM(cosmetic_painting),0) AS cosmetic_painting,
+	 COALESCE(SUM(cosmetic_double_skin_o_s_yellowing),0) AS cosmetic_double_skin_o_s_yellowing,
+	 COALESCE(SUM(cosmetic_diff_color),0) AS cosmetic_diff_color,
+     COALESCE(SUM(other_sockliner),0) AS other_sockliner,
+     COALESCE(SUM(other_doc_date),0) AS other_doc_date,
+     COALESCE(SUM(other_others),0) AS other_others,
+	( SELECT SUM ( qty ) FROM jdcadp_mstproduksi WHERE demand_class = $P{demand_class} AND line_code = $P{line_code} AND jo_ppic = $P{product_code} ) AS output_qc
+FROM
+     view_qc_assembly
+WHERE
+     tgl = $P{tgl}
+ AND jam >= '10.30'
+ AND jam < '11:30'
+ AND demand_class = $P{demand_class}
+ AND line_code = $P{line_code}
+ AND product_code = $P{product_code}
+AND area = $P{userType}
+UNION
+SELECT
+     '11.30-12.30' AS work_time,
+     COALESCE(SUM(clean_over_cement),0) AS clean_over_cement,
+     COALESCE(SUM(clean_stain_upper),0) AS clean_stain_upper,
+     COALESCE(SUM(clean_stain_gauge_marking),0) AS clean_stain_gauge_marking,
+     COALESCE(SUM(clean_stain_outsole),0) AS clean_stain_outsole,
+     COALESCE(SUM(clean_stain_lace),0) AS clean_stain_lace,
+     COALESCE(SUM(clean_poor_trimm_thread),0) AS clean_poor_trimm_thread,
+     COALESCE(SUM(straight_crooked),0) AS straight_crooked,
+     COALESCE(SUM(straight_diff_toe_heel),0) AS straight_diff_toe_heel,
+     COALESCE(SUM(straight_line_up),0) AS straight_line_up,
+     COALESCE(SUM(straight_collar_tongue_shape),0) AS straight_collar_tongue_shape,
+     COALESCE(SUM(strong_bond_gap_o_to_u),0) AS strong_bond_gap_o_to_u,
+     COALESCE(SUM(strong_bond_gap_o_to_m),0) AS strong_bond_gap_o_to_m,
+     COALESCE(SUM(strong_broken_stitching),0) AS strong_broken_stitching,
+     COALESCE(SUM(strong_ariance),0) AS strong_ariance,
+     COALESCE(SUM(strong_peel_off),0) AS strong_peel_off,
+	 COALESCE(SUM(strong_material_failure),0) AS strong_material_failure,
+     COALESCE(SUM(cosmetic_over_buffing),0) AS cosmetic_over_buffing,
+     COALESCE(SUM(cosmetic_over_color),0) AS cosmetic_over_color,
+     COALESCE(SUM(cosmetic_wrinkle_upper),0) AS cosmetic_wrinkle_upper,
+     COALESCE(SUM(cosmetic_x_ray),0) AS cosmetic_x_ray,
+     COALESCE(SUM(cosmetic_painting),0) AS cosmetic_painting,
+	 COALESCE(SUM(cosmetic_double_skin_o_s_yellowing),0) AS cosmetic_double_skin_o_s_yellowing,
+	 COALESCE(SUM(cosmetic_diff_color),0) AS cosmetic_diff_color,
+     COALESCE(SUM(other_sockliner),0) AS other_sockliner,
+     COALESCE(SUM(other_doc_date),0) AS other_doc_date,
+     COALESCE(SUM(other_others),0) AS other_others,
+	( SELECT SUM ( qty ) FROM jdcadp_mstproduksi WHERE demand_class = $P{demand_class} AND line_code = $P{line_code} AND jo_ppic = $P{product_code} ) AS output_qc
+FROM
+     view_qc_assembly
+WHERE
+     tgl = $P{tgl}
+ AND jam >= '11.30'
+ AND jam < '12:30'
+ AND demand_class = $P{demand_class}
+ AND line_code = $P{line_code}
+ AND product_code = $P{product_code}
+AND area = $P{userType}
+UNION
+SELECT
+     '12.30-13.30' AS work_time,
+     COALESCE(SUM(clean_over_cement),0) AS clean_over_cement,
+     COALESCE(SUM(clean_stain_upper),0) AS clean_stain_upper,
+     COALESCE(SUM(clean_stain_gauge_marking),0) AS clean_stain_gauge_marking,
+     COALESCE(SUM(clean_stain_outsole),0) AS clean_stain_outsole,
+     COALESCE(SUM(clean_stain_lace),0) AS clean_stain_lace,
+     COALESCE(SUM(clean_poor_trimm_thread),0) AS clean_poor_trimm_thread,
+     COALESCE(SUM(straight_crooked),0) AS straight_crooked,
+     COALESCE(SUM(straight_diff_toe_heel),0) AS straight_diff_toe_heel,
+     COALESCE(SUM(straight_line_up),0) AS straight_line_up,
+     COALESCE(SUM(straight_collar_tongue_shape),0) AS straight_collar_tongue_shape,
+     COALESCE(SUM(strong_bond_gap_o_to_u),0) AS strong_bond_gap_o_to_u,
+     COALESCE(SUM(strong_bond_gap_o_to_m),0) AS strong_bond_gap_o_to_m,
+     COALESCE(SUM(strong_broken_stitching),0) AS strong_broken_stitching,
+     COALESCE(SUM(strong_ariance),0) AS strong_ariance,
+     COALESCE(SUM(strong_peel_off),0) AS strong_peel_off,
+	 COALESCE(SUM(strong_material_failure),0) AS strong_material_failure,
+     COALESCE(SUM(cosmetic_over_buffing),0) AS cosmetic_over_buffing,
+     COALESCE(SUM(cosmetic_over_color),0) AS cosmetic_over_color,
+     COALESCE(SUM(cosmetic_wrinkle_upper),0) AS cosmetic_wrinkle_upper,
+     COALESCE(SUM(cosmetic_x_ray),0) AS cosmetic_x_ray,
+     COALESCE(SUM(cosmetic_painting),0) AS cosmetic_painting,
+	 COALESCE(SUM(cosmetic_double_skin_o_s_yellowing),0) AS cosmetic_double_skin_o_s_yellowing,
+	 COALESCE(SUM(cosmetic_diff_color),0) AS cosmetic_diff_color,
+     COALESCE(SUM(other_sockliner),0) AS other_sockliner,
+     COALESCE(SUM(other_doc_date),0) AS other_doc_date,
+     COALESCE(SUM(other_others),0) AS other_others,
+	( SELECT SUM ( qty ) FROM jdcadp_mstproduksi WHERE demand_class = $P{demand_class} AND line_code = $P{line_code} AND jo_ppic = $P{product_code} ) AS output_qc
+FROM
+     view_qc_assembly
+WHERE
+     tgl = $P{tgl}
+ AND jam >= '12.30'
+ AND jam < '13:30'
+ AND demand_class = $P{demand_class}
+ AND line_code = $P{line_code}
+ AND product_code = $P{product_code}
+AND area = $P{userType}
+UNION
+SELECT
+     '13.30-14.30' AS work_time,
+     COALESCE(SUM(clean_over_cement),0) AS clean_over_cement,
+     COALESCE(SUM(clean_stain_upper),0) AS clean_stain_upper,
+     COALESCE(SUM(clean_stain_gauge_marking),0) AS clean_stain_gauge_marking,
+     COALESCE(SUM(clean_stain_outsole),0) AS clean_stain_outsole,
+     COALESCE(SUM(clean_stain_lace),0) AS clean_stain_lace,
+     COALESCE(SUM(clean_poor_trimm_thread),0) AS clean_poor_trimm_thread,
+     COALESCE(SUM(straight_crooked),0) AS straight_crooked,
+     COALESCE(SUM(straight_diff_toe_heel),0) AS straight_diff_toe_heel,
+     COALESCE(SUM(straight_line_up),0) AS straight_line_up,
+     COALESCE(SUM(straight_collar_tongue_shape),0) AS straight_collar_tongue_shape,
+     COALESCE(SUM(strong_bond_gap_o_to_u),0) AS strong_bond_gap_o_to_u,
+     COALESCE(SUM(strong_bond_gap_o_to_m),0) AS strong_bond_gap_o_to_m,
+     COALESCE(SUM(strong_broken_stitching),0) AS strong_broken_stitching,
+     COALESCE(SUM(strong_ariance),0) AS strong_ariance,
+     COALESCE(SUM(strong_peel_off),0) AS strong_peel_off,
+	 COALESCE(SUM(strong_material_failure),0) AS strong_material_failure,
+     COALESCE(SUM(cosmetic_over_buffing),0) AS cosmetic_over_buffing,
+     COALESCE(SUM(cosmetic_over_color),0) AS cosmetic_over_color,
+     COALESCE(SUM(cosmetic_wrinkle_upper),0) AS cosmetic_wrinkle_upper,
+     COALESCE(SUM(cosmetic_x_ray),0) AS cosmetic_x_ray,
+     COALESCE(SUM(cosmetic_painting),0) AS cosmetic_painting,
+	 COALESCE(SUM(cosmetic_double_skin_o_s_yellowing),0) AS cosmetic_double_skin_o_s_yellowing,
+	 COALESCE(SUM(cosmetic_diff_color),0) AS cosmetic_diff_color,
+     COALESCE(SUM(other_sockliner),0) AS other_sockliner,
+     COALESCE(SUM(other_doc_date),0) AS other_doc_date,
+     COALESCE(SUM(other_others),0) AS other_others,
+	( SELECT SUM ( qty ) FROM jdcadp_mstproduksi WHERE demand_class = $P{demand_class} AND line_code = $P{line_code} AND jo_ppic = $P{product_code} ) AS output_qc
+FROM
+     view_qc_assembly
+WHERE
+     tgl = $P{tgl}
+ AND jam >= '13.30'
+ AND jam < '14:30'
+ AND demand_class = $P{demand_class}
+ AND line_code = $P{line_code}
+ AND product_code = $P{product_code}
+AND area = $P{userType}
+UNION
+SELECT
+     '14.30-15.30' AS work_time,
+     COALESCE(SUM(clean_over_cement),0) AS clean_over_cement,
+     COALESCE(SUM(clean_stain_upper),0) AS clean_stain_upper,
+     COALESCE(SUM(clean_stain_gauge_marking),0) AS clean_stain_gauge_marking,
+     COALESCE(SUM(clean_stain_outsole),0) AS clean_stain_outsole,
+     COALESCE(SUM(clean_stain_lace),0) AS clean_stain_lace,
+     COALESCE(SUM(clean_poor_trimm_thread),0) AS clean_poor_trimm_thread,
+     COALESCE(SUM(straight_crooked),0) AS straight_crooked,
+     COALESCE(SUM(straight_diff_toe_heel),0) AS straight_diff_toe_heel,
+     COALESCE(SUM(straight_line_up),0) AS straight_line_up,
+     COALESCE(SUM(straight_collar_tongue_shape),0) AS straight_collar_tongue_shape,
+     COALESCE(SUM(strong_bond_gap_o_to_u),0) AS strong_bond_gap_o_to_u,
+     COALESCE(SUM(strong_bond_gap_o_to_m),0) AS strong_bond_gap_o_to_m,
+     COALESCE(SUM(strong_broken_stitching),0) AS strong_broken_stitching,
+     COALESCE(SUM(strong_ariance),0) AS strong_ariance,
+     COALESCE(SUM(strong_peel_off),0) AS strong_peel_off,
+	 COALESCE(SUM(strong_material_failure),0) AS strong_material_failure,
+     COALESCE(SUM(cosmetic_over_buffing),0) AS cosmetic_over_buffing,
+     COALESCE(SUM(cosmetic_over_color),0) AS cosmetic_over_color,
+     COALESCE(SUM(cosmetic_wrinkle_upper),0) AS cosmetic_wrinkle_upper,
+     COALESCE(SUM(cosmetic_x_ray),0) AS cosmetic_x_ray,
+     COALESCE(SUM(cosmetic_painting),0) AS cosmetic_painting,
+	 COALESCE(SUM(cosmetic_double_skin_o_s_yellowing),0) AS cosmetic_double_skin_o_s_yellowing,
+	 COALESCE(SUM(cosmetic_diff_color),0) AS cosmetic_diff_color,
+     COALESCE(SUM(other_sockliner),0) AS other_sockliner,
+     COALESCE(SUM(other_doc_date),0) AS other_doc_date,
+     COALESCE(SUM(other_others),0) AS other_others,
+	( SELECT SUM ( qty ) FROM jdcadp_mstproduksi WHERE demand_class = $P{demand_class} AND line_code = $P{line_code} AND jo_ppic = $P{product_code} ) AS output_qc
+FROM
+     view_qc_assembly
+WHERE
+     tgl = $P{tgl}
+ AND jam >= '14.30'
+ AND jam < '15:30'
+ AND demand_class = $P{demand_class}
+ AND line_code = $P{line_code}
+ AND product_code = $P{product_code}
+AND area = $P{userType}
+UNION
+SELECT
+     '15.30-16.30' AS work_time,
+     COALESCE(SUM(clean_over_cement),0) AS clean_over_cement,
+     COALESCE(SUM(clean_stain_upper),0) AS clean_stain_upper,
+     COALESCE(SUM(clean_stain_gauge_marking),0) AS clean_stain_gauge_marking,
+     COALESCE(SUM(clean_stain_outsole),0) AS clean_stain_outsole,
+     COALESCE(SUM(clean_stain_lace),0) AS clean_stain_lace,
+     COALESCE(SUM(clean_poor_trimm_thread),0) AS clean_poor_trimm_thread,
+     COALESCE(SUM(straight_crooked),0) AS straight_crooked,
+     COALESCE(SUM(straight_diff_toe_heel),0) AS straight_diff_toe_heel,
+     COALESCE(SUM(straight_line_up),0) AS straight_line_up,
+     COALESCE(SUM(straight_collar_tongue_shape),0) AS straight_collar_tongue_shape,
+     COALESCE(SUM(strong_bond_gap_o_to_u),0) AS strong_bond_gap_o_to_u,
+     COALESCE(SUM(strong_bond_gap_o_to_m),0) AS strong_bond_gap_o_to_m,
+     COALESCE(SUM(strong_broken_stitching),0) AS strong_broken_stitching,
+     COALESCE(SUM(strong_ariance),0) AS strong_ariance,
+     COALESCE(SUM(strong_peel_off),0) AS strong_peel_off,
+	 COALESCE(SUM(strong_material_failure),0) AS strong_material_failure,
+     COALESCE(SUM(cosmetic_over_buffing),0) AS cosmetic_over_buffing,
+     COALESCE(SUM(cosmetic_over_color),0) AS cosmetic_over_color,
+     COALESCE(SUM(cosmetic_wrinkle_upper),0) AS cosmetic_wrinkle_upper,
+     COALESCE(SUM(cosmetic_x_ray),0) AS cosmetic_x_ray,
+     COALESCE(SUM(cosmetic_painting),0) AS cosmetic_painting,
+	 COALESCE(SUM(cosmetic_double_skin_o_s_yellowing),0) AS cosmetic_double_skin_o_s_yellowing,
+	 COALESCE(SUM(cosmetic_diff_color),0) AS cosmetic_diff_color,
+     COALESCE(SUM(other_sockliner),0) AS other_sockliner,
+     COALESCE(SUM(other_doc_date),0) AS other_doc_date,
+     COALESCE(SUM(other_others),0) AS other_others,
+	( SELECT SUM ( qty ) FROM jdcadp_mstproduksi WHERE demand_class = $P{demand_class} AND line_code = $P{line_code} AND jo_ppic = $P{product_code} ) AS output_qc
+FROM
+     view_qc_assembly
+WHERE
+     tgl = $P{tgl}
+ AND jam >= '15.30'
+ AND jam < '16:30'
+ AND demand_class = $P{demand_class}
+ AND line_code = $P{line_code}
+ AND product_code = $P{product_code}
+AND area = $P{userType}
+UNION
+SELECT
+     '16.30-17.30' AS work_time,
+     COALESCE(SUM(clean_over_cement),0) AS clean_over_cement,
+     COALESCE(SUM(clean_stain_upper),0) AS clean_stain_upper,
+     COALESCE(SUM(clean_stain_gauge_marking),0) AS clean_stain_gauge_marking,
+     COALESCE(SUM(clean_stain_outsole),0) AS clean_stain_outsole,
+     COALESCE(SUM(clean_stain_lace),0) AS clean_stain_lace,
+     COALESCE(SUM(clean_poor_trimm_thread),0) AS clean_poor_trimm_thread,
+     COALESCE(SUM(straight_crooked),0) AS straight_crooked,
+     COALESCE(SUM(straight_diff_toe_heel),0) AS straight_diff_toe_heel,
+     COALESCE(SUM(straight_line_up),0) AS straight_line_up,
+     COALESCE(SUM(straight_collar_tongue_shape),0) AS straight_collar_tongue_shape,
+     COALESCE(SUM(strong_bond_gap_o_to_u),0) AS strong_bond_gap_o_to_u,
+     COALESCE(SUM(strong_bond_gap_o_to_m),0) AS strong_bond_gap_o_to_m,
+     COALESCE(SUM(strong_broken_stitching),0) AS strong_broken_stitching,
+     COALESCE(SUM(strong_ariance),0) AS strong_ariance,
+     COALESCE(SUM(strong_peel_off),0) AS strong_peel_off,
+	 COALESCE(SUM(strong_material_failure),0) AS strong_material_failure,
+     COALESCE(SUM(cosmetic_over_buffing),0) AS cosmetic_over_buffing,
+     COALESCE(SUM(cosmetic_over_color),0) AS cosmetic_over_color,
+     COALESCE(SUM(cosmetic_wrinkle_upper),0) AS cosmetic_wrinkle_upper,
+     COALESCE(SUM(cosmetic_x_ray),0) AS cosmetic_x_ray,
+     COALESCE(SUM(cosmetic_painting),0) AS cosmetic_painting,
+	 COALESCE(SUM(cosmetic_double_skin_o_s_yellowing),0) AS cosmetic_double_skin_o_s_yellowing,
+	 COALESCE(SUM(cosmetic_diff_color),0) AS cosmetic_diff_color,
+     COALESCE(SUM(other_sockliner),0) AS other_sockliner,
+     COALESCE(SUM(other_doc_date),0) AS other_doc_date,
+     COALESCE(SUM(other_others),0) AS other_others,
+	( SELECT SUM ( qty ) FROM jdcadp_mstproduksi WHERE demand_class = $P{demand_class} AND line_code = $P{line_code} AND jo_ppic = $P{product_code} ) AS output_qc
+FROM
+     view_qc_assembly
+WHERE
+     tgl = $P{tgl}
+ AND jam >= '16.30'
+ AND jam < '17:30'
+ AND demand_class = $P{demand_class}
+ AND line_code = $P{line_code}
+ AND product_code = $P{product_code}
+AND area = $P{userType}
+UNION
+SELECT
+     '17.30-18.30' AS work_time,
+     COALESCE(SUM(clean_over_cement),0) AS clean_over_cement,
+     COALESCE(SUM(clean_stain_upper),0) AS clean_stain_upper,
+     COALESCE(SUM(clean_stain_gauge_marking),0) AS clean_stain_gauge_marking,
+     COALESCE(SUM(clean_stain_outsole),0) AS clean_stain_outsole,
+     COALESCE(SUM(clean_stain_lace),0) AS clean_stain_lace,
+     COALESCE(SUM(clean_poor_trimm_thread),0) AS clean_poor_trimm_thread,
+     COALESCE(SUM(straight_crooked),0) AS straight_crooked,
+     COALESCE(SUM(straight_diff_toe_heel),0) AS straight_diff_toe_heel,
+     COALESCE(SUM(straight_line_up),0) AS straight_line_up,
+     COALESCE(SUM(straight_collar_tongue_shape),0) AS straight_collar_tongue_shape,
+     COALESCE(SUM(strong_bond_gap_o_to_u),0) AS strong_bond_gap_o_to_u,
+     COALESCE(SUM(strong_bond_gap_o_to_m),0) AS strong_bond_gap_o_to_m,
+     COALESCE(SUM(strong_broken_stitching),0) AS strong_broken_stitching,
+     COALESCE(SUM(strong_ariance),0) AS strong_ariance,
+     COALESCE(SUM(strong_peel_off),0) AS strong_peel_off,
+	 COALESCE(SUM(strong_material_failure),0) AS strong_material_failure,
+     COALESCE(SUM(cosmetic_over_buffing),0) AS cosmetic_over_buffing,
+     COALESCE(SUM(cosmetic_over_color),0) AS cosmetic_over_color,
+     COALESCE(SUM(cosmetic_wrinkle_upper),0) AS cosmetic_wrinkle_upper,
+     COALESCE(SUM(cosmetic_x_ray),0) AS cosmetic_x_ray,
+     COALESCE(SUM(cosmetic_painting),0) AS cosmetic_painting,
+	 COALESCE(SUM(cosmetic_double_skin_o_s_yellowing),0) AS cosmetic_double_skin_o_s_yellowing,
+	 COALESCE(SUM(cosmetic_diff_color),0) AS cosmetic_diff_color,
+     COALESCE(SUM(other_sockliner),0) AS other_sockliner,
+     COALESCE(SUM(other_doc_date),0) AS other_doc_date,
+     COALESCE(SUM(other_others),0) AS other_others,
+	( SELECT SUM ( qty ) FROM jdcadp_mstproduksi WHERE demand_class = $P{demand_class} AND line_code = $P{line_code} AND jo_ppic = $P{product_code} ) AS output_qc
+FROM
+     view_qc_assembly
+WHERE
+     tgl = $P{tgl}
+ AND jam >= '17.30'
+ AND jam < '18:30'
+ AND demand_class = $P{demand_class}
+ AND line_code = $P{line_code}
+ AND product_code = $P{product_code}
+AND area = $P{userType}
+UNION
+SELECT
+     '18.30-20.00' AS work_time,
+     COALESCE(SUM(clean_over_cement),0) AS clean_over_cement,
+     COALESCE(SUM(clean_stain_upper),0) AS clean_stain_upper,
+     COALESCE(SUM(clean_stain_gauge_marking),0) AS clean_stain_gauge_marking,
+     COALESCE(SUM(clean_stain_outsole),0) AS clean_stain_outsole,
+     COALESCE(SUM(clean_stain_lace),0) AS clean_stain_lace,
+     COALESCE(SUM(clean_poor_trimm_thread),0) AS clean_poor_trimm_thread,
+     COALESCE(SUM(straight_crooked),0) AS straight_crooked,
+     COALESCE(SUM(straight_diff_toe_heel),0) AS straight_diff_toe_heel,
+     COALESCE(SUM(straight_line_up),0) AS straight_line_up,
+     COALESCE(SUM(straight_collar_tongue_shape),0) AS straight_collar_tongue_shape,
+     COALESCE(SUM(strong_bond_gap_o_to_u),0) AS strong_bond_gap_o_to_u,
+     COALESCE(SUM(strong_bond_gap_o_to_m),0) AS strong_bond_gap_o_to_m,
+     COALESCE(SUM(strong_broken_stitching),0) AS strong_broken_stitching,
+     COALESCE(SUM(strong_ariance),0) AS strong_ariance,
+     COALESCE(SUM(strong_peel_off),0) AS strong_peel_off,
+	 COALESCE(SUM(strong_material_failure),0) AS strong_material_failure,
+     COALESCE(SUM(cosmetic_over_buffing),0) AS cosmetic_over_buffing,
+     COALESCE(SUM(cosmetic_over_color),0) AS cosmetic_over_color,
+     COALESCE(SUM(cosmetic_wrinkle_upper),0) AS cosmetic_wrinkle_upper,
+     COALESCE(SUM(cosmetic_x_ray),0) AS cosmetic_x_ray,
+     COALESCE(SUM(cosmetic_painting),0) AS cosmetic_painting,
+	 COALESCE(SUM(cosmetic_double_skin_o_s_yellowing),0) AS cosmetic_double_skin_o_s_yellowing,
+	 COALESCE(SUM(cosmetic_diff_color),0) AS cosmetic_diff_color,
+     COALESCE(SUM(other_sockliner),0) AS other_sockliner,
+     COALESCE(SUM(other_doc_date),0) AS other_doc_date,
+     COALESCE(SUM(other_others),0) AS other_others,
+	( SELECT SUM ( qty ) FROM jdcadp_mstproduksi WHERE demand_class = $P{demand_class} AND line_code = $P{line_code} AND jo_ppic = $P{product_code} ) AS output_qc
+FROM
+     view_qc_assembly
+WHERE
+     tgl = $P{tgl}
+ AND jam >= '18.30'
+ AND jam <= '20:00'
+ AND demand_class = $P{demand_class}
+ AND line_code = $P{line_code}
+ AND product_code = $P{product_code}
+AND area = $P{userType}
+ORDER BY
+	work_time]]>
+	</queryString>
+	<field name="work_time" class="java.lang.String"/>
+	<field name="clean_over_cement" class="java.math.BigDecimal"/>
+	<field name="clean_stain_upper" class="java.math.BigDecimal"/>
+	<field name="clean_stain_gauge_marking" class="java.math.BigDecimal"/>
+	<field name="clean_stain_outsole" class="java.math.BigDecimal"/>
+	<field name="clean_stain_lace" class="java.math.BigDecimal"/>
+	<field name="clean_poor_trimm_thread" class="java.math.BigDecimal"/>
+	<field name="straight_crooked" class="java.math.BigDecimal"/>
+	<field name="straight_diff_toe_heel" class="java.math.BigDecimal"/>
+	<field name="straight_line_up" class="java.math.BigDecimal"/>
+	<field name="straight_collar_tongue_shape" class="java.math.BigDecimal"/>
+	<field name="strong_bond_gap_o_to_u" class="java.math.BigDecimal"/>
+	<field name="strong_bond_gap_o_to_m" class="java.math.BigDecimal"/>
+	<field name="strong_broken_stitching" class="java.math.BigDecimal"/>
+	<field name="strong_ariance" class="java.math.BigDecimal"/>
+	<field name="strong_peel_off" class="java.math.BigDecimal"/>
+	<field name="strong_material_failure" class="java.math.BigDecimal"/>
+	<field name="cosmetic_over_buffing" class="java.math.BigDecimal"/>
+	<field name="cosmetic_over_color" class="java.math.BigDecimal"/>
+	<field name="cosmetic_wrinkle_upper" class="java.math.BigDecimal"/>
+	<field name="cosmetic_x_ray" class="java.math.BigDecimal"/>
+	<field name="cosmetic_painting" class="java.math.BigDecimal"/>
+	<field name="cosmetic_double_skin_o_s_yellowing" class="java.math.BigDecimal"/>
+	<field name="cosmetic_diff_color" class="java.math.BigDecimal"/>
+	<field name="other_sockliner" class="java.math.BigDecimal"/>
+	<field name="other_doc_date" class="java.math.BigDecimal"/>
+	<field name="other_others" class="java.math.BigDecimal"/>
+	<field name="output_qc" class="java.lang.Double"/>
+	<variable name="totalDefect" class="java.math.BigDecimal" resetType="None">
+		<variableExpression><![CDATA[]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="persenQc" class="java.lang.Double" resetType="None">
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="totalOutput" class="java.math.BigDecimal" resetType="None">
+		<variableExpression><![CDATA[]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="93" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="108" height="69" uuid="684ee8b9-ea7c-4241-a965-13923effdbc1"/>
+				<imageExpression><![CDATA[$P{path}+"//adf.jpeg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="107" y="0" width="245" height="29" uuid="4f54c7c9-396d-44ea-8f2d-99a7731e2240"/>
+				<textElement verticalAlignment="Middle">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Daily Defect QC Assembly]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="108" y="49" width="55" height="20" uuid="2ffa4838-7638-4fdd-8a73-123304070459"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[Month     :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="107" y="29" width="56" height="20" uuid="6fde7f69-8366-4816-8953-74be72eb771c"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[NCVS                 :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="390" y="29" width="130" height="20" uuid="dcf69c26-ad01-42d5-bbdd-944ca9148470"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[Supervisor (MA)  :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="172" y="29" width="102" height="20" uuid="a7fc80ab-4a2f-4575-bddb-35af2226b25e"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{line_code}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd MMMMM yyyy">
+				<reportElement x="172" y="49" width="103" height="20" uuid="f121f561-389b-4c9f-a4cb-82d82c164a02"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tgl}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="108" y="69" width="55" height="20" uuid="22355e4d-3406-45d7-b021-63929e35902e"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[Style     ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="162" y="29" width="10" height="20" uuid="df784aed-eb85-4832-9ab6-6c0dc48e9118"/>
+				<textElement textAlignment="Center">
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="162" y="49" width="10" height="20" uuid="41d2e9a7-0e79-4788-8aa3-d4a89c3cfa51"/>
+				<textElement textAlignment="Center">
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="162" y="69" width="10" height="20" uuid="6bbe8604-8991-4d3c-ac21-6f82919567cd"/>
+				<textElement textAlignment="Center">
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="172" y="69" width="283" height="20" isPrintWhenDetailOverflows="true" uuid="dfb08cf2-5b7b-452b-a075-1155d6af78fb"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{product_code}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="105" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="76" height="105" uuid="ff2088e5-98b4-4e34-9a63-f74d1d689acc"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="77" y="0" width="114" height="24" uuid="33b8fe63-8d85-4529-9330-5b7f498ba405"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Clean]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="172" y="25" width="19" height="80" uuid="b9d97d87-8604-45e4-80ef-c3749e18efe8"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Right"/>
+				<text><![CDATA[Stain Upper]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="115" y="25" width="19" height="80" uuid="94f26d61-661a-4824-9fec-d3bc82bfb862"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Right"/>
+				<text><![CDATA[Stain Gauge Mk.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="96" y="25" width="19" height="80" uuid="809ebf9a-1a69-4a3c-a2ad-ca86db32ba42"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Right"/>
+				<text><![CDATA[Poor Trim Td]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="153" y="25" width="19" height="80" uuid="b88677d6-b488-49af-87f4-c0b681cfeb0b"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Right"/>
+				<text><![CDATA[Stain Outsole]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="77" y="25" width="19" height="80" uuid="4d27e3c5-6812-4c03-843f-9f2304a99e32"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Right"/>
+				<text><![CDATA[Over Cement]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="134" y="25" width="19" height="80" uuid="e3e0d0fd-c1af-4d7b-8605-b347cd13b8c3"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Right"/>
+				<text><![CDATA[Stain Lace]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="192" y="0" width="76" height="24" uuid="0f9847ad-d0a3-4ca0-96da-95f15104cf3a"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Straight]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="192" y="25" width="19" height="80" uuid="b788b996-4411-4bf4-9711-7c4f64311aef"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Right">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Collar/Tongue Sp.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="211" y="25" width="19" height="80" uuid="c81aa43f-ba4d-4176-b4bb-78f56d1738b4"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Right"/>
+				<text><![CDATA[Crooked]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="25" width="19" height="80" uuid="f164d21d-7dbb-4700-ad18-1e33fe2f0f11"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Right"/>
+				<text><![CDATA[Diff Toe/Heel]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="249" y="25" width="19" height="80" uuid="d82b31b5-811f-4271-bf60-fd95affe8c9f"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Right"/>
+				<text><![CDATA[Line Up]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="607" y="24" width="34" height="81" uuid="16635e25-bdeb-4a43-b865-1d4f6627b8c0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Defect]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="641" y="24" width="34" height="81" uuid="e7979111-06be-4e07-b31c-134316d3e929"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Output]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="607" y="0" width="68" height="25" uuid="7b8d1ba6-dbbf-471c-9207-3ae88c7f3830"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="269" y="0" width="134" height="24" uuid="421d1cd0-444f-4e35-9b75-3d895256b6a7"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Strong]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="404" y="0" width="146" height="24" uuid="352a9b19-d3b9-4bb0-9fa6-08c7ec0f0318"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Cosmetic]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="269" y="25" width="19" height="80" uuid="c2cce13f-b6e9-48c9-8e5e-d3f24b7d3bb0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Right"/>
+				<text><![CDATA[Ariance]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="288" y="25" width="26" height="80" uuid="c1e946bc-a495-47dd-bee1-c276c4480c1b"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Right">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Bond Gap O/s to U/p]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="314" y="25" width="32" height="80" uuid="8dfd055c-29f1-4911-a4ac-864b3869ba28"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Right">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Bond Gap O/s to M/p]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="346" y="25" width="19" height="80" uuid="707e5113-cede-42ff-8fcc-291226c97ae7"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Right"/>
+				<text><![CDATA[Broken Stitching]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="365" y="25" width="19" height="80" uuid="ddb71cd6-fe68-43f7-b5de-289d747e45be"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Right"/>
+				<text><![CDATA[Material Failure]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="384" y="25" width="19" height="80" uuid="074dccd4-c6b6-4f81-80ec-3cde61339fb7"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Right"/>
+				<text><![CDATA[Peel Off]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="404" y="25" width="19" height="80" uuid="1873cc30-e363-4da7-b12f-1129c451b394"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Right"/>
+				<text><![CDATA[Diff. Color]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="423" y="25" width="32" height="80" uuid="cf09e52b-e326-455f-be1e-f14ba687864f"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Right">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Double Skin O/s, Yellowing]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="25" width="19" height="80" uuid="a630669f-f8f3-4bc7-9c0e-75ad152f8d01"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Right"/>
+				<text><![CDATA[Over Buffing]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="474" y="25" width="19" height="80" uuid="cda40ba2-60a1-4c06-9a5b-9fb15bb3cd30"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Right"/>
+				<text><![CDATA[Over Color o/s]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="493" y="25" width="19" height="80" uuid="f0163ab4-2794-415c-8ce7-0449c9bd9ee6"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Right"/>
+				<text><![CDATA[Painting]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="512" y="25" width="19" height="80" uuid="29d2880c-40da-4e6a-a22e-fb61612b0e30"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Right"/>
+				<text><![CDATA[Wrinkle Upper]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="531" y="25" width="19" height="80" uuid="71100e53-886f-4377-a0a3-564c235d8d24"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Right"/>
+				<text><![CDATA[X - Ray]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="550" y="0" width="57" height="25" uuid="71487d77-d4c5-4405-bce7-78fda0f07c79"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Other]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="550" y="24" width="19" height="81" uuid="616823e0-4541-4be1-bed9-e45a3ba865ff"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Right"/>
+				<text><![CDATA[Sockliner]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="569" y="24" width="19" height="81" uuid="76a8bfc8-1742-4db4-b04c-b86c5b110224"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Right"/>
+				<text><![CDATA[Doc Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="588" y="24" width="19" height="81" uuid="154e6984-19f5-4135-ae9e-c31217a1f64f"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Right"/>
+				<text><![CDATA[Others]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="675" y="0" width="45" height="105" uuid="d05356bc-a37d-419f-a838-af4eb8706c7a"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[%]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="76" height="20" uuid="8e5614fd-8726-4c68-9020-f0016987b07c"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{work_time}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="77" y="0" width="19" height="20" uuid="d4f3a2e7-45a6-4ac0-8b6d-23bb25ca5fa6"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled"/>
+				<textFieldExpression><![CDATA[$F{clean_over_cement}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="96" y="0" width="19" height="20" uuid="4546e91c-e2a4-4799-be5b-2b2b96579c21"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled"/>
+				<textFieldExpression><![CDATA[$F{clean_poor_trimm_thread}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="115" y="0" width="19" height="20" uuid="7544eac2-97c9-463d-bc26-39935987d495"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled"/>
+				<textFieldExpression><![CDATA[$F{clean_stain_gauge_marking}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="134" y="0" width="19" height="20" uuid="baeaf58a-060d-4e2b-9748-90e546a8dafe"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled"/>
+				<textFieldExpression><![CDATA[$F{clean_stain_lace} > 0 ? "<style isBold=\"true\">"+$F{clean_stain_lace}+"</style>" : $F{clean_stain_lace}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="153" y="0" width="19" height="20" uuid="5592a7cd-c2ff-4120-b717-9d6501c66894"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled"/>
+				<textFieldExpression><![CDATA[$F{clean_stain_outsole} > 0 ? "<style isBold=\"true\">"+$F{clean_stain_outsole}+"</style>" : $F{clean_stain_outsole}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="172" y="0" width="20" height="20" uuid="554d7ee3-6d5c-41b8-a7e9-e533769755fb"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled"/>
+				<textFieldExpression><![CDATA[$F{clean_stain_upper} > 0 ? "<style isBold=\"true\">"+$F{clean_stain_upper}+"</style>" : $F{clean_stain_upper}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="192" y="0" width="19" height="20" uuid="c9824afe-5bf5-42a1-a3d4-e6fa0894f1e5"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled"/>
+				<textFieldExpression><![CDATA[$F{straight_collar_tongue_shape} > 0 ? "<style isBold=\"true\">"+$F{straight_collar_tongue_shape}+"</style>" : $F{straight_collar_tongue_shape}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="211" y="0" width="19" height="20" uuid="abe99f2e-2151-4ab3-8fe4-b6bad210876a"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled"/>
+				<textFieldExpression><![CDATA[$F{straight_crooked} > 0 ? "<style isBold=\"true\">"+$F{straight_crooked}+"</style>" : $F{straight_crooked}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="0" width="19" height="20" uuid="338a18e3-02c2-4d54-b8ea-0e837d6862da"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled"/>
+				<textFieldExpression><![CDATA[$F{straight_diff_toe_heel} > 0 ? "<style isBold=\"true\">"+$F{straight_diff_toe_heel}+"</style>" : $F{straight_diff_toe_heel}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement x="249" y="0" width="20" height="20" uuid="bcf6e463-d7cc-4e9d-813a-2674d23864a3"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled"/>
+				<textFieldExpression><![CDATA[$F{straight_line_up} > 0 ? "<style isBold=\"true\">"+$F{straight_line_up}+"</style>" :$F{straight_line_up}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="269" y="0" width="19" height="20" uuid="36d18931-7880-47e2-adfa-ec5401287f06"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled"/>
+				<textFieldExpression><![CDATA[$F{strong_ariance} > 0 ? "<style isBold=\"true\">"+$F{strong_ariance}+"</style>" : $F{strong_ariance}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="288" y="0" width="26" height="20" uuid="91405fe6-2cdb-4d2a-b52a-78a18e6997fc"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{strong_bond_gap_o_to_u} > 0 ? "<style isBold=\"true\">"+$F{strong_bond_gap_o_to_u}+"</style>" : $F{strong_bond_gap_o_to_u}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="314" y="0" width="32" height="20" uuid="4cc65c3e-aedf-4764-8152-08466365fc2c"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled"/>
+				<textFieldExpression><![CDATA[$F{strong_bond_gap_o_to_m} > 0 ? "<style isBold=\"true\">"+$F{strong_bond_gap_o_to_m}+"</style>" : $F{strong_bond_gap_o_to_m}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="346" y="0" width="19" height="20" uuid="f9f425a4-720e-4358-9228-9765458cf367"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled"/>
+				<textFieldExpression><![CDATA[$F{strong_broken_stitching} > 0 ? "<style isBold=\"true\">"+$F{strong_broken_stitching}+"</style>" : $F{strong_broken_stitching}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="384" y="0" width="19" height="20" uuid="10dc9f5e-a2d6-41e1-8e6b-a38cb9a197bd"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled"/>
+				<textFieldExpression><![CDATA[$F{strong_peel_off} > 0 ? "<style isBold=\"true\">"+$F{strong_peel_off}+"</style>" : $F{strong_peel_off}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="493" y="0" width="19" height="20" uuid="3dc918ee-67b3-4be6-ac88-6e3e17ef27db"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled"/>
+				<textFieldExpression><![CDATA[$F{cosmetic_painting} > 0 ? "<style isBold=\"true\">"+$F{cosmetic_painting}+"</style>" :$F{cosmetic_painting}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="0" width="19" height="20" uuid="e557a2b0-f4c6-4e2d-923d-4d327de468b6"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled"/>
+				<textFieldExpression><![CDATA[$F{cosmetic_over_buffing} > 0 ? "<style isBold=\"true\">"+$F{cosmetic_over_buffing}+"</style>" : $F{cosmetic_over_buffing}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="531" y="0" width="19" height="20" uuid="5d6a6958-b9e0-4ca9-bee5-222f2795e568"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled"/>
+				<textFieldExpression><![CDATA[$F{cosmetic_x_ray} > 0 ? "<style isBold=\"true\">"+$F{cosmetic_x_ray}+"</style>" : $F{cosmetic_x_ray}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="512" y="0" width="19" height="20" uuid="e34f0a8c-3b8d-47d5-94db-2c74d5b2f8ae"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled"/>
+				<textFieldExpression><![CDATA[$F{cosmetic_wrinkle_upper} > 0 ? "<style isBold=\"true\">"+$F{cosmetic_wrinkle_upper}+"</style>" : $F{cosmetic_wrinkle_upper}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="474" y="0" width="19" height="20" uuid="d5bcb50c-85fa-4a60-b6b5-9b78dc82b773"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled"/>
+				<textFieldExpression><![CDATA[$F{cosmetic_over_color} > 0 ? "<style isBold=\"true\">"+$F{cosmetic_over_color}+"</style>" : $F{cosmetic_over_color}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="550" y="0" width="19" height="20" uuid="77e2bd1d-79ff-4c90-a98f-315c7096303c"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled"/>
+				<textFieldExpression><![CDATA[$F{other_sockliner} > 0 ? "<style isBold=\"true\">"+$F{other_sockliner}+"</style>" : $F{other_sockliner}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="569" y="0" width="19" height="20" uuid="f4a79850-aca2-4c0f-bce7-b9451d639f28"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled"/>
+				<textFieldExpression><![CDATA[$F{other_doc_date} > 0 ? "<style isBold=\"true\">"+$F{other_doc_date}+"</style>" : $F{other_doc_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="588" y="0" width="19" height="20" uuid="42edbbe5-281c-45a7-8cb5-f9013a755326"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled"/>
+				<textFieldExpression><![CDATA[$F{other_others} > 0 ? "<style isBold=\"true\">"+$F{other_others}+"</style>" : $F{other_others}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="365" y="0" width="19" height="20" uuid="68552bb7-60cf-4439-a525-13d3d5c3fde1"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled"/>
+				<textFieldExpression><![CDATA[$F{strong_material_failure}> 0 ? "<style isBold=\"true\">"+$F{strong_material_failure}+"</style>" :$F{strong_material_failure}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="404" y="0" width="19" height="20" uuid="df2639c6-f605-4482-8ddd-37ce78e08626"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled"/>
+				<textFieldExpression><![CDATA[$F{cosmetic_diff_color} > 0 ? "<style isBold=\"true\">"+$F{cosmetic_diff_color}+"</style>" :$F{cosmetic_diff_color}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="423" y="0" width="32" height="20" uuid="bd23762e-3beb-4e67-b954-57f64358aa9d"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled"/>
+				<textFieldExpression><![CDATA[$F{cosmetic_double_skin_o_s_yellowing} > 0 ? "<style isBold=\"true\">"+$F{cosmetic_double_skin_o_s_yellowing}+"</style>" :$F{cosmetic_double_skin_o_s_yellowing}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="607" y="0" width="34" height="20" uuid="dae6f8e6-dbc0-487f-ac97-919a2d527159"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{clean_over_cement}+$F{clean_stain_upper}+
+$F{clean_stain_gauge_marking}+
+$F{clean_stain_outsole}+
+$F{clean_stain_lace}+
+$F{clean_poor_trimm_thread}+
+$F{straight_crooked}+
+$F{straight_diff_toe_heel}+
+$F{straight_line_up}+
+$F{straight_collar_tongue_shape}+
+$F{strong_bond_gap_o_to_u}+
+$F{strong_bond_gap_o_to_m}+
+$F{strong_broken_stitching}+
+$F{strong_ariance}+
+$F{strong_peel_off}+
+$F{strong_material_failure}+
+$F{cosmetic_over_buffing}+
+$F{cosmetic_over_color}+
+$F{cosmetic_wrinkle_upper}+
+$F{cosmetic_x_ray}+
+$F{cosmetic_painting}+
+$F{cosmetic_double_skin_o_s_yellowing}+
+$F{cosmetic_diff_color}+
+$F{other_sockliner}+
+$F{other_doc_date}+
+$F{other_others}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement x="675" y="0" width="45" height="20" uuid="5725f1dc-1560-488a-840d-8cfc407f039e"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[(($F{clean_over_cement}+$F{clean_stain_upper}+
+$F{clean_stain_gauge_marking}+
+$F{clean_stain_outsole}+
+$F{clean_stain_lace}+
+$F{clean_poor_trimm_thread}+
+$F{straight_crooked}+
+$F{straight_diff_toe_heel}+
+$F{straight_line_up}+
+$F{straight_collar_tongue_shape}+
+$F{strong_bond_gap_o_to_u}+
+$F{strong_bond_gap_o_to_m}+
+$F{strong_broken_stitching}+
+$F{strong_ariance}+
+$F{strong_peel_off}+
+$F{strong_material_failure}+
+$F{cosmetic_over_buffing}+
+$F{cosmetic_over_color}+
+$F{cosmetic_wrinkle_upper}+
+$F{cosmetic_x_ray}+
+$F{cosmetic_painting}+
+$F{cosmetic_double_skin_o_s_yellowing}+
+$F{cosmetic_diff_color}+
+$F{other_sockliner}+
+$F{other_doc_date}+
+$F{other_others})/$F{output_qc}.doubleValue())*100]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="641" y="0" width="34" height="20" uuid="fb0d1ee1-3228-4d2c-ac41-842d957456eb"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{output_qc}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

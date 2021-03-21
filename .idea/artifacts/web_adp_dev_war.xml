@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="web-adp-dev:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>web-adp-dev</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="web-adp-dev-1.1.war">
+      <element id="artifact" artifact-name="web-adp-dev:war exploded" />
+    </root>
+  </artifact>
+</component>

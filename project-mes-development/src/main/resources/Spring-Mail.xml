@@ -1,0 +1,191 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+    <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+        <property name="host" value="mail.adis.co.id" />
+        <property name="port" value="587" />
+        <property name="username" value="adis/oraclemail" />
+        <property name="password" value="oraclemail" />
+		
+        <property name="javaMailProperties">
+            <props>
+                <prop key="mail.smtp.auth">true</prop>
+                <prop key="mail.smtp.starttls.enable">true</prop>
+            </props>
+        </property>
+		
+    </bean>
+    
+    <!--setup sender service--> 
+	
+    <bean id="po1Lv1" class="com.agit.controller.mail.MailMail">
+        <property name="mailSender" ref="mailSender" />
+        <property name="simpleMailMessage" ref="lv1a" />
+    </bean>
+    
+    <bean id="po1Lv2" class="com.agit.controller.mail.MailMail">
+        <property name="mailSender" ref="mailSender" />
+        <property name="simpleMailMessage" ref="lv2a" />
+    </bean>
+    
+    <bean id="po1Lv3" class="com.agit.controller.mail.MailMail">
+        <property name="mailSender" ref="mailSender" />
+        <property name="simpleMailMessage" ref="lv3a" />
+    </bean>
+    
+    <bean id="po1Lv4" class="com.agit.controller.mail.MailMail">
+        <property name="mailSender" ref="mailSender" />
+        <property name="simpleMailMessage" ref="lv4a" />
+    </bean>
+    
+    <bean id="po2Lv1" class="com.agit.controller.mail.MailMail">
+        <property name="mailSender" ref="mailSender" />
+        <property name="simpleMailMessage" ref="lv1b" />
+    </bean>
+    
+    <bean id="po2Lv2" class="com.agit.controller.mail.MailMail">
+        <property name="mailSender" ref="mailSender" />
+        <property name="simpleMailMessage" ref="lv2b" />
+    </bean>
+    
+    <bean id="po2Lv3" class="com.agit.controller.mail.MailMail">
+        <property name="mailSender" ref="mailSender" />
+        <property name="simpleMailMessage" ref="lv3b" />
+    </bean>
+    
+    <bean id="po2Lv4" class="com.agit.controller.mail.MailMail">
+        <property name="mailSender" ref="mailSender" />
+        <property name="simpleMailMessage" ref="lv4b" />
+    </bean>
+    <!--setup sending email-->
+	
+    <bean id="lv1a"
+          class="org.springframework.mail.SimpleMailMessage">
+
+        <property name="from" value="oraclemail@adis.co.id" />
+        <property name="to" value="hendra.kurnia@adis.co.id" />
+        <property name="subject" value="Approval" />
+        <property name="text">
+            <value>
+		<![CDATA[
+       		Dear %s,
+		%s
+		]]>
+            </value>
+        </property>
+    </bean>
+	
+    <bean id="lv2a"
+          class="org.springframework.mail.SimpleMailMessage">
+
+        <property name="from" value="oraclemail@adis.co.id" />
+        <property name="to" value="marudut.hutagaol@adis.co.id" />
+        <property name="subject" value="Approval" />
+        <property name="text">
+            <value>
+		<![CDATA[
+       		Dear %s,
+		%s
+		]]>
+            </value>
+        </property>
+    </bean>
+    
+    <bean id="lv3a"
+          class="org.springframework.mail.SimpleMailMessage">
+
+        <property name="from" value="oraclemail@adis.co.id" />
+        <property name="to" value="pardiman@adis.co.id" />
+        <property name="subject" value="Approval" />
+        <property name="text">
+            <value>
+		<![CDATA[
+       		Dear %s,
+		%s
+		]]>
+            </value>
+        </property>
+    </bean>
+    
+    <bean id="lv4a"
+          class="org.springframework.mail.SimpleMailMessage">
+
+        <property name="from" value="oraclemail@adis.co.id" />
+        <property name="to" value="muhammad.gunawan@adis.co.id" />
+        <property name="subject" value="Approval" />
+        <property name="text">
+            <value>
+		<![CDATA[
+       		Dear %s,
+		%s
+		]]>
+            </value>
+        </property>
+    </bean>
+    
+    <bean id="lv1b"
+          class="org.springframework.mail.SimpleMailMessage">
+
+        <property name="from" value="oraclemail@adis.co.id" />
+        <property name="to" value="sugiyanto@adis.co.id" />
+        <property name="subject" value="Approval" />
+        <property name="text">
+            <value>
+		<![CDATA[
+       		Dear %s,
+		%s
+		]]>
+            </value>
+        </property>
+    </bean>
+	
+    <bean id="lv2b"
+          class="org.springframework.mail.SimpleMailMessage">
+
+        <property name="from" value="oraclemail@adis.co.id" />
+        <property name="to" value="hamdan@adis.co.id" />
+        <property name="subject" value="Approval" />
+        <property name="text">
+            <value>
+		<![CDATA[
+       		Dear %s,
+		%s
+		]]>
+            </value>
+        </property>
+    </bean>
+    
+    <bean id="lv3b"
+          class="org.springframework.mail.SimpleMailMessage">
+
+        <property name="from" value="oraclemail@adis.co.id" />
+        <property name="to" value="pardiman@adis.co.id" />
+        <property name="subject" value="Approval" />
+        <property name="text">
+            <value>
+		<![CDATA[
+       		Dear %s,
+		%s
+		]]>
+            </value>
+        </property>
+    </bean>
+
+    <bean id="lv4b"
+          class="org.springframework.mail.SimpleMailMessage">
+
+        <property name="from" value="oraclemail@adis.co.id" />
+        <property name="to" value="muhammad.gunawan@adis.co.id" />
+        <property name="subject" value="Approval" />
+        <property name="text">
+            <value>
+		<![CDATA[
+       		Dear %s,
+		%s
+		]]>
+            </value>
+        </property>
+    </bean>
+</beans>
