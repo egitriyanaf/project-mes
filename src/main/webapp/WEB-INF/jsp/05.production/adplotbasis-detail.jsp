@@ -65,12 +65,10 @@
                         var poNo = $.trim($("#poNo").val());
                         var poItem = $.trim($("#poItem").val());
                         var demandClass = $.trim($("#demandClass").val());
-                        var productDesc = $.trim($("#productDesc").val());
                         aoData.push({"name": "ncvs", "value": ncvs});
                         aoData.push({"name": "poNo", "value": poNo});
                         aoData.push({"name": "poItem", "value": poItem});
                         aoData.push({"name": "demandClass", "value": demandClass});
-                        aoData.push({"name": "productDesc", "value": productDesc});
                         jQuery.ajax({
                             "dataType": 'json',
                             "type": "POST",
@@ -86,36 +84,36 @@
                         {"mDataProp": "id", "bSortable": false},
                         {"mDataProp": "hourly", "bSortable": false},
                         {"mDataProp": "size1", "bSortable": false},
-                        {"mDataProp": "size1T", "bSortable": false},
                         {"mDataProp": "size2", "bSortable": false},
-                        {"mDataProp": "size2T", "bSortable": false},
                         {"mDataProp": "size3", "bSortable": false},
-                        {"mDataProp": "size3T", "bSortable": false},
                         {"mDataProp": "size4", "bSortable": false},
-                        {"mDataProp": "size4T", "bSortable": false},
                         {"mDataProp": "size5", "bSortable": false},
-                        {"mDataProp": "size5T", "bSortable": false},
                         {"mDataProp": "size6", "bSortable": false},
-                        {"mDataProp": "size6T", "bSortable": false},
                         {"mDataProp": "size7", "bSortable": false},
-                        {"mDataProp": "size7T", "bSortable": false},
                         {"mDataProp": "size8", "bSortable": false},
-                        {"mDataProp": "size8T", "bSortable": false},
                         {"mDataProp": "size9", "bSortable": false},
-                        {"mDataProp": "size9T", "bSortable": false},
                         {"mDataProp": "size10", "bSortable": false},
-                        {"mDataProp": "size10T", "bSortable": false},
                         {"mDataProp": "size11", "bSortable": false},
-                        {"mDataProp": "size11T", "bSortable": false},
                         {"mDataProp": "size12", "bSortable": false},
-                        {"mDataProp": "size12T", "bSortable": false},
                         {"mDataProp": "size13", "bSortable": false},
-                        {"mDataProp": "size13T", "bSortable": false},
                         {"mDataProp": "size14", "bSortable": false},
                         {"mDataProp": "size15", "bSortable": false},
                         {"mDataProp": "size16", "bSortable": false},
                         {"mDataProp": "size17", "bSortable": false},
                         {"mDataProp": "size18", "bSortable": false},
+                        {"mDataProp": "size1T", "bSortable": false},
+                        {"mDataProp": "size2T", "bSortable": false},
+                        {"mDataProp": "size3T", "bSortable": false},
+                        {"mDataProp": "size4T", "bSortable": false},
+                        {"mDataProp": "size5T", "bSortable": false},
+                        {"mDataProp": "size6T", "bSortable": false},
+                        {"mDataProp": "size7T", "bSortable": false},
+                        {"mDataProp": "size8T", "bSortable": false},
+                        {"mDataProp": "size9T", "bSortable": false},
+                        {"mDataProp": "size10T", "bSortable": false},
+                        {"mDataProp": "size11T", "bSortable": false},
+                        {"mDataProp": "size12T", "bSortable": false},
+                        {"mDataProp": "size13T", "bSortable": false},
                         {"mDataProp": fnBlank, "bSortable": false},
                         {"mDataProp": fnBlank, "bSortable": false}
                     ],
@@ -1765,7 +1763,7 @@
                                         <label class="col-md-4 control-label">Item<span class="required"></span></label>
                                         <div class="col-md-8">
                                             <div>
-                                                <input id="#"  disabled name="#" type="text" class="form-control required" value="${produksi.productDesc}" placeholder="#"  />
+                                                <input id="#"  disabled name="#" type="text" class="form-control required" value="${produksi.fgDesc}" placeholder="#"  />
                                             </div>
                                         </div>
                                     </div>
@@ -1773,7 +1771,7 @@
                                         <label class="col-md-4 control-label">Style<span class="required"></span></label>
                                         <div class="col-md-8">
                                             <div>
-                                                <input id="#"  disabled name="#" type="text" class="form-control required" value="#" placeholder="Style"  />
+                                                <input id="#"  disabled name="#" type="text" class="form-control required" value="${produksi.joPpic}" placeholder="Style"  />
                                             </div>
                                         </div>
                                     </div>
@@ -1907,36 +1905,36 @@
                                                 <th></th>
                                                 <th>G</th>
                                                 <th>1</th>
-                                                <th>1T</th>
                                                 <th>2</th>
-                                                <th>2T</th>
                                                 <th>3</th>
-                                                <th>3T</th>
                                                 <th>4</th>
-                                                <th>4T</th>
                                                 <th>5</th>
-                                                <th>5T</th>
                                                 <th>6</th>
-                                                <th>6T</th>
                                                 <th>7</th>
-                                                <th>7T</th>
                                                 <th>8</th>
-                                                <th>8T</th>
                                                 <th>9</th>
-                                                <th>9T</th>
                                                 <th>10</th>
-                                                <th>10T</th>
                                                 <th>11</th>
-                                                <th>11T</th>
                                                 <th>12</th>
-                                                <th>12T</th>
                                                 <th>13</th>
-                                                <th>13T</th>
                                                 <th>14</th>
                                                 <th>15</th>
                                                 <th>16</th>
                                                 <th>17</th>
                                                 <th>18</th>
+                                                <th>1T</th>
+                                                <th>2T</th>
+                                                <th>3T</th>
+                                                <th>4T</th>
+                                                <th>5T</th>
+                                                <th>6T</th>
+                                                <th>7T</th>
+                                                <th>8T</th>
+                                                <th>9T</th>
+                                                <th>10T</th>
+                                                <th>11T</th>
+                                                <th>12T</th>
+                                                <th>13T</th>
                                                 <th>Sum</th>
                                                 <th></th>
                                             </tr>
