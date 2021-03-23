@@ -1865,6 +1865,14 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label">Original Qty<span class="required"></span></label>
+                                        <div class="col-md-8">
+                                            <div>
+                                                <input id="#"  disabled name="#" type="text" class="form-control required" value="${produksi.qty}" placeholder="Qty Order"  />
+                                            </div>
+                                        </div>
+                                    </div>
 
                                     <div class="form-group" hidden="hidden">                                       
                                         <div class="col-md-8">

@@ -1,9 +1,7 @@
-f<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
-
 <!DOCTYPE html>
 <html>
-
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>LOT Basis | Operator</title>
@@ -14,16 +12,17 @@ f<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                 var typeOfData = null;
                 var typeDepartement = null;
                 var oTable = $("#dataTable").dataTable({
+                    "order":[[3, "asc"]],
                     "sAjaxSource": "${pageContext.request.contextPath}/operator/lotbasis/search",
                     "sServerMethod": "POST",
                     "fnServerData": function (sSource, aoData, fnCallback) {
                         var poNo = $.trim($("#listpoNo").val());
                         var valPoItem = $.trim($("#listpoItem").val());
                         var valLineCode = $.trim($("#listNcvs").val());
-
                         aoData.push({"name": "poNo", "value": poNo});
                         aoData.push({"name": "poItem", "value": valPoItem});
                         aoData.push({"name": "lineCode", "value": valLineCode});
+                        
                         jQuery.ajax({
                             "dataType": 'json',
                             "type": "POST",
@@ -32,6 +31,7 @@ f<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                             "success": fnCallback
                         });
                     },
+                    
                     "aoColumns": [
                         {"mDataProp": "lineCode"},
                         {"mDataProp": "poNo"},
@@ -41,6 +41,7 @@ f<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                         {"mDataProp": "joPpic"},
                         {"mDataProp": "productDesc"},
                         {"mDataProp": fnBlank, "bSortable": false}
+                        
                     ],
                     "aoColumnDefs": [
                         {
@@ -209,8 +210,7 @@ f<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                     </div>					                  
                 </div>
                 <div class="table-responsive border-white">
-                    <table id="dataTable" class="table table-striped table-hover table-bordered datatable"
-                           style="width: 100%">
+                    <table id="dataTable" class="table table-striped table-hover table-bordered datatable" style="width: 100%">
                         <thead>
                             <tr>
                                 <th>NCVS</th>
