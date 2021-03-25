@@ -51,20 +51,29 @@ public class LoginAuthenticationProvider implements AuthenticationProvider {
 		String username = authentication.getName();
 		String password = (String) authentication.getCredentials();
 		JdcAdpMstUser user = adminService.getSecUser(username);
-		if (user == null) {
-			throw new BadCredentialsException("Please input correct username and password");
-		} else if (!user.getEnabled().equalsIgnoreCase("Active")) {
-			throw new BadCredentialsException("User is not active. Please contact your administrator.");
-		} else {
-			String passwordEncode = adminService.encodePassword(password);
-			if (StringUtils.equals(passwordEncode, user.getUsrPassword())) {
+                String passwordEncode = adminService.encodePassword(password);
+                if (StringUtils.equals(passwordEncode, user.getUsrPassword())) {
 				adminService.resetFailAttempts(username);
 				Collection<? extends GrantedAuthority> authorities = getGrantedAuthority(user);
 				return new UsernamePasswordAuthenticationToken(user, password, authorities);
 			} else {
 				throw new BadCredentialsException("Please input correct username and password");
 			}
-		}
+                
+//		if (user == null) {
+//			throw new BadCredentialsException("Please input correct username and password");
+//		} else if (!user.getEnabled().equalsIgnoreCase("Active")) {
+//			throw new BadCredentialsException("User is not active. Please contact your administrator.");
+//		} else {
+//			String passwordEncode = adminService.encodePassword(password);
+//			if (StringUtils.equals(passwordEncode, user.getUsrPassword())) {
+//				adminService.resetFailAttempts(username);
+//				Collection<? extends GrantedAuthority> authorities = getGrantedAuthority(user);
+//				return new UsernamePasswordAuthenticationToken(user, password, authorities);
+//			} else {
+//				throw new BadCredentialsException("Please input correct username and password");
+//			}
+//		}
 	}
 
     /**

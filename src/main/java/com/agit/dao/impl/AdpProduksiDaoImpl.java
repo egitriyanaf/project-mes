@@ -18,6 +18,7 @@ import com.project.common.DataTables;
 import com.agit.controller.qc.model.AdpProduksiModel;
 import com.agit.dao.AdpGenericDao;
 import com.agit.dao.AdpProduksiDao;
+import org.hibernate.criterion.Order;
 
 /**
  *
@@ -61,6 +62,8 @@ public class AdpProduksiDaoImpl extends AdpBaseDao<JdcAdpMstproduksi> implements
         if (flagUpload != null) {
             criteria.add(Restrictions.eq("flagUpload", flagUpload));
         }
+        criteria.addOrder(Order.desc("demandClass"));
+        criteria.addOrder(Order.desc("joPpic"));
         criteria.setFirstResult(dataTables.getiDisplayStart());
         criteria.setMaxResults(dataTables.getiDisplayLength());
         criteria.setProjection(Projections.projectionList()

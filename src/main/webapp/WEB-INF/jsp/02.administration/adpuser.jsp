@@ -72,6 +72,7 @@
                     oTable.fnDraw();
                 });
             });
+                
         </script>
     </head>
     <body>
