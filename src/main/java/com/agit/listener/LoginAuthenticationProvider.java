@@ -59,7 +59,8 @@ public class LoginAuthenticationProvider implements AuthenticationProvider {
 			} else {
 				throw new BadCredentialsException("Please input correct username and password");
 			}
-                
+
+//before
 //		if (user == null) {
 //			throw new BadCredentialsException("Please input correct username and password");
 //		} else if (!user.getEnabled().equalsIgnoreCase("Active")) {

@@ -27,7 +27,7 @@
 <!--                    <div style="color: black;text-align: center;font-size: 25px;">
                         Claim Monitoring Service
                     </div>-->
-<form class="login100-form validate-form" method="post" role="form" data-toggle="validator" action="${pageContext.request.contextPath}/j_spring_security_check"><!--/web-adp/j_spring_security_check-->
+                    <form class="login100-form validate-form" method="post" role="form" data-toggle="validator" action="${pageContext.request.contextPath}/j_spring_security_check"><!--/web-adp/j_spring_security_check-->
                         <c:if test="${param.error}">
                             <div style="font-size: 12px;">
                                 <span style="color: #ff0000">
@@ -80,6 +80,6 @@
 
         <script src="${pageContext.request.contextPath}/assets/js/jquery/jquery-2.1.3.min.js"></script>
         <script src="${pageContext.request.contextPath}/assets/js/validator.min.js"></script>
-
+        
     </body>
 </html>
