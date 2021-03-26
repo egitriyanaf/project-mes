@@ -13,7 +13,7 @@
                  var sumIN = 0;
                 var sumOUT = 0;
                 var oTable = $("#dataTable").dataTable({
-                    "paging": false,
+//                    "paging": false,
                     "sAjaxSource": "${pageContext.request.contextPath}/operator/lotbasis/searchLotBasis",
                     "sServerMethod": "POST",
                     "scrollX": true,

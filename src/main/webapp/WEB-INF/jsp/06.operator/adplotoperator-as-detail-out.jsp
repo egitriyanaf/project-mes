@@ -180,7 +180,7 @@
                                 } else if (row.flagAsInSize3T === 1 && row.flagAsOutSize3T === 1) {
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-reject" class="viewData" id = "' + row.id + '" size3T = "' + row.size3T + '"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">  ' + row.size3T + ' </span></a>';
                                 } else if (row.flagAsInSize3T === 1) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size3T = "' + row.size3T + '"><span style ="background-color: rgb(53T, 40, 245);" class="label label-status label-info"> ' + row.size3T + ' </span></a>';
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size3T = "' + row.size3T + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-info"> ' + row.size3T + ' </span></a>';
                                 } else {
                                     return  '<td class="size3T">' + "" + '</td>';
                                 }

@@ -108,6 +108,7 @@ f<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
         </script>
         <style>
             .btnlot {
+                /*border: 2px solid #003ee7;*/
                 border: 2px solid #2A74EE;
                 background-color: white;
                 cursor: pointer;

@@ -1845,7 +1845,7 @@
                                         <label class="col-md-4 control-label">GAC Date<span class="required"></span></label>
                                         <div class="col-md-8">
                                             <div>
-                                                <input id="gacDate" style="cursor: pointer;" disabled value="<fmt:formatDate value='${produksi.gacDate}' type='date' pattern='dd-MMM-yyyy'/>" readonly="readonly"  class="form-control required datepicker" placeholder="GAC Date"  />
+                                                <input id="gacDate" style="cursor: pointer;" value="<fmt:formatDate value='${produksi.gacDate}' type='date' pattern='dd-MMM-yyyy'/>" class="form-control required datepicker" placeholder="GAC Date"  />
                                             </div>
                                         </div>
                                     </div>
@@ -1853,7 +1853,7 @@
                                         <label class="col-md-4 control-label">OGAC Date<span class="required"></span></label>
                                         <div class="col-md-8">
                                             <div>
-                                                <input id="ogacDate" disabled style="cursor: pointer;" disabled value="<fmt:formatDate value='${produksi.ogacDate}' type='date' pattern='dd-MMM-yyyy'/>" readonly="readonly"  class="form-control required datepicker"  placeholder="OGAC Date" />
+                                                <input id="ogacDate" style="cursor: pointer;" value="<fmt:formatDate value='${produksi.ogacDate}' type='date' pattern='dd-MMM-yyyy'/>" class="form-control required datepicker"  placeholder="OGAC Date" />
                                             </div>
                                         </div>
                                     </div>
