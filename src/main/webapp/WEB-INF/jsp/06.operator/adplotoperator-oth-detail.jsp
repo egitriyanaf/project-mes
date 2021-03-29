@@ -207,7 +207,7 @@
                                         return  '<td class="size1">' + "" + '</td>';
                                     } else if (row.flagspprepInSize1 === 1 && row.flagspprepOutSize1 === 1) {
                                         return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size1 + ' </span></a>';
-                                    } else if (row.flagOsInSize1 === null) {
+                                    } else if (row.flagspprepInSize1 === null) {
                                         return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size1 + ' </span></a>';
                                     } else {
                                         return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-reject" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-warning">  ' + row.size1 + ' </span></a>';
@@ -5464,69 +5464,102 @@
                                 var flagCscOut16 = aaData[index].flagCscOutSize16;
                                 var flagCscOut17 = aaData[index].flagCscOutSize17;
                                 var flagCscOut18 = aaData[index].flagCscOutSize18;
-                                sumIN += flagCscIn1 === 1 && flagCscOut1 === 1 ? 0 : flagCscIn1;
-                                sumIN += flagCscIn1T === 1 && flagCscOut1T === 1  ? 0 : flagCscIn1T;
-                                sumIN += flagCscIn2 === 1 && flagCscOut2 === 1  ? 0 : flagCscIn2;
-                                sumIN += flagCscIn2T === 1 && flagCscOut2T === 1  ? 0 : flagCscIn2T;
-                                sumIN += flagCscIn3 === 1 && flagCscOut3 === 1  ? 0 : flagCscIn3;
-                                sumIN += flagCscIn3T === 1 && flagCscOut3T === 1  ? 0 : flagCscIn3T;
-                                sumIN += flagCscIn4 === 1 && flagCscOut4 === 1  ? 0 : flagCscIn4;
-                                sumIN += flagCscIn4T === 1 && flagCscOut4T === 1  ? 0 : flagCscIn4T;
-                                sumIN += flagCscIn5 === 1 && flagCscOut5 === 1  ? 0 : flagCscIn5;
-                                sumIN += flagCscIn5T === 1 && flagCscOut5T === 1  ? 0 : flagCscIn5T;
-                                sumIN += flagCscIn6 === 1 && flagCscOut6 === 1  ? 0 : flagCscIn6;
-                                sumIN += flagCscIn6T === 1 && flagCscOut6T === 1  ? 0 : flagCscIn6T;
-                                sumIN += flagCscIn7 === 1 && flagCscOut7 === 1  ? 0 : flagCscIn7;
-                                sumIN += flagCscIn7T === 1 && flagCscOut7T === 1  ? 0 : flagCscIn7T;
-                                sumIN += flagCscIn8 === 1 && flagCscOut8 === 1  ? 0 : flagCscIn8;
-                                sumIN += flagCscIn8T === 1 && flagCscOut8T === 1  ? 0 : flagCscIn8T;
-                                sumIN += flagCscIn9 === 1 && flagCscOut9 === 1  ? 0 : flagCscIn9;
-                                sumIN += flagCscIn9T === 1 && flagCscOut9T === 1  ? 0 : flagCscIn9T;
-                                sumIN += flagCscIn10 === 1 && flagCscOut10 === 1  ? 0 : flagCscIn10;
-                                sumIN += flagCscIn10T === 1 && flagCscOut10T === 1  ? 0 : flagCscIn10T;
-                                sumIN += flagCscIn11 === 1 && flagCscOut11 === 1  ? 0 : flagCscIn11;
-                                sumIN += flagCscIn11T === 1 && flagCscOut11T === 1  ? 0 : flagCscIn11T;
-                                sumIN += flagCscIn12 === 1 && flagCscOut12 === 1  ? 0 : flagCscIn12;
-                                sumIN += flagCscIn12T === 1 && flagCscOut12T === 1  ? 0 : flagCscIn12T;
-                                sumIN += flagCscIn13 === 1 && flagCscOut13 === 1 ? 0 : flagCscIn13;
-                                sumIN += flagCscIn13T === 1 && flagCscOut13T === 1  ? 0 : flagCscIn13T;
-                                sumIN += flagCscIn14 === 1  && flagCscOut14 === 1 ? 0 : flagCscIn14;
-                                sumIN += flagCscIn15 === 1  && flagCscOut15 === 1 ? 0 : flagCscIn15;
-                                sumIN += flagCscIn16 === 1  && flagCscOut16 === 1 ? 0 : flagCscIn16;
-                                sumIN += flagCscIn17 === 1  && flagCscOut17 === 1 ? 0 : flagCscIn17;
-                                sumIN += flagCscIn18 === 1  && flagCscOut18 === 1 ? 0 : flagCscIn18;
                                 
-                                sumOUT += flagCscOut1 === 1 ? flagCscOut1 : 0;
-                                sumOUT += flagCscOut1T === 1 ? flagCscOut1T : 0;
-                                sumOUT += flagCscOut2 === 1 ? flagCscOut2 : 0;
-                                sumOUT += flagCscOut2T === 1 ? flagCscOut2T : 0;
-                                sumOUT += flagCscOut3 === 1 ? flagCscOut3 : 0;
-                                sumOUT += flagCscOut3T === 1 ? flagCscOut3T : 0;
-                                sumOUT += flagCscOut4 === 1 ? flagCscOut4 : 0;
-                                sumOUT += flagCscOut4T === 1 ? flagCscOut4T : 0;
-                                sumOUT += flagCscOut5 === 1 ? flagCscOut5 : 0;
-                                sumOUT += flagCscOut5T === 1 ? flagCscOut5T : 0;
-                                sumOUT += flagCscOut6 === 1 ? flagCscOut6 : 0;
-                                sumOUT += flagCscOut6T === 1 ? flagCscOut6T : 0;
-                                sumOUT += flagCscOut7 === 1 ? flagCscOut7 : 0;
-                                sumOUT += flagCscOut7T === 1 ? flagCscOut7T : 0;
-                                sumOUT += flagCscOut8 === 1 ? flagCscOut8 : 0;
-                                sumOUT += flagCscOut8T === 1 ? flagCscOut8T : 0;
-                                sumOUT += flagCscOut9 === 1 ? flagCscOut9 : 0;
-                                sumOUT += flagCscOut9T === 1 ? flagCscOut9T : 0;
-                                sumOUT += flagCscOut10 === 1 ? flagCscOut10 : 0;
-                                sumOUT += flagCscOut10T === 1 ? flagCscOut10T : 0;
-                                sumOUT += flagCscOut11 === 1 ? flagCscOut11 : 0;
-                                sumOUT += flagCscOut11T === 1 ? flagCscOut11T : 0;
-                                sumOUT += flagCscOut12 === 1 ? flagCscOut12 : 0;
-                                sumOUT += flagCscOut12T === 1 ? flagCscOut12T : 0;
-                                sumOUT += flagCscOut13 === 1 ? flagCscOut13 : 0;
-                                sumOUT += flagCscOut13T === 1 ? flagCscOut13T : 0;
-                                sumOUT += flagCscOut14 === 1 ? flagCscOut14 : 0;
-                                sumOUT += flagCscOut15 === 1 ? flagCscOut15 : 0;
-                                sumOUT += flagCscOut16 === 1 ? flagCscOut16 : 0;
-                                sumOUT += flagCscOut17 === 1 ? flagCscOut17 : 0;
-                                sumOUT += flagCscOut18 === 1 ? flagCscOut18 : 0;
+                                var CscSize1 = aaData[index].size1;
+                                var CscSize1T = aaData[index].size1T;
+                                var CscSize2 = aaData[index].size2;
+                                var CscSize2T = aaData[index].size2T;
+                                var CscSize3 = aaData[index].size3;
+                                var CscSize3T = aaData[index].size3T;
+                                var CscSize4 = aaData[index].size4;
+                                var CscSize4T = aaData[index].size4T;
+                                var CscSize5 = aaData[index].size5;
+                                var CscSize5T = aaData[index].size5T;
+                                var CscSize6 = aaData[index].size6;
+                                var CscSize6T = aaData[index].size6T;
+                                var CscSize7 = aaData[index].size7;
+                                var CscSize7T = aaData[index].size7T;
+                                var CscSize8 = aaData[index].size8;
+                                var CscSize8T = aaData[index].size8T;
+                                var CscSize9 = aaData[index].size9;
+                                var CscSize9T = aaData[index].size9T;
+                                var CscSize10 = aaData[index].size10;
+                                var CscSize10T = aaData[index].size10T;
+                                var CscSize11 = aaData[index].size11;
+                                var CscSize11T = aaData[index].size11T;
+                                var CscSize12 = aaData[index].size12;
+                                var CscSize12T = aaData[index].size12T;
+                                var CscSize13 = aaData[index].size13;
+                                var CscSize13T = aaData[index].size13T;
+                                var CscSize14 = aaData[index].size14;
+                                var CscSize15 = aaData[index].size15;
+                                var CscSize16 = aaData[index].size16;
+                                var CscSize17 = aaData[index].size17;
+                                var CscSize18 = aaData[index].size18;
+                            
+                                sumIN += flagCscIn1 === 1 && flagCscOut1 === null ? CscSize1 : 0;
+                                sumIN += flagCscIn1T === 1 && flagCscOut1T === null ? CscSize1T : 0;
+                                sumIN += flagCscIn2 === 1 && flagCscOut2 === null ? CscSize2 : 0;
+                                sumIN += flagCscIn2T === 1 && flagCscOut2T === null ? CscSize2T : 0;
+                                sumIN += flagCscIn3 === 1 && flagCscOut3 === null ? CscSize3 : 0;
+                                sumIN += flagCscIn3T === 1 && flagCscOut3T === null ? CscSize3T : 0;
+                                sumIN += flagCscIn4 === 1 && flagCscOut4 === null ? CscSize4 : 0;
+                                sumIN += flagCscIn4T === 1 && flagCscOut4T === null ? CscSize4T : 0;
+                                sumIN += flagCscIn5 === 1 && flagCscOut5 === null ? CscSize5 : 0;
+                                sumIN += flagCscIn5T === 1 && flagCscOut5T === null ? CscSize5T : 0;
+                                sumIN += flagCscIn6 === 1 && flagCscOut6 === null ? CscSize6 : 0;
+                                sumIN += flagCscIn6T === 1 && flagCscOut6T === null ? CscSize6T : 0;
+                                sumIN += flagCscIn7 === 1 && flagCscOut7 === null ? CscSize7 : 0;
+                                sumIN += flagCscIn7T === 1 && flagCscOut7T === null ? CscSize7T : 0;
+                                sumIN += flagCscIn8 === 1 && flagCscOut8 === null ? CscSize8 : 0;
+                                sumIN += flagCscIn8T === 1 && flagCscOut8T === null ? CscSize8T : 0;
+                                sumIN += flagCscIn9 === 1 && flagCscOut9 === null ? CscSize9 : 0;
+                                sumIN += flagCscIn9T === 1 && flagCscOut9T === null ? CscSize9T : 0;
+                                sumIN += flagCscIn10 === 1 && flagCscOut10 === null ? CscSize10 : 0;
+                                sumIN += flagCscIn10T === 1 && flagCscOut10T === null ? CscSize10T : 0;
+                                sumIN += flagCscIn11 === 1 && flagCscOut11 === null ? CscSize11 : 0;
+                                sumIN += flagCscIn11T === 1 && flagCscOut11T === null ? CscSize11T : 0;
+                                sumIN += flagCscIn12 === 1 && flagCscOut12 === null ? CscSize12 : 0;
+                                sumIN += flagCscIn12T === 1 && flagCscOut12T === null ? CscSize12T : 0;
+                                sumIN += flagCscIn13 === 1 && flagCscOut13 === null ? CscSize13 : 0;
+                                sumIN += flagCscIn13T === 1 && flagCscOut13T === null ? CscSize13T : 0;
+                                sumIN += flagCscIn14 === 1  && flagCscOut14 === null ? CscSize14 : 0;
+                                sumIN += flagCscIn15 === 1  && flagCscOut15 === null ? CscSize15 : 0;
+                                sumIN += flagCscIn16 === 1  && flagCscOut16 === null ? CscSize16 : 0;
+                                sumIN += flagCscIn17 === 1  && flagCscOut17 === null ? CscSize17 : 0;
+                                sumIN += flagCscIn18 === 1  && flagCscOut18 === null ? CscSize18 : 0;
+                                
+                                sumOUT += flagCscOut1 === 1 ? CscSize1 : 0;
+                                sumOUT += flagCscOut1T === 1 ? CscSize1T : 0;
+                                sumOUT += flagCscOut2 === 1 ? CscSize2 : 0;
+                                sumOUT += flagCscOut2T === 1 ? CscSize2T : 0;
+                                sumOUT += flagCscOut3 === 1 ? CscSize3 : 0;
+                                sumOUT += flagCscOut3T === 1 ? CscSize3T : 0;
+                                sumOUT += flagCscOut4 === 1 ? CscSize4 : 0;
+                                sumOUT += flagCscOut4T === 1 ? CscSize4T : 0;
+                                sumOUT += flagCscOut5 === 1 ? CscSize5 : 0;
+                                sumOUT += flagCscOut5T === 1 ? CscSize5T : 0;
+                                sumOUT += flagCscOut6 === 1 ? CscSize6 : 0;
+                                sumOUT += flagCscOut6T === 1 ? CscSize6T : 0;
+                                sumOUT += flagCscOut7 === 1 ? CscSize7 : 0;
+                                sumOUT += flagCscOut7T === 1 ? CscSize7T : 0;
+                                sumOUT += flagCscOut8 === 1 ? CscSize8 : 0;
+                                sumOUT += flagCscOut8T === 1 ? CscSize8T : 0;
+                                sumOUT += flagCscOut9 === 1 ? CscSize9 : 0;
+                                sumOUT += flagCscOut9T === 1 ? CscSize9T : 0;
+                                sumOUT += flagCscOut10 === 1 ? CscSize10 : 0;
+                                sumOUT += flagCscOut10T === 1 ? CscSize10T : 0;
+                                sumOUT += flagCscOut11 === 1 ? CscSize11 : 0;
+                                sumOUT += flagCscOut11T === 1 ? CscSize11T : 0;
+                                sumOUT += flagCscOut12 === 1 ? CscSize12 : 0;
+                                sumOUT += flagCscOut12T === 1 ? CscSize12T : 0;
+                                sumOUT += flagCscOut13 === 1 ? CscSize13 : 0;
+                                sumOUT += flagCscOut13T === 1 ? CscSize13T : 0;
+                                sumOUT += flagCscOut14 === 1 ? CscSize14 : 0;
+                                sumOUT += flagCscOut15 === 1 ? CscSize15 : 0;
+                                sumOUT += flagCscOut16 === 1 ? CscSize16 : 0;
+                                sumOUT += flagCscOut17 === 1 ? CscSize17 : 0;
+                                sumOUT += flagCscOut18 === 1 ? CscSize18 : 0;
                             } else if(departement === 'No Sew'){
                                 var flagNsIn1 = aaData[index].flagNsInSize1; 
                                 var flagNsIn1T = aaData[index].flagNsInSize1T;
@@ -5592,69 +5625,101 @@
                                 var flagNsOut17 = aaData[index].flagNsOutSize17;
                                 var flagNsOut18 = aaData[index].flagNsOutSize18;
                                 
-                                sumIN += flagNsIn1 === 1 && flagNsOut1 === 1 ? 0 : flagNsIn1;
-                                sumIN += flagNsIn1T === 1 && flagNsOut1T === 1 ? 0 : flagNsIn1T;
-                                sumIN += flagNsIn2 === 1 && flagNsOut2 === 1  ? 0 : flagNsIn2;
-                                sumIN += flagNsIn2T === 1 && flagNsOut2T === 1  ? 0 : flagNsIn2T;
-                                sumIN += flagNsIn3 === 1 && flagNsOut3 === 1  ? 0 : flagNsIn3;
-                                sumIN += flagNsIn3T === 1 && flagNsOut3T === 1  ? 0 : flagNsIn3T;
-                                sumIN += flagNsIn4 === 1 && flagNsOut4 === 1  ? 0 : flagNsIn4;
-                                sumIN += flagNsIn4T === 1 && flagNsOut4T === 1  ? 0 : flagNsIn4T;
-                                sumIN += flagNsIn5 === 1 && flagNsOut5 === 1  ? 0 : flagNsIn5;
-                                sumIN += flagNsIn5T === 1 && flagNsOut5T === 1  ? 0 : flagNsIn5T;
-                                sumIN += flagNsIn6 === 1 && flagNsOut6 === 1  ? 0 : flagNsIn6;
-                                sumIN += flagNsIn6T === 1 && flagNsOut6T === 1  ? 0 : flagNsIn6T;
-                                sumIN += flagNsIn7 === 1 && flagNsOut7 === 1  ? 0 : flagNsIn7;
-                                sumIN += flagNsIn7T === 1 && flagNsOut7T === 1  ? 0 : flagNsIn7T;
-                                sumIN += flagNsIn8 === 1 && flagNsOut8 === 1  ? 0 : flagNsIn8;
-                                sumIN += flagNsIn8T === 1 && flagNsOut8T === 1  ? 0 : flagNsIn8T;
-                                sumIN += flagNsIn9 === 1 && flagNsOut9 === 1  ? 0 : flagNsIn9;
-                                sumIN += flagNsIn9T === 1 && flagNsOut9T === 1  ? 0 : flagNsIn9T;
-                                sumIN += flagNsIn10 === 1 && flagNsOut10 === 1 ? 0 : flagNsIn10;
-                                sumIN += flagNsIn10T === 1 && flagNsOut10T === 1  ? 0 : flagNsIn10T;
-                                sumIN += flagNsIn11 === 1 && flagNsOut11 === 1  ? 0 : flagNsIn11;
-                                sumIN += flagNsIn11T === 1 && flagNsOut11T === 1  ? 0 : flagNsIn11T;
-                                sumIN += flagNsIn12 === 1 && flagNsOut12 === 1  ? 0 : flagNsIn12;
-                                sumIN += flagNsIn12T === 1 && flagNsOut12T === 1  ? 0 : flagNsIn12T;
-                                sumIN += flagNsIn13 === 1 && flagNsOut13 === 1  ? 0 : flagNsIn13;
-                                sumIN += flagNsIn13T === 1 && flagNsOut13T === 1  ? 0 : flagNsIn13T;
-                                sumIN += flagNsIn14 === 1 && flagNsOut14 === 1  ? 0 : flagNsIn14;
-                                sumIN += flagNsIn15 === 1 && flagNsOut15 === 1  ? 0 : flagNsIn15;
-                                sumIN += flagNsIn16 === 1 && flagNsOut16 === 1  ? 0 : flagNsIn16;
-                                sumIN += flagNsIn17 === 1 && flagNsOut17 === 1  ? 0 : flagNsIn17;
-                                sumIN += flagNsIn18 === 1 && flagNsOut18 === 1  ? 0 : flagNsIn18;
+                                var NsSize1 = aaData[index].size1;
+                                var NsSize1T = aaData[index].size1T;
+                                var NsSize2 = aaData[index].size2;
+                                var NsSize2T = aaData[index].size2T;
+                                var NsSize3 = aaData[index].size3;
+                                var NsSize3T = aaData[index].size3T;
+                                var NsSize4 = aaData[index].size4;
+                                var NsSize4T = aaData[index].size4T;
+                                var NsSize5 = aaData[index].size5;
+                                var NsSize5T = aaData[index].size5T;
+                                var NsSize6 = aaData[index].size6;
+                                var NsSize6T = aaData[index].size6T;
+                                var NsSize7 = aaData[index].size7;
+                                var NsSize7T = aaData[index].size7T;
+                                var NsSize8 = aaData[index].size8;
+                                var NsSize8T = aaData[index].size8T;
+                                var NsSize9 = aaData[index].size9;
+                                var NsSize9T = aaData[index].size9T;
+                                var NsSize10 = aaData[index].size10;
+                                var NsSize10T = aaData[index].size10T;
+                                var NsSize11 = aaData[index].size11;
+                                var NsSize11T = aaData[index].size11T;
+                                var NsSize12 = aaData[index].size12;
+                                var NsSize12T = aaData[index].size12T;
+                                var NsSize13 = aaData[index].size13;
+                                var NsSize13T = aaData[index].size13T;
+                                var NsSize14 = aaData[index].size14;
+                                var NsSize15 = aaData[index].size15;
+                                var NsSize16 = aaData[index].size16;
+                                var NsSize17 = aaData[index].size17;
+                                var NsSize18 = aaData[index].size18;
+                                
+                                sumIN += flagNsIn1 === 1 && flagNsOut1 === null ? NsSize1 : 0;
+                                sumIN += flagNsIn1T === 1 && flagNsOut1T === null ? NsSize1T : 0;
+                                sumIN += flagNsIn2 === 1 && flagNsOut2 === null ? NsSize2 : 0;
+                                sumIN += flagNsIn2T === 1 && flagNsOut2T === null ? NsSize2T : 0;
+                                sumIN += flagNsIn3 === 1 && flagNsOut3 === null ? NsSize3 : 0;
+                                sumIN += flagNsIn3T === 1 && flagNsOut3T === null ? NsSize3T : 0;
+                                sumIN += flagNsIn4 === 1 && flagNsOut4 === null ? NsSize4 : 0;
+                                sumIN += flagNsIn4T === 1 && flagNsOut4T === null ? NsSize4T : 0;
+                                sumIN += flagNsIn5 === 1 && flagNsOut5 === null ? NsSize5 : 0;
+                                sumIN += flagNsIn5T === 1 && flagNsOut5T === null ? NsSize5T : 0;
+                                sumIN += flagNsIn6 === 1 && flagNsOut6 === null ? NsSize6 : 0;
+                                sumIN += flagNsIn6T === 1 && flagNsOut6T === null ? NsSize6T : 0;
+                                sumIN += flagNsIn7 === 1 && flagNsOut7 === null ? NsSize7 : 0;
+                                sumIN += flagNsIn7T === 1 && flagNsOut7T === null ? NsSize7T : 0;
+                                sumIN += flagNsIn8 === 1 && flagNsOut8 === null ? NsSize8 : 0;
+                                sumIN += flagNsIn8T === 1 && flagNsOut8T === null ? NsSize8T : 0;
+                                sumIN += flagNsIn9 === 1 && flagNsOut9 === null ? NsSize9 : 0;
+                                sumIN += flagNsIn9T === 1 && flagNsOut9T === null ? NsSize9T : 0;
+                                sumIN += flagNsIn10 === 1 && flagNsOut10 === null ? NsSize10 : 0;
+                                sumIN += flagNsIn10T === 1 && flagNsOut10T === null ? NsSize10T : 0;
+                                sumIN += flagNsIn11 === 1 && flagNsOut11 === null ? NsSize11 : 0;
+                                sumIN += flagNsIn11T === 1 && flagNsOut11T === null ? NsSize11T : 0;
+                                sumIN += flagNsIn12 === 1 && flagNsOut12 === null ? NsSize12 : 0;
+                                sumIN += flagNsIn12T === 1 && flagNsOut12T === null ? NsSize12T : 0;
+                                sumIN += flagNsIn13 === 1 && flagNsOut13 === null ? NsSize13 : 0;
+                                sumIN += flagNsIn13T === 1 && flagNsOut13T === null ? NsSize13T : 0;
+                                sumIN += flagNsIn14 === 1 && flagNsOut14 === null ? NsSize14 : 0;
+                                sumIN += flagNsIn15 === 1 && flagNsOut15 === null ? NsSize15 : 0;
+                                sumIN += flagNsIn16 === 1 && flagNsOut16 === null ? NsSize16 : 0;
+                                sumIN += flagNsIn17 === 1 && flagNsOut17 === null ? NsSize17 : 0;
+                                sumIN += flagNsIn18 === 1 && flagNsOut18 === null ? NsSize18 : 0;
                                    
-                                sumOUT += flagNsOut1 === 1 ? flagNsOut1 : 0;
-                                sumOUT += flagNsOut1T === 1 ? flagNsOut1T : 0;
-                                sumOUT += flagNsOut2 === 1 ? flagNsOut2 : 0;
-                                sumOUT += flagNsOut2T === 1 ? flagNsOut2T : 0;
-                                sumOUT += flagNsOut3 === 1 ? flagNsOut3 : 0;
-                                sumOUT += flagNsOut3T === 1 ? flagNsOut3T : 0;
-                                sumOUT += flagNsOut4 === 1 ? flagNsOut4 : 0;
-                                sumOUT += flagNsOut4T === 1 ? flagNsOut4T : 0;
-                                sumOUT += flagNsOut5 === 1 ? flagNsOut5 : 0;
-                                sumOUT += flagNsOut5T === 1 ? flagNsOut5T : 0;
-                                sumOUT += flagNsOut6 === 1 ? flagNsOut6 : 0;
-                                sumOUT += flagNsOut6T === 1 ? flagNsOut6T : 0;
-                                sumOUT += flagNsOut7 === 1 ? flagNsOut7 : 0;
-                                sumOUT += flagNsOut7T === 1 ? flagNsOut7T : 0;
-                                sumOUT += flagNsOut8 === 1 ? flagNsOut8 : 0;
-                                sumOUT += flagNsOut8T === 1 ? flagNsOut8T : 0;
-                                sumOUT += flagNsOut9 === 1 ? flagNsOut9 : 0;
-                                sumOUT += flagNsOut9T === 1 ? flagNsOut9T : 0;
-                                sumOUT += flagNsOut10 === 1 ? flagNsOut10 : 0;
-                                sumOUT += flagNsOut10T === 1 ? flagNsOut10T : 0;
-                                sumOUT += flagNsOut11 === 1 ? flagNsOut11 : 0;
-                                sumOUT += flagNsOut11T === 1 ? flagNsOut11T : 0;
-                                sumOUT += flagNsOut12 === 1 ? flagNsOut12 : 0;
-                                sumOUT += flagNsOut12T === 1 ? flagNsOut12T : 0;
-                                sumOUT += flagNsOut13 === 1 ? flagNsOut13 : 0;
-                                sumOUT += flagNsOut13T === 1 ? flagNsOut13T : 0;
-                                sumOUT += flagNsOut14 === 1 ? flagNsOut14 : 0;
-                                sumOUT += flagNsOut15 === 1 ? flagNsOut15 : 0;
-                                sumOUT += flagNsOut16 === 1 ? flagNsOut16 : 0;
-                                sumOUT += flagNsOut17 === 1 ? flagNsOut17 : 0;
-                                sumOUT += flagNsOut18 === 1 ? flagNsOut18 : 0;
+                                sumOUT += flagNsOut1 === 1 ? NsSize1 : 0;
+                                sumOUT += flagNsOut1T === 1 ? NsSize1T : 0;
+                                sumOUT += flagNsOut2 === 1 ? NsSize2 : 0;
+                                sumOUT += flagNsOut2T === 1 ? NsSize2T : 0;
+                                sumOUT += flagNsOut3 === 1 ? NsSize3 : 0;
+                                sumOUT += flagNsOut3T === 1 ? NsSize3T : 0;
+                                sumOUT += flagNsOut4 === 1 ? NsSize4 : 0;
+                                sumOUT += flagNsOut4T === 1 ? NsSize4T : 0;
+                                sumOUT += flagNsOut5 === 1 ? NsSize5 : 0;
+                                sumOUT += flagNsOut5T === 1 ? NsSize5T : 0;
+                                sumOUT += flagNsOut6 === 1 ? NsSize6 : 0;
+                                sumOUT += flagNsOut6T === 1 ? NsSize6T : 0;
+                                sumOUT += flagNsOut7 === 1 ? NsSize7 : 0;
+                                sumOUT += flagNsOut7T === 1 ? NsSize7T : 0;
+                                sumOUT += flagNsOut8 === 1 ? NsSize8 : 0;
+                                sumOUT += flagNsOut8T === 1 ? NsSize8T : 0;
+                                sumOUT += flagNsOut9 === 1 ? NsSize9 : 0;
+                                sumOUT += flagNsOut9T === 1 ? NsSize9T : 0;
+                                sumOUT += flagNsOut10 === 1 ? NsSize10 : 0;
+                                sumOUT += flagNsOut10T === 1 ? NsSize10T : 0;
+                                sumOUT += flagNsOut11 === 1 ? NsSize11 : 0;
+                                sumOUT += flagNsOut11T === 1 ? NsSize11T : 0;
+                                sumOUT += flagNsOut12 === 1 ? NsSize12 : 0;
+                                sumOUT += flagNsOut12T === 1 ? NsSize12T : 0;
+                                sumOUT += flagNsOut13 === 1 ? NsSize13 : 0;
+                                sumOUT += flagNsOut13T === 1 ? NsSize13T : 0;
+                                sumOUT += flagNsOut14 === 1 ? NsSize14 : 0;
+                                sumOUT += flagNsOut15 === 1 ? NsSize15 : 0;
+                                sumOUT += flagNsOut16 === 1 ? NsSize16 : 0;
+                                sumOUT += flagNsOut17 === 1 ? NsSize17 : 0;
+                                sumOUT += flagNsOut18 === 1 ? NsSize18 : 0;
                             } else if(departement === 'Subcon'){
                                var flagScIn1 = aaData[index].flagScInSize1; 
                                 var flagScIn1T = aaData[index].flagScInSize1T;
@@ -5719,70 +5784,102 @@
                                 var flagScOut16 = aaData[index].flagScOutSize16;
                                 var flagScOut17 = aaData[index].flagScOutSize17;
                                 var flagScOut18 = aaData[index].flagScOutSize18;
+                                
+                                var ScSize1 = aaData[index].size1;
+                                var ScSize1T = aaData[index].size1T;
+                                var ScSize2 = aaData[index].size2;
+                                var ScSize2T = aaData[index].size2T;
+                                var ScSize3 = aaData[index].size3;
+                                var ScSize3T = aaData[index].size3T;
+                                var ScSize4 = aaData[index].size4;
+                                var ScSize4T = aaData[index].size4T;
+                                var ScSize5 = aaData[index].size5;
+                                var ScSize5T = aaData[index].size5T;
+                                var ScSize6 = aaData[index].size6;
+                                var ScSize6T = aaData[index].size6T;
+                                var ScSize7 = aaData[index].size7;
+                                var ScSize7T = aaData[index].size7T;
+                                var ScSize8 = aaData[index].size8;
+                                var ScSize8T = aaData[index].size8T;
+                                var ScSize9 = aaData[index].size9;
+                                var ScSize9T = aaData[index].size9T;
+                                var ScSize10 = aaData[index].size10;
+                                var ScSize10T = aaData[index].size10T;
+                                var ScSize11 = aaData[index].size11;
+                                var ScSize11T = aaData[index].size11T;
+                                var ScSize12 = aaData[index].size12;
+                                var ScSize12T = aaData[index].size12T;
+                                var ScSize13 = aaData[index].size13;
+                                var ScSize13T = aaData[index].size13T;
+                                var ScSize14 = aaData[index].size14;
+                                var ScSize15 = aaData[index].size15;
+                                var ScSize16 = aaData[index].size16;
+                                var ScSize17 = aaData[index].size17;
+                                var ScSize18 = aaData[index].size18;
 
-                                sumIN += flagScIn1 === 1 && flagScOut1 === 1 ? 0 : flagScIn1;
-                                sumIN += flagScIn1T === 1 && flagScOut1T === 1 ? 0 : flagScIn1T;
-                                sumIN += flagScIn2 === 1 && flagScOut2 === 1  ? 0 : flagScIn2;
-                                sumIN += flagScIn2T === 1 && flagScOut2T === 1  ? 0 : flagScIn2T;
-                                sumIN += flagScIn3 === 1 && flagScOut3 === 1  ? 0 : flagScIn3;
-                                sumIN += flagScIn3T === 1 && flagScOut3T === 1  ? 0 : flagScIn3T;
-                                sumIN += flagScIn4 === 1 && flagScOut4 === 1  ? 0 : flagScIn4;
-                                sumIN += flagScIn4T === 1 && flagScOut4T === 1  ? 0 : flagScIn4T;
-                                sumIN += flagScIn5 === 1 && flagScOut5 === 1  ? 0 : flagScIn5;
-                                sumIN += flagScIn5T === 1 && flagScOut5T === 1  ? 0 : flagScIn5T;
-                                sumIN += flagScIn6 === 1 && flagScOut6 === 1  ? 0 : flagScIn6;
-                                sumIN += flagScIn6T === 1 && flagScOut6T === 1  ? 0 : flagScIn6T;
-                                sumIN += flagScIn7 === 1 && flagScOut7 === 1  ? 0 : flagScIn7;
-                                sumIN += flagScIn7T === 1 && flagScOut7T === 1  ? 0 : flagScIn7T;
-                                sumIN += flagScIn8 === 1 && flagScOut8 === 1  ? 0 : flagScIn8;
-                                sumIN += flagScIn8T === 1 && flagScOut8T === 1  ? 0 : flagScIn8T;
-                                sumIN += flagScIn9 === 1 && flagScOut9 === 1  ? 0 : flagScIn9;
-                                sumIN += flagScIn9T === 1 && flagScOut9T === 1  ? 0 : flagScIn9T;
-                                sumIN += flagScIn10 === 1 && flagScOut10 === 1 ? 0 : flagScIn10;
-                                sumIN += flagScIn10T === 1 && flagScOut10T === 1  ? 0 : flagScIn10T;
-                                sumIN += flagScIn11 === 1 && flagScOut11 === 1  ? 0 : flagScIn11;
-                                sumIN += flagScIn11T === 1 && flagScOut11T === 1  ? 0 : flagScIn11T;
-                                sumIN += flagScIn12 === 1 && flagScOut12 === 1  ? 0 : flagScIn12;
-                                sumIN += flagScIn12T === 1 && flagScOut12T === 1  ? 0 : flagScIn12T;
-                                sumIN += flagScIn13 === 1 && flagScOut13 === 1  ? 0 : flagScIn13;
-                                sumIN += flagScIn13T === 1 && flagScOut13T === 1  ? 0 : flagScIn13T;
-                                sumIN += flagScIn14 === 1 && flagScOut14 === 1  ? 0 : flagScIn14;
-                                sumIN += flagScIn15 === 1 && flagScOut15 === 1  ? 0 : flagScIn15;
-                                sumIN += flagScIn16 === 1 && flagScOut16 === 1  ? 0 : flagScIn16;
-                                sumIN += flagScIn17 === 1 && flagScOut17 === 1  ? 0 : flagScIn17;
-                                sumIN += flagScIn18 === 1 && flagScOut18 === 1  ? 0 : flagScIn18;
+                                sumIN += flagScIn1 === 1 && flagScOut1 === null ? ScSize1 : 0;
+                                sumIN += flagScIn1T === 1 && flagScOut1T === null ? ScSize1T : 0;
+                                sumIN += flagScIn2 === 1 && flagScOut2 === null ? ScSize2 : 0;
+                                sumIN += flagScIn2T === 1 && flagScOut2T === null ? ScSize2T : 0;
+                                sumIN += flagScIn3 === 1 && flagScOut3 === null ? ScSize3 : 0;
+                                sumIN += flagScIn3T === 1 && flagScOut3T === null ? ScSize3T : 0;
+                                sumIN += flagScIn4 === 1 && flagScOut4 === null ? ScSize4 : 0;
+                                sumIN += flagScIn4T === 1 && flagScOut4T === null ? ScSize4T : 0;
+                                sumIN += flagScIn5 === 1 && flagScOut5 === null ? ScSize5 : 0;
+                                sumIN += flagScIn5T === 1 && flagScOut5T === null ? ScSize5T : 0;
+                                sumIN += flagScIn6 === 1 && flagScOut6 === null ? ScSize6 : 0;
+                                sumIN += flagScIn6T === 1 && flagScOut6T === null ? ScSize6T : 0;
+                                sumIN += flagScIn7 === 1 && flagScOut7 === null ? ScSize7 : 0;
+                                sumIN += flagScIn7T === 1 && flagScOut7T === null ? ScSize7T : 0;
+                                sumIN += flagScIn8 === 1 && flagScOut8 === null ? ScSize8 : 0;
+                                sumIN += flagScIn8T === 1 && flagScOut8T === null ? ScSize8T : 0;
+                                sumIN += flagScIn9 === 1 && flagScOut9 === null ? ScSize9 : 0;
+                                sumIN += flagScIn9T === 1 && flagScOut9T === null ? ScSize9T : 0;
+                                sumIN += flagScIn10 === 1 && flagScOut10 === null ? ScSize10 : 0;
+                                sumIN += flagScIn10T === 1 && flagScOut10T === null ? ScSize10T : 0;
+                                sumIN += flagScIn11 === 1 && flagScOut11 === null ? ScSize11 : 0;
+                                sumIN += flagScIn11T === 1 && flagScOut11T === null ? ScSize11T : 0;
+                                sumIN += flagScIn12 === 1 && flagScOut12 === null ? ScSize12 : 0;
+                                sumIN += flagScIn12T === 1 && flagScOut12T === null ? ScSize12T : 0;
+                                sumIN += flagScIn13 === 1 && flagScOut13 === null ? ScSize13 : 0;
+                                sumIN += flagScIn13T === 1 && flagScOut13T === null ? ScSize13T : 0;
+                                sumIN += flagScIn14 === 1 && flagScOut14 === null ? ScSize14 : 0;
+                                sumIN += flagScIn15 === 1 && flagScOut15 === null ? ScSize15 : 0;
+                                sumIN += flagScIn16 === 1 && flagScOut16 === null ? ScSize16 : 0;
+                                sumIN += flagScIn17 === 1 && flagScOut17 === null ? ScSize17 : 0;
+                                sumIN += flagScIn18 === 1 && flagScOut18 === null ? ScSize18 : 0;
 
-                                sumOUT += flagScOut1 === 1 ? flagScOut1 : 0;
-                                sumOUT += flagScOut1T === 1 ? flagScOut1T : 0;
-                                sumOUT += flagScOut2 === 1 ? flagScOut2 : 0;
-                                sumOUT += flagScOut2T === 1 ? flagScOut2T : 0;
-                                sumOUT += flagScOut3 === 1 ? flagScOut3 : 0;
-                                sumOUT += flagScOut3T === 1 ? flagScOut3T : 0;
-                                sumOUT += flagScOut4 === 1 ? flagScOut4 : 0;
-                                sumOUT += flagScOut4T === 1 ? flagScOut4T : 0;
-                                sumOUT += flagScOut5 === 1 ? flagScOut5 : 0;
-                                sumOUT += flagScOut5T === 1 ? flagScOut5T : 0;
-                                sumOUT += flagScOut6 === 1 ? flagScOut6 : 0;
-                                sumOUT += flagScOut6T === 1 ? flagScOut6T : 0;
-                                sumOUT += flagScOut7 === 1 ? flagScOut7 : 0;
-                                sumOUT += flagScOut7T === 1 ? flagScOut7T : 0;
-                                sumOUT += flagScOut8 === 1 ? flagScOut8 : 0;
-                                sumOUT += flagScOut8T === 1 ? flagScOut8T : 0;
-                                sumOUT += flagScOut9 === 1 ? flagScOut9 : 0;
-                                sumOUT += flagScOut9T === 1 ? flagScOut9T : 0;
-                                sumOUT += flagScOut10 === 1 ? flagScOut10 : 0;
-                                sumOUT += flagScOut10T === 1 ? flagScOut10T : 0;
-                                sumOUT += flagScOut11 === 1 ? flagScOut11 : 0;
-                                sumOUT += flagScOut11T === 1 ? flagScOut11T : 0;
-                                sumOUT += flagScOut12 === 1 ? flagScOut12 : 0;
-                                sumOUT += flagScOut12T === 1 ? flagScOut12T : 0;
-                                sumOUT += flagScOut13 === 1 ? flagScOut13 : 0;
-                                sumOUT += flagScOut13T === 1 ? flagScOut13T : 0;
-                                sumOUT += flagScOut14 === 1 ? flagScOut14 : 0;
-                                sumOUT += flagScOut15 === 1 ? flagScOut15 : 0;
-                                sumOUT += flagScOut16 === 1 ? flagScOut16 : 0;
-                                sumOUT += flagScOut17 === 1 ? flagScOut17 : 0;
-                                sumOUT += flagScOut18 === 1 ? flagScOut18 : 0;
+                                sumOUT += flagScOut1 === 1 ? ScSize1 : 0;
+                                sumOUT += flagScOut1T === 1 ? ScSize1T : 0;
+                                sumOUT += flagScOut2 === 1 ? ScSize2 : 0;
+                                sumOUT += flagScOut2T === 1 ? ScSize2T : 0;
+                                sumOUT += flagScOut3 === 1 ? ScSize3 : 0;
+                                sumOUT += flagScOut3T === 1 ? ScSize3T : 0;
+                                sumOUT += flagScOut4 === 1 ? ScSize4 : 0;
+                                sumOUT += flagScOut4T === 1 ? ScSize4T : 0;
+                                sumOUT += flagScOut5 === 1 ? ScSize5 : 0;
+                                sumOUT += flagScOut5T === 1 ? ScSize5T : 0;
+                                sumOUT += flagScOut6 === 1 ? ScSize6 : 0;
+                                sumOUT += flagScOut6T === 1 ? ScSize6T : 0;
+                                sumOUT += flagScOut7 === 1 ? ScSize7 : 0;
+                                sumOUT += flagScOut7T === 1 ? ScSize7T : 0;
+                                sumOUT += flagScOut8 === 1 ? ScSize8 : 0;
+                                sumOUT += flagScOut8T === 1 ? ScSize8T : 0;
+                                sumOUT += flagScOut9 === 1 ? ScSize9 : 0;
+                                sumOUT += flagScOut9T === 1 ? ScSize9T : 0;
+                                sumOUT += flagScOut10 === 1 ? ScSize10 : 0;
+                                sumOUT += flagScOut10T === 1 ? ScSize10T : 0;
+                                sumOUT += flagScOut11 === 1 ? ScSize11 : 0;
+                                sumOUT += flagScOut11T === 1 ? ScSize11T : 0;
+                                sumOUT += flagScOut12 === 1 ? ScSize12 : 0;
+                                sumOUT += flagScOut12T === 1 ? ScSize12T : 0;
+                                sumOUT += flagScOut13 === 1 ? ScSize13 : 0;
+                                sumOUT += flagScOut13T === 1 ? ScSize13T : 0;
+                                sumOUT += flagScOut14 === 1 ? ScSize14 : 0;
+                                sumOUT += flagScOut15 === 1 ? ScSize15 : 0;
+                                sumOUT += flagScOut16 === 1 ? ScSize16 : 0;
+                                sumOUT += flagScOut17 === 1 ? ScSize17 : 0;
+                                sumOUT += flagScOut18 === 1 ? ScSize18 : 0;
                             } else if(departement === 'spcut'){
                                 var flagspcutIn1 = aaData[index].flagspcutInSize1; 
                                 var flagspcutIn1T = aaData[index].flagspcutInSize1T;
@@ -5847,72 +5944,104 @@
                                 var flagspcutOut16 = aaData[index].flagspcutOutSize16;
                                 var flagspcutOut17 = aaData[index].flagspcutOutSize17;
                                 var flagspcutOut18 = aaData[index].flagspcutOutSize18;
+                                
+                                var spcutSize1 = aaData[index].size1;
+                                var spcutSize1T = aaData[index].size1T;
+                                var spcutSize2 = aaData[index].size2;
+                                var spcutSize2T = aaData[index].size2T;
+                                var spcutSize3 = aaData[index].size3;
+                                var spcutSize3T = aaData[index].size3T;
+                                var spcutSize4 = aaData[index].size4;
+                                var spcutSize4T = aaData[index].size4T;
+                                var spcutSize5 = aaData[index].size5;
+                                var spcutSize5T = aaData[index].size5T;
+                                var spcutSize6 = aaData[index].size6;
+                                var spcutSize6T = aaData[index].size6T;
+                                var spcutSize7 = aaData[index].size7;
+                                var spcutSize7T = aaData[index].size7T;
+                                var spcutSize8 = aaData[index].size8;
+                                var spcutSize8T = aaData[index].size8T;
+                                var spcutSize9 = aaData[index].size9;
+                                var spcutSize9T = aaData[index].size9T;
+                                var spcutSize10 = aaData[index].size10;
+                                var spcutSize10T = aaData[index].size10T;
+                                var spcutSize11 = aaData[index].size11;
+                                var spcutSize11T = aaData[index].size11T;
+                                var spcutSize12 = aaData[index].size12;
+                                var spcutSize12T = aaData[index].size12T;
+                                var spcutSize13 = aaData[index].size13;
+                                var spcutSize13T = aaData[index].size13T;
+                                var spcutSize14 = aaData[index].size14;
+                                var spcutSize15 = aaData[index].size15;
+                                var spcutSize16 = aaData[index].size16;
+                                var spcutSize17 = aaData[index].size17;
+                                var spcutSize18 = aaData[index].size18;
 
-                                sumIN += flagspcutIn1 === 1 && flagspcutOut1 === 1 ? 0 : flagspcutIn1;
-                                sumIN += flagspcutIn1T === 1 && flagspcutOut1T === 1 ? 0 : flagspcutIn1T;
-                                sumIN += flagspcutIn2 === 1 && flagspcutOut2 === 1  ? 0 : flagspcutIn2;
-                                sumIN += flagspcutIn2T === 1 && flagspcutOut2T === 1  ? 0 : flagspcutIn2T;
-                                sumIN += flagspcutIn3 === 1 && flagspcutOut3 === 1  ? 0 : flagspcutIn3;
-                                sumIN += flagspcutIn3T === 1 && flagspcutOut3T === 1  ? 0 : flagspcutIn3T;
-                                sumIN += flagspcutIn4 === 1 && flagspcutOut4 === 1  ? 0 : flagspcutIn4;
-                                sumIN += flagspcutIn4T === 1 && flagspcutOut4T === 1  ? 0 : flagspcutIn4T;
-                                sumIN += flagspcutIn5 === 1 && flagspcutOut5 === 1  ? 0 : flagspcutIn5;
-                                sumIN += flagspcutIn5T === 1 && flagspcutOut5T === 1  ? 0 : flagspcutIn5T;
-                                sumIN += flagspcutIn6 === 1 && flagspcutOut6 === 1  ? 0 : flagspcutIn6;
-                                sumIN += flagspcutIn6T === 1 && flagspcutOut6T === 1  ? 0 : flagspcutIn6T;
-                                sumIN += flagspcutIn7 === 1 && flagspcutOut7 === 1  ? 0 : flagspcutIn7;
-                                sumIN += flagspcutIn7T === 1 && flagspcutOut7T === 1  ? 0 : flagspcutIn7T;
-                                sumIN += flagspcutIn8 === 1 && flagspcutOut8 === 1  ? 0 : flagspcutIn8;
-                                sumIN += flagspcutIn8T === 1 && flagspcutOut8T === 1  ? 0 : flagspcutIn8T;
-                                sumIN += flagspcutIn9 === 1 && flagspcutOut9 === 1  ? 0 : flagspcutIn9;
-                                sumIN += flagspcutIn9T === 1 && flagspcutOut9T === 1  ? 0 : flagspcutIn9T;
-                                sumIN += flagspcutIn10 === 1 && flagspcutOut10 === 1 ? 0 : flagspcutIn10;
-                                sumIN += flagspcutIn10T === 1 && flagspcutOut10T === 1  ? 0 : flagspcutIn10T;
-                                sumIN += flagspcutIn11 === 1 && flagspcutOut11 === 1  ? 0 : flagspcutIn11;
-                                sumIN += flagspcutIn11T === 1 && flagspcutOut11T === 1  ? 0 : flagspcutIn11T;
-                                sumIN += flagspcutIn12 === 1 && flagspcutOut12 === 1  ? 0 : flagspcutIn12;
-                                sumIN += flagspcutIn12T === 1 && flagspcutOut12T === 1  ? 0 : flagspcutIn12T;
-                                sumIN += flagspcutIn13 === 1 && flagspcutOut13 === 1  ? 0 : flagspcutIn13;
-                                sumIN += flagspcutIn13T === 1 && flagspcutOut13T === 1  ? 0 : flagspcutIn13T;
-                                sumIN += flagspcutIn14 === 1 && flagspcutOut14 === 1  ? 0 : flagspcutIn14;
-                                sumIN += flagspcutIn15 === 1 && flagspcutOut15 === 1  ? 0 : flagspcutIn15;
-                                sumIN += flagspcutIn16 === 1 && flagspcutOut16 === 1  ? 0 : flagspcutIn16;
-                                sumIN += flagspcutIn17 === 1 && flagspcutOut17 === 1  ? 0 : flagspcutIn17;
-                                sumIN += flagspcutIn18 === 1 && flagspcutOut18 === 1  ? 0 : flagspcutIn18;
+                                sumIN += flagspcutIn1 === 1 && flagspcutOut1 === null ? spcutSize1 : 0;
+                                sumIN += flagspcutIn1T === 1 && flagspcutOut1T === null ? spcutSize1T : 0;
+                                sumIN += flagspcutIn2 === 1 && flagspcutOut2 === null ? spcutSize2 : 0;
+                                sumIN += flagspcutIn2T === 1 && flagspcutOut2T === null ? spcutSize2T : 0;
+                                sumIN += flagspcutIn3 === 1 && flagspcutOut3 === null ? spcutSize3 : 0;
+                                sumIN += flagspcutIn3T === 1 && flagspcutOut3T === null ? spcutSize3T : 0;
+                                sumIN += flagspcutIn4 === 1 && flagspcutOut4 === null ? spcutSize4 : 0;
+                                sumIN += flagspcutIn4T === 1 && flagspcutOut4T === null ? spcutSize4T : 0;
+                                sumIN += flagspcutIn5 === 1 && flagspcutOut5 === null ? spcutSize5 : 0;
+                                sumIN += flagspcutIn5T === 1 && flagspcutOut5T === null ? spcutSize5T : 0;
+                                sumIN += flagspcutIn6 === 1 && flagspcutOut6 === null ? spcutSize6 : 0
+                                sumIN += flagspcutIn6T === 1 && flagspcutOut6T === null ? spcutSize6T : 0;
+                                sumIN += flagspcutIn7 === 1 && flagspcutOut7 === null ? spcutSize7 : 0
+                                sumIN += flagspcutIn7T === 1 && flagspcutOut7T === null ? spcutSize7T : 0;
+                                sumIN += flagspcutIn8 === 1 && flagspcutOut8 === null ? spcutSize8 : 0;
+                                sumIN += flagspcutIn8T === 1 && flagspcutOut8T === null ? spcutSize8T : 0;
+                                sumIN += flagspcutIn9 === 1 && flagspcutOut9 === null ? spcutSize9 : 0;
+                                sumIN += flagspcutIn9T === 1 && flagspcutOut9T === null ? spcutSize9T : 0;
+                                sumIN += flagspcutIn10 === 1 && flagspcutOut10 === null ? spcutSize10 : 0;
+                                sumIN += flagspcutIn10T === 1 && flagspcutOut10T === null ? spcutSize10T : 0;
+                                sumIN += flagspcutIn11 === 1 && flagspcutOut11 === null ? spcutSize11 : 0;
+                                sumIN += flagspcutIn11T === 1 && flagspcutOut11T === null ? spcutSize11T : 0;
+                                sumIN += flagspcutIn12 === 1 && flagspcutOut12 === null ? spcutSize12 : 0;
+                                sumIN += flagspcutIn12T === 1 && flagspcutOut12T === null ? spcutSize12T : 0;
+                                sumIN += flagspcutIn13 === 1 && flagspcutOut13 === null ? spcutSize13 : 0;
+                                sumIN += flagspcutIn13T === 1 && flagspcutOut13T === null ? spcutSize13T : 0;
+                                sumIN += flagspcutIn14 === 1 && flagspcutOut14 === null ? spcutSize14 : 0;
+                                sumIN += flagspcutIn15 === 1 && flagspcutOut15 === null ? spcutSize15 : 0;
+                                sumIN += flagspcutIn16 === 1 && flagspcutOut16 === null ? spcutSize16 : 0;
+                                sumIN += flagspcutIn17 === 1 && flagspcutOut17 === null ? spcutSize17 : 0;
+                                sumIN += flagspcutIn18 === 1 && flagspcutOut18 === null ? spcutSize18 : 0;
 
-                                sumOUT += flagspcutOut1 === 1 ? flagspcutOut1 : 0;
-                                sumOUT += flagspcutOut1T === 1 ? flagspcutOut1T : 0;
-                                sumOUT += flagspcutOut2 === 1 ? flagspcutOut2 : 0;
-                                sumOUT += flagspcutOut2T === 1 ? flagspcutOut2T : 0;
-                                sumOUT += flagspcutOut3 === 1 ? flagspcutOut3 : 0;
-                                sumOUT += flagspcutOut3T === 1 ? flagspcutOut3T : 0;
-                                sumOUT += flagspcutOut4 === 1 ? flagspcutOut4 : 0;
-                                sumOUT += flagspcutOut4T === 1 ? flagspcutOut4T : 0;
-                                sumOUT += flagspcutOut5 === 1 ? flagspcutOut5 : 0;
-                                sumOUT += flagspcutOut5T === 1 ? flagspcutOut5T : 0;
-                                sumOUT += flagspcutOut6 === 1 ? flagspcutOut6 : 0;
-                                sumOUT += flagspcutOut6T === 1 ? flagspcutOut6T : 0;
-                                sumOUT += flagspcutOut7 === 1 ? flagspcutOut7 : 0;
-                                sumOUT += flagspcutOut7T === 1 ? flagspcutOut7T : 0;
-                                sumOUT += flagspcutOut8 === 1 ? flagspcutOut8 : 0;
-                                sumOUT += flagspcutOut8T === 1 ? flagspcutOut8T : 0;
-                                sumOUT += flagspcutOut9 === 1 ? flagspcutOut9 : 0;
-                                sumOUT += flagspcutOut9T === 1 ? flagspcutOut9T : 0;
-                                sumOUT += flagspcutOut10 === 1 ? flagspcutOut10 : 0;
-                                sumOUT += flagspcutOut10T === 1 ? flagspcutOut10T : 0;
-                                sumOUT += flagspcutOut11 === 1 ? flagspcutOut11 : 0;
-                                sumOUT += flagspcutOut11T === 1 ? flagspcutOut11T : 0;
-                                sumOUT += flagspcutOut12 === 1 ? flagspcutOut12 : 0;
-                                sumOUT += flagspcutOut12T === 1 ? flagspcutOut12T : 0;
-                                sumOUT += flagspcutOut13 === 1 ? flagspcutOut13 : 0;
-                                sumOUT += flagspcutOut13T === 1 ? flagspcutOut13T : 0;
-                                sumOUT += flagspcutOut14 === 1 ? flagspcutOut14 : 0;
-                                sumOUT += flagspcutOut15 === 1 ? flagspcutOut15 : 0;
-                                sumOUT += flagspcutOut16 === 1 ? flagspcutOut16 : 0;
-                                sumOUT += flagspcutOut17 === 1 ? flagspcutOut17 : 0;
-                                sumOUT += flagspcutOut18 === 1 ? flagspcutOut18 : 0;
+                                sumOUT += flagspcutOut1 === 1 ? spcutSize1 : 0;
+                                sumOUT += flagspcutOut1T === 1 ? spcutSize1T : 0;
+                                sumOUT += flagspcutOut2 === 1 ? spcutSize2 : 0;
+                                sumOUT += flagspcutOut2T === 1 ? spcutSize2T : 0;
+                                sumOUT += flagspcutOut3 === 1 ? spcutSize3 : 0;
+                                sumOUT += flagspcutOut3T === 1 ? spcutSize3T : 0;
+                                sumOUT += flagspcutOut4 === 1 ? spcutSize4 : 0;
+                                sumOUT += flagspcutOut4T === 1 ? spcutSize4T : 0;
+                                sumOUT += flagspcutOut5 === 1 ? spcutSize5 : 0;
+                                sumOUT += flagspcutOut5T === 1 ? spcutSize5T : 0;
+                                sumOUT += flagspcutOut6 === 1 ? spcutSize6 : 0;
+                                sumOUT += flagspcutOut6T === 1 ? spcutSize6T : 0;
+                                sumOUT += flagspcutOut7 === 1 ? spcutSize7 : 0;
+                                sumOUT += flagspcutOut7T === 1 ? spcutSize7T : 0;
+                                sumOUT += flagspcutOut8 === 1 ? spcutSize8 : 0;
+                                sumOUT += flagspcutOut8T === 1 ? spcutSize8T : 0;
+                                sumOUT += flagspcutOut9 === 1 ? spcutSize9 : 0;
+                                sumOUT += flagspcutOut9T === 1 ? spcutSize9T : 0;
+                                sumOUT += flagspcutOut10 === 1 ? spcutSize10 : 0;
+                                sumOUT += flagspcutOut10T === 1 ? spcutSize10T : 0;
+                                sumOUT += flagspcutOut11 === 1 ? spcutSize11 : 0;
+                                sumOUT += flagspcutOut11T === 1 ? spcutSize11T : 0;
+                                sumOUT += flagspcutOut12 === 1 ? spcutSize12 : 0;
+                                sumOUT += flagspcutOut12T === 1 ? spcutSize12T : 0;
+                                sumOUT += flagspcutOut13 === 1 ? spcutSize13 : 0;
+                                sumOUT += flagspcutOut13T === 1 ? spcutSize13T : 0;
+                                sumOUT += flagspcutOut14 === 1 ? spcutSize14 : 0;
+                                sumOUT += flagspcutOut15 === 1 ? spcutSize15 : 0;
+                                sumOUT += flagspcutOut16 === 1 ? spcutSize16 : 0;
+                                sumOUT += flagspcutOut17 === 1 ? spcutSize17 : 0;
+                                sumOUT += flagspcutOut18 === 1 ? spcutSize18 : 0;
                             } else if(departement === 'spprep'){
-                                var flagspprepIn1 = aaData[index].flagspprepInSize1; 
+                            var flagspprepIn1 = aaData[index].flagspprepInSize1; 
                             var flagspprepIn1T = aaData[index].flagspprepInSize1T;
                             var flagspprepIn2 = aaData[index].flagspprepInSize2;
                             var flagspprepIn2T = aaData[index].flagspprepInSize2T;
@@ -5975,70 +6104,102 @@
                             var flagspprepOut16 = aaData[index].flagspprepOutSize16;
                             var flagspprepOut17 = aaData[index].flagspprepOutSize17;
                             var flagspprepOut18 = aaData[index].flagspprepOutSize18;
+                            
+                                var spprepSize1 = aaData[index].size1;
+                                var spprepSize1T = aaData[index].size1T;
+                                var spprepSize2 = aaData[index].size2;
+                                var spprepSize2T = aaData[index].size2T;
+                                var spprepSize3 = aaData[index].size3;
+                                var spprepSize3T = aaData[index].size3T;
+                                var spprepSize4 = aaData[index].size4;
+                                var spprepSize4T = aaData[index].size4T;
+                                var spprepSize5 = aaData[index].size5;
+                                var spprepSize5T = aaData[index].size5T;
+                                var spprepSize6 = aaData[index].size6;
+                                var spprepSize6T = aaData[index].size6T;
+                                var spprepSize7 = aaData[index].size7;
+                                var spprepSize7T = aaData[index].size7T;
+                                var spprepSize8 = aaData[index].size8;
+                                var spprepSize8T = aaData[index].size8T;
+                                var spprepSize9 = aaData[index].size9;
+                                var spprepSize9T = aaData[index].size9T;
+                                var spprepSize10 = aaData[index].size10;
+                                var spprepSize10T = aaData[index].size10T;
+                                var spprepSize11 = aaData[index].size11;
+                                var spprepSize11T = aaData[index].size11T;
+                                var spprepSize12 = aaData[index].size12;
+                                var spprepSize12T = aaData[index].size12T;
+                                var spprepSize13 = aaData[index].size13;
+                                var spprepSize13T = aaData[index].size13T;
+                                var spprepSize14 = aaData[index].size14;
+                                var spprepSize15 = aaData[index].size15;
+                                var spprepSize16 = aaData[index].size16;
+                                var spprepSize17 = aaData[index].size17;
+                                var spprepSize18 = aaData[index].size18;
 
-                            sumIN += flagspprepIn1 === 1 && flagspprepOut1 === 1 ? 0 : flagspprepIn1;
-                            sumIN += flagspprepIn1T === 1 && flagspprepOut1T === 1 ? 0 : flagspprepIn1T;
-                            sumIN += flagspprepIn2 === 1 && flagspprepOut2 === 1  ? 0 : flagspprepIn2;
-                            sumIN += flagspprepIn2T === 1 && flagspprepOut2T === 1  ? 0 : flagspprepIn2T;
-                            sumIN += flagspprepIn3 === 1 && flagspprepOut3 === 1  ? 0 : flagspprepIn3;
-                            sumIN += flagspprepIn3T === 1 && flagspprepOut3T === 1  ? 0 : flagspprepIn3T;
-                            sumIN += flagspprepIn4 === 1 && flagspprepOut4 === 1  ? 0 : flagspprepIn4;
-                            sumIN += flagspprepIn4T === 1 && flagspprepOut4T === 1  ? 0 : flagspprepIn4T;
-                            sumIN += flagspprepIn5 === 1 && flagspprepOut5 === 1  ? 0 : flagspprepIn5;
-                            sumIN += flagspprepIn5T === 1 && flagspprepOut5T === 1  ? 0 : flagspprepIn5T;
-                            sumIN += flagspprepIn6 === 1 && flagspprepOut6 === 1  ? 0 : flagspprepIn6;
-                            sumIN += flagspprepIn6T === 1 && flagspprepOut6T === 1  ? 0 : flagspprepIn6T;
-                            sumIN += flagspprepIn7 === 1 && flagspprepOut7 === 1  ? 0 : flagspprepIn7;
-                            sumIN += flagspprepIn7T === 1 && flagspprepOut7T === 1  ? 0 : flagspprepIn7T;
-                            sumIN += flagspprepIn8 === 1 && flagspprepOut8 === 1  ? 0 : flagspprepIn8;
-                            sumIN += flagspprepIn8T === 1 && flagspprepOut8T === 1  ? 0 : flagspprepIn8T;
-                            sumIN += flagspprepIn9 === 1 && flagspprepOut9 === 1  ? 0 : flagspprepIn9;
-                            sumIN += flagspprepIn9T === 1 && flagspprepOut9T === 1  ? 0 : flagspprepIn9T;
-                            sumIN += flagspprepIn10 === 1 && flagspprepOut10 === 1 ? 0 : flagspprepIn10;
-                            sumIN += flagspprepIn10T === 1 && flagspprepOut10T === 1  ? 0 : flagspprepIn10T;
-                            sumIN += flagspprepIn11 === 1 && flagspprepOut11 === 1  ? 0 : flagspprepIn11;
-                            sumIN += flagspprepIn11T === 1 && flagspprepOut11T === 1  ? 0 : flagspprepIn11T;
-                            sumIN += flagspprepIn12 === 1 && flagspprepOut12 === 1  ? 0 : flagspprepIn12;
-                            sumIN += flagspprepIn12T === 1 && flagspprepOut12T === 1  ? 0 : flagspprepIn12T;
-                            sumIN += flagspprepIn13 === 1 && flagspprepOut13 === 1  ? 0 : flagspprepIn13;
-                            sumIN += flagspprepIn13T === 1 && flagspprepOut13T === 1  ? 0 : flagspprepIn13T;
-                            sumIN += flagspprepIn14 === 1 && flagspprepOut14 === 1  ? 0 : flagspprepIn14;
-                            sumIN += flagspprepIn15 === 1 && flagspprepOut15 === 1  ? 0 : flagspprepIn15;
-                            sumIN += flagspprepIn16 === 1 && flagspprepOut16 === 1  ? 0 : flagspprepIn16;
-                            sumIN += flagspprepIn17 === 1 && flagspprepOut17 === 1  ? 0 : flagspprepIn17;
-                            sumIN += flagspprepIn18 === 1 && flagspprepOut18 === 1  ? 0 : flagspprepIn18;
+                            sumIN += flagspprepIn1 === 1 && flagspprepOut1 === null ? spprepSize1 : 0;
+                            sumIN += flagspprepIn1T === 1 && flagspprepOut1T === null ? spprepSize1T : 0;
+                            sumIN += flagspprepIn2 === 1 && flagspprepOut2 === null ? spprepSize2 : 0;
+                            sumIN += flagspprepIn2T === 1 && flagspprepOut2T === null ? spprepSize2T : 0;
+                            sumIN += flagspprepIn3 === 1 && flagspprepOut3 === null ? spprepSize3 : 0;
+                            sumIN += flagspprepIn3T === 1 && flagspprepOut3T === null ? spprepSize3T : 0;
+                            sumIN += flagspprepIn4 === 1 && flagspprepOut4 === null ? spprepSize4 : 0;
+                            sumIN += flagspprepIn4T === 1 && flagspprepOut4T === null ? spprepSize4T : 0;
+                            sumIN += flagspprepIn5 === 1 && flagspprepOut5 === null ? spprepSize5 : 0;
+                            sumIN += flagspprepIn5T === 1 && flagspprepOut5T === null ? spprepSize5T : 0;
+                            sumIN += flagspprepIn6 === 1 && flagspprepOut6 === null ? spprepSize6 : 0;
+                            sumIN += flagspprepIn6T === 1 && flagspprepOut6T === null ? spprepSize6T : 0;
+                            sumIN += flagspprepIn7 === 1 && flagspprepOut7 === null ? spprepSize7 : 0;
+                            sumIN += flagspprepIn7T === 1 && flagspprepOut7T === null ? spprepSize7T : 0;
+                            sumIN += flagspprepIn8 === 1 && flagspprepOut8 === null ? spprepSize8 : 0;
+                            sumIN += flagspprepIn8T === 1 && flagspprepOut8T === null ? spprepSize8T : 0;
+                            sumIN += flagspprepIn9 === 1 && flagspprepOut9 === null ? spprepSize9 : 0;
+                            sumIN += flagspprepIn9T === 1 && flagspprepOut9T === null ? spprepSize9T : 0;
+                            sumIN += flagspprepIn10 === 1 && flagspprepOut10 === null ? spprepSize10 : 0;
+                            sumIN += flagspprepIn10T === 1 && flagspprepOut10T === null ? spprepSize10T : 0;
+                            sumIN += flagspprepIn11 === 1 && flagspprepOut11 === null ? spprepSize11 : 0;
+                            sumIN += flagspprepIn11T === 1 && flagspprepOut11T === null ? spprepSize11T : 0;
+                            sumIN += flagspprepIn12 === 1 && flagspprepOut12 === null ? spprepSize12 : 0;
+                            sumIN += flagspprepIn12T === 1 && flagspprepOut12T === null ? spprepSize12T : 0;
+                            sumIN += flagspprepIn13 === 1 && flagspprepOut13 === null ? spprepSize13 : 0 ;
+                            sumIN += flagspprepIn13T === 1 && flagspprepOut13T === null ? spprepSize13T : 0 ;
+                            sumIN += flagspprepIn14 === 1 && flagspprepOut14 === null ? spprepSize14 : 0 ;
+                            sumIN += flagspprepIn15 === 1 && flagspprepOut15 === null ? spprepSize15 : 0 ;
+                            sumIN += flagspprepIn16 === 1 && flagspprepOut16 === null ? spprepSize16 : 0 ;
+                            sumIN += flagspprepIn17 === 1 && flagspprepOut17 === null ? spprepSize17 : 0 ;
+                            sumIN += flagspprepIn18 === 1 && flagspprepOut18 === null ? spprepSize18 : 0 ;
 
-                            sumOUT += flagspprepOut1 === 1 ? flagspprepOut1 : 0;
-                            sumOUT += flagspprepOut1T === 1 ? flagspprepOut1T : 0;
-                            sumOUT += flagspprepOut2 === 1 ? flagspprepOut2 : 0;
-                            sumOUT += flagspprepOut2T === 1 ? flagspprepOut2T : 0;
-                            sumOUT += flagspprepOut3 === 1 ? flagspprepOut3 : 0;
-                            sumOUT += flagspprepOut3T === 1 ? flagspprepOut3T : 0;
-                            sumOUT += flagspprepOut4 === 1 ? flagspprepOut4 : 0;
-                            sumOUT += flagspprepOut4T === 1 ? flagspprepOut4T : 0;
-                            sumOUT += flagspprepOut5 === 1 ? flagspprepOut5 : 0;
-                            sumOUT += flagspprepOut5T === 1 ? flagspprepOut5T : 0;
-                            sumOUT += flagspprepOut6 === 1 ? flagspprepOut6 : 0;
-                            sumOUT += flagspprepOut6T === 1 ? flagspprepOut6T : 0;
-                            sumOUT += flagspprepOut7 === 1 ? flagspprepOut7 : 0;
-                            sumOUT += flagspprepOut7T === 1 ? flagspprepOut7T : 0;
-                            sumOUT += flagspprepOut8 === 1 ? flagspprepOut8 : 0;
-                            sumOUT += flagspprepOut8T === 1 ? flagspprepOut8T : 0;
-                            sumOUT += flagspprepOut9 === 1 ? flagspprepOut9 : 0;
-                            sumOUT += flagspprepOut9T === 1 ? flagspprepOut9T : 0;
-                            sumOUT += flagspprepOut10 === 1 ? flagspprepOut10 : 0;
-                            sumOUT += flagspprepOut10T === 1 ? flagspprepOut10T : 0;
-                            sumOUT += flagspprepOut11 === 1 ? flagspprepOut11 : 0;
-                            sumOUT += flagspprepOut11T === 1 ? flagspprepOut11T : 0;
-                            sumOUT += flagspprepOut12 === 1 ? flagspprepOut12 : 0;
-                            sumOUT += flagspprepOut12T === 1 ? flagspprepOut12T : 0;
-                            sumOUT += flagspprepOut13 === 1 ? flagspprepOut13 : 0;
-                            sumOUT += flagspprepOut13T === 1 ? flagspprepOut13T : 0;
-                            sumOUT += flagspprepOut14 === 1 ? flagspprepOut14 : 0;
-                            sumOUT += flagspprepOut15 === 1 ? flagspprepOut15 : 0;
-                            sumOUT += flagspprepOut16 === 1 ? flagspprepOut16 : 0;
-                            sumOUT += flagspprepOut17 === 1 ? flagspprepOut17 : 0;
-                            sumOUT += flagspprepOut18 === 1 ? flagspprepOut18 : 0;
+                            sumOUT += flagspprepOut1 === 1 ? spprepSize1 : 0;
+                            sumOUT += flagspprepOut1T === 1 ? spprepSize1T : 0;
+                            sumOUT += flagspprepOut2 === 1 ? spprepSize2 : 0;
+                            sumOUT += flagspprepOut2T === 1 ? spprepSize2T : 0;
+                            sumOUT += flagspprepOut3 === 1 ? spprepSize3 : 0;
+                            sumOUT += flagspprepOut3T === 1 ? spprepSize3T : 0;
+                            sumOUT += flagspprepOut4 === 1 ? spprepSize4 : 0;
+                            sumOUT += flagspprepOut4T === 1 ? spprepSize4T : 0;
+                            sumOUT += flagspprepOut5 === 1 ? spprepSize5 : 0;
+                            sumOUT += flagspprepOut5T === 1 ? spprepSize5T : 0;
+                            sumOUT += flagspprepOut6 === 1 ? spprepSize6 : 0;
+                            sumOUT += flagspprepOut6T === 1 ? spprepSize6T : 0;
+                            sumOUT += flagspprepOut7 === 1 ? spprepSize7 : 0;
+                            sumOUT += flagspprepOut7T === 1 ? spprepSize7T : 0;
+                            sumOUT += flagspprepOut8 === 1 ? spprepSize8 : 0;
+                            sumOUT += flagspprepOut8T === 1 ? spprepSize8T : 0;
+                            sumOUT += flagspprepOut9 === 1 ? spprepSize9 : 0;
+                            sumOUT += flagspprepOut9T === 1 ? spprepSize9T : 0;
+                            sumOUT += flagspprepOut10 === 1 ? spprepSize10 : 0;
+                            sumOUT += flagspprepOut10T === 1 ? spprepSize10T : 0;
+                            sumOUT += flagspprepOut11 === 1 ? spprepSize11 : 0;
+                            sumOUT += flagspprepOut11T === 1 ? spprepSize11T : 0;
+                            sumOUT += flagspprepOut12 === 1 ? spprepSize12 : 0;
+                            sumOUT += flagspprepOut12T === 1 ? spprepSize12T : 0;
+                            sumOUT += flagspprepOut13 === 1 ? spprepSize13 : 0;
+                            sumOUT += flagspprepOut13T === 1 ? spprepSize13T : 0;
+                            sumOUT += flagspprepOut14 === 1 ? spprepSize14 : 0;
+                            sumOUT += flagspprepOut15 === 1 ? spprepSize15 : 0;
+                            sumOUT += flagspprepOut16 === 1 ? spprepSize16 : 0;
+                            sumOUT += flagspprepOut17 === 1 ? spprepSize17 : 0;
+                            sumOUT += flagspprepOut18 === 1 ? spprepSize18 : 0;
                             }else if(departement === 'label'){
                                 var flagLabelIn1 = aaData[index].flagLabelInSize1; 
                             var flagLabelIn1T = aaData[index].flagLabelInSize1T;
@@ -6103,70 +6264,102 @@
                             var flagLabelOut16 = aaData[index].flagLabelOutSize16;
                             var flagLabelOut17 = aaData[index].flagLabelOutSize17;
                             var flagLabelOut18 = aaData[index].flagLabelOutSize18;
+                            
+                                var LabelSize1 = aaData[index].size1;
+                                var LabelSize1T = aaData[index].size1T;
+                                var LabelSize2 = aaData[index].size2;
+                                var LabelSize2T = aaData[index].size2T;
+                                var LabelSize3 = aaData[index].size3;
+                                var LabelSize3T = aaData[index].size3T;
+                                var LabelSize4 = aaData[index].size4;
+                                var LabelSize4T = aaData[index].size4T;
+                                var LabelSize5 = aaData[index].size5;
+                                var LabelSize5T = aaData[index].size5T;
+                                var LabelSize6 = aaData[index].size6;
+                                var LabelSize6T = aaData[index].size6T;
+                                var LabelSize7 = aaData[index].size7;
+                                var LabelSize7T = aaData[index].size7T;
+                                var LabelSize8 = aaData[index].size8;
+                                var LabelSize8T = aaData[index].size8T;
+                                var LabelSize9 = aaData[index].size9;
+                                var LabelSize9T = aaData[index].size9T;
+                                var LabelSize10 = aaData[index].size10;
+                                var LabelSize10T = aaData[index].size10T;
+                                var LabelSize11 = aaData[index].size11;
+                                var LabelSize11T = aaData[index].size11T;
+                                var LabelSize12 = aaData[index].size12;
+                                var LabelSize12T = aaData[index].size12T;
+                                var LabelSize13 = aaData[index].size13;
+                                var LabelSize13T = aaData[index].size13T;
+                                var LabelSize14 = aaData[index].size14;
+                                var LabelSize15 = aaData[index].size15;
+                                var LabelSize16 = aaData[index].size16;
+                                var LabelSize17 = aaData[index].size17;
+                                var LabelSize18 = aaData[index].size18;
 
-                            sumIN += flagLabelIn1 === 1 && flagLabelOut1 === 1 ? 0 : flagLabelIn1;
-                            sumIN += flagLabelIn1T === 1 && flagLabelOut1T === 1 ? 0 : flagLabelIn1T;
-                            sumIN += flagLabelIn2 === 1 && flagLabelOut2 === 1  ? 0 : flagLabelIn2;
-                            sumIN += flagLabelIn2T === 1 && flagLabelOut2T === 1  ? 0 : flagLabelIn2T;
-                            sumIN += flagLabelIn3 === 1 && flagLabelOut3 === 1  ? 0 : flagLabelIn3;
-                            sumIN += flagLabelIn3T === 1 && flagLabelOut3T === 1  ? 0 : flagLabelIn3T;
-                            sumIN += flagLabelIn4 === 1 && flagLabelOut4 === 1  ? 0 : flagLabelIn4;
-                            sumIN += flagLabelIn4T === 1 && flagLabelOut4T === 1  ? 0 : flagLabelIn4T;
-                            sumIN += flagLabelIn5 === 1 && flagLabelOut5 === 1  ? 0 : flagLabelIn5;
-                            sumIN += flagLabelIn5T === 1 && flagLabelOut5T === 1  ? 0 : flagLabelIn5T;
-                            sumIN += flagLabelIn6 === 1 && flagLabelOut6 === 1  ? 0 : flagLabelIn6;
-                            sumIN += flagLabelIn6T === 1 && flagLabelOut6T === 1  ? 0 : flagLabelIn6T;
-                            sumIN += flagLabelIn7 === 1 && flagLabelOut7 === 1  ? 0 : flagLabelIn7;
-                            sumIN += flagLabelIn7T === 1 && flagLabelOut7T === 1  ? 0 : flagLabelIn7T;
-                            sumIN += flagLabelIn8 === 1 && flagLabelOut8 === 1  ? 0 : flagLabelIn8;
-                            sumIN += flagLabelIn8T === 1 && flagLabelOut8T === 1  ? 0 : flagLabelIn8T;
-                            sumIN += flagLabelIn9 === 1 && flagLabelOut9 === 1  ? 0 : flagLabelIn9;
-                            sumIN += flagLabelIn9T === 1 && flagLabelOut9T === 1  ? 0 : flagLabelIn9T;
-                            sumIN += flagLabelIn10 === 1 && flagLabelOut10 === 1 ? 0 : flagLabelIn10;
-                            sumIN += flagLabelIn10T === 1 && flagLabelOut10T === 1  ? 0 : flagLabelIn10T;
-                            sumIN += flagLabelIn11 === 1 && flagLabelOut11 === 1  ? 0 : flagLabelIn11;
-                            sumIN += flagLabelIn11T === 1 && flagLabelOut11T === 1  ? 0 : flagLabelIn11T;
-                            sumIN += flagLabelIn12 === 1 && flagLabelOut12 === 1  ? 0 : flagLabelIn12;
-                            sumIN += flagLabelIn12T === 1 && flagLabelOut12T === 1  ? 0 : flagLabelIn12T;
-                            sumIN += flagLabelIn13 === 1 && flagLabelOut13 === 1  ? 0 : flagLabelIn13;
-                            sumIN += flagLabelIn13T === 1 && flagLabelOut13T === 1  ? 0 : flagLabelIn13T;
-                            sumIN += flagLabelIn14 === 1 && flagLabelOut14 === 1  ? 0 : flagLabelIn14;
-                            sumIN += flagLabelIn15 === 1 && flagLabelOut15 === 1  ? 0 : flagLabelIn15;
-                            sumIN += flagLabelIn16 === 1 && flagLabelOut16 === 1  ? 0 : flagLabelIn16;
-                            sumIN += flagLabelIn17 === 1 && flagLabelOut17 === 1  ? 0 : flagLabelIn17;
-                            sumIN += flagLabelIn18 === 1 && flagLabelOut18 === 1  ? 0 : flagLabelIn18;
+                            sumIN += flagLabelIn1 === 1 && flagLabelOut1 === null ? LabelSize1 : 0;
+                            sumIN += flagLabelIn1T === 1 && flagLabelOut1T === null ? LabelSize1T : 0;
+                            sumIN += flagLabelIn2 === 1 && flagLabelOut2 === null ? LabelSize2 : 0;
+                            sumIN += flagLabelIn2T === 1 && flagLabelOut2T === null ? LabelSize2T : 0;
+                            sumIN += flagLabelIn3 === 1 && flagLabelOut3 === null ? LabelSize3 : 0;
+                            sumIN += flagLabelIn3T === 1 && flagLabelOut3T === null ? LabelSize3T : 0;
+                            sumIN += flagLabelIn4 === 1 && flagLabelOut4 === null ? LabelSize4 : 0;
+                            sumIN += flagLabelIn4T === 1 && flagLabelOut4T === null ? LabelSize4T : 0;
+                            sumIN += flagLabelIn5 === 1 && flagLabelOut5 === null ? LabelSize5 : 0;
+                            sumIN += flagLabelIn5T === 1 && flagLabelOut5T === null ? LabelSize5T : 0;
+                            sumIN += flagLabelIn6 === 1 && flagLabelOut6 === null ? LabelSize6 : 0;
+                            sumIN += flagLabelIn6T === 1 && flagLabelOut6T === null ? LabelSize6T : 0;
+                            sumIN += flagLabelIn7 === 1 && flagLabelOut7 === null ? LabelSize7 : 0;
+                            sumIN += flagLabelIn7T === 1 && flagLabelOut7T === null ? LabelSize7T : 0;
+                            sumIN += flagLabelIn8 === 1 && flagLabelOut8 === null ? LabelSize8 : 0;
+                            sumIN += flagLabelIn8T === 1 && flagLabelOut8T === null ? LabelSize8T : 0;
+                            sumIN += flagLabelIn9 === 1 && flagLabelOut9 === null ? LabelSize9 : 0;
+                            sumIN += flagLabelIn9T === 1 && flagLabelOut9T === null ? LabelSize9T : 0;
+                            sumIN += flagLabelIn10 === 1 && flagLabelOut10 === null ? LabelSize10 : 0;
+                            sumIN += flagLabelIn10T === 1 && flagLabelOut10T === null ? LabelSize10T : 0;
+                            sumIN += flagLabelIn11 === 1 && flagLabelOut11 === null ? LabelSize11 : 0;
+                            sumIN += flagLabelIn11T === 1 && flagLabelOut11T === null ? LabelSize11T : 0;
+                            sumIN += flagLabelIn12 === 1 && flagLabelOut12 === null ? LabelSize12 : 0;
+                            sumIN += flagLabelIn12T === 1 && flagLabelOut12T === null ? LabelSize12T : 0;
+                            sumIN += flagLabelIn13 === 1 && flagLabelOut13 === null ? LabelSize13 : 0;
+                            sumIN += flagLabelIn13T === 1 && flagLabelOut13T === null ? LabelSize13T : 0;
+                            sumIN += flagLabelIn14 === 1 && flagLabelOut14 === null ? LabelSize14 : 0;
+                            sumIN += flagLabelIn15 === 1 && flagLabelOut15 === null ? LabelSize15 : 0;
+                            sumIN += flagLabelIn16 === 1 && flagLabelOut16 === null ? LabelSize16 : 0;
+                            sumIN += flagLabelIn17 === 1 && flagLabelOut17 === null ? LabelSize17 : 0;
+                            sumIN += flagLabelIn18 === 1 && flagLabelOut18 === null ? LabelSize18 : 0;
 
-                            sumOUT += flagLabelOut1 === 1 ? flagLabelOut1 : 0;
-                            sumOUT += flagLabelOut1T === 1 ? flagLabelOut1T : 0;
-                            sumOUT += flagLabelOut2 === 1 ? flagLabelOut2 : 0;
-                            sumOUT += flagLabelOut2T === 1 ? flagLabelOut2T : 0;
-                            sumOUT += flagLabelOut3 === 1 ? flagLabelOut3 : 0;
-                            sumOUT += flagLabelOut3T === 1 ? flagLabelOut3T : 0;
-                            sumOUT += flagLabelOut4 === 1 ? flagLabelOut4 : 0;
-                            sumOUT += flagLabelOut4T === 1 ? flagLabelOut4T : 0;
-                            sumOUT += flagLabelOut5 === 1 ? flagLabelOut5 : 0;
-                            sumOUT += flagLabelOut5T === 1 ? flagLabelOut5T : 0;
-                            sumOUT += flagLabelOut6 === 1 ? flagLabelOut6 : 0;
-                            sumOUT += flagLabelOut6T === 1 ? flagLabelOut6T : 0;
-                            sumOUT += flagLabelOut7 === 1 ? flagLabelOut7 : 0;
-                            sumOUT += flagLabelOut7T === 1 ? flagLabelOut7T : 0;
-                            sumOUT += flagLabelOut8 === 1 ? flagLabelOut8 : 0;
-                            sumOUT += flagLabelOut8T === 1 ? flagLabelOut8T : 0;
-                            sumOUT += flagLabelOut9 === 1 ? flagLabelOut9 : 0;
-                            sumOUT += flagLabelOut9T === 1 ? flagLabelOut9T : 0;
-                            sumOUT += flagLabelOut10 === 1 ? flagLabelOut10 : 0;
-                            sumOUT += flagLabelOut10T === 1 ? flagLabelOut10T : 0;
-                            sumOUT += flagLabelOut11 === 1 ? flagLabelOut11 : 0;
-                            sumOUT += flagLabelOut11T === 1 ? flagLabelOut11T : 0;
-                            sumOUT += flagLabelOut12 === 1 ? flagLabelOut12 : 0;
-                            sumOUT += flagLabelOut12T === 1 ? flagLabelOut12T : 0;
-                            sumOUT += flagLabelOut13 === 1 ? flagLabelOut13 : 0;
-                            sumOUT += flagLabelOut13T === 1 ? flagLabelOut13T : 0;
-                            sumOUT += flagLabelOut14 === 1 ? flagLabelOut14 : 0;
-                            sumOUT += flagLabelOut15 === 1 ? flagLabelOut15 : 0;
-                            sumOUT += flagLabelOut16 === 1 ? flagLabelOut16 : 0;
-                            sumOUT += flagLabelOut17 === 1 ? flagLabelOut17 : 0;
-                            sumOUT += flagLabelOut18 === 1 ? flagLabelOut18 : 0;
+                            sumOUT += flagLabelOut1 === 1 ? LabelSize1 : 0;
+                            sumOUT += flagLabelOut1T === 1 ? LabelSize1T : 0;
+                            sumOUT += flagLabelOut2 === 1 ? LabelSize2 : 0;
+                            sumOUT += flagLabelOut2T === 1 ? LabelSize2T : 0;
+                            sumOUT += flagLabelOut3 === 1 ? LabelSize3 : 0;
+                            sumOUT += flagLabelOut3T === 1 ? LabelSize3T : 0;
+                            sumOUT += flagLabelOut4 === 1 ? LabelSize4 : 0;
+                            sumOUT += flagLabelOut4T === 1 ? LabelSize4T : 0;
+                            sumOUT += flagLabelOut5 === 1 ? LabelSize5 : 0;
+                            sumOUT += flagLabelOut5T === 1 ? LabelSize5T : 0;
+                            sumOUT += flagLabelOut6 === 1 ? LabelSize6 : 0;
+                            sumOUT += flagLabelOut6T === 1 ? LabelSize6T : 0;
+                            sumOUT += flagLabelOut7 === 1 ? LabelSize7 : 0;
+                            sumOUT += flagLabelOut7T === 1 ? LabelSize7T : 0;
+                            sumOUT += flagLabelOut8 === 1 ? LabelSize8 : 0;
+                            sumOUT += flagLabelOut8T === 1 ? LabelSize8T : 0;
+                            sumOUT += flagLabelOut9 === 1 ? LabelSize9 : 0;
+                            sumOUT += flagLabelOut9T === 1 ? LabelSize9T : 0;
+                            sumOUT += flagLabelOut10 === 1 ? LabelSize10 : 0;
+                            sumOUT += flagLabelOut10T === 1 ? LabelSize10T : 0;
+                            sumOUT += flagLabelOut11 === 1 ? LabelSize11 : 0;
+                            sumOUT += flagLabelOut11T === 1 ? LabelSize11T : 0;
+                            sumOUT += flagLabelOut12 === 1 ? LabelSize12 : 0;
+                            sumOUT += flagLabelOut12T === 1 ? LabelSize12T : 0;
+                            sumOUT += flagLabelOut13 === 1 ? LabelSize13 : 0;
+                            sumOUT += flagLabelOut13T === 1 ? LabelSize13T : 0;
+                            sumOUT += flagLabelOut14 === 1 ? LabelSize14 : 0;
+                            sumOUT += flagLabelOut15 === 1 ? LabelSize15 : 0;
+                            sumOUT += flagLabelOut16 === 1 ? LabelSize16 : 0;
+                            sumOUT += flagLabelOut17 === 1 ? LabelSize17 : 0;
+                            sumOUT += flagLabelOut18 === 1 ? LabelSize18 : 0;
                             } else if(departement === 'laser'){
                                 var flagLaserIn1 = aaData[index].flagLaserInSize1; 
                             var flagLaserIn1T = aaData[index].flagLaserInSize1T;
@@ -6231,198 +6424,262 @@
                             var flagLaserOut16 = aaData[index].flagLaserOutSize16;
                             var flagLaserOut17 = aaData[index].flagLaserOutSize17;
                             var flagLaserOut18 = aaData[index].flagLaserOutSize18;
+                            
+                                var LaserSize1 = aaData[index].size1;
+                                var LaserSize1T = aaData[index].size1T;
+                                var LaserSize2 = aaData[index].size2;
+                                var LaserSize2T = aaData[index].size2T;
+                                var LaserSize3 = aaData[index].size3;
+                                var LaserSize3T = aaData[index].size3T;
+                                var LaserSize4 = aaData[index].size4;
+                                var LaserSize4T = aaData[index].size4T;
+                                var LaserSize5 = aaData[index].size5;
+                                var LaserSize5T = aaData[index].size5T;
+                                var LaserSize6 = aaData[index].size6;
+                                var LaserSize6T = aaData[index].size6T;
+                                var LaserSize7 = aaData[index].size7;
+                                var LaserSize7T = aaData[index].size7T;
+                                var LaserSize8 = aaData[index].size8;
+                                var LaserSize8T = aaData[index].size8T;
+                                var LaserSize9 = aaData[index].size9;
+                                var LaserSize9T = aaData[index].size9T;
+                                var LaserSize10 = aaData[index].size10;
+                                var LaserSize10T = aaData[index].size10T;
+                                var LaserSize11 = aaData[index].size11;
+                                var LaserSize11T = aaData[index].size11T;
+                                var LaserSize12 = aaData[index].size12;
+                                var LaserSize12T = aaData[index].size12T;
+                                var LaserSize13 = aaData[index].size13;
+                                var LaserSize13T = aaData[index].size13T;
+                                var LaserSize14 = aaData[index].size14;
+                                var LaserSize15 = aaData[index].size15;
+                                var LaserSize16 = aaData[index].size16;
+                                var LaserSize17 = aaData[index].size17;
+                                var LaserSize18 = aaData[index].size18;
 
-                            sumIN += flagLaserIn1 === 1 && flagLaserOut1 === 1 ? 0 : flagLaserIn1;
-                            sumIN += flagLaserIn1T === 1 && flagLaserOut1T === 1 ? 0 : flagLaserIn1T;
-                            sumIN += flagLaserIn2 === 1 && flagLaserOut2 === 1  ? 0 : flagLaserIn2;
-                            sumIN += flagLaserIn2T === 1 && flagLaserOut2T === 1  ? 0 : flagLaserIn2T;
-                            sumIN += flagLaserIn3 === 1 && flagLaserOut3 === 1  ? 0 : flagLaserIn3;
-                            sumIN += flagLaserIn3T === 1 && flagLaserOut3T === 1  ? 0 : flagLaserIn3T;
-                            sumIN += flagLaserIn4 === 1 && flagLaserOut4 === 1  ? 0 : flagLaserIn4;
-                            sumIN += flagLaserIn4T === 1 && flagLaserOut4T === 1  ? 0 : flagLaserIn4T;
-                            sumIN += flagLaserIn5 === 1 && flagLaserOut5 === 1  ? 0 : flagLaserIn5;
-                            sumIN += flagLaserIn5T === 1 && flagLaserOut5T === 1  ? 0 : flagLaserIn5T;
-                            sumIN += flagLaserIn6 === 1 && flagLaserOut6 === 1  ? 0 : flagLaserIn6;
-                            sumIN += flagLaserIn6T === 1 && flagLaserOut6T === 1  ? 0 : flagLaserIn6T;
-                            sumIN += flagLaserIn7 === 1 && flagLaserOut7 === 1  ? 0 : flagLaserIn7;
-                            sumIN += flagLaserIn7T === 1 && flagLaserOut7T === 1  ? 0 : flagLaserIn7T;
-                            sumIN += flagLaserIn8 === 1 && flagLaserOut8 === 1  ? 0 : flagLaserIn8;
-                            sumIN += flagLaserIn8T === 1 && flagLaserOut8T === 1  ? 0 : flagLaserIn8T;
-                            sumIN += flagLaserIn9 === 1 && flagLaserOut9 === 1  ? 0 : flagLaserIn9;
-                            sumIN += flagLaserIn9T === 1 && flagLaserOut9T === 1  ? 0 : flagLaserIn9T;
-                            sumIN += flagLaserIn10 === 1 && flagLaserOut10 === 1 ? 0 : flagLaserIn10;
-                            sumIN += flagLaserIn10T === 1 && flagLaserOut10T === 1  ? 0 : flagLaserIn10T;
-                            sumIN += flagLaserIn11 === 1 && flagLaserOut11 === 1  ? 0 : flagLaserIn11;
-                            sumIN += flagLaserIn11T === 1 && flagLaserOut11T === 1  ? 0 : flagLaserIn11T;
-                            sumIN += flagLaserIn12 === 1 && flagLaserOut12 === 1  ? 0 : flagLaserIn12;
-                            sumIN += flagLaserIn12T === 1 && flagLaserOut12T === 1  ? 0 : flagLaserIn12T;
-                            sumIN += flagLaserIn13 === 1 && flagLaserOut13 === 1  ? 0 : flagLaserIn13;
-                            sumIN += flagLaserIn13T === 1 && flagLaserOut13T === 1  ? 0 : flagLaserIn13T;
-                            sumIN += flagLaserIn14 === 1 && flagLaserOut14 === 1  ? 0 : flagLaserIn14;
-                            sumIN += flagLaserIn15 === 1 && flagLaserOut15 === 1  ? 0 : flagLaserIn15;
-                            sumIN += flagLaserIn16 === 1 && flagLaserOut16 === 1  ? 0 : flagLaserIn16;
-                            sumIN += flagLaserIn17 === 1 && flagLaserOut17 === 1  ? 0 : flagLaserIn17;
-                            sumIN += flagLaserIn18 === 1 && flagLaserOut18 === 1  ? 0 : flagLaserIn18;
+                            sumIN += flagLaserIn1 === 1 && flagLaserOut1 === null ? LaserSize1 : 0;
+                            sumIN += flagLaserIn1T === 1 && flagLaserOut1T === null ? LaserSize1T : 0; 
+                            sumIN += flagLaserIn2 === 1 && flagLaserOut2 === null ? LaserSize2 : 0;
+                            sumIN += flagLaserIn2T === 1 && flagLaserOut2T === null ? LaserSize2T : 0;
+                            sumIN += flagLaserIn3 === 1 && flagLaserOut3 === null ? LaserSize3 : 0;
+                            sumIN += flagLaserIn3T === 1 && flagLaserOut3T === null ? LaserSize3T : 0;
+                            sumIN += flagLaserIn4 === 1 && flagLaserOut4 === null ? LaserSize4 : 0;
+                            sumIN += flagLaserIn4T === 1 && flagLaserOut4T === null ? LaserSize4T : 0;
+                            sumIN += flagLaserIn5 === 1 && flagLaserOut5 === null ? LaserSize5 : 0;
+                            sumIN += flagLaserIn5T === 1 && flagLaserOut5T === null ? LaserSize5T : 0;
+                            sumIN += flagLaserIn6 === 1 && flagLaserOut6 === null ? LaserSize6 : 0;
+                            sumIN += flagLaserIn6T === 1 && flagLaserOut6T === null ? LaserSize6T : 0;
+                            sumIN += flagLaserIn7 === 1 && flagLaserOut7 === null ? LaserSize7 : 0;
+                            sumIN += flagLaserIn7T === 1 && flagLaserOut7T === null ? LaserSize7T : 0;
+                            sumIN += flagLaserIn8 === 1 && flagLaserOut8 === null ? LaserSize8 : 0;
+                            sumIN += flagLaserIn8T === 1 && flagLaserOut8T === null ? LaserSize8T : 0;
+                            sumIN += flagLaserIn9 === 1 && flagLaserOut9 === null ? LaserSize9 : 0;
+                            sumIN += flagLaserIn9T === 1 && flagLaserOut9T === null ? LaserSize9T : 0;
+                            sumIN += flagLaserIn10 === 1 && flagLaserOut10 === null ? LaserSize10 : 0;
+                            sumIN += flagLaserIn10T === 1 && flagLaserOut10T === null ? LaserSize10T : 0;
+                            sumIN += flagLaserIn11 === 1 && flagLaserOut11 === null ? LaserSize11 : 0;
+                            sumIN += flagLaserIn11T === 1 && flagLaserOut11T === null ? LaserSize11T : 0;
+                            sumIN += flagLaserIn12 === 1 && flagLaserOut12 === null ? LaserSize12 : 0;
+                            sumIN += flagLaserIn12T === 1 && flagLaserOut12T === null ? LaserSize12T : 0;
+                            sumIN += flagLaserIn13 === 1 && flagLaserOut13 === null ? LaserSize13 : 0;
+                            sumIN += flagLaserIn13T === 1 && flagLaserOut13T === null ? LaserSize13T : 0;
+                            sumIN += flagLaserIn14 === 1 && flagLaserOut14 === null ? LaserSize14 : 0;
+                            sumIN += flagLaserIn15 === 1 && flagLaserOut15 === null ? LaserSize15 : 0;
+                            sumIN += flagLaserIn16 === 1 && flagLaserOut16 === null ? LaserSize16 : 0;
+                            sumIN += flagLaserIn17 === 1 && flagLaserOut17 === null ? LaserSize17 : 0;
+                            sumIN += flagLaserIn18 === 1 && flagLaserOut18 === null ? LaserSize18 : 0;
 
-                            sumOUT += flagLaserOut1 === 1 ? flagLaserOut1 : 0;
-                            sumOUT += flagLaserOut1T === 1 ? flagLaserOut1T : 0;
-                            sumOUT += flagLaserOut2 === 1 ? flagLaserOut2 : 0;
-                            sumOUT += flagLaserOut2T === 1 ? flagLaserOut2T : 0;
-                            sumOUT += flagLaserOut3 === 1 ? flagLaserOut3 : 0;
-                            sumOUT += flagLaserOut3T === 1 ? flagLaserOut3T : 0;
-                            sumOUT += flagLaserOut4 === 1 ? flagLaserOut4 : 0;
-                            sumOUT += flagLaserOut4T === 1 ? flagLaserOut4T : 0;
-                            sumOUT += flagLaserOut5 === 1 ? flagLaserOut5 : 0;
-                            sumOUT += flagLaserOut5T === 1 ? flagLaserOut5T : 0;
-                            sumOUT += flagLaserOut6 === 1 ? flagLaserOut6 : 0;
-                            sumOUT += flagLaserOut6T === 1 ? flagLaserOut6T : 0;
-                            sumOUT += flagLaserOut7 === 1 ? flagLaserOut7 : 0;
-                            sumOUT += flagLaserOut7T === 1 ? flagLaserOut7T : 0;
-                            sumOUT += flagLaserOut8 === 1 ? flagLaserOut8 : 0;
-                            sumOUT += flagLaserOut8T === 1 ? flagLaserOut8T : 0;
-                            sumOUT += flagLaserOut9 === 1 ? flagLaserOut9 : 0;
-                            sumOUT += flagLaserOut9T === 1 ? flagLaserOut9T : 0;
-                            sumOUT += flagLaserOut10 === 1 ? flagLaserOut10 : 0;
-                            sumOUT += flagLaserOut10T === 1 ? flagLaserOut10T : 0;
-                            sumOUT += flagLaserOut11 === 1 ? flagLaserOut11 : 0;
-                            sumOUT += flagLaserOut11T === 1 ? flagLaserOut11T : 0;
-                            sumOUT += flagLaserOut12 === 1 ? flagLaserOut12 : 0;
-                            sumOUT += flagLaserOut12T === 1 ? flagLaserOut12T : 0;
-                            sumOUT += flagLaserOut13 === 1 ? flagLaserOut13 : 0;
-                            sumOUT += flagLaserOut13T === 1 ? flagLaserOut13T : 0;
-                            sumOUT += flagLaserOut14 === 1 ? flagLaserOut14 : 0;
-                            sumOUT += flagLaserOut15 === 1 ? flagLaserOut15 : 0;
-                            sumOUT += flagLaserOut16 === 1 ? flagLaserOut16 : 0;
-                            sumOUT += flagLaserOut17 === 1 ? flagLaserOut17 : 0;
-                            sumOUT += flagLaserOut18 === 1 ? flagLaserOut18 : 0;
-                            }else {
-                                var flagsOsIn1 = aaData[index].flagsOsInSize1; 
-                            var flagsOsIn1T = aaData[index].flagsOsInSize1T;
-                            var flagsOsIn2 = aaData[index].flagsOsInSize2;
-                            var flagsOsIn2T = aaData[index].flagsOsInSize2T;
-                            var flagsOsIn3 = aaData[index].flagsOsInSize3;
-                            var flagsOsIn3T = aaData[index].flagsOsInSize3T;
-                            var flagsOsIn4 = aaData[index].flagsOsInSize4;
-                            var flagsOsIn4T = aaData[index].flagsOsInSize4T;
-                            var flagsOsIn5 = aaData[index].flagsOsInSize5;
-                            var flagsOsIn5T = aaData[index].flagsOsInSize5T;
-                            var flagsOsIn6 = aaData[index].flagsOsInSize6;
-                            var flagsOsIn6T = aaData[index].flagsOsInSize6T;
-                            var flagsOsIn7 = aaData[index].flagsOsInSize7;
-                            var flagsOsIn7T = aaData[index].flagsOsInSize7T;
-                            var flagsOsIn8 = aaData[index].flagsOsInSize8;
-                            var flagsOsIn8T = aaData[index].flagsOsInSize8T;
-                            var flagsOsIn9 = aaData[index].flagsOsInSize9;
-                            var flagsOsIn9T = aaData[index].flagsOsInSize9T;
-                            var flagsOsIn10 = aaData[index].flagsOsInSize10;
-                            var flagsOsIn10T = aaData[index].flagsOsInSize10T;
-                            var flagsOsIn11 = aaData[index].flagsOsInSize11;
-                            var flagsOsIn11T = aaData[index].flagsOsInSize11T;
-                            var flagsOsIn12 = aaData[index].flagsOsInSize12;
-                            var flagsOsIn12T = aaData[index].flagsOsInSize12T;
-                            var flagsOsIn13 = aaData[index].flagsOsInSize13;
-                            var flagsOsIn13T = aaData[index].flagsOsInSize13T;
-                            var flagsOsIn14 = aaData[index].flagsOsInSize14;
-                            var flagsOsIn15 = aaData[index].flagsOsInSize15;
-                            var flagsOsIn16 = aaData[index].flagsOsInSize16;
-                            var flagsOsIn17 = aaData[index].flagsOsInSize17;
-                            var flagsOsIn18 = aaData[index].flagsOsInSize18;
+                            sumOUT += flagLaserOut1 === 1 ? LaserSize1 : 0;
+                            sumOUT += flagLaserOut1T === 1 ? LaserSize1T : 0;
+                            sumOUT += flagLaserOut2 === 1 ? LaserSize2 : 0;
+                            sumOUT += flagLaserOut2T === 1 ? LaserSize2T : 0;
+                            sumOUT += flagLaserOut3 === 1 ? LaserSize3 : 0;
+                            sumOUT += flagLaserOut3T === 1 ? LaserSize3T : 0;
+                            sumOUT += flagLaserOut4 === 1 ? LaserSize4 : 0;
+                            sumOUT += flagLaserOut4T === 1 ? LaserSize4T : 0;
+                            sumOUT += flagLaserOut5 === 1 ? LaserSize5 : 0;
+                            sumOUT += flagLaserOut5T === 1 ? LaserSize5T : 0;
+                            sumOUT += flagLaserOut6 === 1 ? LaserSize6 : 0;
+                            sumOUT += flagLaserOut6T === 1 ? LaserSize6T : 0;
+                            sumOUT += flagLaserOut7 === 1 ? LaserSize7 : 0;
+                            sumOUT += flagLaserOut7T === 1 ? LaserSize7T : 0;
+                            sumOUT += flagLaserOut8 === 1 ? LaserSize8 : 0;
+                            sumOUT += flagLaserOut8T === 1 ? LaserSize8T : 0;
+                            sumOUT += flagLaserOut9 === 1 ? LaserSize9 : 0;
+                            sumOUT += flagLaserOut9T === 1 ? LaserSize9T : 0;
+                            sumOUT += flagLaserOut10 === 1 ? LaserSize10 : 0;
+                            sumOUT += flagLaserOut10T === 1 ? LaserSize10T : 0;
+                            sumOUT += flagLaserOut11 === 1 ? LaserSize11 : 0;
+                            sumOUT += flagLaserOut11T === 1 ? LaserSize11T : 0;
+                            sumOUT += flagLaserOut12 === 1 ? LaserSize12 : 0;
+                            sumOUT += flagLaserOut12T === 1 ? LaserSize12T : 0;
+                            sumOUT += flagLaserOut13 === 1 ? LaserSize13 : 0;
+                            sumOUT += flagLaserOut13T === 1 ? LaserSize13T : 0;
+                            sumOUT += flagLaserOut14 === 1 ? LaserSize14 : 0;
+                            sumOUT += flagLaserOut15 === 1 ? LaserSize15 : 0;
+                            sumOUT += flagLaserOut16 === 1 ? LaserSize16 : 0;
+                            sumOUT += flagLaserOut17 === 1 ? LaserSize17 : 0;
+                            sumOUT += flagLaserOut18 === 1 ? LaserSize18 : 0;
+                            }else if (departement === 'OutSole'){
+                            var flagOsIn1 = aaData[index].flagOsInSize1; 
+                            var flagOsIn1T = aaData[index].flagOsInSize1T;
+                            var flagOsIn2 = aaData[index].flagOsInSize2;
+                            var flagOsIn2T = aaData[index].flagOsInSize2T;
+                            var flagOsIn3 = aaData[index].flagOsInSize3;
+                            var flagOsIn3T = aaData[index].flagOsInSize3T;
+                            var flagOsIn4 = aaData[index].flagOsInSize4;
+                            var flagOsIn4T = aaData[index].flagOsInSize4T;
+                            var flagOsIn5 = aaData[index].flagOsInSize5;
+                            var flagOsIn5T = aaData[index].flagOsInSize5T;
+                            var flagOsIn6 = aaData[index].flagOsInSize6;
+                            var flagOsIn6T = aaData[index].flagOsInSize6T;
+                            var flagOsIn7 = aaData[index].flagOsInSize7;
+                            var flagOsIn7T = aaData[index].flagOsInSize7T;
+                            var flagOsIn8 = aaData[index].flagOsInSize8;
+                            var flagOsIn8T = aaData[index].flagOsInSize8T;
+                            var flagOsIn9 = aaData[index].flagOsInSize9;
+                            var flagOsIn9T = aaData[index].flagOsInSize9T;
+                            var flagOsIn10 = aaData[index].flagOsInSize10;
+                            var flagOsIn10T = aaData[index].flagOsInSize10T;
+                            var flagOsIn11 = aaData[index].flagOsInSize11;
+                            var flagOsIn11T = aaData[index].flagOsInSize11T;
+                            var flagOsIn12 = aaData[index].flagOsInSize12;
+                            var flagOsIn12T = aaData[index].flagOsInSize12T;
+                            var flagOsIn13 = aaData[index].flagOsInSize13;
+                            var flagOsIn13T = aaData[index].flagOsInSize13T;
+                            var flagOsIn14 = aaData[index].flagOsInSize14;
+                            var flagOsIn15 = aaData[index].flagOsInSize15;
+                            var flagOsIn16 = aaData[index].flagOsInSize16;
+                            var flagOsIn17 = aaData[index].flagOsInSize17;
+                            var flagOsIn18 = aaData[index].flagOsInSize18;
 
-                            var flagsOsOut1 = aaData[index].flagsOsOutSize1; 
-                            var flagsOsOut1T = aaData[index].flagsOsOutSize1T;
-                            var flagsOsOut2 = aaData[index].flagsOsOutSize2;
-                            var flagsOsOut2T = aaData[index].flagsOsOutSize2T;
-                            var flagsOsOut3 = aaData[index].flagsOsOutSize3;
-                            var flagsOsOut3T = aaData[index].flagsOsOutSize3T;
-                            var flagsOsOut4 = aaData[index].flagsOsOutSize4;
-                            var flagsOsOut4T = aaData[index].flagsOsOutSize4T;
-                            var flagsOsOut5 = aaData[index].flagsOsOutSize5;
-                            var flagsOsOut5T = aaData[index].flagsOsOutSize5T;
-                            var flagsOsOut6 = aaData[index].flagsOsOutSize6;
-                            var flagsOsOut6T = aaData[index].flagsOsOutSize6T;
-                            var flagsOsOut7 = aaData[index].flagsOsOutSize7;
-                            var flagsOsOut7T = aaData[index].flagsOsOutSize7T;
-                            var flagsOsOut8 = aaData[index].flagsOsOutSize8;
-                            var flagsOsOut8T = aaData[index].flagsOsOutSize8T;
-                            var flagsOsOut9 = aaData[index].flagsOsOutSize9;
-                            var flagsOsOut9T = aaData[index].flagsOsOutSize9T;
-                            var flagsOsOut10 = aaData[index].flagsOsOutSize10;
-                            var flagsOsOut10T = aaData[index].flagsOsOutSize10T;
-                            var flagsOsOut11 = aaData[index].flagsOsOutSize11;
-                            var flagsOsOut11T = aaData[index].flagsOsOutSize11T;
-                            var flagsOsOut12 = aaData[index].flagsOsOutSize12;
-                            var flagsOsOut12T = aaData[index].flagsOsOutSize12T;
-                            var flagsOsOut13 = aaData[index].flagsOsOutSize13;
-                            var flagsOsOut13T = aaData[index].flagsOsOutSize13T;
-                            var flagsOsOut14 = aaData[index].flagsOsOutSize14;
-                            var flagsOsOut15 = aaData[index].flagsOsOutSize15;
-                            var flagsOsOut16 = aaData[index].flagsOsOutSize16;
-                            var flagsOsOut17 = aaData[index].flagsOsOutSize17;
-                            var flagsOsOut18 = aaData[index].flagsOsOutSize18;
+                            var flagOsOut1 = aaData[index].flagOsOutSize1; 
+                            var flagOsOut1T = aaData[index].flagOsOutSize1T;
+                            var flagOsOut2 = aaData[index].flagOsOutSize2;
+                            var flagOsOut2T = aaData[index].flagOsOutSize2T;
+                            var flagOsOut3 = aaData[index].flagOsOutSize3;
+                            var flagOsOut3T = aaData[index].flagOsOutSize3T;
+                            var flagOsOut4 = aaData[index].flagOsOutSize4;
+                            var flagOsOut4T = aaData[index].flagOsOutSize4T;
+                            var flagOsOut5 = aaData[index].flagOsOutSize5;
+                            var flagOsOut5T = aaData[index].flagOsOutSize5T;
+                            var flagOsOut6 = aaData[index].flagOsOutSize6;
+                            var flagOsOut6T = aaData[index].flagOsOutSize6T;
+                            var flagOsOut7 = aaData[index].flagOsOutSize7;
+                            var flagOsOut7T = aaData[index].flagOsOutSize7T;
+                            var flagOsOut8 = aaData[index].flagOsOutSize8;
+                            var flagOsOut8T = aaData[index].flagOsOutSize8T;
+                            var flagOsOut9 = aaData[index].flagOsOutSize9;
+                            var flagOsOut9T = aaData[index].flagOsOutSize9T;
+                            var flagOsOut10 = aaData[index].flagOsOutSize10;
+                            var flagOsOut10T = aaData[index].flagOsOutSize10T;
+                            var flagOsOut11 = aaData[index].flagOsOutSize11;
+                            var flagOsOut11T = aaData[index].flagOsOutSize11T;
+                            var flagOsOut12 = aaData[index].flagOsOutSize12;
+                            var flagOsOut12T = aaData[index].flagOsOutSize12T;
+                            var flagOsOut13 = aaData[index].flagOsOutSize13;
+                            var flagOsOut13T = aaData[index].flagOsOutSize13T;
+                            var flagOsOut14 = aaData[index].flagOsOutSize14;
+                            var flagOsOut15 = aaData[index].flagOsOutSize15;
+                            var flagOsOut16 = aaData[index].flagOsOutSize16;
+                            var flagOsOut17 = aaData[index].flagOsOutSize17;
+                            var flagOsOut18 = aaData[index].flagOsOutSize18;
+                            
+                                var OsSize1 = aaData[index].size1;
+                                var OsSize1T = aaData[index].size1T;
+                                var OsSize2 = aaData[index].size2;
+                                var OsSize2T = aaData[index].size2T;
+                                var OsSize3 = aaData[index].size3;
+                                var OsSize3T = aaData[index].size3T;
+                                var OsSize4 = aaData[index].size4;
+                                var OsSize4T = aaData[index].size4T;
+                                var OsSize5 = aaData[index].size5;
+                                var OsSize5T = aaData[index].size5T;
+                                var OsSize6 = aaData[index].size6;
+                                var OsSize6T = aaData[index].size6T;
+                                var OsSize7 = aaData[index].size7;
+                                var OsSize7T = aaData[index].size7T;
+                                var OsSize8 = aaData[index].size8;
+                                var OsSize8T = aaData[index].size8T;
+                                var OsSize9 = aaData[index].size9;
+                                var OsSize9T = aaData[index].size9T;
+                                var OsSize10 = aaData[index].size10;
+                                var OsSize10T = aaData[index].size10T;
+                                var OsSize11 = aaData[index].size11;
+                                var OsSize11T = aaData[index].size11T;
+                                var OsSize12 = aaData[index].size12;
+                                var OsSize12T = aaData[index].size12T;
+                                var OsSize13 = aaData[index].size13;
+                                var OsSize13T = aaData[index].size13T;
+                                var OsSize14 = aaData[index].size14;
+                                var OsSize15 = aaData[index].size15;
+                                var OsSize16 = aaData[index].size16;
+                                var OsSize17 = aaData[index].size17;
+                                var OsSize18 = aaData[index].size18;
 
-                            sumIN += flagsOsIn1 === 1 && flagsOsOut1 === 1 ? 0 : flagsOsIn1;
-                            sumIN += flagsOsIn1T === 1 && flagsOsOut1T === 1 ? 0 : flagsOsIn1T;
-                            sumIN += flagsOsIn2 === 1 && flagsOsOut2 === 1  ? 0 : flagsOsIn2;
-                            sumIN += flagsOsIn2T === 1 && flagsOsOut2T === 1  ? 0 : flagsOsIn2T;
-                            sumIN += flagsOsIn3 === 1 && flagsOsOut3 === 1  ? 0 : flagsOsIn3;
-                            sumIN += flagsOsIn3T === 1 && flagsOsOut3T === 1  ? 0 : flagsOsIn3T;
-                            sumIN += flagsOsIn4 === 1 && flagsOsOut4 === 1  ? 0 : flagsOsIn4;
-                            sumIN += flagsOsIn4T === 1 && flagsOsOut4T === 1  ? 0 : flagsOsIn4T;
-                            sumIN += flagsOsIn5 === 1 && flagsOsOut5 === 1  ? 0 : flagsOsIn5;
-                            sumIN += flagsOsIn5T === 1 && flagsOsOut5T === 1  ? 0 : flagsOsIn5T;
-                            sumIN += flagsOsIn6 === 1 && flagsOsOut6 === 1  ? 0 : flagsOsIn6;
-                            sumIN += flagsOsIn6T === 1 && flagsOsOut6T === 1  ? 0 : flagsOsIn6T;
-                            sumIN += flagsOsIn7 === 1 && flagsOsOut7 === 1  ? 0 : flagsOsIn7;
-                            sumIN += flagsOsIn7T === 1 && flagsOsOut7T === 1  ? 0 : flagsOsIn7T;
-                            sumIN += flagsOsIn8 === 1 && flagsOsOut8 === 1  ? 0 : flagsOsIn8;
-                            sumIN += flagsOsIn8T === 1 && flagsOsOut8T === 1  ? 0 : flagsOsIn8T;
-                            sumIN += flagsOsIn9 === 1 && flagsOsOut9 === 1  ? 0 : flagsOsIn9;
-                            sumIN += flagsOsIn9T === 1 && flagsOsOut9T === 1  ? 0 : flagsOsIn9T;
-                            sumIN += flagsOsIn10 === 1 && flagsOsOut10 === 1 ? 0 : flagsOsIn10;
-                            sumIN += flagsOsIn10T === 1 && flagsOsOut10T === 1  ? 0 : flagsOsIn10T;
-                            sumIN += flagsOsIn11 === 1 && flagsOsOut11 === 1  ? 0 : flagsOsIn11;
-                            sumIN += flagsOsIn11T === 1 && flagsOsOut11T === 1  ? 0 : flagsOsIn11T;
-                            sumIN += flagsOsIn12 === 1 && flagsOsOut12 === 1  ? 0 : flagsOsIn12;
-                            sumIN += flagsOsIn12T === 1 && flagsOsOut12T === 1  ? 0 : flagsOsIn12T;
-                            sumIN += flagsOsIn13 === 1 && flagsOsOut13 === 1  ? 0 : flagsOsIn13;
-                            sumIN += flagsOsIn13T === 1 && flagsOsOut13T === 1  ? 0 : flagsOsIn13T;
-                            sumIN += flagsOsIn14 === 1 && flagsOsOut14 === 1  ? 0 : flagsOsIn14;
-                            sumIN += flagsOsIn15 === 1 && flagsOsOut15 === 1  ? 0 : flagsOsIn15;
-                            sumIN += flagsOsIn16 === 1 && flagsOsOut16 === 1  ? 0 : flagsOsIn16;
-                            sumIN += flagsOsIn17 === 1 && flagsOsOut17 === 1  ? 0 : flagsOsIn17;
-                            sumIN += flagsOsIn18 === 1 && flagsOsOut18 === 1  ? 0 : flagsOsIn18;
+                            sumIN += flagOsIn1 === 1 && flagOsOut1 === null ? OsSize1 : 0;
+                            sumIN += flagOsIn1T === 1 && flagOsOut1T === null ? OsSize1T : 0;
+                            sumIN += flagOsIn2 === 1 && flagOsOut2 === null ? OsSize2 : 0;
+                            sumIN += flagOsIn2T === 1 && flagOsOut2T === null ? OsSize2T : 0;
+                            sumIN += flagOsIn3 === 1 && flagOsOut3 === null ? OsSize3 : 0;
+                            sumIN += flagOsIn3T === 1 && flagOsOut3T === null ? OsSize3T : 0;
+                            sumIN += flagOsIn4 === 1 && flagOsOut4 === null ? OsSize4 : 0;
+                            sumIN += flagOsIn4T === 1 && flagOsOut4T === null ? OsSize4T : 0;
+                            sumIN += flagOsIn5 === 1 && flagOsOut5 === null ? OsSize5 : 0;
+                            sumIN += flagOsIn5T === 1 && flagOsOut5T === null ? OsSize5T : 0;
+                            sumIN += flagOsIn6 === 1 && flagOsOut6 === null ? OsSize6 : 0;
+                            sumIN += flagOsIn6T === 1 && flagOsOut6T === null ? OsSize6T : 0;
+                            sumIN += flagOsIn7 === 1 && flagOsOut7 === null ? OsSize7 : 0;
+                            sumIN += flagOsIn7T === 1 && flagOsOut7T === null ? OsSize7T : 0;
+                            sumIN += flagOsIn8 === 1 && flagOsOut8 === null ? OsSize8 : 0;
+                            sumIN += flagOsIn8T === 1 && flagOsOut8T === null ? OsSize8T : 0;
+                            sumIN += flagOsIn9 === 1 && flagOsOut9 === null ? OsSize9 : 0;
+                            sumIN += flagOsIn9T === 1 && flagOsOut9T === null ? OsSize9T : 0;
+                            sumIN += flagOsIn10 === 1 && flagOsOut10 === null ? OsSize10 : 0;
+                            sumIN += flagOsIn10T === 1 && flagOsOut10T === null ? OsSize10T : 0;
+                            sumIN += flagOsIn11 === 1 && flagOsOut11 === null ? OsSize11 : 0;
+                            sumIN += flagOsIn11T === 1 && flagOsOut11T === null ? OsSize11T : 0;
+                            sumIN += flagOsIn12 === 1 && flagOsOut12 === null ? OsSize12 : 0;
+                            sumIN += flagOsIn12T === 1 && flagOsOut12T === null ? OsSize12T : 0;
+                            sumIN += flagOsIn13 === 1 && flagOsOut13 === null ? OsSize13 : 0;
+                            sumIN += flagOsIn13T === 1 && flagOsOut13T === null ? OsSize13T : 0;
+                            sumIN += flagOsIn14 === 1 && flagOsOut14 === null ? OsSize14 : 0;
+                            sumIN += flagOsIn15 === 1 && flagOsOut15 === null ? OsSize15 : 0;
+                            sumIN += flagOsIn16 === 1 && flagOsOut16 === null ? OsSize16 : 0;
+                            sumIN += flagOsIn17 === 1 && flagOsOut17 === null ? OsSize17 : 0;
+                            sumIN += flagOsIn18 === 1 && flagOsOut18 === null ? OsSize18 : 0;
 
-                            sumOUT += flagsOsOut1 === 1 ? flagsOsOut1 : 0;
-                            sumOUT += flagsOsOut1T === 1 ? flagsOsOut1T : 0;
-                            sumOUT += flagsOsOut2 === 1 ? flagsOsOut2 : 0;
-                            sumOUT += flagsOsOut2T === 1 ? flagsOsOut2T : 0;
-                            sumOUT += flagsOsOut3 === 1 ? flagsOsOut3 : 0;
-                            sumOUT += flagsOsOut3T === 1 ? flagsOsOut3T : 0;
-                            sumOUT += flagsOsOut4 === 1 ? flagsOsOut4 : 0;
-                            sumOUT += flagsOsOut4T === 1 ? flagsOsOut4T : 0;
-                            sumOUT += flagsOsOut5 === 1 ? flagsOsOut5 : 0;
-                            sumOUT += flagsOsOut5T === 1 ? flagsOsOut5T : 0;
-                            sumOUT += flagsOsOut6 === 1 ? flagsOsOut6 : 0;
-                            sumOUT += flagsOsOut6T === 1 ? flagsOsOut6T : 0;
-                            sumOUT += flagsOsOut7 === 1 ? flagsOsOut7 : 0;
-                            sumOUT += flagsOsOut7T === 1 ? flagsOsOut7T : 0;
-                            sumOUT += flagsOsOut8 === 1 ? flagsOsOut8 : 0;
-                            sumOUT += flagsOsOut8T === 1 ? flagsOsOut8T : 0;
-                            sumOUT += flagsOsOut9 === 1 ? flagsOsOut9 : 0;
-                            sumOUT += flagsOsOut9T === 1 ? flagsOsOut9T : 0;
-                            sumOUT += flagsOsOut10 === 1 ? flagsOsOut10 : 0;
-                            sumOUT += flagsOsOut10T === 1 ? flagsOsOut10T : 0;
-                            sumOUT += flagsOsOut11 === 1 ? flagsOsOut11 : 0;
-                            sumOUT += flagsOsOut11T === 1 ? flagsOsOut11T : 0;
-                            sumOUT += flagsOsOut12 === 1 ? flagsOsOut12 : 0;
-                            sumOUT += flagsOsOut12T === 1 ? flagsOsOut12T : 0;
-                            sumOUT += flagsOsOut13 === 1 ? flagsOsOut13 : 0;
-                            sumOUT += flagsOsOut13T === 1 ? flagsOsOut13T : 0;
-                            sumOUT += flagsOsOut14 === 1 ? flagsOsOut14 : 0;
-                            sumOUT += flagsOsOut15 === 1 ? flagsOsOut15 : 0;
-                            sumOUT += flagsOsOut16 === 1 ? flagsOsOut16 : 0;
-                            sumOUT += flagsOsOut17 === 1 ? flagsOsOut17 : 0;
-                            sumOUT += flagsOsOut18 === 1 ? flagsOsOut18 : 0;
+                            sumOUT += flagOsOut1 === 1 ? OsSize1 : 0;
+                            sumOUT += flagOsOut1T === 1 ? OsSize1T : 0;
+                            sumOUT += flagOsOut2 === 1 ? OsSize2 : 0;
+                            sumOUT += flagOsOut2T === 1 ? OsSize2T : 0;
+                            sumOUT += flagOsOut3 === 1 ? OsSize3 : 0;
+                            sumOUT += flagOsOut3T === 1 ? OsSize3T : 0;
+                            sumOUT += flagOsOut4 === 1 ? OsSize4 : 0;
+                            sumOUT += flagOsOut4T === 1 ? OsSize4T : 0;
+                            sumOUT += flagOsOut5 === 1 ? OsSize5 : 0;
+                            sumOUT += flagOsOut5T === 1 ? OsSize5T : 0;
+                            sumOUT += flagOsOut6 === 1 ? OsSize6 : 0;
+                            sumOUT += flagOsOut6T === 1 ? OsSize6T : 0;
+                            sumOUT += flagOsOut7 === 1 ? OsSize7 : 0;
+                            sumOUT += flagOsOut7T === 1 ? OsSize7T : 0;
+                            sumOUT += flagOsOut8 === 1 ? OsSize8 : 0;
+                            sumOUT += flagOsOut8T === 1 ? OsSize8T : 0;
+                            sumOUT += flagOsOut9 === 1 ? OsSize9 : 0;
+                            sumOUT += flagOsOut9T === 1 ? OsSize9T : 0;
+                            sumOUT += flagOsOut10 === 1 ? OsSize10 : 0;
+                            sumOUT += flagOsOut10T === 1 ? OsSize10T : 0;
+                            sumOUT += flagOsOut11 === 1 ? OsSize11 : 0;
+                            sumOUT += flagOsOut11T === 1 ? OsSize11T : 0;
+                            sumOUT += flagOsOut12 === 1 ? OsSize12 : 0;
+                            sumOUT += flagOsOut12T === 1 ? OsSize12T : 0;
+                            sumOUT += flagOsOut13 === 1 ? OsSize13 : 0;
+                            sumOUT += flagOsOut13T === 1 ? OsSize13T : 0;
+                            sumOUT += flagOsOut14 === 1 ? OsSize14 : 0;
+                            sumOUT += flagOsOut15 === 1 ? OsSize15 : 0;
+                            sumOUT += flagOsOut16 === 1 ? OsSize16 : 0;
+                            sumOUT += flagOsOut17 === 1 ? OsSize17 : 0;
+                            sumOUT += flagOsOut18 === 1 ? OsSize18 : 0;
                             }
                          }, 0);
                         
@@ -6705,7 +6962,7 @@
                                     } else if(departement === 'laser'){
                                         var flaglaserIn1 = aaData[index].flaglaserInSize1; 
                                            sumSize1 += flaglaserIn1 === 1 ? aaData[index].size1 : 0;
-                                    } else {
+                                    } else if(departement === 'OutSole') {
                                         var flagOsIn1 = aaData[index].flagOsInSize1; 
                                            sumSize1 += flagOsIn1 === 1 ? aaData[index].size1 : 0;
                                     }
@@ -6732,7 +6989,7 @@
                                     } else if(departement === 'laser'){
                                         var flaglaserIn1T = aaData[index].flaglaserInSize1T; 
                                            sumSize1T += flaglaserIn1T === 1 ? aaData[index].size1T : 0;
-                                    } else {
+                                    } else if(departement === 'OutSole'){
                                          var flagOsIn1T = aaData[index].flagOsInSize1T; 
                                             sumSize1T += flagOsIn1T === 1 ? aaData[index].size1T : 0;
                                      }
@@ -6753,7 +7010,7 @@
                                       } else if(departement === 'spprep'){
                                           var flagspprepIn2 = aaData[index].flagspprepInSize2; 
                                              sumSize2 += flagspprepIn2 === 1 ? aaData[index].size2 : 0;
-                                      } else {
+                                      } else if(departement === 'OutSole'){
                                           var flagOsIn2 = aaData[index].flagOsInSize2; 
                                              sumSize2 += flagOsIn2 === 1 ? aaData[index].size2 : 0;
                                       }
@@ -6775,7 +7032,7 @@
                                       } else if(departement === 'spprep'){
                                           var flagspprepIn2T = aaData[index].flagspprepInSize2T; 
                                              sumSize2T += flagspprepIn2T === 1 ? aaData[index].size2T : 0;
-                                      } else {
+                                      } else if(departement === 'OutSole'){
                                           var flagOsIn2T = aaData[index].flagOsInSize2T; 
                                              sumSize2T += flagOsIn2T === 1 ? aaData[index].size2T : 0;
                                       }
@@ -6797,7 +7054,7 @@
                                       } else if(departement === 'spprep'){
                                           var flagspprepIn3 = aaData[index].flagspprepInSize3; 
                                              sumSize3 += flagspprepIn3 === 1 ? aaData[index].size3 : 0;
-                                      } else {
+                                      } else if(departement === 'OutSole'){
                                           var flagOsIn3 = aaData[index].flagOsInSize3; 
                                              sumSize3 += flagOsIn3 === 1 ? aaData[index].size3 : 0;
                                       }
@@ -6819,7 +7076,7 @@
                                       } else if(departement === 'spprep'){
                                           var flagspprepIn3T = aaData[index].flagspprepInSize3T; 
                                              sumSize3T += flagspprepIn3T === 1 ? aaData[index].size3T : 0;
-                                      } else {
+                                      } else if(departement === 'OutSole'){
                                           var flagOsIn3T = aaData[index].flagOsInSize3T; 
                                              sumSize3T += flagOsIn3T === 1 ? aaData[index].size3T : 0;
                                       }
@@ -6841,7 +7098,7 @@
                                       } else if(departement === 'spprep'){
                                           var flagspprepIn4 = aaData[index].flagspprepInSize4; 
                                              sumSize4 += flagspprepIn4 === 1 ? aaData[index].size4 : 0;
-                                      } else {
+                                      } else if(departement === 'OutSole'){
                                           var flagOsIn4 = aaData[index].flagOsInSize4; 
                                              sumSize4 += flagOsIn4 === 1 ? aaData[index].size4 : 0;
                                       }
@@ -6863,7 +7120,7 @@
                                       } else if(departement === 'spprep'){
                                           var flagspprepIn4T = aaData[index].flagspprepInSize4T; 
                                              sumSize4T += flagspprepIn4T === 1 ? aaData[index].size4T : 0;
-                                      } else {
+                                      } else if(departement === 'OutSole'){
                                           var flagOsIn4T = aaData[index].flagOsInSize4T; 
                                              sumSize4T += flagOsIn4T === 1 ? aaData[index].size4T : 0;
                                       }
@@ -6885,7 +7142,7 @@
                                             } else if(departement === 'spprep'){
                                                 var flagspprepIn5 = aaData[index].flagspprepInSize5; 
                                                    sumSize5 += flagspprepIn5 === 1 ? aaData[index].size5 : 0;
-                                            } else {
+                                            } else if(departement === 'OutSole'){
                                                 var flagOsIn5 = aaData[index].flagOsInSize5; 
                                                    sumSize5 += flagOsIn5 === 1 ? aaData[index].size5 : 0;
                                             }
@@ -6907,7 +7164,7 @@
                                             } else if(departement === 'spprep'){
                                                 var flagspprepIn5T = aaData[index].flagspprepInSize5T; 
                                                    sumSize5T += flagspprepIn5T === 1 ? aaData[index].size5T : 0;
-                                            } else {
+                                            } else if(departement === 'OutSole'){
                                                 var flagOsIn5T = aaData[index].flagOsInSize5T; 
                                                    sumSize5T += flagOsIn5T === 1 ? aaData[index].size5T : 0;
                                             }
@@ -6929,7 +7186,7 @@
                                             } else if(departement === 'spprep'){
                                                 var flagspprepIn6 = aaData[index].flagspprepInSize6; 
                                                    sumSize6 += flagspprepIn6 === 1 ? aaData[index].size6 : 0;
-                                            } else {
+                                            } else if(departement === 'OutSole'){
                                                 var flagOsIn6 = aaData[index].flagOsInSize6; 
                                                    sumSize6 += flagOsIn6 === 1 ? aaData[index].size6 : 0;
                                             }
@@ -6951,7 +7208,7 @@
                                             } else if(departement === 'spprep'){
                                                 var flagspprepIn6T = aaData[index].flagspprepInSize6T; 
                                                    sumSize6T += flagspprepIn6T === 1 ? aaData[index].size6T : 0;
-                                            } else {
+                                            } else if(departement === 'OutSole'){
                                                 var flagOsIn6T = aaData[index].flagOsInSize6T; 
                                                    sumSize6T += flagOsIn6T === 1 ? aaData[index].size6T : 0;
                                             }
@@ -6973,7 +7230,7 @@
                                             } else if(departement === 'spprep'){
                                                 var flagspprepIn7 = aaData[index].flagspprepInSize7; 
                                                    sumSize7 += flagspprepIn7 === 1 ? aaData[index].size7 : 0;
-                                            } else {
+                                            } else if(departement === 'OutSole'){
                                                 var flagOsIn7 = aaData[index].flagOsInSize7; 
                                                    sumSize7 += flagOsIn7 === 1 ? aaData[index].size7 : 0;
                                             }
@@ -6995,7 +7252,7 @@
                                             } else if(departement === 'spprep'){
                                                 var flagspprepIn7T = aaData[index].flagspprepInSize7T; 
                                                    sumSize7T += flagspprepIn7T === 1 ? aaData[index].size7T : 0;
-                                            } else {
+                                            } else if(departement === 'OutSole'){
                                                 var flagOsIn7T = aaData[index].flagOsInSize7T; 
                                                    sumSize7T += flagOsIn7T === 1 ? aaData[index].size7T : 0;
                                             }
@@ -7017,7 +7274,7 @@
                                             } else if(departement === 'spprep'){
                                                 var flagspprepIn8 = aaData[index].flagspprepInSize8; 
                                                    sumSize8 += flagspprepIn8 === 1 ? aaData[index].size8 : 0;
-                                            } else {
+                                            } else if(departement === 'OutSole'){
                                                 var flagOsIn8 = aaData[index].flagOsInSize8; 
                                                    sumSize8 += flagOsIn8 === 1 ? aaData[index].size8 : 0;
                                             }
@@ -7039,7 +7296,7 @@
                                             } else if(departement === 'spprep'){
                                                 var flagspprepIn8T = aaData[index].flagspprepInSize8T; 
                                                    sumSize8T += flagspprepIn8T === 1 ? aaData[index].size8T : 0;
-                                            } else {
+                                            } else if(departement === 'OutSole'){
                                                 var flagOsIn8T = aaData[index].flagOsInSize8T; 
                                                    sumSize8T += flagOsIn8T === 1 ? aaData[index].size8T : 0;
                                             }
@@ -7061,7 +7318,7 @@
                                             } else if(departement === 'spprep'){
                                                 var flagspprepIn9 = aaData[index].flagspprepInSize9; 
                                                    sumSize9 += flagspprepIn9 === 1 ? aaData[index].size9 : 0;
-                                            } else {
+                                            } else if(departement === 'OutSole'){
                                                 var flagOsIn9 = aaData[index].flagOsInSize9; 
                                                    sumSize9 += flagOsIn9 === 1 ? aaData[index].size9 : 0;
                                             }
@@ -7083,7 +7340,7 @@
                                             } else if(departement === 'spprep'){
                                                 var flagspprepIn9T = aaData[index].flagspprepInSize9T; 
                                                    sumSize9T += flagspprepIn9T === 1 ? aaData[index].size9T : 0;
-                                            } else {
+                                            } else if(departement === 'OutSole'){
                                                 var flagOsIn9T = aaData[index].flagOsInSize9T; 
                                                    sumSize9T += flagOsIn9T === 1 ? aaData[index].size9T : 0;
                                             }
@@ -7105,7 +7362,7 @@
                                             } else if(departement === 'spprep'){
                                                 var flagspprepIn10 = aaData[index].flagspprepInSize10; 
                                                    sumSize10 += flagspprepIn10 === 1 ? aaData[index].size10 : 0;
-                                            } else {
+                                            } else if(departement === 'OutSole'){
                                                 var flagOsIn10 = aaData[index].flagOsInSize10; 
                                                    sumSize10 += flagOsIn10 === 1 ? aaData[index].size10 : 0;
                                             }
@@ -7127,7 +7384,7 @@
                                             } else if(departement === 'spprep'){
                                                 var flagspprepIn10T = aaData[index].flagspprepInSize10T; 
                                                    sumSize10T += flagspprepIn10T === 1 ? aaData[index].size10T : 0;
-                                            } else {
+                                            } else if(departement === 'OutSole'){
                                                 var flagOsIn10T = aaData[index].flagOsInSize10T; 
                                                    sumSize10T += flagOsIn10T === 1 ? aaData[index].size10T : 0;
                                             }
@@ -7149,7 +7406,7 @@
                                             } else if(departement === 'spprep'){
                                                 var flagspprepIn11 = aaData[index].flagspprepInSize11; 
                                                    sumSize11 += flagspprepIn11 === 1 ? aaData[index].size11 : 0;
-                                            } else {
+                                            } else if(departement === 'OutSole'){
                                                 var flagOsIn11 = aaData[index].flagOsInSize11; 
                                                    sumSize11 += flagOsIn11 === 1 ? aaData[index].size11 : 0;
                                             }
@@ -7171,7 +7428,7 @@
                                             } else if(departement === 'spprep'){
                                                 var flagspprepIn11T = aaData[index].flagspprepInSize11T; 
                                                    sumSize11T += flagspprepIn11T === 1 ? aaData[index].size11T : 0;
-                                            } else {
+                                            } else if(departement === 'OutSole'){
                                                 var flagOsIn11T = aaData[index].flagOsInSize11T; 
                                                    sumSize11T += flagOsIn11T === 1 ? aaData[index].size11T : 0;
                                             }
@@ -7193,7 +7450,7 @@
                                             } else if(departement === 'spprep'){
                                                 var flagspprepIn12 = aaData[index].flagspprepInSize12; 
                                                    sumSize12 += flagspprepIn12 === 1 ? aaData[index].size12 : 0;
-                                            } else {
+                                            } else if(departement === 'OutSole'){
                                                 var flagOsIn12 = aaData[index].flagOsInSize12; 
                                                    sumSize12 += flagOsIn12 === 1 ? aaData[index].size12 : 0;
                                             }
@@ -7215,7 +7472,7 @@
                                             } else if(departement === 'spprep'){
                                                 var flagspprepIn12T = aaData[index].flagspprepInSize12T; 
                                                    sumSize12T += flagspprepIn12T === 1 ? aaData[index].size12T : 0;
-                                            } else {
+                                            } else if(departement === 'OutSole'){
                                                 var flagOsIn12T = aaData[index].flagOsInSize12T; 
                                                    sumSize12T += flagOsIn12T === 1 ? aaData[index].size12T : 0;
                                             }
@@ -7237,7 +7494,7 @@
                                             } else if(departement === 'spprep'){
                                                 var flagspprepIn13 = aaData[index].flagspprepInSize13; 
                                                    sumSize13 += flagspprepIn13 === 1 ? aaData[index].size13 : 0;
-                                            } else {
+                                            } else if(departement === 'OutSole'){
                                                 var flagOsIn13 = aaData[index].flagOsInSize13; 
                                                    sumSize13 += flagOsIn13 === 1 ? aaData[index].size13 : 0;
                                             }
@@ -7259,7 +7516,7 @@
                                             } else if(departement === 'spprep'){
                                                 var flagspprepIn13T = aaData[index].flagspprepInSize13T; 
                                                    sumSize13T += flagspprepIn13T === 1 ? aaData[index].size13T : 0;
-                                            } else {
+                                            } else if(departement === 'OutSole'){
                                                 var flagOsIn13T = aaData[index].flagOsInSize13T; 
                                                    sumSize13T += flagOsIn13T === 1 ? aaData[index].size13T : 0;
                                             }
@@ -7281,7 +7538,7 @@
                                             } else if(departement === 'spprep'){
                                                 var flagspprepIn14 = aaData[index].flagspprepInSize14; 
                                                    sumSize14 += flagspprepIn14 === 1 ? aaData[index].size14 : 0;
-                                            } else {
+                                            } else if(departement === 'OutSole'){
                                                 var flagOsIn14 = aaData[index].flagOsInSize14; 
                                                    sumSize14 += flagOsIn14 === 1 ? aaData[index].size14 : 0;
                                             }
@@ -7303,7 +7560,7 @@
                                             } else if(departement === 'spprep'){
                                                 var flagspprepIn15 = aaData[index].flagspprepInSize15; 
                                                    sumSize15 += flagspprepIn15 === 1 ? aaData[index].size15 : 0;
-                                            } else {
+                                            } else if(departement === 'OutSole'){
                                                 var flagOsIn15 = aaData[index].flagOsInSize15; 
                                                    sumSize15 += flagOsIn15 === 1 ? aaData[index].size15 : 0;
                                             }
@@ -7347,7 +7604,7 @@
                                             } else if(departement === 'spprep'){
                                                 var flagspprepIn17 = aaData[index].flagspprepInSize17; 
                                                    sumSize17 += flagspprepIn17 === 1 ? aaData[index].size17 : 0;
-                                            } else {
+                                            } else if(departement === 'OutSole'){
                                                 var flagOsIn17 = aaData[index].flagOsInSize17; 
                                                    sumSize17 += flagOsIn17 === 1 ? aaData[index].size17 : 0;
                                             }
@@ -7369,7 +7626,7 @@
                                             } else if(departement === 'spprep'){
                                                 var flagspprepIn18 = aaData[index].flagspprepInSize18; 
                                                    sumSize18 += flagspprepIn18 === 1 ? aaData[index].size18 : 0;
-                                            } else {
+                                            } else if(departement === 'OutSole'){
                                                 var flagOsIn18 = aaData[index].flagOsInSize18; 
                                                    sumSize18 += flagOsIn18 === 1 ? aaData[index].size18 : 0;
                                             }
