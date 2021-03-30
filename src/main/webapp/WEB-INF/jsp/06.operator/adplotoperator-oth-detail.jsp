@@ -984,7 +984,7 @@
                                     } else if (row.flagNsInSize3T === 1 && row.flagNsOutSize3T === 1) {
                                         return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size3T + ' </span></a>';
                                     } else if (row.flagNsInSize3T === 1) {
-                                        return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size3T = "' + row.size3T + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-info"> ' + row.size3T1 + ' </span></a>';
+                                        return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size3T = "' + row.size3T + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-info"> ' + row.size3T + ' </span></a>';
                                     } else {
                                         return  '<td class="size3T">' + "" + '</td>';
                                     }
@@ -5246,7 +5246,7 @@
                                 } else if(typeProses === 'OUT' && departement === 'OutSole'){
                                     if (row.size18 === null) {
                                         return  '<td class="size18">' + "" + '</td>';
-                                    } else if (row.flagOsInSize18 === 1 && row.flagOsOutSize16 === 1) {
+                                    } else if (row.flagOsInSize18 === 1 && row.flagOsOutSize18 === 1) {
                                         return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size18 + ' </span></a>';
                                     } else if (row.flagOsInSize18 === 1) {
                                         return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size18 = "' + row.size18 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-info"> ' + row.size18 + ' </span></a>';
@@ -5689,7 +5689,7 @@
                                 sumIN += flagNsIn17 === 1 && flagNsOut17 === null ? NsSize17 : 0;
                                 sumIN += flagNsIn18 === 1 && flagNsOut18 === null ? NsSize18 : 0;
                                    
-                                sumOUT += flagNsOut1 === 1 ? NsSize1 : 0;
+                                sumOUT += flagNsOut1 === 1  ? NsSize1 : 0;
                                 sumOUT += flagNsOut1T === 1 ? NsSize1T : 0;
                                 sumOUT += flagNsOut2 === 1 ? NsSize2 : 0;
                                 sumOUT += flagNsOut2T === 1 ? NsSize2T : 0;
@@ -7676,6 +7676,7 @@
                         function total(start, end) {
                             return start + end;
                         }
+                        
 
                         function isNull(value) {
                             if (value === null) {
@@ -7685,6 +7686,7 @@
                                 return value;
                             }
                         }
+                        console.log(rowSum);
                             
                             $(api.column(0).footer()).html('');
                             $(api.column(1).footer()).html('sum');
@@ -7719,7 +7721,7 @@
                             $(api.column(30).footer()).html(sumSize16);
                             $(api.column(31).footer()).html(sumSize17);
                             $(api.column(32).footer()).html(sumSize18);
-                            $(api.column(33).footer()).html(rowSum);            
+                            $(api.column(33).footer()).html('');            
                         }
                         $('#sumIn').val(sumIN);
                         $('#sumOut').val(sumOUT);

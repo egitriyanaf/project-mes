@@ -562,16 +562,16 @@
                             },
                             "aTargets": [32]
                         },
-                        {
-                            class: "text-center",
-                            "mRender": function (data, type, row) {
-                                return row.size1 + row.size1T + row.size2 + row.size2T + row.size3 + row.size3T + row.size4 + row.size4T +
-                                        row.size5 + row.size5T + row.size6 + row.size6T + row.size7 + row.size7T + row.size8 + row.size8T +
-                                        row.size9 + row.size9T + row.size10 + row.size10T + row.size11 + row.size11T + row.size12 + row.size12T +
-                                        row.size13 + row.size13T + row.size14 + row.size15 + row.size16 + row.size17 + row.size18;
-                            },
-                            "aTargets": [33]
-                        }
+//                        {
+//                            class: "text-center",
+//                            "mRender": function (data, type, row) {
+//                                return row.size1 + row.size1T + row.size2 + row.size2T + row.size3 + row.size3T + row.size4 + row.size4T +
+//                                        row.size5 + row.size5T + row.size6 + row.size6T + row.size7 + row.size7T + row.size8 + row.size8T +
+//                                        row.size9 + row.size9T + row.size10 + row.size10T + row.size11 + row.size11T + row.size12 + row.size12T +
+//                                        row.size13 + row.size13T + row.size14 + row.size15 + row.size16 + row.size17 + row.size18;
+//                            },
+//                            "aTargets": [33]
+//                        }
                     ],
                     "footerCallback": function (row, data, start, end, display) {
                         var api = this.api(), data;
