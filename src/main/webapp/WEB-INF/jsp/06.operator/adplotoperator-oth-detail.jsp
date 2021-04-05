@@ -5186,7 +5186,7 @@
                                 } else if(typeProses === 'OUT' && departement === 'CSC'){
                                     if (row.size18 === null) {
                                         return  '<td class="size18">' + "" + '</td>';
-                                    } else if (row.flagCscInSize18 === 1 && row.flagCscOutSize16 === 1) {
+                                    } else if (row.flagCscInSize18 === 1 && row.flagCscOutSize18 === 1) {
                                         return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size18 + ' </span></a>';
                                     } else if (row.flagCscInSize18 === 1) {
                                         return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size18 = "' + row.size18 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-info"> ' + row.size18 + ' </span></a>';
@@ -5206,7 +5206,7 @@
                                 } else if(typeProses === 'OUT' && departement === 'No Sew'){
                                     if (row.size18 === null) {
                                         return  '<td class="size18">' + "" + '</td>';
-                                    } else if (row.flagNsInSize18 === 1 && row.flagNsOutSize16 === 1) {
+                                    } else if (row.flagNsInSize18 === 1 && row.flagNsOutSize18 === 1) {
                                         return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size18 + ' </span></a>';
                                     } else if (row.flagNsInSize18 === 1) {
                                         return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size18 = "' + row.size18 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-info"> ' + row.size18 + ' </span></a>';
@@ -5226,7 +5226,7 @@
                                 } else if(typeProses === 'OUT' && departement === 'Subcon'){
                                     if (row.size18 === null) {
                                         return  '<td class="size18">' + "" + '</td>';
-                                    } else if (row.flagScInSize18 === 1 && row.flagScOutSize16 === 1) {
+                                    } else if (row.flagScInSize18 === 1 && row.flagScOutSize18 === 1) {
                                         return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size18 + ' </span></a>';
                                     } else if (row.flagScInSize18 === 1) {
                                         return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size18 = "' + row.size18 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-info"> ' + row.size18 + ' </span></a>';
@@ -5266,7 +5266,7 @@
                                 } else if(typeProses === 'OUT' && departement === 'spcut'){
                                     if (row.size18 === null) {
                                         return  '<td class="size18">' + "" + '</td>';
-                                    } else if (row.flagspcutInSize18 === 1 && row.flagspcutOutSize16 === 1) {
+                                    } else if (row.flagspcutInSize18 === 1 && row.flagspcutOutSize18 === 1) {
                                         return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size18 + ' </span></a>';
                                     } else if (row.flagspcutInSize18 === 1) {
                                         return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size18 = "' + row.size18 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-info"> ' + row.size18 + ' </span></a>';
@@ -5286,7 +5286,7 @@
                                 } else if(typeProses === 'OUT' && departement === 'spprep'){
                                     if (row.size18 === null) {
                                         return  '<td class="size18">' + "" + '</td>';
-                                    } else if (row.flagspprepInSize18 === 1 && row.flagspprepOutSize16 === 1) {
+                                    } else if (row.flagspprepInSize18 === 1 && row.flagspprepOutSize18 === 1) {
                                         return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size18 + ' </span></a>';
                                     } else if (row.flagspprepInSize18 === 1) {
                                         return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size18 = "' + row.size18 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-info"> ' + row.size18 + ' </span></a>';
@@ -5338,24 +5338,25 @@
                                 }
                             },
                             "aTargets": [32]
-                        },
-                        {
-                            class: "text-center",
-                            "mRender": function (data, type, row) {
-                                if(typeProses === 'IN'){
-                                    return row.size1 + row.size1T + row.size2 + row.size2T + row.size3 + row.size3T + row.size4 + row.size4T +
-                                        row.size5 + row.size5T + row.size6 + row.size6T + row.size7 + row.size7T + row.size8 + row.size8T +
-                                        row.size9 + row.size9T + row.size10 + row.size10T + row.size11 + row.size11T + row.size12 + row.size12T +
-                                        row.size13 + row.size13T + row.size14 + row.size15 + row.size16 + row.size17 + row.size18;
-                                } else {
-                                    return row.size1 + row.size1T + row.size2 + row.size2T + row.size3 + row.size3T + row.size4 + row.size4T +
-                                        row.size5 + row.size5T + row.size6 + row.size6T + row.size7 + row.size7T + row.size8 + row.size8T +
-                                        row.size9 + row.size9T + row.size10 + row.size10T + row.size11 + row.size11T + row.size12 + row.size12T +
-                                        row.size13 + row.size13T + row.size14 + row.size15 + row.size16 + row.size17 + row.size18;
-                                }
-                            },
-                            "aTargets": [33]
                         }
+//                        ,
+//                        {
+//                            class: "text-center",
+//                            "mRender": function (data, type, row) {
+//                                if(typeProses === 'IN'){
+//                                    return row.size1 + row.size1T + row.size2 + row.size2T + row.size3 + row.size3T + row.size4 + row.size4T +
+//                                        row.size5 + row.size5T + row.size6 + row.size6T + row.size7 + row.size7T + row.size8 + row.size8T +
+//                                        row.size9 + row.size9T + row.size10 + row.size10T + row.size11 + row.size11T + row.size12 + row.size12T +
+//                                        row.size13 + row.size13T + row.size14 + row.size15 + row.size16 + row.size17 + row.size18;
+//                                } else {
+//                                    return row.size1 + row.size1T + row.size2 + row.size2T + row.size3 + row.size3T + row.size4 + row.size4T +
+//                                        row.size5 + row.size5T + row.size6 + row.size6T + row.size7 + row.size7T + row.size8 + row.size8T +
+//                                        row.size9 + row.size9T + row.size10 + row.size10T + row.size11 + row.size11T + row.size12 + row.size12T +
+//                                        row.size13 + row.size13T + row.size14 + row.size15 + row.size16 + row.size17 + row.size18;
+//                                }
+//                            },
+//                            "aTargets": [33]
+//                        }
                     ],
                     "footerCallback": function (row, data, start, end, display) {
                         var api = this.api(), data;
@@ -5523,11 +5524,11 @@
                                 sumIN += flagCscIn12T === 1 && flagCscOut12T === null ? CscSize12T : 0;
                                 sumIN += flagCscIn13 === 1 && flagCscOut13 === null ? CscSize13 : 0;
                                 sumIN += flagCscIn13T === 1 && flagCscOut13T === null ? CscSize13T : 0;
-                                sumIN += flagCscIn14 === 1  && flagCscOut14 === null ? CscSize14 : 0;
-                                sumIN += flagCscIn15 === 1  && flagCscOut15 === null ? CscSize15 : 0;
-                                sumIN += flagCscIn16 === 1  && flagCscOut16 === null ? CscSize16 : 0;
-                                sumIN += flagCscIn17 === 1  && flagCscOut17 === null ? CscSize17 : 0;
-                                sumIN += flagCscIn18 === 1  && flagCscOut18 === null ? CscSize18 : 0;
+                                sumIN += flagCscIn14 === 1 && flagCscOut14 === null ? CscSize14 : 0;
+                                sumIN += flagCscIn15 === 1 && flagCscOut15 === null ? CscSize15 : 0;
+                                sumIN += flagCscIn16 === 1 && flagCscOut16 === null ? CscSize16 : 0;
+                                sumIN += flagCscIn17 === 1 && flagCscOut17 === null ? CscSize17 : 0;
+                                sumIN += flagCscIn18 === 1 && flagCscOut18 === null ? CscSize18 : 0;
                                 
                                 sumOUT += flagCscOut1 === 1 ? CscSize1 : 0;
                                 sumOUT += flagCscOut1T === 1 ? CscSize1T : 0;
@@ -5689,7 +5690,7 @@
                                 sumIN += flagNsIn17 === 1 && flagNsOut17 === null ? NsSize17 : 0;
                                 sumIN += flagNsIn18 === 1 && flagNsOut18 === null ? NsSize18 : 0;
                                    
-                                sumOUT += flagNsOut1 === 1  ? NsSize1 : 0;
+                                sumOUT += flagNsOut1 === 1 ? NsSize1 : 0;
                                 sumOUT += flagNsOut1T === 1 ? NsSize1T : 0;
                                 sumOUT += flagNsOut2 === 1 ? NsSize2 : 0;
                                 sumOUT += flagNsOut2T === 1 ? NsSize2T : 0;
@@ -5987,9 +5988,9 @@
                                 sumIN += flagspcutIn4T === 1 && flagspcutOut4T === null ? spcutSize4T : 0;
                                 sumIN += flagspcutIn5 === 1 && flagspcutOut5 === null ? spcutSize5 : 0;
                                 sumIN += flagspcutIn5T === 1 && flagspcutOut5T === null ? spcutSize5T : 0;
-                                sumIN += flagspcutIn6 === 1 && flagspcutOut6 === null ? spcutSize6 : 0
+                                sumIN += flagspcutIn6 === 1 && flagspcutOut6 === null ? spcutSize6 : 0;
                                 sumIN += flagspcutIn6T === 1 && flagspcutOut6T === null ? spcutSize6T : 0;
-                                sumIN += flagspcutIn7 === 1 && flagspcutOut7 === null ? spcutSize7 : 0
+                                sumIN += flagspcutIn7 === 1 && flagspcutOut7 === null ? spcutSize7 : 0;
                                 sumIN += flagspcutIn7T === 1 && flagspcutOut7T === null ? spcutSize7T : 0;
                                 sumIN += flagspcutIn8 === 1 && flagspcutOut8 === null ? spcutSize8 : 0;
                                 sumIN += flagspcutIn8T === 1 && flagspcutOut8T === null ? spcutSize8T : 0;
@@ -6904,6 +6905,63 @@
                                 .reduce(function (a, b) {
                                     return intVal(a) + intVal(b);
                                 }, 0);
+                        
+                        var jumlah = [];
+                        var rowSum = 0;
+
+                        for (var x = 0; x < data.length; x++) {
+                            var sumSize1 = isNull(data[x].size1);
+                            var sumSize1T = isNull(data[x].size1T);
+                            var sumSize2 = isNull(data[x].size2);
+                            var sumSize2T = isNull(data[x].size2T);
+                            var sumSize3 = isNull(data[x].size3);
+                            var sumSize3T = isNull(data[x].size3T);
+                            var sumSize4 = isNull(data[x].size4);
+                            var sumSize4T = isNull(data[x].size4T);
+                            var sumSize5 = isNull(data[x].size5);
+                            var sumSize5T = isNull(data[x].size5T);
+                            var sumSize6 = isNull(data[x].size6);
+                            var sumSize6T = isNull(data[x].size6T);
+                            var sumSize7 = isNull(data[x].size7);
+                            var sumSize7T = isNull(data[x].size7T);
+                            var sumSize8 = isNull(data[x].size8);
+                            var sumSize8T = isNull(data[x].size8T);
+                            var sumSize9 = isNull(data[x].size9);
+                            var sumSize9T = isNull(data[x].size9T);
+                            var sumSize10 = isNull(data[x].size10);
+                            var sumSize10T = isNull(data[x].size10T);
+                            var sumSize11 = isNull(data[x].size11);
+                            var sumSize11T = isNull(data[x].size11T);
+                            var sumSize12 = isNull(data[x].size12);
+                            var sumSize12T = isNull(data[x].size12T);
+                            var sumSize13 = isNull(data[x].size13);
+                            var sumSize13T = isNull(data[x].size13T);
+                            var sumSize14 = isNull(data[x].size14);
+                            var sumSize15 = isNull(data[x].size15);
+                            var sumSize16 = isNull(data[x].size16);
+                            var sumSize17 = isNull(data[x].size17);
+                            var sumSize18 = isNull(data[x].size18);
+                            jumlah[x] = sumSize1 + sumSize1T + sumSize2 + sumSize2T + sumSize3 + sumSize3T + sumSize4 + sumSize4T +
+                                    sumSize5 + sumSize5T + sumSize6 + sumSize6T + sumSize7 + sumSize7T + sumSize8 + sumSize8T +
+                                    sumSize9 + sumSize9T + sumSize10 + sumSize10T + sumSize11 + sumSize11T + sumSize12 + sumSize12T +
+                                    sumSize13 + sumSize13T + sumSize14 + sumSize15 + sumSize16 + sumSize17 + sumSize18;
+                        }
+                        rowSum = jumlah.reduce(total, 0);
+                        function total(start, end) {
+                            return start + end;
+                        }
+                        
+
+                        function isNull(value) {
+                            if (value === null) {
+                                value = 0;
+                                return value;
+                            } else {
+                                return value;
+                            }
+                        }
+
+                                                          
                         $(api.column(0).footer()).html('');
                         $(api.column(1).footer()).html('sum');
                         $(api.column(2).footer()).html(size1);
@@ -6937,9 +6995,10 @@
                         $(api.column(30).footer()).html(size16);
                         $(api.column(31).footer()).html(size17);
                         $(api.column(32).footer()).html(size18);
-                        $(api.column(33).footer()).html('');
+                        $(api.column(33).footer()).html(rowSum);
                         
-                        } else {
+                        } else{
+                            
                              var size1_ =  api.cells( function ( index, data, node ) {
                                     if(departement === 'CSC'){
                                        var flagCscIn1 = aaData[index].flagCscInSize1; 
@@ -7635,7 +7694,7 @@
                             var jumlah = [];
                         var rowSum = 0;
 
-                        for (var x = 0; x < data.length; x++) {
+                        for (var x = 0; x < data; x++) {
                             var sumSize1 = isNull(data[x].size1);
                             var sumSize1T = isNull(data[x].size1T);
                             var sumSize2 = isNull(data[x].size2);
@@ -7672,10 +7731,10 @@
                                     sumSize9 + sumSize9T + sumSize10 + sumSize10T + sumSize11 + sumSize11T + sumSize12 + sumSize12T +
                                     sumSize13 + sumSize13T + sumSize14 + sumSize15 + sumSize16 + sumSize17 + sumSize18;
                         }
-                        rowSum = jumlah.reduce(total, 0);
-                        function total(start, end) {
-                            return start + end;
-                        }
+                        rowSum = sumSize1 + sumSize1T + sumSize2 + sumSize2T + sumSize3 + sumSize3T + sumSize4 + sumSize4T +
+                                    sumSize5 + sumSize5T + sumSize6 + sumSize6T + sumSize7 + sumSize7T + sumSize8 + sumSize8T +
+                                    sumSize9 + sumSize9T + sumSize10 + sumSize10T + sumSize11 + sumSize11T + sumSize12 + sumSize12T +
+                                    sumSize13 + sumSize13T + sumSize14 + sumSize15 + sumSize16 + sumSize17 + sumSize18;
                         
 
                         function isNull(value) {
@@ -7686,7 +7745,7 @@
                                 return value;
                             }
                         }
-                        console.log(rowSum);
+//                        console.log(rowSum);
                             
                             $(api.column(0).footer()).html('');
                             $(api.column(1).footer()).html('sum');
@@ -7721,7 +7780,7 @@
                             $(api.column(30).footer()).html(sumSize16);
                             $(api.column(31).footer()).html(sumSize17);
                             $(api.column(32).footer()).html(sumSize18);
-                            $(api.column(33).footer()).html('');            
+                            $(api.column(33).footer()).html(rowSum);            
                         }
                         $('#sumIn').val(sumIN);
                         $('#sumOut').val(sumOUT);
@@ -7909,7 +7968,7 @@
                             oTable.fnDraw();
                             oTable2.fnDraw();
                         });
-                    } else {
+                    } else if (typeProses === 'OUT'){
                          submit('/operator/lotbasis/approve-out', JSON.stringify(dataJson), function (data) {
                             $("input[name='id']").val(data.id);
                             sumIN = 0;
@@ -8177,36 +8236,36 @@
                                                 <th>Id</th>
                                                 <th>G</th>
                                                 <th>1</th>
-                                                <th>1T</th>
                                                 <th>2</th>
-                                                <th>2T</th>
                                                 <th>3</th>
-                                                <th>3T</th>
                                                 <th>4</th>
-                                                <th>4T</th>
                                                 <th>5</th>
-                                                <th>5T</th>
                                                 <th>6</th>
-                                                <th>6T</th>
                                                 <th>7</th>
-                                                <th>7T</th>
                                                 <th>8</th>
-                                                <th>8T</th>
                                                 <th>9</th>
-                                                <th>9T</th>
                                                 <th>10</th>
-                                                <th>10T</th>
                                                 <th>11</th>
-                                                <th>11T</th>
                                                 <th>12</th>
-                                                <th>12T</th>
                                                 <th>13</th>
-                                                <th>13T</th>
                                                 <th>14</th>
                                                 <th>15</th>
                                                 <th>16</th>
                                                 <th>17</th>
                                                 <th>18</th>
+                                                <th>1T</th>
+                                                <th>2T</th>
+                                                <th>3T</th>
+                                                <th>4T</th>
+                                                <th>5T</th>
+                                                <th>6T</th>
+                                                <th>7T</th>
+                                                <th>8T</th>
+                                                <th>9T</th>
+                                                <th>10T</th>
+                                                <th>11T</th>
+                                                <th>12T</th>
+                                                <th>13T</th>
                                                 <th>Sum</th>
                                             </tr>
                                         </thead>
@@ -8281,36 +8340,36 @@
                                             <tr>
                                                 <th>G</th>
                                                 <th>1</th>
-                                                <th>1T</th>
                                                 <th>2</th>
-                                                <th>2T</th>
                                                 <th>3</th>
-                                                <th>3T</th>
                                                 <th>4</th>
-                                                <th>4T</th>
                                                 <th>5</th>
-                                                <th>5T</th>
                                                 <th>6</th>
-                                                <th>6T</th>
                                                 <th>7</th>
-                                                <th>7T</th>
                                                 <th>8</th>
-                                                <th>8T</th>
                                                 <th>9</th>
-                                                <th>9T</th>
                                                 <th>10</th>
-                                                <th>10T</th>
                                                 <th>11</th>
-                                                <th>11T</th>
                                                 <th>12</th>
-                                                <th>12T</th>
                                                 <th>13</th>
-                                                <th>13T</th>
                                                 <th>14</th>
                                                 <th>15</th>
                                                 <th>16</th>
                                                 <th>17</th>
                                                 <th>18</th>
+                                                <th>1T</th>
+                                                <th>2T</th>
+                                                <th>3T</th>
+                                                <th>4T</th>
+                                                <th>5T</th>
+                                                <th>6T</th>
+                                                <th>7T</th>
+                                                <th>8T</th>
+                                                <th>9T</th>
+                                                <th>10T</th>
+                                                <th>11T</th>
+                                                <th>12T</th>
+                                                <th>13T</th>
                                             </tr>
                                         </thead>
                                     </table>

@@ -1469,36 +1469,36 @@
                                                 <th>Id</th>
                                                 <th>G</th>
                                                 <th>1</th>
-                                                <th>1T</th>
                                                 <th>2</th>
-                                                <th>2T</th>
                                                 <th>3</th>
-                                                <th>3T</th>
                                                 <th>4</th>
-                                                <th>4T</th>
                                                 <th>5</th>
-                                                <th>5T</th>
                                                 <th>6</th>
-                                                <th>6T</th>
                                                 <th>7</th>
-                                                <th>7T</th>
                                                 <th>8</th>
-                                                <th>8T</th>
                                                 <th>9</th>
-                                                <th>9T</th>
                                                 <th>10</th>
-                                                <th>10T</th>
                                                 <th>11</th>
-                                                <th>11T</th>
                                                 <th>12</th>
-                                                <th>12T</th>
                                                 <th>13</th>
-                                                <th>13T</th>
                                                 <th>14</th>
                                                 <th>15</th>
                                                 <th>16</th>
                                                 <th>17</th>
                                                 <th>18</th>
+                                                <th>1T</th>
+                                                <th>2T</th>
+                                                <th>3T</th>
+                                                <th>4T</th>
+                                                <th>5T</th>
+                                                <th>6T</th>
+                                                <th>7T</th>
+                                                <th>8T</th>
+                                                <th>9T</th>
+                                                <th>10T</th>
+                                                <th>11T</th>
+                                                <th>12T</th>
+                                                <th>13T</th>
                                                 <th>Sum</th>
                                             </tr>
                                         </thead>
@@ -1574,36 +1574,36 @@
                                                 <th>Id</th>
                                                 <th>G</th>
                                                 <th>1</th>
-                                                <th>1T</th>
                                                 <th>2</th>
-                                                <th>2T</th>
                                                 <th>3</th>
-                                                <th>3T</th>
                                                 <th>4</th>
-                                                <th>4T</th>
                                                 <th>5</th>
-                                                <th>5T</th>
                                                 <th>6</th>
-                                                <th>6T</th>
                                                 <th>7</th>
-                                                <th>7T</th>
                                                 <th>8</th>
-                                                <th>8T</th>
                                                 <th>9</th>
-                                                <th>9T</th>
                                                 <th>10</th>
-                                                <th>10T</th>
                                                 <th>11</th>
-                                                <th>11T</th>
                                                 <th>12</th>
-                                                <th>12T</th>
                                                 <th>13</th>
-                                                <th>13T</th>
                                                 <th>14</th>
                                                 <th>15</th>
                                                 <th>16</th>
                                                 <th>17</th>
                                                 <th>18</th>
+                                                <th>1T</th>
+                                                <th>2T</th>
+                                                <th>3T</th>
+                                                <th>4T</th>
+                                                <th>5T</th>
+                                                <th>6T</th>
+                                                <th>7T</th>
+                                                <th>8T</th>
+                                                <th>9T</th>
+                                                <th>10T</th>
+                                                <th>11T</th>
+                                                <th>12T</th>
+                                                <th>13T</th>
                                             </tr>
                                         </thead>
                                     </table>

@@ -545,16 +545,16 @@
                             },
                             "aTargets": [32]
                         },
-                        {
-                            class: "text-center",
-                            "mRender": function (data, type, row) {
-                                return row.size1 + row.size1T + row.size2 + row.size2T + row.size3 + row.size3T + row.size4 + row.size4T +
-                                        row.size5 + row.size5T + row.size6 + row.size6T + row.size7 + row.size7T + row.size8 + row.size8T +
-                                        row.size9 + row.size9T + row.size10 + row.size10T + row.size11 + row.size11T + row.size12 + row.size12T +
-                                        row.size13 + row.size13T + row.size14 + row.size15 + row.size16 + row.size17 + row.size18;
-                            },
-                            "aTargets": [33]
-                        },
+//                        {
+//                            class: "text-center",
+//                            "mRender": function (data, type, row) {
+//                                return row.size1 + row.size1T + row.size2 + row.size2T + row.size3 + row.size3T + row.size4 + row.size4T +
+//                                        row.size5 + row.size5T + row.size6 + row.size6T + row.size7 + row.size7T + row.size8 + row.size8T +
+//                                        row.size9 + row.size9T + row.size10 + row.size10T + row.size11 + row.size11T + row.size12 + row.size12T +
+//                                        row.size13 + row.size13T + row.size14 + row.size15 + row.size16 + row.size17 + row.size18;
+//                            },
+//                            "aTargets": [33]
+//                        },
                         {
                             class: "text-center",
                             "mRender": function (data, type, row) {
@@ -799,6 +799,10 @@
                                 .reduce(function (a, b) {
                                     return intVal(a) + intVal(b);
                                 }, 0);
+                        
+                        var jumlah = size1 + size1T + size2 + size2T + size3 + size3T + size4 + size4T + size5 + size5T + size6 + size6T + size7 + size7T + size8 + size8T + size9 + size9T + size10 + size10T + size11 + size11T + size12 + size12T + size13 + size13T + size14 + size15 + size16 + size17 + size18;
+                        
+                        var rowSum = jumlah;
 
                         $(api.column(0).footer()).html('');
                         $(api.column(1).footer()).html('Sum');
@@ -833,7 +837,7 @@
                         $(api.column(30).footer()).html(size16);
                         $(api.column(31).footer()).html(size17);
                         $(api.column(32).footer()).html(size18);
-                        $(api.column(33).footer()).html('');
+                        $(api.column(33).footer()).html(rowSum);
                     },
                     "scrollX": true
                 });
