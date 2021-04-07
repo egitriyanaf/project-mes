@@ -3,7 +3,18 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!--<meta http-equiv="refresh" content="30" />-->
         <title>Lot Basis | Detail</title>
+<!--        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script>
+            $(document).ready(function(){
+                         $("#div_refresh").load("adplotoperator-ct-detail-out.jsp");
+                setInterval(function() {
+                    $("#div_refresh").load("adplotoperator-ct-detail-out.jsp");
+                }, 1000);
+            });
+
+        </script>-->
         <script type="text/javascript">
             $(document).ready(function () {
 
@@ -1569,7 +1580,7 @@
                                 <h3 style="color: white"><i class="fa fa-table" style="color: white"></i>List Express Kanban</h3>
                             </div>
                             <div class="widget widget-table">
-                                <div class="table-responsive border-white">
+                                <div id="div_refresh" class="table-responsive border-white">
                                     <table id="dataTableKanban" class="table table-striped table-bordered table-hover table-full-width">
                                         <thead>
                                             <tr>

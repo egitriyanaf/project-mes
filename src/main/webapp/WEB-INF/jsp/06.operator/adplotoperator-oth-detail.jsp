@@ -6,7 +6,6 @@
         <title>Lot Basis | Detail</title>
         <script type="text/javascript">
             $(document).ready(function () {
-
                 var roleManagement = $.trim($("#userType").val());
                 var userType = roleManagement.toLowerCase();
                 var rowindex = $('table#dataTable tr:last').index() + 1;
@@ -392,7 +391,7 @@
                                         return  '<td class="size1T">' + "" + '</td>';
                                     }
                                 }else if(typeProses === 'IN' && departement === 'label'){
-                                    console.log(row.size1T, data)
+//                                    console.log(row.size1T, data)
                                     if (row.size1T === null) {
                                         return  '<td class="size1T">' + "" + '</td>';
                                     } else if (row.flagLabelInSize1T === 1 && row.flagLabelOutSize1T === 1) {
@@ -511,7 +510,7 @@
                                     } else {
                                         return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-reject" class="viewData" id = "' + row.id + '" size2 = "' + row.size2 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-warning">  ' + row.size2 + ' </span></a>';
                                     }
-                                } else if(typeProses === 'OUT' && departement === 'OuSole'){
+                                } else if(typeProses === 'OUT' && departement === 'OutSole'){
                                     if (row.size2 === null) {
                                         return  '<td class="size2">' + "" + '</td>';
                                     } else if (row.flagOsInSize2 === 1 && row.flagOsOutSize2 === 1) {
@@ -574,9 +573,9 @@
                                 } else if(typeProses === 'OUT' && departement === 'label'){
                                     if (row.size2 === null) {
                                         return  '<td class="size2">' + "" + '</td>';
-                                    } else if (row.flagLabelInSize1 === 1 && row.flagLabelOutSize1 === 1) {
+                                    } else if (row.flagLabelInSize2 === 1 && row.flagLabelOutSize2 === 1) {
                                         return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size2 + ' </span></a>';
-                                    } else if (row.flagLabelInSize1 === 1) {
+                                    } else if (row.flagLabelInSize2 === 1) {
                                         return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size2 = "' + row.size2 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-info"> ' + row.size2 + ' </span></a>';
                                     } else {
                                         return  '<td class="size2">' + "" + '</td>';
@@ -680,7 +679,7 @@
                                     } else {
                                         return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-reject" class="viewData" id = "' + row.id + '" size2T = "' + row.size2T + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-warning">  ' + row.size2T + ' </span></a>';
                                     }
-                                } else if(typeProses === 'OUT' && departement === 'OuSole'){
+                                } else if(typeProses === 'OUT' && departement === 'OutSole'){
                                     if (row.size2T === null) {
                                         return  '<td class="size2T">' + "" + '</td>';
                                     } else if (row.flagOsInSize2T === 1 && row.flagOsOutSize2T === 1) {
@@ -7016,19 +7015,19 @@
                                         var flagspprepIn1 = aaData[index].flagspprepInSize1; 
                                            sumSize1 += flagspprepIn1 === 1 ? aaData[index].size1 : 0;
                                     } else if(departement === 'label'){
-                                        var flaglabelIn1 = aaData[index].flaglabelInSize1; 
-                                           sumSize1 += flaglabelIn1 === 1 ? aaData[index].size1 : 0;
+                                        var flagLabelIn1 = aaData[index].flagLabelInSize1; 
+                                           sumSize1 += flagLabelIn1 === 1 ? aaData[index].size1 : 0;
                                     } else if(departement === 'laser'){
-                                        var flaglaserIn1 = aaData[index].flaglaserInSize1; 
-                                           sumSize1 += flaglaserIn1 === 1 ? aaData[index].size1 : 0;
-                                    } else if(departement === 'OutSole') {
+                                        var flagLaserIn1 = aaData[index].flagLaserInSize1; 
+                                           sumSize1 += flagLaserIn1 === 1 ? aaData[index].size1 : 0;
+                                    } else if(departement === 'OutSole'){
                                         var flagOsIn1 = aaData[index].flagOsInSize1; 
                                            sumSize1 += flagOsIn1 === 1 ? aaData[index].size1 : 0;
                                     }
                                  }, 0);
                             var size1T_ = api.cells( function ( index, data, node ) {
                                     if(departement === 'CSC'){
-                                        var flagCscIn1T = aaData[index].flagCscInSize1; 
+                                        var flagCscIn1T = aaData[index].flagCscInSize1T; 
                                             sumSize1T += flagCscIn1T === 1 ? aaData[index].size1T : 0;
                                      } else if(departement === 'No Sew'){
                                          var flagNsIn1T = aaData[index].flagNsInSize1T; 
@@ -7043,11 +7042,11 @@
                                          var flagspprepIn1T = aaData[index].flagspprepInSize1T; 
                                             sumSize1T += flagspprepIn1T === 1 ? aaData[index].size1T : 0;
                                      } else if(departement === 'label'){
-                                        var flaglabelIn1T = aaData[index].flaglabelInSize1T; 
-                                           sumSize1T += flaglabelIn1T === 1 ? aaData[index].size1T : 0;
+                                        var flagLabelIn1T = aaData[index].flagLabelInSize1T; 
+                                           sumSize1T += flagLabelIn1T === 1 ? aaData[index].size1T : 0;
                                     } else if(departement === 'laser'){
-                                        var flaglaserIn1T = aaData[index].flaglaserInSize1T; 
-                                           sumSize1T += flaglaserIn1T === 1 ? aaData[index].size1T : 0;
+                                        var flagLaserIn1T = aaData[index].flagLaserInSize1T; 
+                                           sumSize1T += flagLaserIn1T === 1 ? aaData[index].size1T : 0;
                                     } else if(departement === 'OutSole'){
                                          var flagOsIn1T = aaData[index].flagOsInSize1T; 
                                             sumSize1T += flagOsIn1T === 1 ? aaData[index].size1T : 0;
@@ -7068,12 +7067,17 @@
                                              sumSize2 += flagspcutIn2 === 1 ? aaData[index].size2 : 0;
                                       } else if(departement === 'spprep'){
                                           var flagspprepIn2 = aaData[index].flagspprepInSize2; 
-                                             sumSize2 += flagspprepIn2 === 1 ? aaData[index].size2 : 0;
-                                      } else if(departement === 'OutSole'){
-                                          var flagOsIn2 = aaData[index].flagOsInSize2; 
-                                             sumSize2 += flagOsIn2 === 1 ? aaData[index].size2 : 0;
-                                      }
-                                 }, 0);
+                                             sumSize2 += flagspprepIn2 === 1 ? aaData[index].size2 : 0;                                            
+                                      } else if(departement === 'label'){
+                                          var flagLabelIn2 = aaData[index].flagLabelInSize2;
+                                          sumSize2 += flagLabelIn2 === 1 ? aaData[index].size2 : 0;
+                                      } else if(departement === 'laser'){
+                                          var flagLaserIn2 = aaData[index].flagLaserInSize2;
+                                          sumSize2 += flagLaserIn2 === 1 ? aaData[index].size2 :0;                                      
+                                      }else if(departement === 'OutSole'){
+                                          var flagOsIn2 = aaData[index].flagOsInSize2;
+                                          sumSize2 += flagOsIn2 === 1 ? aaData[index].size2 : 0;
+                                      }}, 0);
 
                             var size2T_ = api.cells( function ( index, data, node ) {
                                      if(departement === 'CSC'){
@@ -7091,6 +7095,12 @@
                                       } else if(departement === 'spprep'){
                                           var flagspprepIn2T = aaData[index].flagspprepInSize2T; 
                                              sumSize2T += flagspprepIn2T === 1 ? aaData[index].size2T : 0;
+                                      }  else if(departement === 'label'){
+                                          var flagLabelIn2T = aaData[index].flagLabelInSize2T;
+                                          sumSize2T += flagLabelIn2T === 1 ? aaData[index].size2T : 0;
+                                      } else if(departement === 'laser'){
+                                          var flagLaserIn2T = aaData[index].flagLaserInSize2T;
+                                          sumSize2T += flagLaserIn2T === 1 ? aaData[index].size2T :0;
                                       } else if(departement === 'OutSole'){
                                           var flagOsIn2T = aaData[index].flagOsInSize2T; 
                                              sumSize2T += flagOsIn2T === 1 ? aaData[index].size2T : 0;
@@ -7113,6 +7123,12 @@
                                       } else if(departement === 'spprep'){
                                           var flagspprepIn3 = aaData[index].flagspprepInSize3; 
                                              sumSize3 += flagspprepIn3 === 1 ? aaData[index].size3 : 0;
+                                      } else if(departement === 'label'){
+                                          var flagLabelIn3 = aaData[index].flagLabelInSize3;
+                                          sumSize3 += flagLabelIn3 === 1 ? aaData[index].size3 : 0;
+                                      } else if(departement === 'laser'){
+                                          var flagLaserIn3 = aaData[index].flagLaserInSize3;
+                                          sumSize3 += flagLaserIn3 === 1 ? aaData[index].size3 :0;
                                       } else if(departement === 'OutSole'){
                                           var flagOsIn3 = aaData[index].flagOsInSize3; 
                                              sumSize3 += flagOsIn3 === 1 ? aaData[index].size3 : 0;
@@ -7135,6 +7151,12 @@
                                       } else if(departement === 'spprep'){
                                           var flagspprepIn3T = aaData[index].flagspprepInSize3T; 
                                              sumSize3T += flagspprepIn3T === 1 ? aaData[index].size3T : 0;
+                                      } else if(departement === 'label'){
+                                          var flagLabelIn3T = aaData[index].flagLabelInSize3T;
+                                          sumSize3T += flagLabelIn3T === 1 ? aaData[index].size3T : 0;
+                                      } else if(departement === 'laser'){
+                                          var flagLaserIn3T = aaData[index].flagLaserInSize3T;
+                                          sumSize3T += flagLaserIn3T === 1 ? aaData[index].size3T :0;
                                       } else if(departement === 'OutSole'){
                                           var flagOsIn3T = aaData[index].flagOsInSize3T; 
                                              sumSize3T += flagOsIn3T === 1 ? aaData[index].size3T : 0;
@@ -7144,7 +7166,7 @@
                             var size4_ = api.cells( function ( index, data, node ) {
                                       if(departement === 'CSC'){
                                          var flagCscIn4 = aaData[index].flagCscInSize4; 
-                                             sumSize4 += flagCscIn4 === 1 ? aaData[index].size3 : 0;
+                                             sumSize4 += flagCscIn4 === 1 ? aaData[index].size4 : 0;
                                       } else if(departement === 'No Sew'){
                                           var flagNsIn4 = aaData[index].flagNsInSize4; 
                                              sumSize4 += flagNsIn4 === 1 ? aaData[index].size4 : 0;
@@ -7157,6 +7179,12 @@
                                       } else if(departement === 'spprep'){
                                           var flagspprepIn4 = aaData[index].flagspprepInSize4; 
                                              sumSize4 += flagspprepIn4 === 1 ? aaData[index].size4 : 0;
+                                      } else if(departement === 'label'){
+                                          var flagLabelIn4 = aaData[index].flagLabelInSize4;
+                                          sumSize4 += flagLabelIn4 === 1 ? aaData[index].size4 : 0;
+                                      } else if(departement === 'laser'){
+                                          var flagLaserIn4 = aaData[index].flagLaserInSize4;
+                                          sumSize4 += flagLaserIn4 === 1 ? aaData[index].size4 :0; 
                                       } else if(departement === 'OutSole'){
                                           var flagOsIn4 = aaData[index].flagOsInSize4; 
                                              sumSize4 += flagOsIn4 === 1 ? aaData[index].size4 : 0;
@@ -7166,7 +7194,7 @@
                             var size4T_ = api.cells( function ( index, data, node ) {
                                        if(departement === 'CSC'){
                                          var flagCscIn4T = aaData[index].flagCscInSize4T; 
-                                             sumSize4T += flagCscIn4T === 1 ? aaData[index].size3T : 0;
+                                             sumSize4T += flagCscIn4T === 1 ? aaData[index].size4T : 0;
                                       } else if(departement === 'No Sew'){
                                           var flagNsIn4T = aaData[index].flagNsInSize4T; 
                                              sumSize4T += flagNsIn4T === 1 ? aaData[index].size4T : 0;
@@ -7179,6 +7207,12 @@
                                       } else if(departement === 'spprep'){
                                           var flagspprepIn4T = aaData[index].flagspprepInSize4T; 
                                              sumSize4T += flagspprepIn4T === 1 ? aaData[index].size4T : 0;
+                                      } else if(departement === 'label'){
+                                          var flagLabelIn4T = aaData[index].flagLabelInSize4T;
+                                          sumSize4T += flagLabelIn4T === 1 ? aaData[index].size4T : 0;
+                                      } else if(departement === 'laser'){
+                                          var flagLaserIn4T = aaData[index].flagLaserInSize4T;
+                                          sumSize4T += flagLaserIn4T === 1 ? aaData[index].size4T :0;
                                       } else if(departement === 'OutSole'){
                                           var flagOsIn4T = aaData[index].flagOsInSize4T; 
                                              sumSize4T += flagOsIn4T === 1 ? aaData[index].size4T : 0;
@@ -7201,7 +7235,13 @@
                                             } else if(departement === 'spprep'){
                                                 var flagspprepIn5 = aaData[index].flagspprepInSize5; 
                                                    sumSize5 += flagspprepIn5 === 1 ? aaData[index].size5 : 0;
-                                            } else if(departement === 'OutSole'){
+                                            } else if(departement === 'label'){
+                                                var flagLabelIn5 = aaData[index].flagLabelInSize5;
+                                                sumSize5 += flagLabelIn5 === 1 ? aaData[index].size5 : 0;
+                                            }else if(departement === 'laser'){
+                                                var flagLaserIn5 = aaData[index].flagLaserInSize5;
+                                                sumSize5 += flagLaserIn5 === 1 ? aaData[index].size5 : 0;
+                                            }else if(departement === 'OutSole'){
                                                 var flagOsIn5 = aaData[index].flagOsInSize5; 
                                                    sumSize5 += flagOsIn5 === 1 ? aaData[index].size5 : 0;
                                             }
@@ -7223,6 +7263,12 @@
                                             } else if(departement === 'spprep'){
                                                 var flagspprepIn5T = aaData[index].flagspprepInSize5T; 
                                                    sumSize5T += flagspprepIn5T === 1 ? aaData[index].size5T : 0;
+                                            } else if(departement === 'label'){
+                                                var flagLabelIn5T = aaData[index].flagLabelInSize5T;
+                                                sumSize5T += flagLabelIn5T === 1 ? aaData[index].size5T : 0;
+                                            } else if(departement === 'laser'){
+                                                var flagLaserIn5T = aaData[index].flagLaserInSize5T;
+                                                sumSize5T += flagLaserIn5T === 1 ? aaData[index].size5T : 0;
                                             } else if(departement === 'OutSole'){
                                                 var flagOsIn5T = aaData[index].flagOsInSize5T; 
                                                    sumSize5T += flagOsIn5T === 1 ? aaData[index].size5T : 0;
@@ -7245,7 +7291,13 @@
                                             } else if(departement === 'spprep'){
                                                 var flagspprepIn6 = aaData[index].flagspprepInSize6; 
                                                    sumSize6 += flagspprepIn6 === 1 ? aaData[index].size6 : 0;
-                                            } else if(departement === 'OutSole'){
+                                            } else if(departement === 'label'){
+                                                var flagLabelIn6 = aaData[index].flagLabelInSize6;
+                                                sumSize6 += flagLabelIn6 === 1 ? aaData[index].size6 : 0;
+                                            } else if(departement === 'laser'){
+                                                var flagLaserIn6 = aaData[index].flagLaserInSize6;
+                                                sumSize6 += flagLaserIn6 === 1 ? aaData[index].size6 : 0;
+                                            }else if(departement === 'OutSole'){
                                                 var flagOsIn6 = aaData[index].flagOsInSize6; 
                                                    sumSize6 += flagOsIn6 === 1 ? aaData[index].size6 : 0;
                                             }
@@ -7253,7 +7305,7 @@
 
                             var size6T_ = api.cells( function ( index, data, node ) {
                                        if(departement === 'CSC'){
-                                               var flagCscIn6T = aaData[index].flagCscInSize6; 
+                                               var flagCscIn6T = aaData[index].flagCscInSize6T; 
                                                    sumSize6T += flagCscIn6T === 1 ? aaData[index].size6T : 0;
                                             } else if(departement === 'No Sew'){
                                                 var flagNsIn6T = aaData[index].flagNsInSize6T; 
@@ -7267,6 +7319,12 @@
                                             } else if(departement === 'spprep'){
                                                 var flagspprepIn6T = aaData[index].flagspprepInSize6T; 
                                                    sumSize6T += flagspprepIn6T === 1 ? aaData[index].size6T : 0;
+                                            } else if(departement === 'label'){
+                                                var flagLabelIn6T = aaData[index].flagLabelInSize6T;
+                                                sumSize6T += flagLabelIn6T === 1 ? aaData[index].size6T : 0;
+                                            } else if(departement === 'laser'){
+                                                var flagLaserIn6T = aaData[index].flagLaserInSize6T;
+                                                sumSize6T += flagLaserIn6T === 1 ? aaData[index].size6T : 0;
                                             } else if(departement === 'OutSole'){
                                                 var flagOsIn6T = aaData[index].flagOsInSize6T; 
                                                    sumSize6T += flagOsIn6T === 1 ? aaData[index].size6T : 0;
@@ -7289,6 +7347,12 @@
                                             } else if(departement === 'spprep'){
                                                 var flagspprepIn7 = aaData[index].flagspprepInSize7; 
                                                    sumSize7 += flagspprepIn7 === 1 ? aaData[index].size7 : 0;
+                                            } else if(departement === 'label'){
+                                                var flagLabelIn7 = aaData[index].flagLabelInSize7;
+                                                sumSize7 += flagLabelIn7 === 1 ? aaData[index].size7 : 0;
+                                            } else if(departement === 'laser'){
+                                                var flagLaserIn7 = aaData[index].flagLaserInSize7;
+                                                sumSize7 += flagLaserIn7 === 1 ? aaData[index].size7 : 0;
                                             } else if(departement === 'OutSole'){
                                                 var flagOsIn7 = aaData[index].flagOsInSize7; 
                                                    sumSize7 += flagOsIn7 === 1 ? aaData[index].size7 : 0;
@@ -7311,7 +7375,13 @@
                                             } else if(departement === 'spprep'){
                                                 var flagspprepIn7T = aaData[index].flagspprepInSize7T; 
                                                    sumSize7T += flagspprepIn7T === 1 ? aaData[index].size7T : 0;
-                                            } else if(departement === 'OutSole'){
+                                            } else if(departement === 'label'){
+                                                var flagLabelIn7T = aaData[index].flagLabelInSize7T;
+                                                sumSize7T += flagLabelIn7T === 1 ? aaData[index].size7T : 0;
+                                            } else if(departement === 'laser'){
+                                                var flagLaserIn7T = aaData[index].flagLaserInSize7T;
+                                                sumSize7T += flagLaserIn7T === 1 ? aaData[index].size7T : 0;
+                                            }else if(departement === 'OutSole'){
                                                 var flagOsIn7T = aaData[index].flagOsInSize7T; 
                                                    sumSize7T += flagOsIn7T === 1 ? aaData[index].size7T : 0;
                                             }
@@ -7333,6 +7403,12 @@
                                             } else if(departement === 'spprep'){
                                                 var flagspprepIn8 = aaData[index].flagspprepInSize8; 
                                                    sumSize8 += flagspprepIn8 === 1 ? aaData[index].size8 : 0;
+                                            } else if(departement === 'label'){
+                                                var flagLabelIn8 = aaData[index].flagLabelInSize8;
+                                                sumSize8 += flagLabelIn8 === 1 ? aaData[index].size8 : 0;
+                                            } else if(departement === 'laser'){
+                                                var flagLaserIn8 = aaData[index].flagLaserInSize8;
+                                                sumSize8 += flagLaserIn8 === 1 ? aaData[index].size8 : 0;
                                             } else if(departement === 'OutSole'){
                                                 var flagOsIn8 = aaData[index].flagOsInSize8; 
                                                    sumSize8 += flagOsIn8 === 1 ? aaData[index].size8 : 0;
@@ -7355,6 +7431,12 @@
                                             } else if(departement === 'spprep'){
                                                 var flagspprepIn8T = aaData[index].flagspprepInSize8T; 
                                                    sumSize8T += flagspprepIn8T === 1 ? aaData[index].size8T : 0;
+                                            } else if(departement === 'label'){
+                                                var flagLabelIn8T = aaData[index].flagLabelInSize8T;
+                                                sumSize8T += flagLabelIn8T === 1 ? aaData[index].size8T : 0;
+                                            } else if(departement === 'laser'){
+                                                var flagLaserIn8T = aaData[index].flagLaserInSize8T;
+                                                sumSize8T += flagLaserIn8T === 1 ? aaData[index].size8T : 0;
                                             } else if(departement === 'OutSole'){
                                                 var flagOsIn8T = aaData[index].flagOsInSize8T; 
                                                    sumSize8T += flagOsIn8T === 1 ? aaData[index].size8T : 0;
@@ -7377,6 +7459,12 @@
                                             } else if(departement === 'spprep'){
                                                 var flagspprepIn9 = aaData[index].flagspprepInSize9; 
                                                    sumSize9 += flagspprepIn9 === 1 ? aaData[index].size9 : 0;
+                                            } else if(departement === 'label'){
+                                                var flagLabelIn9 = aaData[index].flagLabelInSize9;
+                                                sumSize9 += flagLabelIn9 === 1 ? aaData[index].size9 : 0;
+                                            } else if(departement === 'laser'){
+                                                var flagLaserIn9 = aaData[index].flagLaserInSize9;
+                                                sumSize9 += flagLaserIn9 === 1 ? aaData[index].size9 : 0;
                                             } else if(departement === 'OutSole'){
                                                 var flagOsIn9 = aaData[index].flagOsInSize9; 
                                                    sumSize9 += flagOsIn9 === 1 ? aaData[index].size9 : 0;
@@ -7399,6 +7487,12 @@
                                             } else if(departement === 'spprep'){
                                                 var flagspprepIn9T = aaData[index].flagspprepInSize9T; 
                                                    sumSize9T += flagspprepIn9T === 1 ? aaData[index].size9T : 0;
+                                            } else if(departement === 'label'){
+                                                var flagLabelIn9T = aaData[index].flagLabelInSize9T;
+                                                sumSize9T += flagLabelIn9T === 1 ? aaData[index].size9T : 0;
+                                            } else if(departement === 'laser'){
+                                                var flagLaserIn9T = aaData[index].flagLaserInSize9T;
+                                                sumSize9T += flagLaserIn9T === 1 ? aaData[index].size9T : 0;
                                             } else if(departement === 'OutSole'){
                                                 var flagOsIn9T = aaData[index].flagOsInSize9T; 
                                                    sumSize9T += flagOsIn9T === 1 ? aaData[index].size9T : 0;
@@ -7421,6 +7515,12 @@
                                             } else if(departement === 'spprep'){
                                                 var flagspprepIn10 = aaData[index].flagspprepInSize10; 
                                                    sumSize10 += flagspprepIn10 === 1 ? aaData[index].size10 : 0;
+                                            } else if(departement === 'label'){
+                                                var flagLabelIn10 = aaData[index].flagLabelInSize10;
+                                                sumSize10 += flagLabelIn10 === 1 ? aaData[index].size10 : 0;
+                                            } else if(departement === 'laser'){
+                                                var flagLaserIn10 = aaData[index].flagLaserInSize10;
+                                                sumSize10 += flagLaserIn10 === 1 ? aaData[index].size10 : 0;
                                             } else if(departement === 'OutSole'){
                                                 var flagOsIn10 = aaData[index].flagOsInSize10; 
                                                    sumSize10 += flagOsIn10 === 1 ? aaData[index].size10 : 0;
@@ -7443,6 +7543,12 @@
                                             } else if(departement === 'spprep'){
                                                 var flagspprepIn10T = aaData[index].flagspprepInSize10T; 
                                                    sumSize10T += flagspprepIn10T === 1 ? aaData[index].size10T : 0;
+                                            } else if(departement === 'label'){
+                                                var flagLabelIn10T = aaData[index].flagLabelInSize10T;
+                                                sumSize10T += flagLabelIn10T === 1 ? aaData[index].size10T : 0;
+                                            } else if(departement === 'laser'){
+                                                var flagLaserIn10T = aaData[index].flagLaserInSize10T;
+                                                sumSize10T += flagLaserIn10T === 1 ? aaData[index].size10T : 0;
                                             } else if(departement === 'OutSole'){
                                                 var flagOsIn10T = aaData[index].flagOsInSize10T; 
                                                    sumSize10T += flagOsIn10T === 1 ? aaData[index].size10T : 0;
@@ -7459,15 +7565,8 @@
                                             } else if(departement === 'Subcon'){
                                                 var flagScIn11 = aaData[index].flagScInSize11; 
                                                    sumSize11 += flagScIn11 === 1 ? aaData[index].size11 : 0;
-                                            } else if(departement === 'spcut'){
-                                                var flagspcutIn11 = aaData[index].flagspcutInSize11; 
-                                                   sumSize11 += flagspcutIn11 === 1 ? aaData[index].size11 : 0;
-                                            } else if(departement === 'spprep'){
-                                                var flagspprepIn11 = aaData[index].flagspprepInSize11; 
-                                                   sumSize11 += flagspprepIn11 === 1 ? aaData[index].size11 : 0;
-                                            } else if(departement === 'OutSole'){
-                                                var flagOsIn11 = aaData[index].flagOsInSize11; 
-                                                   sumSize11 += flagOsIn11 === 1 ? aaData[index].size11 : 0;
+                                            } else if(departement === 'spcut'){var flagspcutIn11 = aaData[index].flagspcutInSize11; sumSize11 += flagspcutIn11 === 1 ? aaData[index].size11 : 0;} else if(departement === 'spprep'){var flagspprepIn11 = aaData[index].flagspprepInSize11; sumSize11 += flagspprepIn11 === 1 ? aaData[index].size11 : 0;} 
+                                            else if(departement === 'label'){var flagLabelIn11 = aaData[index].flagLabelInSize11; sumSize11 += flagLabelIn11 === 1 ? aaData[index].size11 : 0;} else if(departement === 'laser'){var flagLaserIn11 = aaData[index].flagLaserInSize11; sumSize11 += flagLaserIn11 === 1 ? aaData[index].size11 : 0;} else if(departement === 'OutSole'){var flagOsIn11 = aaData[index].flagOsInSize11; sumSize11 += flagOsIn11 === 1 ? aaData[index].size11 : 0;
                                             }
                                         }, 0);
 
@@ -7487,11 +7586,15 @@
                                             } else if(departement === 'spprep'){
                                                 var flagspprepIn11T = aaData[index].flagspprepInSize11T; 
                                                    sumSize11T += flagspprepIn11T === 1 ? aaData[index].size11T : 0;
-                                            } else if(departement === 'OutSole'){
+                                            } else if(departement === 'label'){
+                                                var flagLabelIn11T = aaData[index].flagLabelInSize11T;
+                                                   sumSize11T += flagLabelIn11T === 1 ? aaData[index].size11T : 0;
+                                            }else if(departement === 'laser'){
+                                                var flagLaserIn11T = aaData[index].flagLaserInSize11T;
+                                            sumSize11T += flagLaserIn11T === 1 ? aaData[index].size11T : 0;} else if(departement === 'OutSole'){
                                                 var flagOsIn11T = aaData[index].flagOsInSize11T; 
                                                    sumSize11T += flagOsIn11T === 1 ? aaData[index].size11T : 0;
-                                            }
-                                        }, 0);
+                                            }}, 0);
 
                             var size12_ = api.cells( function ( index, data, node ) {
                                         if(departement === 'CSC'){
@@ -7509,7 +7612,7 @@
                                             } else if(departement === 'spprep'){
                                                 var flagspprepIn12 = aaData[index].flagspprepInSize12; 
                                                    sumSize12 += flagspprepIn12 === 1 ? aaData[index].size12 : 0;
-                                            } else if(departement === 'OutSole'){
+                                            } else if(departement === 'label'){var flagLabelIn12 = aaData[index].flagLabelInSize12; sumSize12 += flagLabelIn12 === 1 ? aaData[index].size12 : 0;} else if(departement === 'laser'){var flagLaserIn12 = aaData[index].flagLaserInSize12; sumSize12 += flagLaserIn12 === 1 ? aaData[index].size12 : 0;} else if(departement === 'OutSole'){
                                                 var flagOsIn12 = aaData[index].flagOsInSize12; 
                                                    sumSize12 += flagOsIn12 === 1 ? aaData[index].size12 : 0;
                                             }
@@ -7531,7 +7634,7 @@
                                             } else if(departement === 'spprep'){
                                                 var flagspprepIn12T = aaData[index].flagspprepInSize12T; 
                                                    sumSize12T += flagspprepIn12T === 1 ? aaData[index].size12T : 0;
-                                            } else if(departement === 'OutSole'){
+                                            } else if(departement === 'label'){var flagLabelIn12T = aaData[index].flagLabelInSize12T; sumSize12T += flagLabelIn12T === 1 ? aaData[index].size12T : 0;} else if(departement === 'laser'){flagLaserIn12T = aaData[index].flagLaserInSize12T; sumSize12T += flagLaserIn12T === 1 ? aaData[index].size12T : 0;} else if(departement === 'OutSole'){
                                                 var flagOsIn12T = aaData[index].flagOsInSize12T; 
                                                    sumSize12T += flagOsIn12T === 1 ? aaData[index].size12T : 0;
                                             }
@@ -7553,7 +7656,13 @@
                                             } else if(departement === 'spprep'){
                                                 var flagspprepIn13 = aaData[index].flagspprepInSize13; 
                                                    sumSize13 += flagspprepIn13 === 1 ? aaData[index].size13 : 0;
-                                            } else if(departement === 'OutSole'){
+                                            } else if(departement === 'label'){
+                                                var flagLabelIn13 = aaData[index].flagLabelInSize13;
+                                                sumSize13 += flagLabelIn13 === 1 ? aaData[index].size13 : 0;
+                                            } else if(departement === 'laser'){
+                                                var flagLaserIn13 = aaData[index].flagLaserInSize13;
+                                                sumSize13 += flagLaserIn13 === 1 ? aaData[index].size13 : 0;
+                                            }else if(departement === 'OutSole'){
                                                 var flagOsIn13 = aaData[index].flagOsInSize13; 
                                                    sumSize13 += flagOsIn13 === 1 ? aaData[index].size13 : 0;
                                             }
@@ -7575,7 +7684,8 @@
                                             } else if(departement === 'spprep'){
                                                 var flagspprepIn13T = aaData[index].flagspprepInSize13T; 
                                                    sumSize13T += flagspprepIn13T === 1 ? aaData[index].size13T : 0;
-                                            } else if(departement === 'OutSole'){
+                                            }  else if(departement === 'label'){var flagLabelIn13T = aaData[index].flagLabelInSize13T; sumSize13T += flagLabelIn13T === 1 ? aaData[index].size13T : 0;} else if(departement === 'laser'){var flagLaserIn13T = aaData[index].flagLaserInSize13T; sumSize13T += flagLaserIn13T === 1 ? aaData[index].size13T : 0;
+                                            }else if(departement === 'OutSole'){
                                                 var flagOsIn13T = aaData[index].flagOsInSize13T; 
                                                    sumSize13T += flagOsIn13T === 1 ? aaData[index].size13T : 0;
                                             }
@@ -7597,9 +7707,8 @@
                                             } else if(departement === 'spprep'){
                                                 var flagspprepIn14 = aaData[index].flagspprepInSize14; 
                                                    sumSize14 += flagspprepIn14 === 1 ? aaData[index].size14 : 0;
-                                            } else if(departement === 'OutSole'){
-                                                var flagOsIn14 = aaData[index].flagOsInSize14; 
-                                                   sumSize14 += flagOsIn14 === 1 ? aaData[index].size14 : 0;
+                                            } else if(departement === 'label'){var flagLabelIn14 = aaData[index].flagLabelInSize14;sumSize14 += flagLabelIn14 === 1 ? aaData[index].size14 : 0;
+                                            } else if(departement === 'laser'){var flagLaserIn14 = aaData[index].flagLaserInSize14; sumSize14 += flagLaserIn14 === 1 ? aaData[index].size14 : 0;}else if(departement === 'OutSole'){var flagOsIn14 = aaData[index].flagOsInSize14; sumSize14 += flagOsIn14 === 1 ? aaData[index].size14 : 0;
                                             }
                                         }, 0);
 
@@ -7619,10 +7728,9 @@
                                             } else if(departement === 'spprep'){
                                                 var flagspprepIn15 = aaData[index].flagspprepInSize15; 
                                                    sumSize15 += flagspprepIn15 === 1 ? aaData[index].size15 : 0;
-                                            } else if(departement === 'OutSole'){
-                                                var flagOsIn15 = aaData[index].flagOsInSize15; 
-                                                   sumSize15 += flagOsIn15 === 1 ? aaData[index].size15 : 0;
-                                            }
+                                            } else if(departement === 'label'){var flagLabelIn15 = aaData[index].flagLabelInSize15;sumSize15 += flagLabelIn15 === 1 ? aaData[index].size15 : 0;
+                                            } else if(departement === 'laser'){var flagLaserIn15 = aaData[index].flagLaserInSize15;sumSize15 += flagLaserIn15 === 1 ? aaData[index].size15 : 0;
+                                            }else if(departement === 'OutSole'){var flagOsIn15 = aaData[index].flagOsInSize15; sumSize15 += flagOsIn15 === 1 ? aaData[index].size15 : 0;}
                                         }, 0);
 
                             var size16_ = api.cells( function ( index, data, node ) {
@@ -7638,10 +7746,10 @@
                                             } else if(departement === 'spcut'){
                                                 var flagspcutIn16 = aaData[index].flagspcutInSize16; 
                                                    sumSize16 += flagspcutIn16 === 1 ? aaData[index].size16 : 0;
-                                            } else if(departement === 'spprep'){
-                                                var flagspprepIn16 = aaData[index].flagspprepInSize16; 
-                                                   sumSize16 += flagspprepIn16 === 1 ? aaData[index].size16 : 0;
-                                            } else {
+                                            } else if(departement === 'spprep'){var flagspprepIn16 = aaData[index].flagspprepInSize16; sumSize16 += flagspprepIn16 === 1 ? aaData[index].size16 : 0;
+                                            } else if(departement === 'label'){var flagLabelIn16 = aaData[index].flagLabelInSize16;sumSize16 += flagLabelIn16 === 1 ? aaData[index].size16 : 0;
+                                            } else if(departement === 'laser'){var flagLaserIn16 = aaData[index].flagLaserInSize16;sumSize16 += flagLaserIn16 === 1 ? aaData[index].size16 : 0;
+                                            } else if(departement === 'OutSole'){
                                                 var flagOsIn16 = aaData[index].flagOsInSize16; 
                                                    sumSize16 += flagOsIn16 === 1 ? aaData[index].size16 : 0;
                                             }
@@ -7660,10 +7768,10 @@
                                             } else if(departement === 'spcut'){
                                                 var flagspcutIn17 = aaData[index].flagspcutInSize17; 
                                                    sumSize17 += flagspcutIn17 === 1 ? aaData[index].size17 : 0;
-                                            } else if(departement === 'spprep'){
-                                                var flagspprepIn17 = aaData[index].flagspprepInSize17; 
-                                                   sumSize17 += flagspprepIn17 === 1 ? aaData[index].size17 : 0;
-                                            } else if(departement === 'OutSole'){
+                                            } else if(departement === 'spprep'){var flagspprepIn17 = aaData[index].flagspprepInSize17; sumSize17 += flagspprepIn17 === 1 ? aaData[index].size17 : 0;
+                                            } else if(departement === 'label'){var flagLabelIn17 = aaData[index].flagLabelInSize17;sumSize17 += flagLabelIn17 === 1 ? aaData[index].size17 : 0;
+                                            } else if(departement === 'laser'){var flagLaserIn17 = aaData[index].flagLaserInSize17;sumSize17 += flagLaserIn17 === 1 ? aaData[index].size17 : 0;
+                                            }else if(departement === 'OutSole'){
                                                 var flagOsIn17 = aaData[index].flagOsInSize17; 
                                                    sumSize17 += flagOsIn17 === 1 ? aaData[index].size17 : 0;
                                             }
@@ -7682,10 +7790,10 @@
                                             } else if(departement === 'spcut'){
                                                 var flagspcutIn18 = aaData[index].flagspcutInSize18; 
                                                    sumSize18 += flagspcutIn18 === 1 ? aaData[index].size18 : 0;
-                                            } else if(departement === 'spprep'){
-                                                var flagspprepIn18 = aaData[index].flagspprepInSize18; 
-                                                   sumSize18 += flagspprepIn18 === 1 ? aaData[index].size18 : 0;
-                                            } else if(departement === 'OutSole'){
+                                            } else if(departement === 'spprep'){var flagspprepIn18 = aaData[index].flagspprepInSize18; sumSize18 += flagspprepIn18 === 1 ? aaData[index].size18 : 0;
+                                            } else if(departement === 'label'){var flagLabelIn18 = aaData[index].flagLabelInSize18;sumSize18 += flagLabelIn18 === 1 ? aaData[index].size18 : 0;
+                                            } else if(departement === 'laser'){var flagLaserIn18 = aaData[index].flagLaserInSize18;sumSize18 += flagLaserIn18 === 1 ? aaData[index].size18 : 0;
+                                            }else if(departement === 'OutSole'){
                                                 var flagOsIn18 = aaData[index].flagOsInSize18; 
                                                    sumSize18 += flagOsIn18 === 1 ? aaData[index].size18 : 0;
                                             }
@@ -7726,10 +7834,6 @@
                             var sumSize16 = isNull(data[x].size16);
                             var sumSize17 = isNull(data[x].size17);
                             var sumSize18 = isNull(data[x].size18);
-                            jumlah[x] = sumSize1 + sumSize1T + sumSize2 + sumSize2T + sumSize3 + sumSize3T + sumSize4 + sumSize4T +
-                                    sumSize5 + sumSize5T + sumSize6 + sumSize6T + sumSize7 + sumSize7T + sumSize8 + sumSize8T +
-                                    sumSize9 + sumSize9T + sumSize10 + sumSize10T + sumSize11 + sumSize11T + sumSize12 + sumSize12T +
-                                    sumSize13 + sumSize13T + sumSize14 + sumSize15 + sumSize16 + sumSize17 + sumSize18;
                         }
                         rowSum = sumSize1 + sumSize1T + sumSize2 + sumSize2T + sumSize3 + sumSize3T + sumSize4 + sumSize4T +
                                     sumSize5 + sumSize5T + sumSize6 + sumSize6T + sumSize7 + sumSize7T + sumSize8 + sumSize8T +
@@ -8050,13 +8154,8 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="main-header">
-                        <ul class="breadcrumb">
-                            <li><i class="fa fa-home"></i></li>
-                            <li>Production</li>
-                            <li><a href="${pageContext.request.contextPath}/operator/lotbasis/">LOT Basis</a></li>
-                            <li class="active">Detail</li>
-                        </ul>
-                        <h3><i class="fa fa-file-o fa-fw"></i> LOT Basis </h3><em>Operator | </em><em id="proses">| </em><em> | ${produksi.lineCode} | </em><em id="area"> </em>
+                        <ul class="breadcrumb"><li><i class="fa fa-home"></i></li><li>Production</li><li><a href="${pageContext.request.contextPath}/operator/lotbasis/">LOT Basis</a></li><li class="active">Detail</li></ul>
+                        <h3><i class="fa fa-file-o fa-fw"></i> LOT Basis </h3><em>Operator | </em><em id="proses"> ${type} </em><em> | ${produksi.lineCode} | </em><em id="area"> ${departement} </em>
                     </div>
                 </div>
                 <div class="col-lg-8 ">
@@ -8231,81 +8330,9 @@
                                 <div class="table-responsive border-white">
                                     <table id="dataTable"
                                            class="table table-striped table-bordered table-hover table-full-width">
-                                        <thead>
-                                            <tr>
-                                                <th>Id</th>
-                                                <th>G</th>
-                                                <th>1</th>
-                                                <th>2</th>
-                                                <th>3</th>
-                                                <th>4</th>
-                                                <th>5</th>
-                                                <th>6</th>
-                                                <th>7</th>
-                                                <th>8</th>
-                                                <th>9</th>
-                                                <th>10</th>
-                                                <th>11</th>
-                                                <th>12</th>
-                                                <th>13</th>
-                                                <th>14</th>
-                                                <th>15</th>
-                                                <th>16</th>
-                                                <th>17</th>
-                                                <th>18</th>
-                                                <th>1T</th>
-                                                <th>2T</th>
-                                                <th>3T</th>
-                                                <th>4T</th>
-                                                <th>5T</th>
-                                                <th>6T</th>
-                                                <th>7T</th>
-                                                <th>8T</th>
-                                                <th>9T</th>
-                                                <th>10T</th>
-                                                <th>11T</th>
-                                                <th>12T</th>
-                                                <th>13T</th>
-                                                <th>Sum</th>
-                                            </tr>
-                                        </thead>
+                                        <thead><tr><th>Id</th><th>G</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>12</th><th>13</th><th>14</th><th>15</th><th>16</th><th>17</th><th>18</th><th>1T</th><th>2T</th><th>3T</th><th>4T</th><th>5T</th><th>6T</th><th>7T</th><th>8T</th><th>9T</th><th>10T</th><th>11T</th><th>12T</th><th>13T</th><th>Sum</th></tr></thead>
                                         <tfoot align="right">
-                                            <tr>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                            </tr>
+                                            <tr><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th></tr>
                                         </tfoot>
                                     </table>
                                     <div class="form-group">
@@ -8335,44 +8362,7 @@
                             </div>
                             <div class="widget widget-table">
                                 <div class="table-responsive border-white">
-                                    <table id="dataTableKanban" class="table table-striped table-bordered table-hover table-full-width">
-                                        <thead>
-                                            <tr>
-                                                <th>G</th>
-                                                <th>1</th>
-                                                <th>2</th>
-                                                <th>3</th>
-                                                <th>4</th>
-                                                <th>5</th>
-                                                <th>6</th>
-                                                <th>7</th>
-                                                <th>8</th>
-                                                <th>9</th>
-                                                <th>10</th>
-                                                <th>11</th>
-                                                <th>12</th>
-                                                <th>13</th>
-                                                <th>14</th>
-                                                <th>15</th>
-                                                <th>16</th>
-                                                <th>17</th>
-                                                <th>18</th>
-                                                <th>1T</th>
-                                                <th>2T</th>
-                                                <th>3T</th>
-                                                <th>4T</th>
-                                                <th>5T</th>
-                                                <th>6T</th>
-                                                <th>7T</th>
-                                                <th>8T</th>
-                                                <th>9T</th>
-                                                <th>10T</th>
-                                                <th>11T</th>
-                                                <th>12T</th>
-                                                <th>13T</th>
-                                            </tr>
-                                        </thead>
-                                    </table>
+                                    <table id="dataTableKanban" class="table table-striped table-bordered table-hover table-full-width"><thead><tr><th>G</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>12</th><th>13</th><th>14</th><th>15</th><th>16</th><th>17</th><th>18</th><th>1T</th><th>2T</th><th>3T</th><th>4T</th><th>5T</th><th>6T</th><th>7T</th><th>8T</th><th>9T</th><th>10T</th><th>11T</th><th>12T</th><th>13T</th></tr></thead></table>
                                 </div>
                             </div>
                         </div>
