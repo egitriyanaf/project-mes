@@ -12,10 +12,10 @@
                             "lineCode": $("#lineCodeId").val(),
                             "poNo": $("#ponoId").val(),
                             "poItem": $("#poitemId").val(),
-                            "hourly": $("#hourlyId").val(),
+                            "hourly": $("#hourlyId").val()
                         }
                     };
-                    if (value != "") {
+                    if (value !== "") {
                         $(this).attr("disabled", "disabled");
                         $("#hourlyLabel").html("Hourly <span class=\"required\">*</span> " +
                                 "<i class=\"fa fa-spinner fa-spin\"></i> " +

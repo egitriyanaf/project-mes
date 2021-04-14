@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jdbcDataAdapter class="net.sf.jasperreports.data.jdbc.JdbcDataAdapterImpl"><name>report</name><driver>org.postgresql.Driver</driver><username>postgres</username><password>JdC4dP@2019!!</password><savePassword>true</savePassword><url>jdbc:postgresql://10.1.2.236:5432/jdc_adp</url><database></database><serverAddress></serverAddress></jdbcDataAdapter>
