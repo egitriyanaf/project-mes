@@ -1,9 +1,3 @@
-<%-- 
-    Document   : adplotoperator-detail
-    Created on : Apr 19, 2021, 12:13:08 PM
-    Author     : Egi
---%>
-
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <!DOCTYPE html>
@@ -45,36 +39,36 @@
                     "aoColumns": [
                         {"mDataProp": "hourly", "bSortable": false},
                         {"mDataProp": "size1", "bSortable": false},
+                        {"mDataProp": "size1T", "bSortable": false},
                         {"mDataProp": "size2", "bSortable": false},
+                        {"mDataProp": "size2T", "bSortable": false},
                         {"mDataProp": "size3", "bSortable": false},
+                        {"mDataProp": "size3T", "bSortable": false},
                         {"mDataProp": "size4", "bSortable": false},
+                        {"mDataProp": "size4T", "bSortable": false},
                         {"mDataProp": "size5", "bSortable": false},
+                        {"mDataProp": "size5T", "bSortable": false},
                         {"mDataProp": "size6", "bSortable": false},
+                        {"mDataProp": "size6T", "bSortable": false},
                         {"mDataProp": "size7", "bSortable": false},
+                        {"mDataProp": "size7T", "bSortable": false},
                         {"mDataProp": "size8", "bSortable": false},
+                        {"mDataProp": "size8T", "bSortable": false},
                         {"mDataProp": "size9", "bSortable": false},
+                        {"mDataProp": "size9T", "bSortable": false},
                         {"mDataProp": "size10", "bSortable": false},
+                        {"mDataProp": "size10T", "bSortable": false},
                         {"mDataProp": "size11", "bSortable": false},
+                        {"mDataProp": "size11T", "bSortable": false},
                         {"mDataProp": "size12", "bSortable": false},
+                        {"mDataProp": "size12T", "bSortable": false},
                         {"mDataProp": "size13", "bSortable": false},
+                        {"mDataProp": "size13T", "bSortable": false},
                         {"mDataProp": "size14", "bSortable": false},
                         {"mDataProp": "size15", "bSortable": false},
                         {"mDataProp": "size16", "bSortable": false},
                         {"mDataProp": "size17", "bSortable": false},
-                        {"mDataProp": "size18", "bSortable": false},
-                        {"mDataProp": "size1T", "bSortable": false},
-                        {"mDataProp": "size2T", "bSortable": false},
-                        {"mDataProp": "size3T", "bSortable": false},
-                        {"mDataProp": "size4T", "bSortable": false},
-                        {"mDataProp": "size5T", "bSortable": false},
-                        {"mDataProp": "size6T", "bSortable": false},
-                        {"mDataProp": "size7T", "bSortable": false},
-                        {"mDataProp": "size8T", "bSortable": false},
-                        {"mDataProp": "size9T", "bSortable": false},
-                        {"mDataProp": "size10T", "bSortable": false},
-                        {"mDataProp": "size11T", "bSortable": false},
-                        {"mDataProp": "size12T", "bSortable": false},
-                        {"mDataProp": "size13T", "bSortable": false}
+                        {"mDataProp": "size18", "bSortable": false}
                     ],
                     "aoColumnDefs": [
                         {
@@ -105,7 +99,7 @@
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size1T + ' </span></a>';
                                 }
                             },
-                            "aTargets": [19]
+                            "aTargets": [2]
                         },
                         {
                             class: "text-center",
@@ -120,7 +114,7 @@
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size2 + ' </span></a>';
                                 }
                             },
-                            "aTargets": [2]
+                            "aTargets": [3]
                         },
                         {
                             class: "text-center",
@@ -135,7 +129,7 @@
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size2T + ' </span></a>';
                                 }
                             },
-                            "aTargets": [20]
+                            "aTargets": [4]
                         },
                         {
                             class: "text-center",
@@ -150,7 +144,7 @@
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size3 + ' </span></a>';
                                 }
                             },
-                            "aTargets": [3]
+                            "aTargets": [5]
                         },
                         {
                             class: "text-center",
@@ -165,7 +159,7 @@
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size3T + ' </span></a>';
                                 }
                             },
-                            "aTargets": [21]
+                            "aTargets": [6]
                         },
                         {
                             class: "text-center",
@@ -180,7 +174,7 @@
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size4 + ' </span></a>';
                                 }
                             },
-                            "aTargets": [4]
+                            "aTargets": [7]
                         },
                         {
                             class: "text-center",
@@ -195,7 +189,7 @@
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size4T + ' </span></a>';
                                 }
                             },
-                            "aTargets": [22]
+                            "aTargets": [8]
                         },
                         {
                             class: "text-center",
@@ -210,7 +204,7 @@
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size5 + ' </span></a>';
                                 }
                             },
-                            "aTargets": [5]
+                            "aTargets": [9]
                         },
                         {
                             class: "text-center",
@@ -225,7 +219,7 @@
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size5T + ' </span></a>';
                                 }
                             },
-                            "aTargets": [23]
+                            "aTargets": [10]
                         },
                         {
                             class: "text-center",
@@ -240,7 +234,7 @@
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size6 + ' </span></a>';
                                 }
                             },
-                            "aTargets": [6]
+                            "aTargets": [11]
                         },
                         {
                             class: "text-center",
@@ -255,7 +249,7 @@
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size6T + ' </span></a>';
                                 }
                             },
-                            "aTargets": [24]
+                            "aTargets": [12]
                         },
                         {
                             class: "text-center",
@@ -270,7 +264,7 @@
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size7 + ' </span></a>';
                                 }
                             },
-                            "aTargets": [7]
+                            "aTargets": [13]
                         },
                         {
                             class: "text-center",
@@ -285,7 +279,7 @@
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size7T + ' </span></a>';
                                 }
                             },
-                            "aTargets": [25]
+                            "aTargets": [14]
                         },
                         {
                             class: "text-center",
@@ -300,7 +294,7 @@
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size8 + ' </span></a>';
                                 }
                             },
-                            "aTargets": [8]
+                            "aTargets": [15]
                         },
                         {
                             class: "text-center",
@@ -315,7 +309,7 @@
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size8T + ' </span></a>';
                                 }
                             },
-                            "aTargets": [26]
+                            "aTargets": [16]
                         },
                         {
                             class: "text-center",
@@ -330,7 +324,7 @@
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size9 + ' </span></a>';
                                 }
                             },
-                            "aTargets": [9]
+                            "aTargets": [17]
                         },
                         {
                             class: "text-center",
@@ -345,7 +339,7 @@
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size9T + ' </span></a>';
                                 }
                             },
-                            "aTargets": [27]
+                            "aTargets": [18]
                         },
                         {
                             class: "text-center",
@@ -360,7 +354,7 @@
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size10 + ' </span></a>';
                                 }
                             },
-                            "aTargets": [10]
+                            "aTargets": [19]
                         },
                         {
                             class: "text-center",
@@ -375,7 +369,7 @@
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size10T + ' </span></a>';
                                 }
                             },
-                            "aTargets": [28]
+                            "aTargets": [20]
                         },
                         {
                             class: "text-center",
@@ -390,7 +384,7 @@
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size11 + ' </span></a>';
                                 }
                             },
-                            "aTargets": [11]
+                            "aTargets": [21]
                         },
                         {
                             class: "text-center",
@@ -405,7 +399,7 @@
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size11T + ' </span></a>';
                                 }
                             },
-                            "aTargets": [29]
+                            "aTargets": [22]
                         },
                         {
                             class: "text-center",
@@ -420,7 +414,7 @@
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size12 + ' </span></a>';
                                 }
                             },
-                            "aTargets": [12]
+                            "aTargets": [23]
                         },
                         {
                             class: "text-center",
@@ -435,7 +429,7 @@
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size12T + ' </span></a>';
                                 }
                             },
-                            "aTargets": [30]
+                            "aTargets": [24]
                         },
                         {
                             class: "text-center",
@@ -450,7 +444,7 @@
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size13 + ' </span></a>';
                                 }
                             },
-                            "aTargets": [13]
+                            "aTargets": [25]
                         },
                         {
                             class: "text-center",
@@ -465,7 +459,7 @@
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size13T + ' </span></a>';
                                 }
                             },
-                            "aTargets": [31]
+                            "aTargets": [26]
                         },
                         {
                             class: "text-center",
@@ -480,7 +474,7 @@
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size14 + ' </span></a>';
                                 }
                             },
-                            "aTargets": [14]
+                            "aTargets": [27]
                         },
                         {
                             class: "text-center",
@@ -495,7 +489,7 @@
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size15 + ' </span></a>';
                                 }
                             },
-                            "aTargets": [15]
+                            "aTargets": [28]
                         },
                         {
                             class: "text-center",
@@ -510,7 +504,7 @@
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size16 + ' </span></a>';
                                 }
                             },
-                            "aTargets": [16]
+                            "aTargets": [29]
                         },
                         {
                             class: "text-center",
@@ -525,7 +519,7 @@
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size17 + ' </span></a>';
                                 }
                             },
-                            "aTargets": [17]
+                            "aTargets": [30]
                         },
                         {
                             class: "text-center",
@@ -540,7 +534,7 @@
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size18 + ' </span></a>';
                                 }
                             },
-                            "aTargets": [18]
+                            "aTargets": [31]
                         }
                     ]
                 });
@@ -572,36 +566,36 @@
                     "aoColumns": [
                         {"mDataProp": "hourly", "bSortable": false},
                         {"mDataProp": "size1", "bSortable": false},
+                        {"mDataProp": "size1T", "bSortable": false},
                         {"mDataProp": "size2", "bSortable": false},
+                        {"mDataProp": "size2T", "bSortable": false},
                         {"mDataProp": "size3", "bSortable": false},
+                        {"mDataProp": "size3T", "bSortable": false},
                         {"mDataProp": "size4", "bSortable": false},
+                        {"mDataProp": "size4T", "bSortable": false},
                         {"mDataProp": "size5", "bSortable": false},
+                        {"mDataProp": "size5T", "bSortable": false},
                         {"mDataProp": "size6", "bSortable": false},
+                        {"mDataProp": "size6T", "bSortable": false},
                         {"mDataProp": "size7", "bSortable": false},
+                        {"mDataProp": "size7T", "bSortable": false},
                         {"mDataProp": "size8", "bSortable": false},
+                        {"mDataProp": "size8T", "bSortable": false},
                         {"mDataProp": "size9", "bSortable": false},
+                        {"mDataProp": "size9T", "bSortable": false},
                         {"mDataProp": "size10", "bSortable": false},
+                        {"mDataProp": "size10T", "bSortable": false},
                         {"mDataProp": "size11", "bSortable": false},
+                        {"mDataProp": "size11T", "bSortable": false},
                         {"mDataProp": "size12", "bSortable": false},
+                        {"mDataProp": "size12T", "bSortable": false},
                         {"mDataProp": "size13", "bSortable": false},
+                        {"mDataProp": "size13T", "bSortable": false},
                         {"mDataProp": "size14", "bSortable": false},
                         {"mDataProp": "size15", "bSortable": false},
                         {"mDataProp": "size16", "bSortable": false},
                         {"mDataProp": "size17", "bSortable": false},
-                        {"mDataProp": "size18", "bSortable": false},
-                        {"mDataProp": "size1T", "bSortable": false},
-                        {"mDataProp": "size2T", "bSortable": false},
-                        {"mDataProp": "size3T", "bSortable": false},
-                        {"mDataProp": "size4T", "bSortable": false},
-                        {"mDataProp": "size5T", "bSortable": false},
-                        {"mDataProp": "size6T", "bSortable": false},
-                        {"mDataProp": "size7T", "bSortable": false},
-                        {"mDataProp": "size8T", "bSortable": false},
-                        {"mDataProp": "size9T", "bSortable": false},
-                        {"mDataProp": "size10T", "bSortable": false},
-                        {"mDataProp": "size11T", "bSortable": false},
-                        {"mDataProp": "size12T", "bSortable": false},
-                        {"mDataProp": "size13T", "bSortable": false}
+                        {"mDataProp": "size18", "bSortable": false}
                     ]
                 });
 
@@ -610,20 +604,21 @@
             });
         </script>
     </head>
-        <style>
-            .labellot {
-                display: inline;
-                padding: .2em .6em .3em;
-                font-size: 75%;
-                font-weight: 700;
-                line-height: 1;
-                color: #000;
-                text-align: center;
-                white-space: nowrap;
-                vertical-align: baseline;
-                border-radius: .25em;
-            }
-        </style>
+    <style>
+
+        .labellot {
+            display: inline;
+            padding: .2em .6em .3em;
+            font-size: 75%;
+            font-weight: 700;
+            line-height: 1;
+            color: #000;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: baseline;
+            border-radius: .25em;
+        }
+    </style>
     <body>
         <div class="content">
             <div class="row">

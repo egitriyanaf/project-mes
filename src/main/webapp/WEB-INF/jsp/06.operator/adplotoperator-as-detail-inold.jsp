@@ -1,9 +1,3 @@
-<%-- 
-    Document   : adplotoperator-as-detail-in
-    Created on : Apr 19, 2021, 9:31:29 AM
-    Author     : Egi
---%>
-
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <!DOCTYPE html>
@@ -47,36 +41,36 @@
                         {"mDataProp": "id", "bSortable": false},
                         {"mDataProp": "hourly", "bSortable": false},
                         {"mDataProp": "size1", "bSortable": false},
+                        {"mDataProp": "size1T", "bSortable": false},
                         {"mDataProp": "size2", "bSortable": false},
+                        {"mDataProp": "size2T", "bSortable": false},
                         {"mDataProp": "size3", "bSortable": false},
+                        {"mDataProp": "size3T", "bSortable": false},
                         {"mDataProp": "size4", "bSortable": false},
+                        {"mDataProp": "size4T", "bSortable": false},
                         {"mDataProp": "size5", "bSortable": false},
+                        {"mDataProp": "size5T", "bSortable": false},
                         {"mDataProp": "size6", "bSortable": false},
+                        {"mDataProp": "size6T", "bSortable": false},
                         {"mDataProp": "size7", "bSortable": false},
+                        {"mDataProp": "size7T", "bSortable": false},
                         {"mDataProp": "size8", "bSortable": false},
+                        {"mDataProp": "size8T", "bSortable": false},
                         {"mDataProp": "size9", "bSortable": false},
+                        {"mDataProp": "size9T", "bSortable": false},
                         {"mDataProp": "size10", "bSortable": false},
+                        {"mDataProp": "size10T", "bSortable": false},
                         {"mDataProp": "size11", "bSortable": false},
+                        {"mDataProp": "size11T", "bSortable": false},
                         {"mDataProp": "size12", "bSortable": false},
+                        {"mDataProp": "size12T", "bSortable": false},
                         {"mDataProp": "size13", "bSortable": false},
+                        {"mDataProp": "size13T", "bSortable": false},
                         {"mDataProp": "size14", "bSortable": false},
                         {"mDataProp": "size15", "bSortable": false},
                         {"mDataProp": "size16", "bSortable": false},
                         {"mDataProp": "size17", "bSortable": false},
                         {"mDataProp": "size18", "bSortable": false},
-                        {"mDataProp": "size1T", "bSortable": false},
-                        {"mDataProp": "size2T", "bSortable": false},
-                        {"mDataProp": "size3T", "bSortable": false},
-                        {"mDataProp": "size4T", "bSortable": false},
-                        {"mDataProp": "size5T", "bSortable": false},
-                        {"mDataProp": "size6T", "bSortable": false},
-                        {"mDataProp": "size7T", "bSortable": false},
-                        {"mDataProp": "size8T", "bSortable": false},
-                        {"mDataProp": "size9T", "bSortable": false},
-                        {"mDataProp": "size10T", "bSortable": false},
-                        {"mDataProp": "size11T", "bSortable": false},
-                        {"mDataProp": "size12T", "bSortable": false},
-                        {"mDataProp": "size13T", "bSortable": false},
                         {"mDataProp": fnBlank, "bSortable": false}
                     ],
                     "aoColumnDefs": [
@@ -135,7 +129,7 @@
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-reject" class="viewData" id = "' + row.id + '" size1T = "' + row.size1T + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-warning">  ' + row.size1T + ' </span></a>';
                                 }
                             },
-                            "aTargets": [20]
+                            "aTargets": [3]
                         },
                         {
                             class: "text-center",
@@ -152,7 +146,7 @@
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-reject" class="viewData" id = "' + row.id + '" size2 = "' + row.size2 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-warning">  ' + row.size2 + ' </span></a>';
                                 }
                             },
-                            "aTargets": [3]
+                            "aTargets": [4]
                         },
                         {
                             class: "text-center",
@@ -169,7 +163,7 @@
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-reject" class="viewData" id = "' + row.id + '" size2T = "' + row.size2T + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-warning">  ' + row.size2T + ' </span></a>';
                                 }
                             },
-                            "aTargets": [21]
+                            "aTargets": [5]
                         },
                         {
                             class: "text-center",
@@ -186,7 +180,7 @@
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-reject" class="viewData" id = "' + row.id + '" size3 = "' + row.size3 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-warning">  ' + row.size3 + ' </span></a>';
                                 }
                             },
-                            "aTargets": [4]
+                            "aTargets": [6]
                         },
                         {
                             class: "text-center",
@@ -203,7 +197,7 @@
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-reject" class="viewData" id = "' + row.id + '" size3T = "' + row.size3T + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-warning">  ' + row.size3T + ' </span></a>';
                                 }
                             },
-                            "aTargets": [22]
+                            "aTargets": [7]
                         },
                         {
                             class: "text-center",
@@ -220,7 +214,7 @@
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-reject" class="viewData" id = "' + row.id + '" size4 = "' + row.size4 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-warning">  ' + row.size4 + ' </span></a>';
                                 }
                             },
-                            "aTargets": [5]
+                            "aTargets": [8]
                         },
                         {
                             class: "text-center",
@@ -237,7 +231,7 @@
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-reject" class="viewData" id = "' + row.id + '" size4T = "' + row.size4T + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-warning">  ' + row.size4T + ' </span></a>';
                                 }
                             },
-                            "aTargets": [23]
+                            "aTargets": [9]
                         },
                         {
                             class: "text-center",
@@ -254,7 +248,7 @@
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-reject" class="viewData" id = "' + row.id + '" size5 = "' + row.size5 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-warning">  ' + row.size5 + ' </span></a>';
                                 }
                             },
-                            "aTargets": [6]
+                            "aTargets": [10]
                         },
                         {
                             class: "text-center",
@@ -271,7 +265,7 @@
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-reject" class="viewData" id = "' + row.id + '" size5T = "' + row.size5T + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-warning">  ' + row.size5T + ' </span></a>';
                                 }
                             },
-                            "aTargets": [24]
+                            "aTargets": [11]
                         },
                         {
                             class: "text-center",
@@ -288,7 +282,7 @@
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-reject" class="viewData" id = "' + row.id + '" size6 = "' + row.size6 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-warning">  ' + row.size6 + ' </span></a>';
                                 }
                             },
-                            "aTargets": [7]
+                            "aTargets": [12]
                         },
                         {
                             class: "text-center",
@@ -305,7 +299,7 @@
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-reject" class="viewData" id = "' + row.id + '" size6T = "' + row.size6T + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-warning">  ' + row.size6T + ' </span></a>';
                                 }
                             },
-                            "aTargets": [25]
+                            "aTargets": [13]
                         },
                         {
                             class: "text-center",
@@ -322,7 +316,7 @@
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-reject" class="viewData" id = "' + row.id + '" size7 = "' + row.size7 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-warning">  ' + row.size7 + ' </span></a>';
                                 }
                             },
-                            "aTargets": [8]
+                            "aTargets": [14]
                         },
                         {
                             class: "text-center",
@@ -339,7 +333,7 @@
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-reject" class="viewData" id = "' + row.id + '" size7T = "' + row.size7T + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-warning">  ' + row.size7T + ' </span></a>';
                                 }
                             },
-                            "aTargets": [26]
+                            "aTargets": [15]
                         },
                         {
                             class: "text-center",
@@ -356,7 +350,7 @@
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-reject" class="viewData" id = "' + row.id + '" size8 = "' + row.size8 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-warning">  ' + row.size8 + ' </span></a>';
                                 }
                             },
-                            "aTargets": [9]
+                            "aTargets": [16]
                         },
                         {
                             class: "text-center",
@@ -373,7 +367,7 @@
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-reject" class="viewData" id = "' + row.id + '" size8T = "' + row.size8T + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-warning">  ' + row.size8T + ' </span></a>';
                                 }
                             },
-                            "aTargets": [27]
+                            "aTargets": [17]
                         },
                         {
                             class: "text-center",
@@ -390,7 +384,7 @@
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-reject" class="viewData" id = "' + row.id + '" size9 = "' + row.size9 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-warning">  ' + row.size9 + ' </span></a>';
                                 }
                             },
-                            "aTargets": [10]
+                            "aTargets": [18]
                         },
                         {
                             class: "text-center",
@@ -407,7 +401,7 @@
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-reject" class="viewData" id = "' + row.id + '" size9T = "' + row.size9T + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-warning">  ' + row.size9T + ' </span></a>';
                                 }
                             },
-                            "aTargets": [28]
+                            "aTargets": [19]
                         },
                         {
                             class: "text-center",
@@ -424,7 +418,7 @@
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-reject" class="viewData" id = "' + row.id + '" size10 = "' + row.size10 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-warning">  ' + row.size10 + ' </span></a>';
                                 }
                             },
-                            "aTargets": [11]
+                            "aTargets": [20]
                         },
                         {
                             class: "text-center",
@@ -441,7 +435,7 @@
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-reject" class="viewData" id = "' + row.id + '" size10T = "' + row.size10T + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-warning">  ' + row.size10T + ' </span></a>';
                                 }
                             },
-                            "aTargets": [29]
+                            "aTargets": [21]
                         },
                         {
                             class: "text-center",
@@ -458,7 +452,7 @@
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-reject" class="viewData" id = "' + row.id + '" size11 = "' + row.size11 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-warning">  ' + row.size11 + ' </span></a>';
                                 }
                             },
-                            "aTargets": [12]
+                            "aTargets": [22]
                         },
                         {
                             class: "text-center",
@@ -475,7 +469,7 @@
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-reject" class="viewData" id = "' + row.id + '" size11T = "' + row.size11T + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-warning">  ' + row.size11T + ' </span></a>';
                                 }
                             },
-                            "aTargets": [30]
+                            "aTargets": [23]
                         },
                         {
                             class: "text-center",
@@ -492,7 +486,7 @@
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-reject" class="viewData" id = "' + row.id + '" size12 = "' + row.size12 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-warning">  ' + row.size12 + ' </span></a>';
                                 }
                             },
-                            "aTargets": [13]
+                            "aTargets": [24]
                         },
                         {
                             class: "text-center",
@@ -509,7 +503,7 @@
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-reject" class="viewData" id = "' + row.id + '" size12T = "' + row.size12T + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-warning">  ' + row.size12T + ' </span></a>';
                                 }
                             },
-                            "aTargets": [31]
+                            "aTargets": [25]
                         },
                         {
                             class: "text-center",
@@ -526,7 +520,7 @@
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-reject" class="viewData" id = "' + row.id + '" size13 = "' + row.size13 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-warning">  ' + row.size13 + ' </span></a>';
                                 }
                             },
-                            "aTargets": [14]
+                            "aTargets": [26]
                         },
                         {
                             class: "text-center",
@@ -543,7 +537,7 @@
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-reject" class="viewData" id = "' + row.id + '" size13T = "' + row.size13T + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-warning">  ' + row.size13T + ' </span></a>';
                                 }
                             },
-                            "aTargets": [32]
+                            "aTargets": [27]
                         },
                         {
                             class: "text-center",
@@ -560,7 +554,7 @@
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-reject" class="viewData" id = "' + row.id + '" size14 = "' + row.size14 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-warning">  ' + row.size14 + ' </span></a>';
                                 }
                             },
-                            "aTargets": [15]
+                            "aTargets": [28]
                         },
                         {
                             class: "text-center",
@@ -577,7 +571,7 @@
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-reject" class="viewData" id = "' + row.id + '" size15 = "' + row.size15 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-warning">  ' + row.size15 + ' </span></a>';
                                 }
                             },
-                            "aTargets": [16]
+                            "aTargets": [29]
                         },
                         {
                             class: "text-center",
@@ -594,7 +588,7 @@
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-reject" class="viewData" id = "' + row.id + '" size16 = "' + row.size16 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-warning">  ' + row.size16 + ' </span></a>';
                                 }
                             },
-                            "aTargets": [17]
+                            "aTargets": [30]
                         },
                         {
                             class: "text-center",
@@ -611,7 +605,7 @@
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-reject" class="viewData" id = "' + row.id + '" size17 = "' + row.size17 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-warning">  ' + row.size17 + ' </span></a>';
                                 }
                             },
-                            "aTargets": [18]
+                            "aTargets": [31]
                         },
                         {
                             class: "text-center",
@@ -628,7 +622,7 @@
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-reject" class="viewData" id = "' + row.id + '" size18 = "' + row.size18 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-warning">  ' + row.size18 + ' </span></a>';
                                 }
                             },
-                            "aTargets": [19]
+                            "aTargets": [32]
                         }
                     ],
                     "footerCallback": function (row, data, start, end, display) {
@@ -643,176 +637,188 @@
                         };
                         api.cells( function ( index, data, node ) {
                         var flagAsIn1 = aaData[index].flagAsInSize1; 
+                        var flagAsIn1T = aaData[index].flagAsInSize1T;
                         var flagAsIn2 = aaData[index].flagAsInSize2;
+                        var flagAsIn2T = aaData[index].flagAsInSize2T;
                         var flagAsIn3 = aaData[index].flagAsInSize3;
+                        var flagAsIn3T = aaData[index].flagAsInSize3T;
                         var flagAsIn4 = aaData[index].flagAsInSize4;
+                        var flagAsIn4T = aaData[index].flagAsInSize4T;
                         var flagAsIn5 = aaData[index].flagAsInSize5;
+                        var flagAsIn5T = aaData[index].flagAsInSize5T;
                         var flagAsIn6 = aaData[index].flagAsInSize6;
+                        var flagAsIn6T = aaData[index].flagAsInSize6T;
                         var flagAsIn7 = aaData[index].flagAsInSize7;
+                        var flagAsIn7T = aaData[index].flagAsInSize7T;
                         var flagAsIn8 = aaData[index].flagAsInSize8;
+                        var flagAsIn8T = aaData[index].flagAsInSize8T;
                         var flagAsIn9 = aaData[index].flagAsInSize9;
+                        var flagAsIn9T = aaData[index].flagAsInSize9T;
                         var flagAsIn10 = aaData[index].flagAsInSize10;
+                        var flagAsIn10T = aaData[index].flagAsInSize10T;
                         var flagAsIn11 = aaData[index].flagAsInSize11;
+                        var flagAsIn11T = aaData[index].flagAsInSize11T;
                         var flagAsIn12 = aaData[index].flagAsInSize12;
+                        var flagAsIn12T = aaData[index].flagAsInSize12T;
                         var flagAsIn13 = aaData[index].flagAsInSize13;
+                        var flagAsIn13T = aaData[index].flagAsInSize13T;
                         var flagAsIn14 = aaData[index].flagAsInSize14;
                         var flagAsIn15 = aaData[index].flagAsInSize15;
                         var flagAsIn16 = aaData[index].flagAsInSize16;
                         var flagAsIn17 = aaData[index].flagAsInSize17;
                         var flagAsIn18 = aaData[index].flagAsInSize18;
-                        var flagAsIn1T = aaData[index].flagAsInSize1T;
-                        var flagAsIn2T = aaData[index].flagAsInSize2T;
-                        var flagAsIn3T = aaData[index].flagAsInSize3T;
-                        var flagAsIn4T = aaData[index].flagAsInSize4T;
-                        var flagAsIn5T = aaData[index].flagAsInSize5T;
-                        var flagAsIn6T = aaData[index].flagAsInSize6T;
-                        var flagAsIn7T = aaData[index].flagAsInSize7T;
-                        var flagAsIn8T = aaData[index].flagAsInSize8T;
-                        var flagAsIn9T = aaData[index].flagAsInSize9T;
-                        var flagAsIn10T = aaData[index].flagAsInSize10T;
-                        var flagAsIn11T = aaData[index].flagAsInSize11T;
-                        var flagAsIn12T = aaData[index].flagAsInSize12T;
-                        var flagAsIn13T = aaData[index].flagAsInSize13T;
 
                         var flagAsOut1 = aaData[index].flagAsOutSize1; 
+                        var flagAsOut1T = aaData[index].flagAsOutSize1T;
                         var flagAsOut2 = aaData[index].flagAsOutSize2;
+                        var flagAsOut2T = aaData[index].flagAsOutSize2T;
                         var flagAsOut3 = aaData[index].flagAsOutSize3;
+                        var flagAsOut3T = aaData[index].flagAsOutSize3T;
                         var flagAsOut4 = aaData[index].flagAsOutSize4;
+                        var flagAsOut4T = aaData[index].flagAsOutSize4T;
                         var flagAsOut5 = aaData[index].flagAsOutSize5;
+                        var flagAsOut5T = aaData[index].flagAsOutSize5T;
                         var flagAsOut6 = aaData[index].flagAsOutSize6;
+                        var flagAsOut6T = aaData[index].flagAsOutSize6T;
                         var flagAsOut7 = aaData[index].flagAsOutSize7;
+                        var flagAsOut7T = aaData[index].flagAsOutSize7T;
                         var flagAsOut8 = aaData[index].flagAsOutSize8;
+                        var flagAsOut8T = aaData[index].flagAsOutSize8T;
                         var flagAsOut9 = aaData[index].flagAsOutSize9;
+                        var flagAsOut9T = aaData[index].flagAsOutSize9T;
                         var flagAsOut10 = aaData[index].flagAsOutSize10;
+                        var flagAsOut10T = aaData[index].flagAsOutSize10T;
                         var flagAsOut11 = aaData[index].flagAsOutSize11;
+                        var flagAsOut11T = aaData[index].flagAsOutSize11T;
                         var flagAsOut12 = aaData[index].flagAsOutSize12;
+                        var flagAsOut12T = aaData[index].flagAsOutSize12T;
                         var flagAsOut13 = aaData[index].flagAsOutSize13;
+                        var flagAsOut13T = aaData[index].flagAsOutSize13T;
                         var flagAsOut14 = aaData[index].flagAsOutSize14;
                         var flagAsOut15 = aaData[index].flagAsOutSize15;
                         var flagAsOut16 = aaData[index].flagAsOutSize16;
                         var flagAsOut17 = aaData[index].flagAsOutSize17;
                         var flagAsOut18 = aaData[index].flagAsOutSize18;
-                        var flagAsOut1T = aaData[index].flagAsOutSize1T;
-                        var flagAsOut2T = aaData[index].flagAsOutSize2T;
-                        var flagAsOut3T = aaData[index].flagAsOutSize3T;
-                        var flagAsOut4T = aaData[index].flagAsOutSize4T;
-                        var flagAsOut5T = aaData[index].flagAsOutSize5T;
-                        var flagAsOut6T = aaData[index].flagAsOutSize6T;
-                        var flagAsOut7T = aaData[index].flagAsOutSize7T;
-                        var flagAsOut8T = aaData[index].flagAsOutSize8T;
-                        var flagAsOut9T = aaData[index].flagAsOutSize9T;
-                        var flagAsOut10T = aaData[index].flagAsOutSize10T;
-                        var flagAsOut11T = aaData[index].flagAsOutSize11T;
-                        var flagAsOut12T = aaData[index].flagAsOutSize12T;
-                        var flagAsOut13T = aaData[index].flagAsOutSize13T;
                          var AsSize1 = aaData[index].size1;
+                            var AsSize1T = aaData[index].size1T;
                             var AsSize2 = aaData[index].size2;
+                            var AsSize2T = aaData[index].size2T;
                             var AsSize3 = aaData[index].size3;
+                            var AsSize3T = aaData[index].size3T;
                             var AsSize4 = aaData[index].size4;
+                            var AsSize4T = aaData[index].size4T;
                             var AsSize5 = aaData[index].size5;
+                            var AsSize5T = aaData[index].size5T;
                             var AsSize6 = aaData[index].size6;
+                            var AsSize6T = aaData[index].size6T;
                             var AsSize7 = aaData[index].size7;
+                            var AsSize7T = aaData[index].size7T;
                             var AsSize8 = aaData[index].size8;
+                            var AsSize8T = aaData[index].size8T;
                             var AsSize9 = aaData[index].size9;
+                            var AsSize9T = aaData[index].size9T;
                             var AsSize10 = aaData[index].size10;
+                            var AsSize10T = aaData[index].size10T;
                             var AsSize11 = aaData[index].size11;
+                            var AsSize11T = aaData[index].size11T;
                             var AsSize12 = aaData[index].size12;
+                            var AsSize12T = aaData[index].size12T;
                             var AsSize13 = aaData[index].size13;
+                            var AsSize13T = aaData[index].size13T;
                             var AsSize14 = aaData[index].size14;
                             var AsSize15 = aaData[index].size15;
                             var AsSize16 = aaData[index].size16;
                             var AsSize17 = aaData[index].size17;
                             var AsSize18 = aaData[index].size18;
-                            var AsSize1T = aaData[index].size1T;
-                            var AsSize2T = aaData[index].size2T;
-                            var AsSize3T = aaData[index].size3T;
-                            var AsSize4T = aaData[index].size4T;
-                            var AsSize5T = aaData[index].size5T;
-                            var AsSize6T = aaData[index].size6T;
-                            var AsSize7T = aaData[index].size7T;
-                            var AsSize8T = aaData[index].size8T;
-                            var AsSize9T = aaData[index].size9T;
-                            var AsSize10T = aaData[index].size10T;
-                            var AsSize11T = aaData[index].size11T;
-                            var AsSize12T = aaData[index].size12T;
-                            var AsSize13T = aaData[index].size13T;
                             
                         sumIN += flagAsIn1 === 1 && flagAsOut1 === null ? AsSize1 : 0;
+                        sumIN += flagAsIn1T === 1 && flagAsOut1T === null  ? AsSize1T : 0;
                         sumIN += flagAsIn2 === 1 && flagAsOut2 === null  ? AsSize2 : 0;
+                        sumIN += flagAsIn2T === 1 && flagAsOut2T === null  ? AsSize2T : 0;
                         sumIN += flagAsIn3 === 1 && flagAsOut3 === null  ? AsSize3 : 0;
+                        sumIN += flagAsIn3T === 1 && flagAsOut3T === null  ? AsSize3T : 0;
                         sumIN += flagAsIn4 === 1 && flagAsOut4 === null  ? AsSize4 : 0;
+                        sumIN += flagAsIn4T === 1 && flagAsOut4T === null  ? AsSize4T : 0;
                         sumIN += flagAsIn5 === 1 && flagAsOut5 === null  ? AsSize5 : 0;
+                        sumIN += flagAsIn5T === 1 && flagAsOut5T === null  ? AsSize5T : 0;
                         sumIN += flagAsIn6 === 1 && flagAsOut6 === null  ? AsSize6 : 0;
+                        sumIN += flagAsIn6T === 1 && flagAsOut6T === null  ? AsSize6T : 0;
                         sumIN += flagAsIn7 === 1 && flagAsOut7 === null  ? AsSize7 : 0;
+                        sumIN += flagAsIn7T === 1 && flagAsOut7T === null  ? AsSize7T : 0;
                         sumIN += flagAsIn8 === 1 && flagAsOut8 === null  ? AsSize8 : 0;
+                        sumIN += flagAsIn8T === 1 && flagAsOut8T === null  ? AsSize8T : 0;
                         sumIN += flagAsIn9 === 1 && flagAsOut9 === null  ? AsSize9 : 0;
+                        sumIN += flagAsIn9T === 1 && flagAsOut9T === null  ? AsSize9T : 0;
                         sumIN += flagAsIn10 === 1 && flagAsOut10 === null  ? AsSize10 : 0;
+                        sumIN += flagAsIn10T === 1 && flagAsOut10T === null  ? AsSize10T : 0;
                         sumIN += flagAsIn11 === 1 && flagAsOut11 === null  ? AsSize11 : 0;
+                        sumIN += flagAsIn11T === 1 && flagAsOut11T === null  ? AsSize11T : 0;
                         sumIN += flagAsIn12 === 1 && flagAsOut12 === null  ? AsSize12 : 0;
+                        sumIN += flagAsIn12T === 1 && flagAsOut12T === null  ? AsSize12T : 0;
                         sumIN += flagAsIn13 === 1 && flagAsOut13 === null ? AsSize13 : 0;
+                        sumIN += flagAsIn13T === 1 && flagAsOut13T === null  ? AsSize13T : 0;
                         sumIN += flagAsIn14 === 1  && flagAsOut14 === null ? AsSize14 : 0;
                         sumIN += flagAsIn15 === 1  && flagAsOut15 === null ? AsSize15 : 0;
                         sumIN += flagAsIn16 === 1  && flagAsOut16 === null ? AsSize16 : 0;
                         sumIN += flagAsIn17 === 1  && flagAsOut17 === null ? AsSize17 : 0;
                         sumIN += flagAsIn18 === 1  && flagAsOut18 === null ? AsSize18 : 0;
-                        sumIN += flagAsIn1T === 1 && flagAsOut1T === null  ? AsSize1T : 0;
-                        sumIN += flagAsIn2T === 1 && flagAsOut2T === null  ? AsSize2T : 0;
-                        sumIN += flagAsIn3T === 1 && flagAsOut3T === null  ? AsSize3T : 0;
-                        sumIN += flagAsIn4T === 1 && flagAsOut4T === null  ? AsSize4T : 0;
-                        sumIN += flagAsIn5T === 1 && flagAsOut5T === null  ? AsSize5T : 0;
-                        sumIN += flagAsIn6T === 1 && flagAsOut6T === null  ? AsSize6T : 0;
-                        sumIN += flagAsIn7T === 1 && flagAsOut7T === null  ? AsSize7T : 0;
-                        sumIN += flagAsIn8T === 1 && flagAsOut8T === null  ? AsSize8T : 0;
-                        sumIN += flagAsIn9T === 1 && flagAsOut9T === null  ? AsSize9T : 0;
-                        sumIN += flagAsIn10T === 1 && flagAsOut10T === null  ? AsSize10T : 0;
-                        sumIN += flagAsIn11T === 1 && flagAsOut11T === null  ? AsSize11T : 0;
-                        sumIN += flagAsIn12T === 1 && flagAsOut12T === null  ? AsSize12T : 0;
-                        sumIN += flagAsIn13T === 1 && flagAsOut13T === null  ? AsSize13T : 0;
 
                        sumOUT += flagAsOut1 === 1 ? AsSize1 : 0;
+                        sumOUT += flagAsOut1T === 1 ? AsSize1T : 0;
                         sumOUT += flagAsOut2 === 1 ? AsSize2 : 0;
+                        sumOUT += flagAsOut2T === 1 ? AsSize2T : 0;
                         sumOUT += flagAsOut3 === 1 ? AsSize3 : 0;
+                        sumOUT += flagAsOut3T === 1 ? AsSize3T : 0;
                         sumOUT += flagAsOut4 === 1 ? AsSize4 : 0;
+                        sumOUT += flagAsOut4T === 1 ? AsSize4T : 0;
                         sumOUT += flagAsOut5 === 1 ? AsSize5 : 0;
+                        sumOUT += flagAsOut5T === 1 ? AsSize5T : 0;
                         sumOUT += flagAsOut6 === 1 ? AsSize6 : 0;
+                        sumOUT += flagAsOut6T === 1 ? AsSize6T : 0;
                         sumOUT += flagAsOut7 === 1 ? AsSize7 : 0;
+                        sumOUT += flagAsOut7T === 1 ? AsSize7T : 0;
                         sumOUT += flagAsOut8 === 1 ? AsSize8 : 0;
+                        sumOUT += flagAsOut8T === 1 ? AsSize8T : 0;
                         sumOUT += flagAsOut9 === 1 ? AsSize9 : 0;
+                        sumOUT += flagAsOut9T === 1 ? AsSize9T : 0;
                         sumOUT += flagAsOut10 === 1 ? AsSize10 : 0;
+                        sumOUT += flagAsOut10T === 1 ? AsSize10T : 0;
                         sumOUT += flagAsOut11 === 1 ? AsSize11 : 0;
+                        sumOUT += flagAsOut11T === 1 ? AsSize11T: 0;
                         sumOUT += flagAsOut12 === 1 ? AsSize12 : 0;
+                        sumOUT += flagAsOut12T === 1 ? AsSize12T : 0;
                         sumOUT += flagAsOut13 === 1 ? AsSize13 : 0;
+                        sumOUT += flagAsOut13T === 1 ? AsSize13T : 0;
                         sumOUT += flagAsOut14 === 1 ? AsSize14 : 0;
                         sumOUT += flagAsOut15 === 1 ? AsSize15 : 0;
                         sumOUT += flagAsOut16 === 1 ? AsSize16 : 0;
                         sumOUT += flagAsOut17 === 1 ? AsSize17 : 0;
                         sumOUT += flagAsOut18 === 1 ? AsSize18 : 0;
-                        sumOUT += flagAsOut1T === 1 ? AsSize1T : 0;
-                        sumOUT += flagAsOut2T === 1 ? AsSize2T : 0;
-                        sumOUT += flagAsOut3T === 1 ? AsSize3T : 0;
-                        sumOUT += flagAsOut4T === 1 ? AsSize4T : 0;
-                        sumOUT += flagAsOut5T === 1 ? AsSize5T : 0;
-                        sumOUT += flagAsOut6T === 1 ? AsSize6T : 0;
-                        sumOUT += flagAsOut7T === 1 ? AsSize7T : 0;
-                        sumOUT += flagAsOut8T === 1 ? AsSize8T : 0;
-                        sumOUT += flagAsOut9T === 1 ? AsSize9T : 0;
-                        sumOUT += flagAsOut10T === 1 ? AsSize10T : 0;
-                        sumOUT += flagAsOut11T === 1 ? AsSize11T: 0;
-                        sumOUT += flagAsOut12T === 1 ? AsSize12T : 0;
-                        sumOUT += flagAsOut13T === 1 ? AsSize13T : 0;
                         }, 0);
                         var sumSize1 = 0;
+                        var sumSize1T = 0;
                         var sumSize2 = 0;
+                        var sumSize2T = 0;
                         var sumSize3 = 0;
+                        var sumSize3T = 0;
                         var sumSize4 = 0;
+                        var sumSize4T = 0;
                         var sumSize5 = 0;
+                        var sumSize5T = 0;
                         var sumSize6 = 0;
+                        var sumSize6T = 0;
                         var sumSize7 = 0;
+                        var sumSize7T = 0;
                         var sumSize8 = 0;
+                        var sumSize8T = 0;
                         var sumSize9 = 0;
+                        var sumSize9T = 0;
                         var sumSize10 = 0;
+                        var sumSize10T = 0;
                         var sumSize11 = 0;
+                        var sumSize11T = 0;
                         var sumSize12 = 0;
+                        var sumSize12T = 0;
                         var sumSize13 = 0;
                         var sumSize13T = 0;
                         var sumSize14 = 0;
@@ -820,47 +826,65 @@
                         var sumSize16 = 0;
                         var sumSize17 = 0;
                         var sumSize18 = 0;
-                        var sumSize1T = 0;
-                        var sumSize2T = 0;
-                        var sumSize3T = 0;
-                        var sumSize4T = 0;
-                        var sumSize5T = 0;
-                        var sumSize6T = 0;
-                        var sumSize7T = 0;
-                        var sumSize8T = 0;
-                        var sumSize9T = 0;
-                        var sumSize10T = 0;
-                        var sumSize11T = 0;
-                        var sumSize12T = 0;
                         // computing column Total of the complete result 
                         var size1 =  api.cells( function ( index, data, node ) {
                                     var flag1 = aaData[index].flagStOutSize1; 
                                     sumSize1 += flag1 === 1 ? aaData[index].size1 : 0;
                                     }, 0);
 
+                        var size1T = api.cells( function ( index, data, node ) {
+                                    var flag1T = aaData[index].flagStOutSize1T; 
+                                    sumSize1T += flag1T === 1 ? aaData[index].size1T : 0;
+                                    }, 0);
+
                         var size2 = api.cells( function ( index, data, node ) {
                                     var flag2 = aaData[index].flagStOutSize2; 
                                     sumSize2 += flag2 === 1 ? aaData[index].size2 : 0;
                                     }, 0);
-                                    
+
+                        var size2T = api.cells( function ( index, data, node ) {
+                                    var flag2T = aaData[index].flagStOutSize2T; 
+                                    sumSize2T += flag2T === 1 ? aaData[index].size2T : 0;
+                                    }, 0);
+
                         var size3 = api.cells( function ( index, data, node ) {
                                     var flag3 = aaData[index].flagStOutSize3; 
                                     sumSize3 += flag3 === 1 ? aaData[index].size3 : 0;
                                     }, 0);
-                                    
+
+                        var size3T = api.cells( function ( index, data, node ) {
+                                    var flag3T = aaData[index].flagStOutSize3T; 
+                                    sumSize3T += flag3T === 1 ? aaData[index].size3T : 0;
+                                    }, 0);
+
                         var size4 = api.cells( function ( index, data, node ) {
                                     var flag4 = aaData[index].flagStOutSize4; 
                                     sumSize4 += flag4 === 1 ? aaData[index].size4 : 0;
                                     }, 0);
-                                    
+
+                        var size4T = api.cells( function ( index, data, node ) {
+                                    var flag4T = aaData[index].flagStOutSize4T; 
+                                    sumSize4T += flag4T === 1 ? aaData[index].size4T : 0;
+                                    }, 0);
+                       
                         var size5 = api.cells( function ( index, data, node ) {
                                     var flag5 = aaData[index].flagStOutSize5; 
                                     sumSize5 += flag5 === 1 ? aaData[index].size5 : 0;
                                     }, 0);
                                     
+                        var size5T =  api.cells( function ( index, data, node ) {
+                                    var flag5T = aaData[index].flagStOutSize5T;
+                                    sumSize5T += flag5T === 1 ? aaData[index].size5T : 0;
+                                    }, 0);
+
                         var size6 = api.cells( function ( index, data, node ) {
                                     var flag6 = aaData[index].flagStOutSize6;
                                     sumSize6 += flag6 === 1 ? aaData[index].size6 : 0;
+                                    }, 0);
+
+                        var size6T = api.cells( function ( index, data, node ) {
+                                    var flag6T = aaData[index].flagStOutSize6T;
+                                    sumSize6T += flag6T === 1 ? aaData[index].size6T : 0;
                                     }, 0);
 
                         var size7 = api.cells( function ( index, data, node ) {
@@ -869,14 +893,31 @@
                                     }, 0);
 
 
+                        var size7T = api.cells( function ( index, data, node ) {
+                                    var flag7T = aaData[index].flagStOutSize7T;
+                                    sumSize7T += flag7T === 1 ? aaData[index].size7T : 0;
+                                    }, 0);
+
+
                         var size8 = api.cells( function ( index, data, node ) {
                                     var flag8 = aaData[index].flagStOutSize8;
                                     sumSize8 += flag8 === 1 ? aaData[index].size8 : 0;
                                     }, 0);
 
+                        var size8T = api.cells( function ( index, data, node ) {
+                                    var flag8T = aaData[index].flagStOutSize8T;
+                                    sumSize8T += flag8T === 1 ? aaData[index].size8T : 0;
+                                    }, 0);
+
+
                         var size9 = api.cells( function ( index, data, node ) {
                                     var flag9 = aaData[index].flagStOutSize9;
                                     sumSize9 += flag9 === 1 ? aaData[index].size9 : 0;
+                                    }, 0);
+
+                        var size9T = api.cells( function ( index, data, node ) {
+                                    var flag9T = aaData[index].flagStOutSize9T;
+                                    sumSize9T += flag9T === 1 ? aaData[index].size9T : 0;
                                     }, 0);
 
                         var size10 = api.cells( function ( index, data, node ) {
@@ -884,9 +925,19 @@
                                     sumSize10+= flag10 === 1 ? aaData[index].size10 : 0;
                                     }, 0);
 
+                        var size10T = api.cells( function ( index, data, node ) {
+                                    var flag10T = aaData[index].flagStOutSize10T;
+                                    sumSize10T += flag10T === 1 ? aaData[index].size10T : 0;
+                                    }, 0);
+
                         var size11 = api.cells( function ( index, data, node ) {
                                     var flag11 = aaData[index].flagStOutSize11;
                                     sumSize11+= flag11 === 1 ? aaData[index].size11 : 0;
+                                    }, 0);
+
+                        var size11T = api.cells( function ( index, data, node ) {
+                                    var flag11T = aaData[index].flagStOutSize11T;
+                                    sumSize11T += flag11T === 1 ? aaData[index].size11T : 0;
                                     }, 0);
 
                         var size12 = api.cells( function ( index, data, node ) {
@@ -894,9 +945,19 @@
                                     sumSize12 += flag12 === 1 ? aaData[index].size12 : 0;
                                     }, 0);
 
+                        var size12T = api.cells( function ( index, data, node ) {
+                                    var flag12T = aaData[index].flagStOutSize12T;
+                                    sumSize12T += flag12T === 1 ? aaData[index].size12T : 0;
+                                    }, 0);
+
                         var size13 = api.cells( function ( index, data, node ) {
                                     var flag13 = aaData[index].flagStOutSize13;
                                     sumSize13 += flag13 === 1 ? aaData[index].size13 : 0;
+                                    }, 0);
+
+                        var size13T = api.cells( function ( index, data, node ) {
+                                    var flag13T= aaData[index].flagStOutSize13T;
+                                    sumSize13T += flag13T === 1 ? aaData[index].size13T : 0;
                                     }, 0);
 
                         var size14 = api.cells( function ( index, data, node ) {
@@ -923,76 +984,6 @@
                                     var flag18 = aaData[index].flagStOutSize18;
                                     sumSize18 += flag18 === 1 ? aaData[index].size18 : 0;
                                     }, 0);
-
-                        var size1T = api.cells( function ( index, data, node ) {
-                                    var flag1T = aaData[index].flagStOutSize1T; 
-                                    sumSize1T += flag1T === 1 ? aaData[index].size1T : 0;
-                                    }, 0);
-
-                        var size2T = api.cells( function ( index, data, node ) {
-                                    var flag2T = aaData[index].flagStOutSize2T; 
-                                    sumSize2T += flag2T === 1 ? aaData[index].size2T : 0;
-                                    }, 0);
-
-
-                        var size3T = api.cells( function ( index, data, node ) {
-                                    var flag3T = aaData[index].flagStOutSize3T; 
-                                    sumSize3T += flag3T === 1 ? aaData[index].size3T : 0;
-                                    }, 0);
-
-
-                        var size4T = api.cells( function ( index, data, node ) {
-                                    var flag4T = aaData[index].flagStOutSize4T; 
-                                    sumSize4T += flag4T === 1 ? aaData[index].size4T : 0;
-                                    }, 0);
-                       
-                                    
-                        var size5T =  api.cells( function ( index, data, node ) {
-                                    var flag5T = aaData[index].flagStOutSize5T;
-                                    sumSize5T += flag5T === 1 ? aaData[index].size5T : 0;
-                                    }, 0);
-
-                        
-                        var size6T = api.cells( function ( index, data, node ) {
-                                    var flag6T = aaData[index].flagStOutSize6T;
-                                    sumSize6T += flag6T === 1 ? aaData[index].size6T : 0;
-                                    }, 0);
-
-                        var size7T = api.cells( function ( index, data, node ) {
-                                    var flag7T = aaData[index].flagStOutSize7T;
-                                    sumSize7T += flag7T === 1 ? aaData[index].size7T : 0;
-                                    }, 0);
-
-                        var size8T = api.cells( function ( index, data, node ) {
-                                    var flag8T = aaData[index].flagStOutSize8T;
-                                    sumSize8T += flag8T === 1 ? aaData[index].size8T : 0;
-                                    }, 0);
-
-                        var size9T = api.cells( function ( index, data, node ) {
-                                    var flag9T = aaData[index].flagStOutSize9T;
-                                    sumSize9T += flag9T === 1 ? aaData[index].size9T : 0;
-                                    }, 0);
-
-                        var size10T = api.cells( function ( index, data, node ) {
-                                    var flag10T = aaData[index].flagStOutSize10T;
-                                    sumSize10T += flag10T === 1 ? aaData[index].size10T : 0;
-                                    }, 0);
-
-                        var size11T = api.cells( function ( index, data, node ) {
-                                    var flag11T = aaData[index].flagStOutSize11T;
-                                    sumSize11T += flag11T === 1 ? aaData[index].size11T : 0;
-                                    }, 0);
-
-                        var size12T = api.cells( function ( index, data, node ) {
-                                    var flag12T = aaData[index].flagStOutSize12T;
-                                    sumSize12T += flag12T === 1 ? aaData[index].size12T : 0;
-                                    }, 0);
-
-                        var size13T = api.cells( function ( index, data, node ) {
-                                    var flag13T= aaData[index].flagStOutSize13T;
-                                    sumSize13T += flag13T === 1 ? aaData[index].size13T : 0;
-                                    }, 0);
-
                         var jumlah = sumSize1 + sumSize1T + sumSize2 + sumSize2T + sumSize3 + sumSize3T + sumSize4 + sumSize4T +
                                     sumSize5 + sumSize5T + sumSize6 + sumSize6T + sumSize7 + sumSize7T + sumSize8 + sumSize8T +
                                     sumSize9 + sumSize9T + sumSize10 + sumSize10T + sumSize11 + sumSize11T + sumSize12 + sumSize12T +
@@ -1003,36 +994,36 @@
                         $(api.column(0).footer()).html('');
                         $(api.column(1).footer()).html('sum');
                         $(api.column(2).footer()).html(sumSize1);
-                        $(api.column(3).footer()).html(sumSize2);
-                        $(api.column(4).footer()).html(sumSize3);
-                        $(api.column(5).footer()).html(sumSize4);
-                        $(api.column(6).footer()).html(sumSize5);
-                        $(api.column(7).footer()).html(sumSize6);
-                        $(api.column(8).footer()).html(sumSize7);
-                        $(api.column(9).footer()).html(sumSize8);
-                        $(api.column(10).footer()).html(sumSize9);
-                        $(api.column(11).footer()).html(sumSize10);
-                        $(api.column(12).footer()).html(sumSize11);
-                        $(api.column(13).footer()).html(sumSize12);
-                        $(api.column(14).footer()).html(sumSize13);
-                        $(api.column(15).footer()).html(sumSize14);
-                        $(api.column(16).footer()).html(sumSize15);
-                        $(api.column(17).footer()).html(sumSize16);
-                        $(api.column(18).footer()).html(sumSize17);
-                        $(api.column(19).footer()).html(sumSize18);
-                        $(api.column(20).footer()).html(sumSize1T);
-                        $(api.column(21).footer()).html(sumSize2T);
-                        $(api.column(22).footer()).html(sumSize3T);
-                        $(api.column(23).footer()).html(sumSize4T);
-                        $(api.column(24).footer()).html(sumSize5T);
-                        $(api.column(25).footer()).html(sumSize6T);
-                        $(api.column(26).footer()).html(sumSize7T);
-                        $(api.column(27).footer()).html(sumSize8T);
-                        $(api.column(28).footer()).html(sumSize9T);
-                        $(api.column(29).footer()).html(sumSize10T);
-                        $(api.column(30).footer()).html(sumSize11T);
-                        $(api.column(31).footer()).html(sumSize12T);
-                        $(api.column(32).footer()).html(sumSize13T);
+                        $(api.column(3).footer()).html(sumSize1T);
+                        $(api.column(4).footer()).html(sumSize2);
+                        $(api.column(5).footer()).html(sumSize2T);
+                        $(api.column(6).footer()).html(sumSize3);
+                        $(api.column(7).footer()).html(sumSize3T);
+                        $(api.column(8).footer()).html(sumSize4);
+                        $(api.column(9).footer()).html(sumSize4T);
+                        $(api.column(10).footer()).html(sumSize5);
+                        $(api.column(11).footer()).html(sumSize5T);
+                        $(api.column(12).footer()).html(sumSize6);
+                        $(api.column(13).footer()).html(sumSize6T);
+                        $(api.column(14).footer()).html(sumSize7);
+                        $(api.column(15).footer()).html(sumSize7T);
+                        $(api.column(16).footer()).html(sumSize8);
+                        $(api.column(17).footer()).html(sumSize8T);
+                        $(api.column(18).footer()).html(sumSize9);
+                        $(api.column(19).footer()).html(sumSize9T);
+                        $(api.column(20).footer()).html(sumSize10);
+                        $(api.column(21).footer()).html(sumSize10T);
+                        $(api.column(22).footer()).html(sumSize11);
+                        $(api.column(23).footer()).html(sumSize11T);
+                        $(api.column(24).footer()).html(sumSize12);
+                        $(api.column(25).footer()).html(sumSize12T);
+                        $(api.column(26).footer()).html(sumSize13);
+                        $(api.column(27).footer()).html(sumSize13T);
+                        $(api.column(28).footer()).html(sumSize14);
+                        $(api.column(29).footer()).html(sumSize15);
+                        $(api.column(30).footer()).html(sumSize16);
+                        $(api.column(31).footer()).html(sumSize17);
+                        $(api.column(32).footer()).html(sumSize18);
                         $(api.column(33).footer()).html(rowSum);
                           $('#sumIn').val(sumIN);
                         $('#sumOut').val(sumOUT);
@@ -1068,106 +1059,106 @@
                         {"mDataProp": "id", "bSortable": false},
                         {"mDataProp": "hourly", "bSortable": false},
                         {"mDataProp": "size1", "bSortable": false},
+                        {"mDataProp": "size1T", "bSortable": false},
                         {"mDataProp": "size2", "bSortable": false},
+                        {"mDataProp": "size2T", "bSortable": false},
                         {"mDataProp": "size3", "bSortable": false},
+                        {"mDataProp": "size3T", "bSortable": false},
                         {"mDataProp": "size4", "bSortable": false},
+                        {"mDataProp": "size4T", "bSortable": false},
                         {"mDataProp": "size5", "bSortable": false},
+                        {"mDataProp": "size5T", "bSortable": false},
                         {"mDataProp": "size6", "bSortable": false},
+                        {"mDataProp": "size6T", "bSortable": false},
                         {"mDataProp": "size7", "bSortable": false},
+                        {"mDataProp": "size7T", "bSortable": false},
                         {"mDataProp": "size8", "bSortable": false},
+                        {"mDataProp": "size8T", "bSortable": false},
                         {"mDataProp": "size9", "bSortable": false},
+                        {"mDataProp": "size9T", "bSortable": false},
                         {"mDataProp": "size10", "bSortable": false},
+                        {"mDataProp": "size10T", "bSortable": false},
                         {"mDataProp": "size11", "bSortable": false},
+                        {"mDataProp": "size11T", "bSortable": false},
                         {"mDataProp": "size12", "bSortable": false},
+                        {"mDataProp": "size12T", "bSortable": false},
                         {"mDataProp": "size13", "bSortable": false},
+                        {"mDataProp": "size13T", "bSortable": false},
                         {"mDataProp": "size14", "bSortable": false},
                         {"mDataProp": "size15", "bSortable": false},
                         {"mDataProp": "size16", "bSortable": false},
                         {"mDataProp": "size17", "bSortable": false},
-                        {"mDataProp": "size18", "bSortable": false},
-                        {"mDataProp": "size1T", "bSortable": false},
-                        {"mDataProp": "size2T", "bSortable": false},
-                        {"mDataProp": "size3T", "bSortable": false},
-                        {"mDataProp": "size4T", "bSortable": false},
-                        {"mDataProp": "size5T", "bSortable": false},
-                        {"mDataProp": "size6T", "bSortable": false},
-                        {"mDataProp": "size7T", "bSortable": false},
-                        {"mDataProp": "size8T", "bSortable": false},
-                        {"mDataProp": "size9T", "bSortable": false},
-                        {"mDataProp": "size10T", "bSortable": false},
-                        {"mDataProp": "size11T", "bSortable": false},
-                        {"mDataProp": "size12T", "bSortable": false},
-                        {"mDataProp": "size13T", "bSortable": false}
+                        {"mDataProp": "size18", "bSortable": false}
                     ]
                 });
 
                 var id = null;
                 var size1 = null;
+                var size1T = null;
                 var size2 = null;
+                var size2T = null;
                 var size3 = null;
+                var size3T = null;
                 var size4 = null;
+                var size4T = null;
                 var size5 = null;
+                var size5T = null;
                 var size6 = null;
+                var size6T = null;
                 var size7 = null;
+                var size7T = null;
                 var size8 = null;
+                var size8T = null;
                 var size9 = null;
+                var size9T = null;
                 var size10 = null;
+                var size10T = null;
                 var size11 = null;
+                var size11T = null;
                 var size12 = null;
+                var size12T = null;
                 var size13 = null;
+                var size13T = null;
                 var size14 = null;
                 var size15 = null;
                 var size16 = null;
                 var size17 = null;
                 var size18 = null;
-                var size1T = null;
-                var size2T = null;
-                var size3T = null;
-                var size4T = null;
-                var size5T = null;
-                var size6T = null;
-                var size7T = null;
-                var size8T = null;
-                var size9T = null;
-                var size10T = null;
-                var size11T = null;
-                var size12T = null;
-                var size13T = null;
 
                 $(document).on('click', '.viewData', function (e) {
                     e.preventDefault();
                     id = $(this).attr('id');
                     size1 = $(this).attr('size1');
+                    size1T = $(this).attr('size1T');
                     size2 = $(this).attr('size2');
+                    size2T = $(this).attr('size2T');
                     size3 = $(this).attr('size3');
+                    size3T = $(this).attr('size3T');
                     size4 = $(this).attr('size4');
+                    size4T = $(this).attr('size4T');
                     size5 = $(this).attr('size5');
+                    size5T = $(this).attr('size5T');
                     size6 = $(this).attr('size6');
+                    size6T = $(this).attr('size6T');
                     size7 = $(this).attr('size7');
+                    size7T = $(this).attr('size7T');
                     size8 = $(this).attr('size8');
+                    size8T = $(this).attr('size8T');
                     size9 = $(this).attr('size9');
+                    size9T = $(this).attr('size9T');
                     size10 = $(this).attr('size10');
+                    size10T = $(this).attr('size10T');
                     size11 = $(this).attr('size11');
+                    size11T = $(this).attr('size11T');
                     size12 = $(this).attr('size12');
+                    size12T = $(this).attr('size12T');
                     size13 = $(this).attr('size13');
+                    size13T = $(this).attr('size13T');
                     size14 = $(this).attr('size14');
                     size15 = $(this).attr('size15');
                     size16 = $(this).attr('size16');
                     size17 = $(this).attr('size17');
                     size18 = $(this).attr('size18');
-                    size1T = $(this).attr('size1T');
-                    size2T = $(this).attr('size2T');
-                    size3T = $(this).attr('size3T');
-                    size4T = $(this).attr('size4T');
-                    size5T = $(this).attr('size5T');
-                    size6T = $(this).attr('size6T');
-                    size7T = $(this).attr('size7T');
-                    size8T = $(this).attr('size8T');
-                    size9T = $(this).attr('size9T');
-                    size10T = $(this).attr('size10T');
-                    size11T = $(this).attr('size11T');
-                    size12T = $(this).attr('size12T');
-                    size13T = $(this).attr('size13T');
 
                     var approve = $('confirm-approve');
                     approve.modal({show: true});
@@ -1181,36 +1172,36 @@
                     dataJson = {
                         "id": id,
                         "size1": size1,
+                        "size1T": size1T,
                         "size2": size2,
+                        "size2T": size2T,
                         "size3": size3,
+                        "size3T": size3T,
                         "size4": size4,
+                        "size4T": size4T,
                         "size5": size5,
+                        "size5T": size5T,
                         "size6": size6,
+                        "size6T": size6T,
                         "size7": size7,
+                        "size7T": size7T,
                         "size8": size8,
+                        "size8T": size8T,
                         "size9": size9,
+                        "size9T": size9T,
                         "size10": size10,
+                        "size10T": size10T,
                         "size11": size11,
+                        "size11T": size11T,
                         "size12": size12,
+                        "size12T": size12T,
                         "size13": size13,
+                        "size13T": size13T,
                         "size14": size14,
                         "size15": size15,
                         "size16": size16,
                         "size17": size17,
                         "size18": size18,
-                        "size1T": size1T,
-                        "size2T": size2T,
-                        "size3T": size3T,
-                        "size4T": size4T,
-                        "size5T": size5T,
-                        "size6T": size6T,
-                        "size7T": size7T,
-                        "size8T": size8T,
-                        "size9T": size9T,
-                        "size10T": size10T,
-                        "size11T": size11T,
-                        "size12T": size12T,
-                        "size13T": size13T,
                         "departement": dpt
                     };
                     console.log(JSON.stringify(dataJson));
@@ -1229,36 +1220,36 @@
                     dataJson = {
                         "id": id,
                         "size1": size1,
+                        "size1T": size1T,
                         "size2": size2,
+                        "size2T": size2T,
                         "size3": size3,
+                        "size3T": size3T,
                         "size4": size4,
+                        "size4T": size4T,
                         "size5": size5,
+                        "size5T": size5T,
                         "size6": size6,
+                        "size6T": size6T,
                         "size7": size7,
+                        "size7T": size7T,
                         "size8": size8,
+                        "size8T": size8T,
                         "size9": size9,
+                        "size9T": size9T,
                         "size10": size10,
+                        "size10T": size10T,
                         "size11": size11,
+                        "size11T": size11T,
                         "size12": size12,
+                        "size12T": size12T,
                         "size13": size13,
+                        "size13T": size13T,
                         "size14": size14,
                         "size15": size15,
                         "size16": size16,
                         "size17": size17,
                         "size18": size18,
-                        "size1T": size1T,
-                        "size2T": size2T,
-                        "size3T": size3T,
-                        "size4T": size4T,
-                        "size5T": size5T,
-                        "size6T": size6T,
-                        "size7T": size7T,
-                        "size8T": size8T,
-                        "size9T": size9T,
-                        "size10T": size10T,
-                        "size11T": size11T,
-                        "size12T": size12T,
-                        "size13T": size13T,
                         "departement": dpt
                     };
                     console.log(JSON.stringify(dataJson));
@@ -1273,20 +1264,21 @@
             });
         </script>
     </head>
-        <style>
-            .labellot {
-                display: inline;
-                padding: .2em .6em .3em;
-                font-size: 75%;
-                font-weight: 700;
-                line-height: 1;
-                color: #000;
-                text-align: center;
-                white-space: nowrap;
-                vertical-align: baseline;
-                border-radius: .25em;
-            }
-        </style>
+    <style>
+
+        .labellot {
+            display: inline;
+            padding: .2em .6em .3em;
+            font-size: 75%;
+            font-weight: 700;
+            line-height: 1;
+            color: #000;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: baseline;
+            border-radius: .25em;
+        }
+    </style>
     <body>
         <div class="content">
             <div class="row">
