@@ -296,7 +296,7 @@
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-reject" class="viewData" id = "' + row.id + '" size7 = "' + row.size7 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-warning">  ' + row.size7 + ' </span></a>';
                                 }
                             },
-                            "aTargets": [6]
+                            "aTargets": [8]
                         },
                         {
                             class: "text-center",

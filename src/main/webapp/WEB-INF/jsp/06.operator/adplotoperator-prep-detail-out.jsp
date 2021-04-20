@@ -706,7 +706,7 @@
                         var flagPrepOut12T = aaData[index].flagPrepOutSize12T;
                         var flagPrepOut13T = aaData[index].flagPrepOutSize13T;
                         
-                         var PrepSize1 = aaData[index].size1;
+                            var PrepSize1 = aaData[index].size1;
                             var PrepSize2 = aaData[index].size2;
                             var PrepSize3 = aaData[index].size3;
                             var PrepSize4 = aaData[index].size4;

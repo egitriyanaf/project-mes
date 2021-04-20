@@ -2100,7 +2100,7 @@
                                 } else if(typeProses === 'OUT' && departement === 'label'){
                                     if (row.size6T === null) {
                                         return  '<td class="size6T">' + "" + '</td>';
-                                    } else if (row.flagLabelInSize6T === 1 && row.flagLabelOutSize2T === 1) {
+                                    } else if (row.flagLabelInSize6T === 1 && row.flagLabelOutSize6T === 1) {
                                         return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size6T + ' </span></a>';
                                     } else if (row.flagLabelInSize6T === 1) {
                                         return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size6T = "' + row.size6T + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-info"> ' + row.size6T + ' </span></a>';
@@ -2110,7 +2110,7 @@
                                 } else if(typeProses === 'IN' && departement === 'laser'){
                                     if (row.size6T === null) {
                                         return  '<td class="size6T">' + "" + '</td>';
-                                    } else if (row.flagLaserInSize6T === 1 && row.flagLaserOutSize2T === 1) {
+                                    } else if (row.flagLaserInSize6T === 1 && row.flagLaserOutSize6T === 1) {
                                         return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size6T + ' </span></a>';
                                     } else if (row.flagLaserInSize6T === null) {
                                         return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size6T = "' + row.size6T + '"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size6T + ' </span></a>';
@@ -3609,8 +3609,8 @@
                                         return  '<td class="size11">' + "" + '</td>';
                                     }
                                 } else if(typeProses === 'IN' && departement === 'label'){
-                                    if (row.size9T === null) {
-                                        return  '<td class="size9T">' + "" + '</td>';
+                                    if (row.size11 === null) {
+                                        return  '<td class="size11">' + "" + '</td>';
                                     } else if (row.flagLabelInSize11 === 1 && row.flagLabelOutSize11 === 1) {
                                         return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size11 + ' </span></a>';
                                     } else if (row.flagLabelInSize11 === null) {
@@ -4595,7 +4595,7 @@
                                 } else if(typeProses === 'OUT' && departement === 'spcut'){
                                     if (row.size14 === null) {
                                         return  '<td class="size14">' + "" + '</td>';
-                                    } else if (row.flagspcutInSize14 === 1 && row.flagScOutSize14 === 1) {
+                                    } else if (row.flagspcutInSize14 === 1 && row.flagspcutOutSize14 === 1) {
                                         return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size14 + ' </span></a>';
                                     } else if (row.flagspcutInSize14 === 1) {
                                         return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size14 = "' + row.size14 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-info"> ' + row.size14 + ' </span></a>';
@@ -6207,7 +6207,7 @@
                             sumOUT += flagspprepOut12T === 1 ? spprepSize12T : 0;
                             sumOUT += flagspprepOut13T === 1 ? spprepSize13T : 0;
                             }else if(departement === 'label'){
-                                var flagLabelIn1 = aaData[index].flagLabelInSize1; 
+                            var flagLabelIn1 = aaData[index].flagLabelInSize1; 
                             var flagLabelIn2 = aaData[index].flagLabelInSize2;
                             var flagLabelIn3 = aaData[index].flagLabelInSize3;
                             var flagLabelIn4 = aaData[index].flagLabelInSize4;
@@ -7799,7 +7799,7 @@
                                             } else if(departement === 'spprep'){var flagspprepIn18 = aaData[index].flagspprepInSize18; sumSize18 += flagspprepIn18 === 1 ? aaData[index].size18 : 0;
                                             } else if(departement === 'label'){var flagLabelIn18 = aaData[index].flagLabelInSize18;sumSize18 += flagLabelIn18 === 1 ? aaData[index].size18 : 0;
                                             } else if(departement === 'laser'){var flagLaserIn18 = aaData[index].flagLaserInSize18;sumSize18 += flagLaserIn18 === 1 ? aaData[index].size18 : 0;
-                                            }else if(departement === 'OutSole'){
+                                            } else if(departement === 'OutSole'){
                                                 var flagOsIn18 = aaData[index].flagOsInSize18; 
                                                    sumSize18 += flagOsIn18 === 1 ? aaData[index].size18 : 0;
                                             }
