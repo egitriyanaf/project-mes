@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.10.0.final using JasperReports Library version 6.10.0-unknown  -->
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReportGeneralStatus" pageWidth="1830" pageHeight="612" orientation="Landscape" columnWidth="1790" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b2a65bf4-cff5-4df1-b20d-af7861c0d0d6">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReportGeneralStatus" pageWidth="2215" pageHeight="612" orientation="Landscape" columnWidth="2175" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b2a65bf4-cff5-4df1-b20d-af7861c0d0d6">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Sample DB"/>
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
 	<property name="com.jaspersoft.studio.unit." value="pixel"/>
@@ -3055,7 +3055,7 @@ GROUP BY
 	<title>
 		<band height="132" splitType="Stretch">
 			<staticText>
-				<reportElement x="770" y="50" width="250" height="31" uuid="16492767-be57-4c1a-9260-4a05e975c89c"/>
+				<reportElement x="955" y="50" width="250" height="31" uuid="16492767-be57-4c1a-9260-4a05e975c89c"/>
 				<textElement>
 					<font size="24"/>
 				</textElement>
@@ -3079,7 +3079,7 @@ GROUP BY
 	<pageHeader>
 		<band height="95" splitType="Stretch">
 			<staticText>
-				<reportElement x="548" y="0" width="100" height="40" uuid="7c90117b-225b-481f-9d2d-8583666fa766"/>
+				<reportElement x="548" y="0" width="132" height="40" uuid="7c90117b-225b-481f-9d2d-8583666fa766"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -3093,7 +3093,7 @@ GROUP BY
 				<text><![CDATA[Cutting]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="648" y="0" width="121" height="40" uuid="d65ff640-89ee-4b93-883d-7b146ccb97fc"/>
+				<reportElement x="680" y="0" width="152" height="40" uuid="d65ff640-89ee-4b93-883d-7b146ccb97fc"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -3119,7 +3119,7 @@ GROUP BY
 				<text><![CDATA[In]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="769" y="0" width="100" height="40" uuid="fb47b031-e017-420d-b3e0-92ed72a0270e"/>
+				<reportElement x="832" y="0" width="132" height="40" uuid="fb47b031-e017-420d-b3e0-92ed72a0270e"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -3133,7 +3133,7 @@ GROUP BY
 				<text><![CDATA[Stitching]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="869" y="0" width="100" height="40" uuid="59eaa94c-bc24-4163-932a-cc01914f65e6"/>
+				<reportElement x="964" y="0" width="132" height="40" uuid="59eaa94c-bc24-4163-932a-cc01914f65e6"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -3159,7 +3159,7 @@ GROUP BY
 				<text><![CDATA[Out]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="648" y="40" width="40" height="30" uuid="6021d6d3-1d2d-4a7e-ac94-49d91305e827"/>
+				<reportElement x="680" y="40" width="40" height="30" uuid="6021d6d3-1d2d-4a7e-ac94-49d91305e827"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -3171,7 +3171,7 @@ GROUP BY
 				<text><![CDATA[In]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="688" y="40" width="30" height="30" uuid="334c52f8-0a98-4dc6-a3d8-f70a85d130eb"/>
+				<reportElement x="720" y="40" width="30" height="30" uuid="334c52f8-0a98-4dc6-a3d8-f70a85d130eb"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -3183,7 +3183,7 @@ GROUP BY
 				<text><![CDATA[Out]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="769" y="40" width="29" height="30" uuid="f397ce98-a3a5-4736-934e-dc0552a26b69"/>
+				<reportElement x="832" y="40" width="29" height="30" uuid="f397ce98-a3a5-4736-934e-dc0552a26b69"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -3195,7 +3195,7 @@ GROUP BY
 				<text><![CDATA[In]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="798" y="40" width="31" height="30" uuid="0792e28c-295c-47be-bc86-3606ab0aa85c"/>
+				<reportElement x="861" y="40" width="31" height="30" uuid="0792e28c-295c-47be-bc86-3606ab0aa85c"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -3207,7 +3207,7 @@ GROUP BY
 				<text><![CDATA[Out]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="869" y="40" width="30" height="30" uuid="0d076c75-939f-4191-9590-3108a53e5986"/>
+				<reportElement x="964" y="40" width="30" height="30" uuid="0d076c75-939f-4191-9590-3108a53e5986"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -3219,7 +3219,7 @@ GROUP BY
 				<text><![CDATA[In]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="899" y="40" width="30" height="30" uuid="f520d8a8-0000-45ab-a5a3-aa9af37cabec"/>
+				<reportElement x="994" y="40" width="30" height="30" uuid="f520d8a8-0000-45ab-a5a3-aa9af37cabec"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -3231,7 +3231,7 @@ GROUP BY
 				<text><![CDATA[Out]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="968" y="0" width="108" height="40" uuid="fb1130b5-a0ba-45d5-99f2-b047299ebab3"/>
+				<reportElement x="1096" y="0" width="140" height="40" uuid="fb1130b5-a0ba-45d5-99f2-b047299ebab3"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -3245,7 +3245,7 @@ GROUP BY
 				<text><![CDATA[Assembly]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="968" y="40" width="30" height="30" uuid="3b0be3ac-8318-42aa-afbd-0073819d8e7f"/>
+				<reportElement x="1096" y="40" width="30" height="30" uuid="3b0be3ac-8318-42aa-afbd-0073819d8e7f"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -3257,7 +3257,7 @@ GROUP BY
 				<text><![CDATA[In]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="998" y="40" width="38" height="30" uuid="292658ce-f9b5-44d1-99e1-ad6525ff4728"/>
+				<reportElement x="1126" y="40" width="38" height="30" uuid="292658ce-f9b5-44d1-99e1-ad6525ff4728"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -3332,7 +3332,7 @@ QTY]]></text>
 				<text><![CDATA[Balance]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="719" y="40" width="50" height="30" uuid="f1f3af53-9f8f-4b5c-bcc1-dc198d0b5411"/>
+				<reportElement x="750" y="40" width="50" height="30" uuid="f1f3af53-9f8f-4b5c-bcc1-dc198d0b5411"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -3344,7 +3344,7 @@ QTY]]></text>
 				<text><![CDATA[Balance]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="829" y="40" width="40" height="30" uuid="b0d4a48a-bd8d-4c92-9bc7-0b513883da7d"/>
+				<reportElement x="892" y="40" width="40" height="30" uuid="b0d4a48a-bd8d-4c92-9bc7-0b513883da7d"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -3356,7 +3356,7 @@ QTY]]></text>
 				<text><![CDATA[Balance]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="929" y="40" width="40" height="30" uuid="fbd9d688-45dd-4cff-a83c-74666be0f665"/>
+				<reportElement x="1024" y="40" width="40" height="30" uuid="fbd9d688-45dd-4cff-a83c-74666be0f665"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -3368,7 +3368,7 @@ QTY]]></text>
 				<text><![CDATA[Balance]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="1036" y="40" width="40" height="30" uuid="43211cee-2714-4ff1-8f53-d55d16476808"/>
+				<reportElement x="1164" y="40" width="40" height="30" uuid="43211cee-2714-4ff1-8f53-d55d16476808"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -3391,7 +3391,7 @@ QTY]]></text>
 Date]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="1075" y="0" width="100" height="40" uuid="389b8392-8f1e-42db-a8b5-3b9516a23902"/>
+				<reportElement x="1236" y="0" width="132" height="40" uuid="389b8392-8f1e-42db-a8b5-3b9516a23902"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -3405,7 +3405,7 @@ Date]]></text>
 				<text><![CDATA[CSC]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="1175" y="0" width="100" height="40" uuid="a156ec1f-6148-4b14-bdeb-881c98ce5d68"/>
+				<reportElement x="1368" y="0" width="132" height="40" uuid="a156ec1f-6148-4b14-bdeb-881c98ce5d68"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -3419,7 +3419,7 @@ Date]]></text>
 				<text><![CDATA[Subcon]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="1104" y="40" width="31" height="30" uuid="2b049e85-5d7f-4edc-afc0-0803fa9dd515"/>
+				<reportElement x="1265" y="40" width="31" height="30" uuid="2b049e85-5d7f-4edc-afc0-0803fa9dd515"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -3431,7 +3431,7 @@ Date]]></text>
 				<text><![CDATA[Out]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="1175" y="40" width="30" height="30" uuid="5adfcfae-67dd-4d23-9dc9-a6a6af4d5e52"/>
+				<reportElement x="1368" y="40" width="30" height="30" uuid="5adfcfae-67dd-4d23-9dc9-a6a6af4d5e52"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -3443,7 +3443,7 @@ Date]]></text>
 				<text><![CDATA[In]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="1205" y="40" width="30" height="30" uuid="c7b38572-047a-4591-a456-5f092ae5f922"/>
+				<reportElement x="1398" y="40" width="30" height="30" uuid="c7b38572-047a-4591-a456-5f092ae5f922"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -3455,7 +3455,7 @@ Date]]></text>
 				<text><![CDATA[Out]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="1274" y="0" width="108" height="40" uuid="9eea9c26-6d65-4f55-9580-0846c72985ac"/>
+				<reportElement x="1500" y="0" width="140" height="40" uuid="9eea9c26-6d65-4f55-9580-0846c72985ac"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -3469,7 +3469,7 @@ Date]]></text>
 				<text><![CDATA[No Sew]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="1274" y="40" width="30" height="30" uuid="a1196a68-e7f0-4602-8a84-b78ca4bb56fe"/>
+				<reportElement x="1500" y="40" width="30" height="30" uuid="a1196a68-e7f0-4602-8a84-b78ca4bb56fe"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -3481,7 +3481,7 @@ Date]]></text>
 				<text><![CDATA[In]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="1304" y="40" width="38" height="30" uuid="42e44c62-da4b-4b16-a59a-20ba00dd9a21"/>
+				<reportElement x="1530" y="40" width="38" height="30" uuid="42e44c62-da4b-4b16-a59a-20ba00dd9a21"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -3493,7 +3493,7 @@ Date]]></text>
 				<text><![CDATA[Out]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="1135" y="40" width="40" height="30" uuid="6c6bba3e-c76c-453d-9bc4-6966e5f1bef6"/>
+				<reportElement x="1296" y="40" width="40" height="30" uuid="6c6bba3e-c76c-453d-9bc4-6966e5f1bef6"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -3505,7 +3505,7 @@ Date]]></text>
 				<text><![CDATA[Balance]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="1235" y="40" width="40" height="30" uuid="ac3c864f-a652-4b85-a959-ff6caa127898"/>
+				<reportElement x="1428" y="40" width="40" height="30" uuid="ac3c864f-a652-4b85-a959-ff6caa127898"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -3517,7 +3517,7 @@ Date]]></text>
 				<text><![CDATA[Balance]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="1342" y="40" width="40" height="30" uuid="91bd734c-cb4d-4c84-a767-fa22e873af47"/>
+				<reportElement x="1568" y="40" width="40" height="30" uuid="91bd734c-cb4d-4c84-a767-fa22e873af47"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -3529,7 +3529,7 @@ Date]]></text>
 				<text><![CDATA[Balance]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="1104" y="70" width="31" height="20" uuid="01477136-5c9d-4d51-ac2f-fdffcda650c4"/>
+				<reportElement x="1265" y="70" width="31" height="20" uuid="01477136-5c9d-4d51-ac2f-fdffcda650c4"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -3571,7 +3571,7 @@ $F{csc_12_t_out}.doubleValue()+
 $F{csc_13_t_out}.doubleValue())]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="1175" y="70" width="30" height="20" uuid="e5ba95e8-13e8-419a-a231-83a816b76877"/>
+				<reportElement x="1368" y="70" width="30" height="20" uuid="e5ba95e8-13e8-419a-a231-83a816b76877"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -3613,7 +3613,7 @@ $F{sc_12_t_in}.doubleValue()+
 $F{sc_13_t_in}.doubleValue())]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="1205" y="70" width="30" height="20" uuid="cd4dd509-d4aa-4683-93e9-7bfadb50ee5b"/>
+				<reportElement x="1398" y="70" width="30" height="20" uuid="cd4dd509-d4aa-4683-93e9-7bfadb50ee5b"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -3655,7 +3655,7 @@ $F{sc_12_t_out}.doubleValue()+
 $F{sc_13_t_out}.doubleValue())]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="1275" y="70" width="29" height="20" uuid="b0bcde0e-a12e-4363-810f-3287a68244a0"/>
+				<reportElement x="1500" y="70" width="30" height="20" uuid="b0bcde0e-a12e-4363-810f-3287a68244a0"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -3697,7 +3697,7 @@ $F{ns_12_t_in}.doubleValue()+
 $F{ns_13_t_in}.doubleValue())]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="1304" y="70" width="38" height="20" uuid="5f229045-9d73-4a8c-8042-e885c4466672"/>
+				<reportElement x="1530" y="70" width="38" height="20" uuid="5f229045-9d73-4a8c-8042-e885c4466672"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -3739,7 +3739,7 @@ $F{ns_12_t_out}.doubleValue()+
 $F{ns_13_t_out}.doubleValue())]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="1135" y="70" width="40" height="20" uuid="b4c59d17-394b-45e4-ad81-ff8e471d7f12"/>
+				<reportElement x="1296" y="70" width="40" height="20" uuid="b4c59d17-394b-45e4-ad81-ff8e471d7f12"/>
 				<box>
 					<pen lineWidth="1.0"/>
 				</box>
@@ -3777,7 +3777,7 @@ $F{csc_17_in}.doubleValue()+
 $F{csc_18_in}.doubleValue())]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="1235" y="70" width="39" height="20" uuid="71c3877b-d321-497e-81ca-1b497e375864"/>
+				<reportElement x="1428" y="70" width="40" height="20" uuid="71c3877b-d321-497e-81ca-1b497e375864"/>
 				<box>
 					<pen lineWidth="1.0"/>
 				</box>
@@ -3815,7 +3815,7 @@ $F{sc_17_in}.doubleValue()+
 $F{sc_18_in}.doubleValue())]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="1342" y="70" width="40" height="20" uuid="f6f9593a-3768-4395-9da0-2d3f1af99bb1"/>
+				<reportElement x="1568" y="70" width="40" height="20" uuid="f6f9593a-3768-4395-9da0-2d3f1af99bb1"/>
 				<box>
 					<pen lineWidth="1.0"/>
 				</box>
@@ -3853,7 +3853,7 @@ $F{ns_17_in}.doubleValue()+
 $F{ns_18_in}.doubleValue())]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="1075" y="40" width="29" height="30" uuid="a0e05729-f6bd-4b44-a1c5-57c5638c71e3"/>
+				<reportElement x="1236" y="40" width="29" height="30" uuid="a0e05729-f6bd-4b44-a1c5-57c5638c71e3"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -3865,7 +3865,7 @@ $F{ns_18_in}.doubleValue())]]></textFieldExpression>
 				<text><![CDATA[In]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="1075" y="70" width="29" height="20" uuid="13e730f9-3daf-46da-8e79-29d118223020"/>
+				<reportElement x="1236" y="70" width="29" height="20" uuid="13e730f9-3daf-46da-8e79-29d118223020"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -3907,7 +3907,7 @@ $F{csc_12_t_in}.doubleValue()+
 $F{csc_13_t_in}.doubleValue())]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="688" y="70" width="30" height="20" uuid="3ce20f7d-2806-4805-88e4-4a110d1c7b6d"/>
+				<reportElement x="720" y="70" width="30" height="20" uuid="3ce20f7d-2806-4805-88e4-4a110d1c7b6d"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -4033,7 +4033,7 @@ $F{ct_17_out}.doubleValue()+
 $F{ct_18_out}.doubleValue())]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="648" y="70" width="40" height="20" uuid="03c06e2c-e3e3-4570-ac1c-49e2303ddc9e"/>
+				<reportElement x="680" y="70" width="40" height="20" uuid="03c06e2c-e3e3-4570-ac1c-49e2303ddc9e"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -4075,7 +4075,7 @@ $F{pr_17_in}.doubleValue()+
 $F{pr_18_in}.doubleValue())]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="769" y="70" width="29" height="20" uuid="59ce9d7c-2c86-4540-a949-8197565fd3e8"/>
+				<reportElement x="832" y="70" width="29" height="20" uuid="59ce9d7c-2c86-4540-a949-8197565fd3e8"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -4117,7 +4117,7 @@ $F{st_17_in}.doubleValue()+
 $F{st_18_in}.doubleValue())]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="798" y="70" width="31" height="20" uuid="5cba5e91-b5a1-4399-b1bf-7a97fd76f0b9"/>
+				<reportElement x="861" y="70" width="31" height="20" uuid="5cba5e91-b5a1-4399-b1bf-7a97fd76f0b9"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -4159,7 +4159,7 @@ $F{st_17_out}.doubleValue()+
 $F{st_18_out}.doubleValue())]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="869" y="70" width="30" height="20" uuid="7aebed63-6576-4bd7-a562-f1e5aff98be6"/>
+				<reportElement x="964" y="70" width="30" height="20" uuid="7aebed63-6576-4bd7-a562-f1e5aff98be6"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -4201,7 +4201,7 @@ $F{os_17_in}.doubleValue()+
 $F{os_18_in}.doubleValue())]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="899" y="70" width="30" height="20" uuid="3de64ae9-6d41-49a2-98bd-25728c0797a7"/>
+				<reportElement x="994" y="70" width="30" height="20" uuid="3de64ae9-6d41-49a2-98bd-25728c0797a7"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -4243,7 +4243,7 @@ $F{os_17_out}.doubleValue()+
 $F{os_18_out}.doubleValue())]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="968" y="70" width="30" height="20" uuid="a5a144b0-7bde-4254-a5ec-e601e4d4c801"/>
+				<reportElement x="1096" y="70" width="30" height="20" uuid="a5a144b0-7bde-4254-a5ec-e601e4d4c801"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -4285,7 +4285,7 @@ $F{as_17_in}.doubleValue()+
 $F{as_18_in}.doubleValue())]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="998" y="70" width="38" height="20" uuid="94a3ad60-c283-462a-9244-1eb2a6601576"/>
+				<reportElement x="1126" y="70" width="38" height="20" uuid="94a3ad60-c283-462a-9244-1eb2a6601576"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -4365,7 +4365,7 @@ $F{ct_17_in}.doubleValue()+
 $F{ct_18_in}.doubleValue())]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="719" y="70" width="50" height="20" uuid="864a2816-ef0a-46e2-8ef3-8bc145c295bd"/>
+				<reportElement x="750" y="70" width="50" height="20" uuid="864a2816-ef0a-46e2-8ef3-8bc145c295bd"/>
 				<box>
 					<pen lineWidth="1.0"/>
 				</box>
@@ -4403,7 +4403,7 @@ $F{pr_17_in}.doubleValue()+
 $F{pr_18_in}.doubleValue())]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="829" y="70" width="40" height="20" uuid="20aafdb7-a815-4100-be76-1f97145c7803"/>
+				<reportElement x="892" y="70" width="40" height="20" uuid="20aafdb7-a815-4100-be76-1f97145c7803"/>
 				<box>
 					<pen lineWidth="1.0"/>
 				</box>
@@ -4441,7 +4441,7 @@ $F{st_17_in}.doubleValue()+
 $F{st_18_in}.doubleValue())]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="929" y="70" width="39" height="20" uuid="b8170b44-7724-4f17-8c30-d7a37298533d"/>
+				<reportElement x="1024" y="70" width="40" height="20" uuid="b8170b44-7724-4f17-8c30-d7a37298533d"/>
 				<box>
 					<pen lineWidth="1.0"/>
 				</box>
@@ -4479,7 +4479,7 @@ $F{os_17_in}.doubleValue()+
 $F{os_18_in}.doubleValue())]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="1036" y="70" width="40" height="20" uuid="2a5b645b-db1c-4a0e-9369-8a74046c2455"/>
+				<reportElement x="1164" y="70" width="40" height="20" uuid="2a5b645b-db1c-4a0e-9369-8a74046c2455"/>
 				<box>
 					<pen lineWidth="1.0"/>
 				</box>
@@ -4565,7 +4565,7 @@ $F{as_18_in}.doubleValue())]]></textFieldExpression>
 				<textFieldExpression><![CDATA[$F{gac_date}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="1383" y="0" width="100" height="40" uuid="b90de178-48aa-4f62-96d0-a33c37453960"/>
+				<reportElement x="1640" y="0" width="132" height="40" uuid="b90de178-48aa-4f62-96d0-a33c37453960"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -4580,7 +4580,7 @@ $F{as_18_in}.doubleValue())]]></textFieldExpression>
 Cutting]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="1483" y="0" width="100" height="40" uuid="e0e27bbd-22ba-40cd-84d9-59469ebf0b83"/>
+				<reportElement x="1772" y="0" width="132" height="40" uuid="e0e27bbd-22ba-40cd-84d9-59469ebf0b83"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -4595,7 +4595,7 @@ Cutting]]></text>
 Preparation]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="1412" y="40" width="31" height="30" uuid="963c306b-7162-45af-adc0-0c8de159b5ad"/>
+				<reportElement x="1669" y="40" width="31" height="30" uuid="963c306b-7162-45af-adc0-0c8de159b5ad"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -4607,7 +4607,7 @@ Preparation]]></text>
 				<text><![CDATA[Out]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="1483" y="40" width="30" height="30" uuid="44bef188-2505-45ba-8dff-e392904e2ca5"/>
+				<reportElement x="1772" y="40" width="30" height="30" uuid="44bef188-2505-45ba-8dff-e392904e2ca5"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -4619,7 +4619,7 @@ Preparation]]></text>
 				<text><![CDATA[In]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="1513" y="40" width="30" height="30" uuid="b0a1447e-fedd-4f85-b74e-6d2d30e9e638"/>
+				<reportElement x="1802" y="40" width="30" height="30" uuid="b0a1447e-fedd-4f85-b74e-6d2d30e9e638"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -4631,7 +4631,7 @@ Preparation]]></text>
 				<text><![CDATA[Out]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="1582" y="0" width="108" height="40" uuid="f56a5ea2-a59a-4b32-bc90-bdc3cf7c8576"/>
+				<reportElement x="1904" y="0" width="140" height="40" uuid="f56a5ea2-a59a-4b32-bc90-bdc3cf7c8576"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -4645,7 +4645,7 @@ Preparation]]></text>
 				<text><![CDATA[Label]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="1582" y="40" width="30" height="30" uuid="f59986f3-0fc2-43a6-aee7-0ea8607aa2d0"/>
+				<reportElement x="1904" y="40" width="30" height="30" uuid="f59986f3-0fc2-43a6-aee7-0ea8607aa2d0"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -4657,7 +4657,7 @@ Preparation]]></text>
 				<text><![CDATA[In]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="1612" y="40" width="38" height="30" uuid="25da76a3-cf02-4c28-bb94-8d2e3bcf0c09"/>
+				<reportElement x="1934" y="40" width="38" height="30" uuid="25da76a3-cf02-4c28-bb94-8d2e3bcf0c09"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -4669,7 +4669,7 @@ Preparation]]></text>
 				<text><![CDATA[Out]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="1443" y="40" width="40" height="30" uuid="7f7c9ee6-0f71-4dcc-825d-a28e3209bb9e"/>
+				<reportElement x="1700" y="40" width="40" height="30" uuid="7f7c9ee6-0f71-4dcc-825d-a28e3209bb9e"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -4681,7 +4681,7 @@ Preparation]]></text>
 				<text><![CDATA[Balance]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="1543" y="40" width="40" height="30" uuid="3b5f933d-5084-487e-ada1-c60456e09b8d"/>
+				<reportElement x="1832" y="40" width="40" height="30" uuid="3b5f933d-5084-487e-ada1-c60456e09b8d"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -4693,7 +4693,7 @@ Preparation]]></text>
 				<text><![CDATA[Balance]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="1650" y="40" width="40" height="30" uuid="9321d055-b3e6-48ee-a04e-bb800d93e397"/>
+				<reportElement x="1972" y="40" width="40" height="30" uuid="9321d055-b3e6-48ee-a04e-bb800d93e397"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -4705,7 +4705,7 @@ Preparation]]></text>
 				<text><![CDATA[Balance]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="1412" y="70" width="31" height="20" uuid="b0e0a3bb-e393-45c2-92c7-2dcb7bdd8bef"/>
+				<reportElement x="1669" y="70" width="31" height="20" uuid="b0e0a3bb-e393-45c2-92c7-2dcb7bdd8bef"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -4747,7 +4747,7 @@ $F{spcut_12_t_out}.doubleValue()+
 $F{spcut_13_t_out}.doubleValue())]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="1483" y="70" width="30" height="20" uuid="d6ffd70a-efc8-44e1-9e6a-c38d5d57d9a5"/>
+				<reportElement x="1772" y="70" width="30" height="20" uuid="d6ffd70a-efc8-44e1-9e6a-c38d5d57d9a5"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -4789,7 +4789,7 @@ $F{spprep_12_t_in}.doubleValue()+
 $F{spprep_13_t_in}.doubleValue())]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="1513" y="70" width="30" height="20" uuid="17fd2575-0c33-48c6-a893-1fb66656d81c"/>
+				<reportElement x="1802" y="70" width="30" height="20" uuid="17fd2575-0c33-48c6-a893-1fb66656d81c"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -4831,7 +4831,7 @@ $F{spprep_12_t_out}.doubleValue()+
 $F{spprep_13_t_out}.doubleValue())]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="1583" y="70" width="29" height="20" uuid="8f5a4efb-5a10-4c82-813f-82c505a86488"/>
+				<reportElement x="1904" y="70" width="30" height="20" uuid="8f5a4efb-5a10-4c82-813f-82c505a86488"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -4873,7 +4873,7 @@ $F{label_12_t_in}.doubleValue()+
 $F{label_13_t_in}.doubleValue())]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="1612" y="70" width="38" height="20" uuid="037d5f66-b3ae-496f-809b-b6222caa3727"/>
+				<reportElement x="1934" y="70" width="38" height="20" uuid="037d5f66-b3ae-496f-809b-b6222caa3727"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -4915,7 +4915,7 @@ $F{label_12_t_out}.doubleValue()+
 $F{label_13_t_out}.doubleValue())]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="1443" y="70" width="40" height="20" uuid="08df77fa-1e5a-45f1-b748-f7d14c318ab2"/>
+				<reportElement x="1700" y="70" width="40" height="20" uuid="08df77fa-1e5a-45f1-b748-f7d14c318ab2"/>
 				<box>
 					<pen lineWidth="1.0"/>
 				</box>
@@ -4953,7 +4953,7 @@ $F{spcut_17_in}.doubleValue()+
 $F{spcut_18_in}.doubleValue())]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="1543" y="70" width="39" height="20" uuid="6c47ba35-6aa6-46bd-b5fe-633d2b877165"/>
+				<reportElement x="1832" y="70" width="40" height="20" uuid="6c47ba35-6aa6-46bd-b5fe-633d2b877165"/>
 				<box>
 					<pen lineWidth="1.0"/>
 				</box>
@@ -4991,7 +4991,7 @@ $F{spprep_17_in}.doubleValue()+
 $F{spprep_18_in}.doubleValue())]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="1650" y="70" width="40" height="20" uuid="94a60b42-e012-4a83-b15c-7924527ddea0"/>
+				<reportElement x="1972" y="70" width="40" height="20" uuid="94a60b42-e012-4a83-b15c-7924527ddea0"/>
 				<box>
 					<pen lineWidth="1.0"/>
 				</box>
@@ -5029,7 +5029,7 @@ $F{label_17_in}.doubleValue()+
 $F{label_18_in}.doubleValue())]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="1383" y="40" width="29" height="30" uuid="2717b954-3240-41a7-a864-6ecb40729534"/>
+				<reportElement x="1640" y="40" width="29" height="30" uuid="2717b954-3240-41a7-a864-6ecb40729534"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -5041,7 +5041,7 @@ $F{label_18_in}.doubleValue())]]></textFieldExpression>
 				<text><![CDATA[In]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="1383" y="70" width="29" height="20" uuid="f2474671-9a14-4402-8169-0235d6e93db9"/>
+				<reportElement x="1640" y="70" width="29" height="20" uuid="f2474671-9a14-4402-8169-0235d6e93db9"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -5083,7 +5083,7 @@ $F{spcut_12_t_in}.doubleValue()+
 $F{spcut_13_t_in}.doubleValue())]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="1691" y="0" width="100" height="40" uuid="2d51a3e1-16c3-4646-bf4f-2238bbfd1972"/>
+				<reportElement x="2044" y="0" width="132" height="40" uuid="2d51a3e1-16c3-4646-bf4f-2238bbfd1972"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -5097,7 +5097,7 @@ $F{spcut_13_t_in}.doubleValue())]]></textFieldExpression>
 				<text><![CDATA[Laser]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="1691" y="40" width="30" height="30" uuid="4fb64fb2-ea54-45c7-8d06-24b1eeb14a7f"/>
+				<reportElement x="2044" y="40" width="30" height="30" uuid="4fb64fb2-ea54-45c7-8d06-24b1eeb14a7f"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -5109,7 +5109,7 @@ $F{spcut_13_t_in}.doubleValue())]]></textFieldExpression>
 				<text><![CDATA[In]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="1721" y="40" width="30" height="30" uuid="f8086995-999a-4479-95ee-041d1dc53405"/>
+				<reportElement x="2074" y="40" width="30" height="30" uuid="f8086995-999a-4479-95ee-041d1dc53405"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -5121,7 +5121,7 @@ $F{spcut_13_t_in}.doubleValue())]]></textFieldExpression>
 				<text><![CDATA[Out]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="1751" y="40" width="40" height="30" uuid="bd0ae084-abcc-4e31-ba88-1ed6b08aadfa"/>
+				<reportElement x="2104" y="40" width="40" height="30" uuid="bd0ae084-abcc-4e31-ba88-1ed6b08aadfa"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -5133,7 +5133,7 @@ $F{spcut_13_t_in}.doubleValue())]]></textFieldExpression>
 				<text><![CDATA[Balance]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="1691" y="70" width="30" height="20" uuid="f6ca6ef0-2542-4c47-9c6e-e2b0b56c15b4"/>
+				<reportElement x="2044" y="70" width="30" height="20" uuid="f6ca6ef0-2542-4c47-9c6e-e2b0b56c15b4"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -5175,7 +5175,7 @@ $F{laser_12_t_in}.doubleValue()+
 $F{laser_13_t_in}.doubleValue())]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="1721" y="70" width="30" height="20" uuid="d94b5d8f-476f-4c5b-86e8-30331374222f"/>
+				<reportElement x="2074" y="70" width="30" height="20" uuid="d94b5d8f-476f-4c5b-86e8-30331374222f"/>
 				<box>
 					<pen lineWidth="1.0"/>
 					<topPen lineWidth="1.0"/>
@@ -5217,7 +5217,7 @@ $F{laser_12_t_out}.doubleValue()+
 $F{laser_13_t_out}.doubleValue())]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="1751" y="70" width="40" height="20" uuid="8378c679-1f3a-4ca6-8c6f-332b5b0f7ab1"/>
+				<reportElement x="2104" y="70" width="40" height="20" uuid="8378c679-1f3a-4ca6-8c6f-332b5b0f7ab1"/>
 				<box>
 					<pen lineWidth="1.0"/>
 				</box>
@@ -5253,6 +5253,978 @@ $F{laser_15_in}.doubleValue()+
 $F{laser_16_in}.doubleValue()+
 $F{laser_17_in}.doubleValue()+
 $F{laser_18_in}.doubleValue())]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="648" y="40" width="32" height="30" uuid="2980f543-ddb7-4051-a203-f50286f331b9"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None"/>
+				<text><![CDATA[WIP]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="648" y="70" width="32" height="20" uuid="13c0a461-c623-4527-9cc9-4f8cf808b012"/>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[(($F{ct_1_in}.doubleValue()+
+$F{ct_1_t_in}.doubleValue()+
+$F{ct_2_in}.doubleValue()+
+$F{ct_2_t_in}.doubleValue()+
+$F{ct_3_in}.doubleValue()+
+$F{ct_3_t_in}.doubleValue()+
+$F{ct_4_in}.doubleValue()+
+$F{ct_4_t_in}.doubleValue()+
+$F{ct_5_in}.doubleValue()+
+$F{ct_5_t_in}.doubleValue()+
+$F{ct_6_in}.doubleValue()+
+$F{ct_6_t_in}.doubleValue()+
+$F{ct_7_in}.doubleValue()+
+$F{ct_7_t_in}.doubleValue()+
+$F{ct_8_in}.doubleValue()+
+$F{ct_8_t_in}.doubleValue()+
+$F{ct_9_in}.doubleValue()+
+$F{ct_9_t_in}.doubleValue()+
+$F{ct_10_in}.doubleValue()+
+$F{ct_10_t_in}.doubleValue()+
+$F{ct_11_in}.doubleValue()+
+$F{ct_11_t_in}.doubleValue()+
+$F{ct_12_in}.doubleValue()+
+$F{ct_12_t_in}.doubleValue()+
+$F{ct_13_in}.doubleValue()+
+$F{ct_13_t_in}.doubleValue()+
+$F{ct_14_in}.doubleValue()+
+$F{ct_15_in}.doubleValue()+
+$F{ct_16_in}.doubleValue()+
+$F{ct_17_in}.doubleValue()+
+$F{ct_18_in}.doubleValue())-
+($F{ct_1_out}.doubleValue()+
+$F{ct_1_t_out}.doubleValue()+
+$F{ct_2_out}.doubleValue()+
+$F{ct_2_t_out}.doubleValue()+
+$F{ct_3_out}.doubleValue()+
+$F{ct_3_t_out}.doubleValue()+
+$F{ct_4_out}.doubleValue()+
+$F{ct_4_t_out}.doubleValue()+
+$F{ct_5_out}.doubleValue()+
+$F{ct_5_t_out}.doubleValue()+
+$F{ct_6_out}.doubleValue()+
+$F{ct_6_t_out}.doubleValue()+
+$F{ct_7_out}.doubleValue()+
+$F{ct_7_t_out}.doubleValue()+
+$F{ct_8_out}.doubleValue()+
+$F{ct_8_t_out}.doubleValue()+
+$F{ct_9_out}.doubleValue()+
+$F{ct_9_t_out}.doubleValue()+
+$F{ct_10_out}.doubleValue()+
+$F{ct_10_t_out}.doubleValue()+
+$F{ct_11_out}.doubleValue()+
+$F{ct_11_t_out}.doubleValue()+
+$F{ct_12_out}.doubleValue()+
+$F{ct_12_t_out}.doubleValue()+
+$F{ct_13_out}.doubleValue()+
+$F{ct_13_t_out}.doubleValue()+
+$F{ct_14_out}.doubleValue()+
+$F{ct_15_out}.doubleValue()+
+$F{ct_16_out}.doubleValue()+
+$F{ct_17_out}.doubleValue()+
+$F{ct_18_out}.doubleValue()))]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="800" y="40" width="32" height="30" uuid="25969270-d14f-4848-80bc-c86faf6c26f6"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None"/>
+				<text><![CDATA[WIP]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="800" y="70" width="32" height="20" uuid="a999face-34c6-4f0d-b1ca-9a5472d48cfa"/>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[(($F{pr_1_in}.doubleValue()+
+$F{pr_1_t_in}.doubleValue()+
+$F{pr_2_in}.doubleValue()+
+$F{pr_2_t_in}.doubleValue()+
+$F{pr_3_in}.doubleValue()+
+$F{pr_3_t_in}.doubleValue()+
+$F{pr_4_in}.doubleValue()+
+$F{pr_4_t_in}.doubleValue()+
+$F{pr_5_in}.doubleValue()+
+$F{pr_5_t_in}.doubleValue()+
+$F{pr_6_in}.doubleValue()+
+$F{pr_6_t_in}.doubleValue()+
+$F{pr_7_in}.doubleValue()+
+$F{pr_7_t_in}.doubleValue()+
+$F{pr_8_in}.doubleValue()+
+$F{pr_8_t_in}.doubleValue()+
+$F{pr_9_in}.doubleValue()+
+$F{pr_9_t_in}.doubleValue()+
+$F{pr_10_in}.doubleValue()+
+$F{pr_10_t_in}.doubleValue()+
+$F{pr_11_in}.doubleValue()+
+$F{pr_11_t_in}.doubleValue()+
+$F{pr_12_in}.doubleValue()+
+$F{pr_12_t_in}.doubleValue()+
+$F{pr_13_in}.doubleValue()+
+$F{pr_13_t_in}.doubleValue()+
+$F{pr_14_in}.doubleValue()+
+$F{pr_15_in}.doubleValue()+
+$F{pr_16_in}.doubleValue()+
+$F{pr_17_in}.doubleValue()+
+$F{pr_18_in}.doubleValue())-
+($F{pr_1_out}.doubleValue()+
+$F{pr_1_t_out}.doubleValue()+
+$F{pr_2_out}.doubleValue()+
+$F{pr_2_t_out}.doubleValue()+
+$F{pr_3_out}.doubleValue()+
+$F{pr_3_t_out}.doubleValue()+
+$F{pr_4_out}.doubleValue()+
+$F{pr_4_t_out}.doubleValue()+
+$F{pr_5_out}.doubleValue()+
+$F{pr_5_t_out}.doubleValue()+
+$F{pr_6_out}.doubleValue()+
+$F{pr_6_t_out}.doubleValue()+
+$F{pr_7_out}.doubleValue()+
+$F{pr_7_t_out}.doubleValue()+
+$F{pr_8_out}.doubleValue()+
+$F{pr_8_t_out}.doubleValue()+
+$F{pr_9_out}.doubleValue()+
+$F{pr_9_t_out}.doubleValue()+
+$F{pr_10_out}.doubleValue()+
+$F{pr_10_t_out}.doubleValue()+
+$F{pr_11_out}.doubleValue()+
+$F{pr_11_t_out}.doubleValue()+
+$F{pr_12_out}.doubleValue()+
+$F{pr_12_t_out}.doubleValue()+
+$F{pr_13_out}.doubleValue()+
+$F{pr_13_t_out}.doubleValue()+
+$F{pr_14_out}.doubleValue()+
+$F{pr_15_out}.doubleValue()+
+$F{pr_16_out}.doubleValue()+
+$F{pr_17_out}.doubleValue()+
+$F{pr_18_out}.doubleValue()))]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="932" y="70" width="32" height="20" uuid="54075967-e8ed-4daf-bce9-20075a625a35"/>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[(($F{st_1_in}.doubleValue()+
+$F{st_1_t_in}.doubleValue()+
+$F{st_2_in}.doubleValue()+
+$F{st_2_t_in}.doubleValue()+
+$F{st_3_in}.doubleValue()+
+$F{st_3_t_in}.doubleValue()+
+$F{st_4_in}.doubleValue()+
+$F{st_4_t_in}.doubleValue()+
+$F{st_5_in}.doubleValue()+
+$F{st_5_t_in}.doubleValue()+
+$F{st_6_in}.doubleValue()+
+$F{st_6_t_in}.doubleValue()+
+$F{st_7_in}.doubleValue()+
+$F{st_7_t_in}.doubleValue()+
+$F{st_8_in}.doubleValue()+
+$F{st_8_t_in}.doubleValue()+
+$F{st_9_in}.doubleValue()+
+$F{st_9_t_in}.doubleValue()+
+$F{st_10_in}.doubleValue()+
+$F{st_10_t_in}.doubleValue()+
+$F{st_11_in}.doubleValue()+
+$F{st_11_t_in}.doubleValue()+
+$F{st_12_in}.doubleValue()+
+$F{st_12_t_in}.doubleValue()+
+$F{st_13_in}.doubleValue()+
+$F{st_13_t_in}.doubleValue()+
+$F{st_14_in}.doubleValue()+
+$F{st_15_in}.doubleValue()+
+$F{st_16_in}.doubleValue()+
+$F{st_17_in}.doubleValue()+
+$F{st_18_in}.doubleValue())-
+($F{st_1_out}.doubleValue()+
+$F{st_1_t_out}.doubleValue()+
+$F{st_2_out}.doubleValue()+
+$F{st_2_t_out}.doubleValue()+
+$F{st_3_out}.doubleValue()+
+$F{st_3_t_out}.doubleValue()+
+$F{st_4_out}.doubleValue()+
+$F{st_4_t_out}.doubleValue()+
+$F{st_5_out}.doubleValue()+
+$F{st_5_t_out}.doubleValue()+
+$F{st_6_out}.doubleValue()+
+$F{st_6_t_out}.doubleValue()+
+$F{st_7_out}.doubleValue()+
+$F{st_7_t_out}.doubleValue()+
+$F{st_8_out}.doubleValue()+
+$F{st_8_t_out}.doubleValue()+
+$F{st_9_out}.doubleValue()+
+$F{st_9_t_out}.doubleValue()+
+$F{st_10_out}.doubleValue()+
+$F{st_10_t_out}.doubleValue()+
+$F{st_11_out}.doubleValue()+
+$F{st_11_t_out}.doubleValue()+
+$F{st_12_out}.doubleValue()+
+$F{st_12_t_out}.doubleValue()+
+$F{st_13_out}.doubleValue()+
+$F{st_13_t_out}.doubleValue()+
+$F{st_14_out}.doubleValue()+
+$F{st_15_out}.doubleValue()+
+$F{st_16_out}.doubleValue()+
+$F{st_17_out}.doubleValue()+
+$F{st_18_out}.doubleValue()))]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="932" y="40" width="32" height="30" uuid="ce9d7485-81d6-45cd-978d-fc87ce5428a4"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None"/>
+				<text><![CDATA[WIP]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="1064" y="70" width="32" height="20" uuid="928ce009-5006-4539-a1b5-dde22bc4f69e"/>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[(($F{os_1_in}.doubleValue()+
+$F{os_1_t_in}.doubleValue()+
+$F{os_2_in}.doubleValue()+
+$F{os_2_t_in}.doubleValue()+
+$F{os_3_in}.doubleValue()+
+$F{os_3_t_in}.doubleValue()+
+$F{os_4_in}.doubleValue()+
+$F{os_4_t_in}.doubleValue()+
+$F{os_5_in}.doubleValue()+
+$F{os_5_t_in}.doubleValue()+
+$F{os_6_in}.doubleValue()+
+$F{os_6_t_in}.doubleValue()+
+$F{os_7_in}.doubleValue()+
+$F{os_7_t_in}.doubleValue()+
+$F{os_8_in}.doubleValue()+
+$F{os_8_t_in}.doubleValue()+
+$F{os_9_in}.doubleValue()+
+$F{os_9_t_in}.doubleValue()+
+$F{os_10_in}.doubleValue()+
+$F{os_10_t_in}.doubleValue()+
+$F{os_11_in}.doubleValue()+
+$F{os_11_t_in}.doubleValue()+
+$F{os_12_in}.doubleValue()+
+$F{os_12_t_in}.doubleValue()+
+$F{os_13_in}.doubleValue()+
+$F{os_13_t_in}.doubleValue()+
+$F{os_14_in}.doubleValue()+
+$F{os_15_in}.doubleValue()+
+$F{os_16_in}.doubleValue()+
+$F{os_17_in}.doubleValue()+
+$F{os_18_in}.doubleValue())-
+($F{os_1_out}.doubleValue()+
+$F{os_1_t_out}.doubleValue()+
+$F{os_2_out}.doubleValue()+
+$F{os_2_t_out}.doubleValue()+
+$F{os_3_out}.doubleValue()+
+$F{os_3_t_out}.doubleValue()+
+$F{os_4_out}.doubleValue()+
+$F{os_4_t_out}.doubleValue()+
+$F{os_5_out}.doubleValue()+
+$F{os_5_t_out}.doubleValue()+
+$F{os_6_out}.doubleValue()+
+$F{os_6_t_out}.doubleValue()+
+$F{os_7_out}.doubleValue()+
+$F{os_7_t_out}.doubleValue()+
+$F{os_8_out}.doubleValue()+
+$F{os_8_t_out}.doubleValue()+
+$F{os_9_out}.doubleValue()+
+$F{os_9_t_out}.doubleValue()+
+$F{os_10_out}.doubleValue()+
+$F{os_10_t_out}.doubleValue()+
+$F{os_11_out}.doubleValue()+
+$F{os_11_t_out}.doubleValue()+
+$F{os_12_out}.doubleValue()+
+$F{os_12_t_out}.doubleValue()+
+$F{os_13_out}.doubleValue()+
+$F{os_13_t_out}.doubleValue()+
+$F{os_14_out}.doubleValue()+
+$F{os_15_out}.doubleValue()+
+$F{os_16_out}.doubleValue()+
+$F{os_17_out}.doubleValue()+
+$F{os_18_out}.doubleValue()))]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1064" y="40" width="32" height="30" uuid="c069da44-6731-4a85-801d-05c7d9da2529"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None"/>
+				<text><![CDATA[WIP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1204" y="40" width="32" height="30" uuid="a3244d66-26a1-41c3-b7e1-a1ebbdd2e25f"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None"/>
+				<text><![CDATA[WIP]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="1204" y="70" width="32" height="20" uuid="a8148c69-25db-448c-aa41-5b16f52ab386"/>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[(($F{as_1_in}.doubleValue()+
+$F{as_1_t_in}.doubleValue()+
+$F{as_2_in}.doubleValue()+
+$F{as_2_t_in}.doubleValue()+
+$F{as_3_in}.doubleValue()+
+$F{as_3_t_in}.doubleValue()+
+$F{as_4_in}.doubleValue()+
+$F{as_4_t_in}.doubleValue()+
+$F{as_5_in}.doubleValue()+
+$F{as_5_t_in}.doubleValue()+
+$F{as_6_in}.doubleValue()+
+$F{as_6_t_in}.doubleValue()+
+$F{as_7_in}.doubleValue()+
+$F{as_7_t_in}.doubleValue()+
+$F{as_8_in}.doubleValue()+
+$F{as_8_t_in}.doubleValue()+
+$F{as_9_in}.doubleValue()+
+$F{as_9_t_in}.doubleValue()+
+$F{as_10_in}.doubleValue()+
+$F{as_10_t_in}.doubleValue()+
+$F{as_11_in}.doubleValue()+
+$F{as_11_t_in}.doubleValue()+
+$F{as_12_in}.doubleValue()+
+$F{as_12_t_in}.doubleValue()+
+$F{as_13_in}.doubleValue()+
+$F{as_13_t_in}.doubleValue()+
+$F{as_14_in}.doubleValue()+
+$F{as_15_in}.doubleValue()+
+$F{as_16_in}.doubleValue()+
+$F{as_17_in}.doubleValue()+
+$F{as_18_in}.doubleValue())-
+($F{as_1_out}.doubleValue()+
+$F{as_1_t_out}.doubleValue()+
+$F{as_2_out}.doubleValue()+
+$F{as_2_t_out}.doubleValue()+
+$F{as_3_out}.doubleValue()+
+$F{as_3_t_out}.doubleValue()+
+$F{as_4_out}.doubleValue()+
+$F{as_4_t_out}.doubleValue()+
+$F{as_5_out}.doubleValue()+
+$F{as_5_t_out}.doubleValue()+
+$F{as_6_out}.doubleValue()+
+$F{as_6_t_out}.doubleValue()+
+$F{as_7_out}.doubleValue()+
+$F{as_7_t_out}.doubleValue()+
+$F{as_8_out}.doubleValue()+
+$F{as_8_t_out}.doubleValue()+
+$F{as_9_out}.doubleValue()+
+$F{as_9_t_out}.doubleValue()+
+$F{as_10_out}.doubleValue()+
+$F{as_10_t_out}.doubleValue()+
+$F{as_11_out}.doubleValue()+
+$F{as_11_t_out}.doubleValue()+
+$F{as_12_out}.doubleValue()+
+$F{as_12_t_out}.doubleValue()+
+$F{as_13_out}.doubleValue()+
+$F{as_13_t_out}.doubleValue()+
+$F{as_14_out}.doubleValue()+
+$F{as_15_out}.doubleValue()+
+$F{as_16_out}.doubleValue()+
+$F{as_17_out}.doubleValue()+
+$F{as_18_out}.doubleValue()))]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1336" y="40" width="32" height="30" uuid="682bf85c-7250-4d72-a363-b7b7728f23ee"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None"/>
+				<text><![CDATA[WIP]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="1336" y="70" width="32" height="20" uuid="e92e35c3-76c4-42b7-8f81-3ae1f98c5fdc"/>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[(($F{csc_1_in}.doubleValue()+
+$F{csc_1_t_in}.doubleValue()+
+$F{csc_2_in}.doubleValue()+
+$F{csc_2_t_in}.doubleValue()+
+$F{csc_3_in}.doubleValue()+
+$F{csc_3_t_in}.doubleValue()+
+$F{csc_4_in}.doubleValue()+
+$F{csc_4_t_in}.doubleValue()+
+$F{csc_5_in}.doubleValue()+
+$F{csc_5_t_in}.doubleValue()+
+$F{csc_6_in}.doubleValue()+
+$F{csc_6_t_in}.doubleValue()+
+$F{csc_7_in}.doubleValue()+
+$F{csc_7_t_in}.doubleValue()+
+$F{csc_8_in}.doubleValue()+
+$F{csc_8_t_in}.doubleValue()+
+$F{csc_9_in}.doubleValue()+
+$F{csc_9_t_in}.doubleValue()+
+$F{csc_10_in}.doubleValue()+
+$F{csc_10_t_in}.doubleValue()+
+$F{csc_11_in}.doubleValue()+
+$F{csc_11_t_in}.doubleValue()+
+$F{csc_12_in}.doubleValue()+
+$F{csc_12_t_in}.doubleValue()+
+$F{csc_13_in}.doubleValue()+
+$F{csc_13_t_in}.doubleValue()+
+$F{csc_14_in}.doubleValue()+
+$F{csc_15_in}.doubleValue()+
+$F{csc_16_in}.doubleValue()+
+$F{csc_17_in}.doubleValue()+
+$F{csc_18_in}.doubleValue())-
+($F{csc_1_out}.doubleValue()+
+$F{csc_1_t_out}.doubleValue()+
+$F{csc_2_out}.doubleValue()+
+$F{csc_2_t_out}.doubleValue()+
+$F{csc_3_out}.doubleValue()+
+$F{csc_3_t_out}.doubleValue()+
+$F{csc_4_out}.doubleValue()+
+$F{csc_4_t_out}.doubleValue()+
+$F{csc_5_out}.doubleValue()+
+$F{csc_5_t_out}.doubleValue()+
+$F{csc_6_out}.doubleValue()+
+$F{csc_6_t_out}.doubleValue()+
+$F{csc_7_out}.doubleValue()+
+$F{csc_7_t_out}.doubleValue()+
+$F{csc_8_out}.doubleValue()+
+$F{csc_8_t_out}.doubleValue()+
+$F{csc_9_out}.doubleValue()+
+$F{csc_9_t_out}.doubleValue()+
+$F{csc_10_out}.doubleValue()+
+$F{csc_10_t_out}.doubleValue()+
+$F{csc_11_out}.doubleValue()+
+$F{csc_11_t_out}.doubleValue()+
+$F{csc_12_out}.doubleValue()+
+$F{csc_12_t_out}.doubleValue()+
+$F{csc_13_out}.doubleValue()+
+$F{csc_13_t_out}.doubleValue()+
+$F{csc_14_out}.doubleValue()+
+$F{csc_15_out}.doubleValue()+
+$F{csc_16_out}.doubleValue()+
+$F{csc_17_out}.doubleValue()+
+$F{csc_18_out}.doubleValue()))]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1468" y="40" width="32" height="30" uuid="84204f8e-68e6-42b1-a958-12c037fcf7aa"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None"/>
+				<text><![CDATA[WIP]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="1468" y="70" width="32" height="20" uuid="09676299-8377-427c-bbdd-d02e1b070e3c"/>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[(($F{sc_1_in}.doubleValue()+
+$F{sc_1_t_in}.doubleValue()+
+$F{sc_2_in}.doubleValue()+
+$F{sc_2_t_in}.doubleValue()+
+$F{sc_3_in}.doubleValue()+
+$F{sc_3_t_in}.doubleValue()+
+$F{sc_4_in}.doubleValue()+
+$F{sc_4_t_in}.doubleValue()+
+$F{sc_5_in}.doubleValue()+
+$F{sc_5_t_in}.doubleValue()+
+$F{sc_6_in}.doubleValue()+
+$F{sc_6_t_in}.doubleValue()+
+$F{sc_7_in}.doubleValue()+
+$F{sc_7_t_in}.doubleValue()+
+$F{sc_8_in}.doubleValue()+
+$F{sc_8_t_in}.doubleValue()+
+$F{sc_9_in}.doubleValue()+
+$F{sc_9_t_in}.doubleValue()+
+$F{sc_10_in}.doubleValue()+
+$F{sc_10_t_in}.doubleValue()+
+$F{sc_11_in}.doubleValue()+
+$F{sc_11_t_in}.doubleValue()+
+$F{sc_12_in}.doubleValue()+
+$F{sc_12_t_in}.doubleValue()+
+$F{sc_13_in}.doubleValue()+
+$F{sc_13_t_in}.doubleValue()+
+$F{sc_14_in}.doubleValue()+
+$F{sc_15_in}.doubleValue()+
+$F{sc_16_in}.doubleValue()+
+$F{sc_17_in}.doubleValue()+
+$F{sc_18_in}.doubleValue())-
+($F{sc_1_out}.doubleValue()+
+$F{sc_1_t_out}.doubleValue()+
+$F{sc_2_out}.doubleValue()+
+$F{sc_2_t_out}.doubleValue()+
+$F{sc_3_out}.doubleValue()+
+$F{sc_3_t_out}.doubleValue()+
+$F{sc_4_out}.doubleValue()+
+$F{sc_4_t_out}.doubleValue()+
+$F{sc_5_out}.doubleValue()+
+$F{sc_5_t_out}.doubleValue()+
+$F{sc_6_out}.doubleValue()+
+$F{sc_6_t_out}.doubleValue()+
+$F{sc_7_out}.doubleValue()+
+$F{sc_7_t_out}.doubleValue()+
+$F{sc_8_out}.doubleValue()+
+$F{sc_8_t_out}.doubleValue()+
+$F{sc_9_out}.doubleValue()+
+$F{sc_9_t_out}.doubleValue()+
+$F{sc_10_out}.doubleValue()+
+$F{sc_10_t_out}.doubleValue()+
+$F{sc_11_out}.doubleValue()+
+$F{sc_11_t_out}.doubleValue()+
+$F{sc_12_out}.doubleValue()+
+$F{sc_12_t_out}.doubleValue()+
+$F{sc_13_out}.doubleValue()+
+$F{sc_13_t_out}.doubleValue()+
+$F{sc_14_out}.doubleValue()+
+$F{sc_15_out}.doubleValue()+
+$F{sc_16_out}.doubleValue()+
+$F{sc_17_out}.doubleValue()+
+$F{sc_18_out}.doubleValue()))]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1608" y="40" width="32" height="30" uuid="7cac8c87-8e74-453b-a551-eeec1dc6a6a2"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None"/>
+				<text><![CDATA[WIP]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="1608" y="70" width="32" height="20" uuid="54703e69-1b31-44fc-9224-ff5e326d7ae3"/>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[(($F{ns_1_in}.doubleValue()+
+$F{ns_1_t_in}.doubleValue()+
+$F{ns_2_in}.doubleValue()+
+$F{ns_2_t_in}.doubleValue()+
+$F{ns_3_in}.doubleValue()+
+$F{ns_3_t_in}.doubleValue()+
+$F{ns_4_in}.doubleValue()+
+$F{ns_4_t_in}.doubleValue()+
+$F{ns_5_in}.doubleValue()+
+$F{ns_5_t_in}.doubleValue()+
+$F{ns_6_in}.doubleValue()+
+$F{ns_6_t_in}.doubleValue()+
+$F{ns_7_in}.doubleValue()+
+$F{ns_7_t_in}.doubleValue()+
+$F{ns_8_in}.doubleValue()+
+$F{ns_8_t_in}.doubleValue()+
+$F{ns_9_in}.doubleValue()+
+$F{ns_9_t_in}.doubleValue()+
+$F{ns_10_in}.doubleValue()+
+$F{ns_10_t_in}.doubleValue()+
+$F{ns_11_in}.doubleValue()+
+$F{ns_11_t_in}.doubleValue()+
+$F{ns_12_in}.doubleValue()+
+$F{ns_12_t_in}.doubleValue()+
+$F{ns_13_in}.doubleValue()+
+$F{ns_13_t_in}.doubleValue()+
+$F{ns_14_in}.doubleValue()+
+$F{ns_15_in}.doubleValue()+
+$F{ns_16_in}.doubleValue()+
+$F{ns_17_in}.doubleValue()+
+$F{ns_18_in}.doubleValue())-
+($F{ns_1_out}.doubleValue()+
+$F{ns_1_t_out}.doubleValue()+
+$F{ns_2_out}.doubleValue()+
+$F{ns_2_t_out}.doubleValue()+
+$F{ns_3_out}.doubleValue()+
+$F{ns_3_t_out}.doubleValue()+
+$F{ns_4_out}.doubleValue()+
+$F{ns_4_t_out}.doubleValue()+
+$F{ns_5_out}.doubleValue()+
+$F{ns_5_t_out}.doubleValue()+
+$F{ns_6_out}.doubleValue()+
+$F{ns_6_t_out}.doubleValue()+
+$F{ns_7_out}.doubleValue()+
+$F{ns_7_t_out}.doubleValue()+
+$F{ns_8_out}.doubleValue()+
+$F{ns_8_t_out}.doubleValue()+
+$F{ns_9_out}.doubleValue()+
+$F{ns_9_t_out}.doubleValue()+
+$F{ns_10_out}.doubleValue()+
+$F{ns_10_t_out}.doubleValue()+
+$F{ns_11_out}.doubleValue()+
+$F{ns_11_t_out}.doubleValue()+
+$F{ns_12_out}.doubleValue()+
+$F{ns_12_t_out}.doubleValue()+
+$F{ns_13_out}.doubleValue()+
+$F{ns_13_t_out}.doubleValue()+
+$F{ns_14_out}.doubleValue()+
+$F{ns_15_out}.doubleValue()+
+$F{ns_16_out}.doubleValue()+
+$F{ns_17_out}.doubleValue()+
+$F{ns_18_out}.doubleValue()))]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1740" y="70" width="32" height="20" uuid="41d8cb36-0ce0-4500-9d99-6186401ba6ff"/>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[(($F{spcut_1_in}.doubleValue()+
+$F{spcut_1_t_in}.doubleValue()+
+$F{spcut_2_in}.doubleValue()+
+$F{spcut_2_t_in}.doubleValue()+
+$F{spcut_3_in}.doubleValue()+
+$F{spcut_3_t_in}.doubleValue()+
+$F{spcut_4_in}.doubleValue()+
+$F{spcut_4_t_in}.doubleValue()+
+$F{spcut_5_in}.doubleValue()+
+$F{spcut_5_t_in}.doubleValue()+
+$F{spcut_6_in}.doubleValue()+
+$F{spcut_6_t_in}.doubleValue()+
+$F{spcut_7_in}.doubleValue()+
+$F{spcut_7_t_in}.doubleValue()+
+$F{spcut_8_in}.doubleValue()+
+$F{spcut_8_t_in}.doubleValue()+
+$F{spcut_9_in}.doubleValue()+
+$F{spcut_9_t_in}.doubleValue()+
+$F{spcut_10_in}.doubleValue()+
+$F{spcut_10_t_in}.doubleValue()+
+$F{spcut_11_in}.doubleValue()+
+$F{spcut_11_t_in}.doubleValue()+
+$F{spcut_12_in}.doubleValue()+
+$F{spcut_12_t_in}.doubleValue()+
+$F{spcut_13_in}.doubleValue()+
+$F{spcut_13_t_in}.doubleValue()+
+$F{spcut_14_in}.doubleValue()+
+$F{spcut_15_in}.doubleValue()+
+$F{spcut_16_in}.doubleValue()+
+$F{spcut_17_in}.doubleValue()+
+$F{spcut_18_in}.doubleValue())-
+($F{spcut_1_out}.doubleValue()+
+$F{spcut_1_t_out}.doubleValue()+
+$F{spcut_2_out}.doubleValue()+
+$F{spcut_2_t_out}.doubleValue()+
+$F{spcut_3_out}.doubleValue()+
+$F{spcut_3_t_out}.doubleValue()+
+$F{spcut_4_out}.doubleValue()+
+$F{spcut_4_t_out}.doubleValue()+
+$F{spcut_5_out}.doubleValue()+
+$F{spcut_5_t_out}.doubleValue()+
+$F{spcut_6_out}.doubleValue()+
+$F{spcut_6_t_out}.doubleValue()+
+$F{spcut_7_out}.doubleValue()+
+$F{spcut_7_t_out}.doubleValue()+
+$F{spcut_8_out}.doubleValue()+
+$F{spcut_8_t_out}.doubleValue()+
+$F{spcut_9_out}.doubleValue()+
+$F{spcut_9_t_out}.doubleValue()+
+$F{spcut_10_out}.doubleValue()+
+$F{spcut_10_t_out}.doubleValue()+
+$F{spcut_11_out}.doubleValue()+
+$F{spcut_11_t_out}.doubleValue()+
+$F{spcut_12_out}.doubleValue()+
+$F{spcut_12_t_out}.doubleValue()+
+$F{spcut_13_out}.doubleValue()+
+$F{spcut_13_t_out}.doubleValue()+
+$F{spcut_14_out}.doubleValue()+
+$F{spcut_15_out}.doubleValue()+
+$F{spcut_16_out}.doubleValue()+
+$F{spcut_17_out}.doubleValue()+
+$F{spcut_18_out}.doubleValue()))]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1740" y="40" width="32" height="30" uuid="013d1898-e14b-4f5b-858f-309385570551"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None"/>
+				<text><![CDATA[WIP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2012" y="40" width="32" height="30" uuid="d3bbf4f2-5d30-4d8f-a58e-8d4818df25e4"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None"/>
+				<text><![CDATA[WIP]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="2012" y="70" width="32" height="20" uuid="0b1dc6f4-c60a-473e-aae1-139410fcd4b2"/>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[(($F{label_1_in}.doubleValue()+
+$F{label_1_t_in}.doubleValue()+
+$F{label_2_in}.doubleValue()+
+$F{label_2_t_in}.doubleValue()+
+$F{label_3_in}.doubleValue()+
+$F{label_3_t_in}.doubleValue()+
+$F{label_4_in}.doubleValue()+
+$F{label_4_t_in}.doubleValue()+
+$F{label_5_in}.doubleValue()+
+$F{label_5_t_in}.doubleValue()+
+$F{label_6_in}.doubleValue()+
+$F{label_6_t_in}.doubleValue()+
+$F{label_7_in}.doubleValue()+
+$F{label_7_t_in}.doubleValue()+
+$F{label_8_in}.doubleValue()+
+$F{label_8_t_in}.doubleValue()+
+$F{label_9_in}.doubleValue()+
+$F{label_9_t_in}.doubleValue()+
+$F{label_10_in}.doubleValue()+
+$F{label_10_t_in}.doubleValue()+
+$F{label_11_in}.doubleValue()+
+$F{label_11_t_in}.doubleValue()+
+$F{label_12_in}.doubleValue()+
+$F{label_12_t_in}.doubleValue()+
+$F{label_13_in}.doubleValue()+
+$F{label_13_t_in}.doubleValue()+
+$F{label_14_in}.doubleValue()+
+$F{label_15_in}.doubleValue()+
+$F{label_16_in}.doubleValue()+
+$F{label_17_in}.doubleValue()+
+$F{label_18_in}.doubleValue())-
+($F{label_1_out}.doubleValue()+
+$F{label_1_t_out}.doubleValue()+
+$F{label_2_out}.doubleValue()+
+$F{label_2_t_out}.doubleValue()+
+$F{label_3_out}.doubleValue()+
+$F{label_3_t_out}.doubleValue()+
+$F{label_4_out}.doubleValue()+
+$F{label_4_t_out}.doubleValue()+
+$F{label_5_out}.doubleValue()+
+$F{label_5_t_out}.doubleValue()+
+$F{label_6_out}.doubleValue()+
+$F{label_6_t_out}.doubleValue()+
+$F{label_7_out}.doubleValue()+
+$F{label_7_t_out}.doubleValue()+
+$F{label_8_out}.doubleValue()+
+$F{label_8_t_out}.doubleValue()+
+$F{label_9_out}.doubleValue()+
+$F{label_9_t_out}.doubleValue()+
+$F{label_10_out}.doubleValue()+
+$F{label_10_t_out}.doubleValue()+
+$F{label_11_out}.doubleValue()+
+$F{label_11_t_out}.doubleValue()+
+$F{label_12_out}.doubleValue()+
+$F{label_12_t_out}.doubleValue()+
+$F{label_13_out}.doubleValue()+
+$F{label_13_t_out}.doubleValue()+
+$F{label_14_out}.doubleValue()+
+$F{label_15_out}.doubleValue()+
+$F{label_16_out}.doubleValue()+
+$F{label_17_out}.doubleValue()+
+$F{label_18_out}.doubleValue()))]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2144" y="40" width="32" height="30" uuid="dc9651e0-708d-4037-8075-85abcdbac8f6"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None"/>
+				<text><![CDATA[WIP]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="2144" y="70" width="32" height="20" uuid="042103d7-3bba-4d58-84c6-abaed8ccd764"/>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[(($F{laser_1_in}.doubleValue()+
+$F{laser_1_t_in}.doubleValue()+
+$F{laser_2_in}.doubleValue()+
+$F{laser_2_t_in}.doubleValue()+
+$F{laser_3_in}.doubleValue()+
+$F{laser_3_t_in}.doubleValue()+
+$F{laser_4_in}.doubleValue()+
+$F{laser_4_t_in}.doubleValue()+
+$F{laser_5_in}.doubleValue()+
+$F{laser_5_t_in}.doubleValue()+
+$F{laser_6_in}.doubleValue()+
+$F{laser_6_t_in}.doubleValue()+
+$F{laser_7_in}.doubleValue()+
+$F{laser_7_t_in}.doubleValue()+
+$F{laser_8_in}.doubleValue()+
+$F{laser_8_t_in}.doubleValue()+
+$F{laser_9_in}.doubleValue()+
+$F{laser_9_t_in}.doubleValue()+
+$F{laser_10_in}.doubleValue()+
+$F{laser_10_t_in}.doubleValue()+
+$F{laser_11_in}.doubleValue()+
+$F{laser_11_t_in}.doubleValue()+
+$F{laser_12_in}.doubleValue()+
+$F{laser_12_t_in}.doubleValue()+
+$F{laser_13_in}.doubleValue()+
+$F{laser_13_t_in}.doubleValue()+
+$F{laser_14_in}.doubleValue()+
+$F{laser_15_in}.doubleValue()+
+$F{laser_16_in}.doubleValue()+
+$F{laser_17_in}.doubleValue()+
+$F{laser_18_in}.doubleValue())-
+($F{laser_1_out}.doubleValue()+
+$F{laser_1_t_out}.doubleValue()+
+$F{laser_2_out}.doubleValue()+
+$F{laser_2_t_out}.doubleValue()+
+$F{laser_3_out}.doubleValue()+
+$F{laser_3_t_out}.doubleValue()+
+$F{laser_4_out}.doubleValue()+
+$F{laser_4_t_out}.doubleValue()+
+$F{laser_5_out}.doubleValue()+
+$F{laser_5_t_out}.doubleValue()+
+$F{laser_6_out}.doubleValue()+
+$F{laser_6_t_out}.doubleValue()+
+$F{laser_7_out}.doubleValue()+
+$F{laser_7_t_out}.doubleValue()+
+$F{laser_8_out}.doubleValue()+
+$F{laser_8_t_out}.doubleValue()+
+$F{laser_9_out}.doubleValue()+
+$F{laser_9_t_out}.doubleValue()+
+$F{laser_10_out}.doubleValue()+
+$F{laser_10_t_out}.doubleValue()+
+$F{laser_11_out}.doubleValue()+
+$F{laser_11_t_out}.doubleValue()+
+$F{laser_12_out}.doubleValue()+
+$F{laser_12_t_out}.doubleValue()+
+$F{laser_13_out}.doubleValue()+
+$F{laser_13_t_out}.doubleValue()+
+$F{laser_14_out}.doubleValue()+
+$F{laser_15_out}.doubleValue()+
+$F{laser_16_out}.doubleValue()+
+$F{laser_17_out}.doubleValue()+
+$F{laser_18_out}.doubleValue()))]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1872" y="40" width="32" height="30" uuid="27c15552-655f-49cc-99ea-5622504f306d"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None"/>
+				<text><![CDATA[WIP]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="1872" y="70" width="32" height="20" uuid="d7c9cc8c-62bc-44ca-9cb7-c131eb8f6705"/>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[(($F{spprep_1_in}.doubleValue()+
+$F{spprep_1_t_in}.doubleValue()+
+$F{spprep_2_in}.doubleValue()+
+$F{spprep_2_t_in}.doubleValue()+
+$F{spprep_3_in}.doubleValue()+
+$F{spprep_3_t_in}.doubleValue()+
+$F{spprep_4_in}.doubleValue()+
+$F{spprep_4_t_in}.doubleValue()+
+$F{spprep_5_in}.doubleValue()+
+$F{spprep_5_t_in}.doubleValue()+
+$F{spprep_6_in}.doubleValue()+
+$F{spprep_6_t_in}.doubleValue()+
+$F{spprep_7_in}.doubleValue()+
+$F{spprep_7_t_in}.doubleValue()+
+$F{spprep_8_in}.doubleValue()+
+$F{spprep_8_t_in}.doubleValue()+
+$F{spprep_9_in}.doubleValue()+
+$F{spprep_9_t_in}.doubleValue()+
+$F{spprep_10_in}.doubleValue()+
+$F{spprep_10_t_in}.doubleValue()+
+$F{spprep_11_in}.doubleValue()+
+$F{spprep_11_t_in}.doubleValue()+
+$F{spprep_12_in}.doubleValue()+
+$F{spprep_12_t_in}.doubleValue()+
+$F{spprep_13_in}.doubleValue()+
+$F{spprep_13_t_in}.doubleValue()+
+$F{spprep_14_in}.doubleValue()+
+$F{spprep_15_in}.doubleValue()+
+$F{spprep_16_in}.doubleValue()+
+$F{spprep_17_in}.doubleValue()+
+$F{spprep_18_in}.doubleValue())-
+($F{spprep_1_out}.doubleValue()+
+$F{spprep_1_t_out}.doubleValue()+
+$F{spprep_2_out}.doubleValue()+
+$F{spprep_2_t_out}.doubleValue()+
+$F{spprep_3_out}.doubleValue()+
+$F{spprep_3_t_out}.doubleValue()+
+$F{spprep_4_out}.doubleValue()+
+$F{spprep_4_t_out}.doubleValue()+
+$F{spprep_5_out}.doubleValue()+
+$F{spprep_5_t_out}.doubleValue()+
+$F{spprep_6_out}.doubleValue()+
+$F{spprep_6_t_out}.doubleValue()+
+$F{spprep_7_out}.doubleValue()+
+$F{spprep_7_t_out}.doubleValue()+
+$F{spprep_8_out}.doubleValue()+
+$F{spprep_8_t_out}.doubleValue()+
+$F{spprep_9_out}.doubleValue()+
+$F{spprep_9_t_out}.doubleValue()+
+$F{spprep_10_out}.doubleValue()+
+$F{spprep_10_t_out}.doubleValue()+
+$F{spprep_11_out}.doubleValue()+
+$F{spprep_11_t_out}.doubleValue()+
+$F{spprep_12_out}.doubleValue()+
+$F{spprep_12_t_out}.doubleValue()+
+$F{spprep_13_out}.doubleValue()+
+$F{spprep_13_t_out}.doubleValue()+
+$F{spprep_14_out}.doubleValue()+
+$F{spprep_15_out}.doubleValue()+
+$F{spprep_16_out}.doubleValue()+
+$F{spprep_17_out}.doubleValue()+
+$F{spprep_18_out}.doubleValue()))]]></textFieldExpression>
 			</textField>
 		</band>
 	</pageHeader>
