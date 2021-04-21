@@ -740,9 +740,7 @@
                             var CtSize11T = aaData[index].size11T;
                             var CtSize12T = aaData[index].size12T;
                             var CtSize13T = aaData[index].size13T;
-                            
-//                            console.log(flagCtIn1, flagCtOut1)
-                            
+                                                
                             sumIN += flagCtIn1 === 1 && flagCtOut1 === null ?  CtSize1 : 0;
                             sumIN += flagCtIn2 === 1 && flagCtOut2 === null ?  CtSize2 : 0;
                             sumIN += flagCtIn3 === 1 && flagCtOut3 === null ?  CtSize3 : 0;
