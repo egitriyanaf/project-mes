@@ -567,7 +567,7 @@
                                 }
                             },
                             "aTargets": [19]
-                        },
+                        }
 //                        {
 //                            class: "text-center",
 //                            "mRender": function (data, type, row) {
@@ -1574,42 +1574,6 @@
                                                 <th></th>
                                                 <th></th>
                                             </tr>
-<!--                                            <tr>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                                <th></th>
-                                            </tr>-->
                                         </tfoot>
                                     </table>
                                     <div class="form-group">

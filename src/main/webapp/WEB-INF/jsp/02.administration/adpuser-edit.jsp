@@ -128,7 +128,7 @@
                     <div class="top-content-button">
                         <ul class="list-inline quick-access">
                             <li>
-                                <button id="btn-reset"class="btn btn-default" type="button"><i class="fa fa-refresh"></i> Reset Form</button>
+                                <button id="btn-reset" class="btn btn-default" type="button"><i class="fa fa-refresh"></i> Reset Form</button>
                             </li>
                             <li>
                                 <button id="btn-save" class="btn btn-custom-secondary" type="button"><i class="fa fa-save"></i> Save Data</button>

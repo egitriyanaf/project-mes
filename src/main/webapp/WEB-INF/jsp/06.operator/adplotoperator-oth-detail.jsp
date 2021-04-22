@@ -2277,7 +2277,7 @@
                                         return  '<td class="size7">' + "" + '</td>';
                                     }
                                 } else if(typeProses === 'IN' && departement === 'laser'){
-                                    if (row.size2T === null) {
+                                    if (row.size7 === null) {
                                         return  '<td class="size7">' + "" + '</td>';
                                     } else if (row.flagLaserInSize7 === 1 && row.flagLaserOutSize7 === 1) {
                                         return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size7 + ' </span></a>';

@@ -338,7 +338,7 @@ public class AdpLotOperatorController extends BaseController {
      * @return
      */
     @RequestMapping("/detail/{ncvs}/{po}/{item}/expesskanban/{demandclass}/{codeDemand}")
-    public String experssKanban(@PathVariable String ncvs, @PathVariable String po,
+    public String expressKanban(@PathVariable String ncvs, @PathVariable String po,
             @PathVariable String item, 
             @PathVariable String demandclass,@PathVariable String codeDemand,
             Model model, HttpSession session) {
