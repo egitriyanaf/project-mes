@@ -81,7 +81,7 @@ h1 {
 	margin: 0 0 1em;
 	padding: .8em 1em;
 	background: rgba(255, 255, 255, 0.94);
-        border-radius: 8px;
+        border-radius: 16px;
 }
 .icon1 span.fa {
     color: #222;
@@ -265,6 +265,7 @@ a {
     -moz-border-radius: 0px;
     -o-border-radius: 0px;
     cursor: pointer;
+    border-radius: 4px;
 }
 .checkbox input:checked + i:after {
     opacity: 1;

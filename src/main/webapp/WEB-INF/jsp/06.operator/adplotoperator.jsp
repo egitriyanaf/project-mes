@@ -154,7 +154,9 @@ f<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                             <div class="form-group">
                                 <select id="departementType" class="form-control" style="background-color: white">
                                     <option value="">-- Choose --</option>
+
                                     <option value="Cutting">Cutting</option>
+
                                     <option value="Preparation">Preparation</option>
                                     <option value="Stiching">Stiching</option>
                                     <option value="Assembly">Assembly</option>

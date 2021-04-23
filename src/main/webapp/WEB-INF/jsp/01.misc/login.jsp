@@ -38,7 +38,7 @@
 <!-- main -->
 <div class="w3layouts-main"> 
 	<div class="bg-layer">
-		<h1><img src="${pageContext.request.contextPath}/assets/login-template/ADF-Logo.png" alt="logo adf" width="300" height="200"></h1>
+		<h1><img src="${pageContext.request.contextPath}/assets/login-template/ADF-Logo.png" alt="logo adf" width="300" height="150"></h1>
 		<div class="header-main">
 			<div class="main-icon">
                             <img src="${pageContext.request.contextPath}/assets/login-template/mesapp.png">
@@ -64,7 +64,7 @@
 						 <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i> Keep me logged in</label>
 					</div>
 					<div class="bottom">
-						<button class="btn">Log In</button>
+						<button class="btn"><span style='font-weight: bolder'>Log In</span></button>
 					</div>
 				</form>	
 			</div>
