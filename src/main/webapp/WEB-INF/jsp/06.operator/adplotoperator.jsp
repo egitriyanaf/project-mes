@@ -1,6 +1,6 @@
 f<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
-
+<%--<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>--%>
 <!DOCTYPE html>
 <html>
 
@@ -153,10 +153,19 @@ f<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <select id="departementType" class="form-control" style="background-color: white">
-                                    <option value="">-- Choose --</option>
-
+                                    <option hidden="true" value="">-- Choose --</option>
+<!--                                    <sec:authorize access="hasRole('${loginSecUser.usrType} == ADMIN')">
+                                        <option value="Cutting">Cutting</option>    
+                                        </sec:authorize>-->
+                                    
+<!--                                    <div th:if="'ADMIN' == ${$loginSecUser.usrType}">
+                                        <option value="Cutting">Cutting</option>
+                                    </div>
+                                    <div th:if="'Operator' == ${$loginSecUser.usrType}">
+                                        <option value="Preparation">Preparation</option>
+                                    </div>-->
+                                    
                                     <option value="Cutting">Cutting</option>
-
                                     <option value="Preparation">Preparation</option>
                                     <option value="Stiching">Stiching</option>
                                     <option value="Assembly">Assembly</option>
