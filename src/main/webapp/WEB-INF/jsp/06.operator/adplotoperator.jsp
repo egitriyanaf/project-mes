@@ -1,6 +1,5 @@
-f<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
-<%--<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>--%>
 <!DOCTYPE html>
 <html>
 
@@ -154,29 +153,34 @@ f<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                             <div class="form-group">
                                 <select id="departementType" class="form-control" style="background-color: white">
                                     <option hidden="true" value="">-- Choose --</option>
-<!--                                    <sec:authorize access="hasRole('${loginSecUser.usrType} == ADMIN')">
-                                        <option value="Cutting">Cutting</option>    
-                                        </sec:authorize>-->
-                                    
-<!--                                    <div th:if="'ADMIN' == ${$loginSecUser.usrType}">
+                                    <c:if test="${loginSecUser.usrType == 'ADMIN'}">
                                         <option value="Cutting">Cutting</option>
-                                    </div>
-                                    <div th:if="'Operator' == ${$loginSecUser.usrType}">
                                         <option value="Preparation">Preparation</option>
-                                    </div>-->
-                                    
-                                    <option value="Cutting">Cutting</option>
-                                    <option value="Preparation">Preparation</option>
-                                    <option value="Stiching">Stiching</option>
-                                    <option value="Assembly">Assembly</option>
-                                    <option value="CSC">CSC</option>
-                                    <option value="No Sew">No Sew</option>
-                                    <option value="Subcon">Vendor/ SubCon</option>
-                                    <option value="OutSole">OutSole</option>
-                                    <option value="spcut">Supermarket Cutting</option>
-                                    <option value="spprep">Supermarket Preparation</option>
-                                    <option value="label">Label</option>
-                                    <option value="laser">Laser</option>
+                                        <option value="Stiching">Stiching</option>    
+                                        <option value="Assembly">Assembly</option>
+                                        <option value="CSC">CSC</option>
+                                        <option value="No Sew">No Sew</option>
+                                        <option value="Subcon">Vendor/ SubCon</option>
+                                        <option value="OutSole">OutSole</option>
+                                        <option value="spcut">Supermarket Cutting</option>
+                                        <option value="spprep">Supermarket Preparation</option>
+                                        <option value="label">Label</option> 
+                                        <option value="laser">Laser</option> 
+                                    </c:if>
+                                    <c:if test="${loginSecUser.usrType == 'Operator'}">
+                                        <option value="Cutting">Cutting</option>
+                                        <option value="Preparation">Preparation</option>
+                                        <option value="Stiching">Stiching</option>    
+                                        <option value="Assembly">Assembly</option>
+                                        <option value="CSC">CSC</option>
+                                        <option value="No Sew">No Sew</option>
+                                        <option value="Subcon">Vendor/ SubCon</option>
+                                        <option value="OutSole">OutSole</option>
+                                        <option value="spcut">Supermarket Cutting</option>
+                                        <option value="spprep">Supermarket Preparation</option>
+                                        <option value="label">Label</option> 
+                                        <option value="laser">Laser</option> 
+                                    </c:if>
                                 </select>
                             </div>
                         </div>

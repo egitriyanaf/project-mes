@@ -153,6 +153,7 @@
                                             </c:forEach>
                                         </span>
 
+                                            <!--child menu-->
                                         <div class="sub-role-menu">
                                             <c:forEach items="${menuModel.childs}" var="menuChildModel">
                                                 <div class="divmenu">
@@ -174,6 +175,8 @@
                                                 </div>
                                             </c:forEach>
                                         </div>
+                                            <!--end child menu-->
+                                            
                                     </div>
                                 </c:forEach>
                                 <div id="checkboxMenus"></div>

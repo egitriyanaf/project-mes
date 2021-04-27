@@ -141,7 +141,7 @@
                     </div>					                  
                 </div>
                 <div class="table-responsive border-white">
-                    <table id="dataTable" class="table table-striped table-hover table-bordered datatable"
+                    <table id="dataTable" class="table table-striped table-hover table-bordered datatable table-responsive"
                            style="width: 100%">
                         <thead>
                             <tr>

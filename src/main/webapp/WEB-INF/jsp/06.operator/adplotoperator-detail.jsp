@@ -801,7 +801,7 @@
                             <div class="widget widget-table">
                                 <div class="table-responsive border-white">
                                     <table id="dataTable"
-                                           class="table table-striped table-bordered table-hover table-full-width">
+                                           class="table table-striped table-bordered table-hover table-responsive table-full-width">
                                         <thead>
                                             <tr>
                                                 <th>G</th>
