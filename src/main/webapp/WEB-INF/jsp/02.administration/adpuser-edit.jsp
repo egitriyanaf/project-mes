@@ -246,6 +246,55 @@
                                                     <c:forEach items="${listUserType}" var="lookup">
                                                         <option value="${lookup.value}" ${lookup.value == user.usrType ? 'selected="selected"' : ''}>${lookup.description}</option>
                                                     </c:forEach>
+ 
+                                                    <option value="Cutting IN">Cutting IN</option>    
+                                                    <option value="Cutting OUT">Cutting OUT</option>    
+                                                    <option value="Cutting IN/OUT">Cutting IN/OUT</option>
+                                                    
+                                                    <option value="Preparation IN">Preparation IN</option>
+                                                    <option value="Preparation OUT">Preparation OUT</option>
+                                                    <option value="Preparation IN/OUT">Preparation IN/OUT</option>
+                                                    
+                                                    <option value="Stiching IN">Stiching IN</option>    
+                                                    <option value="Stiching OUT">Stiching OUT</option>    
+                                                    <option value="Stiching IN/OUT">Stiching IN/OUT</option>
+                                                    
+                                                    <option value="Assembly IN">Assembly IN</option>
+                                                    <option value="Assembly OUT">Assembly OUT</option>
+                                                    <option value="Assembly IN/OUT">Assembly IN/OUT</option>
+                                                    
+                                                    <option value="CSC IN">CSC IN</option>
+                                                    <option value="CSC OUT">CSC OUT</option>
+                                                    <option value="CSC IN/OUT">CSC IN/OUT</option>
+                                                    
+                                                    <option value="No Sew IN">No Sew IN</option>
+                                                    <option value="No Sew OUT">No Sew OUT</option>
+                                                    <option value="No Sew IN/OUT">No Sew IN/OUT</option>
+                                                    
+                                                    <option value="Subcon IN">Vendor/ SubCon IN</option>
+                                                    <option value="Subcon OUT">Vendor/ SubCon OUT</option>
+                                                    <option value="Subcon IN/OUT">Vendor/ SubCon IN/OUT</option>
+                                                    
+                                                    <option value="OutSole IN">OutSole IN</option>
+                                                    <option value="OutSole OUT">OutSole OUT</option>
+                                                    <option value="OutSole IN/OUT">OutSole IN/OUT</option>
+                                                    
+                                                    <option value="spcut IN">Supermarket Cutting IN</option>
+                                                    <option value="spcut OUT">Supermarket Cutting OUT</option>
+                                                    <option value="spcut IN/OUT">Supermarket Cutting IN/OUT</option>
+                                                    
+                                                    <option value="spprep IN">Supermarket Preparation IN</option>
+                                                    <option value="spprep OUT">Supermarket Preparation OUT</option>
+                                                    <option value="spprep IN/OUT">Supermarket Preparation IN/OUT</option>
+                                                    
+                                                    <option value="label IN">Label IN</option> 
+                                                    <option value="label OUT">Label OUT</option> 
+                                                    <option value="label IN/OUT">Label IN/OUT</option> 
+                                                    
+                                                    <option value="laser IN">Laser IN</option>
+                                                    <option value="laser OUT">Laser OUT</option>
+                                                    <option value="laser IN/OUT">Laser IN/OUT</option>
+    
                                                 </select>
                                             </div>
                                         </div>                                      

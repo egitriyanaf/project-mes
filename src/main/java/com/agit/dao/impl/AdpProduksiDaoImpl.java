@@ -64,6 +64,8 @@ public class AdpProduksiDaoImpl extends AdpBaseDao<JdcAdpMstproduksi> implements
         }
         criteria.addOrder(Order.desc("demandClass"));
         criteria.addOrder(Order.desc("joPpic"));
+        criteria.addOrder(Order.asc("poItem"));
+        criteria.addOrder(Order.desc("poNo"));
         criteria.setFirstResult(dataTables.getiDisplayStart());
         criteria.setMaxResults(dataTables.getiDisplayLength());
         criteria.setProjection(Projections.projectionList()
