@@ -158,7 +158,7 @@
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <select id="departementType" class="form-control" style="background-color: white">
-                                    <option hidden="true" value="">-- Choose --</option>
+<!--                                    <option hidden="true" value="">-- Choose --</option>-->
                                     <c:if test="${loginSecUser.usrType == 'ADMIN'}">
                                         <option value="Cutting">Cutting</option>
                                         <option value="Preparation">Preparation</option>
