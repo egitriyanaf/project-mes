@@ -526,7 +526,17 @@
                             <div class="form-group">
                                 <input type="text" id="listpoNo"  class="form-control" placeholder="List Po No">
                             </div>	
-                        </div>		                                
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <input type="text" id="joPpic"  class="form-control" placeholder="Style">
+                            </div>	
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <input type="text" id="demandClass"  class="form-control" placeholder="Bucket">
+                            </div>	
+                        </div>
                     </div>
                     <div class="row widget-button-search">
                         <div class="col-sm-12">

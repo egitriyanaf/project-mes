@@ -154,14 +154,20 @@
                     <h3 style="color: white"><i class="fa fa-table" style="color: white"></i>Form Express Kanban</h3>
                 </div>
                 <div class="row widget-content">
-                    <div class="col-lg-4">
+                    <div class="col-lg-2">
                         <input id="lineCodeId" readonly class="form-control" value="${produksi.lineCode}">
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-2">
                         <input id="ponoId" readonly class="form-control" value="${produksi.poNo}">
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-2">
                         <input id="poitemId" readonly class="form-control" value="${produksi.poItem}">
+                    </div>
+                    <div class="col-lg-2">
+                        <input id="demandClassId" readonly class="form-control" value="${produksi.demandClass}">
+                    </div>
+                    <div class="col-lg-2">
+                        <input id="JoPpIcId" readonly class="form-control" value="${produksi.joPpic}">
                     </div>
                 </div>
             </div>
