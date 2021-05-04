@@ -353,6 +353,10 @@
 <!--                            <label class="btn btnlot"><input id="btn-in" name="typeInOut" hidden type="radio">IN</label>
                             <label class="btn btnlot"><input id="btn-out" name="typeInOut" hidden type="radio">OUT</label>-->
                             
+                            <c:if test="${loginSecUser.usrType == 'Operator'}">    
+                                <label class="btn btnlot"><input id="btn-in" name="typeInOut" hidden type="radio">IN</label>
+                                <label class="btn btnlot"><input id="btn-out" name="typeInOut" hidden type="radio">OUT</label>
+                            </c:if>
                             <c:if test="${loginSecUser.usrType == 'Cutting IN'}">    
                                 <label class="btn btnlot"><input id="btn-in" name="typeInOut" hidden type="radio">IN</label>
                             </c:if>

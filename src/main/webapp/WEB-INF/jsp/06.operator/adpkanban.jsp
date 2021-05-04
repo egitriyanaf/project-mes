@@ -196,21 +196,9 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-lg-4 control-label">1T</label>
-                            <div class="col-lg-8">
-                                <input id="size1T" type="number" name="size1T" class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group">
                             <label class="col-lg-4 control-label">2</label>
                             <div class="col-lg-8">
                                 <input id="size2" type="number" name="size2" class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-lg-4 control-label">2T</label>
-                            <div class="col-lg-8">
-                                <input id="size2T" type="number" name="size2T" class="form-control">
                             </div>
                         </div>
                         <div class="form-group">
@@ -220,35 +208,15 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-lg-4 control-label">3T</label>
-                            <div class="col-lg-8">
-                                <input id="size3T" type="number" name="size3T" class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group">
                             <label class="col-lg-4 control-label">4</label>
                             <div class="col-lg-8">
                                 <input id="size4" type="number" name="size4" class="form-control">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-lg-4 control-label">4T</label>
-                            <div class="col-lg-8">
-                                <input id="size4T" type="number" name="size4T" class="form-control">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2">
-                        <div class="form-group">
                             <label class="col-lg-4 control-label">5</label>
                             <div class="col-lg-8">
                                 <input id="size5" type="number" name="size5" class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-lg-4 control-label">5T</label>
-                            <div class="col-lg-8">
-                                <input id="size5T" type="number" name="size5T" class="form-control">
                             </div>
                         </div>
                         <div class="form-group">
@@ -258,21 +226,9 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-lg-4 control-label">6T</label>
-                            <div class="col-lg-8">
-                                <input id="size6T" type="number" name="size6T" class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group">
                             <label class="col-lg-4 control-label">7</label>
                             <div class="col-lg-8">
                                 <input id="size7" type="number" name="size7" class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-lg-4 control-label">7T</label>
-                            <div class="col-lg-8">
-                                <input id="size7T" type="number" name="size7T" class="form-control">
                             </div>
                         </div>
                         <div class="form-group">
@@ -280,14 +236,7 @@
                             <div class="col-lg-8">
                                 <input id="size8" type="number" name="size8" class="form-control">
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-lg-4 control-label">8T</label>
-                            <div class="col-lg-8">
-                                <input id="size8T" type="number" name="size8T" class="form-control">
-                            </div>
-                        </div>
-
+                        </div>    
                     </div>
                     <div class="col-lg-2">
                         <div class="form-group">
@@ -297,21 +246,9 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-lg-4 control-label">9T</label>
-                            <div class="col-lg-8">
-                                <input id="size9T" type="number" name="size9T" class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group">
                             <label class="col-lg-4 control-label">10</label>
                             <div class="col-lg-8">
                                 <input  id="size10" type="number" name="size10" class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-lg-4 control-label">10T</label>
-                            <div class="col-lg-8">
-                                <input id="size10T" type="number" name="size10T" class="form-control">
                             </div>
                         </div>
                         <div class="form-group">
@@ -321,35 +258,15 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-lg-4 control-label">11T</label>
-                            <div class="col-lg-8">
-                                <input id="size11T" type="number" name="size11T" class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group">
                             <label class="col-lg-4 control-label">12</label>
                             <div class="col-lg-8">
                                 <input id="size12" type="number" name="size12" class="form-control">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-lg-4 control-label">12T</label>
-                            <div class="col-lg-8">
-                                <input id="size12T" type="number" name="size12T" class="form-control">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2">
-                        <div class="form-group">
                             <label class="col-lg-4 control-label">13</label>
                             <div class="col-lg-8">
                                 <input id="size13" type="number" name="size13" class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-lg-4 control-label">13T</label>
-                            <div class="col-lg-8">
-                                <input id="size13T" type="number" name="size13T" class="form-control">
                             </div>
                         </div>
                         <div class="form-group">
@@ -370,6 +287,8 @@
                                 <input id="size16" type="number" name="size16" class="form-control">
                             </div>
                         </div>
+                    </div>
+                    <div class="col-lg-2">
                         <div class="form-group">
                             <label class="col-lg-4 control-label">17</label>
                             <div class="col-lg-8">
@@ -382,6 +301,86 @@
                                 <input id="size18" type="number" name="size18" class="form-control">
                             </div>
                         </div>
+                        <div class="form-group">
+                            <label class="col-lg-4 control-label">1T</label>
+                            <div class="col-lg-8">
+                                <input id="size1T" type="number" name="size1T" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-4 control-label">2T</label>
+                            <div class="col-lg-8">
+                                <input id="size2T" type="number" name="size2T" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-4 control-label">3T</label>
+                            <div class="col-lg-8">
+                                <input id="size3T" type="number" name="size3T" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-4 control-label">4T</label>
+                            <div class="col-lg-8">
+                                <input id="size4T" type="number" name="size4T" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-4 control-label">5T</label>
+                            <div class="col-lg-8">
+                                <input id="size5T" type="number" name="size5T" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-4 control-label">6T</label>
+                            <div class="col-lg-8">
+                                <input id="size6T" type="number" name="size6T" class="form-control">
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="form-group">
+                            <label class="col-lg-4 control-label">7T</label>
+                            <div class="col-lg-8">
+                                <input id="size7T" type="number" name="size7T" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-4 control-label">8T</label>
+                            <div class="col-lg-8">
+                                <input id="size8T" type="number" name="size8T" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-4 control-label">9T</label>
+                            <div class="col-lg-8">
+                                <input id="size9T" type="number" name="size9T" class="form-control">
+                            </div>
+                        </div> 
+                        <div class="form-group">
+                            <label class="col-lg-4 control-label">10T</label>
+                            <div class="col-lg-8">
+                                <input id="size10T" type="number" name="size10T" class="form-control">
+                            </div>
+                        </div> 
+                        <div class="form-group">
+                            <label class="col-lg-4 control-label">11T</label>
+                            <div class="col-lg-8">
+                                <input id="size11T" type="number" name="size11T" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-4 control-label">12T</label>
+                            <div class="col-lg-8">
+                                <input id="size12T" type="number" name="size12T" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-4 control-label">13T</label>
+                            <div class="col-lg-8">
+                                <input id="size13T" type="number" name="size13T" class="form-control">
+                            </div>
+                        </div>  
                     </div>
                 </form>
             </div>
