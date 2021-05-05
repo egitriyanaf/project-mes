@@ -15,6 +15,8 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
                 <prop key="mail.smtp.auth">true</prop>
                 <prop key="mail.smtp.starttls.enable">true</prop>
                 <prop key="mail.debug">true</prop>
+                <prop key="mail.smtp.socketFactory.class">javax.net.ssl.SSLSocketFactory</prop>
+                <prop key="mail.smtp.socketFactory.port">465</prop>
                 <!--<prop key="spring.mail.properties.mail.smtp.ssl.enable">true</prop>-->
             </props>
         </property>
@@ -196,7 +198,7 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
           class="org.springframework.mail.SimpleMailMessage">
 
         <property name="from" value="postmaster@adis.co.id" />
-        <property name="to" value="egi.triyana@adf.co.id" />
+        <property name="to" value="egitriyanafidollah@gmail.com" />
         <property name="subject" value="Approval" />
         <property name="text">
             <value>
@@ -212,7 +214,7 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
           class="org.springframework.mail.SimpleMailMessage">
 
         <property name="from" value="postmaster@adis.co.id" />
-        <property name="to" value="egi.triyana@adf.co.id" />
+        <property name="to" value="egitriyanafidollah@gmail.com" />
         <property name="subject" value="Approval" />
         <property name="text">
             <value>
@@ -228,7 +230,7 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
           class="org.springframework.mail.SimpleMailMessage">
 
         <property name="from" value="postmaster@adis.co.id" />
-        <property name="to" value="egi.triyana@adf.co.id" />
+        <property name="to" value="egitriyanafidollah@gmail.com" />
         <property name="subject" value="Approval" />
         <property name="text">
             <value>
@@ -244,7 +246,7 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
           class="org.springframework.mail.SimpleMailMessage">
 
         <property name="from" value="postmaster@adis.co.id" />
-        <property name="to" value="egi.triyana@adf.co.id" />
+        <property name="to" value="egitriyanafidollah@gmail.com" />
         <property name="subject" value="Approval" />
         <property name="text">
             <value>
@@ -260,7 +262,7 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
           class="org.springframework.mail.SimpleMailMessage">
 
         <property name="from" value="postmaster@adis.co.id" />
-        <property name="to" value="egi.triyana@adf.co.id" />
+        <property name="to" value="egitriyanafidollah@gmail.com" />
         <property name="subject" value="Approval" />
         <property name="text">
             <value>
@@ -276,7 +278,7 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
           class="org.springframework.mail.SimpleMailMessage">
 
         <property name="from" value="postmaster@adis.co.id" />
-        <property name="to" value="egi.triyana@adf.co.id" />
+        <property name="to" value="egitriyanafidollah@gmail.com" />
         <property name="subject" value="Approval" />
         <property name="text">
             <value>
@@ -292,7 +294,7 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
           class="org.springframework.mail.SimpleMailMessage">
 
         <property name="from" value="postmaster@adis.co.id" />
-        <property name="to" value="egi.triyana@adf.co.id" />
+        <property name="to" value="egitriyanafidollah@gmail.com" />
         <property name="subject" value="Approval" />
         <property name="text">
             <value>
@@ -308,7 +310,7 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
           class="org.springframework.mail.SimpleMailMessage">
 
         <property name="from" value="postmaster@adis.co.id" />
-        <property name="to" value="egi.triyana@adf.co.id" />
+        <property name="to" value="egitriyanafidollah@gmail.com" />
         <property name="subject" value="Approval" />
         <property name="text">
             <value>
