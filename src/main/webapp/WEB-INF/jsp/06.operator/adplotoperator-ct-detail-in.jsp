@@ -1694,7 +1694,7 @@
                                         </tfoot>
                                     </table>
                                     <div class="form-group">
-                                        <label class="col-md-1 control-label">IN/ WIP Kanban<span class="required"></span></label>
+                                        <label class="col-md-1 control-label">IN/ WIP Express Kanban<span class="required"></span></label>
                                         <div class="col-md-3">
                                             <div>
                                                 <input id="#" disabled value="#" class="form-control"  placeholder="IN/ WIP Kanban" />
@@ -1702,7 +1702,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-md-1 control-label">OUT Kanban<span class="required"></span></label>
+                                        <label class="col-md-1 control-label">OUT Express Kanban<span class="required"></span></label>
                                         <div class="col-md-3">
                                             <div>
                                                 <input id="#" disabled value="#" class="form-control"  placeholder="OUT Kanban" />

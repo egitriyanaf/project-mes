@@ -69,30 +69,60 @@ public class JdcAdpTxnlotbasis implements Serializable {
 
     @Column(name = "flag_ct_out_size_1")
     private Long flagCtOutSize1;
+    
+    @Column(name = "flag_express_ct_in_size_1")
+    private long flagExpressCtInSize1;
+    
+    @Column(name = "flag_express_ct_out_size_1")
+    private long flagExpressCtOutSize1;
 
     @Column(name = "flag_prep_in_size_1")
     private Long flagPrepInSize1;
 
     @Column(name = "flag_prep_out_size_1")
     private Long flagPrepOutSize1;
+    
+    @Column(name = "flag_express_prep_in_size_1")
+    private Long flagExpressPrepInSize1;
+    
+    @Column(name = "flag_express_prep_out_size_1")
+    private Long flagExpressPrepOutSize1;
 
     @Column(name = "flag_st_in_size_1")
     private Long flagStInSize1;
 
     @Column(name = "flag_st_out_size_1")
     private Long flagStOutSize1;
+    
+    @Column(name = "flag_express_st_in_size_1")
+    private Long flagExpressStInSize1;
+    
+    @Column(name = "flag_express_st_out_size_1")
+    private Long flagExpressStOutSize1;
 
     @Column(name = "flag_as_in_size_1")
     private Long flagAsInSize1;
 
     @Column(name = "flag_as_out_size_1")
     private Long flagAsOutSize1;
+    
+    @Column(name = "flag_express_as_in_size_1")
+    private Long flagExpressAsInSize1;
+    
+    @Column(name = "flag_express_as_out_size_1")
+    private Long flagExpressAsOutSize1;
 
     @Column(name = "flag_sc_in_size_1")
     private Long flagScInSize1;
 
     @Column(name = "flag_sc_out_size_1")
     private Long flagScOutSize1;
+    
+    @Column(name = "flag_express_sc_in_size_1")
+    private Long flagExpressScInSize1;
+    
+    @Column(name = "flag_express_sc_out_size_1")
+    private Long flagExpressScOutSize1;
 
     @Column(name = "flag_ns_in_size_1")
     private Long flagNsInSize1;
@@ -100,11 +130,23 @@ public class JdcAdpTxnlotbasis implements Serializable {
     @Column(name = "flag_ns_out_size_1")
     private Long flagNsOutSize1;
 
+    @Column(name = "flag_express_ns_in_size_1")
+    private Long flagExpressNsInSize1;
+    
+    @Column(name = "flag_express_ns_out_size_1")
+    private Long flagExpressNsOutSize1;
+
     @Column(name = "flag_csc_in_size_1")
     private Long flagCscInSize1;
 
     @Column(name = "flag_csc_out_size_1")
     private Long flagCscOutSize1;
+    
+    @Column(name = "flag_express_csc_in_size_1")
+    private Long flagExpressCscInSize1;
+    
+    @Column(name = "flag_express_csc_out_size_1")
+    private Long flagExpressCscOutSize1;
 
     @Column(name = "flag_os_in_size_1")
     private Long flagOsInSize1;
@@ -112,1685 +154,2898 @@ public class JdcAdpTxnlotbasis implements Serializable {
     @Column(name = "flag_os_out_size_1")
     private Long flagOsOutSize1;
 
+    @Column(name = "flag_express_os_in_size_1")
+    private Long flagExpressOsInSize1;
+    
+    @Column(name = "flag_express_os_out_size_1")
+    private Long flagExpressOsOutSize1;
+
     @Column(name = "flag_spcut_in_size_1")
     private Long flagspcutInSize1;
     @Column(name = "flag_spcut_out_size_1")
     private Long flagspcutOutSize1;
+    
+    @Column(name = "flag_express_spcut_in_size_1")
+    private Long flagExpressSpcutInSize1;
+    @Column(name = "flag_express_spcut_out_size_1")
+    private Long flagExpressSpcutOutSize1;
+
     @Column(name = "flag_spprep_in_size_1")
     private Long flagspprepInSize1;
     @Column(name = "flag_spprep_out_size_1")
     private Long flagspprepOutSize1;
+
+    @Column(name = "flag_express_spprep_in_size_1")
+    private Long flagExpressSpprepInSize1;
+    @Column(name = "flag_express_spprep_out_size_1")
+    private Long flagExpressSpprepOutSize1;
 
     @Column(name = "Size_1_t")
     private Long Size1T;
 
     @Column(name = "flag_ct_in_size_1_t")
     private Long flagCtInSize1T;
-
     @Column(name = "flag_ct_out_size_1_t")
     private Long flagCtOutSize1T;
+    
+    @Column(name = "flag_express_ct_in_size_1_t")
+    private Long flagExpressCtInSize1T;
+    @Column(name = "flag_express_ct_out_size_1_t")
+    private Long flagExpressCtOutSize1T;
 
     @Column(name = "flag_prep_in_size_1_t")
     private Long flagPrepInSize1T;
-
     @Column(name = "flag_prep_out_size_1_t")
     private Long flagPrepOutSize1T;
 
+    @Column(name = "flag_express_prep_in_size_1_t")
+    private Long flagExpressPrepInSize1T;
+    @Column(name = "flag_express_prep_out_size_1_t")
+    private Long flagExpressPrepOutSize1T;
+
     @Column(name = "flag_st_in_size_1_t")
     private Long flagStInSize1T;
-
     @Column(name = "flag_st_out_size_1_t")
     private Long flagStOutSize1T;
 
+    @Column(name = "flag_express_st_in_size_1_t")
+    private Long flagExpressStInSize1T;
+    @Column(name = "flag_express_st_out_size_1_t")
+    private Long flagExpressStOutSize1T;
+
     @Column(name = "flag_as_in_size_1_t")
     private Long flagAsInSize1T;
-
     @Column(name = "flag_as_out_size_1_t")
     private Long flagAsOutSize1T;
+    
+    @Column(name = "flag_express_as_in_size_1_t")
+    private Long flagExpressAsInSize1T;
+    @Column(name = "flag_express_as_out_size_1_t")
+    private Long flagExpressAsOutSize1T;
 
     @Column(name = "flag_sc_in_size_1_t")
     private Long flagScInSize1T;
-
     @Column(name = "flag_sc_out_size_1_t")
     private Long flagScOutSize1T;
 
+    @Column(name = "flag_express_sc_in_size_1_t")
+    private Long flagExpressScInSize1T;
+    @Column(name = "flag_express_sc_out_size_1_t")
+    private Long flagExpressScOutSize1T;
+
     @Column(name = "flag_ns_in_size_1_t")
     private Long flagNsInSize1T;
-
     @Column(name = "flag_ns_out_size_1_t")
     private Long flagNsOutSize1T;
-
+    
+    @Column(name = "flag_express_ns_in_size_1_t")
+    private Long flagExpressNsInSize1T;
+    @Column(name = "flag_express_ns_out_size_1_t")
+    private Long flagExpressNsOutSize1T;
+    
     @Column(name = "flag_csc_in_size_1_t")
     private Long flagCscInSize1T;
-
     @Column(name = "flag_csc_out_size_1_t")
     private Long flagCscOutSize1T;
 
+    @Column(name = "flag_express_csc_in_size_1_t")
+    private Long flagExpressCscInSize1T;
+    @Column(name = "flag_express_csc_out_size_1_t")
+    private Long flagExpressCscOutSize1T;
+
     @Column(name = "flag_os_in_size_1_t")
     private Long flagOsInSize1T;
-
     @Column(name = "flag_os_out_size_1_t")
     private Long flagOsOutSize1T;
+    
+    @Column(name = "flag_express_os_in_size_1_t")
+    private Long flagExpressOsInSize1T;
+    @Column(name = "flag_express_os_out_size_1_t")
+    private Long flagExpressOsOutSize1T;
 
     @Column(name = "flag_spcut_in_size_1_t")
     private Long flagspcutInSize1T;
     @Column(name = "flag_spcut_out_size_1_t")
     private Long flagspcutOutSize1T;
+    
+    @Column(name = "flag_express_spcut_in_size_1_t")
+    private Long flagExpressSpcutInSize1T;
+    @Column(name = "flag_express_spcut_out_size_1_t")
+    private Long flagExpressSpcutOutSize1T;
+
     @Column(name = "flag_spprep_in_size_1_t")
     private Long flagspprepInSize1T;
     @Column(name = "flag_spprep_out_size_1_t")
     private Long flagspprepOutSize1T;
+    
+    @Column(name = "flag_express_spprep_in_size_1_t")
+    private Long flagExpressSpprepInSize1T;
+    @Column(name = "flag_express_spprep_out_size_1_t")
+    private Long flagExpressSpprepOutSize1T;
 
     @Column(name = "Size_2")
     private Long Size2;
 
     @Column(name = "flag_ct_in_size_2")
     private Long flagCtInSize2;
-
     @Column(name = "flag_ct_out_size_2")
     private Long flagCtOutSize2;
 
+    @Column(name = "flag_express_ct_in_size_2")
+    private Long flagExpressCtInSize2;
+    @Column(name = "flag_express_ct_out_size_2")
+    private Long flagExpressCtOutSize2;
+    
     @Column(name = "flag_prep_in_size_2")
     private Long flagPrepInSize2;
-
     @Column(name = "flag_prep_out_size_2")
     private Long flagPrepOutSize2;
+    
+    @Column(name = "flag_express_prep_in_size_2")
+    private Long flagExpressPrepInSize2;
+    @Column(name = "flag_express_prep_out_size_2")
+    private Long flagExpressPrepOutSize2;
+    
 
     @Column(name = "flag_st_in_size_2")
     private Long flagStInSize2;
-
     @Column(name = "flag_st_out_size_2")
     private Long flagStOutSize2;
-
+    
+    @Column(name = "flag_express_st_in_size_2")
+    private Long flagExpressStInSize2;
+    @Column(name = "flag_express_st_out_size_2")
+    private Long flagExpressStOutSize2;
+    
     @Column(name = "flag_as_in_size_2")
     private Long flagAsInSize2;
-
     @Column(name = "flag_as_out_size_2")
     private Long flagAsOutSize2;
 
+    @Column(name = "flag_express_as_in_size_2")
+    private Long flagExpressAsInSize2;
+    @Column(name = "flag_express_as_out_size_2")
+    private Long flagExpressAsOutSize2;
+    
     @Column(name = "flag_sc_in_size_2")
     private Long flagScInSize2;
-
     @Column(name = "flag_sc_out_size_2")
     private Long flagScOutSize2;
-
+    
+    @Column(name = "flag_express_sc_in_size_2")
+    private Long flagExpressScInSize2;
+    @Column(name = "flag_express_sc_out_size_2")
+    private Long flagExpressScOutSize2;
+    
     @Column(name = "flag_ns_in_size_2")
     private Long flagNsInSize2;
-
     @Column(name = "flag_ns_out_size_2")
     private Long flagNsOutSize2;
-
+    
+    @Column(name = "flag_express_ns_in_size_2")
+    private Long flagExpressNsInSize2;
+    @Column(name = "flag_express_ns_out_size_2")
+    private Long flagExpressNsOutSize2;
+    
     @Column(name = "flag_csc_in_size_2")
     private Long flagCscInSize2;
-
     @Column(name = "flag_csc_out_size_2")
     private Long flagCscOutSize2;
 
+    @Column(name = "flag_express_csc_in_size_2")
+    private Long flagExpressCscInSize2;
+    @Column(name = "flag_express_csc_out_size_2")
+    private Long flagExpressCscOutSize2;
+    
     @Column(name = "flag_os_in_size_2")
     private Long flagOsInSize2;
-
     @Column(name = "flag_os_out_size_2")
     private Long flagOsOutSize2;
-
+    
+    @Column(name = "flag_express_os_in_size_2")
+    private Long flagExpressOsInSize2;
+    @Column(name = "flag_express_os_out_size_2")
+    private Long flagExpressOsOutSize2;
+   
     @Column(name = "flag_spcut_in_size_2")
-    private Long flagspcutInSize2;
+    private Long flagspcutInSize2;    
     @Column(name = "flag_spcut_out_size_2")
     private Long flagspcutOutSize2;
+    
+    @Column(name = "flag_express_spcut_in_size_2")
+    private Long flagExpressSpcutInSize2;
+    @Column(name = "flag_express_spcut_out_size_2")
+    private Long flagExpressSpcutOutSize2;
+    
+    
     @Column(name = "flag_spprep_in_size_2")
     private Long flagspprepInSize2;
     @Column(name = "flag_spprep_out_size_2")
     private Long flagspprepOutSize2;
-
+    
+    @Column(name = "flag_express_spprep_in_size_2")
+    private Long flagExpressSpprepInSize2;
+    @Column(name = "flag_express_spprep_out_size_2")
+    private Long flagExpressSpprepOutSize2;
+    
     @Column(name = "Size_2_t")
     private Long Size2T;
 
     @Column(name = "flag_ct_in_size_2_t")
     private Long flagCtInSize2T;
-
     @Column(name = "flag_ct_out_size_2_t")
     private Long flagCtOutSize2T;
+    
+    @Column(name = "flag_express_ct_in_size_2_t")
+    private Long flagExpressCtInSize2T;
+    @Column(name = "flag_express_ct_out_size_2_t")
+    private Long flagExpressCtOutSize2T;
 
     @Column(name = "flag_prep_in_size_2_t")
     private Long flagPrepInSize2T;
-
     @Column(name = "flag_prep_out_size_2_t")
     private Long flagPrepOutSize2T;
+    
+    @Column(name = "flag_express_prep_in_size_2_t")
+    private Long flagExpressPrepInSize2T;
+    @Column(name = "flag_express_prep_out_size_2_t")
+    private Long flagExpressPrepOutSize2T;
 
     @Column(name = "flag_st_in_size_2_t")
     private Long flagStInSize2T;
-
     @Column(name = "flag_st_out_size_2_t")
     private Long flagStOutSize2T;
+    
+    @Column(name = "flag_express_st_in_size_2_t")
+    private Long flagExpressStInSize2T;
+    @Column(name = "flag_express_st_out_size_2_t")
+    private Long flagExpressStOutSize2T;
 
     @Column(name = "flag_as_in_size_2_t")
     private Long flagAsInSize2T;
-
     @Column(name = "flag_as_out_size_2_t")
     private Long flagAsOutSize2T;
+    
+    @Column(name = "flag_express_as_in_size_2_t")
+    private Long flagExpressAsInSize2T;
+    @Column(name = "flag_express_as_out_size_2_t")
+    private Long flagExpressAsOutSize2T;
 
     @Column(name = "flag_sc_in_size_2_t")
     private Long flagScInSize2T;
-
     @Column(name = "flag_sc_out_size_2_t")
     private Long flagScOutSize2T;
 
+    @Column(name = "flag_express_sc_in_size_2_t")
+    private Long flagExpressScInSize2T;
+    @Column(name = "flag_express_sc_out_size_2_t")
+    private Long flagExpressScOutSize2T;
+    
     @Column(name = "flag_ns_in_size_2_t")
     private Long flagNsInSize2T;
-
     @Column(name = "flag_ns_out_size_2_t")
     private Long flagNsOutSize2T;
 
+    @Column(name = "flag_express_ns_in_size_2_t")
+    private Long flagExpressNsInSize2T;
+    @Column(name = "flag_express_ns_out_size_2_t")
+    private Long flagExpressNsOutSize2T;
+    
     @Column(name = "flag_csc_in_size_2_t")
     private Long flagCscInSize2T;
-
     @Column(name = "flag_csc_out_size_2_t")
     private Long flagCscOutSize2T;
 
+    @Column(name = "flag_express_csc_in_size_2_t")
+    private Long flagExpressCscInSize2T;
+    @Column(name = "flag_express_csc_out_size_2_t")
+    private Long flagExpressCscOutSize2T;
+    
     @Column(name = "flag_os_in_size_2_t")
     private Long flagOsInSize2T;
-
     @Column(name = "flag_os_out_size_2_t")
     private Long flagOsOutSize2T;
 
+    @Column(name = "flag_express_os_in_size_2_t")
+    private Long flagExpressOsInSize2T;
+    @Column(name = "flag_express_os_out_size_2_t")
+    private Long flagExpressOsOutSize2T;
+    
     @Column(name = "flag_spcut_in_size_2_t")
     private Long flagspcutInSize2T;
     @Column(name = "flag_spcut_out_size_2_t")
     private Long flagspcutOutSize2T;
+    
+    @Column(name = "flag_express_spcut_in_size_2_t")
+    private Long flagExpressSpcutInSize2T;
+    @Column(name = "flag_express_spcut_out_size_2_t")
+    private Long flagExpressSpcutOutSize2T;
+    
     @Column(name = "flag_spprep_in_size_2_t")
     private Long flagspprepInSize2T;
     @Column(name = "flag_spprep_out_size_2_t")
     private Long flagspprepOutSize2T;
 
+    @Column(name = "flag_express_spprep_in_size_2_t")
+    private Long flagExpressSpprepInSize2T;
+    @Column(name = "flag_express_spprep_out_size_2_t")
+    private Long flagExpressSpprepOutSize2T;
+    
     @Column(name = "Size_3")
     private Long Size3;
-
+    
     @Column(name = "flag_ct_in_size_3")
     private Long flagCtInSize3;
-
     @Column(name = "flag_ct_out_size_3")
     private Long flagCtOutSize3;
 
+    @Column(name = "flag_Express_ct_in_size_3")
+    private Long flagExpressCtInSize3;
+    @Column(name = "flag_Express_ct_out_size_3")
+    private Long flagExpressCtOutSize3;
+    
     @Column(name = "flag_prep_in_size_3")
     private Long flagPrepInSize3;
-
     @Column(name = "flag_prep_out_size_3")
     private Long flagPrepOutSize3;
 
+    @Column(name = "flag_Express_prep_in_size_3")
+    private Long flagExpressPrepInSize3;
+    @Column(name = "flag_Express_prep_out_size_3")
+    private Long flagExpressPrepOutSize3;
+    
     @Column(name = "flag_st_in_size_3")
     private Long flagStInSize3;
-
     @Column(name = "flag_st_out_size_3")
     private Long flagStOutSize3;
-
+    
+    @Column(name = "flag_Express_st_in_size_3")
+    private Long flagExpressStInSize3;
+    @Column(name = "flag_Express_st_out_size_3")
+    private Long flagExpressStOutSize3;
+    
     @Column(name = "flag_as_in_size_3")
     private Long flagAsInSize3;
-
     @Column(name = "flag_as_out_size_3")
     private Long flagAsOutSize3;
 
+    @Column(name = "flag_Express_as_in_size_3")
+    private Long flagExpressAsInSize3;
+    @Column(name = "flag_Express_as_out_size_3")
+    private Long flagExpressAsOutSize3;
+    
     @Column(name = "flag_sc_in_size_3")
     private Long flagScInSize3;
-
     @Column(name = "flag_sc_out_size_3")
     private Long flagScOutSize3;
-
+    
+    @Column(name = "flag_Express_sc_in_size_3")
+    private Long flagExpressScInSize3;
+    @Column(name = "flag_Express_sc_out_size_3")
+    private Long flagExpressScOutSize3;
+    
     @Column(name = "flag_ns_in_size_3")
     private Long flagNsInSize3;
-
     @Column(name = "flag_ns_out_size_3")
     private Long flagNsOutSize3;
 
+    @Column(name = "flag_Express_ns_in_size_3")
+    private Long flagExpressNsInSize3;
+    @Column(name = "flag_Express_ns_out_size_3")
+    private Long flagExpressNsOutSize3;
+    
     @Column(name = "flag_csc_in_size_3")
     private Long flagCscInSize3;
-
     @Column(name = "flag_csc_out_size_3")
     private Long flagCscOutSize3;
-
+    
+    @Column(name = "flag_Express_csc_in_size_3")
+    private Long flagExpressCscInSize3;
+    @Column(name = "flag_Express_csc_out_size_3")
+    private Long flagExpressCscOutSize3;
+    
     @Column(name = "flag_os_in_size_3")
     private Long flagOsInSize3;
-
     @Column(name = "flag_os_out_size_3")
     private Long flagOsOutSize3;
 
+    @Column(name = "flag_Express_os_in_size_3")
+    private Long flagExpressOsInSize3;
+    @Column(name = "flag_Express_os_out_size_3")
+    private Long flagExpressOsOutSize3;
+    
     @Column(name = "flag_spcut_in_size_3")
     private Long flagspcutInSize3;
     @Column(name = "flag_spcut_out_size_3")
     private Long flagspcutOutSize3;
+    
+    @Column(name = "flag_Express_spcut_in_size_3")
+    private Long flagExpressSpcutInSize3;
+    @Column(name = "flag_Express_spcut_out_size_3")
+    private Long flagExpressSpcutOutSize3;
+    
     @Column(name = "flag_spprep_in_size_3")
     private Long flagspprepInSize3;
     @Column(name = "flag_spprep_out_size_3")
     private Long flagspprepOutSize3;
-
+    
+    @Column(name = "flag_Express_spprep_in_size_3")
+    private Long flagExpressSpprepInSize3;
+    @Column(name = "flag_Express_spprep_out_size_3")
+    private Long flagExpressSpprepOutSize3;
+    
     @Column(name = "Size_3_t")
     private Long Size3T;
 
     @Column(name = "flag_ct_in_size_3_t")
     private Long flagCtInSize3T;
-
     @Column(name = "flag_ct_out_size_3_t")
     private Long flagCtOutSize3T;
+    
+    @Column(name = "flag_express_ct_in_size_3_t")
+    private Long flagExpressCtInSize3T;
+    @Column(name = "flag_express_ct_out_size_3_t")
+    private Long flagExpressCtOutSize3T;
 
     @Column(name = "flag_prep_in_size_3_t")
     private Long flagPrepInSize3T;
-
     @Column(name = "flag_prep_out_size_3_t")
     private Long flagPrepOutSize3T;
+    
+    @Column(name = "flag_express_prep_in_size_3_t")
+    private Long flagExpressPrepInSize3T;
+    @Column(name = "flag_express_prep_out_size_3_t")
+    private Long flagExpressPrepOutSize3T;
 
     @Column(name = "flag_st_in_size_3_t")
     private Long flagStInSize3T;
-
     @Column(name = "flag_st_out_size_3_t")
     private Long flagStOutSize3T;
+    
+    @Column(name = "flag_express_st_in_size_3_t")
+    private Long flagExpressStInSize3T;
+    @Column(name = "flag_express_st_out_size_3_t")
+    private Long flagExpressStOutSize3T;
 
     @Column(name = "flag_as_in_size_3_t")
     private Long flagAsInSize3T;
-
     @Column(name = "flag_as_out_size_3_t")
     private Long flagAsOutSize3T;
-
+    
+    @Column(name = "flag_express_as_in_size_3_t")
+    private Long flagExpressAsInSize3T;
+    @Column(name = "flag_express_as_out_size_3_t")
+    private Long flagExpressAsOutSize3T;
+    
     @Column(name = "flag_sc_in_size_3_t")
     private Long flagScInSize3T;
-
     @Column(name = "flag_sc_out_size_3_t")
     private Long flagScOutSize3T;
+    
+    @Column(name = "flag_express_sc_in_size_3_t")
+    private Long flagExpressScInSize3T;
+    @Column(name = "flag_express_sc_out_size_3_t")
+    private Long flagExpressScOutSize3T;
+
 
     @Column(name = "flag_ns_in_size_3_t")
     private Long flagNsInSize3T;
-
     @Column(name = "flag_ns_out_size_3_t")
     private Long flagNsOutSize3T;
 
+    @Column(name = "flag_express_ns_in_size_3_t")
+    private Long flagExpressNsInSize3T;
+    @Column(name = "flag_express_ns_out_size_3_t")
+    private Long flagExpressNsOutSize3T;
+
     @Column(name = "flag_csc_in_size_3_t")
     private Long flagCscInSize3T;
-
     @Column(name = "flag_csc_out_size_3_t")
     private Long flagCscOutSize3T;
+    
+    @Column(name = "flag_express_csc_in_size_3_t")
+    private Long flagExpressCscInSize3T;
+    @Column(name = "flag_express_csc_out_size_3_t")
+    private Long flagExpressCscOutSize3T;
 
     @Column(name = "flag_os_in_size_3_t")
     private Long flagOsInSize3T;
-
     @Column(name = "flag_os_out_size_3_t")
     private Long flagOsOutSize3T;
+
+    @Column(name = "flag_express_os_in_size_3_t")
+    private Long flagExpressOsInSize3T;
+    @Column(name = "flag_express_os_out_size_3_t")
+    private Long flagExpressOsOutSize3T;
 
     @Column(name = "flag_spcut_in_size_3_t")
     private Long flagspcutInSize3T;
     @Column(name = "flag_spcut_out_size_3_t")
     private Long flagspcutOutSize3T;
+    
+    @Column(name = "flag_express_spcut_in_size_3_t")
+    private Long flagExpressSpcutInSize3T;
+    @Column(name = "flag_express_spcut_out_size_3_t")
+    private Long flagExpressSpcutOutSize3T;
+
     @Column(name = "flag_spprep_in_size_3_t")
     private Long flagspprepInSize3T;
     @Column(name = "flag_spprep_out_size_3_t")
     private Long flagspprepOutSize3T;
+    
+    @Column(name = "flag_express_spprep_in_size_3_t")
+    private Long flagExpressSpprepInSize3T;
+    @Column(name = "flag_express_spprep_out_size_3_t")
+    private Long flagExpressSpprepOutSize3T;
 
     @Column(name = "Size_4")
     private Long Size4;
 
     @Column(name = "flag_ct_in_size_4")
     private Long flagCtInSize4;
-
     @Column(name = "flag_ct_out_size_4")
     private Long flagCtOutSize4;
+    
+    @Column(name = "flag_express_ct_in_size_4")
+    private Long flagExpressCtInSize4;
+    @Column(name = "flag_express_ct_out_size_4")
+    private Long flagExpressCtOutSize4;
 
     @Column(name = "flag_prep_in_size_4")
     private Long flagPrepInSize4;
-
     @Column(name = "flag_prep_out_size_4")
     private Long flagPrepOutSize4;
+    
+    @Column(name = "flag_express_prep_in_size_4")
+    private Long flagExpressPrepInSize4;
+    @Column(name = "flag_express_prep_out_size_4")
+    private Long flagExpressPrepOutSize4;
 
     @Column(name = "flag_st_in_size_4")
     private Long flagStInSize4;
-
     @Column(name = "flag_st_out_size_4")
     private Long flagStOutSize4;
+    
+    @Column(name = "flag_express_st_in_size_4")
+    private Long flagExpressStInSize4;
+    @Column(name = "flag_express_st_out_size_4")
+    private Long flagExpressStOutSize4;
 
     @Column(name = "flag_as_in_size_4")
     private Long flagAsInSize4;
-
     @Column(name = "flag_as_out_size_4")
     private Long flagAsOutSize4;
+    
+    @Column(name = "flag_express_as_in_size_4")
+    private Long flagExpressAsInSize4;
+    @Column(name = "flag_express_as_out_size_4")
+    private Long flagExpressAsOutSize4;
 
     @Column(name = "flag_sc_in_size_4")
     private Long flagScInSize4;
-
     @Column(name = "flag_sc_out_size_4")
     private Long flagScOutSize4;
+    
+    @Column(name = "flag_express_sc_in_size_4")
+    private Long flagExpressScInSize4;
+    @Column(name = "flag_express_sc_out_size_4")
+    private Long flagExpressScOutSize4;
 
     @Column(name = "flag_ns_in_size_4")
     private Long flagNsInSize4;
-
     @Column(name = "flag_ns_out_size_4")
     private Long flagNsOutSize4;
+    
+    @Column(name = "flag_express_ns_in_size_4")
+    private Long flagExpressNsInSize4;
+    @Column(name = "flag_express_ns_out_size_4")
+    private Long flagExpressNsOutSize4;
 
     @Column(name = "flag_csc_in_size_4")
     private Long flagCscInSize4;
-
     @Column(name = "flag_csc_out_size_4")
     private Long flagCscOutSize4;
+    
+    @Column(name = "flag_express_csc_in_size_4")
+    private Long flagExpressCscInSize4;
+    @Column(name = "flag_express_csc_out_size_4")
+    private Long flagExpressCscOutSize4;
 
     @Column(name = "flag_os_in_size_4")
     private Long flagOsInSize4;
-
     @Column(name = "flag_os_out_size_4")
     private Long flagOsOutSize4;
+    
+    @Column(name = "flag_express_os_in_size_4")
+    private Long flagExpressOsInSize4;
+    @Column(name = "flag_express_os_out_size_4")
+    private Long flagExpressOsOutSize4;
 
     @Column(name = "flag_spcut_in_size_4")
     private Long flagspcutInSize4;
     @Column(name = "flag_spcut_out_size_4")
     private Long flagspcutOutSize4;
+    
+    @Column(name = "flag_express_spcut_in_size_4")
+    private Long flagExpressSpcutInSize4;
+    @Column(name = "flag_express_spcut_out_size_4")
+    private Long flagExpressSpcutOutSize4;
+    
     @Column(name = "flag_spprep_in_size_4")
     private Long flagspprepInSize4;
     @Column(name = "flag_spprep_out_size_4")
     private Long flagspprepOutSize4;
+    
+    @Column(name = "flag_express_spprep_in_size_4")
+    private Long flagExpressSpprepInSize4;
+    @Column(name = "flag_express_spprep_out_size_4")
+    private Long flagExpressSpprepOutSize4;
 
     @Column(name = "Size_4_t")
     private Long Size4T;
 
     @Column(name = "flag_ct_in_size_4_t")
     private Long flagCtInSize4T;
-
     @Column(name = "flag_ct_out_size_4_t")
     private Long flagCtOutSize4T;
 
+    @Column(name = "flag_express_ct_in_size_4_t")
+    private Long flagExpressCtInSize4T;
+    @Column(name = "flag_express_ct_out_size_4_t")
+    private Long flagExpressCtOutSize4T;
+    
     @Column(name = "flag_prep_in_size_4_t")
     private Long flagPrepInSize4T;
-
     @Column(name = "flag_prep_out_size_4_t")
     private Long flagPrepOutSize4T;
 
+    @Column(name = "flag_express_prep_in_size_4_t")
+    private Long flagExpressPrepInSize4T;
+    @Column(name = "flag_express_prep_out_size_4_t")
+    private Long flagExpressPrepOutSize4T;
+    
     @Column(name = "flag_st_in_size_4_t")
     private Long flagStInSize4T;
-
     @Column(name = "flag_st_out_size_4_t")
     private Long flagStOutSize4T;
+    
+    @Column(name = "flag_express_st_in_size_4_t")
+    private Long flagExpressStInSize4T;
+    @Column(name = "flag_express_st_out_size_4_t")
+    private Long flagExpressStOutSize4T;
 
     @Column(name = "flag_as_in_size_4_t")
     private Long flagAsInSize4T;
-
     @Column(name = "flag_as_out_size_4_t")
     private Long flagAsOutSize4T;
+    
+    @Column(name = "flag_express_as_in_size_4_t")
+    private Long flagExpressAsInSize4T;
+    @Column(name = "flag_express_as_out_size_4_t")
+    private Long flagExpressAsOutSize4T;
 
     @Column(name = "flag_sc_in_size_4_t")
     private Long flagScInSize4T;
-
     @Column(name = "flag_sc_out_size_4_t")
     private Long flagScOutSize4T;
 
+    @Column(name = "flag_express_sc_in_size_4_t")
+    private Long flagExpressScInSize4T;
+    @Column(name = "flag_express_sc_out_size_4_t")
+    private Long flagExpressScOutSize4T;
+    
     @Column(name = "flag_ns_in_size_4_t")
     private Long flagNsInSize4T;
-
     @Column(name = "flag_ns_out_size_4_t")
     private Long flagNsOutSize4T;
 
+    @Column(name = "flag_express_ns_in_size_4_t")
+    private Long flagExpressNsInSize4T;
+    @Column(name = "flag_express_ns_out_size_4_t")
+    private Long flagExpressNsOutSize4T;
+    
     @Column(name = "flag_csc_in_size_4_t")
     private Long flagCscInSize4T;
-
     @Column(name = "flag_csc_out_size_4_t")
     private Long flagCscOutSize4T;
 
+    @Column(name = "flag_express_csc_in_size_4_t")
+    private Long flagExpressCscInSize4T;
+    @Column(name = "flag_express_csc_out_size_4_t")
+    private Long flagExpressCscOutSize4T;
+    
     @Column(name = "flag_os_in_size_4_t")
     private Long flagOsInSize4T;
-
     @Column(name = "flag_os_out_size_4_t")
     private Long flagOsOutSize4T;
 
+    @Column(name = "flag_express_os_in_size_4_t")
+    private Long flagExpressOsInSize4T;
+    @Column(name = "flag_express_os_out_size_4_t")
+    private Long flagExpressOsOutSize4T;
+    
     @Column(name = "flag_spcut_in_size_4_t")
     private Long flagspcutInSize4T;
     @Column(name = "flag_spcut_out_size_4_t")
     private Long flagspcutOutSize4T;
+    
+    @Column(name = "flag_express_spcut_in_size_4_t")
+    private Long flagExpressSpcutInSize4T;
+    @Column(name = "flag_express_spcut_out_size_4_t")
+    private Long flagExpressSpcutOutSize4T;
+    
     @Column(name = "flag_spprep_in_size_4_t")
     private Long flagspprepInSize4T;
     @Column(name = "flag_spprep_out_size_4_t")
     private Long flagspprepOutSize4T;
 
+    @Column(name = "flag_express_spprep_in_size_4_t")
+    private Long flagExpressSpprepInSize4T;
+    @Column(name = "flag_express_spprep_out_size_4_t")
+    private Long flagExpressSpprepOutSize4T;
+    
     @Column(name = "Size_5")
     private Long Size5;
 
     @Column(name = "flag_ct_in_size_5")
     private Long flagCtInSize5;
-
     @Column(name = "flag_ct_out_size_5")
     private Long flagCtOutSize5;
+    
+    @Column(name = "flag_express_ct_in_size_5")
+    private Long flagExpressCtInSize5;
+    @Column(name = "flag_express_ct_out_size_5")
+    private Long flagExpressCtOutSize5;
 
     @Column(name = "flag_prep_in_size_5")
     private Long flagPrepInSize5;
-
     @Column(name = "flag_prep_out_size_5")
     private Long flagPrepOutSize5;
+    
+    @Column(name = "flag_express_prep_in_size_5")
+    private Long flagExpressPrepInSize5;
+    @Column(name = "flag_express_prep_out_size_5")
+    private Long flagExpressPrepOutSize5;
 
     @Column(name = "flag_st_in_size_5")
     private Long flagStInSize5;
-
     @Column(name = "flag_st_out_size_5")
     private Long flagStOutSize5;
+    
+    @Column(name = "flag_express_st_in_size_5")
+    private Long flagExpressStInSize5;
+    @Column(name = "flag_express_st_out_size_5")
+    private Long flagExpressStOutSize5;
 
     @Column(name = "flag_as_in_size_5")
     private Long flagAsInSize5;
-
     @Column(name = "flag_as_out_size_5")
     private Long flagAsOutSize5;
+    
+    @Column(name = "flag_express_as_in_size_5")
+    private Long flagExpressAsInSize5;
+    @Column(name = "flag_express_as_out_size_5")
+    private Long flagExpressAsOutSize5;
 
     @Column(name = "flag_sc_in_size_5")
     private Long flagScInSize5;
-
     @Column(name = "flag_sc_out_size_5")
     private Long flagScOutSize5;
 
+    @Column(name = "flag_express_sc_in_size_5")
+    private Long flagExpressScInSize5;
+    @Column(name = "flag_express_sc_out_size_5")
+    private Long flagExpressScOutSize5;
+    
     @Column(name = "flag_ns_in_size_5")
     private Long flagNsInSize5;
-
     @Column(name = "flag_ns_out_size_5")
     private Long flagNsOutSize5;
+    
+    @Column(name = "flag_express_ns_in_size_5")
+    private Long flagExpressNsInSize5;
+    @Column(name = "flag_express_ns_out_size_5")
+    private Long flagExpressNsOutSize5;
 
     @Column(name = "flag_csc_in_size_5")
     private Long flagCscInSize5;
-
     @Column(name = "flag_csc_out_size_5")
     private Long flagCscOutSize5;
 
+    @Column(name = "flag_express_csc_in_size_5")
+    private Long flagExpressCscInSize5;
+    @Column(name = "flag_express_csc_out_size_5")
+    private Long flagExpressCscOutSize5;
+    
     @Column(name = "flag_os_in_size_5")
     private Long flagOsInSize5;
-
     @Column(name = "flag_os_out_size_5")
     private Long flagOsOutSize5;
+    
+    @Column(name = "flag_express_os_in_size_5")
+    private Long flagExpressOsInSize5;
+    @Column(name = "flag_express_os_out_size_5")
+    private Long flagExpressOsOutSize5;
 
     @Column(name = "flag_spcut_in_size_5")
     private Long flagspcutInSize5;
     @Column(name = "flag_spcut_out_size_5")
     private Long flagspcutOutSize5;
+    
+    @Column(name = "flag_express_spcut_in_size_5")
+    private Long flagExpressSpcutInSize5;
+    @Column(name = "flag_express_spcut_out_size_5")
+    private Long flagExpressSpcutOutSize5;
+    
     @Column(name = "flag_spprep_in_size_5")
     private Long flagspprepInSize5;
     @Column(name = "flag_spprep_out_size_5")
     private Long flagspprepOutSize5;
 
+    @Column(name = "flag_express_spprep_in_size_5")
+    private Long flagExpressSpprepInSize5;
+    @Column(name = "flag_express_spprep_out_size_5")
+    private Long flagExpressSpprepOutSize5;
+    
     @Column(name = "Size_5_t")
     private Long Size5T;
-
+    
     @Column(name = "flag_ct_in_size_5_t")
     private Long flagCtInSize5T;
-
     @Column(name = "flag_ct_out_size_5_t")
     private Long flagCtOutSize5T;
+    
+    @Column(name = "flag_express_ct_in_size_5_t")
+    private Long flagExpressCtInSize5T;
+    @Column(name = "flag_express_ct_out_size_5_t")
+    private Long flagExpressCtOutSize5T;
 
     @Column(name = "flag_prep_in_size_5_t")
     private Long flagPrepInSize5T;
-
     @Column(name = "flag_prep_out_size_5_t")
     private Long flagPrepOutSize5T;
+    
+    @Column(name = "flag_express_prep_in_size_5_t")
+    private Long flagExpressPrepInSize5T;
+    @Column(name = "flag_express_prep_out_size_5_t")
+    private Long flagExpressPrepOutSize5T;
 
     @Column(name = "flag_st_in_size_5_t")
     private Long flagStInSize5T;
-
     @Column(name = "flag_st_out_size_5_t")
     private Long flagStOutSize5T;
+    
+    @Column(name = "flag_express_st_in_size_5_t")
+    private Long flagExpressStInSize5T;
+    @Column(name = "flag_express_st_out_size_5_t")
+    private Long flagExpressStOutSize5T;
 
     @Column(name = "flag_as_in_size_5_t")
     private Long flagAsInSize5T;
-
     @Column(name = "flag_as_out_size_5_t")
     private Long flagAsOutSize5T;
+    
+    @Column(name = "flag_express_as_in_size_5_t")
+    private Long flagExpressAsInSize5T;
+    @Column(name = "flag_express_as_out_size_5_t")
+    private Long flagExpressAsOutSize5T;
 
     @Column(name = "flag_sc_in_size_5_t")
     private Long flagScInSize5T;
-
     @Column(name = "flag_sc_out_size_5_t")
     private Long flagScOutSize5T;
+    
+    @Column(name = "flag_express_sc_in_size_5_t")
+    private Long flagExpressScInSize5T;
+    @Column(name = "flag_express_sc_out_size_5_t")
+    private Long flagExpressScOutSize5T;
 
     @Column(name = "flag_ns_in_size_5_t")
     private Long flagNsInSize5T;
-
     @Column(name = "flag_ns_out_size_5_t")
     private Long flagNsOutSize5T;
 
+    @Column(name = "flag_express_ns_in_size_5_t")
+    private Long flagExpressNsInSize5T;
+    @Column(name = "flag_express_ns_out_size_5_t")
+    private Long flagExpressNsOutSize5T;
+    
     @Column(name = "flag_csc_in_size_5_t")
     private Long flagCscInSize5T;
-
     @Column(name = "flag_csc_out_size_5_t")
     private Long flagCscOutSize5T;
+    
+    @Column(name = "flag_express_csc_in_size_5_t")
+    private Long flagExpressCscInSize5T;
+    @Column(name = "flag_express_csc_out_size_5_t")
+    private Long flagExpressCscOutSize5T;
 
     @Column(name = "flag_os_in_size_5_t")
     private Long flagOsInSize5T;
-
     @Column(name = "flag_os_out_size_5_t")
     private Long flagOsOutSize5T;
+    
+    @Column(name = "flag_express_os_in_size_5_t")
+    private Long flagExpressOsInSize5T;
+    @Column(name = "flag_express_os_out_size_5_t")
+    private Long flagExpressOsOutSize5T;
 
     @Column(name = "flag_spcut_in_size_5_t")
     private Long flagspcutInSize5T;
     @Column(name = "flag_spcut_out_size_5_t")
     private Long flagspcutOutSize5T;
+    
+    @Column(name = "flag_express_spcut_in_size_5_t")
+    private Long flagExpressSpcutInSize5T;
+    @Column(name = "flag_express_spcut_out_size_5_t")
+    private Long flagExpressSpcutOutSize5T;
+    
     @Column(name = "flag_spprep_in_size_5_t")
     private Long flagspprepInSize5T;
     @Column(name = "flag_spprep_out_size_5_t")
     private Long flagspprepOutSize5T;
-
+    
+    @Column(name = "flag_express_spprep_in_size_5_t")
+    private Long flagExpressSpprepInSize5T;
+    @Column(name = "flag_express_spprep_out_size_5_t")
+    private Long flagExpressSpprepOutSize5T;
+    
     @Column(name = "Size_6")
     private Long Size6;
 
     @Column(name = "flag_ct_in_size_6")
     private Long flagCtInSize6;
-
     @Column(name = "flag_ct_out_size_6")
     private Long flagCtOutSize6;
 
+    @Column(name = "flag_express_ct_in_size_6")
+    private Long flagExpressCtInSize6;
+    @Column(name = "flag_express_ct_out_size_6")
+    private Long flagExpressCtOutSize6;
+    
     @Column(name = "flag_prep_in_size_6")
     private Long flagPrepInSize6;
-
     @Column(name = "flag_prep_out_size_6")
     private Long flagPrepOutSize6;
+    
+    @Column(name = "flag_express_prep_in_size_6")
+    private Long flagExpressPrepInSize6;
+    @Column(name = "flag_express_prep_out_size_6")
+    private Long flagExpressPrepOutSize6;
 
     @Column(name = "flag_st_in_size_6")
     private Long flagStInSize6;
-
     @Column(name = "flag_st_out_size_6")
     private Long flagStOutSize6;
+    
+    @Column(name = "flag_express_st_in_size_6")
+    private Long flagExpressStInSize6;
+    @Column(name = "flag_express_st_out_size_6")
+    private Long flagExpressStOutSize6;
 
     @Column(name = "flag_as_in_size_6")
     private Long flagAsInSize6;
-
     @Column(name = "flag_as_out_size_6")
     private Long flagAsOutSize6;
+    
+    @Column(name = "flag_express_as_in_size_6")
+    private Long flagExpressAsInSize6;
+    @Column(name = "flag_express_as_out_size_6")
+    private Long flagExpressAsOutSize6;
 
     @Column(name = "flag_sc_in_size_6")
     private Long flagScInSize6;
-
     @Column(name = "flag_sc_out_size_6")
     private Long flagScOutSize6;
+    
+    @Column(name = "flag_express_sc_in_size_6")
+    private Long flagExpressScInSize6;
+    @Column(name = "flag_express_sc_out_size_6")
+    private Long flagExpressScOutSize6;
 
     @Column(name = "flag_ns_in_size_6")
     private Long flagNsInSize6;
-
     @Column(name = "flag_ns_out_size_6")
     private Long flagNsOutSize6;
+    
+    @Column(name = "flag_express_ns_in_size_6")
+    private Long flagExpressNsInSize6;
+    @Column(name = "flag_express_ns_out_size_6")
+    private Long flagExpressNsOutSize6;
 
     @Column(name = "flag_csc_in_size_6")
     private Long flagCscInSize6;
-
     @Column(name = "flag_csc_out_size_6")
     private Long flagCscOutSize6;
+    
+    @Column(name = "flag_express_csc_in_size_6")
+    private Long flagExpressCscInSize6;
+    @Column(name = "flag_express_csc_out_size_6")
+    private Long flagExpressCscOutSize6;
 
     @Column(name = "flag_os_in_size_6")
     private Long flagOsInSize6;
-
     @Column(name = "flag_os_out_size_6")
     private Long flagOsOutSize6;
 
+    @Column(name = "flag_express_os_in_size_6")
+    private Long flagExpressOsInSize6;
+    @Column(name = "flag_express_os_out_size_6")
+    private Long flagExpressOsOutSize6;
+    
     @Column(name = "flag_spcut_in_size_6")
     private Long flagspcutInSize6;
     @Column(name = "flag_spcut_out_size_6")
     private Long flagspcutOutSize6;
+    
+    @Column(name = "flag_express_spcut_in_size_6")
+    private Long flagExpressSpcutInSize6;
+    @Column(name = "flag_express_spcut_out_size_6")
+    private Long flagExpressSpcutOutSize6;
+    
     @Column(name = "flag_spprep_in_size_6")
     private Long flagspprepInSize6;
     @Column(name = "flag_spprep_out_size_6")
     private Long flagspprepOutSize6;
+    
+    @Column(name = "flag_express_spprep_in_size_6")
+    private Long flagExpressSpprepInSize6;
+    @Column(name = "flag_express_spprep_out_size_6")
+    private Long flagExpressSpprepOutSize6;
 
     @Column(name = "Size_6_t")
     private Long Size6T;
 
     @Column(name = "flag_ct_in_size_6_t")
     private Long flagCtInSize6T;
-
     @Column(name = "flag_ct_out_size_6_t")
     private Long flagCtOutSize6T;
+    
+    @Column(name = "flag_express_ct_in_size_6_t")
+    private Long flagExpressCtInSize6T;
+    @Column(name = "flag_express_ct_out_size_6_t")
+    private Long flagExpressCtOutSize6T;
 
     @Column(name = "flag_prep_in_size_6_t")
     private Long flagPrepInSize6T;
-
     @Column(name = "flag_prep_out_size_6_t")
     private Long flagPrepOutSize6T;
+    
+    @Column(name = "flag_express_prep_in_size_6_t")
+    private Long flagExpressPrepInSize6T;
+    @Column(name = "flag_express_prep_out_size_6_t")
+    private Long flagExpressPrepOutSize6T;
 
     @Column(name = "flag_st_in_size_6_t")
     private Long flagStInSize6T;
-
     @Column(name = "flag_st_out_size_6_t")
     private Long flagStOutSize6T;
+    
+    @Column(name = "flag_express_st_in_size_6_t")
+    private Long flagExpressStInSize6T;
+    @Column(name = "flag_express_st_out_size_6_t")
+    private Long flagExpressStOutSize6T;
 
     @Column(name = "flag_as_in_size_6_t")
     private Long flagAsInSize6T;
-
     @Column(name = "flag_as_out_size_6_t")
     private Long flagAsOutSize6T;
+    
+    @Column(name = "flag_express_as_in_size_6_t")
+    private Long flagExpressAsInSize6T;
+    @Column(name = "flag_express_as_out_size_6_t")
+    private Long flagExpressAsOutSize6T;
 
     @Column(name = "flag_sc_in_size_6_t")
     private Long flagScInSize6T;
-
     @Column(name = "flag_sc_out_size_6_t")
     private Long flagScOutSize6T;
+    
+    @Column(name = "flag_express_sc_in_size_6_t")
+    private Long flagExpressScInSize6T;
+    @Column(name = "flag_express_sc_out_size_6_t")
+    private Long flagExpressScOutSize6T;
 
     @Column(name = "flag_ns_in_size_6_t")
     private Long flagNsInSize6T;
-
     @Column(name = "flag_ns_out_size_6_t")
     private Long flagNsOutSize6T;
+    
+    @Column(name = "flag_express_ns_in_size_6_t")
+    private Long flagExpressNsInSize6T;
+    @Column(name = "flag_express_ns_out_size_6_t")
+    private Long flagExpressNsOutSize6T;
 
     @Column(name = "flag_csc_in_size_6_t")
     private Long flagCscInSize6T;
-
     @Column(name = "flag_csc_out_size_6_t")
     private Long flagCscOutSize6T;
+    
+    @Column(name = "flag_express_csc_in_size_6_t")
+    private Long flagExpressCscInSize6T;
+    @Column(name = "flag_express_csc_out_size_6_t")
+    private Long flagExpressCscOutSize6T;
 
     @Column(name = "flag_os_in_size_6_t")
     private Long flagOsInSize6T;
-
     @Column(name = "flag_os_out_size_6_t")
     private Long flagOsOutSize6T;
+    
+    @Column(name = "flag_express_os_in_size_6_t")
+    private Long flagExpressOsInSize6T;
+    @Column(name = "flag_express_os_out_size_6_t")
+    private Long flagExpressOsOutSize6T;
 
     @Column(name = "flag_spcut_in_size_6_t")
     private Long flagspcutInSize6T;
     @Column(name = "flag_spcut_out_size_6_t")
     private Long flagspcutOutSize6T;
+    
+    @Column(name = "flag_express_spcut_in_size_6_t")
+    private Long flagExpressSpcutInSize6T;
+    @Column(name = "flag_express_spcut_out_size_6_t")
+    private Long flagExpressSpcutOutSize6T;
+    
     @Column(name = "flag_spprep_in_size_6_t")
     private Long flagspprepInSize6T;
     @Column(name = "flag_spprep_out_size_6_t")
     private Long flagspprepOutSize6T;
 
+    @Column(name = "flag_express_spprep_in_size_6_t")
+    private Long flagExpressSpprepInSize6T;
+    @Column(name = "flag_express_spprep_out_size_6_t")
+    private Long flagExpressSpprepOutSize6T;
+    
     @Column(name = "Size_7")
     private Long Size7;
-
+    
     @Column(name = "flag_ct_in_size_7")
     private Long flagCtInSize7;
-
     @Column(name = "flag_ct_out_size_7")
     private Long flagCtOutSize7;
+    
+    @Column(name = "flag_express_ct_in_size_7")
+    private Long flagExpressCtInSize7;
+    @Column(name = "flag_express_ct_out_size_7")
+    private Long flagExpressCtOutSize7;
 
     @Column(name = "flag_prep_in_size_7")
     private Long flagPrepInSize7;
-
     @Column(name = "flag_prep_out_size_7")
     private Long flagPrepOutSize7;
+    
+    @Column(name = "flag_express_prep_in_size_7")
+    private Long flagExpressPrepInSize7;
+    @Column(name = "flag_express_prep_out_size_7")
+    private Long flagExpressPrepOutSize7;
 
     @Column(name = "flag_st_in_size_7")
     private Long flagStInSize7;
-
     @Column(name = "flag_st_out_size_7")
     private Long flagStOutSize7;
+    
+    @Column(name = "flag_express_st_in_size_7")
+    private Long flagExpressStInSize7;
+    @Column(name = "flag_express_st_out_size_7")
+    private Long flagExpressStOutSize7;
 
     @Column(name = "flag_as_in_size_7")
     private Long flagAsInSize7;
-
     @Column(name = "flag_as_out_size_7")
     private Long flagAsOutSize7;
+    
+    @Column(name = "flag_express_as_in_size_7")
+    private Long flagExpressAsInSize7;
+    @Column(name = "flag_express_as_out_size_7")
+    private Long flagExpressAsOutSize7;
 
     @Column(name = "flag_sc_in_size_7")
     private Long flagScInSize7;
-
     @Column(name = "flag_sc_out_size_7")
     private Long flagScOutSize7;
+    
+    @Column(name = "flag_express_sc_in_size_7")
+    private Long flagExpressScInSize7;
+    @Column(name = "flag_express_sc_out_size_7")
+    private Long flagExpressScOutSize7;
 
     @Column(name = "flag_ns_in_size_7")
     private Long flagNsInSize7;
-
     @Column(name = "flag_ns_out_size_7")
     private Long flagNsOutSize7;
+    
+    @Column(name = "flag_express_ns_in_size_7")
+    private Long flagExpressNsInSize7;
+    @Column(name = "flag_express_ns_out_size_7")
+    private Long flagExpressNsOutSize7;
 
     @Column(name = "flag_csc_in_size_7")
     private Long flagCscInSize7;
-
     @Column(name = "flag_csc_out_size_7")
     private Long flagCscOutSize7;
+    
+    @Column(name = "flag_express_csc_in_size_7")
+    private Long flagExpressCscInSize7;
+    @Column(name = "flag_express_csc_out_size_7")
+    private Long flagExpressCscOutSize7;
 
     @Column(name = "flag_os_in_size_7")
     private Long flagOsInSize7;
-
     @Column(name = "flag_os_out_size_7")
     private Long flagOsOutSize7;
+    
+    @Column(name = "flag_express_os_in_size_7")
+    private Long flagExpressOsInSize7;
+    @Column(name = "flag_express_os_out_size_7")
+    private Long flagExpressOsOutSize7;
 
     @Column(name = "flag_spcut_in_size_7")
     private Long flagspcutInSize7;
     @Column(name = "flag_spcut_out_size_7")
     private Long flagspcutOutSize7;
+    
+    @Column(name = "flag_express_spcut_in_size_7")
+    private Long flagExpressSpcutInSize7;
+    @Column(name = "flag_express_spcut_out_size_7")
+    private Long flagExpressSpcutOutSize7;
+    
     @Column(name = "flag_spprep_in_size_7")
     private Long flagspprepInSize7;
     @Column(name = "flag_spprep_out_size_7")
     private Long flagspprepOutSize7;
+    
+    @Column(name = "flag_express_spprep_in_size_7")
+    private Long flagExpressSpprepInSize7;
+    @Column(name = "flag_express_spprep_out_size_7")
+    private Long flagExpressSpprepOutSize7;
 
     @Column(name = "Size_7_t")
     private Long Size7T;
 
     @Column(name = "flag_ct_in_size_7_t")
     private Long flagCtInSize7T;
-
     @Column(name = "flag_ct_out_size_7_t")
     private Long flagCtOutSize7T;
+    
+    @Column(name = "flag_express_ct_in_size_7_t")
+    private Long flagExpressCtInSize7T;
+    @Column(name = "flag_express_ct_out_size_7_t")
+    private Long flagExpressCtOutSize7T;
 
     @Column(name = "flag_prep_in_size_7_t")
     private Long flagPrepInSize7T;
-
     @Column(name = "flag_prep_out_size_7_t")
     private Long flagPrepOutSize7T;
+    
+    @Column(name = "flag_express_prep_in_size_7_t")
+    private Long flagExpressPrepInSize7T;
+    @Column(name = "flag_express_prep_out_size_7_t")
+    private Long flagExpressPrepOutSize7T;
 
     @Column(name = "flag_st_in_size_7_t")
     private Long flagStInSize7T;
-
     @Column(name = "flag_st_out_size_7_t")
     private Long flagStOutSize7T;
-
+    
+    @Column(name = "flag_express_st_in_size_7_t")
+    private Long flagExpressStInSize7T;
+    @Column(name = "flag_express_st_out_size_7_t")
+    private Long flagExpressStOutSize7T;
+    
     @Column(name = "flag_as_in_size_7_t")
     private Long flagAsInSize7T;
-
     @Column(name = "flag_as_out_size_7_t")
     private Long flagAsOutSize7T;
+    
+    @Column(name = "flag_express_as_in_size_7_t")
+    private Long flagExpressAsInSize7T;
+    @Column(name = "flag_express_as_out_size_7_t")
+    private Long flagExpressAsOutSize7T;
 
     @Column(name = "flag_sc_in_size_7_t")
     private Long flagScInSize7T;
-
     @Column(name = "flag_sc_out_size_7_t")
     private Long flagScOutSize7T;
+    
+    @Column(name = "flag_express_sc_in_size_7_t")
+    private Long flagExpressScInSize7T;
+    @Column(name = "flag_express_sc_out_size_7_t")
+    private Long flagExpressScOutSize7T;
 
     @Column(name = "flag_ns_in_size_7_t")
     private Long flagNsInSize7T;
-
     @Column(name = "flag_ns_out_size_7_t")
     private Long flagNsOutSize7T;
+    
+    @Column(name = "flag_express_ns_in_size_7_t")
+    private Long flagExpressNsInSize7T;
+    @Column(name = "flag_express_ns_out_size_7_t")
+    private Long flagExpressNsOutSize7T;
 
     @Column(name = "flag_csc_in_size_7_t")
     private Long flagCscInSize7T;
-
     @Column(name = "flag_csc_out_size_7_t")
     private Long flagCscOutSize7T;
+    
+    @Column(name = "flag_express_csc_in_size_7_t")
+    private Long flagExpressCscInSize7T;
+    @Column(name = "flag_express_csc_out_size_7_t")
+    private Long flagExpressCscOutSize7T;
 
     @Column(name = "flag_os_in_size_7_t")
     private Long flagOsInSize7T;
-
     @Column(name = "flag_os_out_size_7_t")
     private Long flagOsOutSize7T;
+    
+    @Column(name = "flag_express_os_in_size_7_t")
+    private Long flagExpressOsInSize7T;
+    @Column(name = "flag_express_os_out_size_7_t")
+    private Long flagExpressOsOutSize7T;
 
     @Column(name = "flag_spcut_in_size_7_t")
     private Long flagspcutInSize7T;
     @Column(name = "flag_spcut_out_size_7_t")
     private Long flagspcutOutSize7T;
+    
+    @Column(name = "flag_express_spcut_in_size_7_t")
+    private Long flagExpressSpcutInSize7T;
+    @Column(name = "flag_express_spcut_out_size_7_t")
+    private Long flagExpressSpcutOutSize7T;
+    
     @Column(name = "flag_spprep_in_size_7_t")
     private Long flagspprepInSize7T;
     @Column(name = "flag_spprep_out_size_7_t")
     private Long flagspprepOutSize7T;
+    
+    @Column(name = "flag_express_spprep_in_size_7_t")
+    private Long flagExpressSpprepInSize7T;
+    @Column(name = "flag_express_spprep_out_size_7_t")
+    private Long flagExpressSpprepOutSize7T;
 
     @Column(name = "Size_8")
     private Long Size8;
 
     @Column(name = "flag_ct_in_size_8")
     private Long flagCtInSize8;
-
     @Column(name = "flag_ct_out_size_8")
     private Long flagCtOutSize8;
+    
+    @Column(name = "flag_express_ct_in_size_8")
+    private Long flagExpressCtInSize8;
+    @Column(name = "flag_express_ct_out_size_8")
+    private Long flagExpressCtOutSize8;
 
     @Column(name = "flag_prep_in_size_8")
     private Long flagPrepInSize8;
-
     @Column(name = "flag_prep_out_size_8")
     private Long flagPrepOutSize8;
+    
+    @Column(name = "flag_express_prep_in_size_8")
+    private Long flagExpressPrepInSize8;
+    @Column(name = "flag_express_prep_out_size_8")
+    private Long flagExpressPrepOutSize8;
 
     @Column(name = "flag_st_in_size_8")
     private Long flagStInSize8;
-
     @Column(name = "flag_st_out_size_8")
     private Long flagStOutSize8;
+    
+    @Column(name = "flag_express_st_in_size_8")
+    private Long flagExpressStInSize8;
+    @Column(name = "flag_express_st_out_size_8")
+    private Long flagExpressStOutSize8;
 
     @Column(name = "flag_as_in_size_8")
     private Long flagAsInSize8;
-
     @Column(name = "flag_as_out_size_8")
     private Long flagAsOutSize8;
+    
+    @Column(name = "flag_express_as_in_size_8")
+    private Long flagExpressAsInSize8;
+    @Column(name = "flag_express_as_out_size_8")
+    private Long flagExpressAsOutSize8;
 
     @Column(name = "flag_sc_in_size_8")
     private Long flagScInSize8;
-
     @Column(name = "flag_sc_out_size_8")
     private Long flagScOutSize8;
+    
+    @Column(name = "flag_express_sc_in_size_8")
+    private Long flagExpressScInSize8;
+    @Column(name = "flag_express_sc_out_size_8")
+    private Long flagExpressScOutSize8;
 
     @Column(name = "flag_ns_in_size_8")
     private Long flagNsInSize8;
-
     @Column(name = "flag_ns_out_size_8")
     private Long flagNsOutSize8;
+    
+    @Column(name = "flag_express_ns_in_size_8")
+    private Long flagExpressNsInSize8;
+    @Column(name = "flag_express_ns_out_size_8")
+    private Long flagExpressNsOutSize8;
 
     @Column(name = "flag_csc_in_size_8")
     private Long flagCscInSize8;
-
     @Column(name = "flag_csc_out_size_8")
     private Long flagCscOutSize8;
+    
+    @Column(name = "flag_express_csc_in_size_8")
+    private Long flagExpressCscInSize8;
+    @Column(name = "flag_express_csc_out_size_8")
+    private Long flagExpressCscOutSize8;
 
     @Column(name = "flag_os_in_size_8")
     private Long flagOsInSize8;
-
     @Column(name = "flag_os_out_size_8")
     private Long flagOsOutSize8;
+    
+    @Column(name = "flag_express_os_in_size_8")
+    private Long flagExpressOsInSize8;
+    @Column(name = "flag_express_os_out_size_8")
+    private Long flagExpressOsOutSize8;
 
     @Column(name = "flag_spcut_in_size_8")
     private Long flagspcutInSize8;
     @Column(name = "flag_spcut_out_size_8")
     private Long flagspcutOutSize8;
+    
+    @Column(name = "flag_express_spcut_in_size_8")
+    private Long flagExpressSpcutInSize8;
+    @Column(name = "flag_express_spcut_out_size_8")
+    private Long flagExpressSpcutOutSize8;
+    
     @Column(name = "flag_spprep_in_size_8")
     private Long flagspprepInSize8;
     @Column(name = "flag_spprep_out_size_8")
     private Long flagspprepOutSize8;
+    
+    @Column(name = "flag_express_spprep_in_size_8")
+    private Long flagExpressSpprepInSize8;
+    @Column(name = "flag_express_spprep_out_size_8")
+    private Long flagExpressSpprepOutSize8;
 
     @Column(name = "Size_8_t")
     private Long Size8T;
 
     @Column(name = "flag_ct_in_size_8_t")
     private Long flagCtInSize8T;
-
     @Column(name = "flag_ct_out_size_8_t")
     private Long flagCtOutSize8T;
+    
+    @Column(name = "flag_express_ct_in_size_8_t")
+    private Long flagExpressCtInSize8T;
+    @Column(name = "flag_express_ct_out_size_8_t")
+    private Long flagExpressCtOutSize8T;
 
     @Column(name = "flag_prep_in_size_8_t")
     private Long flagPrepInSize8T;
-
     @Column(name = "flag_prep_out_size_8_t")
     private Long flagPrepOutSize8T;
+    
+    @Column(name = "flag_express_prep_in_size_8_t")
+    private Long flagExpressPrepInSize8T;
+    @Column(name = "flag_express_prep_out_size_8_t")
+    private Long flagExpressPrepOutSize8T;
 
     @Column(name = "flag_st_in_size_8_t")
     private Long flagStInSize8T;
-
     @Column(name = "flag_st_out_size_8_t")
     private Long flagStOutSize8T;
+    
+    @Column(name = "flag_express_st_in_size_8_t")
+    private Long flagExpressStInSize8T;
+    @Column(name = "flag_express_st_out_size_8_t")
+    private Long flagExpressStOutSize8T;
 
     @Column(name = "flag_as_in_size_8_t")
     private Long flagAsInSize8T;
-
     @Column(name = "flag_as_out_size_8_t")
     private Long flagAsOutSize8T;
+    
+    @Column(name = "flag_express_as_in_size_8_t")
+    private Long flagExpressAsInSize8T;
+    @Column(name = "flag_express_as_out_size_8_t")
+    private Long flagExpressAsOutSize8T;
 
     @Column(name = "flag_sc_in_size_8_t")
     private Long flagScInSize8T;
-
     @Column(name = "flag_sc_out_size_8_t")
     private Long flagScOutSize8T;
+    
+    @Column(name = "flag_express_sc_in_size_8_t")
+    private Long flagExpressScInSize8T;
+    @Column(name = "flag_express_sc_out_size_8_t")
+    private Long flagExpressScOutSize8T;
 
     @Column(name = "flag_ns_in_size_8_t")
     private Long flagNsInSize8T;
-
     @Column(name = "flag_ns_out_size_8_t")
     private Long flagNsOutSize8T;
+    
+    @Column(name = "flag_express_ns_in_size_8_t")
+    private Long flagExpressNsInSize8T;
+    @Column(name = "flag_express_ns_out_size_8_t")
+    private Long flagExpressNsOutSize8T;
 
     @Column(name = "flag_csc_in_size_8_t")
     private Long flagCscInSize8T;
-
     @Column(name = "flag_csc_out_size_8_t")
     private Long flagCscOutSize8T;
+    
+    @Column(name = "flag_express_csc_in_size_8_t")
+    private Long flagExpressCscInSize8T;
+    @Column(name = "flag_express_csc_out_size_8_t")
+    private Long flagExpressCscOutSize8T;
 
     @Column(name = "flag_os_in_size_8_t")
     private Long flagOsInSize8T;
-
     @Column(name = "flag_os_out_size_8_t")
     private Long flagOsOutSize8T;
+    
+    @Column(name = "flag_express_os_in_size_8_t")
+    private Long flagExpressOsInSize8T;
+    @Column(name = "flag_express_os_out_size_8_t")
+    private Long flagExpressOsOutSize8T;
 
     @Column(name = "flag_spcut_in_size_8_t")
     private Long flagspcutInSize8T;
     @Column(name = "flag_spcut_out_size_8_t")
     private Long flagspcutOutSize8T;
+    
+    @Column(name = "flag_express_spcut_in_size_8_t")
+    private Long flagExpressSpcutInSize8T;
+    @Column(name = "flag_express_spcut_out_size_8_t")
+    private Long flagExpressSpcutOutSize8T;
+    
     @Column(name = "flag_spprep_in_size_8_t")
     private Long flagspprepInSize8T;
     @Column(name = "flag_spprep_out_size_8_t")
     private Long flagspprepOutSize8T;
+    
+    @Column(name = "flag_express_spprep_in_size_8_t")
+    private Long flagExpressSpprepInSize8T;
+    @Column(name = "flag_express_spprep_out_size_8_t")
+    private Long flagExpressSpprepOutSize8T;
 
     @Column(name = "Size_9")
     private Long Size9;
 
     @Column(name = "flag_ct_in_size_9")
     private Long flagCtInSize9;
-
     @Column(name = "flag_ct_out_size_9")
     private Long flagCtOutSize9;
+    
+    @Column(name = "flag_express_ct_in_size_9")
+    private Long flagExpressCtInSize9;
+    @Column(name = "flag_express_ct_out_size_9")
+    private Long flagExpressCtOutSize9;
 
     @Column(name = "flag_prep_in_size_9")
     private Long flagPrepInSize9;
-
     @Column(name = "flag_prep_out_size_9")
     private Long flagPrepOutSize9;
+    
+    @Column(name = "flag_express_prep_in_size_9")
+    private Long flagExpressPrepInSize9;
+    @Column(name = "flag_express_prep_out_size_9")
+    private Long flagExpressPrepOutSize9;
 
     @Column(name = "flag_st_in_size_9")
     private Long flagStInSize9;
-
     @Column(name = "flag_st_out_size_9")
     private Long flagStOutSize9;
+    
+    @Column(name = "flag_express_st_in_size_9")
+    private Long flagExpressStInSize9;
+    @Column(name = "flag_express_st_out_size_9")
+    private Long flagExpressStOutSize9;
 
     @Column(name = "flag_as_in_size_9")
     private Long flagAsInSize9;
-
     @Column(name = "flag_as_out_size_9")
     private Long flagAsOutSize9;
+    
+    @Column(name = "flag_express_as_in_size_9")
+    private Long flagExpressAsInSize9;
+    @Column(name = "flag_express_as_out_size_9")
+    private Long flagExpressAsOutSize9;
 
     @Column(name = "flag_sc_in_size_9")
     private Long flagScInSize9;
-
     @Column(name = "flag_sc_out_size_9")
     private Long flagScOutSize9;
+    
+    @Column(name = "flag_express_sc_in_size_9")
+    private Long flagExpressScInSize9;
+    @Column(name = "flag_express_sc_out_size_9")
+    private Long flagExpressScOutSize9;
 
     @Column(name = "flag_ns_in_size_9")
     private Long flagNsInSize9;
-
     @Column(name = "flag_ns_out_size_9")
     private Long flagNsOutSize9;
+    
+    @Column(name = "flag_express_ns_in_size_9")
+    private Long flagExpressNsInSize9;
+    @Column(name = "flag_express_ns_out_size_9")
+    private Long flagExpressNsOutSize9;
 
     @Column(name = "flag_csc_in_size_9")
     private Long flagCscInSize9;
-
     @Column(name = "flag_csc_out_size_9")
     private Long flagCscOutSize9;
+    
+    @Column(name = "flag_express_csc_in_size_9")
+    private Long flagExpressCscInSize9;
+    @Column(name = "flag_express_csc_out_size_9")
+    private Long flagExpressCscOutSize9;
 
     @Column(name = "flag_os_in_size_9")
     private Long flagOsInSize9;
-
     @Column(name = "flag_os_out_size_9")
     private Long flagOsOutSize9;
+    
+    @Column(name = "flag_express_os_in_size_9")
+    private Long flagExpressOsInSize9;
+    @Column(name = "flag_express_os_out_size_9")
+    private Long flagExpressOsOutSize9;
 
     @Column(name = "flag_spcut_in_size_9")
     private Long flagspcutInSize9;
     @Column(name = "flag_spcut_out_size_9")
     private Long flagspcutOutSize9;
+    
+    @Column(name = "flag_express_spcut_in_size_9")
+    private Long flagExpressSpcutInSize9;
+    @Column(name = "flag_express_spcut_out_size_9")
+    private Long flagExpressSpcutOutSize9;
+    
     @Column(name = "flag_spprep_in_size_9")
     private Long flagspprepInSize9;
     @Column(name = "flag_spprep_out_size_9")
     private Long flagspprepOutSize9;
+    
+    @Column(name = "flag_express_spprep_in_size_9")
+    private Long flagExpressSpprepInSize9;
+    @Column(name = "flag_express_spprep_out_size_9")
+    private Long flagExpressSpprepOutSize9;
 
     @Column(name = "Size_9_t")
     private Long Size9T;
 
     @Column(name = "flag_ct_in_size_9_t")
     private Long flagCtInSize9T;
-
     @Column(name = "flag_ct_out_size_9_t")
     private Long flagCtOutSize9T;
-
+    
+    @Column(name = "flag_express_ct_in_size_9_t")
+    private Long flagExpressCtInSize9T;
+    @Column(name = "flag_express_ct_out_size_9_t")
+    private Long flagExpressCtOutSize9T;
+    
     @Column(name = "flag_prep_in_size_9_t")
     private Long flagPrepInSize9T;
-
     @Column(name = "flag_prep_out_size_9_t")
     private Long flagPrepOutSize9T;
+    
+    @Column(name = "flag_express_prep_in_size_9_t")
+    private Long flagExpressPrepInSize9T;
+    @Column(name = "flag_express_prep_out_size_9_t")
+    private Long flagExpressPrepOutSize9T;
 
     @Column(name = "flag_st_in_size_9_t")
     private Long flagStInSize9T;
-
     @Column(name = "flag_st_out_size_9_t")
     private Long flagStOutSize9T;
+    
+    @Column(name = "flag_express_st_in_size_9_t")
+    private Long flagExpressStInSize9T;
+    @Column(name = "flag_express_st_out_size_9_t")
+    private Long flagExpressStOutSize9T;
 
     @Column(name = "flag_as_in_size_9_t")
     private Long flagAsInSize9T;
-
     @Column(name = "flag_as_out_size_9_t")
     private Long flagAsOutSize9T;
+    
+    @Column(name = "flag_express_as_in_size_9_t")
+    private Long flagExpressAsInSize9T;
+    @Column(name = "flag_express_as_out_size_9_t")
+    private Long flagExpressAsOutSize9T;
 
     @Column(name = "flag_sc_in_size_9_t")
     private Long flagScInSize9T;
-
     @Column(name = "flag_sc_out_size_9_t")
     private Long flagScOutSize9T;
+    
+    @Column(name = "flag_express_sc_in_size_9_t")
+    private Long flagExpressScInSize9T;
+    @Column(name = "flag_express_sc_out_size_9_t")
+    private Long flagExpressScOutSize9T;
 
     @Column(name = "flag_ns_in_size_9_t")
     private Long flagNsInSize9T;
-
     @Column(name = "flag_ns_out_size_9_t")
     private Long flagNsOutSize9T;
+    
+    @Column(name = "flag_express_ns_in_size_9_t")
+    private Long flagExpressNsInSize9T;
+    @Column(name = "flag_express_ns_out_size_9_t")
+    private Long flagExpressNsOutSize9T;
 
     @Column(name = "flag_csc_in_size_9_t")
     private Long flagCscInSize9T;
-
     @Column(name = "flag_csc_out_size_9_t")
     private Long flagCscOutSize9T;
+    
+    @Column(name = "flag_express_csc_in_size_9_t")
+    private Long flagExpressCscInSize9T;
+    @Column(name = "flag_express_csc_out_size_9_t")
+    private Long flagExpressCscOutSize9T;
 
     @Column(name = "flag_os_in_size_9_t")
     private Long flagOsInSize9T;
-
     @Column(name = "flag_os_out_size_9_t")
     private Long flagOsOutSize9T;
+    
+    @Column(name = "flag_express_os_in_size_9_t")
+    private Long flagExpressOsInSize9T;
+    @Column(name = "flag_express_os_out_size_9_t")
+    private Long flagExpressOsOutSize9T;
 
     @Column(name = "flag_spcut_in_size_9_t")
     private Long flagspcutInSize9T;
     @Column(name = "flag_spcut_out_size_9_t")
     private Long flagspcutOutSize9T;
+    
+    @Column(name = "flag_express_spcut_in_size_9_t")
+    private Long flagExpressSpcutInSize9T;
+    @Column(name = "flag_express_spcut_out_size_9_t")
+    private Long flagExpressSpcutOutSize9T;
+    
     @Column(name = "flag_spprep_in_size_9_t")
     private Long flagspprepInSize9T;
     @Column(name = "flag_spprep_out_size_9_t")
     private Long flagspprepOutSize9T;
+    
+    @Column(name = "flag_express_spprep_in_size_9_t")
+    private Long flagExpressSpprepInSize9T;
+    @Column(name = "flag_express_spprep_out_size_9_t")
+    private Long flagExpressSpprepOutSize9T;
 
     @Column(name = "Size_10")
     private Long Size10;
 
     @Column(name = "flag_ct_in_size_10")
     private Long flagCtInSize10;
-
     @Column(name = "flag_ct_out_size_10")
     private Long flagCtOutSize10;
-
+    
+    @Column(name = "flag_express_ct_in_size_10")
+    private Long flagExpressCtInSize10;
+    @Column(name = "flag_express_ct_out_size_10")
+    private Long flagExpressCtOutSize10;
+    
     @Column(name = "flag_prep_in_size_10")
     private Long flagPrepInSize10;
-
     @Column(name = "flag_prep_out_size_10")
     private Long flagPrepOutSize10;
+    
+    @Column(name = "flag_express_prep_in_size_10")
+    private Long flagExpressPrepInSize10;
+    @Column(name = "flag_express_prep_out_size_10")
+    private Long flagExpressPrepOutSize10;
 
     @Column(name = "flag_st_in_size_10")
     private Long flagStInSize10;
-
     @Column(name = "flag_st_out_size_10")
     private Long flagStOutSize10;
+    
+    @Column(name = "flag_express_st_in_size_10")
+    private Long flagExpressStInSize10;
+    @Column(name = "flag_express_st_out_size_10")
+    private Long flagExpressStOutSize10;
 
     @Column(name = "flag_as_in_size_10")
     private Long flagAsInSize10;
-
     @Column(name = "flag_as_out_size_10")
     private Long flagAsOutSize10;
+    
+    @Column(name = "flag_express_as_in_size_10")
+    private Long flagExpressAsInSize10;
+    @Column(name = "flag_express_as_out_size_10")
+    private Long flagExpressAsOutSize10;
 
     @Column(name = "flag_sc_in_size_10")
     private Long flagScInSize10;
-
     @Column(name = "flag_sc_out_size_10")
     private Long flagScOutSize10;
+    
+    @Column(name = "flag_express_sc_in_size_10")
+    private Long flagExpressScInSize10;
+    @Column(name = "flag_express_sc_out_size_10")
+    private Long flagExpressScOutSize10;
 
     @Column(name = "flag_ns_in_size_10")
     private Long flagNsInSize10;
-
     @Column(name = "flag_ns_out_size_10")
     private Long flagNsOutSize10;
+    
+    @Column(name = "flag_express_ns_in_size_10")
+    private Long flagExpressNsInSize10;
+    @Column(name = "flag_express_ns_out_size_10")
+    private Long flagExpressNsOutSize10;
 
     @Column(name = "flag_csc_in_size_10")
     private Long flagCscInSize10;
-
     @Column(name = "flag_csc_out_size_10")
     private Long flagCscOutSize10;
+    
+    @Column(name = "flag_express_csc_in_size_10")
+    private Long flagExpressCscInSize10;
+    @Column(name = "flag_express_csc_out_size_10")
+    private Long flagExpressCscOutSize10;
 
     @Column(name = "flag_os_in_size_10")
     private Long flagOsInSize10;
-
     @Column(name = "flag_os_out_size_10")
     private Long flagOsOutSize10;
+    
+    @Column(name = "flag_express_os_in_size_10")
+    private Long flagExpressOsInSize10;
+    @Column(name = "flag_express_os_out_size_10")
+    private Long flagExpressOsOutSize10;
 
     @Column(name = "flag_spcut_in_size_10")
     private Long flagspcutInSize10;
     @Column(name = "flag_spcut_out_size_10")
     private Long flagspcutOutSize10;
+    
+    @Column(name = "flag_express_spcut_in_size_10")
+    private Long flagExpressSpcutInSize10;
+    @Column(name = "flag_express_spcut_out_size_10")
+    private Long flagExpressSpcutOutSize10;
+    
     @Column(name = "flag_spprep_in_size_10")
     private Long flagspprepInSize10;
     @Column(name = "flag_spprep_out_size_10")
     private Long flagspprepOutSize10;
+    
+    @Column(name = "flag_express_spprep_in_size_10")
+    private Long flagExpressSpprepInSize10;
+    @Column(name = "flag_express_spprep_out_size_10")
+    private Long flagExpressSpprepOutSize10;
 
     @Column(name = "Size_10_t")
     private Long Size10T;
 
     @Column(name = "flag_ct_in_size_10_t")
     private Long flagCtInSize10T;
-
     @Column(name = "flag_ct_out_size_10_t")
     private Long flagCtOutSize10T;
+    
+    @Column(name = "flag_express_ct_in_size_10_t")
+    private Long flagExpressCtInSize10T;
+    @Column(name = "flag_express_ct_out_size_10_t")
+    private Long flagExpressCtOutSize10T;
 
     @Column(name = "flag_prep_in_size_10_t")
     private Long flagPrepInSize10T;
-
     @Column(name = "flag_prep_out_size_10_t")
     private Long flagPrepOutSize10T;
+    
+    @Column(name = "flag_express_prep_in_size_10_t")
+    private Long flagExpressPrepInSize10T;
+    @Column(name = "flag_express_prep_out_size_10_t")
+    private Long flagExpressPrepOutSize10T;
 
     @Column(name = "flag_st_in_size_10_t")
     private Long flagStInSize10T;
-
     @Column(name = "flag_st_out_size_10_t")
     private Long flagStOutSize10T;
+    
+    @Column(name = "flag_express_st_in_size_10_t")
+    private Long flagExpressStInSize10T;
+    @Column(name = "flag_express_st_out_size_10_t")
+    private Long flagExpressStOutSize10T;
 
     @Column(name = "flag_as_in_size_10_t")
     private Long flagAsInSize10T;
-
     @Column(name = "flag_as_out_size_10_t")
     private Long flagAsOutSize10T;
+    
+    @Column(name = "flag_express_as_in_size_10_t")
+    private Long flagExpressAsInSize10T;
+    @Column(name = "flag_express_as_out_size_10_t")
+    private Long flagExpressAsOutSize10T;
 
     @Column(name = "flag_sc_in_size_10_t")
     private Long flagScInSize10T;
-
     @Column(name = "flag_sc_out_size_10_t")
     private Long flagScOutSize10T;
+    
+    @Column(name = "flag_express_sc_in_size_10_t")
+    private Long flagExpressScInSize10T;
+    @Column(name = "flag_express_sc_out_size_10_t")
+    private Long flagExpressScOutSize10T;
 
     @Column(name = "flag_ns_in_size_10_t")
     private Long flagNsInSize10T;
-
     @Column(name = "flag_ns_out_size_10_t")
     private Long flagNsOutSize10T;
+    
+    @Column(name = "flag_express_ns_in_size_10_t")
+    private Long flagExpressNsInSize10T;
+    @Column(name = "flag_express_ns_out_size_10_t")
+    private Long flagExpressNsOutSize10T;
 
     @Column(name = "flag_csc_in_size_10_t")
     private Long flagCscInSize10T;
-
     @Column(name = "flag_csc_out_size_10_t")
     private Long flagCscOutSize10T;
+    
+    @Column(name = "flag_express_csc_in_size_10_t")
+    private Long flagExpressCscInSize10T;
+    @Column(name = "flag_express_csc_out_size_10_t")
+    private Long flagExpressCscOutSize10T;
 
     @Column(name = "flag_os_in_size_10_t")
     private Long flagOsInSize10T;
-
     @Column(name = "flag_os_out_size_10_t")
     private Long flagOsOutSize10T;
+    
+    @Column(name = "flag_express_os_in_size_10_t")
+    private Long flagExpressOsInSize10T;
+    @Column(name = "flag_express_os_out_size_10_t")
+    private Long flagExpressOsOutSize10T;
 
     @Column(name = "flag_spcut_in_size_10_t")
     private Long flagspcutInSize10T;
     @Column(name = "flag_spcut_out_size_10_t")
     private Long flagspcutOutSize10T;
+    
+    @Column(name = "flag_express_spcut_in_size_10_t")
+    private Long flagExpressSpcutInSize10T;
+    @Column(name = "flag_express_spcut_out_size_10_t")
+    private Long flagExpressSpcutOutSize10T;
+    
     @Column(name = "flag_spprep_in_size_10_t")
     private Long flagspprepInSize10T;
     @Column(name = "flag_spprep_out_size_10_t")
     private Long flagspprepOutSize10T;
+    
+    @Column(name = "flag_express_spprep_in_size_10_t")
+    private Long flagExpressSpprepInSize10T;
+    @Column(name = "flag_express_spprep_out_size_10_t")
+    private Long flagExpressSpprepOutSize10T;
 
     @Column(name = "Size_11")
     private Long Size11;
 
     @Column(name = "flag_ct_in_size_11")
     private Long flagCtInSize11;
-
     @Column(name = "flag_ct_out_size_11")
     private Long flagCtOutSize11;
+    
+    @Column(name = "flag_express_ct_in_size_11")
+    private Long flagExpressCtInSize11;
+    @Column(name = "flag_express_ct_out_size_11")
+    private Long flagExpressCtOutSize11;
 
     @Column(name = "flag_prep_in_size_11")
     private Long flagPrepInSize11;
-
     @Column(name = "flag_prep_out_size_11")
     private Long flagPrepOutSize11;
+    
+    @Column(name = "flag_express_prep_in_size_11")
+    private Long flagExpressPrepInSize11;
+    @Column(name = "flag_express_prep_out_size_11")
+    private Long flagExpressPrepOutSize11;
 
     @Column(name = "flag_st_in_size_11")
     private Long flagStInSize11;
-
     @Column(name = "flag_st_out_size_11")
     private Long flagStOutSize11;
+    
+    @Column(name = "flag_express_st_in_size_11")
+    private Long flagExpressStInSize11;
+    @Column(name = "flag_express_st_out_size_11")
+    private Long flagExpressStOutSize11;
 
     @Column(name = "flag_as_in_size_11")
     private Long flagAsInSize11;
-
     @Column(name = "flag_as_out_size_11")
     private Long flagAsOutSize11;
+    
+    @Column(name = "flag_express_as_in_size_11")
+    private Long flagExpressAsInSize11;
+    @Column(name = "flag_express_as_out_size_11")
+    private Long flagExpressAsOutSize11;
 
     @Column(name = "flag_sc_in_size_11")
     private Long flagScInSize11;
-
     @Column(name = "flag_sc_out_size_11")
     private Long flagScOutSize11;
+    
+    @Column(name = "flag_express_sc_in_size_11")
+    private Long flagExpressScInSize11;
+    @Column(name = "flag_express_sc_out_size_11")
+    private Long flagExpressScOutSize11;
 
     @Column(name = "flag_ns_in_size_11")
     private Long flagNsInSize11;
-
     @Column(name = "flag_ns_out_size_11")
     private Long flagNsOutSize11;
+    
+    @Column(name = "flag_express_ns_in_size_11")
+    private Long flagExpressNsInSize11;
+    @Column(name = "flag_express_ns_out_size_11")
+    private Long flagExpressNsOutSize11;
 
     @Column(name = "flag_csc_in_size_11")
     private Long flagCscInSize11;
-
     @Column(name = "flag_csc_out_size_11")
     private Long flagCscOutSize11;
+    
+    @Column(name = "flag_express_csc_in_size_11")
+    private Long flagExpressCscInSize11;
+    @Column(name = "flag_express_csc_out_size_11")
+    private Long flagExpressCscOutSize11;
 
     @Column(name = "flag_os_in_size_11")
     private Long flagOsInSize11;
-
     @Column(name = "flag_os_out_size_11")
     private Long flagOsOutSize11;
+    
+    @Column(name = "flag_express_os_in_size_11")
+    private Long flagExpressOsInSize11;
+    @Column(name = "flag_express_os_out_size_11")
+    private Long flagExpressOsOutSize11;
 
     @Column(name = "flag_spcut_in_size_11")
     private Long flagspcutInSize11;
     @Column(name = "flag_spcut_out_size_11")
     private Long flagspcutOutSize11;
+    
+    @Column(name = "flag_express_spcut_in_size_11")
+    private Long flagExpressSpcutInSize11;
+    @Column(name = "flag_express_spcut_out_size_11")
+    private Long flagExpressSpcutOutSize11;
+    
     @Column(name = "flag_spprep_in_size_11")
     private Long flagspprepInSize11;
     @Column(name = "flag_spprep_out_size_11")
     private Long flagspprepOutSize11;
 
+    @Column(name = "flag_express_spprep_in_size_11")
+    private Long flagExpressSpprepInSize11;
+    @Column(name = "flag_express_spprep_out_size_11")
+    private Long flagExpressSpprepOutSize11;
+    
     @Column(name = "Size_11_t")
     private Long Size11T;
 
     @Column(name = "flag_ct_in_size_11_t")
     private Long flagCtInSize11T;
-
     @Column(name = "flag_ct_out_size_11_t")
     private Long flagCtOutSize11T;
+    
+    @Column(name = "flag_express_ct_in_size_11_t")
+    private Long flagExpressCtInSize11T;
+    @Column(name = "flag_express_ct_out_size_11_t")
+    private Long flagExpressCtOutSize11T;
 
     @Column(name = "flag_prep_in_size_11_t")
     private Long flagPrepInSize11T;
-
     @Column(name = "flag_prep_out_size_11_t")
     private Long flagPrepOutSize11T;
+    
+    @Column(name = "flag_express_prep_in_size_11_t")
+    private Long flagExpressPrepInSize11T;
+    @Column(name = "flag_express_prep_out_size_11_t")
+    private Long flagExpressPrepOutSize11T;
 
     @Column(name = "flag_st_in_size_11_t")
     private Long flagStInSize11T;
-
     @Column(name = "flag_st_out_size_11_t")
     private Long flagStOutSize11T;
+    
+    @Column(name = "flag_express_st_in_size_11_t")
+    private Long flagExpressStInSize11T;
+    @Column(name = "flag_express_st_out_size_11_t")
+    private Long flagExpressStOutSize11T;
 
     @Column(name = "flag_as_in_size_11_t")
     private Long flagAsInSize11T;
-
     @Column(name = "flag_as_out_size_11_t")
     private Long flagAsOutSize11T;
 
+    @Column(name = "flag_express_as_in_size_11_t")
+    private Long flagExpressAsInSize11T;
+    @Column(name = "flag_express_as_out_size_11_t")
+    private Long flagExpressAsOutSize11T;
+    
     @Column(name = "flag_sc_in_size_11_t")
     private Long flagScInSize11T;
-
     @Column(name = "flag_sc_out_size_11_t")
     private Long flagScOutSize11T;
+    
+    @Column(name = "flag_express_sc_in_size_11_t")
+    private Long flagExpressScInSize11T;
+    @Column(name = "flag_express_sc_out_size_11_t")
+    private Long flagExpressScOutSize11T;
 
     @Column(name = "flag_ns_in_size_11_t")
     private Long flagNsInSize11T;
-
     @Column(name = "flag_ns_out_size_11_t")
     private Long flagNsOutSize11T;
+    
+    @Column(name = "flag_express_ns_in_size_11_t")
+    private Long flagExpressNsInSize11T;
+    @Column(name = "flag_express_ns_out_size_11_t")
+    private Long flagExpressNsOutSize11T;
 
     @Column(name = "flag_csc_in_size_11_t")
     private Long flagCscInSize11T;
-
     @Column(name = "flag_csc_out_size_11_t")
     private Long flagCscOutSize11T;
+    
+    @Column(name = "flag_express_csc_in_size_11_t")
+    private Long flagExpressCscInSize11T;
+    @Column(name = "flag_express_csc_out_size_11_t")
+    private Long flagExpressCscOutSize11T;
 
     @Column(name = "flag_os_in_size_11_t")
     private Long flagOsInSize11T;
-
     @Column(name = "flag_os_out_size_11_t")
     private Long flagOsOutSize11T;
+    
+    @Column(name = "flag_express_os_in_size_11_t")
+    private Long flagExpressOsInSize11T;
+    @Column(name = "flag_express_os_out_size_11_t")
+    private Long flagExpressOsOutSize11T;
 
     @Column(name = "flag_spcut_in_size_11_t")
     private Long flagspcutInSize11T;
     @Column(name = "flag_spcut_out_size_11_t")
     private Long flagspcutOutSize11T;
+    
+    @Column(name = "flag_express_spcut_in_size_11_t")
+    private Long flagExpressSpcutInSize11T;
+    @Column(name = "flag_express_spcut_out_size_11_t")
+    private Long flagExpressSpcutOutSize11T;
+    
     @Column(name = "flag_spprep_in_size_11_t")
     private Long flagspprepInSize11T;
     @Column(name = "flag_spprep_out_size_11_t")
     private Long flagspprepOutSize11T;
+    
+    @Column(name = "flag_express_spprep_in_size_11_t")
+    private Long flagExpressSpprepInSize11T;
+    @Column(name = "flag_express_spprep_out_size_11_t")
+    private Long flagExpressSpprepOutSize11T;
 
     @Column(name = "Size_12")
     private Long Size12;
 
     @Column(name = "flag_ct_in_size_12")
     private Long flagCtInSize12;
-
     @Column(name = "flag_ct_out_size_12")
     private Long flagCtOutSize12;
+    
+    @Column(name = "flag_express_ct_in_size_12")
+    private Long flagExpressCtInSize12;
+    @Column(name = "flag_express_ct_out_size_12")
+    private Long flagExpressCtOutSize12;
 
     @Column(name = "flag_prep_in_size_12")
     private Long flagPrepInSize12;
-
     @Column(name = "flag_prep_out_size_12")
     private Long flagPrepOutSize12;
+    
+    @Column(name = "flag_express_prep_in_size_12")
+    private Long flagExpressPrepInSize12;
+    @Column(name = "flag_express_prep_out_size_12")
+    private Long flagExpressPrepOutSize12;
 
     @Column(name = "flag_st_in_size_12")
     private Long flagStInSize12;
-
     @Column(name = "flag_st_out_size_12")
     private Long flagStOutSize12;
+    
+    @Column(name = "flag_express_st_in_size_12")
+    private Long flagExpressStInSize12;
+    @Column(name = "flag_express_st_out_size_12")
+    private Long flagExpressStOutSize12;
 
     @Column(name = "flag_as_in_size_12")
     private Long flagAsInSize12;
-
     @Column(name = "flag_as_out_size_12")
     private Long flagAsOutSize12;
+    
+    @Column(name = "flag_express_as_in_size_12")
+    private Long flagExpressAsInSize12;
+    @Column(name = "flag_express_as_out_size_12")
+    private Long flagExpressAsOutSize12;
 
     @Column(name = "flag_sc_in_size_12")
     private Long flagScInSize12;
-
     @Column(name = "flag_sc_out_size_12")
     private Long flagScOutSize12;
+    
+    @Column(name = "flag_express_sc_in_size_12")
+    private Long flagExpressScInSize12;
+    @Column(name = "flag_express_sc_out_size_12")
+    private Long flagExpressScOutSize12;
 
     @Column(name = "flag_ns_in_size_12")
     private Long flagNsInSize12;
-
     @Column(name = "flag_ns_out_size_12")
     private Long flagNsOutSize12;
+    
+    @Column(name = "flag_express_ns_in_size_12")
+    private Long flagExpressNsInSize12;
+    @Column(name = "flag_express_ns_out_size_12")
+    private Long flagExpressNsOutSize12;
 
     @Column(name = "flag_csc_in_size_12")
     private Long flagCscInSize12;
-
     @Column(name = "flag_csc_out_size_12")
     private Long flagCscOutSize12;
+    
+    @Column(name = "flag_express_csc_in_size_12")
+    private Long flagExpressCscInSize12;
+    @Column(name = "flag_express_csc_out_size_12")
+    private Long flagExpressCscOutSize12;
 
     @Column(name = "flag_os_in_size_12")
     private Long flagOsInSize12;
-
     @Column(name = "flag_os_out_size_12")
     private Long flagOsOutSize12;
+    
+    @Column(name = "flag_express_os_in_size_12")
+    private Long flagExpressOsInSize12;
+    @Column(name = "flag_express_os_out_size_12")
+    private Long flagExpressOsOutSize12;
 
     @Column(name = "flag_spcut_in_size_12")
     private Long flagspcutInSize12;
     @Column(name = "flag_spcut_out_size_12")
     private Long flagspcutOutSize12;
+    
+    @Column(name = "flag_express_spcut_in_size_12")
+    private Long flagExpressSpcutInSize12;
+    @Column(name = "flag_express_spcut_out_size_12")
+    private Long flagExpressSpcutOutSize12;
+    
     @Column(name = "flag_spprep_in_size_12")
     private Long flagspprepInSize12;
     @Column(name = "flag_spprep_out_size_12")
     private Long flagspprepOutSize12;
+    
+    @Column(name = "flag_express_spprep_in_size_12")
+    private Long flagExpressSpprepInSize12;
+    @Column(name = "flag_express_spprep_out_size_12")
+    private Long flagExpressSpprepOutSize12;
 
     @Column(name = "Size_12_t")
     private Long Size12T;
 
     @Column(name = "flag_ct_in_size_12_t")
     private Long flagCtInSize12T;
-
     @Column(name = "flag_ct_out_size_12_t")
     private Long flagCtOutSize12T;
+    
+    @Column(name = "flag_express_ct_in_size_12_t")
+    private Long flagExpressCtInSize12T;
+    @Column(name = "flag_express_ct_out_size_12_t")
+    private Long flagExpressCtOutSize12T;
 
     @Column(name = "flag_prep_in_size_12_t")
     private Long flagPrepInSize12T;
-
     @Column(name = "flag_prep_out_size_12_t")
     private Long flagPrepOutSize12T;
+    
+    @Column(name = "flag_express_prep_in_size_12_t")
+    private Long flagExpressPrepInSize12T;
+    @Column(name = "flag_express_prep_out_size_12_t")
+    private Long flagExpressPrepOutSize12T;
 
     @Column(name = "flag_st_in_size_12_t")
     private Long flagStInSize12T;
-
     @Column(name = "flag_st_out_size_12_t")
     private Long flagStOutSize12T;
+    
+    @Column(name = "flag_express_st_in_size_12_t")
+    private Long flagExpressStInSize12T;
+    @Column(name = "flag_express_st_out_size_12_t")
+    private Long flagExpressStOutSize12T;
 
     @Column(name = "flag_as_in_size_12_t")
     private Long flagAsInSize12T;
-
     @Column(name = "flag_as_out_size_12_t")
     private Long flagAsOutSize12T;
+    
+    @Column(name = "flag_express_as_in_size_12_t")
+    private Long flagExpressAsInSize12T;
+    @Column(name = "flag_express_as_out_size_12_t")
+    private Long flagExpressAsOutSize12T;
 
     @Column(name = "flag_sc_in_size_12_t")
     private Long flagScInSize12T;
-
     @Column(name = "flag_sc_out_size_12_t")
     private Long flagScOutSize12T;
+    
+    @Column(name = "flag_express_sc_in_size_12_t")
+    private Long flagExpressScInSize12T;
+    @Column(name = "flag_express_sc_out_size_12_t")
+    private Long flagExpressScOutSize12T;
 
     @Column(name = "flag_ns_in_size_12_t")
     private Long flagNsInSize12T;
-
     @Column(name = "flag_ns_out_size_12_t")
     private Long flagNsOutSize12T;
+    
+    @Column(name = "flag_express_ns_in_size_12_t")
+    private Long flagExpressNsInSize12T;
+    @Column(name = "flag_express_ns_out_size_12_t")
+    private Long flagExpressNsOutSize12T;
 
     @Column(name = "flag_csc_in_size_12_t")
     private Long flagCscInSize12T;
-
     @Column(name = "flag_csc_out_size_12_t")
     private Long flagCscOutSize12T;
+    
+    @Column(name = "flag_express_csc_in_size_12_t")
+    private Long flagExpressCscInSize12T;
+    @Column(name = "flag_express_csc_out_size_12_t")
+    private Long flagExpressCscOutSize12T;
 
     @Column(name = "flag_os_in_size_12_t")
     private Long flagOsInSize12T;
-
     @Column(name = "flag_os_out_size_12_t")
     private Long flagOsOutSize12T;
+    
+    @Column(name = "flag_express_os_in_size_12_t")
+    private Long flagExpressOsInSize12T;
+    @Column(name = "flag_express_os_out_size_12_t")
+    private Long flagExpressOsOutSize12T;
 
     @Column(name = "flag_spcut_in_size_12_t")
     private Long flagspcutInSize12T;
     @Column(name = "flag_spcut_out_size_12_t")
     private Long flagspcutOutSize12T;
+    
+    @Column(name = "flag_express_spcut_in_size_12_t")
+    private Long flagExpressSpcutInSize12T;
+    @Column(name = "flag_express_spcut_out_size_12_t")
+    private Long flagExpressSpcutOutSize12T;
+    
     @Column(name = "flag_spprep_in_size_12_t")
     private Long flagspprepInSize12T;
     @Column(name = "flag_spprep_out_size_12_t")
     private Long flagspprepOutSize12T;
+    
+    @Column(name = "flag_express_spprep_in_size_12_t")
+    private Long flagExpressSpprepInSize12T;
+    @Column(name = "flag_express_spprep_out_size_12_t")
+    private Long flagExpressSpprepOutSize12T;
 
     @Column(name = "Size_13")
     private Long Size13;
 
     @Column(name = "flag_ct_in_size_13")
     private Long flagCtInSize13;
-
     @Column(name = "flag_ct_out_size_13")
     private Long flagCtOutSize13;
+    
+    @Column(name = "flag_express_ct_in_size_13")
+    private Long flagExpressCtInSize13;
+    @Column(name = "flag_express_ct_out_size_13")
+    private Long flagExpressCtOutSize13;
 
     @Column(name = "flag_prep_in_size_13")
     private Long flagPrepInSize13;
-
     @Column(name = "flag_prep_out_size_13")
     private Long flagPrepOutSize13;
+    
+    @Column(name = "flag_express_prep_in_size_13")
+    private Long flagExpressPrepInSize13;
+    @Column(name = "flag_express_prep_out_size_13")
+    private Long flagExpressPrepOutSize13;
 
     @Column(name = "flag_st_in_size_13")
     private Long flagStInSize13;
-
     @Column(name = "flag_st_out_size_13")
     private Long flagStOutSize13;
+    
+    @Column(name = "flag_express_st_in_size_13")
+    private Long flagExpressStInSize13;
+    @Column(name = "flag_express_st_out_size_13")
+    private Long flagExpressStOutSize13;
 
     @Column(name = "flag_as_in_size_13")
     private Long flagAsInSize13;
-
     @Column(name = "flag_as_out_size_13")
     private Long flagAsOutSize13;
+    
+    @Column(name = "flag_express_as_in_size_13")
+    private Long flagExpressAsInSize13;
+    @Column(name = "flag_express_as_out_size_13")
+    private Long flagExpressAsOutSize13;
 
     @Column(name = "flag_sc_in_size_13")
     private Long flagScInSize13;
-
     @Column(name = "flag_sc_out_size_13")
     private Long flagScOutSize13;
+    
+    @Column(name = "flag_express_sc_in_size_13")
+    private Long flagExpressScInSize13;
+    @Column(name = "flag_express_sc_out_size_13")
+    private Long flagExpressScOutSize13;
 
     @Column(name = "flag_ns_in_size_13")
     private Long flagNsInSize13;
-
     @Column(name = "flag_ns_out_size_13")
     private Long flagNsOutSize13;
 
+    @Column(name = "flag_express_ns_in_size_13")
+    private Long flagExpressNsInSize13;
+    @Column(name = "flag_express_ns_out_size_13")
+    private Long flagExpressNsOutSize13;
+    
     @Column(name = "flag_csc_in_size_13")
     private Long flagCscInSize13;
-
     @Column(name = "flag_csc_out_size_13")
     private Long flagCscOutSize13;
+    
+    @Column(name = "flag_express_csc_in_size_13")
+    private Long flagExpressCscInSize13;
+    @Column(name = "flag_express_csc_out_size_13")
+    private Long flagExpressCscOutSize13;
 
     @Column(name = "flag_os_in_size_13")
     private Long flagOsInSize13;
-
     @Column(name = "flag_os_out_size_13")
     private Long flagOsOutSize13;
+    
+    @Column(name = "flag_express_os_in_size_13")
+    private Long flagExpressOsInSize13;
+    @Column(name = "flag_express_os_out_size_13")
+    private Long flagExpressOsOutSize13;
 
     @Column(name = "flag_spcut_in_size_13")
     private Long flagspcutInSize13;
     @Column(name = "flag_spcut_out_size_13")
     private Long flagspcutOutSize13;
+    
+    @Column(name = "flag_express_spcut_in_size_13")
+    private Long flagExpressSpcutInSize13;
+    @Column(name = "flag_express_spcut_out_size_13")
+    private Long flagExpressSpcutOutSize13;
+    
     @Column(name = "flag_spprep_in_size_13")
     private Long flagspprepInSize13;
     @Column(name = "flag_spprep_out_size_13")
     private Long flagspprepOutSize13;
+    
+    @Column(name = "flag_express_spprep_in_size_13")
+    private Long flagExpressSpprepInSize13;
+    @Column(name = "flag_express_spprep_out_size_13")
+    private Long flagExpressSpprepOutSize13;
 
     @Column(name = "Size_13_t")
     private Long Size13T;
-
+    
     @Column(name = "flag_ct_in_size_13_t")
     private Long flagCtInSize13T;
-
     @Column(name = "flag_ct_out_size_13_t")
     private Long flagCtOutSize13T;
+    
+    @Column(name = "flag_express_ct_in_size_13_t")
+    private Long flagExpressCtInSize13T;
+    @Column(name = "flag_express_ct_out_size_13_t")
+    private Long flagExpressCtOutSize13T;
 
     @Column(name = "flag_prep_in_size_13_t")
     private Long flagPrepInSize13T;
-
     @Column(name = "flag_prep_out_size_13_t")
     private Long flagPrepOutSize13T;
+    
+    @Column(name = "flag_express_prep_in_size_13_t")
+    private Long flagExpressPrepInSize13T;
+    @Column(name = "flag_express_prep_out_size_13_t")
+    private Long flagExpressPrepOutSize13T;
 
     @Column(name = "flag_st_in_size_13_t")
     private Long flagStInSize13T;
-
     @Column(name = "flag_st_out_size_13_t")
     private Long flagStOutSize13T;
+    
+    @Column(name = "flag_express_st_in_size_13_t")
+    private Long flagExpressStInSize13T;
+    @Column(name = "flag_express_st_out_size_13_t")
+    private Long flagExpressStOutSize13T;
 
     @Column(name = "flag_as_in_size_13_t")
     private Long flagAsInSize13T;
-
     @Column(name = "flag_as_out_size_13_t")
     private Long flagAsOutSize13T;
+    
+    @Column(name = "flag_express_as_in_size_13_t")
+    private Long flagExpressAsInSize13T;
+    @Column(name = "flag_express_as_out_size_13_t")
+    private Long flagExpressAsOutSize13T;
 
     @Column(name = "flag_sc_in_size_13_t")
     private Long flagScInSize13T;
-
     @Column(name = "flag_sc_out_size_13_t")
     private Long flagScOutSize13T;
+    
+    @Column(name = "flag_express_sc_in_size_13_t")
+    private Long flagExpressScInSize13T;
+    @Column(name = "flag_express_sc_out_size_13_t")
+    private Long flagExpressScOutSize13T;
 
     @Column(name = "flag_ns_in_size_13_t")
     private Long flagNsInSize13T;
-
     @Column(name = "flag_ns_out_size_13_t")
     private Long flagNsOutSize13T;
+    
+    @Column(name = "flag_express_ns_in_size_13_t")
+    private Long flagExpressNsInSize13T;
+    @Column(name = "flag_express_ns_out_size_13_t")
+    private Long flagExpressNsOutSize13T;
 
     @Column(name = "flag_csc_in_size_13_t")
     private Long flagCscInSize13T;
-
     @Column(name = "flag_csc_out_size_13_t")
     private Long flagCscOutSize13T;
+    
+    @Column(name = "flag_express_csc_in_size_13_t")
+    private Long flagExpressCscInSize13T;
+    @Column(name = "flag_express_csc_out_size_13_t")
+    private Long flagExpressCscOutSize13T;
 
     @Column(name = "flag_os_in_size_13_t")
     private Long flagOsInSize13T;
-
     @Column(name = "flag_os_out_size_13_t")
     private Long flagOsOutSize13T;
+    
+    @Column(name = "flag_os_express_in_size_13_t")
+    private Long flagExpressOsInSize13T;
+    @Column(name = "flag_os_express_out_size_13_t")
+    private Long flagExpressOsOutSize13T;
 
     @Column(name = "flag_spcut_in_size_13_t")
     private Long flagspcutInSize13T;
     @Column(name = "flag_spcut_out_size_13_t")
     private Long flagspcutOutSize13T;
+    
+    @Column(name = "flag_spcut_express_in_size_13_t")
+    private Long flagExpressSpcutInSize13T;
+    @Column(name = "flag_spcut_express_out_size_13_t")
+    private Long flagExpressSpcutOutSize13T;
+    
     @Column(name = "flag_spprep_in_size_13_t")
     private Long flagspprepInSize13T;
     @Column(name = "flag_spprep_out_size_13_t")
     private Long flagspprepOutSize13T;
+    
+    @Column(name = "flag_spprep_express_in_size_13_t")
+    private Long flagExpressSpprepInSize13T;
+    @Column(name = "flag_spprep_express_out_size_13_t")
+    private Long flagExpressSpprepOutSize13T;
 
     @Column(name = "Size_14")
     private Long Size14;
 
     @Column(name = "flag_ct_in_size_14")
     private Long flagCtInSize14;
-
     @Column(name = "flag_ct_out_size_14")
     private Long flagCtOutSize14;
+    
+    @Column(name = "flag_express_ct_in_size_14")
+    private Long flagExpressCtInSize14;
+    @Column(name = "flag_express_ct_out_size_14")
+    private Long flagExpressCtOutSize14;
 
     @Column(name = "flag_prep_in_size_14")
     private Long flagPrepInSize14;
-
     @Column(name = "flag_prep_out_size_14")
     private Long flagPrepOutSize14;
+    
+    @Column(name = "flag_express_prep_in_size_14")
+    private Long flagExpressPrepInSize14;
+    @Column(name = "flag_express_prep_out_size_14")
+    private Long flagExpressPrepOutSize14;
 
     @Column(name = "flag_st_in_size_14")
     private Long flagStInSize14;
-
     @Column(name = "flag_st_out_size_14")
     private Long flagStOutSize14;
+    
+    @Column(name = "flag_express_st_in_size_14")
+    private Long flagExpressStInSize14;
+    @Column(name = "flag_express_st_out_size_14")
+    private Long flagExpressStOutSize14;
 
     @Column(name = "flag_as_in_size_14")
     private Long flagAsInSize14;
-
     @Column(name = "flag_as_out_size_14")
     private Long flagAsOutSize14;
+    
+    @Column(name = "flag_express_as_in_size_14")
+    private Long flagExpressAsInSize14;
+    @Column(name = "flag_express_as_out_size_14")
+    private Long flagExpressAsOutSize14;
 
     @Column(name = "flag_sc_in_size_14")
     private Long flagScInSize14;
-
     @Column(name = "flag_sc_out_size_14")
     private Long flagScOutSize14;
+    
+    @Column(name = "flag_express_sc_in_size_14")
+    private Long flagExpressScInSize14;
+    @Column(name = "flag_express_sc_out_size_14")
+    private Long flagExpressScOutSize14;
 
     @Column(name = "flag_ns_in_size_14")
     private Long flagNsInSize14;
-
     @Column(name = "flag_ns_out_size_14")
     private Long flagNsOutSize14;
+    
+    @Column(name = "flag_express_ns_in_size_14")
+    private Long flagExpressNsInSize14;
+    @Column(name = "flag_express_ns_out_size_14")
+    private Long flagExpressNsOutSize14;
 
     @Column(name = "flag_csc_in_size_14")
     private Long flagCscInSize14;
-
     @Column(name = "flag_csc_out_size_14")
     private Long flagCscOutSize14;
+    
+    @Column(name = "flag_express_csc_in_size_14")
+    private Long flagExpressCscInSize14;
+    @Column(name = "flag_express_csc_out_size_14")
+    private Long flagExpressCscOutSize14;
 
     @Column(name = "flag_os_in_size_14")
     private Long flagOsInSize14;
-
     @Column(name = "flag_os_out_size_14")
     private Long flagOsOutSize14;
+    
+    @Column(name = "flag_express_os_in_size_14")
+    private Long flagExpressOsInSize14;
+    @Column(name = "flag_express_os_out_size_14")
+    private Long flagExpressOsOutSize14;
 
     @Column(name = "flag_spcut_in_size_14")
     private Long flagspcutInSize14;
     @Column(name = "flag_spcut_out_size_14")
     private Long flagspcutOutSize14;
+    
+    @Column(name = "flag_express_spcut_in_size_14")
+    private Long flagExpressSpcutInSize14;
+    @Column(name = "flag_express_spcut_out_size_14")
+    private Long flagExpressSpcutOutSize14;
+    
     @Column(name = "flag_spprep_in_size_14")
     private Long flagspprepInSize14;
     @Column(name = "flag_spprep_out_size_14")
     private Long flagspprepOutSize14;
+    
+    @Column(name = "flag_express_spprep_in_size_14")
+    private Long flagExpressSpprepInSize14;
+    @Column(name = "flag_express_spprep_out_size_14")
+    private Long flagExpressSpprepOutSize14;
 
     @Column(name = "Size_15")
     private Long Size15;
 
     @Column(name = "flag_ct_in_size_15")
     private Long flagCtInSize15;
-
     @Column(name = "flag_ct_out_size_15")
     private Long flagCtOutSize15;
+    
+    @Column(name = "flag_express_ct_in_size_15")
+    private Long flagExpressCtInSize15;
+    @Column(name = "flag_express_ct_out_size_15")
+    private Long flagExpressCtOutSize15;
 
     @Column(name = "flag_prep_in_size_15")
     private Long flagPrepInSize15;
-
     @Column(name = "flag_prep_out_size_15")
     private Long flagPrepOutSize15;
+    
+    @Column(name = "flag_express_prep_in_size_15")
+    private Long flagExpressPrepInSize15;
+    @Column(name = "flag_express_prep_out_size_15")
+    private Long flagExpressPrepOutSize15;
 
     @Column(name = "flag_st_in_size_15")
     private Long flagStInSize15;
-
     @Column(name = "flag_st_out_size_15")
     private Long flagStOutSize15;
+    
+    @Column(name = "flag_express_st_in_size_15")
+    private Long flagExpressStInSize15;
+    @Column(name = "flag_express_st_out_size_15")
+    private Long flagExpressStOutSize15;
 
     @Column(name = "flag_as_in_size_15")
     private Long flagAsInSize15;
-
     @Column(name = "flag_as_out_size_15")
     private Long flagAsOutSize15;
+    
+    @Column(name = "flag_express_as_in_size_15")
+    private Long flagExpressAsInSize15;
+    @Column(name = "flag_express_as_out_size_15")
+    private Long flagExpressAsOutSize15;
 
     @Column(name = "flag_sc_in_size_15")
     private Long flagScInSize15;
-
     @Column(name = "flag_sc_out_size_15")
     private Long flagScOutSize15;
-
+    
+    @Column(name = "flag_express_sc_in_size_15")
+    private Long flagExpressScInSize15;
+    @Column(name = "flag_express_sc_out_size_15")
+    private Long flagExpressScOutSize15;
+    
     @Column(name = "flag_ns_in_size_15")
     private Long flagNsInSize15;
-
     @Column(name = "flag_ns_out_size_15")
     private Long flagNsOutSize15;
-
+    
+    @Column(name = "flag_express_ns_in_size_15")
+    private Long flagExpressNsInSize15;
+    @Column(name = "flag_express_ns_out_size_15")
+    private Long flagExpressNsOutSize15;
+    
     @Column(name = "flag_csc_in_size_15")
     private Long flagCscInSize15;
-
     @Column(name = "flag_csc_out_size_15")
     private Long flagCscOutSize15;
+    
+    @Column(name = "flag_express_csc_in_size_15")
+    private Long flagExpressCscInSize15;
+    @Column(name = "flag_express_csc_out_size_15")
+    private Long flagExpressCscOutSize15;
 
     @Column(name = "flag_os_in_size_15")
     private Long flagOsInSize15;
-
     @Column(name = "flag_os_out_size_15")
     private Long flagOsOutSize15;
+    
+    @Column(name = "flag_express_os_in_size_15")
+    private Long flagExpressOsInSize15;
+    @Column(name = "flag_express_os_out_size_15")
+    private Long flagExpressOsOutSize15;
 
     @Column(name = "flag_spcut_in_size_15")
     private Long flagspcutInSize15;
     @Column(name = "flag_spcut_out_size_15")
     private Long flagspcutOutSize15;
+    
+    @Column(name = "flag_express_spcut_in_size_15")
+    private Long flagExpressSpcutInSize15;
+    @Column(name = "flag_express_spcut_out_size_15")
+    private Long flagExpressSpcutOutSize15;
+    
     @Column(name = "flag_spprep_in_size_15")
     private Long flagspprepInSize15;
     @Column(name = "flag_spprep_out_size_15")
     private Long flagspprepOutSize15;
+    
+    @Column(name = "flag_express_spprep_in_size_15")
+    private Long flagExpressSpprepInSize15;
+    @Column(name = "flag_express_spprep_out_size_15")
+    private Long flagExpressSpprepOutSize15;
 
     @Column(name = "Size_16")
     private Long Size16;
 
     @Column(name = "flag_ct_in_size_16")
     private Long flagCtInSize16;
-
     @Column(name = "flag_ct_out_size_16")
     private Long flagCtOutSize16;
+    
+    @Column(name = "flag_express_ct_in_size_16")
+    private Long flagExpressCtInSize16;
+    @Column(name = "flag_express_ct_out_size_16")
+    private Long flagExpressCtOutSize16;
 
     @Column(name = "flag_prep_in_size_16")
     private Long flagPrepInSize16;
-
     @Column(name = "flag_prep_out_size_16")
     private Long flagPrepOutSize16;
+    
+    @Column(name = "flag_express_prep_in_size_16")
+    private Long flagExpressPrepInSize16;
+    @Column(name = "flag_express_prep_out_size_16")
+    private Long flagExpressPrepOutSize16;
 
     @Column(name = "flag_st_in_size_16")
     private Long flagStInSize16;
-
     @Column(name = "flag_st_out_size_16")
     private Long flagStOutSize16;
+    
+    @Column(name = "flag_express_st_in_size_16")
+    private Long flagExpressStInSize16;
+    @Column(name = "flag_express_st_out_size_16")
+    private Long flagExpressStOutSize16;
 
     @Column(name = "flag_as_in_size_16")
     private Long flagAsInSize16;
-
     @Column(name = "flag_as_out_size_16")
     private Long flagAsOutSize16;
+    
+    @Column(name = "flag_express_as_in_size_16")
+    private Long flagExpressAsInSize16;
+    @Column(name = "flag_express_as_out_size_16")
+    private Long flagExpressAsOutSize16;
 
     @Column(name = "flag_sc_in_size_16")
     private Long flagScInSize16;
-
     @Column(name = "flag_sc_out_size_16")
     private Long flagScOutSize16;
+    
+    @Column(name = "flag_express_sc_in_size_16")
+    private Long flagExpressScInSize16;
+    @Column(name = "flag_express_sc_out_size_16")
+    private Long flagExpressScOutSize16;
 
     @Column(name = "flag_ns_in_size_16")
     private Long flagNsInSize16;
-
     @Column(name = "flag_ns_out_size_16")
     private Long flagNsOutSize16;
-
+    
+    @Column(name = "flag_express_ns_in_size_16")
+    private Long flagExpressNsInSize16;
+    @Column(name = "flag_express_ns_out_size_16")
+    private Long flagExpressNsOutSize16;
+    
     @Column(name = "flag_csc_in_size_16")
     private Long flagCscInSize16;
-
     @Column(name = "flag_csc_out_size_16")
     private Long flagCscOutSize16;
+    
+    @Column(name = "flag_express_csc_in_size_16")
+    private Long flagExpressCscInSize16;
+    @Column(name = "flag_express_csc_out_size_16")
+    private Long flagExpressCscOutSize16;
 
     @Column(name = "flag_os_in_size_16")
     private Long flagOsInSize16;
-
     @Column(name = "flag_os_out_size_16")
     private Long flagOsOutSize16;
+    
+    @Column(name = "flag_express_os_in_size_16")
+    private Long flagExpressOsInSize16;
+    @Column(name = "flag_express_os_out_size_16")
+    private Long flagExpressOSOutSize16;
 
     @Column(name = "flag_spcut_in_size_16")
     private Long flagspcutInSize16;
