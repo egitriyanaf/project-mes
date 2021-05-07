@@ -344,21 +344,21 @@ public class AdpExpressKanbanController extends BaseController {
         data.setRemark(model.getRemark());
         adpLotStockKanbanServices.save(data, getLoginSecUser(session));
 
-        if (persentaseSize1 <= 10 || persentaseSize1T <= 10 || persentaseSize2 <= 10
-                || persentaseSize2T <= 10 || persentaseSize3 <= 10
-                || persentaseSize3T <= 10 || persentaseSize4 <= 10
-                || persentaseSize4T <= 10 || persentaseSize5 <= 10
-                || persentaseSize5T <= 10 || persentaseSize6 <= 10
-                || persentaseSize6T <= 10 || persentaseSize7 <= 10
-                || persentaseSize7T <= 10 || persentaseSize8 <= 10
-                || persentaseSize8T <= 10 || persentaseSize9 <= 10
-                || persentaseSize9T <= 10 || persentaseSize10 <= 10
-                || persentaseSize10T <= 10 || persentaseSize11 <= 10
-                || persentaseSize11T <= 10 || persentaseSize12 <= 10
-                || persentaseSize12T <= 10 || persentaseSize13 <= 10
-                || persentaseSize13T <= 10 || persentaseSize14 <= 10
-                || persentaseSize15 <= 10 || persentaseSize16 <= 10
-                || persentaseSize17 <= 10 || persentaseSize18 <= 10) {
+        if (persentaseSize1 <= 1 || persentaseSize1T <= 1 || persentaseSize2 <= 1
+                || persentaseSize2T <= 1 || persentaseSize3 <= 1
+                || persentaseSize3T <= 1 || persentaseSize4 <= 1
+                || persentaseSize4T <= 1 || persentaseSize5 <= 1
+                || persentaseSize5T <= 1 || persentaseSize6 <= 1
+                || persentaseSize6T <= 1 || persentaseSize7 <= 1
+                || persentaseSize7T <= 1 || persentaseSize8 <= 1
+                || persentaseSize8T <= 1 || persentaseSize9 <= 1
+                || persentaseSize9T <= 1 || persentaseSize10 <= 1
+                || persentaseSize10T <= 1 || persentaseSize11 <= 1
+                || persentaseSize11T <= 1 || persentaseSize12 <= 1
+                || persentaseSize12T <= 1 || persentaseSize13 <= 1
+                || persentaseSize13T <= 1 || persentaseSize14 <= 1
+                || persentaseSize15 <= 1 || persentaseSize16 <= 1
+                || persentaseSize17 <= 1 || persentaseSize18 <= 1) {
             try {
                 ApplicationContext context = new ClassPathXmlApplicationContext("Spring-Mail.xml");
 
@@ -405,7 +405,7 @@ public class AdpExpressKanbanController extends BaseController {
         if (getPriviledgeUser(session, PRIVILEDGE, EDIT)) {
             Long status = 0l;
             JdcAdpTxnLotapprv approve = adpLotStockKanbanServices.findById(id);
-            if (approve.getPersentase() > 10) {
+            if (approve.getPersentase() > 1) {
                 if (approve.getApprove1() == null) {
                     JdcAdpFndapprv apprv = adpLotStockKanbanServices.getApprovalBypers(approve.getPersentase());
                     approve.setAssignTo(apprv.getUser2());

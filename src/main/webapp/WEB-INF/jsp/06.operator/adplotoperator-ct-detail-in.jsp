@@ -1135,7 +1135,8 @@
                         {"mDataProp": "size10T", "bSortable": false},
                         {"mDataProp": "size11T", "bSortable": false},
                         {"mDataProp": "size12T", "bSortable": false},
-                        {"mDataProp": "size13T", "bSortable": false}
+                        {"mDataProp": "size13T", "bSortable": false},
+                        {"mDataProp": fnBlank, "bSortable": false}
                     ]
                 });
 
@@ -1650,9 +1651,64 @@
                                                 <th>11T</th>
                                                 <th>12T</th>
                                                 <th>13T</th>
+                                                <th>Sum</th>
                                             </tr>
                                         </thead>
+                                        <tfoot align="right">
+                                            <tr>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                            </tr>
+                                        </tfoot>
                                     </table>
+                                    <div class="form-group">
+                                        <label class="col-md-1 control-label">IN/ WIP Kanban<span class="required"></span></label>
+                                        <div class="col-md-3">
+                                            <div>
+                                                <input id="#" disabled value="#" class="form-control"  placeholder="IN/ WIP Kanban" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-1 control-label">OUT Kanban<span class="required"></span></label>
+                                        <div class="col-md-3">
+                                            <div>
+                                                <input id="#" disabled value="#" class="form-control"  placeholder="OUT Kanban" />
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
