@@ -66,19 +66,11 @@ public class JdcAdpTxnlotbasis implements Serializable {
 
     @Column(name = "flag_ct_in_size_1")
     private Long flagCtInSize1;
-
     @Column(name = "flag_ct_out_size_1")
     private Long flagCtOutSize1;
-    
-    @Column(name = "flag_express_ct_in_size_1")
-    private long flagExpressCtInSize1;
-    
-    @Column(name = "flag_express_ct_out_size_1")
-    private long flagExpressCtOutSize1;
 
     @Column(name = "flag_prep_in_size_1")
     private Long flagPrepInSize1;
-
     @Column(name = "flag_prep_out_size_1")
     private Long flagPrepOutSize1;
 
