@@ -62,5 +62,5 @@ public interface AdpLotStockKanbanServices {
      * @return
      */
     public DataTables searchByMapCriteriaLotKanban(DataTables dataTables, HashMap<String, Object> searchMap);
-
+	
 }

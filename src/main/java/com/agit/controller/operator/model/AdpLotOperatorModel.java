@@ -718,12 +718,12 @@ public class AdpLotOperatorModel {
     private Long flagspcutOutSize18;
     private Long flagspprepInSize18;
     private Long flagspprepOutSize18;
-    
+        
     private String lineCode;
     private String poItem;
     private String poNo;
     private String departement;
-
+       
     /**
      *
      * @return
@@ -11171,5 +11171,5 @@ public class AdpLotOperatorModel {
     public void setFlagspprepOutSize18(Long flagspprepOutSize18) {
         this.flagspprepOutSize18 = flagspprepOutSize18;
     }
-
+    
 }

@@ -76,7 +76,6 @@ public class JdcAdpTxnlotbasis implements Serializable {
 
     @Column(name = "flag_st_in_size_1")
     private Long flagStInSize1;
-
     @Column(name = "flag_st_out_size_1")
     private Long flagStOutSize1;
 
@@ -1972,7 +1971,7 @@ public class JdcAdpTxnlotbasis implements Serializable {
     private Long flagLaserOutSize17;
     @Column(name = "flag_laser_out_size_18")
     private Long flagLaserOutSize18;
-    
+      
     /**
      *
      * @return
@@ -14557,6 +14556,6 @@ public class JdcAdpTxnlotbasis implements Serializable {
         this.flagLaserOutSize18 = flagLaserOutSize18;
     }
 
-  
-    
+
+     
 }

@@ -653,6 +653,23 @@
             </div>
         </div>
     </div>
+    
+    <div class="modal fade" id="confirm-rejectEx" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    Confirmation Express Kanban
+                </div>
+                <div class="modal-header">
+                    Are you sure to reject this Kanban record(s)?
+                </div>
+                <div class="modal-header text-right">
+                    <a class="btn btn-default" type="button" data-dismiss="modal"><i class="fa fa-times"></i>Cancel</a>
+                    <a id="btn-rejectEx" class="btn btn-danger" type="button" data-dismiss="modal"><i class="fa fa-times"></i> Reject</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="modal fade" id="confirm-approve" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -666,6 +683,23 @@
                 <div class="modal-header text-right">
                     <a class="btn btn-default" type="button" data-dismiss="modal"><i class="fa fa-times"></i>Cancel</a>
                     <a id="btn-approve" class="btn btn-success" type="button" data-dismiss="modal"><i class="fa fa-check"></i> Confirm</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="confirm-approveEx" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    Confirmation Express Kanban
+                </div>
+                <div class="modal-header">
+                    Are you sure to approve this Kanban record(s)?
+                </div>
+                <div class="modal-header text-right">
+                    <a class="btn btn-default" type="button" data-dismiss="modal"><i class="fa fa-times"></i>Cancel</a>
+                    <a id="btn-approveEx" class="btn btn-success" type="button" data-dismiss="modal"><i class="fa fa-check"></i> Confirm</a>
                 </div>
             </div>
         </div>

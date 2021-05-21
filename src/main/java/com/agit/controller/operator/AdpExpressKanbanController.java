@@ -364,8 +364,8 @@ public class AdpExpressKanbanController extends BaseController {
 
                 MailMail mm = (MailMail) context.getBean("po1Lv1");
                 MailMail mm4 = (MailMail) context.getBean("po1Lv4");
-                mm.sendMail("Manager", "Silahkan cek aprroval ada barang yang akan ditransfer");
-                mm4.sendMail("Manager", "Silahkan cek aprroval ada barang yang akan ditransfer");
+                mm.sendMail("Manager", "Silahkan cek approval ada barang yang akan ditransfer");
+                mm4.sendMail("Manager", "Silahkan cek approval ada barang yang akan ditransfer");
                 return new AjaxResponse(model);
             } catch (Exception e) {
                 System.out.println(e);
@@ -381,10 +381,10 @@ public class AdpExpressKanbanController extends BaseController {
                 MailMail m3 = (MailMail) context.getBean("po1Lv3");
                 MailMail mm4 = (MailMail) context.getBean("po1Lv4");
 
-                m1.sendMail("Manager", "Silahkan cek aprroval ada barang yang akan ditransfer");
-                m2.sendMail("Manager", "Silahkan cek aprroval ada barang yang akan ditransfer");
-                m3.sendMail("Manager", "Silahkan cek aprroval ada barang yang akan ditransfer");
-                mm4.sendMail("Manager", "Silahkan cek aprroval ada barang yang akan ditransfer");
+                m1.sendMail("Manager", "Silahkan cek approval ada barang yang akan ditransfer");
+                m2.sendMail("Manager", "Silahkan cek approval ada barang yang akan ditransfer");
+                m3.sendMail("Manager", "Silahkan cek approval ada barang yang akan ditransfer");
+                mm4.sendMail("Manager", "Silahkan cek approval ada barang yang akan ditransfer");
                 return new AjaxResponse(model);
             } catch (Exception e) {
                 System.out.println(e);
@@ -452,5 +452,5 @@ public class AdpExpressKanbanController extends BaseController {
         model.addAttribute("SELECTED_MENU", MENU);
         model.addAttribute("SELECTED_SUBMENU", PRIVILEDGE);
     }
-
+    
 }
