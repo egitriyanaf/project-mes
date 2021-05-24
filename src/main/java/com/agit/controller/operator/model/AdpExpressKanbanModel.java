@@ -428,7 +428,7 @@ public class AdpExpressKanbanModel {
     private Long flagExNsOutSize12T;
     private Long flagExNsOutSize13T;
     
-    private Long flagExScInSize1;
+        private Long flagExScInSize1;
     private Long flagExScInSize2;
     private Long flagExScInSize3;
     private Long flagExScInSize4;
@@ -491,7 +491,7 @@ public class AdpExpressKanbanModel {
     private Long flagExScOutSize12T;
     private Long flagExScOutSize13T;
     
-    private Long flagExOsInSize1;
+        private Long flagExOsInSize1;
     private Long flagExOsInSize2;
     private Long flagExOsInSize3;
     private Long flagExOsInSize4;
@@ -554,7 +554,7 @@ public class AdpExpressKanbanModel {
     private Long flagExOsOutSize12T;
     private Long flagExOsOutSize13T;
     
-    private Long flagExSpcutInSize1;
+        private Long flagExSpcutInSize1;
     private Long flagExSpcutInSize2;
     private Long flagExSpcutInSize3;
     private Long flagExSpcutInSize4;
@@ -617,7 +617,7 @@ public class AdpExpressKanbanModel {
     private Long flagExSpcutOutSize12T;
     private Long flagExSpcutOutSize13T;
     
-    private Long flagExSpprepInSize1;
+        private Long flagExSpprepInSize1;
     private Long flagExSpprepInSize2;
     private Long flagExSpprepInSize3;
     private Long flagExSpprepInSize4;
@@ -680,7 +680,7 @@ public class AdpExpressKanbanModel {
     private Long flagExSpprepOutSize12T;
     private Long flagExSpprepOutSize13T;
     
-    private Long flagExLabelInSize1;
+        private Long flagExLabelInSize1;
     private Long flagExLabelInSize2;
     private Long flagExLabelInSize3;
     private Long flagExLabelInSize4;
@@ -743,7 +743,7 @@ public class AdpExpressKanbanModel {
     private Long flagExLabelOutSize12T;
     private Long flagExLabelOutSize13T;
     
-    private Long flagExLaserInSize1;
+        private Long flagExLaserInSize1;
     private Long flagExLaserInSize2;
     private Long flagExLaserInSize3;
     private Long flagExLaserInSize4;
@@ -1601,6 +1601,38 @@ public class AdpExpressKanbanModel {
 
     public void setFlagExCtOutSize13T(Long flagExCtOutSize13T) {
         this.flagExCtOutSize13T = flagExCtOutSize13T;
+    }
+
+    public String getLineCode() {
+        return lineCode;
+    }
+
+    public void setLineCode(String lineCode) {
+        this.lineCode = lineCode;
+    }
+
+    public String getPoItem() {
+        return poItem;
+    }
+
+    public void setPoItem(String poItem) {
+        this.poItem = poItem;
+    }
+
+    public String getPoNo() {
+        return poNo;
+    }
+
+    public void setPoNo(String poNo) {
+        this.poNo = poNo;
+    }
+
+    public String getDepartement() {
+        return departement;
+    }
+
+    public void setDepartement(String departement) {
+        this.departement = departement;
     }
 
     public Long getFlagExPrepInSize1() {
@@ -7058,41 +7090,8 @@ public class AdpExpressKanbanModel {
     public void setFlagExLaserOutSize13T(Long flagExLaserOutSize13T) {
         this.flagExLaserOutSize13T = flagExLaserOutSize13T;
     }
-
-    public String getLineCode() {
-        return lineCode;
-    }
-
-    public void setLineCode(String lineCode) {
-        this.lineCode = lineCode;
-    }
-
-    public String getPoItem() {
-        return poItem;
-    }
-
-    public void setPoItem(String poItem) {
-        this.poItem = poItem;
-    }
-
-    public String getPoNo() {
-        return poNo;
-    }
-
-    public void setPoNo(String poNo) {
-        this.poNo = poNo;
-    }
-
-    public String getDepartement() {
-        return departement;
-    }
-
-    public void setDepartement(String departement) {
-        this.departement = departement;
-    }
     
     
     
-    
-    
+
 }

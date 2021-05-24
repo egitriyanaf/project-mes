@@ -1,5 +1,6 @@
 package com.agit.services;
 
+import com.agit.controller.operator.model.AdpExpressKanbanModel;
 import com.agit.entity.JdcAdpFndapprv;
 import com.agit.entity.JdcAdpTxnLotapprv;
 import com.agit.entity.security.JdcAdpMstUser;
@@ -54,7 +55,7 @@ public interface AdpLotStockKanbanServices {
      * @param loginSecUser
      */
     public void saveUpdate(JdcAdpTxnLotapprv approve, JdcAdpMstUser loginSecUser);
-
+    
     /**
      *
      * @param dataTables
@@ -62,5 +63,13 @@ public interface AdpLotStockKanbanServices {
      * @return
      */
     public DataTables searchByMapCriteriaLotKanban(DataTables dataTables, HashMap<String, Object> searchMap);
+
+    public void approveIn(AdpExpressKanbanModel model, JdcAdpMstUser loginSecUser);
+
+    public void approveOut(AdpExpressKanbanModel model, JdcAdpMstUser loginSecUser);
+
+    public void rejectIn(AdpExpressKanbanModel model, JdcAdpMstUser loginSecUser);
+
+    public void rejectOut(AdpExpressKanbanModel model, JdcAdpMstUser loginSecUser);
 	
 }

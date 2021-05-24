@@ -7,6 +7,7 @@ package com.agit.services;
 
 import com.agit.controller.operator.model.AdpLotOperatorModel;
 import com.agit.entity.JdcAdpTxnlotbasis;
+import com.agit.entity.JdcAdpTxnLotapprv;
 import com.agit.entity.security.JdcAdpMstUser;
 import com.project.common.DataTables;
 import java.util.HashMap;

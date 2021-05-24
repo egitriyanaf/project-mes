@@ -4,6 +4,8 @@ import com.agit.common.ParamPaging;
 import com.agit.controller.BaseController;
 import static com.agit.controller.BaseController.VIEW;
 import com.agit.controller.mail.MailMail;
+import com.agit.controller.operator.model.AdpExpressKanbanModel;
+import com.agit.controller.operator.model.AdpLotOperatorModel;
 import com.agit.entity.JdcAdpFndapprv;
 import com.agit.entity.JdcAdpTxnLotapprv;
 import com.agit.entity.JdcAdpTxnlotbasis;
@@ -36,6 +38,18 @@ public class AdpExpressKanbanController extends BaseController {
     final static String PRIVILEDGE = "APPRV_LOT";
     private String BASE_VIEW = "06.operator/";
     private String HOME = "adpkanban-approve";
+    private String DETAIL_OTHERS = "adplotoperator-oth-detail";
+    private String HOME_MANAGER = "adplotoperator_manager";
+    private String DETAIL_MANAGER = "adplotoperator-detail";
+    private String DETAIL_CT_IN = "adplotoperator-ct-detail-in";
+    private String DETAIL_CT_OUT = "adplotoperator-ct-detail-out";
+    private String DETAIL_PREP_IN = "adplotoperator-prep-detail-in";
+    private String DETAIL_PREP_OUT = "adplotoperator-prep-detail-out";
+    private String DETAIL_ST_IN = "adplotoperator-st-detail-in";
+    private String DETAIL_ST_OUT = "adplotoperator-st-detail-out";
+    private String DETAIL_AS_IN = "adplotoperator-as-detail-in";
+    private String DETAIL_AS_OUT = "adplotoperator-as-detail-out";
+    private String EXPRESS = "adpkanban";
 
     /**
      *
@@ -452,5 +466,64 @@ public class AdpExpressKanbanController extends BaseController {
         model.addAttribute("SELECTED_MENU", MENU);
         model.addAttribute("SELECTED_SUBMENU", PRIVILEDGE);
     }
+
+        /**
+     *
+     * @param model
+     * @param session
+     * @return
+     */
+    @RequestMapping(value = "/approve-in", method = RequestMethod.POST, headers = {"content-type=application/json"})
+    public @ResponseBody
+    AjaxResponse approveIn(@RequestBody AdpExpressKanbanModel model, HttpSession session) {
+
+        adpLotStockKanbanServices.approveIn(model, getLoginSecUser(session));
+
+        return new AjaxResponse(model);
+    }
     
+        /**
+     *
+     * @param model
+     * @param session
+     * @return
+     */
+    @RequestMapping(value = "/approve-out", method = RequestMethod.POST, headers = {"content-type=application/json"})
+    public @ResponseBody
+    AjaxResponse approveOut(@RequestBody AdpExpressKanbanModel model, HttpSession session) {
+
+        adpLotStockKanbanServices.approveOut(model, getLoginSecUser(session));
+
+        return new AjaxResponse(model);
+    }
+
+    /**
+     *
+     * @param model
+     * @param session
+     * @return
+     */
+    @RequestMapping(value = "/reject-in", method = RequestMethod.POST, headers = {"content-type=application/json"})
+    public @ResponseBody
+    AjaxResponse rejectIn(@RequestBody AdpExpressKanbanModel model, HttpSession session) {
+
+        adpLotStockKanbanServices.rejectIn(model, getLoginSecUser(session));
+
+        return new AjaxResponse(model);
+    }
+
+    /**
+     *
+     * @param model
+     * @param session
+     * @return
+     */
+    @RequestMapping(value = "/reject-out", method = RequestMethod.POST, headers = {"content-type=application/json"})
+    public @ResponseBody
+    AjaxResponse rejectOut(@RequestBody AdpExpressKanbanModel model, HttpSession session) {
+
+        adpLotStockKanbanServices.rejectOut(model, getLoginSecUser(session));
+
+        return new AjaxResponse(model);
+    }
 }

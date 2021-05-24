@@ -723,7 +723,124 @@ public class AdpLotOperatorModel {
     private String poItem;
     private String poNo;
     private String departement;
-       
+    
+//    new add
+    private Long flagLabelInSize1;
+    private Long flagLabelOutSize1;
+    private Long flagLabelInSize2;
+    private Long flagLabelOutSize2;
+    private Long flagLabelInSize3;
+    private Long flagLabelOutSize3;
+    private Long flagLabelInSize4;
+    private Long flagLabelOutSize4;
+    private Long flagLabelInSize5;
+    private Long flagLabelOutSize5;
+    private Long flagLabelInSize6;
+    private Long flagLabelOutSize6;
+    private Long flagLabelInSize7;
+    private Long flagLabelOutSize7;
+    private Long flagLabelInSize8;
+    private Long flagLabelOutSize8;
+    private Long flagLabelInSize9;
+    private Long flagLabelOutSize9;
+    private Long flagLabelInSize10;
+    private Long flagLabelOutSize10;
+    private Long flagLabelInSize11;
+    private Long flagLabelOutSize11;
+    private Long flagLabelInSize12;
+    private Long flagLabelOutSize12;
+    private Long flagLabelInSize13;
+    private Long flagLabelOutSize13;
+    private Long flagLabelInSize14;
+    private Long flagLabelOutSize14;
+    private Long flagLabelInSize15;
+    private Long flagLabelOutSize15;
+    private Long flagLabelInSize16;
+    private Long flagLabelOutSize16;
+    private Long flagLabelInSize17;
+    private Long flagLabelOutSize17;
+    private Long flagLabelInSize18;
+    private Long flagLabelOutSize18;
+    private Long flagLabelInSize1T;
+    private Long flagLabelOutSize1T;
+    private Long flagLabelInSize2T;
+    private Long flagLabelOutSize2T;
+    private Long flagLabelInSize3T;
+    private Long flagLabelOutSize3T;
+    private Long flagLabelInSize4T;
+    private Long flagLabelOutSize4T;
+    private Long flagLabelInSize5T;
+    private Long flagLabelOutSize5T;
+    private Long flagLabelInSize6T;
+    private Long flagLabelOutSize6T;
+    private Long flagLabelInSize7T;
+    private Long flagLabelOutSize7T;
+    private Long flagLabelInSize8T;
+    private Long flagLabelOutSize8T;
+    private Long flagLabelInSize9T;
+    private Long flagLabelOutSize9T;
+    private Long flagLabelInSize10T;
+    private Long flagLabelOutSize10T;
+    private Long flagLabelInSize11T;
+    private Long flagLabelOutSize11T;
+    private Long flagLabelInSize12T;
+    private Long flagLabelOutSize12T;
+    private Long flagLabelInSize13T;
+    private Long flagLabelOutSize13T;
+    
+//    new add express kanban lot
+    private Long flagExCtInSize1;
+    private Long flagExCtOutSize1;
+    private Long flagExCtInSize2;
+    private Long flagExCtOutSize2;
+    private Long flagExCtInSize3;
+    private Long flagExCtOutSize3;
+    private Long flagExCtInSize4;
+    private Long flagExCtOutSize4;
+    private Long flagExCtInSize5;
+    private Long flagExCtOutSize5;
+    private Long flagExCtInSize6;
+    private Long flagExCtOutSize6;
+    private Long flagExCtInSize7;
+    private Long flagExCtOutSize7;
+    private Long flagExCtInSize8;
+    private Long flagExCtOutSize8;
+    private Long flagExCtInSize9;
+    private Long flagExCtOutSize9;
+    private Long flagExCtInSize10;
+    private Long flagExCtOutSize10;
+    private Long flagExCtInSize11;
+    private Long flagExCtOutSize11;
+    private Long flagExCtInSize12;
+    private Long flagExCtOutSize12;
+    private Long flagExCtInSize13;
+    private Long flagExCtOutSize13;
+    private Long flagExCtInSize14;
+    private Long flagExCtOutSize14;
+    private Long flagExCtInSize15;
+    private Long flagExCtOutSize15;
+    private Long flagExCtInSize16;
+    private Long flagExCtOutSize16;
+    private Long flagExCtInSize17;
+    private Long flagExCtOutSize17;
+    private Long flagExCtInSize18;
+    private Long flagExCtOutSize18;
+    private Long flagExCtInSize1T;
+    private Long flagExCtOutSize1T;
+    private Long flagExCtInSize2T;
+    private Long flagExCtOutSize2T;
+    private Long flagExCtInSize3T;
+    private Long flagExCtInSize4T;
+    private Long flagExCtInSize5T;
+    private Long flagExCtInSize6T;
+    private Long flagExCtInSize7T;
+    private Long flagExCtInSize8T;
+    private Long flagExCtInSize9T;
+    private Long flagExCtInSize10T;
+    private Long flagExCtInSize11T;
+    private Long flagExCtInSize12T;
+    private Long flagExCtInSize13T;
+          
     /**
      *
      * @return
@@ -11171,5 +11288,913 @@ public class AdpLotOperatorModel {
     public void setFlagspprepOutSize18(Long flagspprepOutSize18) {
         this.flagspprepOutSize18 = flagspprepOutSize18;
     }
+
+    public Long getFlagLabelInSize1() {
+        return flagLabelInSize1;
+    }
+
+    public void setFlagLabelInSize1(Long flagLabelInSize1) {
+        this.flagLabelInSize1 = flagLabelInSize1;
+    }
+
+    public Long getFlagLabelOutSize1() {
+        return flagLabelOutSize1;
+    }
+
+    public void setFlagLabelOutSize1(Long flagLabelOutSize1) {
+        this.flagLabelOutSize1 = flagLabelOutSize1;
+    }
+
+    public Long getFlagLabelInSize2() {
+        return flagLabelInSize2;
+    }
+
+    public void setFlagLabelInSize2(Long flagLabelInSize2) {
+        this.flagLabelInSize2 = flagLabelInSize2;
+    }
+
+    public Long getFlagLabelOutSize2() {
+        return flagLabelOutSize2;
+    }
+
+    public void setFlagLabelOutSize2(Long flagLabelOutSize2) {
+        this.flagLabelOutSize2 = flagLabelOutSize2;
+    }
+
+    public Long getFlagLabelInSize3() {
+        return flagLabelInSize3;
+    }
+
+    public void setFlagLabelInSize3(Long flagLabelInSize3) {
+        this.flagLabelInSize3 = flagLabelInSize3;
+    }
+
+    public Long getFlagLabelOutSize3() {
+        return flagLabelOutSize3;
+    }
+
+    public void setFlagLabelOutSize3(Long flagLabelOutSize3) {
+        this.flagLabelOutSize3 = flagLabelOutSize3;
+    }
+
+    public Long getFlagLabelInSize4() {
+        return flagLabelInSize4;
+    }
+
+    public void setFlagLabelInSize4(Long flagLabelInSize4) {
+        this.flagLabelInSize4 = flagLabelInSize4;
+    }
+
+    public Long getFlagLabelOutSize4() {
+        return flagLabelOutSize4;
+    }
+
+    public void setFlagLabelOutSize4(Long flagLabelOutSize4) {
+        this.flagLabelOutSize4 = flagLabelOutSize4;
+    }
+
+    public Long getFlagLabelInSize5() {
+        return flagLabelInSize5;
+    }
+
+    public void setFlagLabelInSize5(Long flagLabelInSize5) {
+        this.flagLabelInSize5 = flagLabelInSize5;
+    }
+
+    public Long getFlagLabelOutSize5() {
+        return flagLabelOutSize5;
+    }
+
+    public void setFlagLabelOutSize5(Long flagLabelOutSize5) {
+        this.flagLabelOutSize5 = flagLabelOutSize5;
+    }
+
+    public Long getFlagLabelInSize6() {
+        return flagLabelInSize6;
+    }
+
+    public void setFlagLabelInSize6(Long flagLabelInSize6) {
+        this.flagLabelInSize6 = flagLabelInSize6;
+    }
+
+    public Long getFlagLabelOutSize6() {
+        return flagLabelOutSize6;
+    }
+
+    public void setFlagLabelOutSize6(Long flagLabelOutSize6) {
+        this.flagLabelOutSize6 = flagLabelOutSize6;
+    }
+
+    public Long getFlagLabelInSize7() {
+        return flagLabelInSize7;
+    }
+
+    public void setFlagLabelInSize7(Long flagLabelInSize7) {
+        this.flagLabelInSize7 = flagLabelInSize7;
+    }
+
+    public Long getFlagLabelOutSize7() {
+        return flagLabelOutSize7;
+    }
+
+    public void setFlagLabelOutSize7(Long flagLabelOutSize7) {
+        this.flagLabelOutSize7 = flagLabelOutSize7;
+    }
+
+    public Long getFlagLabelInSize8() {
+        return flagLabelInSize8;
+    }
+
+    public void setFlagLabelInSize8(Long flagLabelInSize8) {
+        this.flagLabelInSize8 = flagLabelInSize8;
+    }
+
+    public Long getFlagLabelOutSize8() {
+        return flagLabelOutSize8;
+    }
+
+    public void setFlagLabelOutSize8(Long flagLabelOutSize8) {
+        this.flagLabelOutSize8 = flagLabelOutSize8;
+    }
+
+    public Long getFlagLabelInSize9() {
+        return flagLabelInSize9;
+    }
+
+    public void setFlagLabelInSize9(Long flagLabelInSize9) {
+        this.flagLabelInSize9 = flagLabelInSize9;
+    }
+
+    public Long getFlagLabelOutSize9() {
+        return flagLabelOutSize9;
+    }
+
+    public void setFlagLabelOutSize9(Long flagLabelOutSize9) {
+        this.flagLabelOutSize9 = flagLabelOutSize9;
+    }
+
+    public Long getFlagLabelInSize10() {
+        return flagLabelInSize10;
+    }
+
+    public void setFlagLabelInSize10(Long flagLabelInSize10) {
+        this.flagLabelInSize10 = flagLabelInSize10;
+    }
+
+    public Long getFlagLabelOutSize10() {
+        return flagLabelOutSize10;
+    }
+
+    public void setFlagLabelOutSize10(Long flagLabelOutSize10) {
+        this.flagLabelOutSize10 = flagLabelOutSize10;
+    }
+
+    public Long getFlagLabelInSize11() {
+        return flagLabelInSize11;
+    }
+
+    public void setFlagLabelInSize11(Long flagLabelInSize11) {
+        this.flagLabelInSize11 = flagLabelInSize11;
+    }
+
+    public Long getFlagLabelOutSize11() {
+        return flagLabelOutSize11;
+    }
+
+    public void setFlagLabelOutSize11(Long flagLabelOutSize11) {
+        this.flagLabelOutSize11 = flagLabelOutSize11;
+    }
+
+    public Long getFlagLabelInSize12() {
+        return flagLabelInSize12;
+    }
+
+    public void setFlagLabelInSize12(Long flagLabelInSize12) {
+        this.flagLabelInSize12 = flagLabelInSize12;
+    }
+
+    public Long getFlagLabelOutSize12() {
+        return flagLabelOutSize12;
+    }
+
+    public void setFlagLabelOutSize12(Long flagLabelOutSize12) {
+        this.flagLabelOutSize12 = flagLabelOutSize12;
+    }
+
+    public Long getFlagLabelInSize13() {
+        return flagLabelInSize13;
+    }
+
+    public void setFlagLabelInSize13(Long flagLabelInSize13) {
+        this.flagLabelInSize13 = flagLabelInSize13;
+    }
+
+    public Long getFlagLabelOutSize13() {
+        return flagLabelOutSize13;
+    }
+
+    public void setFlagLabelOutSize13(Long flagLabelOutSize13) {
+        this.flagLabelOutSize13 = flagLabelOutSize13;
+    }
+
+    public Long getFlagLabelInSize14() {
+        return flagLabelInSize14;
+    }
+
+    public void setFlagLabelInSize14(Long flagLabelInSize14) {
+        this.flagLabelInSize14 = flagLabelInSize14;
+    }
+
+    public Long getFlagLabelOutSize14() {
+        return flagLabelOutSize14;
+    }
+
+    public void setFlagLabelOutSize14(Long flagLabelOutSize14) {
+        this.flagLabelOutSize14 = flagLabelOutSize14;
+    }
+
+    public Long getFlagLabelInSize15() {
+        return flagLabelInSize15;
+    }
+
+    public void setFlagLabelInSize15(Long flagLabelInSize15) {
+        this.flagLabelInSize15 = flagLabelInSize15;
+    }
+
+    public Long getFlagLabelOutSize15() {
+        return flagLabelOutSize15;
+    }
+
+    public void setFlagLabelOutSize15(Long flagLabelOutSize15) {
+        this.flagLabelOutSize15 = flagLabelOutSize15;
+    }
+
+    public Long getFlagLabelInSize16() {
+        return flagLabelInSize16;
+    }
+
+    public void setFlagLabelInSize16(Long flagLabelInSize16) {
+        this.flagLabelInSize16 = flagLabelInSize16;
+    }
+
+    public Long getFlagLabelOutSize16() {
+        return flagLabelOutSize16;
+    }
+
+    public void setFlagLabelOutSize16(Long flagLabelOutSize16) {
+        this.flagLabelOutSize16 = flagLabelOutSize16;
+    }
+
+    public Long getFlagLabelInSize17() {
+        return flagLabelInSize17;
+    }
+
+    public void setFlagLabelInSize17(Long flagLabelInSize17) {
+        this.flagLabelInSize17 = flagLabelInSize17;
+    }
+
+    public Long getFlagLabelOutSize17() {
+        return flagLabelOutSize17;
+    }
+
+    public void setFlagLabelOutSize17(Long flagLabelOutSize17) {
+        this.flagLabelOutSize17 = flagLabelOutSize17;
+    }
+
+    public Long getFlagLabelInSize18() {
+        return flagLabelInSize18;
+    }
+
+    public void setFlagLabelInSize18(Long flagLabelInSize18) {
+        this.flagLabelInSize18 = flagLabelInSize18;
+    }
+
+    public Long getFlagLabelOutSize18() {
+        return flagLabelOutSize18;
+    }
+
+    public void setFlagLabelOutSize18(Long flagLabelOutSize18) {
+        this.flagLabelOutSize18 = flagLabelOutSize18;
+    }
+
+    public Long getFlagLabelInSize1T() {
+        return flagLabelInSize1T;
+    }
+
+    public void setFlagLabelInSize1T(Long flagLabelInSize1T) {
+        this.flagLabelInSize1T = flagLabelInSize1T;
+    }
+
+    public Long getFlagLabelOutSize1T() {
+        return flagLabelOutSize1T;
+    }
+
+    public void setFlagLabelOutSize1T(Long flagLabelOutSize1T) {
+        this.flagLabelOutSize1T = flagLabelOutSize1T;
+    }
+
+    public Long getFlagLabelInSize2T() {
+        return flagLabelInSize2T;
+    }
+
+    public void setFlagLabelInSize2T(Long flagLabelInSize2T) {
+        this.flagLabelInSize2T = flagLabelInSize2T;
+    }
+
+    public Long getFlagLabelOutSize2T() {
+        return flagLabelOutSize2T;
+    }
+
+    public void setFlagLabelOutSize2T(Long flagLabelOutSize2T) {
+        this.flagLabelOutSize2T = flagLabelOutSize2T;
+    }
+
+    public Long getFlagLabelInSize3T() {
+        return flagLabelInSize3T;
+    }
+
+    public void setFlagLabelInSize3T(Long flagLabelInSize3T) {
+        this.flagLabelInSize3T = flagLabelInSize3T;
+    }
+
+    public Long getFlagLabelOutSize3T() {
+        return flagLabelOutSize3T;
+    }
+
+    public void setFlagLabelOutSize3T(Long flagLabelOutSize3T) {
+        this.flagLabelOutSize3T = flagLabelOutSize3T;
+    }
+
+    public Long getFlagLabelInSize4T() {
+        return flagLabelInSize4T;
+    }
+
+    public void setFlagLabelInSize4T(Long flagLabelInSize4T) {
+        this.flagLabelInSize4T = flagLabelInSize4T;
+    }
+
+    public Long getFlagLabelOutSize4T() {
+        return flagLabelOutSize4T;
+    }
+
+    public void setFlagLabelOutSize4T(Long flagLabelOutSize4T) {
+        this.flagLabelOutSize4T = flagLabelOutSize4T;
+    }
+
+    public Long getFlagLabelInSize5T() {
+        return flagLabelInSize5T;
+    }
+
+    public void setFlagLabelInSize5T(Long flagLabelInSize5T) {
+        this.flagLabelInSize5T = flagLabelInSize5T;
+    }
+
+    public Long getFlagLabelOutSize5T() {
+        return flagLabelOutSize5T;
+    }
+
+    public void setFlagLabelOutSize5T(Long flagLabelOutSize5T) {
+        this.flagLabelOutSize5T = flagLabelOutSize5T;
+    }
+
+    public Long getFlagLabelInSize6T() {
+        return flagLabelInSize6T;
+    }
+
+    public void setFlagLabelInSize6T(Long flagLabelInSize6T) {
+        this.flagLabelInSize6T = flagLabelInSize6T;
+    }
+
+    public Long getFlagLabelOutSize6T() {
+        return flagLabelOutSize6T;
+    }
+
+    public void setFlagLabelOutSize6T(Long flagLabelOutSize6T) {
+        this.flagLabelOutSize6T = flagLabelOutSize6T;
+    }
+
+    public Long getFlagLabelInSize7T() {
+        return flagLabelInSize7T;
+    }
+
+    public void setFlagLabelInSize7T(Long flagLabelInSize7T) {
+        this.flagLabelInSize7T = flagLabelInSize7T;
+    }
+
+    public Long getFlagLabelOutSize7T() {
+        return flagLabelOutSize7T;
+    }
+
+    public void setFlagLabelOutSize7T(Long flagLabelOutSize7T) {
+        this.flagLabelOutSize7T = flagLabelOutSize7T;
+    }
+
+    public Long getFlagLabelInSize8T() {
+        return flagLabelInSize8T;
+    }
+
+    public void setFlagLabelInSize8T(Long flagLabelInSize8T) {
+        this.flagLabelInSize8T = flagLabelInSize8T;
+    }
+
+    public Long getFlagLabelOutSize8T() {
+        return flagLabelOutSize8T;
+    }
+
+    public void setFlagLabelOutSize8T(Long flagLabelOutSize8T) {
+        this.flagLabelOutSize8T = flagLabelOutSize8T;
+    }
+
+    public Long getFlagLabelInSize9T() {
+        return flagLabelInSize9T;
+    }
+
+    public void setFlagLabelInSize9T(Long flagLabelInSize9T) {
+        this.flagLabelInSize9T = flagLabelInSize9T;
+    }
+
+    public Long getFlagLabelOutSize9T() {
+        return flagLabelOutSize9T;
+    }
+
+    public void setFlagLabelOutSize9T(Long flagLabelOutSize9T) {
+        this.flagLabelOutSize9T = flagLabelOutSize9T;
+    }
+
+    public Long getFlagLabelInSize10T() {
+        return flagLabelInSize10T;
+    }
+
+    public void setFlagLabelInSize10T(Long flagLabelInSize10T) {
+        this.flagLabelInSize10T = flagLabelInSize10T;
+    }
+
+    public Long getFlagLabelOutSize10T() {
+        return flagLabelOutSize10T;
+    }
+
+    public void setFlagLabelOutSize10T(Long flagLabelOutSize10T) {
+        this.flagLabelOutSize10T = flagLabelOutSize10T;
+    }
+
+    public Long getFlagLabelInSize11T() {
+        return flagLabelInSize11T;
+    }
+
+    public void setFlagLabelInSize11T(Long flagLabelInSize11T) {
+        this.flagLabelInSize11T = flagLabelInSize11T;
+    }
+
+    public Long getFlagLabelOutSize11T() {
+        return flagLabelOutSize11T;
+    }
+
+    public void setFlagLabelOutSize11T(Long flagLabelOutSize11T) {
+        this.flagLabelOutSize11T = flagLabelOutSize11T;
+    }
+
+    public Long getFlagLabelInSize12T() {
+        return flagLabelInSize12T;
+    }
+
+    public void setFlagLabelInSize12T(Long flagLabelInSize12T) {
+        this.flagLabelInSize12T = flagLabelInSize12T;
+    }
+
+    public Long getFlagLabelOutSize12T() {
+        return flagLabelOutSize12T;
+    }
+
+    public void setFlagLabelOutSize12T(Long flagLabelOutSize12T) {
+        this.flagLabelOutSize12T = flagLabelOutSize12T;
+    }
+
+    public Long getFlagLabelInSize13T() {
+        return flagLabelInSize13T;
+    }
+
+    public void setFlagLabelInSize13T(Long flagLabelInSize13T) {
+        this.flagLabelInSize13T = flagLabelInSize13T;
+    }
+
+    public Long getFlagLabelOutSize13T() {
+        return flagLabelOutSize13T;
+    }
+
+    public void setFlagLabelOutSize13T(Long flagLabelOutSize13T) {
+        this.flagLabelOutSize13T = flagLabelOutSize13T;
+    }
+
+    public Long getFlagExCtInSize1() {
+        return flagExCtInSize1;
+    }
+
+    public void setFlagExCtInSize1(Long flagExCtInSize1) {
+        this.flagExCtInSize1 = flagExCtInSize1;
+    }
+
+    public Long getFlagExCtOutSize1() {
+        return flagExCtOutSize1;
+    }
+
+    public void setFlagExCtOutSize1(Long flagExCtOutSize1) {
+        this.flagExCtOutSize1 = flagExCtOutSize1;
+    }
+
+    public Long getFlagExCtInSize2() {
+        return flagExCtInSize2;
+    }
+
+    public void setFlagExCtInSize2(Long flagExCtInSize2) {
+        this.flagExCtInSize2 = flagExCtInSize2;
+    }
+
+    public Long getFlagExCtOutSize2() {
+        return flagExCtOutSize2;
+    }
+
+    public void setFlagExCtOutSize2(Long flagExCtOutSize2) {
+        this.flagExCtOutSize2 = flagExCtOutSize2;
+    }
+
+    public Long getFlagExCtInSize3() {
+        return flagExCtInSize3;
+    }
+
+    public void setFlagExCtInSize3(Long flagExCtInSize3) {
+        this.flagExCtInSize3 = flagExCtInSize3;
+    }
+
+    public Long getFlagExCtOutSize3() {
+        return flagExCtOutSize3;
+    }
+
+    public void setFlagExCtOutSize3(Long flagExCtOutSize3) {
+        this.flagExCtOutSize3 = flagExCtOutSize3;
+    }
+
+    public Long getFlagExCtInSize4() {
+        return flagExCtInSize4;
+    }
+
+    public void setFlagExCtInSize4(Long flagExCtInSize4) {
+        this.flagExCtInSize4 = flagExCtInSize4;
+    }
+
+    public Long getFlagExCtOutSize4() {
+        return flagExCtOutSize4;
+    }
+
+    public void setFlagExCtOutSize4(Long flagExCtOutSize4) {
+        this.flagExCtOutSize4 = flagExCtOutSize4;
+    }
+
+    public Long getFlagExCtInSize5() {
+        return flagExCtInSize5;
+    }
+
+    public void setFlagExCtInSize5(Long flagExCtInSize5) {
+        this.flagExCtInSize5 = flagExCtInSize5;
+    }
+
+    public Long getFlagExCtOutSize5() {
+        return flagExCtOutSize5;
+    }
+
+    public void setFlagExCtOutSize5(Long flagExCtOutSize5) {
+        this.flagExCtOutSize5 = flagExCtOutSize5;
+    }
+
+    public Long getFlagExCtInSize6() {
+        return flagExCtInSize6;
+    }
+
+    public void setFlagExCtInSize6(Long flagExCtInSize6) {
+        this.flagExCtInSize6 = flagExCtInSize6;
+    }
+
+    public Long getFlagExCtOutSize6() {
+        return flagExCtOutSize6;
+    }
+
+    public void setFlagExCtOutSize6(Long flagExCtOutSize6) {
+        this.flagExCtOutSize6 = flagExCtOutSize6;
+    }
+
+    public Long getFlagExCtInSize7() {
+        return flagExCtInSize7;
+    }
+
+    public void setFlagExCtInSize7(Long flagExCtInSize7) {
+        this.flagExCtInSize7 = flagExCtInSize7;
+    }
+
+    public Long getFlagExCtOutSize7() {
+        return flagExCtOutSize7;
+    }
+
+    public void setFlagExCtOutSize7(Long flagExCtOutSize7) {
+        this.flagExCtOutSize7 = flagExCtOutSize7;
+    }
+
+    public Long getFlagExCtInSize8() {
+        return flagExCtInSize8;
+    }
+
+    public void setFlagExCtInSize8(Long flagExCtInSize8) {
+        this.flagExCtInSize8 = flagExCtInSize8;
+    }
+
+    public Long getFlagExCtOutSize8() {
+        return flagExCtOutSize8;
+    }
+
+    public void setFlagExCtOutSize8(Long flagExCtOutSize8) {
+        this.flagExCtOutSize8 = flagExCtOutSize8;
+    }
+
+    public Long getFlagExCtInSize9() {
+        return flagExCtInSize9;
+    }
+
+    public void setFlagExCtInSize9(Long flagExCtInSize9) {
+        this.flagExCtInSize9 = flagExCtInSize9;
+    }
+
+    public Long getFlagExCtOutSize9() {
+        return flagExCtOutSize9;
+    }
+
+    public void setFlagExCtOutSize9(Long flagExCtOutSize9) {
+        this.flagExCtOutSize9 = flagExCtOutSize9;
+    }
+
+    public Long getFlagExCtInSize10() {
+        return flagExCtInSize10;
+    }
+
+    public void setFlagExCtInSize10(Long flagExCtInSize10) {
+        this.flagExCtInSize10 = flagExCtInSize10;
+    }
+
+    public Long getFlagExCtOutSize10() {
+        return flagExCtOutSize10;
+    }
+
+    public void setFlagExCtOutSize10(Long flagExCtOutSize10) {
+        this.flagExCtOutSize10 = flagExCtOutSize10;
+    }
+
+    public Long getFlagExCtInSize11() {
+        return flagExCtInSize11;
+    }
+
+    public void setFlagExCtInSize11(Long flagExCtInSize11) {
+        this.flagExCtInSize11 = flagExCtInSize11;
+    }
+
+    public Long getFlagExCtOutSize11() {
+        return flagExCtOutSize11;
+    }
+
+    public void setFlagExCtOutSize11(Long flagExCtOutSize11) {
+        this.flagExCtOutSize11 = flagExCtOutSize11;
+    }
+
+    public Long getFlagExCtInSize12() {
+        return flagExCtInSize12;
+    }
+
+    public void setFlagExCtInSize12(Long flagExCtInSize12) {
+        this.flagExCtInSize12 = flagExCtInSize12;
+    }
+
+    public Long getFlagExCtOutSize12() {
+        return flagExCtOutSize12;
+    }
+
+    public void setFlagExCtOutSize12(Long flagExCtOutSize12) {
+        this.flagExCtOutSize12 = flagExCtOutSize12;
+    }
+
+    public Long getFlagExCtInSize13() {
+        return flagExCtInSize13;
+    }
+
+    public void setFlagExCtInSize13(Long flagExCtInSize13) {
+        this.flagExCtInSize13 = flagExCtInSize13;
+    }
+
+    public Long getFlagExCtOutSize13() {
+        return flagExCtOutSize13;
+    }
+
+    public void setFlagExCtOutSize13(Long flagExCtOutSize13) {
+        this.flagExCtOutSize13 = flagExCtOutSize13;
+    }
+
+    public Long getFlagExCtInSize14() {
+        return flagExCtInSize14;
+    }
+
+    public void setFlagExCtInSize14(Long flagExCtInSize14) {
+        this.flagExCtInSize14 = flagExCtInSize14;
+    }
+
+    public Long getFlagExCtOutSize14() {
+        return flagExCtOutSize14;
+    }
+
+    public void setFlagExCtOutSize14(Long flagExCtOutSize14) {
+        this.flagExCtOutSize14 = flagExCtOutSize14;
+    }
+
+    public Long getFlagExCtInSize15() {
+        return flagExCtInSize15;
+    }
+
+    public void setFlagExCtInSize15(Long flagExCtInSize15) {
+        this.flagExCtInSize15 = flagExCtInSize15;
+    }
+
+    public Long getFlagExCtOutSize15() {
+        return flagExCtOutSize15;
+    }
+
+    public void setFlagExCtOutSize15(Long flagExCtOutSize15) {
+        this.flagExCtOutSize15 = flagExCtOutSize15;
+    }
+
+    public Long getFlagExCtInSize16() {
+        return flagExCtInSize16;
+    }
+
+    public void setFlagExCtInSize16(Long flagExCtInSize16) {
+        this.flagExCtInSize16 = flagExCtInSize16;
+    }
+
+    public Long getFlagExCtOutSize16() {
+        return flagExCtOutSize16;
+    }
+
+    public void setFlagExCtOutSize16(Long flagExCtOutSize16) {
+        this.flagExCtOutSize16 = flagExCtOutSize16;
+    }
+
+    public Long getFlagExCtInSize17() {
+        return flagExCtInSize17;
+    }
+
+    public void setFlagExCtInSize17(Long flagExCtInSize17) {
+        this.flagExCtInSize17 = flagExCtInSize17;
+    }
+
+    public Long getFlagExCtOutSize17() {
+        return flagExCtOutSize17;
+    }
+
+    public void setFlagExCtOutSize17(Long flagExCtOutSize17) {
+        this.flagExCtOutSize17 = flagExCtOutSize17;
+    }
+
+    public Long getFlagExCtInSize18() {
+        return flagExCtInSize18;
+    }
+
+    public void setFlagExCtInSize18(Long flagExCtInSize18) {
+        this.flagExCtInSize18 = flagExCtInSize18;
+    }
+
+    public Long getFlagExCtOutSize18() {
+        return flagExCtOutSize18;
+    }
+
+    public void setFlagExCtOutSize18(Long flagExCtOutSize18) {
+        this.flagExCtOutSize18 = flagExCtOutSize18;
+    }
+
+    public Long getFlagExCtInSize1T() {
+        return flagExCtInSize1T;
+    }
+
+    public void setFlagExCtInSize1T(Long flagExCtInSize1T) {
+        this.flagExCtInSize1T = flagExCtInSize1T;
+    }
+
+    public Long getFlagExCtOutSize1T() {
+        return flagExCtOutSize1T;
+    }
+
+    public void setFlagExCtOutSize1T(Long flagExCtOutSize1T) {
+        this.flagExCtOutSize1T = flagExCtOutSize1T;
+    }
+
+    public Long getFlagExCtInSize2T() {
+        return flagExCtInSize2T;
+    }
+
+    public void setFlagExCtInSize2T(Long flagExCtInSize2T) {
+        this.flagExCtInSize2T = flagExCtInSize2T;
+    }
+
+    public Long getFlagExCtOutSize2T() {
+        return flagExCtOutSize2T;
+    }
+
+    public void setFlagExCtOutSize2T(Long flagExCtOutSize2T) {
+        this.flagExCtOutSize2T = flagExCtOutSize2T;
+    }
+
+    public Long getFlagExCtInSize3T() {
+        return flagExCtInSize3T;
+    }
+
+    public void setFlagExCtInSize3T(Long flagExCtInSize3T) {
+        this.flagExCtInSize3T = flagExCtInSize3T;
+    }
+
+    public Long getFlagExCtInSize4T() {
+        return flagExCtInSize4T;
+    }
+
+    public void setFlagExCtInSize4T(Long flagExCtInSize4T) {
+        this.flagExCtInSize4T = flagExCtInSize4T;
+    }
+
+    public Long getFlagExCtInSize5T() {
+        return flagExCtInSize5T;
+    }
+
+    public void setFlagExCtInSize5T(Long flagExCtInSize5T) {
+        this.flagExCtInSize5T = flagExCtInSize5T;
+    }
+
+    public Long getFlagExCtInSize6T() {
+        return flagExCtInSize6T;
+    }
+
+    public void setFlagExCtInSize6T(Long flagExCtInSize6T) {
+        this.flagExCtInSize6T = flagExCtInSize6T;
+    }
+
+    public Long getFlagExCtInSize7T() {
+        return flagExCtInSize7T;
+    }
+
+    public void setFlagExCtInSize7T(Long flagExCtInSize7T) {
+        this.flagExCtInSize7T = flagExCtInSize7T;
+    }
+
+    public Long getFlagExCtInSize8T() {
+        return flagExCtInSize8T;
+    }
+
+    public void setFlagExCtInSize8T(Long flagExCtInSize8T) {
+        this.flagExCtInSize8T = flagExCtInSize8T;
+    }
+
+    public Long getFlagExCtInSize9T() {
+        return flagExCtInSize9T;
+    }
+
+    public void setFlagExCtInSize9T(Long flagExCtInSize9T) {
+        this.flagExCtInSize9T = flagExCtInSize9T;
+    }
+
+    public Long getFlagExCtInSize10T() {
+        return flagExCtInSize10T;
+    }
+
+    public void setFlagExCtInSize10T(Long flagExCtInSize10T) {
+        this.flagExCtInSize10T = flagExCtInSize10T;
+    }
+
+    public Long getFlagExCtInSize11T() {
+        return flagExCtInSize11T;
+    }
+
+    public void setFlagExCtInSize11T(Long flagExCtInSize11T) {
+        this.flagExCtInSize11T = flagExCtInSize11T;
+    }
+
+    public Long getFlagExCtInSize12T() {
+        return flagExCtInSize12T;
+    }
+
+    public void setFlagExCtInSize12T(Long flagExCtInSize12T) {
+        this.flagExCtInSize12T = flagExCtInSize12T;
+    }
+
+    public Long getFlagExCtInSize13T() {
+        return flagExCtInSize13T;
+    }
+
+    public void setFlagExCtInSize13T(Long flagExCtInSize13T) {
+        this.flagExCtInSize13T = flagExCtInSize13T;
+    }
     
+    
+    
+    
+   
 }

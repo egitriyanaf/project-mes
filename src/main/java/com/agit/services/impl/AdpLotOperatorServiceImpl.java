@@ -4860,5 +4860,5 @@ public class AdpLotOperatorServiceImpl extends AdpSimpleServiceImpl<JdcAdpTxnlot
         model.setId(model.getId());
 
     }
-
+    
 }

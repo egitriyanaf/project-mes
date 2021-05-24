@@ -280,7 +280,7 @@ public class AdpLotOperatorController extends BaseController {
 
         return new AjaxResponse(model);
     }
-
+    
     /**
      *
      * @param model

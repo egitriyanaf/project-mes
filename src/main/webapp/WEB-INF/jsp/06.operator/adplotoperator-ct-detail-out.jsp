@@ -83,223 +83,9 @@
                          {
                             class: "text-center",
                             "mRender": function (data, type, row) {
-//                                var list = '<td><input type="hidden" class="linesClass" name-data="id" name="lines[' + rowindex + '][id]" value="' + row.id + '" /></td>';
-//                                var data = '<input class="tableSelected" disabled type="checkbox" value="' + row.id + '"/>';
-//                                return list + data;
-                                if (row.size1 && row.size2 && row.size3 && row.size4 && row.size5 && row.size6 && row.size7 && row.size8 && row.size9 && row.size10 && row.size11 && row.size12 && row.size13 && row.size14 && row.size15 && row.size16 && row.size17 && row.size18 && row.size1T && row.size2T && row.size3T && row.size4T && row.size5T && row.size6T && row.size7T && row.size8T && row.size9T && row.size10T && row.size11T && row.size12T && row.size13T === null) {
-                                    return  '<td class="id">' + "" + '</td>';
-                                } 
-                                else if ((row.flagCtInSize1 === 1 && row.flagCtOutSize1 === 1) || (row.flagCtInSize2 === 1 && row.flagCtOutSize2 === 1) || (row.flagCtInSize3 === 1 && row.flagCtOutSize3 === 1) || (row.flagCtInSize4 === 1 && row.flagCtOutSize4 === 1) || (row.flagCtInSize5 === 1 && row.flagCtOutSize5 === 1) || (row.flagCtInSize6 === 1 && row.flagCtOutSize6 === 1) || (row.flagCtInSize7 === 1 && row.flagCtOutSize7 === 1) || (row.flagCtInSize8 === 1 && row.flagCtOutSize8 === 1) || (row.flagCtInSize9 === 1 && row.flagCtOutSize9 === 1)
-                                        || (row.flagCtInSize10 === 1 && row.flagCtOutSize10 === 1) || (row.flagCtInSize11 === 1 && row.flagCtOutSize11 === 1) || (row.flagCtInSize12 === 1 && row.flagCtOutSize12 === 1) || (row.flagCtInSize13 === 1 && row.flagCtOutSize13 === 1 ) || (row.flagCtInSize14 === 1 && row.flagCtOutSize14 === 1 ) || (row.flagCtInSize15 === 1 && row.flagCtOutSize15 === 1 ) || (row.flagCtInSize16 === 1 && row.flagCtOutSize16 === 1 ) || (row.flagCtInSize17 === 1 && row.flagCtOutSize17 === 1 ) || (row.flagCtInSize18 === 1 && row.flagCtOutSize18 === 1 )
-                                        || (row.flagCtInSize1T === 1 && row.flagCtOutSize1T === 1 ) || (row.flagCtInSize2T === 1 && row.flagCtOutSize2T === 1 ) || (row.flagCtInSize3T === 1 && row.flagCtOutSize3T === 1 ) || (row.flagCtInSize4T === 1 && row.flagCtOutSize4T === 1 ) || (row.flagCtInSize5T === 1 && row.flagCtOutSize5T === 1 ) || (row.flagCtInSize6T === 1 && row.flagCtOutSize6T === 1 ) || (row.flagCtInSize7T === 1 && row.flagCtOutSize7T === 1 ) || (row.flagCtInSize8T === 1 && row.flagCtOutSize8T === 1 ) || (row.flagCtInSize9T === 1 && row.flagCtOutSize9T === 1 ) || (row.flagCtInSize10T === 1 && row.flagCtOutSize10T === 1 ) || (row.flagCtInSize11T === 1 && row.flagCtOutSize11T === 1 ) || (row.flagCtInSize12T === 1 && row.flagCtOutSize12T === 1 ) || (row.flagCtInSize13T === 1 && row.flagCtOutSize13T === 1 )){
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-reject" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '" size17 = "' + row.size17 + '" size18 = "' + row.size18 + '" size1T = "' + row.size1T + '" size2T = "' + row.size2T + '" size3T = "' + row.size3T + '" size4T = "' + row.size4T + '" size5T = "' + row.size5T + '" size6T = "' + row.size6T + '" size7T = "' + row.size7T + '" size8T = "' + row.size8T + '" size9T = "' + row.size9T + '" size10T = "' + row.size10T + '" size11T = "' + row.size11T + '" size12T = "' + row.size12T + '" size13T = "' + row.size13T + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-warning"><i class="fa fa-times"></i></span></a>';
-                                }
-                                
-                                
-                                
-                                if (row.flagCtInSize1 === 1 && row.flagCtInSize2 === 1 && row.flagCtInSize3 === 1 && row.flagCtInSize4 === 1 && row.flagCtInSize5 === 1 && row.flagCtInSize6 === 1 && row.flagCtInSize7 === 1 && row.flagCtInSize8 === 1 && row.flagCtInSize9 === 1 && row.flagCtInSize10 === 1 && row.flagCtInSize11 === 1 && row.flagCtInSize12 === 1 && row.flagCtInSize13 === 1 && row.flagCtInSize14 === 1 && row.flagCtInSize15 === 1 && row.flagCtInSize16 === 1 && row.flagCtInSize17 === 1 && row.flagCtInSize18 === 1 && row.flagCtInSize1T === 1 && row.flagCtInSize2T === 1 && row.flagCtInSize3T === 1 && row.flagCtInSize4T === 1 && row.flagCtInSize5T === 1 && row.flagCtInSize6T === 1 && row.flagCtInSize7T === 1 && row.flagCtInSize8T === 1 && row.flagCtInSize9T === 1 && row.flagCtInSize10T === 1 && row.flagCtInSize11T === 1 && row.flagCtInSize12T === 1 && row.flagCtInSize13T === 1 ) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '" size17 = "' + row.size17 + '" size18 = "' + row.size18 + '" size1T = "' + row.size1T + '" size2T = "' + row.size2T + '" size3T = "' + row.size3T + '" size4T = "' + row.size4T + '" size5T = "' + row.size5T + '" size6T = "' + row.size6T + '" size7T = "' + row.size7T + '" size8T = "' + row.size8T + '" size9T = "' + row.size9T + '" size10T = "' + row.size10T + '" size11T = "' + row.size11T + '" size12T = "' + row.size12T + '" size13T = "' + row.size13T + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                if (row.flagCtInSize1 === 1 && row.flagCtInSize2 === 1 && row.flagCtInSize3 === 1 && row.flagCtInSize4 === 1 && row.flagCtInSize5 === 1 && row.flagCtInSize6 === 1 && row.flagCtInSize7 === 1 && row.flagCtInSize8 === 1 && row.flagCtInSize9 === 1 && row.flagCtInSize10 === 1 && row.flagCtInSize11 === 1 && row.flagCtInSize12 === 1 && row.flagCtInSize13 === 1 && row.flagCtInSize14 === 1 && row.flagCtInSize15 === 1 && row.flagCtInSize16 === 1 && row.flagCtInSize17 === 1 && row.flagCtInSize18 === 1 && row.flagCtInSize1T === 1 && row.flagCtInSize2T === 1 && row.flagCtInSize3T === 1 && row.flagCtInSize4T === 1 && row.flagCtInSize5T === 1 && row.flagCtInSize6T === 1 && row.flagCtInSize7T === 1 && row.flagCtInSize8T === 1 && row.flagCtInSize9T === 1 && row.flagCtInSize10T === 1 && row.flagCtInSize11T === 1 && row.flagCtInSize12T === 1 ) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '" size17 = "' + row.size17 + '" size18 = "' + row.size18 + '" size1T = "' + row.size1T + '" size2T = "' + row.size2T + '" size3T = "' + row.size3T + '" size4T = "' + row.size4T + '" size5T = "' + row.size5T + '" size6T = "' + row.size6T + '" size7T = "' + row.size7T + '" size8T = "' + row.size8T + '" size9T = "' + row.size9T + '" size10T = "' + row.size10T + '" size11T = "' + row.size11T + '" size12T = "' + row.size12T + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                if (row.flagCtInSize1 === 1 && row.flagCtInSize2 === 1 && row.flagCtInSize3 === 1 && row.flagCtInSize4 === 1 && row.flagCtInSize5 === 1 && row.flagCtInSize6 === 1 && row.flagCtInSize7 === 1 && row.flagCtInSize8 === 1 && row.flagCtInSize9 === 1 && row.flagCtInSize10 === 1 && row.flagCtInSize11 === 1 && row.flagCtInSize12 === 1 && row.flagCtInSize13 === 1 && row.flagCtInSize14 === 1 && row.flagCtInSize15 === 1 && row.flagCtInSize16 === 1 && row.flagCtInSize17 === 1 && row.flagCtInSize18 === 1 && row.flagCtInSize1T === 1 && row.flagCtInSize2T === 1 && row.flagCtInSize3T === 1 && row.flagCtInSize4T === 1 && row.flagCtInSize5T === 1 && row.flagCtInSize6T === 1 && row.flagCtInSize7T === 1 && row.flagCtInSize8T === 1 && row.flagCtInSize9T === 1 && row.flagCtInSize10T === 1 && row.flagCtInSize11T === 1 ) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '" size17 = "' + row.size17 + '" size18 = "' + row.size18 + '" size1T = "' + row.size1T + '" size2T = "' + row.size2T + '" size3T = "' + row.size3T + '" size4T = "' + row.size4T + '" size5T = "' + row.size5T + '" size6T = "' + row.size6T + '" size7T = "' + row.size7T + '" size8T = "' + row.size8T + '" size9T = "' + row.size9T + '" size10T = "' + row.size10T + '" size11T = "' + row.size11T + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                if (row.flagCtInSize1 === 1 && row.flagCtInSize2 === 1 && row.flagCtInSize3 === 1 && row.flagCtInSize4 === 1 && row.flagCtInSize5 === 1 && row.flagCtInSize6 === 1 && row.flagCtInSize7 === 1 && row.flagCtInSize8 === 1 && row.flagCtInSize9 === 1 && row.flagCtInSize10 === 1 && row.flagCtInSize11 === 1 && row.flagCtInSize12 === 1 && row.flagCtInSize13 === 1 && row.flagCtInSize14 === 1 && row.flagCtInSize15 === 1 && row.flagCtInSize16 === 1 && row.flagCtInSize17 === 1 && row.flagCtInSize18 === 1 && row.flagCtInSize1T === 1 && row.flagCtInSize2T === 1 && row.flagCtInSize3T === 1 && row.flagCtInSize4T === 1 && row.flagCtInSize5T === 1 && row.flagCtInSize6T === 1 && row.flagCtInSize7T === 1 && row.flagCtInSize8T === 1 && row.flagCtInSize9T === 1 && row.flagCtInSize10T === 1 ) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '" size17 = "' + row.size17 + '" size18 = "' + row.size18 + '" size1T = "' + row.size1T + '" size2T = "' + row.size2T + '" size3T = "' + row.size3T + '" size4T = "' + row.size4T + '" size5T = "' + row.size5T + '" size6T = "' + row.size6T + '" size7T = "' + row.size7T + '" size8T = "' + row.size8T + '" size9T = "' + row.size9T + '" size10T = "' + row.size10T + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                if (row.flagCtInSize1 === 1 && row.flagCtInSize2 === 1 && row.flagCtInSize3 === 1 && row.flagCtInSize4 === 1 && row.flagCtInSize5 === 1 && row.flagCtInSize6 === 1 && row.flagCtInSize7 === 1 && row.flagCtInSize8 === 1 && row.flagCtInSize9 === 1 && row.flagCtInSize10 === 1 && row.flagCtInSize11 === 1 && row.flagCtInSize12 === 1 && row.flagCtInSize13 === 1 && row.flagCtInSize14 === 1 && row.flagCtInSize15 === 1 && row.flagCtInSize16 === 1 && row.flagCtInSize17 === 1 && row.flagCtInSize18 === 1 && row.flagCtInSize1T === 1 && row.flagCtInSize2T === 1 && row.flagCtInSize3T === 1 && row.flagCtInSize4T === 1 && row.flagCtInSize5T === 1 && row.flagCtInSize6T === 1 && row.flagCtInSize7T === 1 && row.flagCtInSize8T === 1 && row.flagCtInSize9T === 1 ) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '" size17 = "' + row.size17 + '" size18 = "' + row.size18 + '" size1T = "' + row.size1T + '" size2T = "' + row.size2T + '" size3T = "' + row.size3T + '" size4T = "' + row.size4T + '" size5T = "' + row.size5T + '" size6T = "' + row.size6T + '" size7T = "' + row.size7T + '" size8T = "' + row.size8T + '" size9T = "' + row.size9T + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                if (row.flagCtInSize1 === 1 && row.flagCtInSize2 === 1 && row.flagCtInSize3 === 1 && row.flagCtInSize4 === 1 && row.flagCtInSize5 === 1 && row.flagCtInSize6 === 1 && row.flagCtInSize7 === 1 && row.flagCtInSize8 === 1 && row.flagCtInSize9 === 1 && row.flagCtInSize10 === 1 && row.flagCtInSize11 === 1 && row.flagCtInSize12 === 1 && row.flagCtInSize13 === 1 && row.flagCtInSize14 === 1 && row.flagCtInSize15 === 1 && row.flagCtInSize16 === 1 && row.flagCtInSize17 === 1 && row.flagCtInSize18 === 1 && row.flagCtInSize1T === 1 && row.flagCtInSize2T === 1 && row.flagCtInSize3T === 1 && row.flagCtInSize4T === 1 && row.flagCtInSize5T === 1 && row.flagCtInSize6T === 1 && row.flagCtInSize7T === 1 && row.flagCtInSize8T === 1 ) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '" size17 = "' + row.size17 + '" size18 = "' + row.size18 + '" size1T = "' + row.size1T + '" size2T = "' + row.size2T + '" size3T = "' + row.size3T + '" size4T = "' + row.size4T + '" size5T = "' + row.size5T + '" size6T = "' + row.size6T + '" size7T = "' + row.size7T + '" size8T = "' + row.size8T + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                if (row.flagCtInSize1 === 1 && row.flagCtInSize2 === 1 && row.flagCtInSize3 === 1 && row.flagCtInSize4 === 1 && row.flagCtInSize5 === 1 && row.flagCtInSize6 === 1 && row.flagCtInSize7 === 1 && row.flagCtInSize8 === 1 && row.flagCtInSize9 === 1 && row.flagCtInSize10 === 1 && row.flagCtInSize11 === 1 && row.flagCtInSize12 === 1 && row.flagCtInSize13 === 1 && row.flagCtInSize14 === 1 && row.flagCtInSize15 === 1 && row.flagCtInSize16 === 1 && row.flagCtInSize17 === 1 && row.flagCtInSize18 === 1 && row.flagCtInSize1T === 1 && row.flagCtInSize2T === 1 && row.flagCtInSize3T === 1 && row.flagCtInSize4T === 1 && row.flagCtInSize5T === 1 && row.flagCtInSize6T === 1 && row.flagCtInSize7T === 1 ) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '" size17 = "' + row.size17 + '" size18 = "' + row.size18 + '" size1T = "' + row.size1T + '" size2T = "' + row.size2T + '" size3T = "' + row.size3T + '" size4T = "' + row.size4T + '" size5T = "' + row.size5T + '" size6T = "' + row.size6T + '" size7T = "' + row.size7T + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                if (row.flagCtInSize1 === 1 && row.flagCtInSize2 === 1 && row.flagCtInSize3 === 1 && row.flagCtInSize4 === 1 && row.flagCtInSize5 === 1 && row.flagCtInSize6 === 1 && row.flagCtInSize7 === 1 && row.flagCtInSize8 === 1 && row.flagCtInSize9 === 1 && row.flagCtInSize10 === 1 && row.flagCtInSize11 === 1 && row.flagCtInSize12 === 1 && row.flagCtInSize13 === 1 && row.flagCtInSize14 === 1 && row.flagCtInSize15 === 1 && row.flagCtInSize16 === 1 && row.flagCtInSize17 === 1 && row.flagCtInSize18 === 1 && row.flagCtInSize1T === 1 && row.flagCtInSize2T === 1 && row.flagCtInSize3T === 1 && row.flagCtInSize4T === 1 && row.flagCtInSize5T === 1 && row.flagCtInSize6T === 1) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '" size17 = "' + row.size17 + '" size18 = "' + row.size18 + '" size1T = "' + row.size1T + '" size2T = "' + row.size2T + '" size3T = "' + row.size3T + '" size4T = "' + row.size4T + '" size5T = "' + row.size5T + '" size6T = "' + row.size6T + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                if (row.flagCtInSize1 === 1 && row.flagCtInSize2 === 1 && row.flagCtInSize3 === 1 && row.flagCtInSize4 === 1 && row.flagCtInSize5 === 1 && row.flagCtInSize6 === 1 && row.flagCtInSize7 === 1 && row.flagCtInSize8 === 1 && row.flagCtInSize9 === 1 && row.flagCtInSize10 === 1 && row.flagCtInSize11 === 1 && row.flagCtInSize12 === 1 && row.flagCtInSize13 === 1 && row.flagCtInSize14 === 1 && row.flagCtInSize15 === 1 && row.flagCtInSize16 === 1 && row.flagCtInSize17 === 1 && row.flagCtInSize18 === 1 && row.flagCtInSize1T === 1 && row.flagCtInSize2T === 1 && row.flagCtInSize3T === 1 && row.flagCtInSize4T === 1 && row.flagCtInSize5T === 1) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '" size17 = "' + row.size17 + '" size18 = "' + row.size18 + '" size1T = "' + row.size1T + '" size2T = "' + row.size2T + '" size3T = "' + row.size3T + '" size4T = "' + row.size4T + '" size5T = "' + row.size5T + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                if (row.flagCtInSize1 === 1 && row.flagCtInSize2 === 1 && row.flagCtInSize3 === 1 && row.flagCtInSize4 === 1 && row.flagCtInSize5 === 1 && row.flagCtInSize6 === 1 && row.flagCtInSize7 === 1 && row.flagCtInSize8 === 1 && row.flagCtInSize9 === 1 && row.flagCtInSize10 === 1 && row.flagCtInSize11 === 1 && row.flagCtInSize12 === 1 && row.flagCtInSize13 === 1 && row.flagCtInSize14 === 1 && row.flagCtInSize15 === 1 && row.flagCtInSize16 === 1 && row.flagCtInSize17 === 1 && row.flagCtInSize18 === 1 && row.flagCtInSize1T === 1 && row.flagCtInSize2T === 1 && row.flagCtInSize3T === 1 && row.flagCtInSize4T === 1) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '" size17 = "' + row.size17 + '" size18 = "' + row.size18 + '" size1T = "' + row.size1T + '" size2T = "' + row.size2T + '" size3T = "' + row.size3T + '" size4T = "' + row.size4T + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                if (row.flagCtInSize1 === 1 && row.flagCtInSize2 === 1 && row.flagCtInSize3 === 1 && row.flagCtInSize4 === 1 && row.flagCtInSize5 === 1 && row.flagCtInSize6 === 1 && row.flagCtInSize7 === 1 && row.flagCtInSize8 === 1 && row.flagCtInSize9 === 1 && row.flagCtInSize10 === 1 && row.flagCtInSize11 === 1 && row.flagCtInSize12 === 1 && row.flagCtInSize13 === 1 && row.flagCtInSize14 === 1 && row.flagCtInSize15 === 1 && row.flagCtInSize16 === 1 && row.flagCtInSize17 === 1 && row.flagCtInSize18 === 1 && row.flagCtInSize1T === 1 && row.flagCtInSize2T === 1 && row.flagCtInSize3T === 1) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '" size17 = "' + row.size17 + '" size18 = "' + row.size18 + '" size1T = "' + row.size1T + '" size2T = "' + row.size2T + '" size3T = "' + row.size3T + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                if (row.flagCtInSize1 === 1 && row.flagCtInSize2 === 1 && row.flagCtInSize3 === 1 && row.flagCtInSize4 === 1 && row.flagCtInSize5 === 1 && row.flagCtInSize6 === 1 && row.flagCtInSize7 === 1 && row.flagCtInSize8 === 1 && row.flagCtInSize9 === 1 && row.flagCtInSize10 === 1 && row.flagCtInSize11 === 1 && row.flagCtInSize12 === 1 && row.flagCtInSize13 === 1 && row.flagCtInSize14 === 1 && row.flagCtInSize15 === 1 && row.flagCtInSize16 === 1 && row.flagCtInSize17 === 1 && row.flagCtInSize18 === 1 && row.flagCtInSize1T === 1 && row.flagCtInSize2T === 1) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '" size17 = "' + row.size17 + '" size18 = "' + row.size18 + '" size1T = "' + row.size1T + '" size2T = "' + row.size2T + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                if (row.flagCtInSize1 === 1 && row.flagCtInSize2 === 1 && row.flagCtInSize3 === 1 && row.flagCtInSize4 === 1 && row.flagCtInSize5 === 1 && row.flagCtInSize6 === 1 && row.flagCtInSize7 === 1 && row.flagCtInSize8 === 1 && row.flagCtInSize9 === 1 && row.flagCtInSize10 === 1 && row.flagCtInSize11 === 1 && row.flagCtInSize12 === 1 && row.flagCtInSize13 === 1 && row.flagCtInSize14 === 1 && row.flagCtInSize15 === 1 && row.flagCtInSize16 === 1 && row.flagCtInSize17 === 1 && row.flagCtInSize18 === 1 && row.flagCtInSize1T === 1) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '" size17 = "' + row.size17 + '" size18 = "' + row.size18 + '" size1T = "' + row.size1T + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                if (row.flagCtInSize1 === 1 && row.flagCtInSize2 === 1 && row.flagCtInSize3 === 1 && row.flagCtInSize4 === 1 && row.flagCtInSize5 === 1 && row.flagCtInSize6 === 1 && row.flagCtInSize7 === 1 && row.flagCtInSize8 === 1 && row.flagCtInSize9 === 1 && row.flagCtInSize10 === 1 && row.flagCtInSize11 === 1 && row.flagCtInSize12 === 1 && row.flagCtInSize13 === 1 && row.flagCtInSize14 === 1 && row.flagCtInSize15 === 1 && row.flagCtInSize16 === 1 && row.flagCtInSize17 === 1 && row.flagCtInSize18 === 1) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '" size17 = "' + row.size17 + '" size18 = "' + row.size18 + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                if (row.flagCtInSize1 === 1 && row.flagCtInSize2 === 1 && row.flagCtInSize3 === 1 && row.flagCtInSize4 === 1 && row.flagCtInSize5 === 1 && row.flagCtInSize6 === 1 && row.flagCtInSize7 === 1 && row.flagCtInSize8 === 1 && row.flagCtInSize9 === 1 && row.flagCtInSize10 === 1 && row.flagCtInSize11 === 1 && row.flagCtInSize12 === 1 && row.flagCtInSize13 === 1 && row.flagCtInSize14 === 1 && row.flagCtInSize15 === 1 && row.flagCtInSize16 === 1 && row.flagCtInSize17 === 1) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '" size17 = "' + row.size17 + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                if (row.flagCtInSize1 === 1 && row.flagCtInSize2 === 1 && row.flagCtInSize3 === 1 && row.flagCtInSize4 === 1 && row.flagCtInSize5 === 1 && row.flagCtInSize6 === 1 && row.flagCtInSize7 === 1 && row.flagCtInSize8 === 1 && row.flagCtInSize9 === 1 && row.flagCtInSize10 === 1 && row.flagCtInSize11 === 1 && row.flagCtInSize12 === 1 && row.flagCtInSize13 === 1 && row.flagCtInSize14 === 1 && row.flagCtInSize15 === 1 && row.flagCtInSize16 === 1) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                if (row.flagCtInSize1 === 1 && row.flagCtInSize2 === 1 && row.flagCtInSize3 === 1 && row.flagCtInSize4 === 1 && row.flagCtInSize5 === 1 && row.flagCtInSize6 === 1 && row.flagCtInSize7 === 1 && row.flagCtInSize8 === 1 && row.flagCtInSize9 === 1 && row.flagCtInSize10 === 1 && row.flagCtInSize11 === 1 && row.flagCtInSize12 === 1 && row.flagCtInSize13 === 1 && row.flagCtInSize14 === 1 && row.flagCtInSize15 === 1) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                if (row.flagCtInSize1 === 1 && row.flagCtInSize2 === 1 && row.flagCtInSize3 === 1 && row.flagCtInSize4 === 1 && row.flagCtInSize5 === 1 && row.flagCtInSize6 === 1 && row.flagCtInSize7 === 1 && row.flagCtInSize8 === 1 && row.flagCtInSize9 === 1 && row.flagCtInSize10 === 1 && row.flagCtInSize11 === 1 && row.flagCtInSize12 === 1 && row.flagCtInSize13 === 1 && row.flagCtInSize14 === 1) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                if (row.flagCtInSize1 === 1 && row.flagCtInSize2 === 1 && row.flagCtInSize3 === 1 && row.flagCtInSize4 === 1 && row.flagCtInSize5 === 1 && row.flagCtInSize6 === 1 && row.flagCtInSize7 === 1 && row.flagCtInSize8 === 1 && row.flagCtInSize9 === 1 && row.flagCtInSize10 === 1 && row.flagCtInSize11 === 1 && row.flagCtInSize12 === 1 && row.flagCtInSize13 === 1) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                if (row.flagCtInSize1 === 1 && row.flagCtInSize2 === 1 && row.flagCtInSize3 === 1 && row.flagCtInSize4 === 1 && row.flagCtInSize5 === 1 && row.flagCtInSize6 === 1 && row.flagCtInSize7 === 1 && row.flagCtInSize8 === 1 && row.flagCtInSize9 === 1 && row.flagCtInSize10 === 1 && row.flagCtInSize11 === 1 && row.flagCtInSize12 === 1) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                if (row.flagCtInSize1 === 1 && row.flagCtInSize2 === 1 && row.flagCtInSize3 === 1 && row.flagCtInSize4 === 1 && row.flagCtInSize5 === 1 && row.flagCtInSize6 === 1 && row.flagCtInSize7 === 1 && row.flagCtInSize8 === 1 && row.flagCtInSize9 === 1 && row.flagCtInSize10 === 1 && row.flagCtInSize11 === 1) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                if (row.flagCtInSize1 === 1 && row.flagCtInSize2 === 1 && row.flagCtInSize3 === 1 && row.flagCtInSize4 === 1 && row.flagCtInSize5 === 1 && row.flagCtInSize6 === 1 && row.flagCtInSize7 === 1 && row.flagCtInSize8 === 1 && row.flagCtInSize9 === 1 && row.flagCtInSize10 === 1) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                if (row.flagCtInSize1 === 1 && row.flagCtInSize2 === 1 && row.flagCtInSize3 === 1 && row.flagCtInSize4 === 1 && row.flagCtInSize5 === 1 && row.flagCtInSize6 === 1 && row.flagCtInSize7 === 1 && row.flagCtInSize8 === 1 && row.flagCtInSize9 === 1) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                if (row.flagCtInSize1 === 1 && row.flagCtInSize2 === 1 && row.flagCtInSize3 === 1 && row.flagCtInSize4 === 1 && row.flagCtInSize5 === 1 && row.flagCtInSize6 === 1 && row.flagCtInSize7 === 1 && row.flagCtInSize8 === 1) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                if (row.flagCtInSize1 === 1 && row.flagCtInSize2 === 1 && row.flagCtInSize3 === 1 && row.flagCtInSize4 === 1 && row.flagCtInSize5 === 1 && row.flagCtInSize6 === 1 && row.flagCtInSize7 === 1) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                if (row.flagCtInSize1 === 1 && row.flagCtInSize2 === 1 && row.flagCtInSize3 === 1 && row.flagCtInSize4 === 1 && row.flagCtInSize5 === 1 && row.flagCtInSize6 === 1) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                if (row.flagCtInSize1 === 1 && row.flagCtInSize2 === 1 && row.flagCtInSize3 === 1 && row.flagCtInSize4 === 1 && row.flagCtInSize5 === 1) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                if (row.flagCtInSize1 === 1 && row.flagCtInSize2 === 1 && row.flagCtInSize3 === 1 && row.flagCtInSize4 === 1) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                if (row.flagCtInSize1 === 1 && row.flagCtInSize2 === 1 && row.flagCtInSize3 === 1) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                if (row.flagCtInSize1 === 1 && row.flagCtInSize2 === 1) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                
-                                
-                                if (row.flagCtInSize1 === 1) {
-                                    if (row.flagCtInSize1 === null) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '" size17 = "' + row.size17 + '" size18 = "' + row.size18 + '" size1T = "' + row.size1T + '" size2T = "' + row.size2T + '" size3T = "' + row.size3T + '" size4T = "' + row.size4T + '" size5T = "' + row.size5T + '" size6T = "' + row.size6T + '" size7T = "' + row.size7T + '" size8T = "' + row.size8T + '" size9T = "' + row.size9T + '" size10T = "' + row.size10T + '" size11T = "' + row.size11T + '" size12T = "' + row.size12T + '" size13T = "' + row.size13T + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                    if (row.flagCtInSize2 === null) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '" size17 = "' + row.size17 + '" size18 = "' + row.size18 + '" size1T = "' + row.size1T + '" size2T = "' + row.size2T + '" size3T = "' + row.size3T + '" size4T = "' + row.size4T + '" size5T = "' + row.size5T + '" size6T = "' + row.size6T + '" size7T = "' + row.size7T + '" size8T = "' + row.size8T + '" size9T = "' + row.size9T + '" size10T = "' + row.size10T + '" size11T = "' + row.size11T + '" size12T = "' + row.size12T + '" size13T = "' + row.size13T + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                    if (row.flagCtInSize3 === null) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '" size17 = "' + row.size17 + '" size18 = "' + row.size18 + '" size1T = "' + row.size1T + '" size2T = "' + row.size2T + '" size3T = "' + row.size3T + '" size4T = "' + row.size4T + '" size5T = "' + row.size5T + '" size6T = "' + row.size6T + '" size7T = "' + row.size7T + '" size8T = "' + row.size8T + '" size9T = "' + row.size9T + '" size10T = "' + row.size10T + '" size11T = "' + row.size11T + '" size12T = "' + row.size12T + '" size13T = "' + row.size13T + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                    if (row.flagCtInSize4 === null) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '" size17 = "' + row.size17 + '" size18 = "' + row.size18 + '" size1T = "' + row.size1T + '" size2T = "' + row.size2T + '" size3T = "' + row.size3T + '" size4T = "' + row.size4T + '" size5T = "' + row.size5T + '" size6T = "' + row.size6T + '" size7T = "' + row.size7T + '" size8T = "' + row.size8T + '" size9T = "' + row.size9T + '" size10T = "' + row.size10T + '" size11T = "' + row.size11T + '" size12T = "' + row.size12T + '" size13T = "' + row.size13T + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                    if (row.flagCtInSize5 === null) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '" size17 = "' + row.size17 + '" size18 = "' + row.size18 + '" size1T = "' + row.size1T + '" size2T = "' + row.size2T + '" size3T = "' + row.size3T + '" size4T = "' + row.size4T + '" size5T = "' + row.size5T + '" size6T = "' + row.size6T + '" size7T = "' + row.size7T + '" size8T = "' + row.size8T + '" size9T = "' + row.size9T + '" size10T = "' + row.size10T + '" size11T = "' + row.size11T + '" size12T = "' + row.size12T + '" size13T = "' + row.size13T + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                    if (row.flagCtInSize6 === null) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '" size17 = "' + row.size17 + '" size18 = "' + row.size18 + '" size1T = "' + row.size1T + '" size2T = "' + row.size2T + '" size3T = "' + row.size3T + '" size4T = "' + row.size4T + '" size5T = "' + row.size5T + '" size6T = "' + row.size6T + '" size7T = "' + row.size7T + '" size8T = "' + row.size8T + '" size9T = "' + row.size9T + '" size10T = "' + row.size10T + '" size11T = "' + row.size11T + '" size12T = "' + row.size12T + '" size13T = "' + row.size13T + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                    if (row.flagCtInSize7 === null) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '" size17 = "' + row.size17 + '" size18 = "' + row.size18 + '" size1T = "' + row.size1T + '" size2T = "' + row.size2T + '" size3T = "' + row.size3T + '" size4T = "' + row.size4T + '" size5T = "' + row.size5T + '" size6T = "' + row.size6T + '" size7T = "' + row.size7T + '" size8T = "' + row.size8T + '" size9T = "' + row.size9T + '" size10T = "' + row.size10T + '" size11T = "' + row.size11T + '" size12T = "' + row.size12T + '" size13T = "' + row.size13T + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                    if (row.flagCtInSize8 === null) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '" size17 = "' + row.size17 + '" size18 = "' + row.size18 + '" size1T = "' + row.size1T + '" size2T = "' + row.size2T + '" size3T = "' + row.size3T + '" size4T = "' + row.size4T + '" size5T = "' + row.size5T + '" size6T = "' + row.size6T + '" size7T = "' + row.size7T + '" size8T = "' + row.size8T + '" size9T = "' + row.size9T + '" size10T = "' + row.size10T + '" size11T = "' + row.size11T + '" size12T = "' + row.size12T + '" size13T = "' + row.size13T + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                    if (row.flagCtInSize9 === null) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '" size17 = "' + row.size17 + '" size18 = "' + row.size18 + '" size1T = "' + row.size1T + '" size2T = "' + row.size2T + '" size3T = "' + row.size3T + '" size4T = "' + row.size4T + '" size5T = "' + row.size5T + '" size6T = "' + row.size6T + '" size7T = "' + row.size7T + '" size8T = "' + row.size8T + '" size9T = "' + row.size9T + '" size10T = "' + row.size10T + '" size11T = "' + row.size11T + '" size12T = "' + row.size12T + '" size13T = "' + row.size13T + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                    if (row.flagCtInSize10 === null) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '" size17 = "' + row.size17 + '" size18 = "' + row.size18 + '" size1T = "' + row.size1T + '" size2T = "' + row.size2T + '" size3T = "' + row.size3T + '" size4T = "' + row.size4T + '" size5T = "' + row.size5T + '" size6T = "' + row.size6T + '" size7T = "' + row.size7T + '" size8T = "' + row.size8T + '" size9T = "' + row.size9T + '" size10T = "' + row.size10T + '" size11T = "' + row.size11T + '" size12T = "' + row.size12T + '" size13T = "' + row.size13T + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                    if (row.flagCtInSize11 === null) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '" size17 = "' + row.size17 + '" size18 = "' + row.size18 + '" size1T = "' + row.size1T + '" size2T = "' + row.size2T + '" size3T = "' + row.size3T + '" size4T = "' + row.size4T + '" size5T = "' + row.size5T + '" size6T = "' + row.size6T + '" size7T = "' + row.size7T + '" size8T = "' + row.size8T + '" size9T = "' + row.size9T + '" size10T = "' + row.size10T + '" size11T = "' + row.size11T + '" size12T = "' + row.size12T + '" size13T = "' + row.size13T + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                    if (row.flagCtInSize12 === null) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '" size17 = "' + row.size17 + '" size18 = "' + row.size18 + '" size1T = "' + row.size1T + '" size2T = "' + row.size2T + '" size3T = "' + row.size3T + '" size4T = "' + row.size4T + '" size5T = "' + row.size5T + '" size6T = "' + row.size6T + '" size7T = "' + row.size7T + '" size8T = "' + row.size8T + '" size9T = "' + row.size9T + '" size10T = "' + row.size10T + '" size11T = "' + row.size11T + '" size12T = "' + row.size12T + '" size13T = "' + row.size13T + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                    if (row.flagCtInSize13 === null) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '" size17 = "' + row.size17 + '" size18 = "' + row.size18 + '" size1T = "' + row.size1T + '" size2T = "' + row.size2T + '" size3T = "' + row.size3T + '" size4T = "' + row.size4T + '" size5T = "' + row.size5T + '" size6T = "' + row.size6T + '" size7T = "' + row.size7T + '" size8T = "' + row.size8T + '" size9T = "' + row.size9T + '" size10T = "' + row.size10T + '" size11T = "' + row.size11T + '" size12T = "' + row.size12T + '" size13T = "' + row.size13T + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                    if (row.flagCtInSize14 === null) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '" size17 = "' + row.size17 + '" size18 = "' + row.size18 + '" size1T = "' + row.size1T + '" size2T = "' + row.size2T + '" size3T = "' + row.size3T + '" size4T = "' + row.size4T + '" size5T = "' + row.size5T + '" size6T = "' + row.size6T + '" size7T = "' + row.size7T + '" size8T = "' + row.size8T + '" size9T = "' + row.size9T + '" size10T = "' + row.size10T + '" size11T = "' + row.size11T + '" size12T = "' + row.size12T + '" size13T = "' + row.size13T + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                    if (row.flagCtInSize15 === null) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size16 = "' + row.size16 + '" size17 = "' + row.size17 + '" size18 = "' + row.size18 + '" size1T = "' + row.size1T + '" size2T = "' + row.size2T + '" size3T = "' + row.size3T + '" size4T = "' + row.size4T + '" size5T = "' + row.size5T + '" size6T = "' + row.size6T + '" size7T = "' + row.size7T + '" size8T = "' + row.size8T + '" size9T = "' + row.size9T + '" size10T = "' + row.size10T + '" size11T = "' + row.size11T + '" size12T = "' + row.size12T + '" size13T = "' + row.size13T + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                    if (row.flagCtInSize16 === null) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size17 = "' + row.size17 + '" size18 = "' + row.size18 + '" size1T = "' + row.size1T + '" size2T = "' + row.size2T + '" size3T = "' + row.size3T + '" size4T = "' + row.size4T + '" size5T = "' + row.size5T + '" size6T = "' + row.size6T + '" size7T = "' + row.size7T + '" size8T = "' + row.size8T + '" size9T = "' + row.size9T + '" size10T = "' + row.size10T + '" size11T = "' + row.size11T + '" size12T = "' + row.size12T + '" size13T = "' + row.size13T + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                    if (row.flagCtInSize17 === null) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '" size18 = "' + row.size18 + '" size1T = "' + row.size1T + '" size2T = "' + row.size2T + '" size3T = "' + row.size3T + '" size4T = "' + row.size4T + '" size5T = "' + row.size5T + '" size6T = "' + row.size6T + '" size7T = "' + row.size7T + '" size8T = "' + row.size8T + '" size9T = "' + row.size9T + '" size10T = "' + row.size10T + '" size11T = "' + row.size11T + '" size12T = "' + row.size12T + '" size13T = "' + row.size13T + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                    if (row.flagCtInSize18 === null) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '" size17 = "' + row.size17 + '" size1T = "' + row.size1T + '" size2T = "' + row.size2T + '" size3T = "' + row.size3T + '" size4T = "' + row.size4T + '" size5T = "' + row.size5T + '" size6T = "' + row.size6T + '" size7T = "' + row.size7T + '" size8T = "' + row.size8T + '" size9T = "' + row.size9T + '" size10T = "' + row.size10T + '" size11T = "' + row.size11T + '" size12T = "' + row.size12T + '" size13T = "' + row.size13T + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                    if (row.flagCtInSize1T === null) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '" size17 = "' + row.size17 + '" size18 = "' + row.size18 + '" size2T = "' + row.size2T + '" size3T = "' + row.size3T + '" size4T = "' + row.size4T + '" size5T = "' + row.size5T + '" size6T = "' + row.size6T + '" size7T = "' + row.size7T + '" size8T = "' + row.size8T + '" size9T = "' + row.size9T + '" size10T = "' + row.size10T + '" size11T = "' + row.size11T + '" size12T = "' + row.size12T + '" size13T = "' + row.size13T + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                    if (row.flagCtInSize2T === null) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '" size17 = "' + row.size17 + '" size18 = "' + row.size18 + '" size1T = "' + row.size1T + '" size3T = "' + row.size3T + '" size4T = "' + row.size4T + '" size5T = "' + row.size5T + '" size6T = "' + row.size6T + '" size7T = "' + row.size7T + '" size8T = "' + row.size8T + '" size9T = "' + row.size9T + '" size10T = "' + row.size10T + '" size11T = "' + row.size11T + '" size12T = "' + row.size12T + '" size13T = "' + row.size13T + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                    if (row.flagCtInSize3T === null) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '" size17 = "' + row.size17 + '" size18 = "' + row.size18 + '" size1T = "' + row.size1T + '" size2T = "' + row.size2T + '" size4T = "' + row.size4T + '" size5T = "' + row.size5T + '" size6T = "' + row.size6T + '" size7T = "' + row.size7T + '" size8T = "' + row.size8T + '" size9T = "' + row.size9T + '" size10T = "' + row.size10T + '" size11T = "' + row.size11T + '" size12T = "' + row.size12T + '" size13T = "' + row.size13T + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                    if (row.flagCtInSize4T === null) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '" size17 = "' + row.size17 + '" size18 = "' + row.size18 + '" size1T = "' + row.size1T + '" size2T = "' + row.size2T + '" size3T = "' + row.size3T + '" size5T = "' + row.size5T + '" size6T = "' + row.size6T + '" size7T = "' + row.size7T + '" size8T = "' + row.size8T + '" size9T = "' + row.size9T + '" size10T = "' + row.size10T + '" size11T = "' + row.size11T + '" size12T = "' + row.size12T + '" size13T = "' + row.size13T + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                    if (row.flagCtInSize5T === null) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '" size17 = "' + row.size17 + '" size18 = "' + row.size18 + '" size1T = "' + row.size1T + '" size2T = "' + row.size2T + '" size3T = "' + row.size3T + '" size4T = "' + row.size4T + '" size6T = "' + row.size6T + '" size7T = "' + row.size7T + '" size8T = "' + row.size8T + '" size9T = "' + row.size9T + '" size10T = "' + row.size10T + '" size11T = "' + row.size11T + '" size12T = "' + row.size12T + '" size13T = "' + row.size13T + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                    if (row.flagCtInSize6T === null) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '" size17 = "' + row.size17 + '" size18 = "' + row.size18 + '" size1T = "' + row.size1T + '" size2T = "' + row.size2T + '" size3T = "' + row.size3T + '" size4T = "' + row.size4T + '" size5T = "' + row.size5T + '" size7T = "' + row.size7T + '" size8T = "' + row.size8T + '" size9T = "' + row.size9T + '" size10T = "' + row.size10T + '" size11T = "' + row.size11T + '" size12T = "' + row.size12T + '" size13T = "' + row.size13T + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                    if (row.flagCtInSize7T === null) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '" size17 = "' + row.size17 + '" size18 = "' + row.size18 + '" size1T = "' + row.size1T + '" size2T = "' + row.size2T + '" size3T = "' + row.size3T + '" size4T = "' + row.size4T + '" size5T = "' + row.size5T + '" size6T = "' + row.size6T + '" size8T = "' + row.size8T + '" size9T = "' + row.size9T + '" size10T = "' + row.size10T + '" size11T = "' + row.size11T + '" size12T = "' + row.size12T + '" size13T = "' + row.size13T + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                    if (row.flagCtInSize8T === null) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '" size17 = "' + row.size17 + '" size18 = "' + row.size18 + '" size1T = "' + row.size1T + '" size2T = "' + row.size2T + '" size3T = "' + row.size3T + '" size4T = "' + row.size4T + '" size5T = "' + row.size5T + '" size6T = "' + row.size6T + '" size7T = "' + row.size7T + '" size9T = "' + row.size9T + '" size10T = "' + row.size10T + '" size11T = "' + row.size11T + '" size12T = "' + row.size12T + '" size13T = "' + row.size13T + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                    if (row.flagCtInSize9T === null) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '" size17 = "' + row.size17 + '" size18 = "' + row.size18 + '" size1T = "' + row.size1T + '" size2T = "' + row.size2T + '" size3T = "' + row.size3T + '" size4T = "' + row.size4T + '" size5T = "' + row.size5T + '" size6T = "' + row.size6T + '" size7T = "' + row.size7T + '" size8T = "' + row.size8T + '" size10T = "' + row.size10T + '" size11T = "' + row.size11T + '" size12T = "' + row.size12T + '" size13T = "' + row.size13T + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                    if (row.flagCtInSize10T === null) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '" size17 = "' + row.size17 + '" size18 = "' + row.size18 + '" size1T = "' + row.size1T + '" size2T = "' + row.size2T + '" size3T = "' + row.size3T + '" size4T = "' + row.size4T + '" size5T = "' + row.size5T + '" size6T = "' + row.size6T + '" size7T = "' + row.size7T + '" size8T = "' + row.size8T + '" size9T = "' + row.size9T + '" size11T = "' + row.size11T + '" size12T = "' + row.size12T + '" size13T = "' + row.size13T + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                    if (row.flagCtInSize11T === null) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '" size17 = "' + row.size17 + '" size18 = "' + row.size18 + '" size1T = "' + row.size1T + '" size2T = "' + row.size2T + '" size3T = "' + row.size3T + '" size4T = "' + row.size4T + '" size5T = "' + row.size5T + '" size6T = "' + row.size6T + '" size7T = "' + row.size7T + '" size8T = "' + row.size8T + '" size9T = "' + row.size9T + '" size10T = "' + row.size10T + '" size12T = "' + row.size12T + '" size13T = "' + row.size13T + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                    if (row.flagCtInSize12T === null) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '" size17 = "' + row.size17 + '" size18 = "' + row.size18 + '" size1T = "' + row.size1T + '" size2T = "' + row.size2T + '" size3T = "' + row.size3T + '" size4T = "' + row.size4T + '" size5T = "' + row.size5T + '" size6T = "' + row.size6T + '" size7T = "' + row.size7T + '" size8T = "' + row.size8T + '" size9T = "' + row.size9T + '" size10T = "' + row.size10T + '" size11T = "' + row.size11T + '" size13T = "' + row.size13T + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                    if (row.flagCtInSize13T === null) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '" size2 = "' + row.size2 + '" size3 = "' + row.size3 + '" size4 = "' + row.size4 + '" size5 = "' + row.size5 + '" size6 = "' + row.size6 + '" size7 = "' + row.size7 + '" size8 = "' + row.size8 + '" size9 = "' + row.size9 + '" size10 = "' + row.size10 + '" size11 = "' + row.size11 + '" size12 = "' + row.size12 + '" size13 = "' + row.size13 + '" size14 = "' + row.size14 + '" size15 = "' + row.size15 + '" size16 = "' + row.size16 + '" size17 = "' + row.size17 + '" size18 = "' + row.size18 + '" size1T = "' + row.size1T + '" size2T = "' + row.size2T + '" size3T = "' + row.size3T + '" size4T = "' + row.size4T + '" size5T = "' + row.size5T + '" size6T = "' + row.size6T + '" size7T = "' + row.size7T + '" size8T = "' + row.size8T + '" size9T = "' + row.size9T + '" size10T = "' + row.size10T + '" size11T = "' + row.size11T + '" size12T = "' + row.size12T + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                
-                                
-                                
-                                if (row.flagCtInSize2 === 1) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size2 = "' + row.size2 + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                if (row.flagCtInSize3 === 1) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size3 = "' + row.size3 + '"><span style ="background-color: rgb(11,13,98);" class="label label-status label-info"><i class="fa fa-check"></i></span></a>';
-                                }
-                                
-                                
-                                else {
-                                    return  '<td class="id">' + "" + '</td>';
-                                }
+                                var list = '<td><input type="hidden" class="linesClass" name-data="id" name="lines[' + rowindex + '][id]" value="' + row.id + '" /></td>';
+                                var data = '<input class="tableSelected" disabled type="checkbox" value="' + row.id + '"/>';
+                                return list + data;
                                },
                             "aTargets": [0]
                         },
@@ -1253,7 +1039,9 @@
                     },
                     "scrollX": true
                 });
-
+                
+                var sumINEx = 0;
+                var sumOUTEx = 0;
                 var oTable2 = $("#dataTableKanban").dataTable({
                     "paging": false,
                     "sAjaxSource": "${pageContext.request.contextPath}/operator/kanban/search-lot-kanban",
@@ -1311,8 +1099,968 @@
                         {"mDataProp": "size10T", "bSortable": false},
                         {"mDataProp": "size11T", "bSortable": false},
                         {"mDataProp": "size12T", "bSortable": false},
-                        {"mDataProp": "size13T", "bSortable": false}
+                        {"mDataProp": "size13T", "bSortable": false},
+                        {"mDataProp": fnBlank, "bSortable": false}
+                    ],
+                    "aoColumnDefs": [
+                         {
+                            class: "text-center",
+                            "mRender": function (data, type, row) {
+                                var list = '<td><input type="hidden" class="linesClass" name-data="id" name="lines[' + rowindex + '][id]" value="' + row.id + '" /></td>';
+                                var data = '<input class="tableSelected" disabled type="checkbox" value="' + row.id + '"/>';
+                                return list + data;
+                               },
+                            "aTargets": [0]
+                        },
+                        {
+                            class: "text-center",
+                            "mRender": function (data, type, row) {
+                                var list = '<td><input type="hidden" class="linesClass" name-data="hourly" name="lines[' + rowindex + '][hourly]" value="' + row.hourly + '" /></td>';
+                                if (row.hourly === null) {
+                                    var data = '<td class="hourly">' + "" + '</td>';
+                                } else {
+                                    var data = '<td class="hourly">' + row.hourly + '</td>';
+                                }
+
+                                return list + data;
+                            },
+                            "aTargets": [1]
+                        },
+                        {
+                            class: "text-center",
+                            "mRender": function (data, type, row) {
+                                if (row.size1 === null) {
+                                    return  '<td class="size1">' + "" + '</td>';
+                                } else if (row.flagExPrepInSize1 === 1) {
+                                    return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size1 + ' </span></a>';
+                                } else if (row.flagExCtInSize1 === 1 && row.flagExCtOutSize1 === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-rejectEx" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">  ' + row.size1 + ' </span></a>';
+                                } else if (row.flagExCtInSize1 === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-info"> ' + row.size1 + ' </span></a>';
+                                } else {
+                                    return  '<td class="size1">' + "" + '</td>';
+                                }
+                            },
+                            "aTargets": [2]
+                        },
+                        {
+                            class: "text-center",
+                            "mRender": function (data, type, row) {
+                                if (row.size2 === null) {
+                                    return  '<td class="size2">' + "" + '</td>';
+                                } else if (row.flagExPrepInSize2 === 1) {
+                                    return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size2 + ' </span></a>';
+                                } else if (row.flagExCtInSize2 === 1 && row.flagExCtOutSize2 === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-rejectEx" class="viewData" id = "' + row.id + '" size2 = "' + row.size2 + '"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">  ' + row.size2 + ' </span></a>';
+                                } else if (row.flagExCtInSize2 === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size2 = "' + row.size2 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-info"> ' + row.size2 + ' </span></a>';
+                                } else {
+                                    return  '<td class="size2">' + "" + '</td>';
+                                }
+                            },
+                            "aTargets": [3]
+                        },
+                        {
+                            class: "text-center",
+                            "mRender": function (data, type, row) {
+                                if (row.size3 === null) {
+                                    return  '<td class="size3">' + "" + '</td>';
+                                } else if (row.flagExPrepInSize3 === 1) {
+                                    return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size3 + ' </span></a>';
+                                } else if (row.flagExCtInSize3 === 1 && row.flagExCtOutSize3 === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-rejectEx" class="viewData" id = "' + row.id + '" size3 = "' + row.size3 + '"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">  ' + row.size3 + ' </span></a>';
+                                } else if (row.flagExCtInSize3 === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size3 = "' + row.size3 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-info"> ' + row.size3 + ' </span></a>';
+                                } else {
+                                    return  '<td class="size3">' + "" + '</td>';
+                                }
+                            },
+                            "aTargets": [4]
+                        },
+                        {
+                            class: "text-center",
+                            "mRender": function (data, type, row) {
+                                if (row.size4 === null) {
+                                    return  '<td class="size4">' + "" + '</td>';
+                                } else if (row.flagExPrepInSize4 === 1) {
+                                    return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size4 + ' </span></a>';
+                                } else if (row.flagExCtInSize4 === 1 && row.flagExCtOutSize4 === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-rejectEx" class="viewData" id = "' + row.id + '" size4 = "' + row.size4 + '"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">  ' + row.size4 + ' </span></a>';
+                                } else if (row.flagExCtInSize4 === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size4 = "' + row.size4 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-info"> ' + row.size4 + ' </span></a>';
+                                } else {
+                                    return  '<td class="size4">' + "" + '</td>';
+                                }
+                            },
+                            "aTargets": [5]
+                        },
+                        {
+                            class: "text-center",
+                            "mRender": function (data, type, row) {
+                                if (row.size5 === null) {
+                                    return  '<td class="size5">' + "" + '</td>';
+                                } else if (row.flagExPrepInSize5 === 1) {
+                                    return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size5 + ' </span></a>';
+                                } else if (row.flagExCtInSize5 === 1 && row.flagExCtOutSize5 === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-rejectEx" class="viewData" id = "' + row.id + '" size5 = "' + row.size5 + '"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">  ' + row.size5 + ' </span></a>';
+                                } else if (row.flagExCtInSize5 === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size5 = "' + row.size5 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-info"> ' + row.size5 + ' </span></a>';
+                                } else {
+                                    return  '<td class="size5">' + "" + '</td>';
+                                }
+                            },
+                            "aTargets": [6]
+                        },
+                        {
+                            class: "text-center",
+                            "mRender": function (data, type, row) {
+                                if (row.size6 === null) {
+                                    return  '<td class="size6">' + "" + '</td>';
+                                } else if (row.flagExPrepInSize6 === 1) {
+                                    return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size6 + ' </span></a>';
+                                } else if (row.flagExCtInSize6 === 1 && row.flagExCtOutSize6 === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-rejectEx" class="viewData" id = "' + row.id + '" size6 = "' + row.size6 + '"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">  ' + row.size6 + ' </span></a>';
+                                } else if (row.flagExCtInSize6 === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size6 = "' + row.size6 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-info"> ' + row.size6 + ' </span></a>';
+                                } else {
+                                    return  '<td class="size6">' + "" + '</td>';
+                                }
+                            },
+                            "aTargets": [7]
+                        },
+                        {
+                            class: "text-center",
+                            "mRender": function (data, type, row) {
+                                if (row.size7 === null) {
+                                    return  '<td class="size7">' + "" + '</td>';
+                                } else if (row.flagExPrepInSize7 === 1) {
+                                    return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size7 + ' </span></a>';
+                                } else if (row.flagExCtInSize7 === 1 && row.flagExCtOutSize7 === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-rejectEx" class="viewData" id = "' + row.id + '" size7 = "' + row.size7 + '"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">  ' + row.size7 + ' </span></a>';
+                                } else if (row.flagExCtInSize7 === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size7 = "' + row.size7 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-info"> ' + row.size7 + ' </span></a>';
+                                } else {
+                                    return  '<td class="size7">' + "" + '</td>';
+                                }
+                            },
+                            "aTargets": [8]
+                        },
+                        {
+                            class: "text-center",
+                            "mRender": function (data, type, row) {
+                                if (row.size8 === null) {
+                                    return  '<td class="size8">' + "" + '</td>';
+                                } else if (row.flagExPrepInSize8 === 1) {
+                                    return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size8 + ' </span></a>';
+                                } else if (row.flagExCtInSize8 === 1 && row.flagExCtOutSize8 === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-rejectEx" class="viewData" id = "' + row.id + '" size8 = "' + row.size8 + '"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">  ' + row.size8 + ' </span></a>';
+                                } else if (row.flagExCtInSize8 === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size8 = "' + row.size8 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-info"> ' + row.size8 + ' </span></a>';
+                                } else {
+                                    return  '<td class="size8">' + "" + '</td>';
+                                }
+                            },
+                            "aTargets": [9]
+                        },
+                        {
+                            class: "text-center",
+                            "mRender": function (data, type, row) {
+                                if (row.size9 === null) {
+                                    return  '<td class="size9">' + "" + '</td>';
+                                } else if (row.flagExPrepInSize9 === 1) {
+                                    return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size9 + ' </span></a>';
+                                } else if (row.flagExCtInSize9 === 1 && row.flagExCtOutSize9 === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-rejectEx" class="viewData" id = "' + row.id + '" size9 = "' + row.size9 + '"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">  ' + row.size9 + ' </span></a>';
+                                } else if (row.flagExCtInSize9 === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size9 = "' + row.size9 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-info"> ' + row.size9 + ' </span></a>';
+                                } else {
+                                    return  '<td class="size9">' + "" + '</td>';
+                                }
+                            },
+                            "aTargets": [10]
+                        },
+                        {
+                            class: "text-center",
+                            "mRender": function (data, type, row) {
+                                if (row.size10 === null) {
+                                    return  '<td class="size10">' + "" + '</td>';
+                                } else if (row.flagExPrepInSize10 === 1) {
+                                    return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size10 + ' </span></a>';
+                                } else if (row.flagExCtInSize10 === 1 && row.flagExCtOutSize10 === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-rejectEx" class="viewData" id = "' + row.id + '" size10 = "' + row.size10 + '"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">  ' + row.size10 + ' </span></a>';
+                                } else if (row.flagExCtInSize10 === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size10 = "' + row.size10 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-info"> ' + row.size10 + ' </span></a>';
+                                } else {
+                                    return  '<td class="size10">' + "" + '</td>';
+                                }
+                            },
+                            "aTargets": [11]
+                        },
+                        {
+                            class: "text-center",
+                            "mRender": function (data, type, row) {
+                                if (row.size11 === null) {
+                                    return  '<td class="size11">' + "" + '</td>';
+                                } else if (row.flagExPrepInSize11 === 1) {
+                                    return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size11 + ' </span></a>';
+                                } else if (row.flagExCtInSize11 === 1 && row.flagExCtOutSize11 === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-rejectEx" class="viewData" id = "' + row.id + '" size11 = "' + row.size11 + '"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">  ' + row.size11 + ' </span></a>';
+                                } else if (row.flagExCtInSize11 === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size11 = "' + row.size11 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-info"> ' + row.size11 + ' </span></a>';
+                                } else {
+                                    return  '<td class="size11">' + "" + '</td>';
+                                }
+                            },
+                            "aTargets": [12]
+                        },
+                        {
+                            class: "text-center",
+                            "mRender": function (data, type, row) {
+                                if (row.size12 === null) {
+                                    return  '<td class="size12">' + "" + '</td>';
+                                } else if (row.flagExPrepInSize12 === 1) {
+                                    return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size12 + ' </span></a>';
+                                } else if (row.flagExCtInSize12 === 1 && row.flagExCtOutSize12 === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-rejectEx" class="viewData" id = "' + row.id + '" size12 = "' + row.size12 + '"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">  ' + row.size12 + ' </span></a>';
+                                } else if (row.flagExCtInSize12 === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size12 = "' + row.size12 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-info"> ' + row.size12 + ' </span></a>';
+                                } else {
+                                    return  '<td class="size12">' + "" + '</td>';
+                                }
+                            },
+                            "aTargets": [13]
+                        },
+                        {
+                            class: "text-center",
+                            "mRender": function (data, type, row) {
+                                if (row.size13 === null) {
+                                    return  '<td class="size13">' + "" + '</td>';
+                                } else if (row.flagExPrepInSize13 === 1) {
+                                    return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size13 + ' </span></a>';
+                                } else if (row.flagExCtInSize13 === 1 && row.flagExCtOutSize13 === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-rejectEx" class="viewData" id = "' + row.id + '" size13 = "' + row.size13 + '"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">  ' + row.size13 + ' </span></a>';
+                                } else if (row.flagExCtInSize13 === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size13 = "' + row.size13 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-info"> ' + row.size13 + ' </span></a>';
+                                } else {
+                                    return  '<td class="size13">' + "" + '</td>';
+                                }
+                            },
+                            "aTargets": [14]
+                        },
+                        {
+                            class: "text-center",
+                            "mRender": function (data, type, row) {
+                                if (row.size14 === null) {
+                                    return  '<td class="size14">' + "" + '</td>';
+                                } else if (row.flagExPrepInSize14 === 1) {
+                                    return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size14 + ' </span></a>';
+                                } else if (row.flagExCtInSize14 === 1 && row.flagExCtOutSize14 === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-rejectEx" class="viewData" id = "' + row.id + '" size14 = "' + row.size14 + '"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">  ' + row.size14 + ' </span></a>';
+                                } else if (row.flagExCtInSize14 === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size14 = "' + row.size14 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-info"> ' + row.size14 + ' </span></a>';
+                                } else {
+                                    return  '<td class="size14">' + "" + '</td>';
+                                }
+                            },
+                            "aTargets": [15]
+                        },
+                        {
+                            class: "text-center",
+                            "mRender": function (data, type, row) {
+                                if (row.size15 === null) {
+                                    return  '<td class="size15">' + "" + '</td>';
+                                } else if (row.flagExPrepInSize15 === 1) {
+                                    return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size15 + ' </span></a>';
+                                } else if (row.flagExCtInSize15 === 1 && row.flagExCtOutSize15 === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-rejectEx" class="viewData" id = "' + row.id + '" size15 = "' + row.size15 + '"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">  ' + row.size15 + ' </span></a>';
+                                } else if (row.flagExCtInSize15 === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size15 = "' + row.size15 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-info"> ' + row.size15 + ' </span></a>';
+                                } else {
+                                    return  '<td class="size15">' + "" + '</td>';
+                                }
+                            },
+                            "aTargets": [16]
+                        },
+                        {
+                            class: "text-center",
+                            "mRender": function (data, type, row) {
+                                if (row.size16 === null) {
+                                    return  '<td class="size16">' + "" + '</td>';
+                                } else if (row.flagExPrepInSize16 === 1) {
+                                    return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size16 + ' </span></a>';
+                                } else if (row.flagExCtInSize16 === 1 && row.flagExCtOutSize16 === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-rejectEx" class="viewData" id = "' + row.id + '" size16 = "' + row.size16 + '"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">  ' + row.size16 + ' </span></a>';
+                                } else if (row.flagExCtInSize16 === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size16 = "' + row.size16 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-info"> ' + row.size16 + ' </span></a>';
+                                } else {
+                                    return  '<td class="size16">' + "" + '</td>';
+                                }
+                            },
+                            "aTargets": [17]
+                        },
+                        {
+                            class: "text-center",
+                            "mRender": function (data, type, row) {
+                                if (row.size17 === null) {
+                                    return  '<td class="size17">' + "" + '</td>';
+                                } else if (row.flagExPrepInSize17 === 1) {
+                                    return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size17 + ' </span></a>';
+                                } else if (row.flagExCtInSize17 === 1 && row.flagExCtOutSize17 === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-rejectEx" class="viewData" id = "' + row.id + '" size17 = "' + row.size17 + '"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">  ' + row.size17 + ' </span></a>';
+                                } else if (row.flagExCtInSize17 === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size17 = "' + row.size17 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-info"> ' + row.size17 + ' </span></a>';
+                                } else {
+                                    return  '<td class="size17">' + "" + '</td>';
+                                }
+                            },
+                            "aTargets": [18]
+                        },
+                        {
+                            class: "text-center",
+                            "mRender": function (data, type, row) {
+                                if (row.size18 === null) {
+                                    return  '<td class="size18">' + "" + '</td>';
+                                } else if (row.flagExPrepInSize18 === 1) {
+                                    return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size18 + ' </span></a>';
+                                } else if (row.flagExCtInSize18 === 1 && row.flagExCtOutSize18 === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-rejectEx" class="viewData" id = "' + row.id + '" size18 = "' + row.size18 + '"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">  ' + row.size18 + ' </span></a>';
+                                } else if (row.flagExCtInSize18 === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size18 = "' + row.size18 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-info"> ' + row.size18 + ' </span></a>';
+                                } else {
+                                    return  '<td class="size18">' + "" + '</td>';
+                                }
+                            },
+                            "aTargets": [19]
+                        },
+                        {
+                            class: "text-center",
+                            "mRender": function (data, type, row) {
+                                if (row.size1T === null) {
+                                    return  '<td class="size1T">' + "" + '</td>';
+                                } else if (row.flagExPrepInSize1T === 1) {
+                                    return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size1T + ' </span></a>';
+                                } else if (row.flagExCtInSize1T === 1 && row.flagExCtOutSize1T === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-rejectEx" class="viewData" id = "' + row.id + '" size1T = "' + row.size1T + '"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">  ' + row.size1T + ' </span></a>';
+                                } else if (row.flagExCtInSize1T === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size1T = "' + row.size1T + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-info"> ' + row.size1T + ' </span></a>';
+                                } else {
+                                    return  '<td class="size1T">' + "" + '</td>';
+                                }
+                            },
+                            "aTargets": [20]
+                        },
+                        {
+                            class: "text-center",
+                            "mRender": function (data, type, row) {
+                                if (row.size2T === null) {
+                                    return  '<td class="size2T">' + "" + '</td>';
+                                } else if (row.flagExPrepInSize2T === 1) {
+                                    return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size2T + ' </span></a>';
+                                } else if (row.flagExCtInSize2T === 1 && row.flagExCtOutSize2T === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-rejectEx" class="viewData" id = "' + row.id + '" size2T = "' + row.size2T + '"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">  ' + row.size2T + ' </span></a>';
+                                } else if (row.flagExCtInSize2T === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size2T = "' + row.size2T + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-info"> ' + row.size2T + ' </span></a>';
+                                } else {
+                                    return  '<td class="size2T">' + "" + '</td>';
+                                }
+                            },
+                            "aTargets": [21]
+                        },
+                        {
+                            class: "text-center",
+                            "mRender": function (data, type, row) {
+                                if (row.size3T === null) {
+                                    return  '<td class="size3T">' + "" + '</td>';
+                                } else if (row.flagExPrepInSize3T === 1) {
+                                    return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size3T + ' </span></a>';
+                                } else if (row.flagExCtInSize3T === 1 && row.flagExCtOutSize3T === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-rejectEx" class="viewData" id = "' + row.id + '" size3T = "' + row.size3T + '"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">  ' + row.size3T + ' </span></a>';
+                                } else if (row.flagExCtInSize3T === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size3T = "' + row.size3T + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-info"> ' + row.size3T + ' </span></a>';
+                                } else {
+                                    return  '<td class="size3T">' + "" + '</td>';
+                                }
+                            },
+                            "aTargets": [22]
+                        },
+                        {
+                            class: "text-center",
+                            "mRender": function (data, type, row) {
+                                if (row.size4T === null) {
+                                    return  '<td class="size4T">' + "" + '</td>';
+                                } else if (row.flagExPrepInSize4T === 1) {
+                                    return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size4T + ' </span></a>';
+                                } else if (row.flagExCtInSize4T === 1 && row.flagExCtOutSize4T === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-rejectEx" class="viewData" id = "' + row.id + '" size4T = "' + row.size4T + '"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">  ' + row.size4T + ' </span></a>';
+                                } else if (row.flagExCtInSize4T === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size4T = "' + row.size4T + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-info"> ' + row.size4T + ' </span></a>';
+                                } else {
+                                    return  '<td class="size4T">' + "" + '</td>';
+                                }
+                            },
+                            "aTargets": [23]
+                        },
+                        {
+                            class: "text-center",
+                            "mRender": function (data, type, row) {
+                                if (row.size5T === null) {
+                                    return  '<td class="size5T">' + "" + '</td>';
+                                } else if (row.flagExPrepInSize5T === 1) {
+                                    return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size5T + ' </span></a>';
+                                } else if (row.flagExCtInSize5T === 1 && row.flagExCtOutSize5T === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-rejectEx" class="viewData" id = "' + row.id + '" size5T = "' + row.size5T + '"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">  ' + row.size5T + ' </span></a>';
+                                } else if (row.flagExCtInSize5T === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size5T = "' + row.size5T + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-info"> ' + row.size5T + ' </span></a>';
+                                } else {
+                                    return  '<td class="size5T">' + "" + '</td>';
+                                }
+                            },
+                            "aTargets": [24]
+                        },
+                        {
+                            class: "text-center",
+                            "mRender": function (data, type, row) {
+                                if (row.size6T === null) {
+                                    return  '<td class="size6T">' + "" + '</td>';
+                                } else if (row.flagExPrepInSize6T === 1) {
+                                    return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size6T + ' </span></a>';
+                                } else if (row.flagExCtInSize6T === 1 && row.flagExCtOutSize6T === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-rejectEx" class="viewData" id = "' + row.id + '" size6T = "' + row.size6T + '"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">  ' + row.size6T + ' </span></a>';
+                                } else if (row.flagExCtInSize6T === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size6T = "' + row.size6T + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-info"> ' + row.size6T + ' </span></a>';
+                                } else {
+                                    return  '<td class="size6T">' + "" + '</td>';
+                                }
+                            },
+                            "aTargets": [25]
+                        },
+                        {
+                            class: "text-center",
+                            "mRender": function (data, type, row) {
+                                if (row.size7T === null) {
+                                    return  '<td class="size7T">' + "" + '</td>';
+                                } else if (row.flagExPrepInSize7T === 1) {
+                                    return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size7T + ' </span></a>';
+                                } else if (row.flagExCtInSize7T === 1 && row.flagExCtOutSize7T === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-rejectEx" class="viewData" id = "' + row.id + '" size7T = "' + row.size7T + '"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">  ' + row.size7T + ' </span></a>';
+                                } else if (row.flagExCtInSize7T === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size7T = "' + row.size7T + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-info"> ' + row.size7T + ' </span></a>';
+                                } else {
+                                    return  '<td class="size7T">' + "" + '</td>';
+                                }
+                            },
+                            "aTargets": [26]
+                        },
+                        {
+                            class: "text-center",
+                            "mRender": function (data, type, row) {
+                                if (row.size8T === null) {
+                                    return  '<td class="size8T">' + "" + '</td>';
+                                } else if (row.flagExPrepInSize8T === 1) {
+                                    return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size8T + ' </span></a>';
+                                } else if (row.flagExCtInSize8T === 1 && row.flagExCtOutSize8T === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-rejectEx" class="viewData" id = "' + row.id + '" size8T = "' + row.size8T + '"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">  ' + row.size8T + ' </span></a>';
+                                } else if (row.flagExCtInSize8T === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size8T = "' + row.size8T + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-info"> ' + row.size8T + ' </span></a>';
+                                } else {
+                                    return  '<td class="size8T">' + "" + '</td>';
+                                }
+                            },
+                            "aTargets": [27]
+                        },
+                        {
+                            class: "text-center",
+                            "mRender": function (data, type, row) {
+                                if (row.size9T === null) {
+                                    return  '<td class="size9T">' + "" + '</td>';
+                                } else if (row.flagExPrepInSize9T === 1) {
+                                    return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size9T + ' </span></a>';
+                                } else if (row.flagExCtInSize9T === 1 && row.flagExCtOutSize9T === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-rejectEx" class="viewData" id = "' + row.id + '" size9T = "' + row.size9T + '"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">  ' + row.size9T + ' </span></a>';
+                                } else if (row.flagExCtInSize9T === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size9T = "' + row.size9T + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-info"> ' + row.size9T + ' </span></a>';
+                                } else {
+                                    return  '<td class="size9T">' + "" + '</td>';
+                                }
+                            },
+                            "aTargets": [28]
+                        },
+                        {
+                            class: "text-center",
+                            "mRender": function (data, type, row) {
+                                if (row.size10T === null) {
+                                    return  '<td class="size10T">' + "" + '</td>';
+                                } else if (row.flagExPrepInSize10T === 1) {
+                                    return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size10T + ' </span></a>';
+                                } else if (row.flagExCtInSize10T === 1 && row.flagExCtOutSize10T === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-rejectEx" class="viewData" id = "' + row.id + '" size10T = "' + row.size10T + '"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">  ' + row.size10T + ' </span></a>';
+                                } else if (row.flagExCtInSize10T === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size10T = "' + row.size10T + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-info"> ' + row.size10T + ' </span></a>';
+                                } else {
+                                    return  '<td class="size10T">' + "" + '</td>';
+                                }
+                            },
+                            "aTargets": [29]
+                        },
+                        {
+                            class: "text-center",
+                            "mRender": function (data, type, row) {
+                                if (row.size11T === null) {
+                                    return  '<td class="size11T">' + "" + '</td>';
+                                } else if (row.flagExPrepInSize11T === 1) {
+                                    return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size11T + ' </span></a>';
+                                } else if (row.flagExCtInSize11T === 1 && row.flagExCtOutSize11T === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-rejectEx" class="viewData" id = "' + row.id + '" size11T = "' + row.size11T + '"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">  ' + row.size11T + ' </span></a>';
+                                } else if (row.flagExCtInSize11T === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size11T = "' + row.size11T + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-info"> ' + row.size11T + ' </span></a>';
+                                } else {
+                                    return  '<td class="size11T">' + "" + '</td>';
+                                }
+                            },
+                            "aTargets": [30]
+                        },
+                        {
+                            class: "text-center",
+                            "mRender": function (data, type, row) {
+                                if (row.size12T === null) {
+                                    return  '<td class="size12T">' + "" + '</td>';
+                                } else if (row.flagExPrepInSize12T === 1) {
+                                    return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size12T + ' </span></a>';
+                                } else if (row.flagExCtInSize12T === 1 && row.flagExCtOutSize12T === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-rejectEx" class="viewData" id = "' + row.id + '" size12T = "' + row.size12T + '"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">  ' + row.size12T + ' </span></a>';
+                                } else if (row.flagExCtInSize12T === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size12T = "' + row.size12T + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-info"> ' + row.size12T + ' </span></a>';
+                                } else {
+                                    return  '<td class="size12T">' + "" + '</td>';
+                                }
+                            },
+                            "aTargets": [31]
+                        },
+                        {
+                            class: "text-center",
+                            "mRender": function (data, type, row) {
+                                if (row.size13T === null) {
+                                    return  '<td class="size13T">' + "" + '</td>';
+                                } else if (row.flagExPrepInSize13T === 1) {
+                                    return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size13T + ' </span></a>';
+                                } else if (row.flagExCtInSize13T === 1 && row.flagExCtOutSize13T === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-rejectEx" class="viewData" id = "' + row.id + '" size13T = "' + row.size13T + '"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">  ' + row.size13T + ' </span></a>';
+                                } else if (row.flagExCtInSize13T === 1) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size13T = "' + row.size13T + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-info"> ' + row.size13T + ' </span></a>';
+                                } else {
+                                    return  '<td class="size13T">' + "" + '</td>';
+                                }
+                            },
+                            "aTargets": [32]
+                        },
                     ]
+                    ,
+                        "footerCallback": function (row, data, start, end, display) {
+                        var api = this.api(), data;
+                        var aaData = data;
+                        // converting to interger to find total
+                        var intVal = function (i) {
+                            return typeof i === 'string' ?
+                                    i.replace(/[\$,]/g, '') * 1 :
+                                    typeof i === 'number' ?
+                                    i : 0;
+                        };                   
+                        
+                        api.cells( function ( index, data, node ) {
+                            var flagExCtIn1 = aaData[index].flagExCtInSize1; 
+                            var flagExCtIn2 = aaData[index].flagExCtInSize2;
+                            var flagExCtIn3 = aaData[index].flagExCtInSize3;
+                            var flagExCtIn4 = aaData[index].flagExCtInSize4;
+                            var flagExCtIn5 = aaData[index].flagExCtInSize5;
+                            var flagExCtIn6 = aaData[index].flagExCtInSize6;
+                            var flagExCtIn7 = aaData[index].flagExCtInSize7;
+                            var flagExCtIn8 = aaData[index].flagExCtInSize8;
+                            var flagExCtIn9 = aaData[index].flagExCtInSize9;
+                            var flagExCtIn10 = aaData[index].flagExCtInSize10;
+                            var flagExCtIn11 = aaData[index].flagExCtInSize11;
+                            var flagExCtIn12 = aaData[index].flagExCtInSize12;
+                            var flagExCtIn13 = aaData[index].flagExCtInSize13;
+                            var flagExCtIn14 = aaData[index].flagExCtInSize14;
+                            var flagExCtIn15 = aaData[index].flagExCtInSize15;
+                            var flagExCtIn16 = aaData[index].flagExCtInSize16;
+                            var flagExCtIn17 = aaData[index].flagExCtInSize17;
+                            var flagExCtIn18 = aaData[index].flagExCtInSize18;
+                            var flagExCtIn1T = aaData[index].flagExCtInSize1T;
+                            var flagExCtIn2T = aaData[index].flagExCtInSize2T;
+                            var flagExCtIn3T = aaData[index].flagExCtInSize3T;
+                            var flagExCtIn4T = aaData[index].flagExCtInSize4T;
+                            var flagExCtIn5T = aaData[index].flagExCtInSize5T;
+                            var flagExCtIn6T = aaData[index].flagExCtInSize6T;
+                            var flagExCtIn7T = aaData[index].flagExCtInSize7T;
+                            var flagExCtIn8T = aaData[index].flagExCtInSize8T;
+                            var flagExCtIn9T = aaData[index].flagExCtInSize9T;
+                            var flagExCtIn10T = aaData[index].flagExCtInSize10T;
+                            var flagExCtIn11T = aaData[index].flagExCtInSize11T;
+                            var flagExCtIn12T = aaData[index].flagExCtInSize12T;
+                            var flagExCtIn13T = aaData[index].flagExCtInSize13T;
+
+                            var flagExCtOut1 = aaData[index].flagExCtOutSize1; 
+                            var flagExCtOut2 = aaData[index].flagExCtOutSize2;
+                            var flagExCtOut3 = aaData[index].flagExCtOutSize3;
+                            var flagExCtOut4 = aaData[index].flagExCtOutSize4;
+                            var flagExCtOut5 = aaData[index].flagExCtOutSize5;
+                            var flagExCtOut6 = aaData[index].flagExCtOutSize6;
+                            var flagExCtOut7 = aaData[index].flagExCtOutSize7;
+                            var flagExCtOut8 = aaData[index].flagExCtOutSize8;
+                            var flagExCtOut9 = aaData[index].flagExCtOutSize9;
+                            var flagExCtOut10 = aaData[index].flagExCtOutSize10;
+                            var flagExCtOut11 = aaData[index].flagExCtOutSize11;
+                            var flagExCtOut12 = aaData[index].flagExCtOutSize12;
+                            var flagExCtOut13 = aaData[index].flagExCtOutSize13;
+                            var flagExCtOut14 = aaData[index].flagExCtOutSize14;
+                            var flagExCtOut15 = aaData[index].flagExCtOutSize15;
+                            var flagExCtOut16 = aaData[index].flagExCtOutSize16;
+                            var flagExCtOut17 = aaData[index].flagExCtOutSize17;
+                            var flagExCtOut18 = aaData[index].flagExCtOutSize18;
+                            var flagExCtOut1T = aaData[index].flagExCtOutSize1T;
+                            var flagExCtOut2T = aaData[index].flagExCtOutSize2T;
+                            var flagExCtOut3T = aaData[index].flagExCtOutSize3T;
+                            var flagExCtOut4T = aaData[index].flagExCtOutSize4T;
+                            var flagExCtOut5T = aaData[index].flagExCtOutSize5T;
+                            var flagExCtOut6T = aaData[index].flagExCtOutSize6T;
+                            var flagExCtOut7T = aaData[index].flagExCtOutSize7T;
+                            var flagExCtOut8T = aaData[index].flagExCtOutSize8T;
+                            var flagExCtOut9T = aaData[index].flagExCtOutSize9T;
+                            var flagExCtOut10T = aaData[index].flagExCtOutSize10T;
+                            var flagExCtOut11T = aaData[index].flagExCtOutSize11T;
+                            var flagExCtOut12T = aaData[index].flagExCtOutSize12T;
+                            var flagExCtOut13T = aaData[index].flagExCtOutSize13T;
+                            
+                            var ExCtSize1 = aaData[index].size1;
+                            var ExCtSize2 = aaData[index].size2;
+                            var ExCtSize3 = aaData[index].size3;
+                            var ExCtSize4 = aaData[index].size4;
+                            var ExCtSize5 = aaData[index].size5;
+                            var ExCtSize6 = aaData[index].size6;
+                            var ExCtSize7 = aaData[index].size7;
+                            var ExCtSize8 = aaData[index].size8;
+                            var ExCtSize9 = aaData[index].size9;
+                            var ExCtSize10 = aaData[index].size10;
+                            var ExCtSize11 = aaData[index].size11;
+                            var ExCtSize12 = aaData[index].size12;
+                            var ExCtSize13 = aaData[index].size13;
+                            var ExCtSize14 = aaData[index].size14;
+                            var ExCtSize15 = aaData[index].size15;
+                            var ExCtSize16 = aaData[index].size16;
+                            var ExCtSize17 = aaData[index].size17;
+                            var ExCtSize18 = aaData[index].size18;
+                            var ExCtSize1T = aaData[index].size1T;
+                            var ExCtSize2T = aaData[index].size2T;
+                            var ExCtSize3T = aaData[index].size3T;
+                            var ExCtSize4T = aaData[index].size4T;
+                            var ExCtSize5T = aaData[index].size5T;
+                            var ExCtSize6T = aaData[index].size6T;
+                            var ExCtSize7T = aaData[index].size7T;
+                            var ExCtSize8T = aaData[index].size8T;
+                            var ExCtSize9T = aaData[index].size9T;
+                            var ExCtSize10T = aaData[index].size10T;
+                            var ExCtSize11T = aaData[index].size11T;
+                            var ExCtSize12T = aaData[index].size12T;
+                            var ExCtSize13T = aaData[index].size13T;
+                            
+                            sumINEx += flagExCtIn1 === 1 && flagExCtOut1 === null ?  ExCtSize1 : 0;
+                            sumINEx += flagExCtIn2 === 1 && flagExCtOut2 === null ?  ExCtSize2 : 0;
+                            sumINEx += flagExCtIn4 === 1 && flagExCtOut4 === null ?  ExCtSize4 : 0;
+                            sumINEx += flagExCtIn5 === 1 && flagExCtOut5 === null ?  ExCtSize5 : 0;
+                            sumINEx += flagExCtIn6 === 1 && flagExCtOut6 === null ?  ExCtSize6 : 0;
+                            sumINEx += flagExCtIn7 === 1 && flagExCtOut7 === null ?  ExCtSize7 : 0;
+                            sumINEx += flagExCtIn8 === 1 && flagExCtOut8 === null ?  ExCtSize8 : 0;
+                            sumINEx += flagExCtIn9 === 1 && flagExCtOut9 === null ?  ExCtSize9 : 0;
+                            sumINEx += flagExCtIn10 === 1 && flagExCtOut10 === null ?  ExCtSize10 : 0;
+                            sumINEx += flagExCtIn11 === 1 && flagExCtOut11 === null ?  ExCtSize11 : 0;
+                            sumINEx += flagExCtIn12 === 1 && flagExCtOut12 === null ?  ExCtSize12 : 0;
+                            sumINEx += flagExCtIn13 === 1 && flagExCtOut13 === null ?  ExCtSize13 : 0;
+                            sumINEx += flagExCtIn14 === 1 && flagExCtOut14 === null ?  ExCtSize14 : 0;
+                            sumINEx += flagExCtIn15 === 1 && flagExCtOut15 === null ?  ExCtSize15 : 0;
+                            sumINEx += flagExCtIn16 === 1 && flagExCtOut16 === null ?  ExCtSize16 : 0;
+                            sumINEx += flagExCtIn17 === 1 && flagExCtOut17 === null ?  ExCtSize17 : 0;
+                            sumINEx += flagExCtIn18 === 1 && flagExCtOut18 === null ?  ExCtSize18 : 0;
+                            sumINEx += flagExCtIn1T === 1 && flagExCtOut1T === null ?  ExCtSize1T : 0;
+                            sumINEx += flagExCtIn2T === 1 && flagExCtOut2T === null ?  ExCtSize2T : 0;
+                            sumINEx += flagExCtIn3T === 1 && flagExCtOut3T === null ?  ExCtSize3T : 0;
+                            sumINEx += flagExCtIn4T === 1 && flagExCtOut4T === null ?  ExCtSize4T : 0;
+                            sumINEx += flagExCtIn5T === 1 && flagExCtOut5T === null ?  ExCtSize5T : 0;
+                            sumINEx += flagExCtIn6T === 1 && flagExCtOut6T === null ?  ExCtSize6T : 0;
+                            sumINEx += flagExCtIn7T === 1 && flagExCtOut7T === null ?  ExCtSize7T : 0;
+                            sumINEx += flagExCtIn8T === 1 && flagExCtOut8T === null ?  ExCtSize8T : 0;
+                            sumINEx += flagExCtIn9T === 1 && flagExCtOut9T === null ?  ExCtSize9T : 0;
+                            sumINEx += flagExCtIn10T === 1 && flagExCtOut10T === null ?  ExCtSize10T : 0;
+                            sumINEx += flagExCtIn11T === 1 && flagExCtOut11T === null ?  ExCtSize11T : 0;
+                            sumINEx += flagExCtIn12T === 1 && flagExCtOut12T === null ?  ExCtSize12T : 0;
+                            sumINEx += flagExCtIn13T === 1 && flagExCtOut13T === null ?  ExCtSize13T : 0;
+
+                            sumOUTEx += flagExCtOut1 === 1 ? ExCtSize1 : 0;
+                            sumOUTEx += flagExCtOut2 === 1 ? ExCtSize2 : 0;
+                            sumOUTEx += flagExCtOut3 === 1 ? ExCtSize3 : 0;
+                            sumOUTEx += flagExCtOut4 === 1 ? ExCtSize4 : 0;
+                            sumOUTEx += flagExCtOut5 === 1 ? ExCtSize5 : 0;
+                            sumOUTEx += flagExCtOut6 === 1 ? ExCtSize6 : 0;
+                            sumOUTEx += flagExCtOut7 === 1 ? ExCtSize7 : 0;
+                            sumOUTEx += flagExCtOut8 === 1 ? ExCtSize8 : 0;
+                            sumOUTEx += flagExCtOut9 === 1 ? ExCtSize9 : 0;
+                            sumOUTEx += flagExCtOut10 === 1 ? ExCtSize10 : 0;
+                            sumOUTEx += flagExCtOut11 === 1 ? ExCtSize11 : 0;
+                            sumOUTEx += flagExCtOut12 === 1 ? ExCtSize12 : 0;
+                            sumOUTEx += flagExCtOut13 === 1 ? ExCtSize13 : 0;
+                            sumOUTEx += flagExCtOut14 === 1 ? ExCtSize14 : 0;
+                            sumOUTEx += flagExCtOut15 === 1 ? ExCtSize15 : 0;
+                            sumOUTEx += flagExCtOut16 === 1 ? ExCtSize16 : 0;
+                            sumOUTEx += flagExCtOut17 === 1 ? ExCtSize17 : 0;
+                            sumOUTEx += flagExCtOut18 === 1 ? ExCtSize18 : 0;
+                            sumOUTEx += flagExCtOut1T === 1 ? ExCtSize1T : 0;
+                            sumOUTEx += flagExCtOut2T === 1 ? ExCtSize2T : 0;
+                            sumOUTEx += flagExCtOut3T === 1 ? ExCtSize3T : 0;
+                            sumOUTEx += flagExCtOut4T === 1 ? ExCtSize4T : 0;
+                            sumOUTEx += flagExCtOut5T === 1 ? ExCtSize5T : 0;
+                            sumOUTEx += flagExCtOut6T === 1 ? ExCtSize6T : 0;
+                            sumOUTEx += flagExCtOut7T === 1 ? ExCtSize7T : 0;
+                            sumOUTEx += flagExCtOut8T === 1 ? ExCtSize8T : 0;
+                            sumOUTEx += flagExCtOut9T === 1 ? ExCtSize9T : 0;
+                            sumOUTEx += flagExCtOut10T === 1 ? ExCtSize10T : 0;
+                            sumOUTEx += flagExCtOut11T === 1 ? ExCtSize11T : 0;
+                            sumOUTEx += flagExCtOut12T === 1 ? ExCtSize12T : 0;
+                            sumOUTEx += flagExCtOut13T === 1 ? ExCtSize13T : 0;
+                        }, 0);
+                        var sumSize1 = 0;
+                        var sumSize2 = 0;
+                        var sumSize3 = 0;
+                        var sumSize4 = 0;
+                        var sumSize5 = 0;
+                        var sumSize6 = 0;
+                        var sumSize7 = 0;
+                        var sumSize8 = 0;
+                        var sumSize9 = 0;
+                        var sumSize10 = 0;
+                        var sumSize11 = 0;
+                        var sumSize12 = 0;
+                        var sumSize13 = 0;
+                        var sumSize14 = 0;
+                        var sumSize15 = 0;
+                        var sumSize16 = 0;
+                        var sumSize17 = 0;
+                        var sumSize18 = 0;
+                        var sumSize1T = 0;
+                        var sumSize2T = 0;
+                        var sumSize3T = 0;
+                        var sumSize4T = 0;
+                        var sumSize5T = 0;
+                        var sumSize6T = 0;
+                        var sumSize7T = 0;
+                        var sumSize8T = 0;
+                        var sumSize9T = 0;
+                        var sumSize10T = 0;
+                        var sumSize11T = 0;
+                        var sumSize12T = 0;
+                        var sumSize13T = 0;
+                        // computing column Total of the complete result 
+                        var size1 =  api.cells( function ( index, data, node ) {
+                                    var flagExCtIn1 = aaData[index].flagExCtInSize1; 
+                                    sumSize1 += flagExCtIn1 === 1 ? aaData[index].size1 : 0;
+                                    }, 0);
+
+                        var size1T = api.cells( function ( index, data, node ) {
+                                    var flagExCtIn1T = aaData[index].flagExCtInSize1T; 
+                                    sumSize1T += flagExCtIn1T === 1 ? aaData[index].size1T : 0;
+                                    }, 0);
+
+                        var size2 = api.cells( function ( index, data, node ) {
+                                    var flagExCtIn2 = aaData[index].flagExCtInSize2; 
+                                    sumSize2 += flagExCtIn2 === 1 ? aaData[index].size2 : 0;
+                                    }, 0);
+
+                        var size2T = api.cells( function ( index, data, node ) {
+                                    var flagExCtIn2T = aaData[index].flagExCtInSize2T; 
+                                    sumSize2T += flagExCtIn2T === 1 ? aaData[index].size2T : 0;
+                                    }, 0);
+
+                        var size3 = api.cells( function ( index, data, node ) {
+                                    var flagExCtIn3 = aaData[index].flagExCtInSize3; 
+                                    sumSize3 += flagExCtIn3 === 1 ? aaData[index].size3 : 0;
+                                    }, 0);
+
+                        var size3T = api.cells( function ( index, data, node ) {
+                                    var flagExCtIn3T = aaData[index].flagExCtInSize3T; 
+                                    sumSize3T += flagExCtIn3T === 1 ? aaData[index].size3T : 0;
+                                    }, 0);
+
+                        var size4 = api.cells( function ( index, data, node ) {
+                                    var flagExCtIn4 = aaData[index].flagExCtInSize4; 
+                                    sumSize4 += flagExCtIn4 === 1 ? aaData[index].size4 : 0;
+                                    }, 0);
+
+                        var size4T = api.cells( function ( index, data, node ) {
+                                    var flagExCtIn4T = aaData[index].flagExCtInSize4T; 
+                                    sumSize4T += flagExCtIn4T === 1 ? aaData[index].size4T : 0;
+                                    }, 0);
+                       
+                        var size5 = api.cells( function ( index, data, node ) {
+                                    var flagExCtIn5 = aaData[index].flagExCtInSize5; 
+                                    sumSize5 += flagExCtIn5 === 1 ? aaData[index].size5 : 0;
+                                    }, 0);
+                                    
+                        var size5T =  api.cells( function ( index, data, node ) {
+                                    var flagExCtIn5T = aaData[index].flagExCtInSize5T;
+                                    sumSize5T += flagExCtIn5T === 1 ? aaData[index].size5T : 0;
+                                    }, 0);
+
+                        var size6 = api.cells( function ( index, data, node ) {
+                                    var flagExCtIn6 = aaData[index].flagExCtInSize6;
+                                    sumSize6 += flagExCtIn6 === 1 ? aaData[index].size6 : 0;
+                                    }, 0);
+
+                        var size6T = api.cells( function ( index, data, node ) {
+                                    var flagExCtIn6T = aaData[index].flagExCtInSize6T;
+                                    sumSize6T += flagExCtIn6T === 1 ? aaData[index].size6T : 0;
+                                    }, 0);
+
+                        var size7 = api.cells( function ( index, data, node ) {
+                                    var flagExCtIn7 = aaData[index].flagExCtInSize7;
+                                    sumSize7 += flagExCtIn7 === 1 ? aaData[index].size7 : 0;
+                                    }, 0);
+
+
+                        var size7T = api.cells( function ( index, data, node ) {
+                                    var flagExCtIn7T = aaData[index].flagExCtInSize7T;
+                                    sumSize7T += flagExCtIn7T === 1 ? aaData[index].size7T : 0;
+                                    }, 0);
+
+
+                        var size8 = api.cells( function ( index, data, node ) {
+                                    var flagExCtIn8 = aaData[index].flagExCtInSize8;
+                                    sumSize8 += flagExCtIn8 === 1 ? aaData[index].size8 : 0;
+                                    }, 0);
+
+                        var size8T = api.cells( function ( index, data, node ) {
+                                    var flagExCtIn8T = aaData[index].flagExCtInSize8T;
+                                    sumSize8T += flagExCtIn8T === 1 ? aaData[index].size8T : 0;
+                                    }, 0);
+
+
+                        var size9 = api.cells( function ( index, data, node ) {
+                                    var flagExCtIn9 = aaData[index].flagExCtInSize9;
+                                    sumSize9 += flagExCtIn9 === 1 ? aaData[index].size9 : 0;
+                                    }, 0);
+
+                        var size9T = api.cells( function ( index, data, node ) {
+                                    var flagExCtIn9T = aaData[index].flagExCtInSize9T;
+                                    sumSize9T += flagExCtIn9T === 1 ? aaData[index].size9T : 0;
+                                    }, 0);
+
+                        var size10 = api.cells( function ( index, data, node ) {
+                                    var flagExCtIn10 = aaData[index].flagExCtInSize10;
+                                    sumSize10+= flagExCtIn10 === 1 ? aaData[index].size10 : 0;
+                                    }, 0);
+
+                        var size10T = api.cells( function ( index, data, node ) {
+                                    var flagExCtIn10T = aaData[index].flagExCtInSize10T;
+                                    sumSize10T += flagExCtIn10T === 1 ? aaData[index].size10T : 0;
+                                    }, 0);
+
+                        var size11 = api.cells( function ( index, data, node ) {
+                                    var flagExCtIn11 = aaData[index].flagExCtInSize11;
+                                    sumSize11+= flagExCtIn11 === 1 ? aaData[index].size11 : 0;
+                                    }, 0);
+
+                        var size11T = api.cells( function ( index, data, node ) {
+                                    var flagExCtIn11T = aaData[index].flagExCtInSize11T;
+                                    sumSize11T += flagExCtIn11T === 1 ? aaData[index].size11T : 0;
+                                    }, 0);
+
+                        var size12 = api.cells( function ( index, data, node ) {
+                                    var flagExCtIn12 = aaData[index].flagExCtInSize12;
+                                    sumSize12 += flagExCtIn12 === 1 ? aaData[index].size12 : 0;
+                                    }, 0);
+
+                        var size12T = api.cells( function ( index, data, node ) {
+                                    var flagExCtIn12T = aaData[index].flagExCtInSize12T;
+                                    sumSize12T += flagExCtIn12T === 1 ? aaData[index].size12T : 0;
+                                    }, 0);
+
+                        var size13 = api.cells( function ( index, data, node ) {
+                                    var flagExCtIn13 = aaData[index].flagExCtInSize13;
+                                    sumSize13 += flagExCtIn13 === 1 ? aaData[index].size13 : 0;
+                                    }, 0);
+
+                        var size13T = api.cells( function ( index, data, node ) {
+                                    var flagExCtIn13T= aaData[index].flagExCtInSize13T;
+                                    sumSize13T += flagExCtIn13T === 1 ? aaData[index].size13T : 0;
+                                    }, 0);
+
+                        var size14 = api.cells( function ( index, data, node ) {
+                                    var flagExCtIn14 = aaData[index].flagExCtInSize14;
+                                    sumSize14 += flagExCtIn14 === 1 ? aaData[index].size14 : 0;
+                                    }, 0);
+
+                        var size15 = api.cells( function ( index, data, node ) {
+                                    var flagExCtIn15 = aaData[index].flagExCtInSize15;
+                                    sumSize15 += flagExCtIn15 === 1 ? aaData[index].size15 : 0;
+                                    }, 0);
+
+                        var size16 = api.cells( function ( index, data, node ) {
+                                    var flagExCtIn16 = aaData[index].flagExCtInSize16;
+                                    sumSize16 += flagExCtIn16 === 1 ? aaData[index].size16 : 0;
+                                    }, 0);
+
+                        var size17 = api.cells( function ( index, data, node ) {
+                                    var flagExCtIn17 = aaData[index].flagExCtInSize17;
+                                    sumSize17 += flagExCtIn17 === 1 ? aaData[index].size17 : 0;
+                                    }, 0);
+
+                        var size18 = api.cells( function ( index, data, node ) {
+                                    var flagExCtIn18 = aaData[index].flagExCtInSize18;
+                                    sumSize18 += flagExCtIn18 === 1 ? aaData[index].size18 : 0;
+                                    }, 0);
+                                    
+                        var jumlah = sumSize1 + sumSize1T + sumSize2 + sumSize2T + sumSize3 + sumSize3T + sumSize4 + sumSize4T +
+                                    sumSize5 + sumSize5T + sumSize6 + sumSize6T + sumSize7 + sumSize7T + sumSize8 + sumSize8T +
+                                    sumSize9 + sumSize9T + sumSize10 + sumSize10T + sumSize11 + sumSize11T + sumSize12 + sumSize12T +
+                                    sumSize13 + sumSize13T + sumSize14 + sumSize15 + sumSize16 + sumSize17 + sumSize18;
+                        
+                        var rowSum = jumlah;
+
+                        $(api.column(0).footer()).html('');
+                        $(api.column(1).footer()).html('sum');
+                        $(api.column(2).footer()).html(sumSize1);
+                        $(api.column(3).footer()).html(sumSize2);
+                        $(api.column(4).footer()).html(sumSize3);
+                        $(api.column(5).footer()).html(sumSize4);
+                        $(api.column(6).footer()).html(sumSize5);
+                        $(api.column(7).footer()).html(sumSize6);
+                        $(api.column(8).footer()).html(sumSize7);
+                        $(api.column(9).footer()).html(sumSize8);
+                        $(api.column(10).footer()).html(sumSize9);
+                        $(api.column(11).footer()).html(sumSize10);
+                        $(api.column(12).footer()).html(sumSize11);
+                        $(api.column(13).footer()).html(sumSize12);
+                        $(api.column(14).footer()).html(sumSize13);
+                        $(api.column(15).footer()).html(sumSize14);
+                        $(api.column(16).footer()).html(sumSize15);
+                        $(api.column(17).footer()).html(sumSize16);
+                        $(api.column(18).footer()).html(sumSize17);
+                        $(api.column(19).footer()).html(sumSize18);
+                        $(api.column(20).footer()).html(sumSize1T);
+                        $(api.column(21).footer()).html(sumSize2T);
+                        $(api.column(22).footer()).html(sumSize3T);
+                        $(api.column(23).footer()).html(sumSize4T);
+                        $(api.column(24).footer()).html(sumSize5T);
+                        $(api.column(25).footer()).html(sumSize6T);
+                        $(api.column(26).footer()).html(sumSize7T);
+                        $(api.column(27).footer()).html(sumSize8T);
+                        $(api.column(28).footer()).html(sumSize9T);
+                        $(api.column(29).footer()).html(sumSize10T);
+                        $(api.column(30).footer()).html(sumSize11T);
+                        $(api.column(31).footer()).html(sumSize12T);
+                        $(api.column(32).footer()).html(sumSize13T);
+                        $(api.column(33).footer()).html(rowSum);
+                        $('#sumInEx').val(sumINEx);
+                        $('#sumOutEx').val(sumOUTEx);
+                    },
+                    "scrollX": true
                 });
 
                 var id = null;
@@ -1387,6 +2135,79 @@
                     approve.modal({show: true});
                     return false;
                 });
+                
+                var id = null;
+                var size1 = null;
+                var size2 = null;
+                var size3 = null;
+                var size4 = null;
+                var size5 = null;
+                var size6 = null;
+                var size7 = null;
+                var size8 = null;
+                var size9 = null;
+                var size10 = null;
+                var size11 = null;
+                var size12 = null;
+                var size13 = null;
+                var size14 = null;
+                var size15 = null;
+                var size16 = null;
+                var size17 = null;
+                var size18 = null;
+                var size1T = null;
+                var size2T = null;
+                var size3T = null;
+                var size4T = null;
+                var size5T = null;
+                var size6T = null;
+                var size7T = null;
+                var size8T = null;
+                var size9T = null;
+                var size10T = null;
+                var size11T = null;
+                var size12T = null;
+                var size13T = null;
+                
+                $(document).on('click', '.viewData', function (e) {
+                    e.preventDefault();
+                    id = $(this).attr('id');
+                    size1 = $(this).attr('size1');
+                    size2 = $(this).attr('size2');
+                    size3 = $(this).attr('size3');
+                    size4 = $(this).attr('size4');
+                    size5 = $(this).attr('size5');
+                    size6 = $(this).attr('size6');
+                    size7 = $(this).attr('size7');
+                    size8 = $(this).attr('size8');
+                    size9 = $(this).attr('size9');
+                    size10 = $(this).attr('size10');
+                    size11 = $(this).attr('size11');
+                    size12 = $(this).attr('size12');
+                    size13 = $(this).attr('size13');
+                    size14 = $(this).attr('size14');
+                    size15 = $(this).attr('size15');
+                    size16 = $(this).attr('size16');
+                    size17 = $(this).attr('size17');
+                    size18 = $(this).attr('size18');
+                    size1T = $(this).attr('size1T');
+                    size2T = $(this).attr('size2T');
+                    size3T = $(this).attr('size3T');
+                    size4T = $(this).attr('size4T');
+                    size5T = $(this).attr('size5T');
+                    size6T = $(this).attr('size6T');
+                    size7T = $(this).attr('size7T');
+                    size8T = $(this).attr('size8T');
+                    size9T = $(this).attr('size9T');
+                    size10T = $(this).attr('size10T');
+                    size11T = $(this).attr('size11T');
+                    size12T = $(this).attr('size12T');
+                    size13T = $(this).attr('size13T');
+
+                    var approveEx = $('confirm-approveEx');
+                    approveEx.modal({show: true});
+                    return false;
+                });
 
 
                 $("#btn-approve").click(function () {
@@ -1435,6 +2256,53 @@
                         oTable2.fnDraw();
                     });
                 });
+                
+                $("#btn-approveEx").click(function () {
+                    var dpt = $('#departement').val();
+                    var dataJson = new Object();
+                    dataJson = {
+                        "id": id,
+                        "size1": size1,
+                        "size2": size2,
+                        "size3": size3,
+                        "size4": size4,
+                        "size5": size5,
+                        "size6": size6,
+                        "size7": size7,
+                        "size8": size8,
+                        "size9": size9,
+                        "size10": size10,
+                        "size11": size11,
+                        "size12": size12,
+                        "size13": size13,
+                        "size14": size14,
+                        "size15": size15,
+                        "size16": size16,
+                        "size17": size17,
+                        "size18": size18,
+                        "size1T": size1T,
+                        "size2T": size2T,
+                        "size3T": size3T,
+                        "size4T": size4T,
+                        "size5T": size5T,
+                        "size6T": size6T,
+                        "size7T": size7T,
+                        "size8T": size8T,
+                        "size9T": size9T,
+                        "size10T": size10T,
+                        "size11T": size11T,
+                        "size12T": size12T,
+                        "size13T": size13T,
+                        "departement": dpt
+                    };
+                    submit('/operator/kanban/approve-out', JSON.stringify(dataJson), function (data) {
+                        $("input[name='id']").val(data.id);
+                          sumINEx = 0;
+                          sumOUTEx = 0;
+                        oTable.fnDraw();
+                        oTable2.fnDraw();
+                    });
+                });
 
                 $("#btn-reject").click(function () {
                     var dpt = $('#departement').val();
@@ -1479,6 +2347,53 @@
                         $("input[name='id']").val(data.id);
                           sumIN = 0;
                             sumOUT = 0;
+                        oTable.fnDraw();
+                    });
+                });
+                
+                $("#btn-rejectEx").click(function () {
+                    var dpt = $('#departement').val();
+                    var dataJson = new Object();
+                    dataJson = {
+                        "id": id,
+                        "size1": size1,
+                        "size2": size2,
+                        "size3": size3,
+                        "size4": size4,
+                        "size5": size5,
+                        "size6": size6,
+                        "size7": size7,
+                        "size8": size8,
+                        "size9": size9,
+                        "size10": size10,
+                        "size11": size11,
+                        "size12": size12,
+                        "size13": size13,
+                        "size14": size14,
+                        "size15": size15,
+                        "size16": size16,
+                        "size17": size17,
+                        "size18": size18,
+                        "size1T": size1T,
+                        "size2T": size2T,
+                        "size3T": size3T,
+                        "size4T": size4T,
+                        "size5T": size5T,
+                        "size6T": size6T,
+                        "size7T": size7T,
+                        "size8T": size8T,
+                        "size9T": size9T,
+                        "size10T": size10T,
+                        "size11T": size11T,
+                        "size12T": size12T,
+                        "size13T": size13T,
+                        "departement": dpt
+                    };
+                    console.log(JSON.stringify(dataJson));
+                    submit('/operator/kanban/reject-out', JSON.stringify(dataJson), function (data) {
+                        $("input[name='id']").val(data.id);
+                          sumINEx = 0;
+                            sumOUTEx = 0;
                         oTable.fnDraw();
                     });
                 });
@@ -1687,7 +2602,7 @@
                                            class="table table-striped table-bordered table-hover table-full-width">
                                         <thead>
                                             <tr>
-                                                <th>Select All</th>
+                                                <th>Id</th>
                                                 <th>G</th>
                                                 <th>1</th>
                                                 <th>2</th>
@@ -1825,8 +2740,47 @@
                                                 <th>11T</th>
                                                 <th>12T</th>
                                                 <th>13T</th>
+                                                <th>Sum</th>
                                             </tr>
                                         </thead>
+                                        <tfoot align="right">
+                                            <tr>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                            </tr>
+                                        </tfoot>
                                     </table>
                                 </div>
                             </div>
