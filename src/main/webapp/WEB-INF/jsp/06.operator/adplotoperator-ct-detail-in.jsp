@@ -2280,7 +2280,6 @@
                         sumIN = 0;
                         sumOUT = 0;
                         oTable.fnDraw();
-                        oTable2.fnDraw();
                     });
                 });
                 
@@ -2327,7 +2326,6 @@
                         $("input[name='id']").val(data.id);
                         sumINEx = 0;
                         sumOUTEx = 0;
-                        oTable.fnDraw();
                         oTable2.fnDraw();
                     });
                 });

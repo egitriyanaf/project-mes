@@ -1765,6 +1765,7 @@
                             
                             sumINEx += flagExCtIn1 === 1 && flagExCtOut1 === null ?  ExCtSize1 : 0;
                             sumINEx += flagExCtIn2 === 1 && flagExCtOut2 === null ?  ExCtSize2 : 0;
+                            sumINEx += flagExCtIn3 === 1 && flagExCtOut3 === null ?  ExCtSize3 : 0;
                             sumINEx += flagExCtIn4 === 1 && flagExCtOut4 === null ?  ExCtSize4 : 0;
                             sumINEx += flagExCtIn5 === 1 && flagExCtOut5 === null ?  ExCtSize5 : 0;
                             sumINEx += flagExCtIn6 === 1 && flagExCtOut6 === null ?  ExCtSize6 : 0;
@@ -2016,12 +2017,12 @@
                                     sumSize18 += flagExCtIn18 === 1 ? aaData[index].size18 : 0;
                                     }, 0);
                                     
-                        var jumlah = sumSize1 + sumSize1T + sumSize2 + sumSize2T + sumSize3 + sumSize3T + sumSize4 + sumSize4T +
+                        var sumjumlah = sumSize1 + sumSize1T + sumSize2 + sumSize2T + sumSize3 + sumSize3T + sumSize4 + sumSize4T +
                                     sumSize5 + sumSize5T + sumSize6 + sumSize6T + sumSize7 + sumSize7T + sumSize8 + sumSize8T +
                                     sumSize9 + sumSize9T + sumSize10 + sumSize10T + sumSize11 + sumSize11T + sumSize12 + sumSize12T +
                                     sumSize13 + sumSize13T + sumSize14 + sumSize15 + sumSize16 + sumSize17 + sumSize18;
                         
-                        var rowSum = jumlah;
+                        var rowSum = sumjumlah;
 
                         $(api.column(0).footer()).html('');
                         $(api.column(1).footer()).html('sum');
@@ -2253,7 +2254,6 @@
                           sumIN = 0;
                             sumOUT = 0;
                         oTable.fnDraw();
-                        oTable2.fnDraw();
                     });
                 });
                 
@@ -2299,7 +2299,6 @@
                         $("input[name='id']").val(data.id);
                           sumINEx = 0;
                           sumOUTEx = 0;
-                        oTable.fnDraw();
                         oTable2.fnDraw();
                     });
                 });
@@ -2394,7 +2393,7 @@
                         $("input[name='id']").val(data.id);
                           sumINEx = 0;
                             sumOUTEx = 0;
-                        oTable.fnDraw();
+                        oTable2.fnDraw();
                     });
                 });
 
@@ -2782,6 +2781,22 @@
                                             </tr>
                                         </tfoot>
                                     </table>
+                                    <div class="form-group">
+                                        <label class="col-md-1 control-label">IN/ WIP<span class="required"></span></label>
+                                        <div class="col-md-3">
+                                            <div>
+                                                <input id="sumInEx" disabled value="" class="form-control"  placeholder="IN/ WIP Express Kanban" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-1 control-label">OUT<span class="required"></span></label>
+                                        <div class="col-md-3">
+                                            <div>
+                                                <input id="sumOutEx" disabled value="" class="form-control"  placeholder="OUT Express Kanban" />
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
