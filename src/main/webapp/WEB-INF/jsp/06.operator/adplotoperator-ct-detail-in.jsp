@@ -106,7 +106,15 @@
                         {
                             class: "text-center",
                             "mRender": function (data, type, row) {
-if(row.size1===null){return'<td class="size1">'+""+'</td>'}else if(row.flagCtInSize1===1&&row.flagCtOutSize1===1){return'<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">'+row.size1+' </span></a>'}else if(row.flagCtInSize1===null){return'<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "'+row.id+'" size1 = "'+row.size1+'"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> '+row.size1+' </span></a>'}else{return'<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-reject" class="viewData" id = "'+row.id+'" size1 = "'+row.size1+'"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-warning">  '+row.size1+' </span></a>'}
+                                if (row.size1 === null) {
+                                    return  '<td class="size1">' + "" + '</td>';
+                                } else if (row.flagCtInSize1 === 1 && row.flagCtOutSize1 === 1) {
+                                    return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size1 + ' </span></a>';
+                                } else if (row.flagCtInSize1 === null) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approve" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size1 + ' </span></a>';
+                                } else {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-reject" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-warning">  ' + row.size1 + ' </span></a>';
+                                }
                             },
                             "aTargets": [2]
                         },
