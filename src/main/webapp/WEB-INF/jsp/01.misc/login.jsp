@@ -38,11 +38,14 @@
 <!-- main -->
 <div class="w3layouts-main"> 
 	<div class="bg-layer">
-		<h1><img src="${pageContext.request.contextPath}/assets/login-template/ADF-Logo.png" alt="logo adf" width="300" height="150"></h1>
+            <br>
+            <br>
+
 		<div class="header-main">
 			<div class="main-icon">
-                            <img src="${pageContext.request.contextPath}/assets/login-template/mesapp.png">
+                            <img src="${pageContext.request.contextPath}/assets/login-template/ADF-Logo.png">
 			</div>
+                        <br>
 			<div class="header-left-bottom">
                             <form action="${pageContext.request.contextPath}/j_spring_security_check" method="post" class="login100-form validate-form" role="form" data-toggle="validator">
 				<c:if test="${param.error}">
