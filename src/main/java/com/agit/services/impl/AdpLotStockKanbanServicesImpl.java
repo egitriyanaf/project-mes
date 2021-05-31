@@ -212,6 +212,7 @@ public class AdpLotStockKanbanServicesImpl extends AdpSimpleServiceImpl<JdcAdpTx
         if (StringUtils.isNotEmpty(poNo)) {
             criteria.add(Restrictions.ilike("poNo", poNo, MatchMode.ANYWHERE));
         }
+        criteria.addOrder(Order.asc("hourly"));
         return getDataTablesFromCriteria(criteria, dataTables);
     }
     

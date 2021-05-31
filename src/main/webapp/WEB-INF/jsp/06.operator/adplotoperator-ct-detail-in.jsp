@@ -1064,7 +1064,7 @@
                         $('#sumIn').val(sumIN);
                         $('#sumOut').val(sumOUT);
                     },
-                    "scrollX": true
+                    "scrollX": true,
                 });
                 
                 var sumINEx = 0;
@@ -1139,7 +1139,7 @@
                         }
                             ,"aTargets": [0]
                         },
-                        {
+                        {   
                             class: "text-center",
                             "mRender": function (data, type, row) {
                                 var list = '<td><input type="hidden" class="linesClass" name-data="hourly" name="lines[' + rowindex + '][hourly]" value="' + row.hourly + '" /></td>';
@@ -1622,7 +1622,7 @@
                             "aTargets": [32]
                         },
                         
-                    ]               
+                    ]              
                     ,
                     "footerCallback": function (row, data, start, end, display) {
                         var api = this.api(), data;
@@ -2108,7 +2108,7 @@
                         $('#sumInEx').val(sumINEx);
                         $('#sumOutEx').val(sumOUTEx);
                     },
-                    "scrollX": true
+                    "scrollX": true,
                 });
 
                 var id = null;
