@@ -14,6 +14,7 @@ import java.util.List;
 import org.hibernate.Criteria;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.MatchMode;
+import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.Modifying;
@@ -56,8 +57,9 @@ public class AdpLotStockKanbanServicesImpl extends AdpSimpleServiceImpl<JdcAdpTx
         String poItem = (String) searchMap.get("poItem");
         String poNo = (String) searchMap.get("poNo");
         Long userId = (Long) searchMap.get("userId");
-
+        
         Criteria criteria = sessionFactory.getCurrentSession().createCriteria(JdcAdpTxnLotapprv.class);
+
 
         criteria.add(Restrictions.not(Restrictions.in("status", new Long[]{2l, 3l})));
         criteria.add(Restrictions.eq("assignTo", userId));
@@ -111,6 +113,7 @@ public class AdpLotStockKanbanServicesImpl extends AdpSimpleServiceImpl<JdcAdpTx
         data.setSize2(txn.getSize2());
         data.setSize2T(txn.getSize2T());
         data.setSize3(txn.getSize3());
+        data.setSize3T(txn.getSize3T());
         data.setSize4(txn.getSize4());
         data.setSize4T(txn.getSize4T());
         data.setSize5(txn.getSize5());

@@ -1637,7 +1637,7 @@
                 sumINEx += flagExAsIn2 === 1 && flagExAsOut2 === null  ? ExAsSize2 : 0;
                 sumINEx += flagExAsIn3 === 1 && flagExAsOut3 === null  ? ExAsSize3 : 0;
                 sumINEx += flagExAsIn4 === 1 && flagExAsOut4 === null  ? ExAsSize4 : 0;
-                sumINEx += flagExAsIn5 === 1 && flagExAsOut5 === null  ? ExExAsSize5 : 0;
+                sumINEx += flagExAsIn5 === 1 && flagExAsOut5 === null  ? ExAsSize5 : 0;
                 sumINEx += flagExAsIn6 === 1 && flagExAsOut6 === null  ? ExAsSize6 : 0;
                 sumINEx += flagExAsIn7 === 1 && flagExAsOut7 === null  ? ExAsSize7 : 0;
                 sumINEx += flagExAsIn8 === 1 && flagExAsOut8 === null  ? ExAsSize8 : 0;

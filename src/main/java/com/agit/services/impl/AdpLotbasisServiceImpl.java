@@ -101,6 +101,7 @@ public class AdpLotbasisServiceImpl extends AdpSimpleServiceImpl<JdcAdpTxnlotbas
             val.setSize2(data.getSize2());
             val.setSize2T(data.getSize2T());
             val.setSize3(data.getSize3());
+            val.setSize3T(data.getSize3T());
             val.setSize4(data.getSize4());
             val.setSize4T(data.getSize4T());
             val.setSize5(data.getSize5());
@@ -158,6 +159,7 @@ public class AdpLotbasisServiceImpl extends AdpSimpleServiceImpl<JdcAdpTxnlotbas
             val.setSize2(data.getSize2());
             val.setSize2T(data.getSize2T());
             val.setSize3(data.getSize3());
+            val.setSize3T(data.getSize3T());
             val.setSize4(data.getSize4());
             val.setSize4T(data.getSize4T());
             val.setSize5(data.getSize5());

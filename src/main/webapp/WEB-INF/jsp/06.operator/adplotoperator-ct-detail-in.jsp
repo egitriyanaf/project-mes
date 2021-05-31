@@ -1158,7 +1158,7 @@
                             "mRender": function (data, type, row) {
                                 if (row.size1 === null) {
                                     return  '<td class="size1">' + "" + '</td>';
-                                } else if (row.flagExCtInSize1 === 1 && row.flagExOutSize1 === 1) {
+                                } else if (row.flagExCtInSize1 === 1 && row.flagExCtOutSize1 === 1) {
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size1 + ' </span></a>';
                                 } else if (row.flagExCtInSize1 === null) {
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size1 + ' </span></a>';
@@ -1173,7 +1173,7 @@
                             "mRender": function (data, type, row) {
                                 if (row.size2 === null) {
                                     return  '<td class="size2">' + "" + '</td>';
-                                } else if (row.flagExCtInSize2 === 1 && row.flagExOutSize2 === 1) {
+                                } else if (row.flagExCtInSize2 === 1 && row.flagExCtOutSize2 === 1) {
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size2 + ' </span></a>';
                                 } else if (row.flagExCtInSize2 === null) {
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size2 = "' + row.size2 + '"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size2 + ' </span></a>';
@@ -1188,7 +1188,7 @@
                             "mRender": function (data, type, row) {
                                 if (row.size3 === null) {
                                     return  '<td class="size3">' + "" + '</td>';
-                                } else if (row.flagExCtInSize3 === 1 && row.flagExOutSize3 === 1) {
+                                } else if (row.flagExCtInSize3 === 1 && row.flagExCtOutSize3 === 1) {
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size3 + ' </span></a>';
                                 } else if (row.flagExCtInSize3 === null) {
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size3 = "' + row.size3 + '"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size3 + ' </span></a>';
@@ -1203,7 +1203,7 @@
                             "mRender": function (data, type, row) {
                                 if (row.size4 === null) {
                                     return  '<td class="size4">' + "" + '</td>';
-                                } else if (row.flagExCtInSize4 === 1 && row.flagExOutSize4 === 1) {
+                                } else if (row.flagExCtInSize4 === 1 && row.flagExCtOutSize4 === 1) {
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size4 + ' </span></a>';
                                 } else if (row.flagExCtInSize4 === null) {
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size4 = "' + row.size4 + '"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size4 + ' </span></a>';
@@ -1218,7 +1218,7 @@
                             "mRender": function (data, type, row) {
                                 if (row.size5 === null) {
                                     return  '<td class="size5">' + "" + '</td>';
-                                } else if (row.flagExCtInSize5 === 1 && row.flagExOutSize5 === 1) {
+                                } else if (row.flagExCtInSize5 === 1 && row.flagExCtOutSize5 === 1) {
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size5 + ' </span></a>';
                                 } else if (row.flagExCtInSize5 === null) {
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size5 = "' + row.size5 + '"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size5 + ' </span></a>';
@@ -1233,7 +1233,7 @@
                             "mRender": function (data, type, row) {
                                 if (row.size6 === null) {
                                     return  '<td class="size6">' + "" + '</td>';
-                                } else if (row.flagExCtInSize6 === 1 && row.flagExOutSize6 === 1) {
+                                } else if (row.flagExCtInSize6 === 1 && row.flagExCtOutSize6 === 1) {
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size6 + ' </span></a>';
                                 } else if (row.flagExCtInSize6 === null) {
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size6 = "' + row.size6 + '"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size6 + ' </span></a>';
@@ -1248,7 +1248,7 @@
                             "mRender": function (data, type, row) {
                                 if (row.size7 === null) {
                                     return  '<td class="size7">' + "" + '</td>';
-                                } else if (row.flagExCtInSize7 === 1 && row.flagExOutSize7 === 1) {
+                                } else if (row.flagExCtInSize7 === 1 && row.flagExCtOutSize7 === 1) {
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size7 + ' </span></a>';
                                 } else if (row.flagExCtInSize7 === null) {
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size7 = "' + row.size7 + '"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size7 + ' </span></a>';
@@ -1263,7 +1263,7 @@
                             "mRender": function (data, type, row) {
                                 if (row.size8 === null) {
                                     return  '<td class="size8">' + "" + '</td>';
-                                } else if (row.flagExCtInSize8 === 1 && row.flagExOutSize8 === 1) {
+                                } else if (row.flagExCtInSize8 === 1 && row.flagExCtOutSize8 === 1) {
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size8 + ' </span></a>';
                                 } else if (row.flagExCtInSize8 === null) {
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size8 = "' + row.size8 + '"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size8 + ' </span></a>';
@@ -1278,7 +1278,7 @@
                             "mRender": function (data, type, row) {
                                 if (row.size9 === null) {
                                     return  '<td class="size9">' + "" + '</td>';
-                                } else if (row.flagExCtInSize9 === 1 && row.flagExOutSize9 === 1) {
+                                } else if (row.flagExCtInSize9 === 1 && row.flagExCtOutSize9 === 1) {
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size9 + ' </span></a>';
                                 } else if (row.flagExCtInSize9 === null) {
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size9 = "' + row.size9 + '"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size9 + ' </span></a>';
@@ -1293,7 +1293,7 @@
                             "mRender": function (data, type, row) {
                                 if (row.size10 === null) {
                                     return  '<td class="size10">' + "" + '</td>';
-                                } else if (row.flagExCtInSize10 === 1 && row.flagExOutSize10 === 1) {
+                                } else if (row.flagExCtInSize10 === 1 && row.flagExCtOutSize10 === 1) {
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size10 + ' </span></a>';
                                 } else if (row.flagExCtInSize10 === null) {
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size10 = "' + row.size10 + '"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size10 + ' </span></a>';
@@ -1308,7 +1308,7 @@
                             "mRender": function (data, type, row) {
                                 if (row.size11 === null) {
                                     return  '<td class="size11">' + "" + '</td>';
-                                } else if (row.flagExCtInSize11 === 1 && row.flagExOutSize11 === 1) {
+                                } else if (row.flagExCtInSize11 === 1 && row.flagExCtOutSize11 === 1) {
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size11 + ' </span></a>';
                                 } else if (row.flagExCtInSize11 === null) {
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size11 = "' + row.size11 + '"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size11 + ' </span></a>';
@@ -1323,7 +1323,7 @@
                             "mRender": function (data, type, row) {
                                 if (row.size12 === null) {
                                     return  '<td class="size12">' + "" + '</td>';
-                                } else if (row.flagExCtInSize12 === 1 && row.flagExOutSize12 === 1) {
+                                } else if (row.flagExCtInSize12 === 1 && row.flagExCtOutSize12 === 1) {
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size12 + ' </span></a>';
                                 } else if (row.flagExCtInSize12 === null) {
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size12 = "' + row.size12 + '"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size12 + ' </span></a>';
@@ -1338,7 +1338,7 @@
                             "mRender": function (data, type, row) {
                                 if (row.size13 === null) {
                                     return  '<td class="size13">' + "" + '</td>';
-                                } else if (row.flagExCtInSize13 === 1 && row.flagExOutSize13 === 1) {
+                                } else if (row.flagExCtInSize13 === 1 && row.flagExCtOutSize13 === 1) {
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size13 + ' </span></a>';
                                 } else if (row.flagExCtInSize13 === null) {
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size13 = "' + row.size13 + '"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size13 + ' </span></a>';
@@ -1353,7 +1353,7 @@
                             "mRender": function (data, type, row) {
                                 if (row.size14 === null) {
                                     return  '<td class="size14">' + "" + '</td>';
-                                } else if (row.flagExCtInSize14 === 1 && row.flagExOutSize14 === 1) {
+                                } else if (row.flagExCtInSize14 === 1 && row.flagExCtOutSize14 === 1) {
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size14 + ' </span></a>';
                                 } else if (row.flagExCtInSize14 === null) {
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size14 = "' + row.size14 + '"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size14 + ' </span></a>';
@@ -1368,7 +1368,7 @@
                             "mRender": function (data, type, row) {
                                 if (row.size15 === null) {
                                     return  '<td class="size15">' + "" + '</td>';
-                                } else if (row.flagExCtInSize15 === 1 && row.flagExOutSize15 === 1) {
+                                } else if (row.flagExCtInSize15 === 1 && row.flagExCtOutSize15 === 1) {
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size15 + ' </span></a>';
                                 } else if (row.flagExCtInSize15 === null) {
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size15 = "' + row.size15 + '"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size15 + ' </span></a>';
@@ -1383,7 +1383,7 @@
                             "mRender": function (data, type, row) {
                                 if (row.size16 === null) {
                                     return  '<td class="size16">' + "" + '</td>';
-                                } else if (row.flagExCtInSize16 === 1 && row.flagExOutSize16 === 1) {
+                                } else if (row.flagExCtInSize16 === 1 && row.flagExCtOutSize16 === 1) {
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size16 + ' </span></a>';
                                 } else if (row.flagExCtInSize16 === null) {
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size16 = "' + row.size16 + '"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size16 + ' </span></a>';
@@ -1398,7 +1398,7 @@
                             "mRender": function (data, type, row) {
                                 if (row.size17 === null) {
                                     return  '<td class="size17">' + "" + '</td>';
-                                } else if (row.flagExCtInSize17 === 1 && row.flagExOutSize17 === 1) {
+                                } else if (row.flagExCtInSize17 === 1 && row.flagExCtOutSize17 === 1) {
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size17 + ' </span></a>';
                                 } else if (row.flagExCtInSize17 === null) {
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size17 = "' + row.size17 + '"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size17 + ' </span></a>';
@@ -1413,7 +1413,7 @@
                             "mRender": function (data, type, row) {
                                 if (row.size18 === null) {
                                     return  '<td class="size18">' + "" + '</td>';
-                                } else if (row.flagExCtInSize18 === 1 && row.flagExOutSize18 === 1) {
+                                } else if (row.flagExCtInSize18 === 1 && row.flagExCtOutSize18 === 1) {
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size18 + ' </span></a>';
                                 } else if (row.flagExCtInSize18 === null) {
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size18 = "' + row.size18 + '"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size18 + ' </span></a>';
@@ -1428,7 +1428,7 @@
                             "mRender": function (data, type, row) {
                                 if (row.size1T === null) {
                                     return  '<td class="size1T">' + "" + '</td>';
-                                } else if (row.flagExCtInSize1T === 1 && row.flagExOutSize1T === 1) {
+                                } else if (row.flagExCtInSize1T === 1 && row.flagExCtOutSize1T === 1) {
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size1T + ' </span></a>';
                                 } else if (row.flagExCtInSize1T === null) {
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size1T = "' + row.size1T + '"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size1T + ' </span></a>'; 
@@ -1446,12 +1446,12 @@
                             "mRender": function (data, type, row) {
                                 if (row.size2T === null) {
                                     return  '<td class="size2T">' + "" + '</td>';
-                                } else if (row.flagExCtInSize2T === 1 && row.flagExOutSize2T === 1) {
+                                } else if (row.flagExCtInSize2T === 1 && row.flagExCtOutSize2T === 1) {
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size2T + ' </span></a>';
                                 } else if (row.flagExCtInSize2T === null) {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size2T = "' + row.size2T + '"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size1T + ' </span></a>';
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size2T = "' + row.size2T + '"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size2T + ' </span></a>';
                                 } else {
-                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-rejectEx" class="viewData" id = "' + row.id + '" size2T = "' + row.size2T + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-warning">  ' + row.size1T + ' </span></a>';
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-rejectEx" class="viewData" id = "' + row.id + '" size2T = "' + row.size2T + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-warning">  ' + row.size2T + ' </span></a>';
                                 }
                             },
                             "aTargets": [21]
@@ -1461,7 +1461,7 @@
                             "mRender": function (data, type, row) {
                                 if (row.size3T === null) {
                                     return  '<td class="size3T">' + "" + '</td>';
-                                } else if (row.flagExCtInSize3T === 1 && row.flagExOutSize3T === 1) {
+                                } else if (row.flagExCtInSize3T === 1 && row.flagExCtOutSize3T === 1) {
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size3T + ' </span></a>';
                                 } else if (row.flagExCtInSize3T === null) {
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size3T = "' + row.size3T + '"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size3T + ' </span></a>';
@@ -1476,7 +1476,7 @@
                             "mRender": function (data, type, row) {
                                 if (row.size4T === null) {
                                     return  '<td class="size4T">' + "" + '</td>';
-                                } else if (row.flagExCtInSize4T === 1 && row.flagExOutSize4T === 1) {
+                                } else if (row.flagExCtInSize4T === 1 && row.flagExCtOutSize4T === 1) {
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size4T + ' </span></a>';
                                 } else if (row.flagExCtInSize4T === null) {
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size4T = "' + row.size4T + '"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size4T + ' </span></a>';
@@ -1491,7 +1491,7 @@
                             "mRender": function (data, type, row) {
                                 if (row.size5T === null) {
                                     return  '<td class="size5T">' + "" + '</td>';
-                                } else if (row.flagExCtInSize5T === 1 && row.flagExOutSize5T === 1) {
+                                } else if (row.flagExCtInSize5T === 1 && row.flagExCtOutSize5T === 1) {
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size5T + ' </span></a>';
                                 } else if (row.flagExCtInSize5T === null) {
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size5T = "' + row.size5T + '"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size5T + ' </span></a>';
@@ -1506,7 +1506,7 @@
                             "mRender": function (data, type, row) {
                                 if (row.size6T === null) {
                                     return  '<td class="size6T">' + "" + '</td>';
-                                } else if (row.flagExCtInSize6T === 1 && row.flagExOutSize6T === 1) {
+                                } else if (row.flagExCtInSize6T === 1 && row.flagExCtOutSize6T === 1) {
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size6T + ' </span></a>';
                                 } else if (row.flagExCtInSize6T === null) {
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size6T = "' + row.size6T + '"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size6T + ' </span></a>';
@@ -1521,7 +1521,7 @@
                             "mRender": function (data, type, row) {
                                 if (row.size7T === null) {
                                     return  '<td class="size7T">' + "" + '</td>';
-                                } else if (row.flagExCtInSize7T === 1 && row.flagExOutSize7T === 1) {
+                                } else if (row.flagExCtInSize7T === 1 && row.flagExCtOutSize7T === 1) {
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size7T + ' </span></a>';
                                 } else if (row.flagExCtInSize7T === null) {
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size7T = "' + row.size7T + '"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size7T + ' </span></a>';
@@ -1536,7 +1536,7 @@
                             "mRender": function (data, type, row) {
                                 if (row.size8T === null) {
                                     return  '<td class="size8T">' + "" + '</td>';
-                                } else if (row.flagExCtInSize8T === 1 && row.flagExOutSize8T === 1) {
+                                } else if (row.flagExCtInSize8T === 1 && row.flagExCtOutSize8T === 1) {
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size8T + ' </span></a>';
                                 } else if (row.flagExCtInSize8T === null) {
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size8T = "' + row.size8T + '"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size8T + ' </span></a>';
@@ -1551,7 +1551,7 @@
                             "mRender": function (data, type, row) {
                                 if (row.size9T === null) {
                                     return  '<td class="size9T">' + "" + '</td>';
-                                } else if (row.flagExCtInSize9T === 1 && row.flagExOutSize9T === 1) {
+                                } else if (row.flagExCtInSize9T === 1 && row.flagExCtOutSize9T === 1) {
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size9T + ' </span></a>';
                                 } else if (row.flagExCtInSize9T === null) {
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size9T = "' + row.size9T + '"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size9T + ' </span></a>';
@@ -1566,7 +1566,7 @@
                             "mRender": function (data, type, row) {
                                 if (row.size10T === null) {
                                     return  '<td class="size10T">' + "" + '</td>';
-                                } else if (row.flagExCtInSize10T === 1 && row.flagExOutSize10T === 1) {
+                                } else if (row.flagExCtInSize10T === 1 && row.flagExCtOutSize10T === 1) {
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size10T + ' </span></a>';
                                 } else if (row.flagExCtInSize10T === null) {
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size10T = "' + row.size10T + '"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size10T + ' </span></a>';
@@ -1581,7 +1581,7 @@
                             "mRender": function (data, type, row) {
                                 if (row.size11T === null) {
                                     return  '<td class="size11T">' + "" + '</td>';
-                                } else if (row.flagExCtInSize11T === 1 && row.flagExOutSize11T === 1) {
+                                } else if (row.flagExCtInSize11T === 1 && row.flagExCtOutSize11T === 1) {
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size11T + ' </span></a>';
                                 } else if (row.flagExCtInSize11T === null) {
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size11T = "' + row.size11T + '"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size11T + ' </span></a>';
@@ -1596,7 +1596,7 @@
                             "mRender": function (data, type, row) {
                                 if (row.size12T === null) {
                                     return  '<td class="size12T">' + "" + '</td>';
-                                } else if (row.flagExCtInSize12T === 1 && row.flagExOutSize12T === 1) {
+                                } else if (row.flagExCtInSize12T === 1 && row.flagExCtOutSize12T === 1) {
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size12T + ' </span></a>';
                                 } else if (row.flagExCtInSize12T === null) {
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size12T = "' + row.size12T + '"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size12T + ' </span></a>';
@@ -1611,7 +1611,7 @@
                             "mRender": function (data, type, row) {
                                 if (row.size13T === null) {
                                     return  '<td class="size13T">' + "" + '</td>';
-                                } else if (row.flagExCtInSize13T === 1 && row.flagExOutSize13T === 1) {
+                                } else if (row.flagExCtInSize13T === 1 && row.flagExCtOutSize13T === 1) {
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size13T + ' </span></a>';
                                 } else if (row.flagExCtInSize13T === null) {
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size13T = "' + row.size13T + '"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size13T + ' </span></a>';
@@ -2617,7 +2617,7 @@
                                            class="table table-striped table-bordered table-hover table-full-width">
                                         <thead>
                                             <tr>
-                                                <th>Select All</th>
+                                                <th>Id</th>
                                                 <th>G</th>
                                                 <th>1</th>
                                                 <th>2</th>

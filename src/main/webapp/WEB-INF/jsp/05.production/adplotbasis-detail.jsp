@@ -15,7 +15,7 @@
             $(document).ready(function () {
 
                 $("#jobOrder").keypress(OnlyAcceptNumber);
-                $("#jobOrder").blur(removeextra)
+                $("#jobOrder").blur(removeextra);
                 function removeextra() {
                     var initVal = $(this).val();
                     outputVal = initVal.replace(/[^\d]/g, '');

@@ -1270,6 +1270,23 @@
                         {
                             class: "text-center",
                             "mRender": function (data, type, row) {
+                                if (row.size9 === null) {
+                                    return  '<td class="size9">' + "" + '</td>';
+                                } else if (row.flagExPrepOutSize9 === 1 && row.flagExPrepInSize9 === 1) {
+                                    return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size9 + ' </span></a>';
+                                } else if (row.flagExCtOutSize9 === 1 && row.flagExPrepInSize9 === null) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size9 = "' + row.size9 + '"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size9 + ' </span></a>';
+                                } else if (row.flagExCtOutSize9 === null) {
+                                    return  '<td class="size9">' + "" + '</td>';
+                                } else {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-rejectEx" class="viewData" id = "' + row.id + '" size9 = "' + row.size9 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-warning">  ' + row.size9 + ' </span></a>';
+                                }
+                            },
+                            "aTargets": [10]
+                        },
+                        {
+                            class: "text-center",
+                            "mRender": function (data, type, row) {
                                 if (row.size10 === null) {
                                     return  '<td class="size10">' + "" + '</td>';
                                 } else if (row.flagExPrepOutSize10 === 1 && row.flagExPrepInSize10 === 1) {
