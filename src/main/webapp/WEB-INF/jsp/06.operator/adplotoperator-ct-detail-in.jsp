@@ -1160,6 +1160,8 @@
                                     return  '<td class="size1">' + "" + '</td>';
                                 } else if (row.flagExCtInSize1 === 1 && row.flagExCtOutSize1 === 1) {
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size1 + ' </span></a>';
+                                } else if (row.redExCtSize1 !== null && row.redExCtSize1 != "" ) {
+                                    return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#rednoteEx" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '"><span style ="background-color: rgb(252, 3, 3);" class="label label-status label-info">' + row.size1 + ' </span></a>';
                                 } else if (row.flagExCtInSize1 === null) {
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size1 = "' + row.size1 + '"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size1 + ' </span></a>';
                                 } else {
@@ -1175,7 +1177,7 @@
                                     return  '<td class="size2">' + "" + '</td>';
                                 } else if (row.flagExCtInSize2 === 1 && row.flagExCtOutSize2 === 1) {
                                     return '<a type="button" style="cursor: pointer;"><span style ="background-color: rgb(0, 255, 19);" class="label label-status label-warning">' + row.size2 + ' </span></a>';
-                                } else if (row.flagExCtInSize2 === null) {
+                                }  else if (row.flagExCtInSize2 === null) {
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-approveEx" class="viewData" id = "' + row.id + '" size2 = "' + row.size2 + '"><span style ="background-color: rgb(249, 249, 249);" class="labellot label-status label-info"> ' + row.size2 + ' </span></a>';
                                 } else {
                                     return '<a type="button" style="cursor: pointer;" data-toggle="modal" data-target="#confirm-rejectEx" class="viewData" id = "' + row.id + '" size2 = "' + row.size2 + '"><span style ="background-color: rgb(53, 40, 245);" class="label label-status label-warning">  ' + row.size2 + ' </span></a>';
@@ -1620,8 +1622,7 @@
                                 }
                             },
                             "aTargets": [32]
-                        },
-                        
+                        },    
                     ]              
                     ,
                     "footerCallback": function (row, data, start, end, display) {
@@ -2223,8 +2224,7 @@
                     approveEx.modal({show: true});
                     return false;
                 });
-
-
+                
                 $("#btn-approve").click(function () {
                     var dpt = $('#departement').val();
                     var dataJson = new Object();
@@ -2318,7 +2318,7 @@
                         oTable2.fnDraw();
                     });
                 });
-
+                
                 $("#btn-reject").click(function () {
                     var dpt = $('#departement').val();
                     var dataJson = new Object();
@@ -2412,7 +2412,7 @@
                         oTable2.fnDraw();
                     });
                 });
-
+                
             });
         </script>
     </head>

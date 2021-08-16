@@ -359,5 +359,5 @@ public class AdpLotOperatorController extends BaseController {
         model.addAttribute("SELECTED_MENU", MENU);
         model.addAttribute("SELECTED_SUBMENU", PRIVILEDGE);
     }
-
+    
 }

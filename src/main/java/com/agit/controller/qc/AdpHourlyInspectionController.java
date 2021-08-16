@@ -88,10 +88,13 @@ public class AdpHourlyInspectionController extends BaseController {
      * @param request
      * @return
      */
-    @RequestMapping(value = "/get-ncvs-new", method = RequestMethod.POST)
+    @RequestMapping(value = "/get-ncvs-new", method = RequestMethod.POST)//modify erwin
     public @ResponseBody
     List<JdcAdpMstproduksi> getLineCodeNew(@RequestBody ParamPaging param, HttpSession session, HttpServletRequest request) {
         Map<String, Object> searchMap = param.getSearch();
+        String poItem = (String) searchMap.get("poItem");
+        String poNo = (String) searchMap.get("poNo");
+        String demand = (String) searchMap.get("demand");
         List<JdcAdpMstproduksi> data = adpProduksiService.findByLineCodeNew(searchMap);
         return data;
     }
@@ -107,9 +110,10 @@ public class AdpHourlyInspectionController extends BaseController {
     public @ResponseBody
     List<JdcAdpMstproduksi> getPoNo(@RequestBody ParamPaging param, HttpSession session, HttpServletRequest request) {
         Map<String, Object> searchMap = param.getSearch();
-        String demand = (String) searchMap.get("demand");
-        String ncvs = (String) searchMap.get("ncvs");
-        List<JdcAdpMstproduksi> data = adpProduksiService.findPoNoOk(searchMap);
+//        String demand = (String) searchMap.get("demand");
+//        String ncvs = (String) searchMap.get("ncvs");
+//        List<JdcAdpMstproduksi> data = adpProduksiService.findPoNoOk(searchMap);
+        List<JdcAdpMstproduksi> data = adpProduksiService.findPoNoFrst(searchMap);
         return data;
     }
 
@@ -142,8 +146,8 @@ public class AdpHourlyInspectionController extends BaseController {
     public @ResponseBody
     List<JdcAdpMstproduksi> getPoItem(@RequestBody ParamPaging param, HttpSession session, HttpServletRequest request) {
         Map<String, Object> searchMap = param.getSearch();
-        String ncvs = (String) searchMap.get("ncvs");
-        List<JdcAdpMstproduksi> PoItem = adpProduksiService.findProductBynCVS(searchMap);
+        String poNo = (String) searchMap.get("poNo");
+        List<JdcAdpMstproduksi> PoItem = adpProduksiService.findProductByPO(searchMap);
         return PoItem;
     }
     
@@ -218,10 +222,12 @@ public class AdpHourlyInspectionController extends BaseController {
      * @param session
      * @return
      */
-    @RequestMapping(value = "/get-demandClass", method = RequestMethod.POST)
+    @RequestMapping(value = "/get-demandClass", method = RequestMethod.POST)//modify by erwin
     public @ResponseBody
     List<JdcAdpMstproduksi> getDemandClass(@RequestBody ParamPaging param, HttpSession session) {
         Map<String, Object> searchMap = param.getSearch();
+        String poNo = (String) searchMap.get("poNo");
+        String poItem = (String) searchMap.get("poItem");
         List<JdcAdpMstproduksi> data = adpProduksiService.findByDemandClass(searchMap);
         return data;
     }

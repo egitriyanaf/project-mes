@@ -75,7 +75,7 @@
 		
 		<!-- copyright -->
 		<div class="copyright">
-			<p>© 2021 MES APP . All rights reserved | MIS Department</p>
+			<p>© 2021 PT. ADIS DIMENSION FOOTWEAR | MIS Department</p>
 		</div>
 		<!-- //copyright --> 
 	</div>

@@ -25,6 +25,7 @@ import com.agit.entity.JdcAdpMstproduksi;
 import com.agit.entity.JdcAdpTxnlotbasis;
 import com.agit.entity.security.JdcAdpMstUser;
 import com.agit.services.AdpProduksiService;
+import org.hibernate.criterion.Order;
 
 /**
  *
@@ -89,36 +90,21 @@ public class AdpProduksiServiceImpl extends AdpSimpleServiceImpl<JdcAdpMstproduk
      */
     @SuppressWarnings("unchecked")
     @Override
-    public List<JdcAdpMstproduksi> findProductBynCVS(Map<String, Object> searchMap) {
-        String ncvs = (String) searchMap.get("ncvs");
+    public List<JdcAdpMstproduksi> findProductByPO(Map<String, Object> searchMap) {//edit erwin
+        String poItem = (String) searchMap.get("term"); 
         String poNo = (String) searchMap.get("poNo");
-        String poItem = (String) searchMap.get("poItem");
-        String demand = (String) searchMap.get("demand");
         Criteria criteria = sessionFactory.getCurrentSession().createCriteria(JdcAdpMstproduksi.class);
-        if (StringUtils.isNotBlank(ncvs)) {
-            criteria.add(Restrictions.eq("lineCode", ncvs));
-        }
         if (StringUtils.isNotBlank(poNo)) {
             criteria.add(Restrictions.eq("poNo", poNo));
         }
         if (StringUtils.isNotBlank(poItem)) {
-            criteria.add(Restrictions.eq("poItem", poItem));
+            criteria.add(Restrictions.ilike("poItem", poItem, MatchMode.ANYWHERE));
         }
-        if (StringUtils.isNotBlank(demand)) {
-            criteria.add(Restrictions.eq("demandClass", demand));
-        }
-
         criteria.setProjection(Projections.projectionList()
-                .add(Projections.property("lineCode"), "lineCode")
                 .add(Projections.property("poNo"), "poNo")
                 .add(Projections.property("poItem"), "poItem")
-                .add(Projections.property("joPpic"), "joPpic")
-                .add(Projections.property("productDesc"), "productDesc")
-                .add(Projections.groupProperty("lineCode"))
                 .add(Projections.groupProperty("poNo"))
-                .add(Projections.groupProperty("poItem"))
-                .add(Projections.groupProperty("joPpic"))
-                .add(Projections.groupProperty("productDesc")))
+                .add(Projections.groupProperty("poItem")))
                 .setResultTransformer(Transformers.aliasToBean(JdcAdpMstproduksi.class));
         List<JdcAdpMstproduksi> result = criteria.list();
         return result;
@@ -157,9 +143,21 @@ public class AdpProduksiServiceImpl extends AdpSimpleServiceImpl<JdcAdpMstproduk
      */
     @SuppressWarnings("unchecked")
     @Override
-    public List<JdcAdpMstproduksi> findByLineCodeNew(Map<String, Object> searchMap) {
-        String term = (String) searchMap.get("term");       
+    public List<JdcAdpMstproduksi> findByLineCodeNew(Map<String, Object> searchMap) {//modify erwin 21/06/23
+        String term = (String) searchMap.get("term");
+        String poItem = (String) searchMap.get("poItem");
+        String poNo = (String) searchMap.get("poNo");
+        String demand = (String) searchMap.get("demand");
         Criteria criteria = sessionFactory.getCurrentSession().createCriteria(JdcAdpMstproduksi.class);
+        if (StringUtils.isNotBlank(poNo)) {
+            criteria.add(Restrictions.eq("poNo", poNo));
+        }
+        if (StringUtils.isNotBlank(poItem)) {
+            criteria.add(Restrictions.eq("poItem", poItem));
+        }
+         if (StringUtils.isNotBlank(demand)) {
+            criteria.add(Restrictions.eq("demandClass", demand));
+        }
         if (StringUtils.isNotBlank(term)) {
             criteria.add(Restrictions.ilike("lineCode", term, MatchMode.ANYWHERE));
         }
@@ -167,6 +165,12 @@ public class AdpProduksiServiceImpl extends AdpSimpleServiceImpl<JdcAdpMstproduk
         criteria.setMaxResults(5);
         criteria.setProjection(Projections.projectionList()
                 .add(Projections.property("lineCode"), "lineCode")
+                .add(Projections.property("poNo"), "poNo")
+                .add(Projections.property("poItem"), "poItem")
+                .add(Projections.property("demandClass"), "demandClass")
+                .add(Projections.groupProperty("poNo"))
+                .add(Projections.groupProperty("poItem"))
+                .add(Projections.groupProperty("demandClass"))
                 .add(Projections.groupProperty("lineCode")))
                 .setResultTransformer(Transformers.aliasToBean(JdcAdpMstproduksi.class));
         List<JdcAdpMstproduksi> result = criteria.list();
@@ -179,14 +183,27 @@ public class AdpProduksiServiceImpl extends AdpSimpleServiceImpl<JdcAdpMstproduk
      * @return
      */
     @Override
-    public List<JdcAdpMstproduksi> findByDemandClass(Map<String, Object> searchMap) {
+    public List<JdcAdpMstproduksi> findByDemandClass(Map<String, Object> searchMap) {//modify by erwin
         String demandClass = (String) searchMap.get("term");
+        String poNo = (String) searchMap.get("poNo");
+        String poItem = (String) searchMap.get("poItem");
         Criteria criteria = sessionFactory.getCurrentSession().createCriteria(JdcAdpMstproduksi.class);
+        if (StringUtils.isNotBlank(poNo)) {
+            criteria.add(Restrictions.eq("poNo", poNo));
+        }
+        if (StringUtils.isNotBlank(poItem)) {
+            criteria.add(Restrictions.eq("poItem", poItem));
+        }
         if (StringUtils.isNotBlank(demandClass)) {
             criteria.add(Restrictions.ilike("demandClass", demandClass, MatchMode.ANYWHERE));
         }
         criteria.setMaxResults(5);
-        criteria.setProjection(Projections.projectionList().add(Projections.property("demandClass"), "demandClass")
+        criteria.setProjection(Projections.projectionList()
+                .add(Projections.property("demandClass"), "demandClass")
+                .add(Projections.property("poNo"), "poNo")
+                .add(Projections.property("poItem"), "poItem")
+                .add(Projections.groupProperty("poNo"))
+                .add(Projections.groupProperty("poItem"))
                 .add(Projections.groupProperty("demandClass")))
                 .setResultTransformer(Transformers.aliasToBean(JdcAdpMstproduksi.class));
         List<JdcAdpMstproduksi> result = criteria.list();
@@ -210,7 +227,8 @@ public class AdpProduksiServiceImpl extends AdpSimpleServiceImpl<JdcAdpMstproduk
             criteria.add(Restrictions.eq("lineCode", ncvs));
         }
         criteria.setMaxResults(5);
-        criteria.setProjection(Projections.projectionList().add(Projections.property("demandClass"), "demandClass")
+        criteria.setProjection(Projections.projectionList()
+                .add(Projections.property("demandClass"), "demandClass")
                 .add(Projections.groupProperty("demandClass")))
                 .setResultTransformer(Transformers.aliasToBean(JdcAdpMstproduksi.class));
         List<JdcAdpMstproduksi> result = criteria.list();
@@ -353,7 +371,6 @@ public class AdpProduksiServiceImpl extends AdpSimpleServiceImpl<JdcAdpMstproduk
         if (StringUtils.isNotBlank(ncvs)) {
             criteria.add(Restrictions.eq("lineCode", ncvs));
         }
-        
         criteria.setMaxResults(5);
         criteria.setProjection(Projections.projectionList()
                 .add(Projections.property("lineCode"), "lineCode")
@@ -361,6 +378,33 @@ public class AdpProduksiServiceImpl extends AdpSimpleServiceImpl<JdcAdpMstproduk
                 .add(Projections.property("poNo"), "poNo")
                 .add(Projections.groupProperty("lineCode"))
                 .add(Projections.groupProperty("demandClass"))
+                .add(Projections.groupProperty("poNo")))
+                .setResultTransformer(Transformers.aliasToBean(JdcAdpMstproduksi.class));
+        List<JdcAdpMstproduksi> result = criteria.list();
+        return result;
+    }
+    
+    /**
+     *
+     * @param searchMap
+     * @return
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public List<JdcAdpMstproduksi> findPoNoFrst(Map<String, Object> searchMap) {//add by erwin
+//        String poNo = (String) searchMap.get("poNo");
+        String poNo = (String) searchMap.get("term"); 
+        Criteria criteria = sessionFactory.getCurrentSession().createCriteria(JdcAdpMstproduksi.class);
+        if (StringUtils.isNotBlank(poNo)) {
+            criteria.add(Restrictions.ilike("poNo", poNo, MatchMode.ANYWHERE));
+        }
+//        criteria.add(Restrictions.between("created_date", "date('2020-03-18')", "date('2021-03-18')"));
+        criteria.addOrder(Order.desc("createDate") );
+        criteria.setMaxResults(5);
+        criteria.setProjection(Projections.projectionList()
+                .add(Projections.property("poNo"), "poNo")
+                .add(Projections.property("createDate"), "createDate")
+                .add(Projections.groupProperty("createDate"))
                 .add(Projections.groupProperty("poNo")))
                 .setResultTransformer(Transformers.aliasToBean(JdcAdpMstproduksi.class));
         List<JdcAdpMstproduksi> result = criteria.list();

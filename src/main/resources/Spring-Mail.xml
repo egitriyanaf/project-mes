@@ -198,7 +198,7 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
           class="org.springframework.mail.SimpleMailMessage">
 
         <property name="from" value="postmaster@adis.co.id" />
-        <property name="to" value="egitriyanafidollah@gmail.com" />
+        <property name="to" value="Rohilah@adis.co.id" />
         <property name="subject" value="Approval" />
         <property name="text">
             <value>
@@ -214,7 +214,7 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
           class="org.springframework.mail.SimpleMailMessage">
 
         <property name="from" value="postmaster@adis.co.id" />
-        <property name="to" value="egitriyanafidollah@gmail.com" />
+        <property name="to" value="pardiman@adis.co.id" />
         <property name="subject" value="Approval" />
         <property name="text">
             <value>
@@ -230,7 +230,7 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
           class="org.springframework.mail.SimpleMailMessage">
 
         <property name="from" value="postmaster@adis.co.id" />
-        <property name="to" value="egitriyanafidollah@gmail.com" />
+        <property name="to" value="pardiman@adis.co.id" />
         <property name="subject" value="Approval" />
         <property name="text">
             <value>
@@ -246,7 +246,7 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
           class="org.springframework.mail.SimpleMailMessage">
 
         <property name="from" value="postmaster@adis.co.id" />
-        <property name="to" value="egitriyanafidollah@gmail.com" />
+        <property name="to" value="muhammad.gunawan@adis.co.id" />
         <property name="subject" value="Approval" />
         <property name="text">
             <value>
@@ -262,7 +262,7 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
           class="org.springframework.mail.SimpleMailMessage">
 
         <property name="from" value="postmaster@adis.co.id" />
-        <property name="to" value="egitriyanafidollah@gmail.com" />
+        <property name="to" value="Rohilah@adis.co.id" />
         <property name="subject" value="Approval" />
         <property name="text">
             <value>
@@ -278,7 +278,7 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
           class="org.springframework.mail.SimpleMailMessage">
 
         <property name="from" value="postmaster@adis.co.id" />
-        <property name="to" value="egitriyanafidollah@gmail.com" />
+        <property name="to" value="pardiman@adis.co.id" />
         <property name="subject" value="Approval" />
         <property name="text">
             <value>
@@ -294,7 +294,7 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
           class="org.springframework.mail.SimpleMailMessage">
 
         <property name="from" value="postmaster@adis.co.id" />
-        <property name="to" value="egitriyanafidollah@gmail.com" />
+        <property name="to" value="pardiman@adis.co.id" />
         <property name="subject" value="Approval" />
         <property name="text">
             <value>
@@ -310,7 +310,7 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
           class="org.springframework.mail.SimpleMailMessage">
 
         <property name="from" value="postmaster@adis.co.id" />
-        <property name="to" value="egitriyanafidollah@gmail.com" />
+        <property name="to" value="muhammad.gunawan@adis.co.id" />
         <property name="subject" value="Approval" />
         <property name="text">
             <value>

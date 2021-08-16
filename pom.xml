@@ -3,10 +3,10 @@
 		 					 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.agit</groupId>
-    <artifactId>web-adp-dev</artifactId>
+    <artifactId>web-adp-v2</artifactId>
     <version>1.1</version>
     <packaging>war</packaging>
-    <name>web-adp-dev</name>
+    <name>web-adp-v2</name>
 
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>

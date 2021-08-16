@@ -77,13 +77,20 @@ public interface AdpProduksiService {
      * @return
      */
     public List<JdcAdpMstproduksi> findPoNoOk(Map<String, Object> searchMap);
+    
+    /**
+     *
+     * @param searchMap
+     * @return
+     */
+    public List<JdcAdpMstproduksi> findPoNoFrst(Map<String, Object> searchMap);
 
     /**
      *
      * @param searchMap
      * @return
      */
-    public List<JdcAdpMstproduksi> findProductBynCVS(Map<String, Object> searchMap);
+    public List<JdcAdpMstproduksi> findProductByPO(Map<String, Object> searchMap);
 
     /**
      *

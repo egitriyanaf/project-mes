@@ -1676,6 +1676,752 @@ public class JdcAdpTxnLotapprv implements Serializable {
     @Column(name = "flag_express_laser_out_size_13_t")
     private Long flagExLaserOutSize13T;
     
+//    column rednote
+@Column(name = "rednote_express_ct_size_1")
+private String redExCtSize1;
+@Column(name = "rednote_express_ct_size_2")
+private String redExCtSize2;
+@Column(name = "rednote_express_ct_size_3")
+private String redExCtSize3;
+@Column(name = "rednote_express_ct_size_4")
+private String redExCtSize4;
+@Column(name = "rednote_express_ct_size_5")
+private String redExCtSize5;
+@Column(name = "rednote_express_ct_size_6")
+private String redExCtSize6;
+@Column(name = "rednote_express_ct_size_7")
+private String redExCtSize7;
+@Column(name = "rednote_express_ct_size_8")
+private String redExCtSize8;
+@Column(name = "rednote_express_ct_size_9")
+private String redExCtSize9;
+@Column(name = "rednote_express_ct_size_10")
+private String redExCtSize10;
+@Column(name = "rednote_express_ct_size_11")
+private String redExCtSize11;
+@Column(name = "rednote_express_ct_size_12")
+private String redExCtSize12;
+@Column(name = "rednote_express_ct_size_13")
+private String redExCtSize13;
+@Column(name = "rednote_express_ct_size_14")
+private String redExCtSize14;
+@Column(name = "rednote_express_ct_size_15")
+private String redExCtSize15;
+@Column(name = "rednote_express_ct_size_16")
+private String redExCtSize16;
+@Column(name = "rednote_express_ct_size_17")
+private String redExCtSize17;
+@Column(name = "rednote_express_ct_size_18")
+private String redExCtSize18;
+@Column(name = "rednote_express_ct_size_1_t")
+private String redExCtSize1T;
+@Column(name = "rednote_express_ct_size_2_t")
+private String redExCtSize2T;
+@Column(name = "rednote_express_ct_size_3_t")
+private String redExCtSize3T;
+@Column(name = "rednote_express_ct_size_4_t")
+private String redExCtSize4T;
+@Column(name = "rednote_express_ct_size_5_t")
+private String redExCtSize5T;
+@Column(name = "rednote_express_ct_size_6_t")
+private String redExCtSize6T;
+@Column(name = "rednote_express_ct_size_7_t")
+private String redExCtSize7T;
+@Column(name = "rednote_express_ct_size_8_t")
+private String redExCtSize8T;
+@Column(name = "rednote_express_ct_size_9_t")
+private String redExCtSize9T;
+@Column(name = "rednote_express_ct_size_10_t")
+private String redExCtSize10T;
+@Column(name = "rednote_express_ct_size_11_t")
+private String redExCtSize11T;
+@Column(name = "rednote_express_ct_size_12_t")
+private String redExCtSize12T;
+@Column(name = "rednote_express_ct_size_13_t")
+private String redExCtSize13T;
+@Column(name = "rednote_express_prep_size_1")
+private String redExPrepSize1;
+@Column(name = "rednote_express_prep_size_2")
+private String redExPrepSize2;
+@Column(name = "rednote_express_prep_size_3")
+private String redExPrepSize3;
+@Column(name = "rednote_express_prep_size_4")
+private String redExPrepSize4;
+@Column(name = "rednote_express_prep_size_5")
+private String redExPrepSize5;
+@Column(name = "rednote_express_prep_size_6")
+private String redExPrepSize6;
+@Column(name = "rednote_express_prep_size_7")
+private String redExPrepSize7;
+@Column(name = "rednote_express_prep_size_8")
+private String redExPrepSize8;
+@Column(name = "rednote_express_prep_size_9")
+private String redExPrepSize9;
+@Column(name = "rednote_express_prep_size_10")
+private String redExPrepSize10;
+@Column(name = "rednote_express_prep_size_11")
+private String redExPrepSize11;
+@Column(name = "rednote_express_prep_size_12")
+private String redExPrepSize12;
+@Column(name = "rednote_express_prep_size_13")
+private String redExPrepSize13;
+@Column(name = "rednote_express_prep_size_14")
+private String redExPrepSize14;
+@Column(name = "rednote_express_prep_size_15")
+private String redExPrepSize15;
+@Column(name = "rednote_express_prep_size_16")
+private String redExPrepSize16;
+@Column(name = "rednote_express_prep_size_17")
+private String redExPrepSize17;
+@Column(name = "rednote_express_prep_size_18")
+private String redExPrepSize18;
+@Column(name = "rednote_express_prep_size_1_t")
+private String redExPrepSize1T;
+@Column(name = "rednote_express_prep_size_2_t")
+private String redExPrepSize2T;
+@Column(name = "rednote_express_prep_size_3_t")
+private String redExPrepSize3T;
+@Column(name = "rednote_express_prep_size_4_t")
+private String redExPrepSize4T;
+@Column(name = "rednote_express_prep_size_5_t")
+private String redExPrepSize5T;
+@Column(name = "rednote_express_prep_size_6_t")
+private String redExPrepSize6T;
+@Column(name = "rednote_express_prep_size_7_t")
+private String redExPrepSize7T;
+@Column(name = "rednote_express_prep_size_8_t")
+private String redExPrepSize8T;
+@Column(name = "rednote_express_prep_size_9_t")
+private String redExPrepSize9T;
+@Column(name = "rednote_express_prep_size_10_t")
+private String redExPrepSize10T;
+@Column(name = "rednote_express_prep_size_11_t")
+private String redExPrepSize11T;
+@Column(name = "rednote_express_prep_size_12_t")
+private String redExPrepSize12T;
+@Column(name = "rednote_express_prep_size_13_t")
+private String redExPrepSize13T;
+@Column(name = "rednote_express_st_size_1")
+private String redExStSize1;
+@Column(name = "rednote_express_st_size_2")
+private String redExStSize2;
+@Column(name = "rednote_express_st_size_3")
+private String redExStSize3;
+@Column(name = "rednote_express_st_size_4")
+private String redExStSize4;
+@Column(name = "rednote_express_st_size_5")
+private String redExStSize5;
+@Column(name = "rednote_express_st_size_6")
+private String redExStSize6;
+@Column(name = "rednote_express_st_size_7")
+private String redExStSize7;
+@Column(name = "rednote_express_st_size_8")
+private String redExStSize8;
+@Column(name = "rednote_express_st_size_9")
+private String redExStSize9;
+@Column(name = "rednote_express_st_size_10")
+private String redExStSize10;
+@Column(name = "rednote_express_st_size_11")
+private String redExStSize11;
+@Column(name = "rednote_express_st_size_12")
+private String redExStSize12;
+@Column(name = "rednote_express_st_size_13")
+private String redExStSize13;
+@Column(name = "rednote_express_st_size_14")
+private String redExStSize14;
+@Column(name = "rednote_express_st_size_15")
+private String redExStSize15;
+@Column(name = "rednote_express_st_size_16")
+private String redExStSize16;
+@Column(name = "rednote_express_st_size_17")
+private String redExStSize17;
+@Column(name = "rednote_express_st_size_18")
+private String redExStSize18;
+@Column(name = "rednote_express_st_size_1_t")
+private String redExStSize1T;
+@Column(name = "rednote_express_st_size_2_t")
+private String redExStSize2T;
+@Column(name = "rednote_express_st_size_3_t")
+private String redExStSize3T;
+@Column(name = "rednote_express_st_size_4_t")
+private String redExStSize4T;
+@Column(name = "rednote_express_st_size_5_t")
+private String redExStSize5T;
+@Column(name = "rednote_express_st_size_6_t")
+private String redExStSize6T;
+@Column(name = "rednote_express_st_size_7_t")
+private String redExStSize7T;
+@Column(name = "rednote_express_st_size_8_t")
+private String redExStSize8T;
+@Column(name = "rednote_express_st_size_9_t")
+private String redExStSize9T;
+@Column(name = "rednote_express_st_size_10_t")
+private String redExStSize10T;
+@Column(name = "rednote_express_st_size_11_t")
+private String redExStSize11T;
+@Column(name = "rednote_express_st_size_12_t")
+private String redExStSize12T;
+@Column(name = "rednote_express_st_size_13_t")
+private String redExStSize13T;
+@Column(name = "rednote_express_as_size_1")
+private String redExAsSize1;
+@Column(name = "rednote_express_as_size_2")
+private String redExAsSize2;
+@Column(name = "rednote_express_as_size_3")
+private String redExAsSize3;
+@Column(name = "rednote_express_as_size_4")
+private String redExAsSize4;
+@Column(name = "rednote_express_as_size_5")
+private String redExAsSize5;
+@Column(name = "rednote_express_as_size_6")
+private String redExAsSize6;
+@Column(name = "rednote_express_as_size_7")
+private String redExAsSize7;
+@Column(name = "rednote_express_as_size_8")
+private String redExAsSize8;
+@Column(name = "rednote_express_as_size_9")
+private String redExAsSize9;
+@Column(name = "rednote_express_as_size_10")
+private String redExAsSize10;
+@Column(name = "rednote_express_as_size_11")
+private String redExAsSize11;
+@Column(name = "rednote_express_as_size_12")
+private String redExAsSize12;
+@Column(name = "rednote_express_as_size_13")
+private String redExAsSize13;
+@Column(name = "rednote_express_as_size_14")
+private String redExAsSize14;
+@Column(name = "rednote_express_as_size_15")
+private String redExAsSize15;
+@Column(name = "rednote_express_as_size_16")
+private String redExAsSize16;
+@Column(name = "rednote_express_as_size_17")
+private String redExAsSize17;
+@Column(name = "rednote_express_as_size_18")
+private String redExAsSize18;
+@Column(name = "rednote_express_as_size_1_t")
+private String redExAsSize1T;
+@Column(name = "rednote_express_as_size_2_t")
+private String redExAsSize2T;
+@Column(name = "rednote_express_as_size_3_t")
+private String redExAsSize3T;
+@Column(name = "rednote_express_as_size_4_t")
+private String redExAsSize4T;
+@Column(name = "rednote_express_as_size_5_t")
+private String redExAsSize5T;
+@Column(name = "rednote_express_as_size_6_t")
+private String redExAsSize6T;
+@Column(name = "rednote_express_as_size_7_t")
+private String redExAsSize7T;
+@Column(name = "rednote_express_as_size_8_t")
+private String redExAsSize8T;
+@Column(name = "rednote_express_as_size_9_t")
+private String redExAsSize9T;
+@Column(name = "rednote_express_as_size_10_t")
+private String redExAsSize10T;
+@Column(name = "rednote_express_as_size_11_t")
+private String redExAsSize11T;
+@Column(name = "rednote_express_as_size_12_t")
+private String redExAsSize12T;
+@Column(name = "rednote_express_as_size_13_t")
+private String redExAsSize13T;
+@Column(name = "rednote_express_csc_size_1")
+private String redExCscSize1;
+@Column(name = "rednote_express_csc_size_2")
+private String redExCscSize2;
+@Column(name = "rednote_express_csc_size_3")
+private String redExCscSize3;
+@Column(name = "rednote_express_csc_size_4")
+private String redExCscSize4;
+@Column(name = "rednote_express_csc_size_5")
+private String redExCscSize5;
+@Column(name = "rednote_express_csc_size_6")
+private String redExCscSize6;
+@Column(name = "rednote_express_csc_size_7")
+private String redExCscSize7;
+@Column(name = "rednote_express_csc_size_8")
+private String redExCscSize8;
+@Column(name = "rednote_express_csc_size_9")
+private String redExCscSize9;
+@Column(name = "rednote_express_csc_size_10")
+private String redExCscSize10;
+@Column(name = "rednote_express_csc_size_11")
+private String redExCscSize11;
+@Column(name = "rednote_express_csc_size_12")
+private String redExCscSize12;
+@Column(name = "rednote_express_csc_size_13")
+private String redExCscSize13;
+@Column(name = "rednote_express_csc_size_14")
+private String redExCscSize14;
+@Column(name = "rednote_express_csc_size_15")
+private String redExCscSize15;
+@Column(name = "rednote_express_csc_size_16")
+private String redExCscSize16;
+@Column(name = "rednote_express_csc_size_17")
+private String redExCscSize17;
+@Column(name = "rednote_express_csc_size_18")
+private String redExCscSize18;
+@Column(name = "rednote_express_csc_size_1_t")
+private String redExCscSize1T;
+@Column(name = "rednote_express_csc_size_2_t")
+private String redExCscSize2T;
+@Column(name = "rednote_express_csc_size_3_t")
+private String redExCscSize3T;
+@Column(name = "rednote_express_csc_size_4_t")
+private String redExCscSize4T;
+@Column(name = "rednote_express_csc_size_5_t")
+private String redExCscSize5T;
+@Column(name = "rednote_express_csc_size_6_t")
+private String redExCscSize6T;
+@Column(name = "rednote_express_csc_size_7_t")
+private String redExCscSize7T;
+@Column(name = "rednote_express_csc_size_8_t")
+private String redExCscSize8T;
+@Column(name = "rednote_express_csc_size_9_t")
+private String redExCscSize9T;
+@Column(name = "rednote_express_csc_size_10_t")
+private String redExCscSize10T;
+@Column(name = "rednote_express_csc_size_11_t")
+private String redExCscSize11T;
+@Column(name = "rednote_express_csc_size_12_t")
+private String redExCscSize12T;
+@Column(name = "rednote_express_csc_size_13_t")
+private String redExCscSize13T;
+@Column(name = "rednote_express_ns_size_1")
+private String redExNsSize1;
+@Column(name = "rednote_express_ns_size_2")
+private String redExNsSize2;
+@Column(name = "rednote_express_ns_size_3")
+private String redExNsSize3;
+@Column(name = "rednote_express_ns_size_4")
+private String redExNsSize4;
+@Column(name = "rednote_express_ns_size_5")
+private String redExNsSize5;
+@Column(name = "rednote_express_ns_size_6")
+private String redExNsSize6;
+@Column(name = "rednote_express_ns_size_7")
+private String redExNsSize7;
+@Column(name = "rednote_express_ns_size_8")
+private String redExNsSize8;
+@Column(name = "rednote_express_ns_size_9")
+private String redExNsSize9;
+@Column(name = "rednote_express_ns_size_10")
+private String redExNsSize10;
+@Column(name = "rednote_express_ns_size_11")
+private String redExNsSize11;
+@Column(name = "rednote_express_ns_size_12")
+private String redExNsSize12;
+@Column(name = "rednote_express_ns_size_13")
+private String redExNsSize13;
+@Column(name = "rednote_express_ns_size_14")
+private String redExNsSize14;
+@Column(name = "rednote_express_ns_size_15")
+private String redExNsSize15;
+@Column(name = "rednote_express_ns_size_16")
+private String redExNsSize16;
+@Column(name = "rednote_express_ns_size_17")
+private String redExNsSize17;
+@Column(name = "rednote_express_ns_size_18")
+private String redExNsSize18;
+@Column(name = "rednote_express_ns_size_1_t")
+private String redExNsSize1T;
+@Column(name = "rednote_express_ns_size_2_t")
+private String redExNsSize2T;
+@Column(name = "rednote_express_ns_size_3_t")
+private String redExNsSize3T;
+@Column(name = "rednote_express_ns_size_4_t")
+private String redExNsSize4T;
+@Column(name = "rednote_express_ns_size_5_t")
+private String redExNsSize5T;
+@Column(name = "rednote_express_ns_size_6_t")
+private String redExNsSize6T;
+@Column(name = "rednote_express_ns_size_7_t")
+private String redExNsSize7T;
+@Column(name = "rednote_express_ns_size_8_t")
+private String redExNsSize8T;
+@Column(name = "rednote_express_ns_size_9_t")
+private String redExNsSize9T;
+@Column(name = "rednote_express_ns_size_10_t")
+private String redExNsSize10T;
+@Column(name = "rednote_express_ns_size_11_t")
+private String redExNsSize11T;
+@Column(name = "rednote_express_ns_size_12_t")
+private String redExNsSize12T;
+@Column(name = "rednote_express_ns_size_13_t")
+private String redExNsSize13T;
+@Column(name = "rednote_express_sc_size_1")
+private String redExScSize1;
+@Column(name = "rednote_express_sc_size_2")
+private String redExScSize2;
+@Column(name = "rednote_express_sc_size_3")
+private String redExScSize3;
+@Column(name = "rednote_express_sc_size_4")
+private String redExScSize4;
+@Column(name = "rednote_express_sc_size_5")
+private String redExScSize5;
+@Column(name = "rednote_express_sc_size_6")
+private String redExScSize6;
+@Column(name = "rednote_express_sc_size_7")
+private String redExScSize7;
+@Column(name = "rednote_express_sc_size_8")
+private String redExScSize8;
+@Column(name = "rednote_express_sc_size_9")
+private String redExScSize9;
+@Column(name = "rednote_express_sc_size_10")
+private String redExScSize10;
+@Column(name = "rednote_express_sc_size_11")
+private String redExScSize11;
+@Column(name = "rednote_express_sc_size_12")
+private String redExScSize12;
+@Column(name = "rednote_express_sc_size_13")
+private String redExScSize13;
+@Column(name = "rednote_express_sc_size_14")
+private String redExScSize14;
+@Column(name = "rednote_express_sc_size_15")
+private String redExScSize15;
+@Column(name = "rednote_express_sc_size_16")
+private String redExScSize16;
+@Column(name = "rednote_express_sc_size_17")
+private String redExScSize17;
+@Column(name = "rednote_express_sc_size_18")
+private String redExScSize18;
+@Column(name = "rednote_express_sc_size_1_t")
+private String redExScSize1T;
+@Column(name = "rednote_express_sc_size_2_t")
+private String redExScSize2T;
+@Column(name = "rednote_express_sc_size_3_t")
+private String redExScSize3T;
+@Column(name = "rednote_express_sc_size_4_t")
+private String redExScSize4T;
+@Column(name = "rednote_express_sc_size_5_t")
+private String redExScSize5T;
+@Column(name = "rednote_express_sc_size_6_t")
+private String redExScSize6T;
+@Column(name = "rednote_express_sc_size_7_t")
+private String redExScSize7T;
+@Column(name = "rednote_express_sc_size_8_t")
+private String redExScSize8T;
+@Column(name = "rednote_express_sc_size_9_t")
+private String redExScSize9T;
+@Column(name = "rednote_express_sc_size_10_t")
+private String redExScSize10T;
+@Column(name = "rednote_express_sc_size_11_t")
+private String redExScSize11T;
+@Column(name = "rednote_express_sc_size_12_t")
+private String redExScSize12T;
+@Column(name = "rednote_express_sc_size_13_t")
+private String redExScSize13T;
+@Column(name = "rednote_express_os_size_1")
+private String redExOsSize1;
+@Column(name = "rednote_express_os_size_2")
+private String redExOsSize2;
+@Column(name = "rednote_express_os_size_3")
+private String redExOsSize3;
+@Column(name = "rednote_express_os_size_4")
+private String redExOsSize4;
+@Column(name = "rednote_express_os_size_5")
+private String redExOsSize5;
+@Column(name = "rednote_express_os_size_6")
+private String redExOsSize6;
+@Column(name = "rednote_express_os_size_7")
+private String redExOsSize7;
+@Column(name = "rednote_express_os_size_8")
+private String redExOsSize8;
+@Column(name = "rednote_express_os_size_9")
+private String redExOsSize9;
+@Column(name = "rednote_express_os_size_10")
+private String redExOsSize10;
+@Column(name = "rednote_express_os_size_11")
+private String redExOsSize11;
+@Column(name = "rednote_express_os_size_12")
+private String redExOsSize12;
+@Column(name = "rednote_express_os_size_13")
+private String redExOsSize13;
+@Column(name = "rednote_express_os_size_14")
+private String redExOsSize14;
+@Column(name = "rednote_express_os_size_15")
+private String redExOsSize15;
+@Column(name = "rednote_express_os_size_16")
+private String redExOsSize16;
+@Column(name = "rednote_express_os_size_17")
+private String redExOsSize17;
+@Column(name = "rednote_express_os_size_18")
+private String redExOsSize18;
+@Column(name = "rednote_express_os_size_1_t")
+private String redExOsSize1T;
+@Column(name = "rednote_express_os_size_2_t")
+private String redExOsSize2T;
+@Column(name = "rednote_express_os_size_3_t")
+private String redExOsSize3T;
+@Column(name = "rednote_express_os_size_4_t")
+private String redExOsSize4T;
+@Column(name = "rednote_express_os_size_5_t")
+private String redExOsSize5T;
+@Column(name = "rednote_express_os_size_6_t")
+private String redExOsSize6T;
+@Column(name = "rednote_express_os_size_7_t")
+private String redExOsSize7T;
+@Column(name = "rednote_express_os_size_8_t")
+private String redExOsSize8T;
+@Column(name = "rednote_express_os_size_9_t")
+private String redExOsSize9T;
+@Column(name = "rednote_express_os_size_10_t")
+private String redExOsSize10T;
+@Column(name = "rednote_express_os_size_11_t")
+private String redExOsSize11T;
+@Column(name = "rednote_express_os_size_12_t")
+private String redExOsSize12T;
+@Column(name = "rednote_express_os_size_13_t")
+private String redExOsSize13T;
+@Column(name = "rednote_express_spcut_size_1")
+private String redExSpcutSize1;
+@Column(name = "rednote_express_spcut_size_2")
+private String redExSpcutSize2;
+@Column(name = "rednote_express_spcut_size_3")
+private String redExSpcutSize3;
+@Column(name = "rednote_express_spcut_size_4")
+private String redExSpcutSize4;
+@Column(name = "rednote_express_spcut_size_5")
+private String redExSpcutSize5;
+@Column(name = "rednote_express_spcut_size_6")
+private String redExSpcutSize6;
+@Column(name = "rednote_express_spcut_size_7")
+private String redExSpcutSize7;
+@Column(name = "rednote_express_spcut_size_8")
+private String redExSpcutSize8;
+@Column(name = "rednote_express_spcut_size_9")
+private String redExSpcutSize9;
+@Column(name = "rednote_express_spcut_size_10")
+private String redExSpcutSize10;
+@Column(name = "rednote_express_spcut_size_11")
+private String redExSpcutSize11;
+@Column(name = "rednote_express_spcut_size_12")
+private String redExSpcutSize12;
+@Column(name = "rednote_express_spcut_size_13")
+private String redExSpcutSize13;
+@Column(name = "rednote_express_spcut_size_14")
+private String redExSpcutSize14;
+@Column(name = "rednote_express_spcut_size_15")
+private String redExSpcutSize15;
+@Column(name = "rednote_express_spcut_size_16")
+private String redExSpcutSize16;
+@Column(name = "rednote_express_spcut_size_17")
+private String redExSpcutSize17;
+@Column(name = "rednote_express_spcut_size_18")
+private String redExSpcutSize18;
+@Column(name = "rednote_express_spcut_size_1_t")
+private String redExSpcutSize1T;
+@Column(name = "rednote_express_spcut_size_2_t")
+private String redExSpcutSize2T;
+@Column(name = "rednote_express_spcut_size_3_t")
+private String redExSpcutSize3T;
+@Column(name = "rednote_express_spcut_size_4_t")
+private String redExSpcutSize4T;
+@Column(name = "rednote_express_spcut_size_5_t")
+private String redExSpcutSize5T;
+@Column(name = "rednote_express_spcut_size_6_t")
+private String redExSpcutSize6T;
+@Column(name = "rednote_express_spcut_size_7_t")
+private String redExSpcutSize7T;
+@Column(name = "rednote_express_spcut_size_8_t")
+private String redExSpcutSize8T;
+@Column(name = "rednote_express_spcut_size_9_t")
+private String redExSpcutSize9T;
+@Column(name = "rednote_express_spcut_size_10_t")
+private String redExSpcutSize10T;
+@Column(name = "rednote_express_spcut_size_11_t")
+private String redExSpcutSize11T;
+@Column(name = "rednote_express_spcut_size_12_t")
+private String redExSpcutSize12T;
+@Column(name = "rednote_express_spcut_size_13_t")
+private String redExSpcutSize13T;
+@Column(name = "rednote_express_spprep_size_1")
+private String redExSpprepSize1;
+@Column(name = "rednote_express_spprep_size_2")
+private String redExSpprepSize2;
+@Column(name = "rednote_express_spprep_size_3")
+private String redExSpprepSize3;
+@Column(name = "rednote_express_spprep_size_4")
+private String redExSpprepSize4;
+@Column(name = "rednote_express_spprep_size_5")
+private String redExSpprepSize5;
+@Column(name = "rednote_express_spprep_size_6")
+private String redExSpprepSize6;
+@Column(name = "rednote_express_spprep_size_7")
+private String redExSpprepSize7;
+@Column(name = "rednote_express_spprep_size_8")
+private String redExSpprepSize8;
+@Column(name = "rednote_express_spprep_size_9")
+private String redExSpprepSize9;
+@Column(name = "rednote_express_spprep_size_10")
+private String redExSpprepSize10;
+@Column(name = "rednote_express_spprep_size_11")
+private String redExSpprepSize11;
+@Column(name = "rednote_express_spprep_size_12")
+private String redExSpprepSize12;
+@Column(name = "rednote_express_spprep_size_13")
+private String redExSpprepSize13;
+@Column(name = "rednote_express_spprep_size_14")
+private String redExSpprepSize14;
+@Column(name = "rednote_express_spprep_size_15")
+private String redExSpprepSize15;
+@Column(name = "rednote_express_spprep_size_16")
+private String redExSpprepSize16;
+@Column(name = "rednote_express_spprep_size_17")
+private String redExSpprepSize17;
+@Column(name = "rednote_express_spprep_size_18")
+private String redExSpprepSize18;
+@Column(name = "rednote_express_spprep_size_1_t")
+private String redExSpprepSize1T;
+@Column(name = "rednote_express_spprep_size_2_t")
+private String redExSpprepSize2T;
+@Column(name = "rednote_express_spprep_size_3_t")
+private String redExSpprepSize3T;
+@Column(name = "rednote_express_spprep_size_4_t")
+private String redExSpprepSize4T;
+@Column(name = "rednote_express_spprep_size_5_t")
+private String redExSpprepSize5T;
+@Column(name = "rednote_express_spprep_size_6_t")
+private String redExSpprepSize6T;
+@Column(name = "rednote_express_spprep_size_7_t")
+private String redExSpprepSize7T;
+@Column(name = "rednote_express_spprep_size_8_t")
+private String redExSpprepSize8T;
+@Column(name = "rednote_express_spprep_size_9_t")
+private String redExSpprepSize9T;
+@Column(name = "rednote_express_spprep_size_10_t")
+private String redExSpprepSize10T;
+@Column(name = "rednote_express_spprep_size_11_t")
+private String redExSpprepSize11T;
+@Column(name = "rednote_express_spprep_size_12_t")
+private String redExSpprepSize12T;
+@Column(name = "rednote_express_spprep_size_13_t")
+private String redExSpprepSize13T;
+@Column(name = "rednote_express_label_size_1")
+private String redExLabelSize1;
+@Column(name = "rednote_express_label_size_2")
+private String redExLabelSize2;
+@Column(name = "rednote_express_label_size_3")
+private String redExLabelSize3;
+@Column(name = "rednote_express_label_size_4")
+private String redExLabelSize4;
+@Column(name = "rednote_express_label_size_5")
+private String redExLabelSize5;
+@Column(name = "rednote_express_label_size_6")
+private String redExLabelSize6;
+@Column(name = "rednote_express_label_size_7")
+private String redExLabelSize7;
+@Column(name = "rednote_express_label_size_8")
+private String redExLabelSize8;
+@Column(name = "rednote_express_label_size_9")
+private String redExLabelSize9;
+@Column(name = "rednote_express_label_size_10")
+private String redExLabelSize10;
+@Column(name = "rednote_express_label_size_11")
+private String redExLabelSize11;
+@Column(name = "rednote_express_label_size_12")
+private String redExLabelSize12;
+@Column(name = "rednote_express_label_size_13")
+private String redExLabelSize13;
+@Column(name = "rednote_express_label_size_14")
+private String redExLabelSize14;
+@Column(name = "rednote_express_label_size_15")
+private String redExLabelSize15;
+@Column(name = "rednote_express_label_size_16")
+private String redExLabelSize16;
+@Column(name = "rednote_express_label_size_17")
+private String redExLabelSize17;
+@Column(name = "rednote_express_label_size_18")
+private String redExLabelSize18;
+@Column(name = "rednote_express_label_size_1_t")
+private String redExLabelSize1T;
+@Column(name = "rednote_express_label_size_2_t")
+private String redExLabelSize2T;
+@Column(name = "rednote_express_label_size_3_t")
+private String redExLabelSize3T;
+@Column(name = "rednote_express_label_size_4_t")
+private String redExLabelSize4T;
+@Column(name = "rednote_express_label_size_5_t")
+private String redExLabelSize5T;
+@Column(name = "rednote_express_label_size_6_t")
+private String redExLabelSize6T;
+@Column(name = "rednote_express_label_size_7_t")
+private String redExLabelSize7T;
+@Column(name = "rednote_express_label_size_8_t")
+private String redExLabelSize8T;
+@Column(name = "rednote_express_label_size_9_t")
+private String redExLabelSize9T;
+@Column(name = "rednote_express_label_size_10_t")
+private String redExLabelSize10T;
+@Column(name = "rednote_express_label_size_11_t")
+private String redExLabelSize11T;
+@Column(name = "rednote_express_label_size_12_t")
+private String redExLabelSize12T;
+@Column(name = "rednote_express_label_size_13_t")
+private String redExLabelSize13T;
+@Column(name = "rednote_express_laser_size_1")
+private String redExLaserSize1;
+@Column(name = "rednote_express_laser_size_2")
+private String redExLaserSize2;
+@Column(name = "rednote_express_laser_size_3")
+private String redExLaserSize3;
+@Column(name = "rednote_express_laser_size_4")
+private String redExLaserSize4;
+@Column(name = "rednote_express_laser_size_5")
+private String redExLaserSize5;
+@Column(name = "rednote_express_laser_size_6")
+private String redExLaserSize6;
+@Column(name = "rednote_express_laser_size_7")
+private String redExLaserSize7;
+@Column(name = "rednote_express_laser_size_8")
+private String redExLaserSize8;
+@Column(name = "rednote_express_laser_size_9")
+private String redExLaserSize9;
+@Column(name = "rednote_express_laser_size_10")
+private String redExLaserSize10;
+@Column(name = "rednote_express_laser_size_11")
+private String redExLaserSize11;
+@Column(name = "rednote_express_laser_size_12")
+private String redExLaserSize12;
+@Column(name = "rednote_express_laser_size_13")
+private String redExLaserSize13;
+@Column(name = "rednote_express_laser_size_14")
+private String redExLaserSize14;
+@Column(name = "rednote_express_laser_size_15")
+private String redExLaserSize15;
+@Column(name = "rednote_express_laser_size_16")
+private String redExLaserSize16;
+@Column(name = "rednote_express_laser_size_17")
+private String redExLaserSize17;
+@Column(name = "rednote_express_laser_size_18")
+private String redExLaserSize18;
+@Column(name = "rednote_express_laser_size_1_t")
+private String redExLaserSize1T;
+@Column(name = "rednote_express_laser_size_2_t")
+private String redExLaserSize2T;
+@Column(name = "rednote_express_laser_size_3_t")
+private String redExLaserSize3T;
+@Column(name = "rednote_express_laser_size_4_t")
+private String redExLaserSize4T;
+@Column(name = "rednote_express_laser_size_5_t")
+private String redExLaserSize5T;
+@Column(name = "rednote_express_laser_size_6_t")
+private String redExLaserSize6T;
+@Column(name = "rednote_express_laser_size_7_t")
+private String redExLaserSize7T;
+@Column(name = "rednote_express_laser_size_8_t")
+private String redExLaserSize8T;
+@Column(name = "rednote_express_laser_size_9_t")
+private String redExLaserSize9T;
+@Column(name = "rednote_express_laser_size_10_t")
+private String redExLaserSize10T;
+@Column(name = "rednote_express_laser_size_11_t")
+private String redExLaserSize11T;
+@Column(name = "rednote_express_laser_size_12_t")
+private String redExLaserSize12T;
+@Column(name = "rednote_express_laser_size_13_t")
+private String redExLaserSize13T;
+    
     /**
      *
      * @return
@@ -8379,6 +9125,2983 @@ public class JdcAdpTxnLotapprv implements Serializable {
     public void setFlagExLaserOutSize13T(Long flagExLaserOutSize13T) {
         this.flagExLaserOutSize13T = flagExLaserOutSize13T;
     }
+
+    public String getRedExCtSize1() {
+        return redExCtSize1;
+    }
+
+    public void setRedExCtSize1(String redExCtSize1) {
+        this.redExCtSize1 = redExCtSize1;
+    }
+
+    public String getRedExCtSize2() {
+        return redExCtSize2;
+    }
+
+    public void setRedExCtSize2(String redExCtSize2) {
+        this.redExCtSize2 = redExCtSize2;
+    }
+
+    public String getRedExCtSize3() {
+        return redExCtSize3;
+    }
+
+    public void setRedExCtSize3(String redExCtSize3) {
+        this.redExCtSize3 = redExCtSize3;
+    }
+
+    public String getRedExCtSize4() {
+        return redExCtSize4;
+    }
+
+    public void setRedExCtSize4(String redExCtSize4) {
+        this.redExCtSize4 = redExCtSize4;
+    }
+
+    public String getRedExCtSize5() {
+        return redExCtSize5;
+    }
+
+    public void setRedExCtSize5(String redExCtSize5) {
+        this.redExCtSize5 = redExCtSize5;
+    }
+
+    public String getRedExCtSize6() {
+        return redExCtSize6;
+    }
+
+    public void setRedExCtSize6(String redExCtSize6) {
+        this.redExCtSize6 = redExCtSize6;
+    }
+
+    public String getRedExCtSize7() {
+        return redExCtSize7;
+    }
+
+    public void setRedExCtSize7(String redExCtSize7) {
+        this.redExCtSize7 = redExCtSize7;
+    }
+
+    public String getRedExCtSize8() {
+        return redExCtSize8;
+    }
+
+    public void setRedExCtSize8(String redExCtSize8) {
+        this.redExCtSize8 = redExCtSize8;
+    }
+
+    public String getRedExCtSize9() {
+        return redExCtSize9;
+    }
+
+    public void setRedExCtSize9(String redExCtSize9) {
+        this.redExCtSize9 = redExCtSize9;
+    }
+
+    public String getRedExCtSize10() {
+        return redExCtSize10;
+    }
+
+    public void setRedExCtSize10(String redExCtSize10) {
+        this.redExCtSize10 = redExCtSize10;
+    }
+
+    public String getRedExCtSize11() {
+        return redExCtSize11;
+    }
+
+    public void setRedExCtSize11(String redExCtSize11) {
+        this.redExCtSize11 = redExCtSize11;
+    }
+
+    public String getRedExCtSize12() {
+        return redExCtSize12;
+    }
+
+    public void setRedExCtSize12(String redExCtSize12) {
+        this.redExCtSize12 = redExCtSize12;
+    }
+
+    public String getRedExCtSize13() {
+        return redExCtSize13;
+    }
+
+    public void setRedExCtSize13(String redExCtSize13) {
+        this.redExCtSize13 = redExCtSize13;
+    }
+
+    public String getRedExCtSize14() {
+        return redExCtSize14;
+    }
+
+    public void setRedExCtSize14(String redExCtSize14) {
+        this.redExCtSize14 = redExCtSize14;
+    }
+
+    public String getRedExCtSize15() {
+        return redExCtSize15;
+    }
+
+    public void setRedExCtSize15(String redExCtSize15) {
+        this.redExCtSize15 = redExCtSize15;
+    }
+
+    public String getRedExCtSize16() {
+        return redExCtSize16;
+    }
+
+    public void setRedExCtSize16(String redExCtSize16) {
+        this.redExCtSize16 = redExCtSize16;
+    }
+
+    public String getRedExCtSize17() {
+        return redExCtSize17;
+    }
+
+    public void setRedExCtSize17(String redExCtSize17) {
+        this.redExCtSize17 = redExCtSize17;
+    }
+
+    public String getRedExCtSize18() {
+        return redExCtSize18;
+    }
+
+    public void setRedExCtSize18(String redExCtSize18) {
+        this.redExCtSize18 = redExCtSize18;
+    }
+
+    public String getRedExCtSize1T() {
+        return redExCtSize1T;
+    }
+
+    public void setRedExCtSize1T(String redExCtSize1T) {
+        this.redExCtSize1T = redExCtSize1T;
+    }
+
+    public String getRedExCtSize2T() {
+        return redExCtSize2T;
+    }
+
+    public void setRedExCtSize2T(String redExCtSize2T) {
+        this.redExCtSize2T = redExCtSize2T;
+    }
+
+    public String getRedExCtSize3T() {
+        return redExCtSize3T;
+    }
+
+    public void setRedExCtSize3T(String redExCtSize3T) {
+        this.redExCtSize3T = redExCtSize3T;
+    }
+
+    public String getRedExCtSize4T() {
+        return redExCtSize4T;
+    }
+
+    public void setRedExCtSize4T(String redExCtSize4T) {
+        this.redExCtSize4T = redExCtSize4T;
+    }
+
+    public String getRedExCtSize5T() {
+        return redExCtSize5T;
+    }
+
+    public void setRedExCtSize5T(String redExCtSize5T) {
+        this.redExCtSize5T = redExCtSize5T;
+    }
+
+    public String getRedExCtSize6T() {
+        return redExCtSize6T;
+    }
+
+    public void setRedExCtSize6T(String redExCtSize6T) {
+        this.redExCtSize6T = redExCtSize6T;
+    }
+
+    public String getRedExCtSize7T() {
+        return redExCtSize7T;
+    }
+
+    public void setRedExCtSize7T(String redExCtSize7T) {
+        this.redExCtSize7T = redExCtSize7T;
+    }
+
+    public String getRedExCtSize8T() {
+        return redExCtSize8T;
+    }
+
+    public void setRedExCtSize8T(String redExCtSize8T) {
+        this.redExCtSize8T = redExCtSize8T;
+    }
+
+    public String getRedExCtSize9T() {
+        return redExCtSize9T;
+    }
+
+    public void setRedExCtSize9T(String redExCtSize9T) {
+        this.redExCtSize9T = redExCtSize9T;
+    }
+
+    public String getRedExCtSize10T() {
+        return redExCtSize10T;
+    }
+
+    public void setRedExCtSize10T(String redExCtSize10T) {
+        this.redExCtSize10T = redExCtSize10T;
+    }
+
+    public String getRedExCtSize11T() {
+        return redExCtSize11T;
+    }
+
+    public void setRedExCtSize11T(String redExCtSize11T) {
+        this.redExCtSize11T = redExCtSize11T;
+    }
+
+    public String getRedExCtSize12T() {
+        return redExCtSize12T;
+    }
+
+    public void setRedExCtSize12T(String redExCtSize12T) {
+        this.redExCtSize12T = redExCtSize12T;
+    }
+
+    public String getRedExCtSize13T() {
+        return redExCtSize13T;
+    }
+
+    public void setRedExCtSize13T(String redExCtSize13T) {
+        this.redExCtSize13T = redExCtSize13T;
+    }
+
+    public String getRedExPrepSize1() {
+        return redExPrepSize1;
+    }
+
+    public void setRedExPrepSize1(String redExPrepSize1) {
+        this.redExPrepSize1 = redExPrepSize1;
+    }
+
+    public String getRedExPrepSize2() {
+        return redExPrepSize2;
+    }
+
+    public void setRedExPrepSize2(String redExPrepSize2) {
+        this.redExPrepSize2 = redExPrepSize2;
+    }
+
+    public String getRedExPrepSize3() {
+        return redExPrepSize3;
+    }
+
+    public void setRedExPrepSize3(String redExPrepSize3) {
+        this.redExPrepSize3 = redExPrepSize3;
+    }
+
+    public String getRedExPrepSize4() {
+        return redExPrepSize4;
+    }
+
+    public void setRedExPrepSize4(String redExPrepSize4) {
+        this.redExPrepSize4 = redExPrepSize4;
+    }
+
+    public String getRedExPrepSize5() {
+        return redExPrepSize5;
+    }
+
+    public void setRedExPrepSize5(String redExPrepSize5) {
+        this.redExPrepSize5 = redExPrepSize5;
+    }
+
+    public String getRedExPrepSize6() {
+        return redExPrepSize6;
+    }
+
+    public void setRedExPrepSize6(String redExPrepSize6) {
+        this.redExPrepSize6 = redExPrepSize6;
+    }
+
+    public String getRedExPrepSize7() {
+        return redExPrepSize7;
+    }
+
+    public void setRedExPrepSize7(String redExPrepSize7) {
+        this.redExPrepSize7 = redExPrepSize7;
+    }
+
+    public String getRedExPrepSize8() {
+        return redExPrepSize8;
+    }
+
+    public void setRedExPrepSize8(String redExPrepSize8) {
+        this.redExPrepSize8 = redExPrepSize8;
+    }
+
+    public String getRedExPrepSize9() {
+        return redExPrepSize9;
+    }
+
+    public void setRedExPrepSize9(String redExPrepSize9) {
+        this.redExPrepSize9 = redExPrepSize9;
+    }
+
+    public String getRedExPrepSize10() {
+        return redExPrepSize10;
+    }
+
+    public void setRedExPrepSize10(String redExPrepSize10) {
+        this.redExPrepSize10 = redExPrepSize10;
+    }
+
+    public String getRedExPrepSize11() {
+        return redExPrepSize11;
+    }
+
+    public void setRedExPrepSize11(String redExPrepSize11) {
+        this.redExPrepSize11 = redExPrepSize11;
+    }
+
+    public String getRedExPrepSize12() {
+        return redExPrepSize12;
+    }
+
+    public void setRedExPrepSize12(String redExPrepSize12) {
+        this.redExPrepSize12 = redExPrepSize12;
+    }
+
+    public String getRedExPrepSize13() {
+        return redExPrepSize13;
+    }
+
+    public void setRedExPrepSize13(String redExPrepSize13) {
+        this.redExPrepSize13 = redExPrepSize13;
+    }
+
+    public String getRedExPrepSize14() {
+        return redExPrepSize14;
+    }
+
+    public void setRedExPrepSize14(String redExPrepSize14) {
+        this.redExPrepSize14 = redExPrepSize14;
+    }
+
+    public String getRedExPrepSize15() {
+        return redExPrepSize15;
+    }
+
+    public void setRedExPrepSize15(String redExPrepSize15) {
+        this.redExPrepSize15 = redExPrepSize15;
+    }
+
+    public String getRedExPrepSize16() {
+        return redExPrepSize16;
+    }
+
+    public void setRedExPrepSize16(String redExPrepSize16) {
+        this.redExPrepSize16 = redExPrepSize16;
+    }
+
+    public String getRedExPrepSize17() {
+        return redExPrepSize17;
+    }
+
+    public void setRedExPrepSize17(String redExPrepSize17) {
+        this.redExPrepSize17 = redExPrepSize17;
+    }
+
+    public String getRedExPrepSize18() {
+        return redExPrepSize18;
+    }
+
+    public void setRedExPrepSize18(String redExPrepSize18) {
+        this.redExPrepSize18 = redExPrepSize18;
+    }
+
+    public String getRedExPrepSize1T() {
+        return redExPrepSize1T;
+    }
+
+    public void setRedExPrepSize1T(String redExPrepSize1T) {
+        this.redExPrepSize1T = redExPrepSize1T;
+    }
+
+    public String getRedExPrepSize2T() {
+        return redExPrepSize2T;
+    }
+
+    public void setRedExPrepSize2T(String redExPrepSize2T) {
+        this.redExPrepSize2T = redExPrepSize2T;
+    }
+
+    public String getRedExPrepSize3T() {
+        return redExPrepSize3T;
+    }
+
+    public void setRedExPrepSize3T(String redExPrepSize3T) {
+        this.redExPrepSize3T = redExPrepSize3T;
+    }
+
+    public String getRedExPrepSize4T() {
+        return redExPrepSize4T;
+    }
+
+    public void setRedExPrepSize4T(String redExPrepSize4T) {
+        this.redExPrepSize4T = redExPrepSize4T;
+    }
+
+    public String getRedExPrepSize5T() {
+        return redExPrepSize5T;
+    }
+
+    public void setRedExPrepSize5T(String redExPrepSize5T) {
+        this.redExPrepSize5T = redExPrepSize5T;
+    }
+
+    public String getRedExPrepSize6T() {
+        return redExPrepSize6T;
+    }
+
+    public void setRedExPrepSize6T(String redExPrepSize6T) {
+        this.redExPrepSize6T = redExPrepSize6T;
+    }
+
+    public String getRedExPrepSize7T() {
+        return redExPrepSize7T;
+    }
+
+    public void setRedExPrepSize7T(String redExPrepSize7T) {
+        this.redExPrepSize7T = redExPrepSize7T;
+    }
+
+    public String getRedExPrepSize8T() {
+        return redExPrepSize8T;
+    }
+
+    public void setRedExPrepSize8T(String redExPrepSize8T) {
+        this.redExPrepSize8T = redExPrepSize8T;
+    }
+
+    public String getRedExPrepSize9T() {
+        return redExPrepSize9T;
+    }
+
+    public void setRedExPrepSize9T(String redExPrepSize9T) {
+        this.redExPrepSize9T = redExPrepSize9T;
+    }
+
+    public String getRedExPrepSize10T() {
+        return redExPrepSize10T;
+    }
+
+    public void setRedExPrepSize10T(String redExPrepSize10T) {
+        this.redExPrepSize10T = redExPrepSize10T;
+    }
+
+    public String getRedExPrepSize11T() {
+        return redExPrepSize11T;
+    }
+
+    public void setRedExPrepSize11T(String redExPrepSize11T) {
+        this.redExPrepSize11T = redExPrepSize11T;
+    }
+
+    public String getRedExPrepSize12T() {
+        return redExPrepSize12T;
+    }
+
+    public void setRedExPrepSize12T(String redExPrepSize12T) {
+        this.redExPrepSize12T = redExPrepSize12T;
+    }
+
+    public String getRedExPrepSize13T() {
+        return redExPrepSize13T;
+    }
+
+    public void setRedExPrepSize13T(String redExPrepSize13T) {
+        this.redExPrepSize13T = redExPrepSize13T;
+    }
+
+    public String getRedExStSize1() {
+        return redExStSize1;
+    }
+
+    public void setRedExStSize1(String redExStSize1) {
+        this.redExStSize1 = redExStSize1;
+    }
+
+    public String getRedExStSize2() {
+        return redExStSize2;
+    }
+
+    public void setRedExStSize2(String redExStSize2) {
+        this.redExStSize2 = redExStSize2;
+    }
+
+    public String getRedExStSize3() {
+        return redExStSize3;
+    }
+
+    public void setRedExStSize3(String redExStSize3) {
+        this.redExStSize3 = redExStSize3;
+    }
+
+    public String getRedExStSize4() {
+        return redExStSize4;
+    }
+
+    public void setRedExStSize4(String redExStSize4) {
+        this.redExStSize4 = redExStSize4;
+    }
+
+    public String getRedExStSize5() {
+        return redExStSize5;
+    }
+
+    public void setRedExStSize5(String redExStSize5) {
+        this.redExStSize5 = redExStSize5;
+    }
+
+    public String getRedExStSize6() {
+        return redExStSize6;
+    }
+
+    public void setRedExStSize6(String redExStSize6) {
+        this.redExStSize6 = redExStSize6;
+    }
+
+    public String getRedExStSize7() {
+        return redExStSize7;
+    }
+
+    public void setRedExStSize7(String redExStSize7) {
+        this.redExStSize7 = redExStSize7;
+    }
+
+    public String getRedExStSize8() {
+        return redExStSize8;
+    }
+
+    public void setRedExStSize8(String redExStSize8) {
+        this.redExStSize8 = redExStSize8;
+    }
+
+    public String getRedExStSize9() {
+        return redExStSize9;
+    }
+
+    public void setRedExStSize9(String redExStSize9) {
+        this.redExStSize9 = redExStSize9;
+    }
+
+    public String getRedExStSize10() {
+        return redExStSize10;
+    }
+
+    public void setRedExStSize10(String redExStSize10) {
+        this.redExStSize10 = redExStSize10;
+    }
+
+    public String getRedExStSize11() {
+        return redExStSize11;
+    }
+
+    public void setRedExStSize11(String redExStSize11) {
+        this.redExStSize11 = redExStSize11;
+    }
+
+    public String getRedExStSize12() {
+        return redExStSize12;
+    }
+
+    public void setRedExStSize12(String redExStSize12) {
+        this.redExStSize12 = redExStSize12;
+    }
+
+    public String getRedExStSize13() {
+        return redExStSize13;
+    }
+
+    public void setRedExStSize13(String redExStSize13) {
+        this.redExStSize13 = redExStSize13;
+    }
+
+    public String getRedExStSize14() {
+        return redExStSize14;
+    }
+
+    public void setRedExStSize14(String redExStSize14) {
+        this.redExStSize14 = redExStSize14;
+    }
+
+    public String getRedExStSize15() {
+        return redExStSize15;
+    }
+
+    public void setRedExStSize15(String redExStSize15) {
+        this.redExStSize15 = redExStSize15;
+    }
+
+    public String getRedExStSize16() {
+        return redExStSize16;
+    }
+
+    public void setRedExStSize16(String redExStSize16) {
+        this.redExStSize16 = redExStSize16;
+    }
+
+    public String getRedExStSize17() {
+        return redExStSize17;
+    }
+
+    public void setRedExStSize17(String redExStSize17) {
+        this.redExStSize17 = redExStSize17;
+    }
+
+    public String getRedExStSize18() {
+        return redExStSize18;
+    }
+
+    public void setRedExStSize18(String redExStSize18) {
+        this.redExStSize18 = redExStSize18;
+    }
+
+    public String getRedExStSize1T() {
+        return redExStSize1T;
+    }
+
+    public void setRedExStSize1T(String redExStSize1T) {
+        this.redExStSize1T = redExStSize1T;
+    }
+
+    public String getRedExStSize2T() {
+        return redExStSize2T;
+    }
+
+    public void setRedExStSize2T(String redExStSize2T) {
+        this.redExStSize2T = redExStSize2T;
+    }
+
+    public String getRedExStSize3T() {
+        return redExStSize3T;
+    }
+
+    public void setRedExStSize3T(String redExStSize3T) {
+        this.redExStSize3T = redExStSize3T;
+    }
+
+    public String getRedExStSize4T() {
+        return redExStSize4T;
+    }
+
+    public void setRedExStSize4T(String redExStSize4T) {
+        this.redExStSize4T = redExStSize4T;
+    }
+
+    public String getRedExStSize5T() {
+        return redExStSize5T;
+    }
+
+    public void setRedExStSize5T(String redExStSize5T) {
+        this.redExStSize5T = redExStSize5T;
+    }
+
+    public String getRedExStSize6T() {
+        return redExStSize6T;
+    }
+
+    public void setRedExStSize6T(String redExStSize6T) {
+        this.redExStSize6T = redExStSize6T;
+    }
+
+    public String getRedExStSize7T() {
+        return redExStSize7T;
+    }
+
+    public void setRedExStSize7T(String redExStSize7T) {
+        this.redExStSize7T = redExStSize7T;
+    }
+
+    public String getRedExStSize8T() {
+        return redExStSize8T;
+    }
+
+    public void setRedExStSize8T(String redExStSize8T) {
+        this.redExStSize8T = redExStSize8T;
+    }
+
+    public String getRedExStSize9T() {
+        return redExStSize9T;
+    }
+
+    public void setRedExStSize9T(String redExStSize9T) {
+        this.redExStSize9T = redExStSize9T;
+    }
+
+    public String getRedExStSize10T() {
+        return redExStSize10T;
+    }
+
+    public void setRedExStSize10T(String redExStSize10T) {
+        this.redExStSize10T = redExStSize10T;
+    }
+
+    public String getRedExStSize11T() {
+        return redExStSize11T;
+    }
+
+    public void setRedExStSize11T(String redExStSize11T) {
+        this.redExStSize11T = redExStSize11T;
+    }
+
+    public String getRedExStSize12T() {
+        return redExStSize12T;
+    }
+
+    public void setRedExStSize12T(String redExStSize12T) {
+        this.redExStSize12T = redExStSize12T;
+    }
+
+    public String getRedExStSize13T() {
+        return redExStSize13T;
+    }
+
+    public void setRedExStSize13T(String redExStSize13T) {
+        this.redExStSize13T = redExStSize13T;
+    }
+
+    public String getRedExAsSize1() {
+        return redExAsSize1;
+    }
+
+    public void setRedExAsSize1(String redExAsSize1) {
+        this.redExAsSize1 = redExAsSize1;
+    }
+
+    public String getRedExAsSize2() {
+        return redExAsSize2;
+    }
+
+    public void setRedExAsSize2(String redExAsSize2) {
+        this.redExAsSize2 = redExAsSize2;
+    }
+
+    public String getRedExAsSize3() {
+        return redExAsSize3;
+    }
+
+    public void setRedExAsSize3(String redExAsSize3) {
+        this.redExAsSize3 = redExAsSize3;
+    }
+
+    public String getRedExAsSize4() {
+        return redExAsSize4;
+    }
+
+    public void setRedExAsSize4(String redExAsSize4) {
+        this.redExAsSize4 = redExAsSize4;
+    }
+
+    public String getRedExAsSize5() {
+        return redExAsSize5;
+    }
+
+    public void setRedExAsSize5(String redExAsSize5) {
+        this.redExAsSize5 = redExAsSize5;
+    }
+
+    public String getRedExAsSize6() {
+        return redExAsSize6;
+    }
+
+    public void setRedExAsSize6(String redExAsSize6) {
+        this.redExAsSize6 = redExAsSize6;
+    }
+
+    public String getRedExAsSize7() {
+        return redExAsSize7;
+    }
+
+    public void setRedExAsSize7(String redExAsSize7) {
+        this.redExAsSize7 = redExAsSize7;
+    }
+
+    public String getRedExAsSize8() {
+        return redExAsSize8;
+    }
+
+    public void setRedExAsSize8(String redExAsSize8) {
+        this.redExAsSize8 = redExAsSize8;
+    }
+
+    public String getRedExAsSize9() {
+        return redExAsSize9;
+    }
+
+    public void setRedExAsSize9(String redExAsSize9) {
+        this.redExAsSize9 = redExAsSize9;
+    }
+
+    public String getRedExAsSize10() {
+        return redExAsSize10;
+    }
+
+    public void setRedExAsSize10(String redExAsSize10) {
+        this.redExAsSize10 = redExAsSize10;
+    }
+
+    public String getRedExAsSize11() {
+        return redExAsSize11;
+    }
+
+    public void setRedExAsSize11(String redExAsSize11) {
+        this.redExAsSize11 = redExAsSize11;
+    }
+
+    public String getRedExAsSize12() {
+        return redExAsSize12;
+    }
+
+    public void setRedExAsSize12(String redExAsSize12) {
+        this.redExAsSize12 = redExAsSize12;
+    }
+
+    public String getRedExAsSize13() {
+        return redExAsSize13;
+    }
+
+    public void setRedExAsSize13(String redExAsSize13) {
+        this.redExAsSize13 = redExAsSize13;
+    }
+
+    public String getRedExAsSize14() {
+        return redExAsSize14;
+    }
+
+    public void setRedExAsSize14(String redExAsSize14) {
+        this.redExAsSize14 = redExAsSize14;
+    }
+
+    public String getRedExAsSize15() {
+        return redExAsSize15;
+    }
+
+    public void setRedExAsSize15(String redExAsSize15) {
+        this.redExAsSize15 = redExAsSize15;
+    }
+
+    public String getRedExAsSize16() {
+        return redExAsSize16;
+    }
+
+    public void setRedExAsSize16(String redExAsSize16) {
+        this.redExAsSize16 = redExAsSize16;
+    }
+
+    public String getRedExAsSize17() {
+        return redExAsSize17;
+    }
+
+    public void setRedExAsSize17(String redExAsSize17) {
+        this.redExAsSize17 = redExAsSize17;
+    }
+
+    public String getRedExAsSize18() {
+        return redExAsSize18;
+    }
+
+    public void setRedExAsSize18(String redExAsSize18) {
+        this.redExAsSize18 = redExAsSize18;
+    }
+
+    public String getRedExAsSize1T() {
+        return redExAsSize1T;
+    }
+
+    public void setRedExAsSize1T(String redExAsSize1T) {
+        this.redExAsSize1T = redExAsSize1T;
+    }
+
+    public String getRedExAsSize2T() {
+        return redExAsSize2T;
+    }
+
+    public void setRedExAsSize2T(String redExAsSize2T) {
+        this.redExAsSize2T = redExAsSize2T;
+    }
+
+    public String getRedExAsSize3T() {
+        return redExAsSize3T;
+    }
+
+    public void setRedExAsSize3T(String redExAsSize3T) {
+        this.redExAsSize3T = redExAsSize3T;
+    }
+
+    public String getRedExAsSize4T() {
+        return redExAsSize4T;
+    }
+
+    public void setRedExAsSize4T(String redExAsSize4T) {
+        this.redExAsSize4T = redExAsSize4T;
+    }
+
+    public String getRedExAsSize5T() {
+        return redExAsSize5T;
+    }
+
+    public void setRedExAsSize5T(String redExAsSize5T) {
+        this.redExAsSize5T = redExAsSize5T;
+    }
+
+    public String getRedExAsSize6T() {
+        return redExAsSize6T;
+    }
+
+    public void setRedExAsSize6T(String redExAsSize6T) {
+        this.redExAsSize6T = redExAsSize6T;
+    }
+
+    public String getRedExAsSize7T() {
+        return redExAsSize7T;
+    }
+
+    public void setRedExAsSize7T(String redExAsSize7T) {
+        this.redExAsSize7T = redExAsSize7T;
+    }
+
+    public String getRedExAsSize8T() {
+        return redExAsSize8T;
+    }
+
+    public void setRedExAsSize8T(String redExAsSize8T) {
+        this.redExAsSize8T = redExAsSize8T;
+    }
+
+    public String getRedExAsSize9T() {
+        return redExAsSize9T;
+    }
+
+    public void setRedExAsSize9T(String redExAsSize9T) {
+        this.redExAsSize9T = redExAsSize9T;
+    }
+
+    public String getRedExAsSize10T() {
+        return redExAsSize10T;
+    }
+
+    public void setRedExAsSize10T(String redExAsSize10T) {
+        this.redExAsSize10T = redExAsSize10T;
+    }
+
+    public String getRedExAsSize11T() {
+        return redExAsSize11T;
+    }
+
+    public void setRedExAsSize11T(String redExAsSize11T) {
+        this.redExAsSize11T = redExAsSize11T;
+    }
+
+    public String getRedExAsSize12T() {
+        return redExAsSize12T;
+    }
+
+    public void setRedExAsSize12T(String redExAsSize12T) {
+        this.redExAsSize12T = redExAsSize12T;
+    }
+
+    public String getRedExAsSize13T() {
+        return redExAsSize13T;
+    }
+
+    public void setRedExAsSize13T(String redExAsSize13T) {
+        this.redExAsSize13T = redExAsSize13T;
+    }
+
+    public String getRedExCscSize1() {
+        return redExCscSize1;
+    }
+
+    public void setRedExCscSize1(String redExCscSize1) {
+        this.redExCscSize1 = redExCscSize1;
+    }
+
+    public String getRedExCscSize2() {
+        return redExCscSize2;
+    }
+
+    public void setRedExCscSize2(String redExCscSize2) {
+        this.redExCscSize2 = redExCscSize2;
+    }
+
+    public String getRedExCscSize3() {
+        return redExCscSize3;
+    }
+
+    public void setRedExCscSize3(String redExCscSize3) {
+        this.redExCscSize3 = redExCscSize3;
+    }
+
+    public String getRedExCscSize4() {
+        return redExCscSize4;
+    }
+
+    public void setRedExCscSize4(String redExCscSize4) {
+        this.redExCscSize4 = redExCscSize4;
+    }
+
+    public String getRedExCscSize5() {
+        return redExCscSize5;
+    }
+
+    public void setRedExCscSize5(String redExCscSize5) {
+        this.redExCscSize5 = redExCscSize5;
+    }
+
+    public String getRedExCscSize6() {
+        return redExCscSize6;
+    }
+
+    public void setRedExCscSize6(String redExCscSize6) {
+        this.redExCscSize6 = redExCscSize6;
+    }
+
+    public String getRedExCscSize7() {
+        return redExCscSize7;
+    }
+
+    public void setRedExCscSize7(String redExCscSize7) {
+        this.redExCscSize7 = redExCscSize7;
+    }
+
+    public String getRedExCscSize8() {
+        return redExCscSize8;
+    }
+
+    public void setRedExCscSize8(String redExCscSize8) {
+        this.redExCscSize8 = redExCscSize8;
+    }
+
+    public String getRedExCscSize9() {
+        return redExCscSize9;
+    }
+
+    public void setRedExCscSize9(String redExCscSize9) {
+        this.redExCscSize9 = redExCscSize9;
+    }
+
+    public String getRedExCscSize10() {
+        return redExCscSize10;
+    }
+
+    public void setRedExCscSize10(String redExCscSize10) {
+        this.redExCscSize10 = redExCscSize10;
+    }
+
+    public String getRedExCscSize11() {
+        return redExCscSize11;
+    }
+
+    public void setRedExCscSize11(String redExCscSize11) {
+        this.redExCscSize11 = redExCscSize11;
+    }
+
+    public String getRedExCscSize12() {
+        return redExCscSize12;
+    }
+
+    public void setRedExCscSize12(String redExCscSize12) {
+        this.redExCscSize12 = redExCscSize12;
+    }
+
+    public String getRedExCscSize13() {
+        return redExCscSize13;
+    }
+
+    public void setRedExCscSize13(String redExCscSize13) {
+        this.redExCscSize13 = redExCscSize13;
+    }
+
+    public String getRedExCscSize14() {
+        return redExCscSize14;
+    }
+
+    public void setRedExCscSize14(String redExCscSize14) {
+        this.redExCscSize14 = redExCscSize14;
+    }
+
+    public String getRedExCscSize15() {
+        return redExCscSize15;
+    }
+
+    public void setRedExCscSize15(String redExCscSize15) {
+        this.redExCscSize15 = redExCscSize15;
+    }
+
+    public String getRedExCscSize16() {
+        return redExCscSize16;
+    }
+
+    public void setRedExCscSize16(String redExCscSize16) {
+        this.redExCscSize16 = redExCscSize16;
+    }
+
+    public String getRedExCscSize17() {
+        return redExCscSize17;
+    }
+
+    public void setRedExCscSize17(String redExCscSize17) {
+        this.redExCscSize17 = redExCscSize17;
+    }
+
+    public String getRedExCscSize18() {
+        return redExCscSize18;
+    }
+
+    public void setRedExCscSize18(String redExCscSize18) {
+        this.redExCscSize18 = redExCscSize18;
+    }
+
+    public String getRedExCscSize1T() {
+        return redExCscSize1T;
+    }
+
+    public void setRedExCscSize1T(String redExCscSize1T) {
+        this.redExCscSize1T = redExCscSize1T;
+    }
+
+    public String getRedExCscSize2T() {
+        return redExCscSize2T;
+    }
+
+    public void setRedExCscSize2T(String redExCscSize2T) {
+        this.redExCscSize2T = redExCscSize2T;
+    }
+
+    public String getRedExCscSize3T() {
+        return redExCscSize3T;
+    }
+
+    public void setRedExCscSize3T(String redExCscSize3T) {
+        this.redExCscSize3T = redExCscSize3T;
+    }
+
+    public String getRedExCscSize4T() {
+        return redExCscSize4T;
+    }
+
+    public void setRedExCscSize4T(String redExCscSize4T) {
+        this.redExCscSize4T = redExCscSize4T;
+    }
+
+    public String getRedExCscSize5T() {
+        return redExCscSize5T;
+    }
+
+    public void setRedExCscSize5T(String redExCscSize5T) {
+        this.redExCscSize5T = redExCscSize5T;
+    }
+
+    public String getRedExCscSize6T() {
+        return redExCscSize6T;
+    }
+
+    public void setRedExCscSize6T(String redExCscSize6T) {
+        this.redExCscSize6T = redExCscSize6T;
+    }
+
+    public String getRedExCscSize7T() {
+        return redExCscSize7T;
+    }
+
+    public void setRedExCscSize7T(String redExCscSize7T) {
+        this.redExCscSize7T = redExCscSize7T;
+    }
+
+    public String getRedExCscSize8T() {
+        return redExCscSize8T;
+    }
+
+    public void setRedExCscSize8T(String redExCscSize8T) {
+        this.redExCscSize8T = redExCscSize8T;
+    }
+
+    public String getRedExCscSize9T() {
+        return redExCscSize9T;
+    }
+
+    public void setRedExCscSize9T(String redExCscSize9T) {
+        this.redExCscSize9T = redExCscSize9T;
+    }
+
+    public String getRedExCscSize10T() {
+        return redExCscSize10T;
+    }
+
+    public void setRedExCscSize10T(String redExCscSize10T) {
+        this.redExCscSize10T = redExCscSize10T;
+    }
+
+    public String getRedExCscSize11T() {
+        return redExCscSize11T;
+    }
+
+    public void setRedExCscSize11T(String redExCscSize11T) {
+        this.redExCscSize11T = redExCscSize11T;
+    }
+
+    public String getRedExCscSize12T() {
+        return redExCscSize12T;
+    }
+
+    public void setRedExCscSize12T(String redExCscSize12T) {
+        this.redExCscSize12T = redExCscSize12T;
+    }
+
+    public String getRedExCscSize13T() {
+        return redExCscSize13T;
+    }
+
+    public void setRedExCscSize13T(String redExCscSize13T) {
+        this.redExCscSize13T = redExCscSize13T;
+    }
+
+    public String getRedExNsSize1() {
+        return redExNsSize1;
+    }
+
+    public void setRedExNsSize1(String redExNsSize1) {
+        this.redExNsSize1 = redExNsSize1;
+    }
+
+    public String getRedExNsSize2() {
+        return redExNsSize2;
+    }
+
+    public void setRedExNsSize2(String redExNsSize2) {
+        this.redExNsSize2 = redExNsSize2;
+    }
+
+    public String getRedExNsSize3() {
+        return redExNsSize3;
+    }
+
+    public void setRedExNsSize3(String redExNsSize3) {
+        this.redExNsSize3 = redExNsSize3;
+    }
+
+    public String getRedExNsSize4() {
+        return redExNsSize4;
+    }
+
+    public void setRedExNsSize4(String redExNsSize4) {
+        this.redExNsSize4 = redExNsSize4;
+    }
+
+    public String getRedExNsSize5() {
+        return redExNsSize5;
+    }
+
+    public void setRedExNsSize5(String redExNsSize5) {
+        this.redExNsSize5 = redExNsSize5;
+    }
+
+    public String getRedExNsSize6() {
+        return redExNsSize6;
+    }
+
+    public void setRedExNsSize6(String redExNsSize6) {
+        this.redExNsSize6 = redExNsSize6;
+    }
+
+    public String getRedExNsSize7() {
+        return redExNsSize7;
+    }
+
+    public void setRedExNsSize7(String redExNsSize7) {
+        this.redExNsSize7 = redExNsSize7;
+    }
+
+    public String getRedExNsSize8() {
+        return redExNsSize8;
+    }
+
+    public void setRedExNsSize8(String redExNsSize8) {
+        this.redExNsSize8 = redExNsSize8;
+    }
+
+    public String getRedExNsSize9() {
+        return redExNsSize9;
+    }
+
+    public void setRedExNsSize9(String redExNsSize9) {
+        this.redExNsSize9 = redExNsSize9;
+    }
+
+    public String getRedExNsSize10() {
+        return redExNsSize10;
+    }
+
+    public void setRedExNsSize10(String redExNsSize10) {
+        this.redExNsSize10 = redExNsSize10;
+    }
+
+    public String getRedExNsSize11() {
+        return redExNsSize11;
+    }
+
+    public void setRedExNsSize11(String redExNsSize11) {
+        this.redExNsSize11 = redExNsSize11;
+    }
+
+    public String getRedExNsSize12() {
+        return redExNsSize12;
+    }
+
+    public void setRedExNsSize12(String redExNsSize12) {
+        this.redExNsSize12 = redExNsSize12;
+    }
+
+    public String getRedExNsSize13() {
+        return redExNsSize13;
+    }
+
+    public void setRedExNsSize13(String redExNsSize13) {
+        this.redExNsSize13 = redExNsSize13;
+    }
+
+    public String getRedExNsSize14() {
+        return redExNsSize14;
+    }
+
+    public void setRedExNsSize14(String redExNsSize14) {
+        this.redExNsSize14 = redExNsSize14;
+    }
+
+    public String getRedExNsSize15() {
+        return redExNsSize15;
+    }
+
+    public void setRedExNsSize15(String redExNsSize15) {
+        this.redExNsSize15 = redExNsSize15;
+    }
+
+    public String getRedExNsSize16() {
+        return redExNsSize16;
+    }
+
+    public void setRedExNsSize16(String redExNsSize16) {
+        this.redExNsSize16 = redExNsSize16;
+    }
+
+    public String getRedExNsSize17() {
+        return redExNsSize17;
+    }
+
+    public void setRedExNsSize17(String redExNsSize17) {
+        this.redExNsSize17 = redExNsSize17;
+    }
+
+    public String getRedExNsSize18() {
+        return redExNsSize18;
+    }
+
+    public void setRedExNsSize18(String redExNsSize18) {
+        this.redExNsSize18 = redExNsSize18;
+    }
+
+    public String getRedExNsSize1T() {
+        return redExNsSize1T;
+    }
+
+    public void setRedExNsSize1T(String redExNsSize1T) {
+        this.redExNsSize1T = redExNsSize1T;
+    }
+
+    public String getRedExNsSize2T() {
+        return redExNsSize2T;
+    }
+
+    public void setRedExNsSize2T(String redExNsSize2T) {
+        this.redExNsSize2T = redExNsSize2T;
+    }
+
+    public String getRedExNsSize3T() {
+        return redExNsSize3T;
+    }
+
+    public void setRedExNsSize3T(String redExNsSize3T) {
+        this.redExNsSize3T = redExNsSize3T;
+    }
+
+    public String getRedExNsSize4T() {
+        return redExNsSize4T;
+    }
+
+    public void setRedExNsSize4T(String redExNsSize4T) {
+        this.redExNsSize4T = redExNsSize4T;
+    }
+
+    public String getRedExNsSize5T() {
+        return redExNsSize5T;
+    }
+
+    public void setRedExNsSize5T(String redExNsSize5T) {
+        this.redExNsSize5T = redExNsSize5T;
+    }
+
+    public String getRedExNsSize6T() {
+        return redExNsSize6T;
+    }
+
+    public void setRedExNsSize6T(String redExNsSize6T) {
+        this.redExNsSize6T = redExNsSize6T;
+    }
+
+    public String getRedExNsSize7T() {
+        return redExNsSize7T;
+    }
+
+    public void setRedExNsSize7T(String redExNsSize7T) {
+        this.redExNsSize7T = redExNsSize7T;
+    }
+
+    public String getRedExNsSize8T() {
+        return redExNsSize8T;
+    }
+
+    public void setRedExNsSize8T(String redExNsSize8T) {
+        this.redExNsSize8T = redExNsSize8T;
+    }
+
+    public String getRedExNsSize9T() {
+        return redExNsSize9T;
+    }
+
+    public void setRedExNsSize9T(String redExNsSize9T) {
+        this.redExNsSize9T = redExNsSize9T;
+    }
+
+    public String getRedExNsSize10T() {
+        return redExNsSize10T;
+    }
+
+    public void setRedExNsSize10T(String redExNsSize10T) {
+        this.redExNsSize10T = redExNsSize10T;
+    }
+
+    public String getRedExNsSize11T() {
+        return redExNsSize11T;
+    }
+
+    public void setRedExNsSize11T(String redExNsSize11T) {
+        this.redExNsSize11T = redExNsSize11T;
+    }
+
+    public String getRedExNsSize12T() {
+        return redExNsSize12T;
+    }
+
+    public void setRedExNsSize12T(String redExNsSize12T) {
+        this.redExNsSize12T = redExNsSize12T;
+    }
+
+    public String getRedExNsSize13T() {
+        return redExNsSize13T;
+    }
+
+    public void setRedExNsSize13T(String redExNsSize13T) {
+        this.redExNsSize13T = redExNsSize13T;
+    }
+
+    public String getRedExScSize1() {
+        return redExScSize1;
+    }
+
+    public void setRedExScSize1(String redExScSize1) {
+        this.redExScSize1 = redExScSize1;
+    }
+
+    public String getRedExScSize2() {
+        return redExScSize2;
+    }
+
+    public void setRedExScSize2(String redExScSize2) {
+        this.redExScSize2 = redExScSize2;
+    }
+
+    public String getRedExScSize3() {
+        return redExScSize3;
+    }
+
+    public void setRedExScSize3(String redExScSize3) {
+        this.redExScSize3 = redExScSize3;
+    }
+
+    public String getRedExScSize4() {
+        return redExScSize4;
+    }
+
+    public void setRedExScSize4(String redExScSize4) {
+        this.redExScSize4 = redExScSize4;
+    }
+
+    public String getRedExScSize5() {
+        return redExScSize5;
+    }
+
+    public void setRedExScSize5(String redExScSize5) {
+        this.redExScSize5 = redExScSize5;
+    }
+
+    public String getRedExScSize6() {
+        return redExScSize6;
+    }
+
+    public void setRedExScSize6(String redExScSize6) {
+        this.redExScSize6 = redExScSize6;
+    }
+
+    public String getRedExScSize7() {
+        return redExScSize7;
+    }
+
+    public void setRedExScSize7(String redExScSize7) {
+        this.redExScSize7 = redExScSize7;
+    }
+
+    public String getRedExScSize8() {
+        return redExScSize8;
+    }
+
+    public void setRedExScSize8(String redExScSize8) {
+        this.redExScSize8 = redExScSize8;
+    }
+
+    public String getRedExScSize9() {
+        return redExScSize9;
+    }
+
+    public void setRedExScSize9(String redExScSize9) {
+        this.redExScSize9 = redExScSize9;
+    }
+
+    public String getRedExScSize10() {
+        return redExScSize10;
+    }
+
+    public void setRedExScSize10(String redExScSize10) {
+        this.redExScSize10 = redExScSize10;
+    }
+
+    public String getRedExScSize11() {
+        return redExScSize11;
+    }
+
+    public void setRedExScSize11(String redExScSize11) {
+        this.redExScSize11 = redExScSize11;
+    }
+
+    public String getRedExScSize12() {
+        return redExScSize12;
+    }
+
+    public void setRedExScSize12(String redExScSize12) {
+        this.redExScSize12 = redExScSize12;
+    }
+
+    public String getRedExScSize13() {
+        return redExScSize13;
+    }
+
+    public void setRedExScSize13(String redExScSize13) {
+        this.redExScSize13 = redExScSize13;
+    }
+
+    public String getRedExScSize14() {
+        return redExScSize14;
+    }
+
+    public void setRedExScSize14(String redExScSize14) {
+        this.redExScSize14 = redExScSize14;
+    }
+
+    public String getRedExScSize15() {
+        return redExScSize15;
+    }
+
+    public void setRedExScSize15(String redExScSize15) {
+        this.redExScSize15 = redExScSize15;
+    }
+
+    public String getRedExScSize16() {
+        return redExScSize16;
+    }
+
+    public void setRedExScSize16(String redExScSize16) {
+        this.redExScSize16 = redExScSize16;
+    }
+
+    public String getRedExScSize17() {
+        return redExScSize17;
+    }
+
+    public void setRedExScSize17(String redExScSize17) {
+        this.redExScSize17 = redExScSize17;
+    }
+
+    public String getRedExScSize18() {
+        return redExScSize18;
+    }
+
+    public void setRedExScSize18(String redExScSize18) {
+        this.redExScSize18 = redExScSize18;
+    }
+
+    public String getRedExScSize1T() {
+        return redExScSize1T;
+    }
+
+    public void setRedExScSize1T(String redExScSize1T) {
+        this.redExScSize1T = redExScSize1T;
+    }
+
+    public String getRedExScSize2T() {
+        return redExScSize2T;
+    }
+
+    public void setRedExScSize2T(String redExScSize2T) {
+        this.redExScSize2T = redExScSize2T;
+    }
+
+    public String getRedExScSize3T() {
+        return redExScSize3T;
+    }
+
+    public void setRedExScSize3T(String redExScSize3T) {
+        this.redExScSize3T = redExScSize3T;
+    }
+
+    public String getRedExScSize4T() {
+        return redExScSize4T;
+    }
+
+    public void setRedExScSize4T(String redExScSize4T) {
+        this.redExScSize4T = redExScSize4T;
+    }
+
+    public String getRedExScSize5T() {
+        return redExScSize5T;
+    }
+
+    public void setRedExScSize5T(String redExScSize5T) {
+        this.redExScSize5T = redExScSize5T;
+    }
+
+    public String getRedExScSize6T() {
+        return redExScSize6T;
+    }
+
+    public void setRedExScSize6T(String redExScSize6T) {
+        this.redExScSize6T = redExScSize6T;
+    }
+
+    public String getRedExScSize7T() {
+        return redExScSize7T;
+    }
+
+    public void setRedExScSize7T(String redExScSize7T) {
+        this.redExScSize7T = redExScSize7T;
+    }
+
+    public String getRedExScSize8T() {
+        return redExScSize8T;
+    }
+
+    public void setRedExScSize8T(String redExScSize8T) {
+        this.redExScSize8T = redExScSize8T;
+    }
+
+    public String getRedExScSize9T() {
+        return redExScSize9T;
+    }
+
+    public void setRedExScSize9T(String redExScSize9T) {
+        this.redExScSize9T = redExScSize9T;
+    }
+
+    public String getRedExScSize10T() {
+        return redExScSize10T;
+    }
+
+    public void setRedExScSize10T(String redExScSize10T) {
+        this.redExScSize10T = redExScSize10T;
+    }
+
+    public String getRedExScSize11T() {
+        return redExScSize11T;
+    }
+
+    public void setRedExScSize11T(String redExScSize11T) {
+        this.redExScSize11T = redExScSize11T;
+    }
+
+    public String getRedExScSize12T() {
+        return redExScSize12T;
+    }
+
+    public void setRedExScSize12T(String redExScSize12T) {
+        this.redExScSize12T = redExScSize12T;
+    }
+
+    public String getRedExScSize13T() {
+        return redExScSize13T;
+    }
+
+    public void setRedExScSize13T(String redExScSize13T) {
+        this.redExScSize13T = redExScSize13T;
+    }
+
+    public String getRedExOsSize1() {
+        return redExOsSize1;
+    }
+
+    public void setRedExOsSize1(String redExOsSize1) {
+        this.redExOsSize1 = redExOsSize1;
+    }
+
+    public String getRedExOsSize2() {
+        return redExOsSize2;
+    }
+
+    public void setRedExOsSize2(String redExOsSize2) {
+        this.redExOsSize2 = redExOsSize2;
+    }
+
+    public String getRedExOsSize3() {
+        return redExOsSize3;
+    }
+
+    public void setRedExOsSize3(String redExOsSize3) {
+        this.redExOsSize3 = redExOsSize3;
+    }
+
+    public String getRedExOsSize4() {
+        return redExOsSize4;
+    }
+
+    public void setRedExOsSize4(String redExOsSize4) {
+        this.redExOsSize4 = redExOsSize4;
+    }
+
+    public String getRedExOsSize5() {
+        return redExOsSize5;
+    }
+
+    public void setRedExOsSize5(String redExOsSize5) {
+        this.redExOsSize5 = redExOsSize5;
+    }
+
+    public String getRedExOsSize6() {
+        return redExOsSize6;
+    }
+
+    public void setRedExOsSize6(String redExOsSize6) {
+        this.redExOsSize6 = redExOsSize6;
+    }
+
+    public String getRedExOsSize7() {
+        return redExOsSize7;
+    }
+
+    public void setRedExOsSize7(String redExOsSize7) {
+        this.redExOsSize7 = redExOsSize7;
+    }
+
+    public String getRedExOsSize8() {
+        return redExOsSize8;
+    }
+
+    public void setRedExOsSize8(String redExOsSize8) {
+        this.redExOsSize8 = redExOsSize8;
+    }
+
+    public String getRedExOsSize9() {
+        return redExOsSize9;
+    }
+
+    public void setRedExOsSize9(String redExOsSize9) {
+        this.redExOsSize9 = redExOsSize9;
+    }
+
+    public String getRedExOsSize10() {
+        return redExOsSize10;
+    }
+
+    public void setRedExOsSize10(String redExOsSize10) {
+        this.redExOsSize10 = redExOsSize10;
+    }
+
+    public String getRedExOsSize11() {
+        return redExOsSize11;
+    }
+
+    public void setRedExOsSize11(String redExOsSize11) {
+        this.redExOsSize11 = redExOsSize11;
+    }
+
+    public String getRedExOsSize12() {
+        return redExOsSize12;
+    }
+
+    public void setRedExOsSize12(String redExOsSize12) {
+        this.redExOsSize12 = redExOsSize12;
+    }
+
+    public String getRedExOsSize13() {
+        return redExOsSize13;
+    }
+
+    public void setRedExOsSize13(String redExOsSize13) {
+        this.redExOsSize13 = redExOsSize13;
+    }
+
+    public String getRedExOsSize14() {
+        return redExOsSize14;
+    }
+
+    public void setRedExOsSize14(String redExOsSize14) {
+        this.redExOsSize14 = redExOsSize14;
+    }
+
+    public String getRedExOsSize15() {
+        return redExOsSize15;
+    }
+
+    public void setRedExOsSize15(String redExOsSize15) {
+        this.redExOsSize15 = redExOsSize15;
+    }
+
+    public String getRedExOsSize16() {
+        return redExOsSize16;
+    }
+
+    public void setRedExOsSize16(String redExOsSize16) {
+        this.redExOsSize16 = redExOsSize16;
+    }
+
+    public String getRedExOsSize17() {
+        return redExOsSize17;
+    }
+
+    public void setRedExOsSize17(String redExOsSize17) {
+        this.redExOsSize17 = redExOsSize17;
+    }
+
+    public String getRedExOsSize18() {
+        return redExOsSize18;
+    }
+
+    public void setRedExOsSize18(String redExOsSize18) {
+        this.redExOsSize18 = redExOsSize18;
+    }
+
+    public String getRedExOsSize1T() {
+        return redExOsSize1T;
+    }
+
+    public void setRedExOsSize1T(String redExOsSize1T) {
+        this.redExOsSize1T = redExOsSize1T;
+    }
+
+    public String getRedExOsSize2T() {
+        return redExOsSize2T;
+    }
+
+    public void setRedExOsSize2T(String redExOsSize2T) {
+        this.redExOsSize2T = redExOsSize2T;
+    }
+
+    public String getRedExOsSize3T() {
+        return redExOsSize3T;
+    }
+
+    public void setRedExOsSize3T(String redExOsSize3T) {
+        this.redExOsSize3T = redExOsSize3T;
+    }
+
+    public String getRedExOsSize4T() {
+        return redExOsSize4T;
+    }
+
+    public void setRedExOsSize4T(String redExOsSize4T) {
+        this.redExOsSize4T = redExOsSize4T;
+    }
+
+    public String getRedExOsSize5T() {
+        return redExOsSize5T;
+    }
+
+    public void setRedExOsSize5T(String redExOsSize5T) {
+        this.redExOsSize5T = redExOsSize5T;
+    }
+
+    public String getRedExOsSize6T() {
+        return redExOsSize6T;
+    }
+
+    public void setRedExOsSize6T(String redExOsSize6T) {
+        this.redExOsSize6T = redExOsSize6T;
+    }
+
+    public String getRedExOsSize7T() {
+        return redExOsSize7T;
+    }
+
+    public void setRedExOsSize7T(String redExOsSize7T) {
+        this.redExOsSize7T = redExOsSize7T;
+    }
+
+    public String getRedExOsSize8T() {
+        return redExOsSize8T;
+    }
+
+    public void setRedExOsSize8T(String redExOsSize8T) {
+        this.redExOsSize8T = redExOsSize8T;
+    }
+
+    public String getRedExOsSize9T() {
+        return redExOsSize9T;
+    }
+
+    public void setRedExOsSize9T(String redExOsSize9T) {
+        this.redExOsSize9T = redExOsSize9T;
+    }
+
+    public String getRedExOsSize10T() {
+        return redExOsSize10T;
+    }
+
+    public void setRedExOsSize10T(String redExOsSize10T) {
+        this.redExOsSize10T = redExOsSize10T;
+    }
+
+    public String getRedExOsSize11T() {
+        return redExOsSize11T;
+    }
+
+    public void setRedExOsSize11T(String redExOsSize11T) {
+        this.redExOsSize11T = redExOsSize11T;
+    }
+
+    public String getRedExOsSize12T() {
+        return redExOsSize12T;
+    }
+
+    public void setRedExOsSize12T(String redExOsSize12T) {
+        this.redExOsSize12T = redExOsSize12T;
+    }
+
+    public String getRedExOsSize13T() {
+        return redExOsSize13T;
+    }
+
+    public void setRedExOsSize13T(String redExOsSize13T) {
+        this.redExOsSize13T = redExOsSize13T;
+    }
+
+    public String getRedExSpcutSize1() {
+        return redExSpcutSize1;
+    }
+
+    public void setRedExSpcutSize1(String redExSpcutSize1) {
+        this.redExSpcutSize1 = redExSpcutSize1;
+    }
+
+    public String getRedExSpcutSize2() {
+        return redExSpcutSize2;
+    }
+
+    public void setRedExSpcutSize2(String redExSpcutSize2) {
+        this.redExSpcutSize2 = redExSpcutSize2;
+    }
+
+    public String getRedExSpcutSize3() {
+        return redExSpcutSize3;
+    }
+
+    public void setRedExSpcutSize3(String redExSpcutSize3) {
+        this.redExSpcutSize3 = redExSpcutSize3;
+    }
+
+    public String getRedExSpcutSize4() {
+        return redExSpcutSize4;
+    }
+
+    public void setRedExSpcutSize4(String redExSpcutSize4) {
+        this.redExSpcutSize4 = redExSpcutSize4;
+    }
+
+    public String getRedExSpcutSize5() {
+        return redExSpcutSize5;
+    }
+
+    public void setRedExSpcutSize5(String redExSpcutSize5) {
+        this.redExSpcutSize5 = redExSpcutSize5;
+    }
+
+    public String getRedExSpcutSize6() {
+        return redExSpcutSize6;
+    }
+
+    public void setRedExSpcutSize6(String redExSpcutSize6) {
+        this.redExSpcutSize6 = redExSpcutSize6;
+    }
+
+    public String getRedExSpcutSize7() {
+        return redExSpcutSize7;
+    }
+
+    public void setRedExSpcutSize7(String redExSpcutSize7) {
+        this.redExSpcutSize7 = redExSpcutSize7;
+    }
+
+    public String getRedExSpcutSize8() {
+        return redExSpcutSize8;
+    }
+
+    public void setRedExSpcutSize8(String redExSpcutSize8) {
+        this.redExSpcutSize8 = redExSpcutSize8;
+    }
+
+    public String getRedExSpcutSize9() {
+        return redExSpcutSize9;
+    }
+
+    public void setRedExSpcutSize9(String redExSpcutSize9) {
+        this.redExSpcutSize9 = redExSpcutSize9;
+    }
+
+    public String getRedExSpcutSize10() {
+        return redExSpcutSize10;
+    }
+
+    public void setRedExSpcutSize10(String redExSpcutSize10) {
+        this.redExSpcutSize10 = redExSpcutSize10;
+    }
+
+    public String getRedExSpcutSize11() {
+        return redExSpcutSize11;
+    }
+
+    public void setRedExSpcutSize11(String redExSpcutSize11) {
+        this.redExSpcutSize11 = redExSpcutSize11;
+    }
+
+    public String getRedExSpcutSize12() {
+        return redExSpcutSize12;
+    }
+
+    public void setRedExSpcutSize12(String redExSpcutSize12) {
+        this.redExSpcutSize12 = redExSpcutSize12;
+    }
+
+    public String getRedExSpcutSize13() {
+        return redExSpcutSize13;
+    }
+
+    public void setRedExSpcutSize13(String redExSpcutSize13) {
+        this.redExSpcutSize13 = redExSpcutSize13;
+    }
+
+    public String getRedExSpcutSize14() {
+        return redExSpcutSize14;
+    }
+
+    public void setRedExSpcutSize14(String redExSpcutSize14) {
+        this.redExSpcutSize14 = redExSpcutSize14;
+    }
+
+    public String getRedExSpcutSize15() {
+        return redExSpcutSize15;
+    }
+
+    public void setRedExSpcutSize15(String redExSpcutSize15) {
+        this.redExSpcutSize15 = redExSpcutSize15;
+    }
+
+    public String getRedExSpcutSize16() {
+        return redExSpcutSize16;
+    }
+
+    public void setRedExSpcutSize16(String redExSpcutSize16) {
+        this.redExSpcutSize16 = redExSpcutSize16;
+    }
+
+    public String getRedExSpcutSize17() {
+        return redExSpcutSize17;
+    }
+
+    public void setRedExSpcutSize17(String redExSpcutSize17) {
+        this.redExSpcutSize17 = redExSpcutSize17;
+    }
+
+    public String getRedExSpcutSize18() {
+        return redExSpcutSize18;
+    }
+
+    public void setRedExSpcutSize18(String redExSpcutSize18) {
+        this.redExSpcutSize18 = redExSpcutSize18;
+    }
+
+    public String getRedExSpcutSize1T() {
+        return redExSpcutSize1T;
+    }
+
+    public void setRedExSpcutSize1T(String redExSpcutSize1T) {
+        this.redExSpcutSize1T = redExSpcutSize1T;
+    }
+
+    public String getRedExSpcutSize2T() {
+        return redExSpcutSize2T;
+    }
+
+    public void setRedExSpcutSize2T(String redExSpcutSize2T) {
+        this.redExSpcutSize2T = redExSpcutSize2T;
+    }
+
+    public String getRedExSpcutSize3T() {
+        return redExSpcutSize3T;
+    }
+
+    public void setRedExSpcutSize3T(String redExSpcutSize3T) {
+        this.redExSpcutSize3T = redExSpcutSize3T;
+    }
+
+    public String getRedExSpcutSize4T() {
+        return redExSpcutSize4T;
+    }
+
+    public void setRedExSpcutSize4T(String redExSpcutSize4T) {
+        this.redExSpcutSize4T = redExSpcutSize4T;
+    }
+
+    public String getRedExSpcutSize5T() {
+        return redExSpcutSize5T;
+    }
+
+    public void setRedExSpcutSize5T(String redExSpcutSize5T) {
+        this.redExSpcutSize5T = redExSpcutSize5T;
+    }
+
+    public String getRedExSpcutSize6T() {
+        return redExSpcutSize6T;
+    }
+
+    public void setRedExSpcutSize6T(String redExSpcutSize6T) {
+        this.redExSpcutSize6T = redExSpcutSize6T;
+    }
+
+    public String getRedExSpcutSize7T() {
+        return redExSpcutSize7T;
+    }
+
+    public void setRedExSpcutSize7T(String redExSpcutSize7T) {
+        this.redExSpcutSize7T = redExSpcutSize7T;
+    }
+
+    public String getRedExSpcutSize8T() {
+        return redExSpcutSize8T;
+    }
+
+    public void setRedExSpcutSize8T(String redExSpcutSize8T) {
+        this.redExSpcutSize8T = redExSpcutSize8T;
+    }
+
+    public String getRedExSpcutSize9T() {
+        return redExSpcutSize9T;
+    }
+
+    public void setRedExSpcutSize9T(String redExSpcutSize9T) {
+        this.redExSpcutSize9T = redExSpcutSize9T;
+    }
+
+    public String getRedExSpcutSize10T() {
+        return redExSpcutSize10T;
+    }
+
+    public void setRedExSpcutSize10T(String redExSpcutSize10T) {
+        this.redExSpcutSize10T = redExSpcutSize10T;
+    }
+
+    public String getRedExSpcutSize11T() {
+        return redExSpcutSize11T;
+    }
+
+    public void setRedExSpcutSize11T(String redExSpcutSize11T) {
+        this.redExSpcutSize11T = redExSpcutSize11T;
+    }
+
+    public String getRedExSpcutSize12T() {
+        return redExSpcutSize12T;
+    }
+
+    public void setRedExSpcutSize12T(String redExSpcutSize12T) {
+        this.redExSpcutSize12T = redExSpcutSize12T;
+    }
+
+    public String getRedExSpcutSize13T() {
+        return redExSpcutSize13T;
+    }
+
+    public void setRedExSpcutSize13T(String redExSpcutSize13T) {
+        this.redExSpcutSize13T = redExSpcutSize13T;
+    }
+
+    public String getRedExSpprepSize1() {
+        return redExSpprepSize1;
+    }
+
+    public void setRedExSpprepSize1(String redExSpprepSize1) {
+        this.redExSpprepSize1 = redExSpprepSize1;
+    }
+
+    public String getRedExSpprepSize2() {
+        return redExSpprepSize2;
+    }
+
+    public void setRedExSpprepSize2(String redExSpprepSize2) {
+        this.redExSpprepSize2 = redExSpprepSize2;
+    }
+
+    public String getRedExSpprepSize3() {
+        return redExSpprepSize3;
+    }
+
+    public void setRedExSpprepSize3(String redExSpprepSize3) {
+        this.redExSpprepSize3 = redExSpprepSize3;
+    }
+
+    public String getRedExSpprepSize4() {
+        return redExSpprepSize4;
+    }
+
+    public void setRedExSpprepSize4(String redExSpprepSize4) {
+        this.redExSpprepSize4 = redExSpprepSize4;
+    }
+
+    public String getRedExSpprepSize5() {
+        return redExSpprepSize5;
+    }
+
+    public void setRedExSpprepSize5(String redExSpprepSize5) {
+        this.redExSpprepSize5 = redExSpprepSize5;
+    }
+
+    public String getRedExSpprepSize6() {
+        return redExSpprepSize6;
+    }
+
+    public void setRedExSpprepSize6(String redExSpprepSize6) {
+        this.redExSpprepSize6 = redExSpprepSize6;
+    }
+
+    public String getRedExSpprepSize7() {
+        return redExSpprepSize7;
+    }
+
+    public void setRedExSpprepSize7(String redExSpprepSize7) {
+        this.redExSpprepSize7 = redExSpprepSize7;
+    }
+
+    public String getRedExSpprepSize8() {
+        return redExSpprepSize8;
+    }
+
+    public void setRedExSpprepSize8(String redExSpprepSize8) {
+        this.redExSpprepSize8 = redExSpprepSize8;
+    }
+
+    public String getRedExSpprepSize9() {
+        return redExSpprepSize9;
+    }
+
+    public void setRedExSpprepSize9(String redExSpprepSize9) {
+        this.redExSpprepSize9 = redExSpprepSize9;
+    }
+
+    public String getRedExSpprepSize10() {
+        return redExSpprepSize10;
+    }
+
+    public void setRedExSpprepSize10(String redExSpprepSize10) {
+        this.redExSpprepSize10 = redExSpprepSize10;
+    }
+
+    public String getRedExSpprepSize11() {
+        return redExSpprepSize11;
+    }
+
+    public void setRedExSpprepSize11(String redExSpprepSize11) {
+        this.redExSpprepSize11 = redExSpprepSize11;
+    }
+
+    public String getRedExSpprepSize12() {
+        return redExSpprepSize12;
+    }
+
+    public void setRedExSpprepSize12(String redExSpprepSize12) {
+        this.redExSpprepSize12 = redExSpprepSize12;
+    }
+
+    public String getRedExSpprepSize13() {
+        return redExSpprepSize13;
+    }
+
+    public void setRedExSpprepSize13(String redExSpprepSize13) {
+        this.redExSpprepSize13 = redExSpprepSize13;
+    }
+
+    public String getRedExSpprepSize14() {
+        return redExSpprepSize14;
+    }
+
+    public void setRedExSpprepSize14(String redExSpprepSize14) {
+        this.redExSpprepSize14 = redExSpprepSize14;
+    }
+
+    public String getRedExSpprepSize15() {
+        return redExSpprepSize15;
+    }
+
+    public void setRedExSpprepSize15(String redExSpprepSize15) {
+        this.redExSpprepSize15 = redExSpprepSize15;
+    }
+
+    public String getRedExSpprepSize16() {
+        return redExSpprepSize16;
+    }
+
+    public void setRedExSpprepSize16(String redExSpprepSize16) {
+        this.redExSpprepSize16 = redExSpprepSize16;
+    }
+
+    public String getRedExSpprepSize17() {
+        return redExSpprepSize17;
+    }
+
+    public void setRedExSpprepSize17(String redExSpprepSize17) {
+        this.redExSpprepSize17 = redExSpprepSize17;
+    }
+
+    public String getRedExSpprepSize18() {
+        return redExSpprepSize18;
+    }
+
+    public void setRedExSpprepSize18(String redExSpprepSize18) {
+        this.redExSpprepSize18 = redExSpprepSize18;
+    }
+
+    public String getRedExSpprepSize1T() {
+        return redExSpprepSize1T;
+    }
+
+    public void setRedExSpprepSize1T(String redExSpprepSize1T) {
+        this.redExSpprepSize1T = redExSpprepSize1T;
+    }
+
+    public String getRedExSpprepSize2T() {
+        return redExSpprepSize2T;
+    }
+
+    public void setRedExSpprepSize2T(String redExSpprepSize2T) {
+        this.redExSpprepSize2T = redExSpprepSize2T;
+    }
+
+    public String getRedExSpprepSize3T() {
+        return redExSpprepSize3T;
+    }
+
+    public void setRedExSpprepSize3T(String redExSpprepSize3T) {
+        this.redExSpprepSize3T = redExSpprepSize3T;
+    }
+
+    public String getRedExSpprepSize4T() {
+        return redExSpprepSize4T;
+    }
+
+    public void setRedExSpprepSize4T(String redExSpprepSize4T) {
+        this.redExSpprepSize4T = redExSpprepSize4T;
+    }
+
+    public String getRedExSpprepSize5T() {
+        return redExSpprepSize5T;
+    }
+
+    public void setRedExSpprepSize5T(String redExSpprepSize5T) {
+        this.redExSpprepSize5T = redExSpprepSize5T;
+    }
+
+    public String getRedExSpprepSize6T() {
+        return redExSpprepSize6T;
+    }
+
+    public void setRedExSpprepSize6T(String redExSpprepSize6T) {
+        this.redExSpprepSize6T = redExSpprepSize6T;
+    }
+
+    public String getRedExSpprepSize7T() {
+        return redExSpprepSize7T;
+    }
+
+    public void setRedExSpprepSize7T(String redExSpprepSize7T) {
+        this.redExSpprepSize7T = redExSpprepSize7T;
+    }
+
+    public String getRedExSpprepSize8T() {
+        return redExSpprepSize8T;
+    }
+
+    public void setRedExSpprepSize8T(String redExSpprepSize8T) {
+        this.redExSpprepSize8T = redExSpprepSize8T;
+    }
+
+    public String getRedExSpprepSize9T() {
+        return redExSpprepSize9T;
+    }
+
+    public void setRedExSpprepSize9T(String redExSpprepSize9T) {
+        this.redExSpprepSize9T = redExSpprepSize9T;
+    }
+
+    public String getRedExSpprepSize10T() {
+        return redExSpprepSize10T;
+    }
+
+    public void setRedExSpprepSize10T(String redExSpprepSize10T) {
+        this.redExSpprepSize10T = redExSpprepSize10T;
+    }
+
+    public String getRedExSpprepSize11T() {
+        return redExSpprepSize11T;
+    }
+
+    public void setRedExSpprepSize11T(String redExSpprepSize11T) {
+        this.redExSpprepSize11T = redExSpprepSize11T;
+    }
+
+    public String getRedExSpprepSize12T() {
+        return redExSpprepSize12T;
+    }
+
+    public void setRedExSpprepSize12T(String redExSpprepSize12T) {
+        this.redExSpprepSize12T = redExSpprepSize12T;
+    }
+
+    public String getRedExSpprepSize13T() {
+        return redExSpprepSize13T;
+    }
+
+    public void setRedExSpprepSize13T(String redExSpprepSize13T) {
+        this.redExSpprepSize13T = redExSpprepSize13T;
+    }
+
+    public String getRedExLabelSize1() {
+        return redExLabelSize1;
+    }
+
+    public void setRedExLabelSize1(String redExLabelSize1) {
+        this.redExLabelSize1 = redExLabelSize1;
+    }
+
+    public String getRedExLabelSize2() {
+        return redExLabelSize2;
+    }
+
+    public void setRedExLabelSize2(String redExLabelSize2) {
+        this.redExLabelSize2 = redExLabelSize2;
+    }
+
+    public String getRedExLabelSize3() {
+        return redExLabelSize3;
+    }
+
+    public void setRedExLabelSize3(String redExLabelSize3) {
+        this.redExLabelSize3 = redExLabelSize3;
+    }
+
+    public String getRedExLabelSize4() {
+        return redExLabelSize4;
+    }
+
+    public void setRedExLabelSize4(String redExLabelSize4) {
+        this.redExLabelSize4 = redExLabelSize4;
+    }
+
+    public String getRedExLabelSize5() {
+        return redExLabelSize5;
+    }
+
+    public void setRedExLabelSize5(String redExLabelSize5) {
+        this.redExLabelSize5 = redExLabelSize5;
+    }
+
+    public String getRedExLabelSize6() {
+        return redExLabelSize6;
+    }
+
+    public void setRedExLabelSize6(String redExLabelSize6) {
+        this.redExLabelSize6 = redExLabelSize6;
+    }
+
+    public String getRedExLabelSize7() {
+        return redExLabelSize7;
+    }
+
+    public void setRedExLabelSize7(String redExLabelSize7) {
+        this.redExLabelSize7 = redExLabelSize7;
+    }
+
+    public String getRedExLabelSize8() {
+        return redExLabelSize8;
+    }
+
+    public void setRedExLabelSize8(String redExLabelSize8) {
+        this.redExLabelSize8 = redExLabelSize8;
+    }
+
+    public String getRedExLabelSize9() {
+        return redExLabelSize9;
+    }
+
+    public void setRedExLabelSize9(String redExLabelSize9) {
+        this.redExLabelSize9 = redExLabelSize9;
+    }
+
+    public String getRedExLabelSize10() {
+        return redExLabelSize10;
+    }
+
+    public void setRedExLabelSize10(String redExLabelSize10) {
+        this.redExLabelSize10 = redExLabelSize10;
+    }
+
+    public String getRedExLabelSize11() {
+        return redExLabelSize11;
+    }
+
+    public void setRedExLabelSize11(String redExLabelSize11) {
+        this.redExLabelSize11 = redExLabelSize11;
+    }
+
+    public String getRedExLabelSize12() {
+        return redExLabelSize12;
+    }
+
+    public void setRedExLabelSize12(String redExLabelSize12) {
+        this.redExLabelSize12 = redExLabelSize12;
+    }
+
+    public String getRedExLabelSize13() {
+        return redExLabelSize13;
+    }
+
+    public void setRedExLabelSize13(String redExLabelSize13) {
+        this.redExLabelSize13 = redExLabelSize13;
+    }
+
+    public String getRedExLabelSize14() {
+        return redExLabelSize14;
+    }
+
+    public void setRedExLabelSize14(String redExLabelSize14) {
+        this.redExLabelSize14 = redExLabelSize14;
+    }
+
+    public String getRedExLabelSize15() {
+        return redExLabelSize15;
+    }
+
+    public void setRedExLabelSize15(String redExLabelSize15) {
+        this.redExLabelSize15 = redExLabelSize15;
+    }
+
+    public String getRedExLabelSize16() {
+        return redExLabelSize16;
+    }
+
+    public void setRedExLabelSize16(String redExLabelSize16) {
+        this.redExLabelSize16 = redExLabelSize16;
+    }
+
+    public String getRedExLabelSize17() {
+        return redExLabelSize17;
+    }
+
+    public void setRedExLabelSize17(String redExLabelSize17) {
+        this.redExLabelSize17 = redExLabelSize17;
+    }
+
+    public String getRedExLabelSize18() {
+        return redExLabelSize18;
+    }
+
+    public void setRedExLabelSize18(String redExLabelSize18) {
+        this.redExLabelSize18 = redExLabelSize18;
+    }
+
+    public String getRedExLabelSize1T() {
+        return redExLabelSize1T;
+    }
+
+    public void setRedExLabelSize1T(String redExLabelSize1T) {
+        this.redExLabelSize1T = redExLabelSize1T;
+    }
+
+    public String getRedExLabelSize2T() {
+        return redExLabelSize2T;
+    }
+
+    public void setRedExLabelSize2T(String redExLabelSize2T) {
+        this.redExLabelSize2T = redExLabelSize2T;
+    }
+
+    public String getRedExLabelSize3T() {
+        return redExLabelSize3T;
+    }
+
+    public void setRedExLabelSize3T(String redExLabelSize3T) {
+        this.redExLabelSize3T = redExLabelSize3T;
+    }
+
+    public String getRedExLabelSize4T() {
+        return redExLabelSize4T;
+    }
+
+    public void setRedExLabelSize4T(String redExLabelSize4T) {
+        this.redExLabelSize4T = redExLabelSize4T;
+    }
+
+    public String getRedExLabelSize5T() {
+        return redExLabelSize5T;
+    }
+
+    public void setRedExLabelSize5T(String redExLabelSize5T) {
+        this.redExLabelSize5T = redExLabelSize5T;
+    }
+
+    public String getRedExLabelSize6T() {
+        return redExLabelSize6T;
+    }
+
+    public void setRedExLabelSize6T(String redExLabelSize6T) {
+        this.redExLabelSize6T = redExLabelSize6T;
+    }
+
+    public String getRedExLabelSize7T() {
+        return redExLabelSize7T;
+    }
+
+    public void setRedExLabelSize7T(String redExLabelSize7T) {
+        this.redExLabelSize7T = redExLabelSize7T;
+    }
+
+    public String getRedExLabelSize8T() {
+        return redExLabelSize8T;
+    }
+
+    public void setRedExLabelSize8T(String redExLabelSize8T) {
+        this.redExLabelSize8T = redExLabelSize8T;
+    }
+
+    public String getRedExLabelSize9T() {
+        return redExLabelSize9T;
+    }
+
+    public void setRedExLabelSize9T(String redExLabelSize9T) {
+        this.redExLabelSize9T = redExLabelSize9T;
+    }
+
+    public String getRedExLabelSize10T() {
+        return redExLabelSize10T;
+    }
+
+    public void setRedExLabelSize10T(String redExLabelSize10T) {
+        this.redExLabelSize10T = redExLabelSize10T;
+    }
+
+    public String getRedExLabelSize11T() {
+        return redExLabelSize11T;
+    }
+
+    public void setRedExLabelSize11T(String redExLabelSize11T) {
+        this.redExLabelSize11T = redExLabelSize11T;
+    }
+
+    public String getRedExLabelSize12T() {
+        return redExLabelSize12T;
+    }
+
+    public void setRedExLabelSize12T(String redExLabelSize12T) {
+        this.redExLabelSize12T = redExLabelSize12T;
+    }
+
+    public String getRedExLabelSize13T() {
+        return redExLabelSize13T;
+    }
+
+    public void setRedExLabelSize13T(String redExLabelSize13T) {
+        this.redExLabelSize13T = redExLabelSize13T;
+    }
+
+    public String getRedExLaserSize1() {
+        return redExLaserSize1;
+    }
+
+    public void setRedExLaserSize1(String redExLaserSize1) {
+        this.redExLaserSize1 = redExLaserSize1;
+    }
+
+    public String getRedExLaserSize2() {
+        return redExLaserSize2;
+    }
+
+    public void setRedExLaserSize2(String redExLaserSize2) {
+        this.redExLaserSize2 = redExLaserSize2;
+    }
+
+    public String getRedExLaserSize3() {
+        return redExLaserSize3;
+    }
+
+    public void setRedExLaserSize3(String redExLaserSize3) {
+        this.redExLaserSize3 = redExLaserSize3;
+    }
+
+    public String getRedExLaserSize4() {
+        return redExLaserSize4;
+    }
+
+    public void setRedExLaserSize4(String redExLaserSize4) {
+        this.redExLaserSize4 = redExLaserSize4;
+    }
+
+    public String getRedExLaserSize5() {
+        return redExLaserSize5;
+    }
+
+    public void setRedExLaserSize5(String redExLaserSize5) {
+        this.redExLaserSize5 = redExLaserSize5;
+    }
+
+    public String getRedExLaserSize6() {
+        return redExLaserSize6;
+    }
+
+    public void setRedExLaserSize6(String redExLaserSize6) {
+        this.redExLaserSize6 = redExLaserSize6;
+    }
+
+    public String getRedExLaserSize7() {
+        return redExLaserSize7;
+    }
+
+    public void setRedExLaserSize7(String redExLaserSize7) {
+        this.redExLaserSize7 = redExLaserSize7;
+    }
+
+    public String getRedExLaserSize8() {
+        return redExLaserSize8;
+    }
+
+    public void setRedExLaserSize8(String redExLaserSize8) {
+        this.redExLaserSize8 = redExLaserSize8;
+    }
+
+    public String getRedExLaserSize9() {
+        return redExLaserSize9;
+    }
+
+    public void setRedExLaserSize9(String redExLaserSize9) {
+        this.redExLaserSize9 = redExLaserSize9;
+    }
+
+    public String getRedExLaserSize10() {
+        return redExLaserSize10;
+    }
+
+    public void setRedExLaserSize10(String redExLaserSize10) {
+        this.redExLaserSize10 = redExLaserSize10;
+    }
+
+    public String getRedExLaserSize11() {
+        return redExLaserSize11;
+    }
+
+    public void setRedExLaserSize11(String redExLaserSize11) {
+        this.redExLaserSize11 = redExLaserSize11;
+    }
+
+    public String getRedExLaserSize12() {
+        return redExLaserSize12;
+    }
+
+    public void setRedExLaserSize12(String redExLaserSize12) {
+        this.redExLaserSize12 = redExLaserSize12;
+    }
+
+    public String getRedExLaserSize13() {
+        return redExLaserSize13;
+    }
+
+    public void setRedExLaserSize13(String redExLaserSize13) {
+        this.redExLaserSize13 = redExLaserSize13;
+    }
+
+    public String getRedExLaserSize14() {
+        return redExLaserSize14;
+    }
+
+    public void setRedExLaserSize14(String redExLaserSize14) {
+        this.redExLaserSize14 = redExLaserSize14;
+    }
+
+    public String getRedExLaserSize15() {
+        return redExLaserSize15;
+    }
+
+    public void setRedExLaserSize15(String redExLaserSize15) {
+        this.redExLaserSize15 = redExLaserSize15;
+    }
+
+    public String getRedExLaserSize16() {
+        return redExLaserSize16;
+    }
+
+    public void setRedExLaserSize16(String redExLaserSize16) {
+        this.redExLaserSize16 = redExLaserSize16;
+    }
+
+    public String getRedExLaserSize17() {
+        return redExLaserSize17;
+    }
+
+    public void setRedExLaserSize17(String redExLaserSize17) {
+        this.redExLaserSize17 = redExLaserSize17;
+    }
+
+    public String getRedExLaserSize18() {
+        return redExLaserSize18;
+    }
+
+    public void setRedExLaserSize18(String redExLaserSize18) {
+        this.redExLaserSize18 = redExLaserSize18;
+    }
+
+    public String getRedExLaserSize1T() {
+        return redExLaserSize1T;
+    }
+
+    public void setRedExLaserSize1T(String redExLaserSize1T) {
+        this.redExLaserSize1T = redExLaserSize1T;
+    }
+
+    public String getRedExLaserSize2T() {
+        return redExLaserSize2T;
+    }
+
+    public void setRedExLaserSize2T(String redExLaserSize2T) {
+        this.redExLaserSize2T = redExLaserSize2T;
+    }
+
+    public String getRedExLaserSize3T() {
+        return redExLaserSize3T;
+    }
+
+    public void setRedExLaserSize3T(String redExLaserSize3T) {
+        this.redExLaserSize3T = redExLaserSize3T;
+    }
+
+    public String getRedExLaserSize4T() {
+        return redExLaserSize4T;
+    }
+
+    public void setRedExLaserSize4T(String redExLaserSize4T) {
+        this.redExLaserSize4T = redExLaserSize4T;
+    }
+
+    public String getRedExLaserSize5T() {
+        return redExLaserSize5T;
+    }
+
+    public void setRedExLaserSize5T(String redExLaserSize5T) {
+        this.redExLaserSize5T = redExLaserSize5T;
+    }
+
+    public String getRedExLaserSize6T() {
+        return redExLaserSize6T;
+    }
+
+    public void setRedExLaserSize6T(String redExLaserSize6T) {
+        this.redExLaserSize6T = redExLaserSize6T;
+    }
+
+    public String getRedExLaserSize7T() {
+        return redExLaserSize7T;
+    }
+
+    public void setRedExLaserSize7T(String redExLaserSize7T) {
+        this.redExLaserSize7T = redExLaserSize7T;
+    }
+
+    public String getRedExLaserSize8T() {
+        return redExLaserSize8T;
+    }
+
+    public void setRedExLaserSize8T(String redExLaserSize8T) {
+        this.redExLaserSize8T = redExLaserSize8T;
+    }
+
+    public String getRedExLaserSize9T() {
+        return redExLaserSize9T;
+    }
+
+    public void setRedExLaserSize9T(String redExLaserSize9T) {
+        this.redExLaserSize9T = redExLaserSize9T;
+    }
+
+    public String getRedExLaserSize10T() {
+        return redExLaserSize10T;
+    }
+
+    public void setRedExLaserSize10T(String redExLaserSize10T) {
+        this.redExLaserSize10T = redExLaserSize10T;
+    }
+
+    public String getRedExLaserSize11T() {
+        return redExLaserSize11T;
+    }
+
+    public void setRedExLaserSize11T(String redExLaserSize11T) {
+        this.redExLaserSize11T = redExLaserSize11T;
+    }
+
+    public String getRedExLaserSize12T() {
+        return redExLaserSize12T;
+    }
+
+    public void setRedExLaserSize12T(String redExLaserSize12T) {
+        this.redExLaserSize12T = redExLaserSize12T;
+    }
+
+    public String getRedExLaserSize13T() {
+        return redExLaserSize13T;
+    }
+
+    public void setRedExLaserSize13T(String redExLaserSize13T) {
+        this.redExLaserSize13T = redExLaserSize13T;
+    }
+    
     
     
     

@@ -5,6 +5,8 @@
 
     <head>
         <Title>${dptName} Inspection | QC</Title>
+        >
+
         <script type="text/javascript">
             var contextPath = location.origin;
             $(document).ready(function () {
@@ -58,31 +60,39 @@
                         var rewok = 0;
                         var counter = 0;
                         var progressAgrade = 0;
+                        var progressAgrades = 0;
                         var progressBgrade = 0;
+                        var progressBgrades = 0;
                         var progressCgrade = 0;
+                        var progressCgrades = 0;
                         var progressRewok = 0;
+                        var progressRewoks = 0;
 
-                        if (data.agrade !== null && data.counter !== null) {
-                            progressAgrade = (data.agrade / data.counter) * 100;
-                            agrade = data.agrade;
+                        if (data.agrade !== null && data.bgrade !== null && data.cgrade !== null) {
+                            progressAgrades = (data.agrade*100) / (data.agrade + data.bgrade + data.cgrade);
+                            progressAgrade = progressAgrades;
+            agrade = data.agrade;
                         }
 
-                        if (data.bgrade !== null && data.counter !== null) {
-                            progressBgrade = (data.bgrade / data.counter) * 100;
-                            bgrade = data.bgrade;
+                        if (data.bgrade !== null && data.agrade !== null && data.cgrade !== null) {
+                            progressBgrades = ( data.bgrade* 100) / (data.agrade + data.bgrade + data.cgrade);
+                            progressBgrade = progressBgrades;
+            bgrade = data.bgrade;
+                        } 
+
+                        if (data.cgrade !== null && data.bgrade !== null && data.agrade !== null) {
+                            progressCgrades = ( data.cgrade* 100) / (data.agrade + data.bgrade + data.cgrade);
+                            progressCgrade = progressCgrades;
+            cgrade = data.cgrade;
                         }
 
-                        if (data.cgrade !== null && data.counter !== null) {
-                            progressCgrade = (data.cgrade / data.counter) * 100;
-                            cgrade = data.cgrade;
-                        }
-
-                        if (data.rewok !== null && data.counter !== null) {
-                            progressRewok = (data.rewok / data.counter) * 100;
-                            rewok = data.rewok;
+                        if (data.rewok !== null && data.agrade !== null && data.bgrade !== null && data.cgrade !== null) {
+                            progressRewoks = ( data.rewok* 100) / (data.agrade + data.bgrade + data.cgrade);
+                            progressRewok = progressRewoks;
+            rewok = data.rewok;
                         }
 //                        progressRewok = 7;//erwin
-                        if (progressRewok >= 7) {
+                        if (progressRewok > 100 ) {
                              $("#peringatan").show();
                              $notif.html(progressRewok.toFixed(1) + '%');
                         }else{
@@ -91,27 +101,27 @@
                         //panggil 
                         if (data.counter !== null) {
                             counter = data.counter;
-                        }
-
+                        } 
+                       
                         $barAgrade.parent().css('pointer-events', 'auto');
                         $barAgrade.parents('p').next().children().css('width', progressAgrade + '%');
                         $barAgrade.parents('p').next().children().attr('title', progressAgrade.toFixed(2) + '%');
-                        $barAgrade.html(agrade + " / " + counter + " " + progressAgrade.toFixed(1) + '%');
+                        $barAgrade.html((agrade/2) + " / " + ((agrade+bgrade+cgrade)/2) + " " + progressAgrade.toFixed(1) + '%');
 
                         $barBgrade.parent().css('pointer-events', 'auto');
                         $barBgrade.parents('p').next().children().css('width', progressBgrade + '%');
                         $barBgrade.parents('p').next().children().attr('title', progressBgrade.toFixed(2) + '%');
-                        $barBgrade.html(bgrade + " / " + counter + " " + progressBgrade.toFixed(1) + '%');
+                        $barBgrade.html((bgrade/2) + " / " + ((agrade+bgrade+cgrade)/2) + " " + progressBgrade.toFixed(1) + '%');
 
                         $barCgrade.parent().css('pointer-events', 'auto');
                         $barCgrade.parents('p').next().children().css('width', progressCgrade + '%');
                         $barCgrade.parents('p').next().children().attr('title', progressCgrade.toFixed(2) + '%');
-                        $barCgrade.html(cgrade + " / " + counter + " " + progressCgrade.toFixed(1) + '%');
+                        $barCgrade.html((cgrade/2) + " / " + ((agrade+bgrade+cgrade)/2) + " " + progressCgrade.toFixed(1) + '%');
 
                         $barRewok.parent().css('pointer-events', 'auto');
                         $barRewok.parents('p').next().children().css('width', progressRewok + '%');
                         $barRewok.parents('p').next().children().attr('title', progressRewok.toFixed(2) + '%');
-                        $barRewok.html(rewok + " / " + counter + " " + progressRewok.toFixed(1) + '%');
+                        $barRewok.html((rewok/2) + " / " + ((agrade+bgrade+cgrade)/2) + " " + progressRewok.toFixed(1) + '%');
 
                     });
                 }
@@ -263,79 +273,94 @@
                 ;
 
                 $('button[name=buttonRework]').click(function () {
-                    var valDefect = $('input[type=radio][name=idDefact]:checked');
+                    var valDefect = $('input[type=checkbox][name=idDefact]:checked');
                     var valPoNo = $('input[type=radio][name=idProduct]:checked');
                     var valProductCd = valPoNo[0].attributes[5].value;
-                    var dataJson = {
-                        lineCode: $('#listNcvs').val(),
-                        poNo: valPoNo[0].value,
-                        defect: valDefect[0].value,
-                        position: $('input[type=radio][name=position]:checked').val(),
-                        category: valCategory,
-                        type: "Rework",
-                        poItem: valPoNo[0].attributes[4].value,
-                        productCode: valPoNo[0].attributes[5].value,
-                        demandClass: $("#demandId").val(),
-                        area: $('#userType').val()
+                    
+                    for (var i = 0; i < valDefect.length; i++) {
+                        var dataJson = {
+                            lineCode: $('#listNcvs').val(),
+                            poNo: valPoNo[0].value,
+                            defect: valDefect[i].value,
+                            position: $('input[type=radio][name=position]:checked').val(),
+                            category: valDefect[i].title,//valCategory,
+                            type: "Rework",
+                            poItem: valPoNo[0].attributes[4].value,
+                            productCode: valPoNo[0].attributes[5].value,
+                            demandClass: $("#demandId").val(),
+                            area: $('#userType').val()
+                        }
+                        console.log(dataJson);
+                        submit('${pageContext.request.contextPath}/qc/hourlyinspection/save', JSON.stringify(dataJson), function (data) {
+                            console.log(data);
+                            $("input[name='id']").val(data.id);
+                            counterCategory();
+                            counterStatusBar();
+                        });
+                        setTimeout(function() {
+                        location.reload();
+                      }, 2500);
                     }
-
-                    console.log(dataJson);
-                    submit('${pageContext.request.contextPath}/qc/hourlyinspection/save', JSON.stringify(dataJson), function (data) {
-                        console.log(data);
-                        $("input[name='id']").val(data.id);
-                        counterCategory();
-                        counterStatusBar();
-                    });
                 });
 
                 $('button[name=buttonBgrade]').click(function () {
-                    var valDefect = $('input[type=radio][name=idDefact]:checked');
+                    var valDefect = $('input[type=checkbox][name=idDefact]:checked');
                     var valPoNo = $('input[type=radio][name=idProduct]:checked');
                     var valProductCd = valPoNo[0].attributes[5].value;
-                    var dataJson = {
-                        lineCode: $('#listNcvs').val(),
-                        poNo: valPoNo[0].value,
-                        defect: valDefect[0].value,
-                        position: $('input[type=radio][name=position]:checked').val(),
-                        category: valCategory,
-                        type: "B-Grade",
-                        poItem: valPoNo[0].attributes[4].value,
-                        productCode: valPoNo[0].attributes[5].value,
-                        demandClass: $("#demandId").val(),
-                        area: $('#userType').val()
-                    };
+                    for (var i = 0; i < valDefect.length; i++) {
+                        var dataJson = {
+                            lineCode: $('#listNcvs').val(),
+                            poNo: valPoNo[0].value,
+                            defect: valDefect[i].value,
+                            position: $('input[type=radio][name=position]:checked').val(),
+                            category: valDefect[i].title,//valCategory,
+                            type: "B-Grade",
+                            poItem: valPoNo[0].attributes[4].value,
+                            productCode: valPoNo[0].attributes[5].value,
+                            demandClass: $("#demandId").val(),
+                            area: $('#userType').val()
+                        };
 
-                    console.log(dataJson);
-                    submit('${pageContext.request.contextPath}/qc/hourlyinspection/save', JSON.stringify(dataJson), function (data) {
-                        $("input[name='id']").val(data.id);
-                        counterCategory();
-                        counterStatusBar()
-                    });
+                        console.log(dataJson);
+                        submit('${pageContext.request.contextPath}/qc/hourlyinspection/save', JSON.stringify(dataJson), function (data) {
+                            $("input[name='id']").val(data.id);
+                            counterCategory();
+                            counterStatusBar()
+                        });
+                        setTimeout(function() {
+                        location.reload();
+                      }, 2500);
+                    }
                 });
 
                 $('button[name=buttonCgrade]').click(function () {
-                    var valDefect = $('input[type=radio][name=idDefact]:checked');
+                    var valDefect = $('input[type=checkbox][name=idDefact]:checked');
                     var valPoNo = $('input[type=radio][name=idProduct]:checked');
                     var valProductCd = valPoNo[0].attributes[5].value;
-                    var dataJson = {
-                        lineCode: $('#listNcvs').val(),
-                        poNo: valPoNo[0].value,
-                        defect: valDefect[0].value,
-                        position: $('input[type=radio][name=position]:checked').val(),
-                        category: valCategory,
-                        type: "C-Grade",
-                        poItem: valPoNo[0].attributes[4].value,
-                        productCode: valPoNo[0].attributes[5].value,
-                        demandClass: $("#demandId").val(),
-                        area: $('#userType').val()
-                    };
+                    for (var i = 0; i < valDefect.length; i++) {
+                        var dataJson = {
+                            lineCode: $('#listNcvs').val(),
+                            poNo: valPoNo[0].value,
+                            defect: valDefect[i].value,
+                            position: $('input[type=radio][name=position]:checked').val(),
+                            category: valDefect[i].title,//valCategory,
+                            type: "C-Grade",
+                            poItem: valPoNo[0].attributes[4].value,
+                            productCode: valPoNo[0].attributes[5].value,
+                            demandClass: $("#demandId").val(),
+                            area: $('#userType').val()
+                        };
 
-                    console.log(dataJson);
-                    submit('${pageContext.request.contextPath}/qc/hourlyinspection/save', JSON.stringify(dataJson), function (data) {
-                        $("input[name='id']").val(data.id);
-                        counterCategory();
-                        counterStatusBar()
-                    });
+                        console.log(dataJson);
+                        submit('${pageContext.request.contextPath}/qc/hourlyinspection/save', JSON.stringify(dataJson), function (data) {
+                            $("input[name='id']").val(data.id);
+                            counterCategory();
+                            counterStatusBar()
+                        });
+                        setTimeout(function() {
+                            location.reload();
+                        }, 2500);
+                    }
                 });
 
                 $('button[name=buttonAGrade]').click(function () {
@@ -361,7 +386,10 @@
                         counterCategory();
                         counterStatusBar()
                     });
-                })
+                    setTimeout(function() {
+                            location.reload();
+                        }, 2500);
+                });
 
                 $('#logoFile').change(function () {
                     var $previewContainer = $('#imageAgent');
@@ -387,10 +415,10 @@
                     _fw_post('${pageContext.request.contextPath}/qc/hourlyinspection/defect', data, function (res) {
                         if (res.length !== 0) {
                             res.forEach(function (defect) {
-                                stringElement += '<label id ="Clean" class="btnQcDefact">' + defect.description + '<input id="idDefact" name="idDefact" type="radio" value="' + defect.description + '" disabled="true" hidden /></label>';
+                                stringElement += '<label id ="Clean" class="btnQcDefact">' + defect.description + '<input id="idDefact" title="Clean" name="idDefact" type="checkbox" value="' + defect.description + '" disabled="true" hidden /></label>';
                             });
                         }
-
+//                        var test = "Good news, everyone!".slice(5,9); 
                         $Clean.html(stringElement);
                     });
                 })();
@@ -405,7 +433,7 @@
                     _fw_post('${pageContext.request.contextPath}/qc/hourlyinspection/defect', data, function (res) {
                         if (res.length !== 0) {
                             res.forEach(function (defect) {
-                                stringElement += '<label id="Cosmetic" class="btnQcDefact">' + defect.description + '<input id="idDefact" name="idDefact" type="radio" value="' + defect.description + '" disabled="true" hidden/></label>';
+                                stringElement += '<label id="Cosmetic" class="btnQcDefact">' + defect.description + '<input id="idDefact" title="Cosmetic" name="idDefact" type="checkbox" value="' + defect.description + '" disabled="true" hidden/></label>';
                             });
                         }
 
@@ -423,7 +451,7 @@
                     _fw_post('${pageContext.request.contextPath}/qc/hourlyinspection/defect', data, function (res) {
                         if (res.length !== 0) {
                             res.forEach(function (defect) {
-                                stringElement += '<label id ="Straight" class="btnQcDefact">' + defect.description + '<input id="idDefact" name="idDefact" type="radio" value="' + defect.description + '" disabled="true" hidden /></label>';
+                                stringElement += '<label id ="Straight" class="btnQcDefact">' + defect.description + '<input id="idDefact" title="Straight" name="idDefact" type="checkbox" value="' + defect.description + '" disabled="true" hidden /></label>';
                             });
                         }
 
@@ -441,7 +469,7 @@
                     _fw_post('${pageContext.request.contextPath}/qc/hourlyinspection/defect', data, function (res) {
                         if (res.length !== 0) {
                             res.forEach(function (defect) {
-                                stringElement += '<label id ="Strong" class="btnQcDefact">' + defect.description + '<input id="idDefact" name="idDefact" type="radio" value="' + defect.description + '" disabled="true" hidden /></label>';
+                                stringElement += '<label id ="Strong" class="btnQcDefact">' + defect.description + '<input id="idDefact" title="Strong" name="idDefact" type="checkbox" value="' + defect.description + '" disabled="true" hidden /></label>';
                             });
                         }
 
@@ -459,7 +487,7 @@
                     _fw_post('${pageContext.request.contextPath}/qc/hourlyinspection/defect', data, function (res) {
                         if (res.length !== 0) {
                             res.forEach(function (defect) {
-                                stringElement += '<label id="OtherLabel" class="btnQcDefact" >' + defect.description + '<input id="idDefact" name="idDefact" type="radio" value="' + defect.description + '" disabled="true" hidden /></label>';
+                                stringElement += '<label id="OtherLabel" class="btnQcDefact" >' + defect.description + '<input id="idDefact" title="Others" name="idDefact" type="checkbox" value="' + defect.description + '" disabled="true" hidden /></label>';
                             });
                         }
 
@@ -470,17 +498,29 @@
 
                 var headerOther = document.getElementById("Other");
                 var btnsOther = headerOther.getElementsByClassName("btnQcDefact");
+                var flag = 0;
                 for (var i = 0; i < btnsOther.length; i++) {
                     btnsOther[i].addEventListener("click", function () {
                         if (flagDefact == true) {
                             var current = document.getElementsByClassName("activeRadioDefact");
-                            if (current.length > 0) {
-                                current[0].className = current[0].className.replace(" activeRadioDefact", "");
-                            }
-                            this.className += " activeRadioDefact";
-                            var positionDisable = document.getElementsByName('position');
-                            for (let i = 0; i < positionDisable.length; i++) {
-                                positionDisable[i].disabled = false
+//                            if (current.length > 0) {
+//                                current[0].className = current[0].className.replace(" activeRadioDefact", "");
+//                            }
+                            if (this.className.split('btnQcDefact ').some(function(w){return w === "activeRadioDefact activeRadioDefact activeRadioDefact"})){
+                                this.className = this.className.replace(" activeRadioDefact activeRadioDefact activeRadioDefact", "");
+                                flag = 1;
+                            }else{
+                                if (flag == 1) {
+                                    this.className = this.className.replace(" activeRadioDefact", "");
+                                    flag = 0;
+                                }else{
+                                    this.className += " activeRadioDefact";
+                                    var positionDisable = document.getElementsByName('position');
+                                    for (let i = 0; i < positionDisable.length; i++) {
+                                        positionDisable[i].disabled = false
+                                    }
+                                    flag = 0;
+                                }
                             }
                         }
                     });
@@ -488,17 +528,29 @@
 
                 var headerStrong = document.getElementById("Strong");
                 var btnsStrong = headerStrong.getElementsByClassName("btnQcDefact");
+                var flag = 0;
                 for (var i = 0; i < btnsStrong.length; i++) {
                     btnsStrong[i].addEventListener("click", function () {
                         if (flagDefact == true) {
                             var current = document.getElementsByClassName("activeRadioDefact");
-                            if (current.length > 0) {
-                                current[0].className = current[0].className.replace(" activeRadioDefact", "");
-                            }
-                            this.className += " activeRadioDefact";
-                            var positionDisable = document.getElementsByName('position');
-                            for (let i = 0; i < positionDisable.length; i++) {
-                                positionDisable[i].disabled = false
+//                            if (current.length > 0) {
+//                                current[0].className = current[0].className.replace(" activeRadioDefact", "");
+//                            }
+                            if (this.className.split('btnQcDefact ').some(function(w){return w === "activeRadioDefact activeRadioDefact activeRadioDefact"})){
+                                this.className = this.className.replace(" activeRadioDefact activeRadioDefact activeRadioDefact", "");
+                                flag = 1;
+                            }else{
+                                if (flag == 1) {
+                                    this.className = this.className.replace(" activeRadioDefact", "");
+                                    flag = 0;
+                                }else{
+                                    this.className += " activeRadioDefact";
+                                    var positionDisable = document.getElementsByName('position');
+                                    for (let i = 0; i < positionDisable.length; i++) {
+                                        positionDisable[i].disabled = false
+                                    }
+                                    flag = 0;
+                                }
                             }
                         }
                     });
@@ -506,17 +558,29 @@
 
                 var headerStraight = document.getElementById("Straight");
                 var btnsStraight = headerStraight.getElementsByClassName("btnQcDefact");
+                var flag = 0;
                 for (var i = 0; i < btnsStraight.length; i++) {
                     btnsStraight[i].addEventListener("click", function () {
                         if (flagDefact == true) {
                             var current = document.getElementsByClassName("activeRadioDefact");
-                            if (current.length > 0) {
-                                current[0].className = current[0].className.replace(" activeRadioDefact", "");
-                            }
-                            this.className += " activeRadioDefact";
-                            var positionDisable = document.getElementsByName('position');
-                            for (let i = 0; i < positionDisable.length; i++) {
-                                positionDisable[i].disabled = false
+//                            if (current.length > 0) {
+//                                current[0].className = current[0].className.replace(" activeRadioDefact", "");
+//                            }
+                            if (this.className.split('btnQcDefact ').some(function(w){return w === "activeRadioDefact activeRadioDefact activeRadioDefact"})){
+                                this.className = this.className.replace(" activeRadioDefact activeRadioDefact activeRadioDefact", "");
+                                flag = 1;
+                            }else{
+                                if (flag == 1) {
+                                    this.className = this.className.replace(" activeRadioDefact", "");
+                                    flag = 0;
+                                }else{
+                                    this.className += " activeRadioDefact";
+                                    var positionDisable = document.getElementsByName('position');
+                                    for (let i = 0; i < positionDisable.length; i++) {
+                                        positionDisable[i].disabled = false
+                                    }
+                                    flag = 0;
+                                }
                             }
                         }
                     });
@@ -524,17 +588,32 @@
 
                 var headerCosmetic = document.getElementById("Cosmetic");
                 var btnsCosmetic = headerCosmetic.getElementsByClassName("btnQcDefact");
+                var flag = 0;
                 for (var i = 0; i < btnsCosmetic.length; i++) {
                     btnsCosmetic[i].addEventListener("click", function () {
                         if (flagDefact == true) {
+                            //var val = btnsCosmetic[i].outerText;
                             var current = document.getElementsByClassName("activeRadioDefact");
-                            if (current.length > 0) {
-                                current[0].className = current[0].className.replace(" activeRadioDefact", "");
-                            }
-                            this.className += " activeRadioDefact";
-                            var positionDisable = document.getElementsByName('position');
-                            for (let i = 0; i < positionDisable.length; i++) {
-                                positionDisable[i].disabled = false
+//                            if (current.length > 0) {
+//                                current[0].className = current[0].className.replace(" activeRadioDefact", "");
+//                            }
+//                            if (RegExp('\\b'+ this.className +'\\b').test("activeRadioDefact activeRadioDefact"))
+                            if (this.className.split('btnQcDefact ').some(function(w){return w === "activeRadioDefact activeRadioDefact activeRadioDefact"})){
+                                this.className = this.className.replace(" activeRadioDefact activeRadioDefact activeRadioDefact", "");
+                                flag = 1;
+                            }else{
+                                if (flag == 1) {
+                                    this.className = this.className.replace(" activeRadioDefact", "");
+                                    flag = 0;
+                                }else{
+                                    this.className += " activeRadioDefact";
+                                    var positionDisable = document.getElementsByName('position');
+                                    for (let i = 0; i < positionDisable.length; i++) {
+                                        positionDisable[i].disabled = false
+                                    }
+                                    flag = 0;
+                                }
+                                
                             }
                         }
                     });
@@ -542,17 +621,29 @@
 
                 var headerClean = document.getElementById("Clean");
                 var btnsClean = headerClean.getElementsByClassName("btnQcDefact");
+                var flag = 0;
                 for (var i = 0; i < btnsClean.length; i++) {
                     btnsClean[i].addEventListener("click", function () {
                         if (flagDefact == true) {
                             var current = document.getElementsByClassName("activeRadioDefact");
-                            if (current.length > 0) {
-                                current[0].className = current[0].className.replace(" activeRadioDefact", "");
-                            }
-                            this.className += " activeRadioDefact";
-                            var positionDisable = document.getElementsByName('position');
-                            for (let i = 0; i < positionDisable.length; i++) {
-                                positionDisable[i].disabled = false
+//                            if (current.length > 0) {
+//                                current[0].className = current[0].className.replace(" activeRadioDefact", "");
+//                            }
+                            if (this.className.split('btnQcDefact ').some(function(w){return w === "activeRadioDefact activeRadioDefact activeRadioDefact"})){
+                                this.className = this.className.replace(" activeRadioDefact activeRadioDefact activeRadioDefact", "");
+                                flag = 1;
+                            }else{
+                                if (flag == 1) {
+                                    this.className = this.className.replace(" activeRadioDefact", "");
+                                    flag = 0;
+                                }else{
+                                    this.className += " activeRadioDefact";
+                                    var positionDisable = document.getElementsByName('position');
+                                    for (let i = 0; i < positionDisable.length; i++) {
+                                        positionDisable[i].disabled = false
+                                    }
+                                    flag = 0;
+                                }
                             }
                         }
                     });
@@ -609,12 +700,14 @@
                     source: function (request, response) {
                         var payload = {
                             search: {
-                                
+                                "poNo": $('#listpoNo').val(),
+                                "demand": $('#demandId').val(),
+                                "poItem": $('#listpoItem').val(),
                                 term: request.term
                             }
                         };
                         $.ajax({
-                            url: "${pageContext.request.contextPath}/qc/hourlyinspection/get-ncvs",
+                            url: "${pageContext.request.contextPath}/qc/hourlyinspection/get-ncvs-new",//get-ncvs",
                             contentType: "application/json",
                             type: "post",
                             dataType: "json",
@@ -627,89 +720,14 @@
                             response(kanwil);
                         });
                     },
-                    minLength: 3,
+                    minLength: 0,
                     focus: function (event, ui) {
                         $("#listNcvs").val(ui.item.label);
                         return false;
                     },
                     select: function (event, ui) {
                         $("#listNcvs").val(ui.item.label);
-                         $("#demandId").attr('disabled', false);
-                        
-                        return false;
-                    }
-                });
-                
-               
-                $("#listpoNo").autocomplete({
-                    source: function (request, response) {
-                        var payload = {
-                            search: {
-                                 "ncvs": $('#listNcvs').val(),
-                                 "demand": $('#demandId').val(),
-                                  term: request.term
-                            }
-                        };
-                        $.ajax({
-                            url: "${pageContext.request.contextPath}/qc/hourlyinspection/get-pon",
-                            contentType: "application/json",
-                            type: "post",
-                            dataType: "json",
-                            data: JSON.stringify(payload)
-                        }).done(function (data) {
-                            const kanwil = data.map(d => ({
-                                value: d.poNo,
-                                label: d.poNo
-                                }));
-                            response(kanwil);
-                        });
-                    },
-                     minLength: 0,
-                    focus: function (event, ui) {
-                        $("#listpoNo").val(ui.item.label);
-                        return false;
-                    },
-                    select: function (event, ui) {
-                        $("#listpoNo").val(ui.item.label);
-                     
-                        $("#listpoItem").attr("disabled", false);
-                        return false;
-                    }
-                });
-                
- 
-                
-                $("#listpoItem").autocomplete({
-                    source: function (request, response) {
-                        var payload = {
-                            search: {
-                                 "poNo": $('#listpoNo').val(),
-                                 "ncvs": $('#listNcvs').val(),
-                                 "demand": $('#demandId').val(),
-                                 term: request.term
-                            }
-                        };
-                        $.ajax({
-                            url: "${pageContext.request.contextPath}/qc/hourlyinspection/po_item_new",
-                            contentType: "application/json",
-                            type: "post",
-                            dataType: "json",
-                            data: JSON.stringify(payload)
-                        }).done(function (data) {
-                            const kanwil = data.map(d => ({
-                                value: d.poItem,
-                                label: d.poItem
-                                }));
-                            response(kanwil);
-                        });
-                    },
-                     minLength: 0,
-                    focus: function (event, ui) {
-                        $("#listpoItem").val(ui.item.label);
-                        return false;
-                    },
-                    select: function (event, ui) {
-                        $("#listpoItem").val(ui.item.label);
+//                         $("#demandId").attr('disabled', false);
                         (function () {
                             var data = {
                                 search: {
@@ -730,7 +748,82 @@
                                 $product.html(stringElement);
                             });
                         })();
+                        return false;
+                    }
+                });
+                
+               
+                $("#listpoNo").autocomplete({
+                    source: function (request, response) {
+                        var payload = {
+                            search: {
+//                                 "ncvs": $('#listNcvs').val(),
+//                                 "demand": $('#demandId').val(),
+                                  term: request.term
+                            }
+                        };
+                        $.ajax({
+                            url: "${pageContext.request.contextPath}/qc/hourlyinspection/get-pon",
+                            contentType: "application/json",
+                            type: "post",
+                            dataType: "json",
+                            data: JSON.stringify(payload)
+                        }).done(function (data) {
+                            const kanwil = data.map(d => ({
+                                value: d.poNo,
+                                label: d.poNo
+                                }));
+                            response(kanwil);
+                        });
+                    },
+                     minLength: 2,
+                    focus: function (event, ui) {
+                        $("#listpoNo").val(ui.item.label);
+                        return false;
+                    },
+                    select: function (event, ui) {
+                        $("#listpoNo").val(ui.item.label);
                      
+                        $("#listpoItem").attr("disabled", false);
+                        return false;
+                    }
+                });
+                
+ 
+                
+                $("#listpoItem").autocomplete({
+                    source: function (request, response) {
+                        var payload = {
+                            search: {
+                                 "poNo": $('#listpoNo').val(),
+                                 //"ncvs": $('#listNcvs').val(),
+                                 //"demand": $('#demandId').val(),
+                                 term: request.term
+                            }
+                        };
+                        $.ajax({
+                            url: "${pageContext.request.contextPath}/qc/hourlyinspection/po_item",//po_item_new",
+                            contentType: "application/json",
+                            type: "post",
+                            dataType: "json",
+                            data: JSON.stringify(payload)
+                        }).done(function (data) {
+                            const kanwil = data.map(d => ({
+                                value: d.poItem,
+                                label: d.poItem
+                                }));
+                            response(kanwil);
+                        });
+                    },
+                     minLength: 0,
+                    focus: function (event, ui) {
+                        $("#listpoItem").val(ui.item.label);
+                        return false;
+                    },
+                    select: function (event, ui) {
+                        $("#listpoItem").val(ui.item.label);
+                        
+                        $("#demandId").attr("disabled", false);
                         return false;
                     }
                 });
@@ -742,18 +835,19 @@
                     source: function (request, response) {
                         var payload = {
                             search: {
-                                ncvs: $("#listNcvs").val(),
+                                "poNo": $('#listpoNo').val(),
+                                "poItem": $('#listpoItem').val(),
+//                                ncvs: $("#listNcvs").val(),
                                 term: request.term
                             }
                         };
                         $.ajax({
-                            url: "${pageContext.request.contextPath}/qc/hourlyinspection/get-demandClassNew",
+                            url: "${pageContext.request.contextPath}/qc/hourlyinspection/get-demandClass",//get-demandClassNew",
                             contentType: "application/json",
                             type: "post",
                             dataType: "json",
                             data: JSON.stringify(payload)
                         }).done(function (data) {
-                            console.log(data)
                             const kanwil = data.map(d => ({
                                     value: d.demandClass,
                                     label: d.demandClass
@@ -761,14 +855,14 @@
                             response(kanwil);
                         });
                     },
-                    minLength: 2,
+                    minLength: 0,
                     focus: function (event, ui) {
                         $("#demandId").val(ui.item.label);
                         return false;
                     },
                     select: function (event, ui) {
                         $("#demandId").val(ui.item.label);
-                        $("#listpoNo").attr('disabled', false);
+                        $("#listNcvs").attr('disabled', false);
                         return false;
                     }
                 });
@@ -803,23 +897,25 @@
         </script>
         <style>
             .btnQcDefact {
-                border: 2px solid #2A74EE;
+                border: 2px solid black;
                 /* outline: none; */
                 padding: 10px 12px;
-                background-color: white;
+                background-color: #f5c842;
                 cursor: pointer;
                 font-size: 13px;
-                width: 150px;
+                width: 120px;
                 text-align: center;
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 height: 40px;
+                border-radius: 10px;
+                font-weight: bold;
             }
 
             .activeRadioDefact,
             .btnQcDefact:hover {
-                background-color: #2A74EE;
+                background-color:#4a9163;
                 overflow: visible;
                 white-space: normal;
                 line-height: 1.5em;
@@ -828,10 +924,10 @@
             }
 
             .btnQcProduct {
-                border: 2px solid #2A74EE;
+                border: 2px solid black;
                 /* outline: none; */
                 padding: 10px 12px;
-                background-color: white;
+                background-color:#f5c842;
                 cursor: pointer;
                 font-size: 13px;
                 width: 100%;
@@ -840,11 +936,13 @@
                 overflow: hidden;
                 text-overflow: ellipsis;
                 height: 40px;
+                border-radius:15px;
+                font-weight: bold;
             }
 
             .activeRadioProduct,
             .btnQcProduct:hover {
-                background-color: #2A74EE;
+                background-color: #4a9163;
                 color: white;
                 overflow: visible;
                 word-wrap: break-word;
@@ -853,10 +951,9 @@
             }
 
             .btnBgrade {
-                border: 2px solid #2A74EE;
+                border: 2px solid black;
                 /* outline: none; */
                 padding: 10px 12px;
-                background-color: orange;
                 cursor: pointer;
                 font-size: 13px;
                 width: 110px;
@@ -865,6 +962,8 @@
                 overflow: hidden;
                 text-overflow: ellipsis;
                 height: 40px;
+                border-radius:10px;
+                font-weight: bold;
             }
 
             .activeRadioDefact,
@@ -874,10 +973,9 @@
             }
 
             .btnCgrade {
-                border: 2px solid #2A74EE;
+                border: 2px solid black;
                 /* outline: none; */
                 padding: 10px 12px;
-                background-color: greenyellow;
                 cursor: pointer;
                 font-size: 13px;
                 width: 110px;
@@ -886,6 +984,8 @@
                 overflow: hidden;
                 text-overflow: ellipsis;
                 height: 40px;
+                border-radius: 10px;
+                font-weight: bold;
             }
 
             .activeRadioDefact,
@@ -895,10 +995,9 @@
             }
 
             .btnAgrade {
-                border: 2px solid #2A74EE;
+                border: 2px solid black;
                 /* outline: none; */
                 padding: 10px 12px;
-                background-color: lightsalmon;
                 cursor: pointer;
                 font-size: 13px;
                 width: 110px;
@@ -907,6 +1006,8 @@
                 overflow: hidden;
                 text-overflow: ellipsis;
                 height: 40px;
+                border-radius: 10px;
+                font-weight: bold;
             }
 
             .activeRadioDefact,
@@ -916,7 +1017,7 @@
             }
 
             .btnRework {
-                border: 2px solid #2A74EE;
+                border: 2px solid black;
                 color: black;
                 /* outline: none; */
                 padding: 10px 12px;
@@ -928,12 +1029,14 @@
                 overflow: hidden;
                 text-overflow: ellipsis;
                 height: 40px;
+                border-radius: 10px;
+                font-weight: bold;
             }
 
             .activeRadioDefact,
             .btnRework {
-                background-color: #2A74EE;
-                color: black;
+                background-color: #4a9163;
+                color: white;
             }
         </style>
     </head>
@@ -959,7 +1062,7 @@
         </div>
         <div id="counterStyleId">
             <div class="main-content row">
-                <div class="widget widget-table">
+                <div class="widget">
                     <div class="widget-header">
                         <h3 style="color: white"><i class="fa fa-list" style="color: white"></i>Counter Style</h3>
                     </div>
@@ -981,17 +1084,20 @@
         </div>
         <!-- main -->
         <div class="main-content row">
-            <div class="widget widget-table">
+            <div class="widget">
                 <div class="widget-header">
                     <h3 style="color: white"><i class="fa fa-list" style="color: white"></i> ${dptName} Inspection </h3>
+                    
                 </div>
+                    <a href="http://10.1.1.88:3000/public/dashboard/b9349041-63f8-4191-899d-bc2442fa195b" target="_blank" class="btn btn-primary" style="border-radius:10px;margin-left: 40px;margin-top: 20px"><i class="fa fa-dashboard" style="color: white;font-weight: bold;"></i><b> Dashboard<b></a>
+                
                 <div class="widget-content">
                     <div class="row">
                         <div class="col-md-2">
                             <div class="row">
                                 <div class="col-md-2"></div>
                                 <div class="col-md-10">
-                                    <img id="imageAgent" style="width: 100%; height: 100%;" src="${pageContext.request.contextPath}/assets/img/no-profile-image.png" class="thumbnail rounded-img-circle-with-top-margin previewImage" alt="photo" width="100px" height="100px">
+                                    <img  id="imageAgent" style="width: 100%; height: 100%;" src="${pageContext.request.contextPath}/assets/img/no-profile-image.png" class="thumbnail rounded-img-circle-with-top-margin previewImage" alt="photo" width="100px" height="100px">
                                     <!-- <c:choose>
                                         <c:when test="${logoMitra.logo_url != null}">
                                             <img id="imageAgent" style="width: 100%; height: 100%;" src="${pageContext.request.contextPath}/file/get/logo?name=${logoMitra.logo_url}" class="thumbnail rounded-img-circle-with-top-margin previewImage" alt="photo" width="100px" height="100px">
@@ -1005,35 +1111,33 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-2"></div>
-                                <div class="col-md-10">
+                                <div class="col-md-10 col-sm-4">
                                     <input id="dptId" type="hidden" value="${dptId}" />
                                     <input id="userType" type="hidden" value="${dptName}" />
+                                    <div class="form-group">
+                                        <label class="control-label" style="font-weight:bolder">Po No </label>
+                                        <!--<input disabled="true" type="text" placeholder="Po No" id="listpoNo"  class="form-control">-->
+                                        <input style="border-radius:10px;" type="text" placeholder="Po No" id="listpoNo"  class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label" style="font-weight:bolder">Po Item </label>
+                                        <input style="border-radius:10px;" disabled="true" type="text" placeholder="Po Item" id="listpoItem" class="form-control">
+                                    </div>
                                      <div class="form-group">
-                                        <label class="control-label">NCVS </label>
-                                        <input  type="text" placeholder="NCVS" id="listNcvs" class="form-control">
+                                        <label class="control-label" style="font-weight:bolder">Bucket </label>
+                                        <input style="border-radius:10px;" disabled="true" type="text" placeholder="Bucket " id="demandId" name="demandClass" class="form-control">
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label">Bucket </label>
-                                        <input disabled="true" type="text" placeholder="Bucket " id="demandId" name="demandClass" class="form-control">
+                                        <label class="control-label" style="font-weight:bolder">NCVS </label>
+                                        <input style="border-radius:10px;" disabled="true" type="text" placeholder="NCVS" id="listNcvs" name="listNcvs" class="form-control">
                                     </div>
-                                   
-                                    
-                                    <div class="form-group">
-                                        <label class="control-label">Po No </label>
-                                        <input disabled="true" type="text" placeholder="Po No" id="listpoNo"  class="form-control">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label">Po Item </label>
-                                        <input disabled="true" type="text" placeholder="Po Item" id="listpoItem" class="form-control">
-                                    </div>
-
                                 </div>
                             </div>
                             <div class="row" style="margin-bottom: 10px;">
                                 <div class="col-md-2"></div>
-                                <div class="col-md-10">
+                                <div class="col-md-10 col-sm-4">
                                     <div>
-                                        <label>Product</label>
+                                        <label style="font-weight:bolder">Product</label>
                                     </div>
                                     <div id="product">
 
@@ -1045,15 +1149,15 @@
                             <div class="row">
                                 <div class="col-sm-2">
                                     <div class="col-sm-12">
-                                        <label>Clean</label>
+                                        <label style="font-weight:bolder;padding-left: 35px;">Clean</label>
                                     </div>
                                     <div class="col-sm-12" id="Clean">
-
+                                        
                                     </div>
                                 </div>
                                 <div class="col-sm-2">
                                     <div class="col-sm-12">
-                                        <label>Cosmetic</label>
+                                        <label style="font-weight:bolder;padding-left: 25px;">Cosmetic</label>
                                     </div>
                                     <div class="col-sm-12" id="Cosmetic">
 
@@ -1061,7 +1165,7 @@
                                 </div>
                                 <div class="col-sm-2">
                                     <div class="col-sm-12">
-                                        <label>Straight</label>
+                                        <label style="font-weight:bolder;padding-left: 30px;">Straight</label>
                                     </div>
                                     <div class="col-sm-12" id="Straight">
 
@@ -1069,7 +1173,7 @@
                                 </div>
                                 <div class="col-sm-2">
                                     <div class="col-sm-12">
-                                        <label>Strong</label>
+                                        <label style="font-weight:bolder;padding-left: 35px;">Strong</label>
                                     </div>
                                     <div class="col-sm-12" id="Strong">
 
@@ -1077,16 +1181,18 @@
                                 </div>
                                 <div class="col-sm-2">
                                     <div class="col-sm-12">
-                                        <label>Other</label>
+                                        <label style="font-weight:bolder;padding-left: 35px;">Other</label>
                                     </div>
                                     <div class="col-sm-12" id="Other">
 
                                     </div>
                                 </div>
                             </div>
+                            
                         </div>
 
                     </div>
+                                    
                     <div class="row">
                         <div class="col-sm-4 text-center"></div>
                         <div class="col-sm-4 text-center">
@@ -1097,12 +1203,12 @@
                             </div>
 
                             <div>
-                                <button id="buttonDefact" name="buttonRework" class="btnRework" value="Rework" style="background: yellow;width: 70px; padding: 0px 0px;">Rework</button>
+                                <button id="buttonDefact" name="buttonRework" class="btnRework" value="Rework" style="background: #f7e94d;color: black;width: 70px; padding: 0px 0px;">Rework</button>
                             </div>
                             <div style="margin-top: 10px">
-                                <button id="buttonDefact" name="buttonAGrade" class="btnAgrade" value="A-Grade" style="background: green;width: 70px; padding: 0px 0px">A-Grade</button>
-                                <button id="buttonDefact" name="buttonBgrade" class="btnBgrade" value="B-Grade" style="background: blue;width: 70px; padding: 0px 0px">B-Grade</button>
-                                <button id="buttonDefact" name="buttonCgrade" class="btnCgrade " value="C-Grade" style="background: red;width: 70px; padding: 0px 0px">C-Grade</button>
+                                <button id="buttonDefact" name="buttonAGrade" class="btnAgrade" value="A-Grade" style="background: greenyellow;width: 70px; padding: 0px 0px">A-Grade</button>
+                                <button id="buttonDefact" name="buttonBgrade" class="btnBgrade" value="B-Grade" style="background: #75b1d9;width: 70px; padding: 0px 0px">B-Grade</button>
+                                <button id="buttonDefact" name="buttonCgrade" class="btnCgrade " value="C-Grade" style="background: tomato;width: 70px; padding: 0px 0px">C-Grade</button>
                             </div>
                         </div>
                         <div class="col-sm-4" style="width: fit-content">
@@ -1113,7 +1219,7 @@
             </div>
         </div>
         <div class="alert alert-warning" style="display:none" id="peringatan">
-            <p style="color:#CE7B11"><strong>Warning!</strong> Rework kamu melebihi limit, segera tekan ANDON.  <br>Persentase Rework : <span id="notif"></span></p>
+            <p style="color:#CE7B11"><strong>Warning!</strong> Rework anda melebihi limit.  <br>Persentase Rework : <span id="notif"></span></p>
         </div>
         <div class="row">
             <div class="main-content">
@@ -1150,17 +1256,29 @@
             <div class="main-content">
                 <div class="widget">
                     <div class="widget-header">
-                        <h3 style="color: white"><i class="fa fa-list" style="color: white"></i>Counter</h3>
+                        <h3 style="color: white"><i class="fa fa-list" style="color: white"></i>Persentase</h3>
                     </div>
                     <div class="widget-content form">
                         <div class="form-body">
                             <ul class="task-list">
                                 <div class="col">
                                     <li>
+                                       
                                         <p>
-                                            <a href="#">
-                                                A-Grade <span class="label label-danger" id="barAgrade"></span>
-                                            </a>
+                                            <span style="font-weight:bold;">A-Grade</span>
+                                                <span class="label label-danger" id="barAgrade"></span>
+                                        </p>
+                                        
+                                        <div class="progress progress-xs">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="200" style="width: 0%">
+                                                <span class="sr-only">20% Complete</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            <span style="font-weight:bold;">B-Grade</span>
+                                            <span class="label label-danger" id="barBgrade"></span>
                                         </p>
                                         <div class="progress progress-xs">
                                             <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="200" style="width: 0%">
@@ -1170,9 +1288,8 @@
                                     </li>
                                     <li>
                                         <p>
-                                            <a href="#">
-                                                B-Grade <span class="label label-danger" id="barBgrade"></span>
-                                            </a>
+                                            <span style="font-weight:bold;">C-Grade</span>
+                                            <span class="label label-danger" id="barCgrade"></span>
                                         </p>
                                         <div class="progress progress-xs">
                                             <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="200" style="width: 0%">
@@ -1182,21 +1299,8 @@
                                     </li>
                                     <li>
                                         <p>
-                                            <a href="#">
-                                                C-Grade <span class="label label-danger" id="barCgrade"></span>
-                                            </a>
-                                        </p>
-                                        <div class="progress progress-xs">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="200" style="width: 0%">
-                                                <span class="sr-only">20% Complete</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <p>
-                                            <a href="#">
-                                                Rework <span class="label label-danger" id="barRewok"></span>
-                                            </a>
+                                            <span style="font-weight:bold;">Defect</span>
+                                            <span class="label label-danger" id="barRewok"></span>
                                         </p>
                                         <div class="progress progress-xs">
                                             <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="200" style="width: 0%">
