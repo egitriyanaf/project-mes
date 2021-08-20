@@ -38,7 +38,12 @@
             <!-- TOP BAR -->
             <div class="top-bar">
                 <div class="container">
-                    <div class="row" style="background-color: #0b0d62;">
+                    <div class="row" style="background-image: url('${pageContext.request.contextPath}/assets/login-template/images/bg.jpg');
+                background-origin: border-box;
+                background-attachment:fixed;
+                background-size:cover;
+                z-index:-1;
+                background-repeat:no-repeat;">
                         <!-- logo -->
                         <div id="backToDashboard" class="col-md-2 logo">
                             <a href="#" class="hidden-md hidden-lg main-nav-toggle"><i class="fa fa-bars"></i></a>
@@ -103,7 +108,7 @@
 
             <!-- BOTTOM: LEFT NAV AND RIGHT MAIN CONTENT -->
             <div class="bottom">
-                <div class="container">
+                <div class="container" >
                     <div class="row menuside">
                         <!-- left sidebar -->
                         <div class="col-md-2 left-sidebar">
@@ -212,7 +217,12 @@
         <!-- /wrapper -->
 
         <!-- FOOTER -->
-        <footer class="footer" style="background-color: rgb(11, 13, 98)">
+        <footer class="footer" style="background-image: url('${pageContext.request.contextPath}/assets/login-template/images/bg.jpg');
+                background-origin: border-box;
+                background-attachment:fixed;
+                background-size:cover;
+                z-index:-1;
+                background-repeat:no-repeat;">
             <div class="copyright">2018 &copy; PT Astra Graphia Information Technology</div>
             <div class="copyright version">
                 Version 1.0.${buildNumber} build 20180901.RR25

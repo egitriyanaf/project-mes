@@ -139,27 +139,27 @@
                 }
 
                 $('#Other').click(function () {
-                    valCategory = "Other"
+                    valCategory = "Other";
                 });
 
                 $('#Clean').click(function () {
-                    valCategory = "Clean"
+                    valCategory = "Clean";
                 });
 
                 $('#Cosmetic').click(function () {
-                    valCategory = "Cosmetic"
+                    valCategory = "Cosmetic";
                 });
 
                 $('#Straight').click(function () {
-                    valCategory = "Straight"
+                    valCategory = "Straight";
                 });
 
                 $('#Strong').click(function () {
-                    valCategory = "Strong"
+                    valCategory = "Strong";
                 });
 
                 for (let x = 0; x < disabledButton.length; x++) {
-                    disabledButton[x].disabled = true
+                    disabledButton[x].disabled = true;
                 }
 
                 function counterCategory() {
@@ -171,11 +171,11 @@
                     var otherPersentase = 0;
                     var sampleVal = 0;
                     var counterFunc = _fw_post('${pageContext.request.contextPath}/qc/hourlyinspection/counter', data, function (res) {
-                        console.log(res)
+                        console.log(res);
                         var datas = [];
                         if (res.length != 0) {
                             for (var x = 0; x < res.length; x++) {
-                                datas = res[x]
+                                datas = res[x];
                                 if (datas[1] == "Clean") {
                                     clean = datas[0];
                                 }
@@ -200,7 +200,7 @@
 
 
                             if (styleVal == 1) {
-                                sampleVal = $("#sampleId").val()
+                                sampleVal = $("#sampleId").val();
                                 console.log(sampleVal);
                                 cleanPersentase = (clean / sampleVal) * 100;
                                 cosmeticPersentase = (cosmetic / sampleVal) * 100;
@@ -211,7 +211,7 @@
                                 var dataSend = {};
                                 _fw_post('${pageContext.request.contextPath}/qc/hourlyinspection/get-countfullgrade', dataSend, function (res) {
                                     if (res != null) {
-                                        sumBarcode = res
+                                        sumBarcode = res;
                                         console.log("data count A-Grade ", res);
                                     }
                                     cleanPersentase = (clean / sumBarcode) * 100;
@@ -289,7 +289,7 @@
                             productCode: valPoNo[0].attributes[5].value,
                             demandClass: $("#demandId").val(),
                             area: $('#userType').val()
-                        }
+                        };
                         console.log(dataJson);
                         submit('${pageContext.request.contextPath}/qc/hourlyinspection/save', JSON.stringify(dataJson), function (data) {
                             console.log(data);
@@ -325,7 +325,7 @@
                         submit('${pageContext.request.contextPath}/qc/hourlyinspection/save', JSON.stringify(dataJson), function (data) {
                             $("input[name='id']").val(data.id);
                             counterCategory();
-                            counterStatusBar()
+                            counterStatusBar();
                         });
                         setTimeout(function() {
                         location.reload();
@@ -355,7 +355,7 @@
                         submit('${pageContext.request.contextPath}/qc/hourlyinspection/save', JSON.stringify(dataJson), function (data) {
                             $("input[name='id']").val(data.id);
                             counterCategory();
-                            counterStatusBar()
+                            counterStatusBar();
                         });
                         setTimeout(function() {
                             location.reload();
@@ -384,7 +384,7 @@
                     submit('${pageContext.request.contextPath}/qc/hourlyinspection/save', JSON.stringify(dataJson), function (data) {
                         $("input[name='id']").val(data.id);
                         counterCategory();
-                        counterStatusBar()
+                        counterStatusBar();
                     });
                     setTimeout(function() {
                             location.reload();
@@ -415,10 +415,10 @@
                     _fw_post('${pageContext.request.contextPath}/qc/hourlyinspection/defect', data, function (res) {
                         if (res.length !== 0) {
                             res.forEach(function (defect) {
-                                stringElement += '<label id ="Clean" class="btnQcDefact">' + defect.description + '<input id="idDefact" title="Clean" name="idDefact" type="checkbox" value="' + defect.description + '" disabled="true" hidden /></label>';
+                                stringElement += '<label  id ="Clean" class="btnQcDefact Clean" >' + defect.description + '<input  id="idDefact" title="Clean" name="idDefact" type="checkbox" value="' + defect.description + '" disabled="true" hidden /></label>';
                             });
                         }
-//                        var test = "Good news, everyone!".slice(5,9); 
+//                        var test = "Good news, everyone!".slice(5,9); =
                         $Clean.html(stringElement);
                     });
                 })();
@@ -433,7 +433,7 @@
                     _fw_post('${pageContext.request.contextPath}/qc/hourlyinspection/defect', data, function (res) {
                         if (res.length !== 0) {
                             res.forEach(function (defect) {
-                                stringElement += '<label id="Cosmetic" class="btnQcDefact">' + defect.description + '<input id="idDefact" title="Cosmetic" name="idDefact" type="checkbox" value="' + defect.description + '" disabled="true" hidden/></label>';
+                                stringElement += '<label id="Cosmetic" class="btnQcDefact Cosmetic">' + defect.description + '<input id="idDefact" title="Cosmetic" name="idDefact" type="checkbox" value="' + defect.description + '" disabled="true" hidden/></label>';
                             });
                         }
 
@@ -451,7 +451,7 @@
                     _fw_post('${pageContext.request.contextPath}/qc/hourlyinspection/defect', data, function (res) {
                         if (res.length !== 0) {
                             res.forEach(function (defect) {
-                                stringElement += '<label id ="Straight" class="btnQcDefact">' + defect.description + '<input id="idDefact" title="Straight" name="idDefact" type="checkbox" value="' + defect.description + '" disabled="true" hidden /></label>';
+                                stringElement += '<label id ="Straight" class="btnQcDefact Straight">' + defect.description + '<input id="idDefact" title="Straight" name="idDefact" type="checkbox" value="' + defect.description + '" disabled="true" hidden /></label>';
                             });
                         }
 
@@ -469,7 +469,7 @@
                     _fw_post('${pageContext.request.contextPath}/qc/hourlyinspection/defect', data, function (res) {
                         if (res.length !== 0) {
                             res.forEach(function (defect) {
-                                stringElement += '<label id ="Strong" class="btnQcDefact">' + defect.description + '<input id="idDefact" title="Strong" name="idDefact" type="checkbox" value="' + defect.description + '" disabled="true" hidden /></label>';
+                                stringElement += '<label id ="Strong" class="btnQcDefact Strong">' + defect.description + '<input id="idDefact" title="Strong" name="idDefact" type="checkbox" value="' + defect.description + '" disabled="true" hidden /></label>';
                             });
                         }
 
@@ -517,7 +517,7 @@
                                     this.className += " activeRadioDefact";
                                     var positionDisable = document.getElementsByName('position');
                                     for (let i = 0; i < positionDisable.length; i++) {
-                                        positionDisable[i].disabled = false
+                                        positionDisable[i].disabled = false;
                                     }
                                     flag = 0;
                                 }
@@ -547,7 +547,7 @@
                                     this.className += " activeRadioDefact";
                                     var positionDisable = document.getElementsByName('position');
                                     for (let i = 0; i < positionDisable.length; i++) {
-                                        positionDisable[i].disabled = false
+                                        positionDisable[i].disabled = false;
                                     }
                                     flag = 0;
                                 }
@@ -577,7 +577,7 @@
                                     this.className += " activeRadioDefact";
                                     var positionDisable = document.getElementsByName('position');
                                     for (let i = 0; i < positionDisable.length; i++) {
-                                        positionDisable[i].disabled = false
+                                        positionDisable[i].disabled = false;
                                     }
                                     flag = 0;
                                 }
@@ -609,7 +609,7 @@
                                     this.className += " activeRadioDefact";
                                     var positionDisable = document.getElementsByName('position');
                                     for (let i = 0; i < positionDisable.length; i++) {
-                                        positionDisable[i].disabled = false
+                                        positionDisable[i].disabled = false;
                                     }
                                     flag = 0;
                                 }
@@ -640,7 +640,7 @@
                                     this.className += " activeRadioDefact";
                                     var positionDisable = document.getElementsByName('position');
                                     for (let i = 0; i < positionDisable.length; i++) {
-                                        positionDisable[i].disabled = false
+                                        positionDisable[i].disabled = false;
                                     }
                                     flag = 0;
                                 }
@@ -674,12 +674,12 @@
                     }
                     flagDefact = true;
                     var defactDisable = document.getElementsByName('idDefact');
-                    var buttonAGrade = $('button[name=buttonAGrade]')
+                    var buttonAGrade = $('button[name=buttonAGrade]');
                     for (let i = 0; i < defactDisable.length; i++) {
-                        defactDisable[i].disabled = false
+                        defactDisable[i].disabled = false;
                     }
                     buttonAGrade[0].disabled = false;
-                })
+                });
 
                 $("#styleId").change(function () {
                     styleVal = $("#styleId").val();
@@ -896,11 +896,84 @@
             });
         </script>
         <style>
+            .btnQcDefact.Clean{
+                background-color:#9094e8;
+                color:black;
+                border:1px solid black;
+            }
+            
+            .activeRadioDefact,
+            .btnQcDefact.Clean:hover {
+                background-color:#4a9163;
+                overflow: visible;
+                white-space: normal;
+                line-height: 1.5em;
+                height: auto; 
+                color: white;
+                box-shadow:none;
+            }
+            
+            .btnQcDefact.Strong{
+                color:black;
+                background-color:#f0513c;
+                
+                border:1px solid black;
+            }
+            
+            .activeRadioDefact,
+            .btnQcDefact.Strong:hover {
+                background-color:#4a9163;
+                overflow: visible;
+                white-space: normal;
+                line-height: 1.5em;
+                height: auto; 
+                color: white;
+                box-shadow:none;
+            }
+            
+            .btnQcDefact.Cosmetic{
+                color:black;
+                background-color:#f5c842;
+                
+                border:1px solid black;
+            }
+            
+            .activeRadioDefact,
+            .btnQcDefact.Cosmetic:hover {
+                background-color:#4a9163;
+                overflow: visible;
+                white-space: normal;
+                line-height: 1.5em;
+                height: auto; 
+                color: white;
+                box-shadow:none;
+            }
+            
+            .btnQcDefact.Straight{
+                color:black;
+                background-color:#f59fee;
+                
+                border:1px solid black;
+            }
+            
+            .activeRadioDefact,
+            .btnQcDefact.Straight:hover {
+                background-color:#4a9163;
+                overflow: visible;
+                white-space: normal;
+                line-height: 1.5em;
+                height: auto; 
+                color: white;
+                box-shadow:none;
+            }
+            
             .btnQcDefact {
-                border: 2px solid black;
                 /* outline: none; */
-                padding: 10px 12px;
-                background-color: #f5c842;
+                
+                border:1px solid black;
+                padding: 10px 10px;
+                /*background-color: #f5c842;*/
+                background-color:wheat;
                 cursor: pointer;
                 font-size: 13px;
                 width: 120px;
@@ -911,6 +984,7 @@
                 height: 40px;
                 border-radius: 10px;
                 font-weight: bold;
+                box-shadow:4px 4px grey;
             }
 
             .activeRadioDefact,
@@ -919,13 +993,14 @@
                 overflow: visible;
                 white-space: normal;
                 line-height: 1.5em;
-                height: 60px; 
+                height: auto; 
                 color: white;
+                box-shadow:none;
             }
 
             .btnQcProduct {
-                border: 2px solid black;
                 /* outline: none; */
+                border:1px solid black;
                 padding: 10px 12px;
                 background-color:#f5c842;
                 cursor: pointer;
@@ -938,6 +1013,7 @@
                 height: 40px;
                 border-radius:15px;
                 font-weight: bold;
+                box-shadow:4px 4px grey;
             }
 
             .activeRadioProduct,
@@ -948,11 +1024,12 @@
                 word-wrap: break-word;
                 height: auto;
                 white-space: normal;
+                box-shadow:none;
             }
 
             .btnBgrade {
-                border: 2px solid black;
                 /* outline: none; */
+                border:1px solid black;
                 padding: 10px 12px;
                 cursor: pointer;
                 font-size: 13px;
@@ -964,17 +1041,19 @@
                 height: 40px;
                 border-radius:10px;
                 font-weight: bold;
+                box-shadow:4px 4px grey;
             }
 
             .activeRadioDefact,
             .btnBgrade:hover {
                 background-color: #2A74EE;
                 color: white;
+                box-shadow:none;
             }
 
             .btnCgrade {
-                border: 2px solid black;
                 /* outline: none; */
+                border:1px solid black;
                 padding: 10px 12px;
                 cursor: pointer;
                 font-size: 13px;
@@ -986,17 +1065,19 @@
                 height: 40px;
                 border-radius: 10px;
                 font-weight: bold;
+                box-shadow:4px 4px grey;
             }
 
             .activeRadioDefact,
             .btnCgrade:hover {
                 background-color: #2A74EE;
                 color: white;
+                box-shadow:none;
             }
 
             .btnAgrade {
-                border: 2px solid black;
                 /* outline: none; */
+                border:1px solid black;
                 padding: 10px 12px;
                 cursor: pointer;
                 font-size: 13px;
@@ -1008,16 +1089,18 @@
                 height: 40px;
                 border-radius: 10px;
                 font-weight: bold;
+                box-shadow:4px 4px grey;
             }
 
             .activeRadioDefact,
             .btnAgrade:hover {
                 background-color: #2A74EE;
                 color: white;
+                box-shadow:none;
             }
 
             .btnRework {
-                border: 2px solid black;
+                border:1px solid black;
                 color: black;
                 /* outline: none; */
                 padding: 10px 12px;
@@ -1031,13 +1114,65 @@
                 height: 40px;
                 border-radius: 10px;
                 font-weight: bold;
+                box-shadow:4px 4px grey;
             }
 
             .activeRadioDefact,
-            .btnRework {
+            .btnRework:hover {
                 background-color: #4a9163;
                 color: white;
+                box-shadow:none;
             }
+            
+            #barAgrade,
+            #barBgrade,
+            #barCgrade,
+            #barRewok
+            {  
+               border-radius: 5px;
+               font-size: 12px;
+               box-shadow:4px 4px grey;
+            }
+            .progress.progress-xs{
+                border-radius: 50px;
+                height: 20px;
+                box-shadow:4px 4px grey;
+            }
+            .progress-bar{
+                border-radius: 50px;
+                height: 20px;
+                box-shadow:2px 2px grey;
+            }
+            
+            .widget-header{
+                border-radius:10px 10px 0px 0px;
+                background-image: url('${pageContext.request.contextPath}/assets/login-template/images/bg.jpg');
+                background-origin: border-box;
+                background-attachment:fixed;
+                background-size:cover;
+                z-index:-1;
+                background-repeat:no-repeat;
+            }
+            
+            .widget{
+               
+                border-radius:10px;
+                background-repeat: no-repeat;
+                background-image: url("${pageContext.request.contextPath}/assets/login-template/control.jpg");
+                background-origin: border-box;
+                background-attachment:fixed;
+                background-size:cover;
+                opacity:0.90;
+                z-index:-1;
+            }
+            
+            .btn-primary{
+                box-shadow:4px 4px grey;
+            }
+            .btn-primary:hover{
+                box-shadow:none;
+            }
+            
         </style>
     </head>
 
@@ -1066,9 +1201,9 @@
                     <div class="widget-header">
                         <h3 style="color: white"><i class="fa fa-list" style="color: white"></i>Counter Style</h3>
                     </div>
-                    <form class="row form-group" style="margin-top: 5px">
+                    <form class="row form-group" style="margin:20px 2px 20px 2px">
                         <div class="col-sm-6">
-                            <select id="styleId" class="form-control" style="background-color: white">
+                            <select id="styleId" class="form-control" style="background-color: white;border-radius: 5px 5px 0px 0px;box-shadow: 2px 2px grey;">
                                 <option value="0">- Choose Style -</option>
                                 <option value="1">Sample</option>
                                 <option value="2">100%</option>
@@ -1076,7 +1211,7 @@
                         </div>
                         <div class="col-sm-6">
                             <input type="hidden" id="sumBcId" placeholder="Sample" value="${sumBarcode}" readonly class="form-control" />
-                            <input type="number" id="sampleId" placeholder="Sample" readonly class="form-control" />
+                            <input type="number" id="sampleId" placeholder="Sample" readonly class="form-control" style='border-radius:5px;box-shadow: 2px 2px grey;' />
                         </div>
                     </form>
                 </div>
@@ -1089,7 +1224,7 @@
                     <h3 style="color: white"><i class="fa fa-list" style="color: white"></i> ${dptName} Inspection </h3>
                     
                 </div>
-                    <a href="http://10.1.1.88:3000/public/dashboard/b9349041-63f8-4191-899d-bc2442fa195b" target="_blank" class="btn btn-primary" style="border-radius:10px;margin-left: 40px;margin-top: 20px"><i class="fa fa-dashboard" style="color: white;font-weight: bold;"></i><b> Dashboard<b></a>
+                    <a href="http://10.1.1.88:3000/public/dashboard/b9349041-63f8-4191-899d-bc2442fa195b" target="_blank" class="btn btn-primary" style="border-radius:10px;margin-left: 43px;margin-top: 20px;border:1px solid black;"><i class="fa fa-dashboard" style="color: white;font-weight: bold;"></i><b> Dashboard<b></a>
                 
                 <div class="widget-content">
                     <div class="row">
@@ -1097,7 +1232,7 @@
                             <div class="row">
                                 <div class="col-md-2"></div>
                                 <div class="col-md-10">
-                                    <img  id="imageAgent" style="width: 100%; height: 100%;" src="${pageContext.request.contextPath}/assets/img/no-profile-image.png" class="thumbnail rounded-img-circle-with-top-margin previewImage" alt="photo" width="100px" height="100px">
+                                    <img  id="imageAgent" style="width: 100%; height: 100%;box-shadow: 3px 3px grey;border:1px solid black;" src="${pageContext.request.contextPath}/assets/login-template/jordan.gif" class="thumbnail rounded-img-circle-with-top-margin previewImage" alt="photo" width="100px" height="100px">
                                     <!-- <c:choose>
                                         <c:when test="${logoMitra.logo_url != null}">
                                             <img id="imageAgent" style="width: 100%; height: 100%;" src="${pageContext.request.contextPath}/file/get/logo?name=${logoMitra.logo_url}" class="thumbnail rounded-img-circle-with-top-margin previewImage" alt="photo" width="100px" height="100px">
@@ -1111,33 +1246,33 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-2"></div>
-                                <div class="col-md-10 col-sm-4">
+                                <div class="col-md-10 col-sm-6">
                                     <input id="dptId" type="hidden" value="${dptId}" />
                                     <input id="userType" type="hidden" value="${dptName}" />
-                                    <div class="form-group">
-                                        <label class="control-label" style="font-weight:bolder">Po No </label>
+                                    <div class="form-group" >
+                                        <label class="control-label" style="font-weight:bolder;font-size: 14px;">Po No </label>
                                         <!--<input disabled="true" type="text" placeholder="Po No" id="listpoNo"  class="form-control">-->
-                                        <input style="border-radius:10px;" type="text" placeholder="Po No" id="listpoNo"  class="form-control">
+                                        <input style="border-radius:10px;box-shadow: 2px 2px" type="text" placeholder="Po No" id="listpoNo"  class="form-control">
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label" style="font-weight:bolder">Po Item </label>
-                                        <input style="border-radius:10px;" disabled="true" type="text" placeholder="Po Item" id="listpoItem" class="form-control">
+                                        <label class="control-label" style="font-weight:bolder;font-size: 14px;">Po Item </label>
+                                        <input style="border-radius:10px;box-shadow: 2px 2px" disabled="true" type="text" placeholder="Po Item" id="listpoItem" class="form-control">
                                     </div>
                                      <div class="form-group">
-                                        <label class="control-label" style="font-weight:bolder">Bucket </label>
-                                        <input style="border-radius:10px;" disabled="true" type="text" placeholder="Bucket " id="demandId" name="demandClass" class="form-control">
+                                        <label class="control-label" style="font-weight:bolder;font-size: 14px;">Bucket </label>
+                                        <input style="border-radius:10px;box-shadow: 2px 2px" disabled="true" type="text" placeholder="Bucket " id="demandId" name="demandClass" class="form-control">
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label" style="font-weight:bolder">NCVS </label>
-                                        <input style="border-radius:10px;" disabled="true" type="text" placeholder="NCVS" id="listNcvs" name="listNcvs" class="form-control">
+                                        <label class="control-label" style="font-weight:bolder;font-size: 14px;">NCVS </label>
+                                        <input style="border-radius:10px;box-shadow: 2px 2px" disabled="true" type="text" placeholder="NCVS" id="listNcvs" name="listNcvs" class="form-control">
                                     </div>
                                 </div>
                             </div>
                             <div class="row" style="margin-bottom: 10px;">
                                 <div class="col-md-2"></div>
-                                <div class="col-md-10 col-sm-4">
+                                <div class="col-md-10 col-sm-6">
                                     <div>
-                                        <label style="font-weight:bolder">Product</label>
+                                        <label style="font-weight:bolder;font-size: 14px;">Product</label>
                                     </div>
                                     <div id="product">
 
@@ -1145,45 +1280,47 @@
                                 </div>
                             </div>
                         </div>
+                                    
+                                   
                         <div class="col-md-10">
                             <div class="row">
-                                <div class="col-sm-2">
-                                    <div class="col-sm-12">
-                                        <label style="font-weight:bolder;padding-left: 35px;">Clean</label>
+                                <div class="col-sm-2" style="margin-left: 10px;margin-right: 10px;">
+                                    <div class="col-sm-12" style="text-align:center;">
+                                        <label style="font-weight:bolder;font-size: 18px;">Clean</label>
                                     </div>
-                                    <div class="col-sm-12" id="Clean">
+                                    <div class="col-sm-12" id="Clean" >
                                         
                                     </div>
                                 </div>
-                                <div class="col-sm-2">
-                                    <div class="col-sm-12">
-                                        <label style="font-weight:bolder;padding-left: 25px;">Cosmetic</label>
+                                <div class="col-sm-2" style="margin-left: 10px;margin-right: 10px;">
+                                    <div class="col-sm-12" style="text-align:center;">
+                                        <label style="font-weight:bolder;font-size: 18px;">Cosmetic</label>
                                     </div>
                                     <div class="col-sm-12" id="Cosmetic">
 
                                     </div>
                                 </div>
-                                <div class="col-sm-2">
-                                    <div class="col-sm-12">
-                                        <label style="font-weight:bolder;padding-left: 30px;">Straight</label>
+                                <div class="col-sm-2" style="margin-left: 10px;margin-right: 10px;">
+                                    <div class="col-sm-12" style="text-align:center;">
+                                        <label style="font-weight:bolder;font-size:18px;">Straight</label>
                                     </div>
                                     <div class="col-sm-12" id="Straight">
 
                                     </div>
                                 </div>
-                                <div class="col-sm-2">
-                                    <div class="col-sm-12">
-                                        <label style="font-weight:bolder;padding-left: 35px;">Strong</label>
+                                <div class="col-sm-2" style="margin-left: 10px;margin-right: 10px;">
+                                    <div class="col-sm-12" style="text-align:center;">
+                                            <label style="font-weight:bolder;font-size: 18px;">Strong</label>
                                     </div>
                                     <div class="col-sm-12" id="Strong">
 
                                     </div>
                                 </div>
-                                <div class="col-sm-2">
-                                    <div class="col-sm-12">
-                                        <label style="font-weight:bolder;padding-left: 35px;">Other</label>
+                                <div class="col-sm-2" style="margin-left: 10px; margin-right: 10px;">
+                                    <div class="col-sm-12" style="text-align:center;">
+                                        <label style="font-weight: bolder;font-size: 18px;">Other</label>
                                     </div>
-                                    <div class="col-sm-12" id="Other">
+                                    <div class="col-sm-12" id="Other" >
 
                                     </div>
                                 </div>
@@ -1197,18 +1334,19 @@
                         <div class="col-sm-4 text-center"></div>
                         <div class="col-sm-4 text-center">
                             <div>
-                                <input disabled="true" id="position" style="width: 20px; height: 20px;" name="position" type="radio" value="Left" /><label style="font-size: x-large">Left</label>
-                                <input disabled="true" id="position" style="width: 20px; height: 20px;" name="position" type="radio" value="Right" /><label style="font-size: x-large">Right</label>
-                                <input disabled="true" id="position" style="width: 20px; height: 20px;" name="position" type="radio" value="Pairs" /><label style="font-size: x-large">Pairs</label>
+                                <input disabled="true" id="position" style="width: 20px; height: 20px;margin: 10px 5px 10px 10px;" name="position" type="radio" value="Pairs" /><span style="font-weight: bolder;font-size: 18px;">Pairs</span>
+                                <br>
+                                <input disabled="true" id="position" style="width: 20px; height: 20px;margin: 10px 5px 10px 10px;" name="position" type="radio" value="Left" /><span style="font-weight: bolder;font-size: 18px;">Left</span>
+                                <input disabled="true" id="position" style="width: 20px; height: 20px;margin: 10px 5px 10px 10px;" name="position" type="radio" value="Right" /><span style="font-weight: bolder;font-size: 18px;">Right</span>
                             </div>
 
                             <div>
-                                <button id="buttonDefact" name="buttonRework" class="btnRework" value="Rework" style="background: #f7e94d;color: black;width: 70px; padding: 0px 0px;">Rework</button>
+                                <button id="buttonDefact" name="buttonRework" class="btnRework" value="Rework" style="background: #75b1d9;color: black;width: 70px; padding: 0px 0px;margin: 20px 10px 10px 10px;">Rework</button>
                             </div>
-                            <div style="margin-top: 10px">
-                                <button id="buttonDefact" name="buttonAGrade" class="btnAgrade" value="A-Grade" style="background: greenyellow;width: 70px; padding: 0px 0px">A-Grade</button>
-                                <button id="buttonDefact" name="buttonBgrade" class="btnBgrade" value="B-Grade" style="background: #75b1d9;width: 70px; padding: 0px 0px">B-Grade</button>
-                                <button id="buttonDefact" name="buttonCgrade" class="btnCgrade " value="C-Grade" style="background: tomato;width: 70px; padding: 0px 0px">C-Grade</button>
+                            <div>
+                                <button id="buttonDefact" name="buttonAGrade" class="btnAgrade" value="A-Grade" style="background: greenyellow;width: 70px; padding: 0px 0px;margin: 10px 10px 10px 10px;">A-Grade</button>
+                                <button id="buttonDefact" name="buttonBgrade" class="btnBgrade" value="B-Grade" style="background: #f7e94d;width: 70px; padding: 0px 0px;margin: 10px 10px 10px 10px;">B-Grade</button>
+                                <button id="buttonDefact" name="buttonCgrade" class="btnCgrade " value="C-Grade" style="background: tomato;width: 70px; padding: 0px 0px;margin: 10px 10px 10px 10px;">C-Grade</button>
                             </div>
                         </div>
                         <div class="col-sm-4" style="width: fit-content">
@@ -1225,27 +1363,27 @@
             <div class="main-content">
                 <div class="widget">
                     <div class="widget-header">
-                        <h3 style="color: white"><i class="fa fa-list" style="color: white"></i>Counter</h3>
+                        <h3 style="color: white"><i class="fa fa-list" style="color: white;"></i>Counter</h3>
                     </div>
                     <div class="widget-content row text-center" style="padding-top: 5px ;">
                         <div class="col-sm-3">
-                            <label style="margin-top: 0px;">Clean</label>
+                            <label style="margin-top: 0px;font-weight: bolder;">Clean</label>
                             <h4 id="cleanCountId" style="margin-top: 0px;">0</h4>
                         </div>
                         <div class="col-sm-2">
-                            <label style="margin-top: 0px;">Cosmetic</label>
+                            <label style="margin-top: 0px;font-weight: bolder;">Cosmetic</label>
                             <h4 id="cosmeticCountId" style="margin-top: 0px;">0</h4>
                         </div>
                         <div class="col-sm-2">
-                            <label style="margin-top: 0px;">Straight</label>
+                            <label style="margin-top: 0px;font-weight: bolder;">Straight</label>
                             <h4 id="straightCountId" style="margin-top: 0px;">0</h4>
                         </div>
                         <div class="col-sm-2">
-                            <label style="margin-top: 0px;">Strong</label>
+                            <label style="margin-top: 0px;font-weight: bolder;">Strong</label>
                             <h4 id="strongCountId" style="margin-top: 0px;">0</h4>
                         </div>
                         <div class="col-sm-3">
-                            <label style="margin-top: 0px;">Other</label>
+                            <label style="margin-top: 0px;font-weight: bolder;">Other</label>
                             <h4 id="otherCountId" style="margin-top: 0px;">0</h4>
                         </div>
                     </div>
@@ -1265,7 +1403,7 @@
                                     <li>
                                        
                                         <p>
-                                            <span style="font-weight:bold;">A-Grade</span>
+                                            <span style="font-weight:bold;"><a href="http://10.1.1.88:3000/public/dashboard/b9349041-63f8-4191-899d-bc2442fa195b" target="_blank" style="text-decoration:none;color:black; ">A-Grade</a></span>
                                                 <span class="label label-danger" id="barAgrade"></span>
                                         </p>
                                         
@@ -1277,7 +1415,7 @@
                                     </li>
                                     <li>
                                         <p>
-                                            <span style="font-weight:bold;">B-Grade</span>
+                                            <span style="font-weight:bold;"><a href="http://10.1.1.88:3000/public/dashboard/b9349041-63f8-4191-899d-bc2442fa195b" target="_blank" style="text-decoration:none;color: black;">B-Grade</a></span>
                                             <span class="label label-danger" id="barBgrade"></span>
                                         </p>
                                         <div class="progress progress-xs">
@@ -1288,7 +1426,7 @@
                                     </li>
                                     <li>
                                         <p>
-                                            <span style="font-weight:bold;">C-Grade</span>
+                                            <span style="font-weight:bold;"><a href="http://10.1.1.88:3000/public/dashboard/b9349041-63f8-4191-899d-bc2442fa195b" target="_blank" style="text-decoration:none;color: black;">C-Grade</a></span>
                                             <span class="label label-danger" id="barCgrade"></span>
                                         </p>
                                         <div class="progress progress-xs">
@@ -1299,7 +1437,7 @@
                                     </li>
                                     <li>
                                         <p>
-                                            <span style="font-weight:bold;">Defect</span>
+                                            <span style="font-weight:bold;"><a href="http://10.1.1.88:3000/public/dashboard/b9349041-63f8-4191-899d-bc2442fa195b" target="_blank" style="text-decoration:none;color: black;">Rework</a></span>
                                             <span class="label label-danger" id="barRewok"></span>
                                         </p>
                                         <div class="progress progress-xs">
