@@ -173,25 +173,25 @@
                     var counterFunc = _fw_post('${pageContext.request.contextPath}/qc/hourlyinspection/counter', data, function (res) {
                         console.log(res);
                         var datas = [];
-                        if (res.length != 0) {
+                        if (res.length !== 0) {
                             for (var x = 0; x < res.length; x++) {
                                 datas = res[x];
-                                if (datas[1] == "Clean") {
+                                if (datas[1] === "Clean") {
                                     clean = datas[0];
                                 }
 
-                                if (datas[1] == "Cosmetic") {
+                                if (datas[1] === "Cosmetic") {
                                     cosmetic = datas[0];
                                 }
 
-                                if (datas[1] == "Straight") {
+                                if (datas[1] === "Straight") {
                                     straight = datas[0];
                                 }
 
-                                if (datas[1] == "Strong") {
+                                if (datas[1] === "Strong") {
                                     strong = datas[0];
                                 }
-                                if (datas[1] == "Other") {
+                                if (datas[1] === "Other") {
                                     other = datas[0];
                                 }
                             }
@@ -199,7 +199,7 @@
                             counterAll = clean + cosmetic + straight + strong + other;
 
 
-                            if (styleVal == 1) {
+                            if (styleVal === 1) {
                                 sampleVal = $("#sampleId").val();
                                 console.log(sampleVal);
                                 cleanPersentase = (clean / sampleVal) * 100;
@@ -207,10 +207,10 @@
                                 straightPersentase = (straight / sampleVal) * 100;
                                 strongPersentase = (strong / sampleVal) * 100;
                                 otherPersentase = (other / sampleVal) * 100;
-                            } else if (styleVal == 2) {
+                            } else if (styleVal === 2) {
                                 var dataSend = {};
                                 _fw_post('${pageContext.request.contextPath}/qc/hourlyinspection/get-countfullgrade', dataSend, function (res) {
-                                    if (res != null) {
+                                    if (res !== null) {
                                         sumBarcode = res;
                                         console.log("data count A-Grade ", res);
                                     }
@@ -371,7 +371,7 @@
                         lineCode: $('#listNcvs').val(),
                         poNo: valPoNo[0].value,
                         defect: null,
-                        position: null,
+                        position: $('input[type=radio][name=position]:checked').val(),
                         category: null,
                         type: "A-Grade",
                         poItem: valPoNo[0].attributes[4].value,
@@ -501,16 +501,16 @@
                 var flag = 0;
                 for (var i = 0; i < btnsOther.length; i++) {
                     btnsOther[i].addEventListener("click", function () {
-                        if (flagDefact == true) {
+                        if (flagDefact === true) {
                             var current = document.getElementsByClassName("activeRadioDefact");
 //                            if (current.length > 0) {
 //                                current[0].className = current[0].className.replace(" activeRadioDefact", "");
 //                            }
-                            if (this.className.split('btnQcDefact ').some(function(w){return w === "activeRadioDefact activeRadioDefact activeRadioDefact"})){
+                            if (this.className.split('btnQcDefact ').some(function(w){return w === "activeRadioDefact activeRadioDefact activeRadioDefact";})){
                                 this.className = this.className.replace(" activeRadioDefact activeRadioDefact activeRadioDefact", "");
                                 flag = 1;
                             }else{
-                                if (flag == 1) {
+                                if (flag === 1) {
                                     this.className = this.className.replace(" activeRadioDefact", "");
                                     flag = 0;
                                 }else{
@@ -527,24 +527,24 @@
                 }
 
                 var headerStrong = document.getElementById("Strong");
-                var btnsStrong = headerStrong.getElementsByClassName("btnQcDefact");
+                var btnsStrong = headerStrong.getElementsByClassName("btnQcDefact Strong");
                 var flag = 0;
                 for (var i = 0; i < btnsStrong.length; i++) {
                     btnsStrong[i].addEventListener("click", function () {
-                        if (flagDefact == true) {
-                            var current = document.getElementsByClassName("activeRadioDefact");
+                        if (flagDefact === true) {
+                            var current = document.getElementsByClassName("activeRadioDefact Strong");
 //                            if (current.length > 0) {
 //                                current[0].className = current[0].className.replace(" activeRadioDefact", "");
 //                            }
-                            if (this.className.split('btnQcDefact ').some(function(w){return w === "activeRadioDefact activeRadioDefact activeRadioDefact"})){
-                                this.className = this.className.replace(" activeRadioDefact activeRadioDefact activeRadioDefact", "");
+                            if (this.className.split('btnQcDefact Strong ').some(function(w){return w === "activeRadioDefact Strong activeRadioDefact Strong activeRadioDefact Strong";})){
+                                this.className = this.className.replace(" activeRadioDefact Strong activeRadioDefact Strong activeRadioDefact Strong", "");
                                 flag = 1;
                             }else{
-                                if (flag == 1) {
-                                    this.className = this.className.replace(" activeRadioDefact", "");
+                                if (flag === 1) {
+                                    this.className = this.className.replace(" activeRadioDefact Strong", "");
                                     flag = 0;
                                 }else{
-                                    this.className += " activeRadioDefact";
+                                    this.className += " activeRadioDefact Strong";
                                     var positionDisable = document.getElementsByName('position');
                                     for (let i = 0; i < positionDisable.length; i++) {
                                         positionDisable[i].disabled = false;
@@ -557,24 +557,24 @@
                 }
 
                 var headerStraight = document.getElementById("Straight");
-                var btnsStraight = headerStraight.getElementsByClassName("btnQcDefact");
+                var btnsStraight = headerStraight.getElementsByClassName("btnQcDefact Straight");
                 var flag = 0;
                 for (var i = 0; i < btnsStraight.length; i++) {
                     btnsStraight[i].addEventListener("click", function () {
-                        if (flagDefact == true) {
-                            var current = document.getElementsByClassName("activeRadioDefact");
+                        if (flagDefact === true) {
+                            var current = document.getElementsByClassName("activeRadioDefact Straight");
 //                            if (current.length > 0) {
 //                                current[0].className = current[0].className.replace(" activeRadioDefact", "");
 //                            }
-                            if (this.className.split('btnQcDefact ').some(function(w){return w === "activeRadioDefact activeRadioDefact activeRadioDefact"})){
-                                this.className = this.className.replace(" activeRadioDefact activeRadioDefact activeRadioDefact", "");
+                            if (this.className.split('btnQcDefact Straight ').some(function(w){return w === "activeRadioDefact Straight activeRadioDefact Straight activeRadioDefact Straight";})){
+                                this.className = this.className.replace(" activeRadioDefact Straight activeRadioDefact Straight activeRadioDefact Straight", "");
                                 flag = 1;
                             }else{
-                                if (flag == 1) {
-                                    this.className = this.className.replace(" activeRadioDefact", "");
+                                if (flag === 1) {
+                                    this.className = this.className.replace(" activeRadioDefact Straight", "");
                                     flag = 0;
                                 }else{
-                                    this.className += " activeRadioDefact";
+                                    this.className += " activeRadioDefact Straight";
                                     var positionDisable = document.getElementsByName('position');
                                     for (let i = 0; i < positionDisable.length; i++) {
                                         positionDisable[i].disabled = false;
@@ -587,26 +587,26 @@
                 }
 
                 var headerCosmetic = document.getElementById("Cosmetic");
-                var btnsCosmetic = headerCosmetic.getElementsByClassName("btnQcDefact");
+                var btnsCosmetic = headerCosmetic.getElementsByClassName("btnQcDefact Cosmetic");
                 var flag = 0;
                 for (var i = 0; i < btnsCosmetic.length; i++) {
                     btnsCosmetic[i].addEventListener("click", function () {
-                        if (flagDefact == true) {
+                        if (flagDefact === true) {
                             //var val = btnsCosmetic[i].outerText;
-                            var current = document.getElementsByClassName("activeRadioDefact");
+                            var current = document.getElementsByClassName("activeRadioDefact Cosmetic");
 //                            if (current.length > 0) {
 //                                current[0].className = current[0].className.replace(" activeRadioDefact", "");
 //                            }
 //                            if (RegExp('\\b'+ this.className +'\\b').test("activeRadioDefact activeRadioDefact"))
-                            if (this.className.split('btnQcDefact ').some(function(w){return w === "activeRadioDefact activeRadioDefact activeRadioDefact"})){
-                                this.className = this.className.replace(" activeRadioDefact activeRadioDefact activeRadioDefact", "");
+                            if (this.className.split('btnQcDefact Cosmetic ').some(function(w){return w === "activeRadioDefact Cosmetic activeRadioDefact Cosmetic activeRadioDefact Cosmetic";})){
+                                this.className = this.className.replace(" activeRadioDefact Cosmetic activeRadioDefact Cosmetic activeRadioDefact Cosmetic", "");
                                 flag = 1;
                             }else{
-                                if (flag == 1) {
-                                    this.className = this.className.replace(" activeRadioDefact", "");
+                                if (flag === 1) {
+                                    this.className = this.className.replace(" activeRadioDefact Cosmetic", "");
                                     flag = 0;
                                 }else{
-                                    this.className += " activeRadioDefact";
+                                    this.className += " activeRadioDefact Cosmetic";
                                     var positionDisable = document.getElementsByName('position');
                                     for (let i = 0; i < positionDisable.length; i++) {
                                         positionDisable[i].disabled = false;
@@ -620,30 +620,28 @@
                 }
 
                 var headerClean = document.getElementById("Clean");
-                var btnsClean = headerClean.getElementsByClassName("btnQcDefact");
+                var btnsClean = headerClean.getElementsByClassName("btnQcDefact Clean");
                 var flag = 0;
                 for (var i = 0; i < btnsClean.length; i++) {
                     btnsClean[i].addEventListener("click", function () {
-                        if (flagDefact == true) {
-                            var current = document.getElementsByClassName("activeRadioDefact");
-//                            if (current.length > 0) {
-//                                current[0].className = current[0].className.replace(" activeRadioDefact", "");
-//                            }
-                            if (this.className.split('btnQcDefact ').some(function(w){return w === "activeRadioDefact activeRadioDefact activeRadioDefact"})){
-                                this.className = this.className.replace(" activeRadioDefact activeRadioDefact activeRadioDefact", "");
+                        if (flagDefact === true) {
+                            var current = document.getElementsByClassName("activeRadioDefact Clean");
+                            if (this.className.split('btnQcDefact Clean ').some(function(w){return w === "activeRadioDefact Clean activeRadioDefact Clean activeRadioDefact Clean";})){
+                                this.className = this.className.replace(" activeRadioDefact Clean activeRadioDefact Clean activeRadioDefact Clean", "");
                                 flag = 1;
                             }else{
-                                if (flag == 1) {
-                                    this.className = this.className.replace(" activeRadioDefact", "");
+                                if (flag === 1) {
+                                    this.className = this.className.replace(" activeRadioDefact Clean", "");
                                     flag = 0;
                                 }else{
-                                    this.className += " activeRadioDefact";
+                                    this.className += " activeRadioDefact Clean";
                                     var positionDisable = document.getElementsByName('position');
                                     for (let i = 0; i < positionDisable.length; i++) {
                                         positionDisable[i].disabled = false;
                                     }
                                     flag = 0;
                                 }
+                                
                             }
                         }
                     });
@@ -675,15 +673,23 @@
                     flagDefact = true;
                     var defactDisable = document.getElementsByName('idDefact');
                     var buttonAGrade = $('button[name=buttonAGrade]');
+                    var buttonBGrade = $('button[name=buttonBGrade]');
+                    var buttonCGrade = $('button[name=buttonCGrade]');
                     for (let i = 0; i < defactDisable.length; i++) {
                         defactDisable[i].disabled = false;
                     }
+                    var positionDisable = document.getElementsByName('position');
+                                    for (let i = 0; i < positionDisable.length; i++) {
+                                        positionDisable[i].disabled = false;
+                                    }
                     buttonAGrade[0].disabled = false;
+                    buttonBGrade[0].disabled = false;
+                    buttonCGrade[0].disabled = false;
                 });
 
                 $("#styleId").change(function () {
                     styleVal = $("#styleId").val();
-                    if (styleVal == 1) {
+                    if (styleVal === 1) {
                         $("#sampleId").attr('readonly', false);
                     } else {
                         $("#sampleId").attr('readonly', true);
@@ -901,9 +907,16 @@
                 color:black;
                 border:1px solid black;
             }
-            
-            .activeRadioDefact,
-            .btnQcDefact.Clean:hover {
+            .activeRadioDefact.Clean{
+                background-color:#4a9163;
+                overflow: visible;
+                white-space: normal;
+                line-height: 1.5em;
+                height: auto; 
+                color: white;
+                box-shadow:none;
+            }
+            .btnQcDefact.Clean:hover{
                 background-color:#4a9163;
                 overflow: visible;
                 white-space: normal;
@@ -913,6 +926,8 @@
                 box-shadow:none;
             }
             
+            
+            
             .btnQcDefact.Strong{
                 color:black;
                 background-color:#f0513c;
@@ -920,8 +935,17 @@
                 border:1px solid black;
             }
             
-            .activeRadioDefact,
             .btnQcDefact.Strong:hover {
+                background-color:#4a9163;
+                overflow: visible;
+                white-space: normal;
+                line-height: 1.5em;
+                height: auto; 
+                color: white;
+                box-shadow:none;
+            }
+            
+            .activeRadioDefact.Strong{
                 background-color:#4a9163;
                 overflow: visible;
                 white-space: normal;
@@ -938,8 +962,17 @@
                 border:1px solid black;
             }
             
-            .activeRadioDefact,
             .btnQcDefact.Cosmetic:hover {
+                background-color:#4a9163;
+                overflow: visible;
+                white-space: normal;
+                line-height: 1.5em;
+                height: auto; 
+                color: white;
+                box-shadow:none;
+            }
+            
+            .activeRadioDefact.Cosmetic{
                 background-color:#4a9163;
                 overflow: visible;
                 white-space: normal;
@@ -956,8 +989,17 @@
                 border:1px solid black;
             }
             
-            .activeRadioDefact,
             .btnQcDefact.Straight:hover {
+                background-color:#4a9163;
+                overflow: visible;
+                white-space: normal;
+                line-height: 1.5em;
+                height: auto; 
+                color: white;
+                box-shadow:none;
+            }
+            
+            .activeRadioDefact.Straight{
                 background-color:#4a9163;
                 overflow: visible;
                 white-space: normal;
