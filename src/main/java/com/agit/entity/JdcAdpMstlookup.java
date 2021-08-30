@@ -139,6 +139,17 @@ public class JdcAdpMstlookup implements Serializable {
 
     @Column(name = "last_updated_by")
     private Long updateBy;
+    
+    @Column(name="colorcode", length = 25)
+    private String colorFlag;
+
+    public String getColorFlag() {
+        return colorFlag;
+    }
+
+    public void setColorFlag(String colorFlag) {
+        this.colorFlag = colorFlag;
+    }
 
     /**
      *
