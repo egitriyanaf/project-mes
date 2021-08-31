@@ -311,8 +311,13 @@
                                 for (let i = 0; i < positionDisable.length; i++) {
                                         $('input[type=radio][name=position]').prop('checked',false);
                                         positionDisable[i].disabled = true;
+                                        
                                 }
                                     flag = 0;
+                                    
+                                for (let i = 0; i < disabledButton.length; i++) {
+                                    disabledButton[i].disabled = true;
+                                }
                             }                     
                         });
 //                        setTimeout(function() {
@@ -360,6 +365,9 @@
                                         positionDisable[i].disabled = true;
                                 }
                                     flag = 0;
+                                for (let i = 0; i < disabledButton.length; i++) {
+                                    disabledButton[i].disabled = true;
+                                }
                             } 
                         });
 //                        setTimeout(function() {
@@ -406,6 +414,9 @@
                                         positionDisable[i].disabled = true;
                                 }
                                     flag = 0;
+                                for (let i = 0; i < disabledButton.length; i++) {
+                                    disabledButton[i].disabled = true;
+                                }
                             } 
                         });
 //                        setTimeout(function() {
@@ -448,6 +459,9 @@
                             flag = 0;
                         for(let i = 0; i<IdDefactDisable.length;i++){
                             $('input[type=checkbox][name=idDefact]').prop('checked',false);
+                        }
+                        for (let i = 0; i < disabledButton.length; i++) {
+                            disabledButton[i].disabled = true;
                         }
                         
                         if(active.length>0){
@@ -1203,7 +1217,7 @@
             {  
                border-radius: 5px;
                font-size: 12px;
-               box-shadow:4px 4px grey;
+               box-shadow:4px 4px black;
             }
             .progress.progress-xs{
                 border-radius: 50px;
@@ -1414,22 +1428,28 @@
 
                         </div>-->
                         <div class="col-sm-3">
-                            <div class='percentage-group'>
-                                <ul>
-                                        
-                                            <li style="list-style-type: none;font-weight:bold;margin-top:20px; margin-bottom: 10px;"><a href="http://10.1.1.88:3000/public/dashboard/b9349041-63f8-4191-899d-bc2442fa195b" target="_blank" style="text-decoration:none;color:black; ">A-Grade</a>
-                                            <span class="label label-danger" id="barAgrade"></span>
-                                            </li>
-                                            <li style="list-style-type: none;font-weight:bold;margin-bottom: 10px;"><a href="http://10.1.1.88:3000/public/dashboard/b9349041-63f8-4191-899d-bc2442fa195b" target="_blank" style="text-decoration:none;color: black;">B-Grade</a>
-                                            <span class="label label-danger" id="barBgrade"></span>
-                                            </li>
-                                            <li style="list-style-type: none;font-weight:bold;margin-bottom: 10px;"><a href="http://10.1.1.88:3000/public/dashboard/b9349041-63f8-4191-899d-bc2442fa195b" target="_blank" style="text-decoration:none;color: black;">C-Grade</a>
-                                            <span class="label label-danger" id="barCgrade"></span>
-                                            </li>
-                                            <li style="list-style-type: none;font-weight:bold;margin-bottom: 10px;"><a href="http://10.1.1.88:3000/public/dashboard/b9349041-63f8-4191-899d-bc2442fa195b" target="_blank" style="text-decoration:none;color: black;">Rework&nbsp; </a>
-                                            <span class="label label-danger" id="barRewok"></span>
-                                            </li>
-                                    </ul>
+                            <div class='percentage-group' style="border-radius:10px;
+                padding-top:1px;
+                padding-bottom:1px;
+                padding-right:0px;
+                padding-left:0px;
+                margin-bottom:2px;
+                margin-right:4px;
+                box-shadow:4px 4px 4px 4px grey;">
+                                <ul >
+                                    <li style="list-style-type: none;font-weight:bold;margin-top:20px; margin-bottom: 10px;"><a href="http://10.1.1.88:3000/public/dashboard/b9349041-63f8-4191-899d-bc2442fa195b" target="_blank" style="text-decoration:none;color:white;font-size: 16px;text-shadow:2px 2px black; ">A-Grade</a>
+                                        <span class="label label-danger" id="barAgrade"></span>
+                                    </li>
+                                    <li style="list-style-type: none;font-weight:bold;margin-bottom: 10px;"><a href="http://10.1.1.88:3000/public/dashboard/b9349041-63f8-4191-899d-bc2442fa195b" target="_blank" style="text-decoration:none;color: white;font-size: 16px;text-shadow:2px 2px black;">B-Grade</a>
+                                        <span class="label label-danger" id="barBgrade"></span>
+                                    </li>
+                                    <li style="list-style-type: none;font-weight:bold;margin-bottom: 10px;"><a href="http://10.1.1.88:3000/public/dashboard/b9349041-63f8-4191-899d-bc2442fa195b" target="_blank" style="text-decoration:none;color: white;font-size: 16px;text-shadow:2px 2px black;">C-Grade</a>
+                                        <span class="label label-danger" id="barCgrade"></span>
+                                    </li>
+                                    <li style="list-style-type: none;font-weight:bold;margin-bottom: 10px;"><a href="http://10.1.1.88:3000/public/dashboard/b9349041-63f8-4191-899d-bc2442fa195b" target="_blank" style="text-decoration:none;color: white;font-size: 16px;text-shadow:2px 2px black;">Rework&nbsp; </a>
+                                        <span class="label label-danger" id="barRewok"></span>
+                                    </li>
+                                </ul>
                             </div>                               
                         </div>
                     </div>
