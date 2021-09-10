@@ -96,6 +96,18 @@ public class JdcAdpTxnqcctrl implements Serializable {
 
     @Column(name = "demand_class")
     private String demandClass;
+    
+    @Column(name = "ref_rework")
+    private String ref_rework;
+
+    public String getRef_rework() {
+        return ref_rework;
+    }
+
+    public void setRef_rework(String ref_rework) {
+        this.ref_rework = ref_rework;
+    }
+    
 
     @ManyToOne
     @JoinColumn(name = "dpt_id", insertable = false, nullable = false, updatable = false)

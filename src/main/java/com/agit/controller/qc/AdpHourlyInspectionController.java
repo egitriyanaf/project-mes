@@ -20,6 +20,7 @@ import com.agit.entity.JdcAdpMstproduksi;
 import com.agit.entity.JdcAdpTxnqcctrl;
 import com.agit.services.AdpParamConfigService;
 import com.project.common.AjaxResponse;
+import java.util.Date;
 import java.util.HashMap;
 import javax.servlet.http.HttpServletRequest;
 import org.apache.commons.io.IOUtils;
@@ -283,7 +284,8 @@ public class AdpHourlyInspectionController extends BaseController {
         data.setBgrade(detail.getBgrade());
         data.setCgrade(detail.getCgrade());
         data.setRewok(detail.getRewok());
-        data.setDptName(detail.getDptName());
+        data.setPembagi(detail.getPembagi());
+//        data.setDptName(detail.getDptName());
         return data;
     }
     
@@ -305,7 +307,7 @@ public class AdpHourlyInspectionController extends BaseController {
         data.setBgrade(detail.getBgrade());
         data.setCgrade(detail.getCgrade());
         data.setRewok(detail.getRewok());
-        data.setDptName(detail.getDptName());
+//        data.setDptName(detail.getDptName());
         return data;
     }
 

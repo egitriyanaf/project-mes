@@ -223,9 +223,9 @@
                 background-size:cover;
                 z-index:-1;
                 background-repeat:no-repeat;">
-            <div class="copyright">2018 &copy; PT Astra Graphia Information Technology</div>
+            <div class="copyright">2021 &copy; Adis | MIS Department</div>
             <div class="copyright version">
-                Version 1.0.${buildNumber} build 20180901.RR25
+                Version 3.0.${buildNumber} build 20210910.ZX25R
             </div>
         </footer>
         <!-- END FOOTER -->
@@ -399,7 +399,7 @@
                         setTimeout(function () {
                             App.unblockUI('.wrapper');
                             $("#loader").hide();
-                        }, 1000); // for demo blockUI
+                        }, 1); // for demo blockUI
                     }
                 });
             }
@@ -551,7 +551,7 @@
                     complete: function () {
                         setTimeout(function () {
                             $("#loader").hide();
-                        }, 1000); // for demo blockUI
+                        }, 1); // for demo blockUI
                     }
                 });
             }
