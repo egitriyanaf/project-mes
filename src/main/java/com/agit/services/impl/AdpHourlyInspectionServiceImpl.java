@@ -330,7 +330,7 @@ public class AdpHourlyInspectionServiceImpl extends AdpSimpleServiceImpl<JdcAdpT
 "sum(b.bgrade) AS gradeb,\n" + 
 "sum(b.cgrade) AS gradec,\n" + 
 "sum(b.rework) AS grader,\n" + 
-"sum(b.total_output) as pembagi\n" + 
+"sum(b.pembagi) AS pembagi\n" + 
 "FROM ( select distinct a.area, a.type, a.ref_rework, a.created_by, a.dates,\n" + 
 "a.line_code, a.demand_class,\n" + 
 "sum(\n" + 
@@ -340,33 +340,81 @@ public class AdpHourlyInspectionServiceImpl extends AdpSimpleServiceImpl<JdcAdpT
 "END) AS agrade,\n" + 
 "sum(\n" + 
 "CASE\n" + 
-"WHEN a.type = 'B-Grade' THEN 1\n" + 
+"WHEN a.type = 'B-Grade' and a.position = 'Pairs' THEN 1\n" + 
+"when a.type = 'B-Grade' and a.position != 'Pairs' then 0.5\n" + 
 "ELSE 0\n" + 
 "END) AS bgrade,\n" + 
 "sum(\n" + 
 "CASE\n" + 
-"WHEN a.type = 'C-Grade' THEN 1\n" + 
+"WHEN a.type = 'C-Grade' and a.position = 'Pairs' THEN 1\n" + 
+"when a.type = 'C-Grade' and a.position != 'Pairs' then 0.5\n" + 
 "ELSE 0\n" + 
 "END) AS cgrade,\n" + 
 "sum(\n" + 
 "CASE\n" + 
-"WHEN a.type = 'Rework' THEN 0.5\n" + 
-"WHEN a.type = 'A-Grade' THEN 0\n" + 
-"WHEN a.type = 'B-Grade' THEN 0\n" + 
-"WHEN a.type = 'C-Grade' THEN 0\n" + 
-"ELSE NULL\n" + 
+"WHEN a.type = 'Rework' and a.position !='Pairs' THEN 0.5\n" + 
+"WHEN a.type = 'Rework' and a.position = 'Pairs' THEN 1\n" + 
+"ELSE 0\n" + 
 "END) AS rework,\n" + 
 "sum(\n" + 
-"case when a.type ='Rework' then 0 else 1 end\n" + 
-") as total_output\n" + 
+"case\n" + 
+"when a.type = 'Rework' then 0\n" + 
+"when a.type != 'Rework' and a.position = 'Pairs' then 1\n" + 
+"when a.type != 'Rework' and a.position != 'Pairs' then 0.5\n" + 
+"end\n" + 
+") as pembagi\n" + 
 "FROM ( SELECT DISTINCT jdcadp_txnqctrl.area, jdcadp_txnqctrl.type,\n" + 
 "jdcadp_txnqctrl.line_code, jdcadp_txnqctrl.demand_class,\n" + 
-"jdcadp_txnqctrl.ref_rework, jdcadp_txnqctrl.created_by,\n" + 
+"jdcadp_txnqctrl.ref_rework, jdcadp_txnqctrl.created_by, jdcadp_txnqctrl.position,\n" + 
 "date(jdcadp_txnqctrl.created_date) AS dates\n" + 
 "FROM jdcadp_txnqctrl\n" + 
 "WHERE date(created_date) = current_date) as a\n" + 
-"GROUP BY a.area, a.type, a.ref_rework, a.created_by, a.dates, a.line_code, a.demand_class) as b \n" + 
+"GROUP BY a.area, a.type, a.ref_rework, a.created_by, a.dates, a.line_code, a.demand_class) as b\n" + 
 "where date(b.dates)=current_date and b.area='"+loginSecUser.getUsrType()+"' and b.created_by="+loginSecUser.getId()+"");
+                
+                
+//        StringBuilder sql = new StringBuilder("SELECT\n" + 
+//"sum(b.agrade) AS gradea,\n" + 
+//"sum(b.bgrade) AS gradeb,\n" + 
+//"sum(b.cgrade) AS gradec,\n" + 
+//"sum(b.rework) AS grader,\n" + 
+//"sum(b.total_output) as pembagi\n" + 
+//"FROM ( select distinct a.area, a.type, a.ref_rework, a.created_by, a.dates,\n" + 
+//"a.line_code, a.demand_class,\n" + 
+//"sum(\n" + 
+//"CASE\n" + 
+//"WHEN a.type = 'A-Grade' THEN 1\n" + 
+//"ELSE 0\n" + 
+//"END) AS agrade,\n" + 
+//"sum(\n" + 
+//"CASE\n" + 
+//"WHEN a.type = 'B-Grade' THEN 1\n" + 
+//"ELSE 0\n" + 
+//"END) AS bgrade,\n" + 
+//"sum(\n" + 
+//"CASE\n" + 
+//"WHEN a.type = 'C-Grade' THEN 1\n" + 
+//"ELSE 0\n" + 
+//"END) AS cgrade,\n" + 
+//"sum(\n" + 
+//"CASE\n" + 
+//"WHEN a.type = 'Rework' THEN 0.5\n" + 
+//"WHEN a.type = 'A-Grade' THEN 0\n" + 
+//"WHEN a.type = 'B-Grade' THEN 0\n" + 
+//"WHEN a.type = 'C-Grade' THEN 0\n" + 
+//"ELSE NULL\n" + 
+//"END) AS rework,\n" + 
+//"sum(\n" + 
+//"case when a.type ='Rework' then 0 else 1 end\n" + 
+//") as total_output\n" + 
+//"FROM ( SELECT DISTINCT jdcadp_txnqctrl.area, jdcadp_txnqctrl.type,\n" + 
+//"jdcadp_txnqctrl.line_code, jdcadp_txnqctrl.demand_class,\n" + 
+//"jdcadp_txnqctrl.ref_rework, jdcadp_txnqctrl.created_by,\n" + 
+//"date(jdcadp_txnqctrl.created_date) AS dates\n" + 
+//"FROM jdcadp_txnqctrl\n" + 
+//"WHERE date(created_date) = current_date) as a\n" + 
+//"GROUP BY a.area, a.type, a.ref_rework, a.created_by, a.dates, a.line_code, a.demand_class) as b \n" + 
+//"where date(b.dates)=current_date and b.area='"+loginSecUser.getUsrType()+"' and b.created_by="+loginSecUser.getId()+"");
                 
                 
 //        StringBuilder sql = new StringBuilder("select\n" + 

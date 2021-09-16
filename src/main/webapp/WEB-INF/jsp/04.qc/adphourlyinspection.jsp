@@ -362,7 +362,7 @@
                             lineCode: lineCode,
                             poNo: poNo,
                             defect: valDefect[i].value,
-                            position: "Pairs",
+                            position: $('input[type=radio][name=position]:checked').val(),
                             category: valDefect[i].title,
                             type: "B-Grade",
                             poItem: poItem,
@@ -426,7 +426,7 @@
                             lineCode: lineCode,
                             poNo: poNo,
                             defect: valDefect[i].value,
-                            position: "Pairs",
+                            position: $('input[type=radio][name=position]:checked').val(),
                             category: valDefect[i].title,
                             type: "C-Grade",
                             poItem: poItem,
@@ -659,14 +659,14 @@
                                 }
                             }
                         }
-                        var disabledButtonBgrade = $('button[name=buttonBgrade]');
-                        for(let i=0;i<disabledButtonBgrade.length;i++){
-                            disabledButtonBgrade[i].disabled=false;
-                        }
-                        var disabledButtonCgrade = $('button[name=buttonCgrade]');
-                        for(let i=0;i<disabledButtonCgrade.length;i++){
-                            disabledButtonCgrade[i].disabled=false;
-                        }
+//                        var disabledButtonBgrade = $('button[name=buttonBgrade]');
+//                        for(let i=0;i<disabledButtonBgrade.length;i++){
+//                            disabledButtonBgrade[i].disabled=false;
+//                        }
+//                        var disabledButtonCgrade = $('button[name=buttonCgrade]');
+//                        for(let i=0;i<disabledButtonCgrade.length;i++){
+//                            disabledButtonCgrade[i].disabled=false;
+//                        }
                     });
                 }
 
@@ -697,14 +697,14 @@
                                 }
                             }
                         }
-                        var disabledButtonBgrade = $('button[name=buttonBgrade]');
-                        for(let i=0;i<disabledButtonBgrade.length;i++){
-                            disabledButtonBgrade[i].disabled=false;
-                        }
-                        var disabledButtonCgrade = $('button[name=buttonCgrade]');
-                        for(let i=0;i<disabledButtonCgrade.length;i++){
-                            disabledButtonCgrade[i].disabled=false;
-                        }
+//                        var disabledButtonBgrade = $('button[name=buttonBgrade]');
+//                        for(let i=0;i<disabledButtonBgrade.length;i++){
+//                            disabledButtonBgrade[i].disabled=false;
+//                        }
+//                        var disabledButtonCgrade = $('button[name=buttonCgrade]');
+//                        for(let i=0;i<disabledButtonCgrade.length;i++){
+//                            disabledButtonCgrade[i].disabled=false;
+//                        }
                     });
                 }
 
@@ -735,14 +735,14 @@
                                 }
                             }
                         }
-                        var disabledButtonBgrade = $('button[name=buttonBgrade]');
-                        for(let i=0;i<disabledButtonBgrade.length;i++){
-                            disabledButtonBgrade[i].disabled=false;
-                        }
-                        var disabledButtonCgrade = $('button[name=buttonCgrade]');
-                        for(let i=0;i<disabledButtonCgrade.length;i++){
-                            disabledButtonCgrade[i].disabled=false;
-                        }
+//                        var disabledButtonBgrade = $('button[name=buttonBgrade]');
+//                        for(let i=0;i<disabledButtonBgrade.length;i++){
+//                            disabledButtonBgrade[i].disabled=false;
+//                        }
+//                        var disabledButtonCgrade = $('button[name=buttonCgrade]');
+//                        for(let i=0;i<disabledButtonCgrade.length;i++){
+//                            disabledButtonCgrade[i].disabled=false;
+//                        }
                     });
                 }
 
@@ -776,14 +776,14 @@
                                 
                             }
                         }
-                        var disabledButtonBgrade = $('button[name=buttonBgrade]');
-                        for(let i=0;i<disabledButtonBgrade.length;i++){
-                            disabledButtonBgrade[i].disabled=false;
-                        }
-                        var disabledButtonCgrade = $('button[name=buttonCgrade]');
-                        for(let i=0;i<disabledButtonCgrade.length;i++){
-                            disabledButtonCgrade[i].disabled=false;
-                        }
+//                        var disabledButtonBgrade = $('button[name=buttonBgrade]');
+//                        for(let i=0;i<disabledButtonBgrade.length;i++){
+//                            disabledButtonBgrade[i].disabled=false;
+//                        }
+//                        var disabledButtonCgrade = $('button[name=buttonCgrade]');
+//                        for(let i=0;i<disabledButtonCgrade.length;i++){
+//                            disabledButtonCgrade[i].disabled=false;
+//                        }
                     });
                 }
 
@@ -807,14 +807,14 @@
                             }
                         }
                         
-                        var disabledButtonBgrade = $('button[name=buttonBgrade]');
-                        for(let i=0;i<disabledButtonBgrade.length;i++){
-                            disabledButtonBgrade[i].disabled=false;
-                        }
-                        var disabledButtonCgrade = $('button[name=buttonCgrade]');
-                        for(let i=0;i<disabledButtonCgrade.length;i++){
-                            disabledButtonCgrade[i].disabled=false;
-                        }
+//                        var disabledButtonBgrade = $('button[name=buttonBgrade]');
+//                        for(let i=0;i<disabledButtonBgrade.length;i++){
+//                            disabledButtonBgrade[i].disabled=false;
+//                        }
+//                        var disabledButtonCgrade = $('button[name=buttonCgrade]');
+//                        for(let i=0;i<disabledButtonCgrade.length;i++){
+//                            disabledButtonCgrade[i].disabled=false;
+//                        }
                     });
                 }
 
@@ -1472,13 +1472,13 @@
                         <div class="col-sm-2">
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <img id="imageAgent" style="width: 100%; height: 100%;box-shadow: 4px 4px gray;border-radius: 10px;margin: 20px 0px 0px 0px;" src="${pageContext.request.contextPath}/assets/login-template/jordan.gif" class="thumbnail rounded-img-circle-with-top-margin previewImage" alt="photo" width="100px" height="100px">                                    
+                                    <img id="imageAgent" style="width: 70%; height: 90%;box-shadow: 4px 4px gray;border-radius: 10px;margin: 20px 0px 0px 0px;" src="${pageContext.request.contextPath}/assets/img/no-profile-image.png" class="thumbnail rounded-img-circle-with-top-margin previewImage" alt="photo" width="100px" height="100px">                                    
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-6 text-center">
                             <div class="row">
-                                <!--<input disabled="true" id="position" style="width: 20px; height: 20px;margin: 10px 5px 10px 10px;" name="position" type="radio" value="Pairs" /><span style="font-weight: bolder;font-size: 18px;">Pairs</span>-->
+                                <input disabled="true" id="position" style="width: 20px; height: 20px;margin: 10px 5px 10px 10px;" name="position" type="radio" value="Pairs" /><span style="font-weight: bolder;font-size: 18px;">Pairs</span>
                                 
                                 <input disabled="true" id="position" style="width: 20px; height: 20px;margin: 10px 5px 10px 10px;" name="position" type="radio" value="Left" /><span style="font-weight: bolder;font-size: 18px;">Left</span>
                                 <input disabled="true" id="position" style="width: 20px; height: 20px;margin: 10px 5px 10px 10px;" name="position" type="radio" value="Right" /><span style="font-weight: bolder;font-size: 18px;">Right</span>
