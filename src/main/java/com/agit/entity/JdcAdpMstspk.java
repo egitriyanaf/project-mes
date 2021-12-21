@@ -91,6 +91,12 @@ public class JdcAdpMstspk implements Serializable {
 	@Temporal(TemporalType.DATE)
 	@JsonSerialize(using=CustomJsonDateSerializer.class)
 	private Date startDate;
+        
+        @Column(name="item_number")
+	private String itemNumber;
+        
+        @Column(name="work_order_number")
+	private String workOrderNumber;
 
     /**
      *
@@ -347,5 +353,23 @@ public class JdcAdpMstspk implements Serializable {
     public void setStartDate(Date startDate) {
 		this.startDate = startDate;
 	}
+
+    public String getItemNumber() {
+        return itemNumber;
+    }
+
+    public void setItemNumber(String itemNumber) {
+        this.itemNumber = itemNumber;
+    }
+
+    public String getWorkOrderNumber() {
+        return workOrderNumber;
+    }
+
+    public void setWorkOrderNumber(String workOrderNumber) {
+        this.workOrderNumber = workOrderNumber;
+    }
+    
+    
 	
 }

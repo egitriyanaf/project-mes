@@ -50,6 +50,8 @@ public class AdpSpkDaoImpl extends AdpBaseDao<JdcAdpMstspk> implements AdpSpkDao
         String category = (String) searchMap.get("category");
         String sample = (String) searchMap.get("sample");
         String sampleReq = (String) searchMap.get("sampleReq");
+        String itemNumber = (String) searchMap.get("itemNumber");
+        String workOrderNumber = (String) searchMap.get("workOrderNumber");
 
         bindparams = new HashMap<>();
         List<AdpViewSpkModel> data = new ArrayList<AdpViewSpkModel>();
@@ -63,6 +65,8 @@ public class AdpSpkDaoImpl extends AdpBaseDao<JdcAdpMstspk> implements AdpSpkDao
                 + "    	a.start_date,  "
                 + "    	a.product_code,  "
                 + "    	a.model,  "
+                + "    	a.item_number,  "
+                + "    	a.work_order_number,  "
                 + "    	ASSMBLYIN.qty AS assmblyIn,  "
                 + "    	ASSMBLYOUT.qty AS assmblyOut,  "
                 + "    	CUTTINGIN.qty AS cuttingIn,  "
@@ -166,6 +170,8 @@ public class AdpSpkDaoImpl extends AdpBaseDao<JdcAdpMstspk> implements AdpSpkDao
                 + "	a.start_date,  "
                 + "	a.product_code,  "
                 + "	a.model,  "
+                + "    	a.item_number,  "
+                + "    	a.work_order_number,  "
                 + "	ASSMBLYIN.qty,  "
                 + "	ASSMBLYOUT.qty,  "
                 + "	CUTTINGIN.qty,  "
@@ -212,15 +218,17 @@ public class AdpSpkDaoImpl extends AdpBaseDao<JdcAdpMstspk> implements AdpSpkDao
             retVal.setStart_date((Date) obj[6]);
             retVal.setProduct_code((String) obj[7]);
             retVal.setModel((String) obj[8]);
-            retVal.setAssmblyIn((Double) obj[9]);
-            retVal.setAssmblyOut((Double) obj[10]);
-            retVal.setCuttingIn((Double) obj[11]);
-            retVal.setCuttingOut((Double) obj[12]);
-            retVal.setSewingIn((Double) obj[13]);
-            retVal.setSewingOut((Double) obj[14]);
-            retVal.setStokfitIn((Double) obj[15]);
-            retVal.setStokfitOut((Double) obj[16]);
-            retVal.setType_sample((String) obj[17]);
+            retVal.setItemNumber((String) obj [9]);
+            retVal.setWorkOrderNumber((String) obj [10]);
+            retVal.setAssmblyIn((Double) obj[11]);
+            retVal.setAssmblyOut((Double) obj[12]);
+            retVal.setCuttingIn((Double) obj[13]);
+            retVal.setCuttingOut((Double) obj[14]);
+            retVal.setSewingIn((Double) obj[15]);
+            retVal.setSewingOut((Double) obj[16]);
+            retVal.setStokfitIn((Double) obj[17]);
+            retVal.setStokfitOut((Double) obj[18]);
+            retVal.setType_sample((String) obj[19]);
             data.add(retVal);
         }
 
@@ -244,6 +252,8 @@ public class AdpSpkDaoImpl extends AdpBaseDao<JdcAdpMstspk> implements AdpSpkDao
         String category = (String) searchMap.get("category");
         String sample = (String) searchMap.get("sample");
         String sampleReq = (String) searchMap.get("sampleReq");
+        String itemNumber = (String) searchMap.get("itemNumber");
+        String workOrderNumber = (String) searchMap.get("workOrderNumber");
 
         bindparams = new HashMap<>();
         List<AdpViewSpkModel> data = new ArrayList<AdpViewSpkModel>();
@@ -257,6 +267,8 @@ public class AdpSpkDaoImpl extends AdpBaseDao<JdcAdpMstspk> implements AdpSpkDao
                 + "    	a.start_date,  "
                 + "    	a.product_code,  "
                 + "    	a.model,  "
+                + "    	a.item_number,  "
+                + "    	a.work_order_number,  "
                 + "    	ASSMBLYIN.qty AS assmblyIn,  "
                 + "    	ASSMBLYOUT.qty AS assmblyOut,  "
                 + "    	CUTTINGIN.qty AS cuttingIn,  "
@@ -359,6 +371,8 @@ public class AdpSpkDaoImpl extends AdpBaseDao<JdcAdpMstspk> implements AdpSpkDao
                 + "	a.start_date,  "
                 + "	a.product_code,  "
                 + "	a.model,  "
+                + "    	a.item_number,  "
+                + "    	a.work_order_number,  "
                 + "	ASSMBLYIN.qty,  "
                 + "	ASSMBLYOUT.qty,  "
                 + "	CUTTINGIN.qty,  "

@@ -36,7 +36,8 @@ public class AdpViewSpkModel {
 	@Temporal(TemporalType.DATE)
 	@JsonSerialize(using=CustomJsonDateSerializer.class)
 	private Date start_date;
-	
+	private String itemNumber;
+	private String workOrderNumber;
 	private Double assmblyIn;
 	private Double assmblyOut;
 	private Double cuttingIn;
@@ -413,5 +414,23 @@ public class AdpViewSpkModel {
     public void setStokfitOut(Double stokfitOut) {
 		this.stokfitOut = stokfitOut;
 	}
+
+    public String getItemNumber() {
+        return itemNumber;
+    }
+
+    public void setItemNumber(String itemNumber) {
+        this.itemNumber = itemNumber;
+    }
+
+    public String getWorkOrderNumber() {
+        return workOrderNumber;
+    }
+
+    public void setWorkOrderNumber(String workOrderNumber) {
+        this.workOrderNumber = workOrderNumber;
+    }
+    
+    
 	
 }

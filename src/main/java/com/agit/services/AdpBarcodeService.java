@@ -52,7 +52,7 @@ public interface AdpBarcodeService {
      * @param type
      * @return
      */
-    public JdcAdpTxnbarcode findValidasi(String qrCode,String productCode,String sampleReq,Float qty,String size,Long dptId,String type);
+//    public JdcAdpTxnbarcode findValidasi(String qrCode,String productCode,String sampleReq,Float qty,String size,Long dptId,String type);
 
     /**
      *
@@ -60,6 +60,8 @@ public interface AdpBarcodeService {
      * @return
      */
     public List<AdpScannerModel> getDashboardAbsen(Map<String, Object> searchMap);
+
+    public JdcAdpTxnbarcode findValidasi(String qrCode, String productCode, String sampleReq, Float qty, String size, Long dptId, String type, String itemNumber, String workOrderNumber);
     
     
 }

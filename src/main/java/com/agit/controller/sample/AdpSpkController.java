@@ -70,6 +70,7 @@ public class AdpSpkController extends BaseController {
     DataTables search(DataTables dataTables, @RequestParam String startDate, @RequestParam String season,
             @RequestParam String category, @RequestParam String sample, @RequestParam String sampleReq,
             @RequestParam String endDate, @RequestParam String etcStart, @RequestParam String etcEnd,
+            @RequestParam String itemNumber, @RequestParam String workOrderNumber,
             HttpSession session, HttpServletRequest request) {
         HashMap<String, Object> searchMap = new HashMap<>();
         searchMap.put("startDate", startDate);
@@ -80,6 +81,8 @@ public class AdpSpkController extends BaseController {
         searchMap.put("category", category);
         searchMap.put("sample", sample);
         searchMap.put("sampleReq", sampleReq);
+        searchMap.put("itemNumber", itemNumber);
+        searchMap.put("workOrderNumber", workOrderNumber);
         DataTables dt = adpSpkService.searchByMapCriteria(dataTables, searchMap);
         return dt;
     }

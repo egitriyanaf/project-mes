@@ -90,6 +90,8 @@ public class AdpBarcodeServiceImpl extends AdpSimpleServiceImpl<JdcAdpTxnbarcode
         data.setQty(model.getQty());
         data.setSize(model.getSize());
         data.setType(model.getType());
+        data.setItemNumber(model.getItemNumber());
+        data.setWorkOrderNumber(model.getWorkOrderNumber());
         saveOrUpdate(data);
         model.setId(data.getId());
 
@@ -108,7 +110,7 @@ public class AdpBarcodeServiceImpl extends AdpSimpleServiceImpl<JdcAdpTxnbarcode
      */
     @Override
     public JdcAdpTxnbarcode findValidasi(String qrCode, String productCode, String sampleReq, Float qty, String size,
-            Long dptId, String type) {
+            Long dptId, String type,String itemNumber, String workOrderNumber) {
 
         Criteria criteria = sessionFactory.getCurrentSession().createCriteria(JdcAdpTxnbarcode.class);
         if (StringUtils.isNotBlank(qrCode)) {
@@ -131,6 +133,12 @@ public class AdpBarcodeServiceImpl extends AdpSimpleServiceImpl<JdcAdpTxnbarcode
         }
         if (StringUtils.isNotBlank(type)) {
             criteria.add(Restrictions.eq("type", type));
+        }
+        if (StringUtils.isNotBlank(itemNumber)) {
+            criteria.add(Restrictions.eq("itemNumber", itemNumber));
+        }
+        if (StringUtils.isNotBlank(workOrderNumber)) {
+            criteria.add(Restrictions.eq("workOrderNumber", workOrderNumber));
         }
         return (JdcAdpTxnbarcode) criteria.uniqueResult();
     }

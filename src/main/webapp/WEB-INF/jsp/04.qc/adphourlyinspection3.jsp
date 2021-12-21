@@ -894,14 +894,14 @@
                     source: function (request, response) {
                         var payload = {
                             search: {
-                                "poNo": $('#listpoNo').val(),
-                                "demand": $('#demandId').val(),
-                                "poItem": $('#listpoItem').val(),
+//                                "poNo": $('#listpoNo').val(),
+//                                "demand": $('#demandId').val(),
+//                                "poItem": $('#listpoItem').val(),
                                 term: request.term
                             }
                         };
                         $.ajax({
-                            url: "${pageContext.request.contextPath}/qc/hourlyinspection/get-ncvs-new",//get-ncvs",
+                            url: "${pageContext.request.contextPath}/qc/hourlyinspection/get-ncvs",//get-ncvs",
                             contentType: "application/json",
                             type: "post",
                             dataType: "json",
@@ -914,34 +914,34 @@
                             response(kanwil);
                         });
                     },
-                    minLength: 0,
+                    minLength: 1,
                     focus: function (event, ui) {
                         $("#listNcvs").val(ui.item.label);
                         return false;
                     },
                     select: function (event, ui) {
                         $("#listNcvs").val(ui.item.label);
-//                         $("#demandId").attr('disabled', false);
-                        (function () {
-                            var data = {
-                                search: {
-                                 "poNo": $('#listpoNo').val(),
-                                 "ncvs": $('#listNcvs').val(),
-                                 "demand": $('#demandId').val(),
-                                 "poItem": $('#listpoItem').val()
-                                }
-                            };
-                            var stringElement = '';
-                            _fw_post('${pageContext.request.contextPath}/qc/hourlyinspection/product', data, function (res) {
-                                if (res.length !== 0) {
-                                    res.forEach(function (data) {
-                                        stringElement += '<label class="btnQcProduct">' + data.joPpic + '<input id="idProduct" name="idProduct" type="radio" value="' + data.poNo + '" poItem="' + data.poItem + '" productCode="' + data.joPpic + '" hidden/></label>';
-                                    });
-                                }
-
-                                $product.html(stringElement);
-                            });
-                        })();
+                         $("#demandId").attr('disabled', false);
+//                        (function () {
+//                            var data = {
+//                                search: {
+//                                 "poNo": $('#listpoNo').val(),
+//                                 "ncvs": $('#listNcvs').val(),
+//                                 "demand": $('#demandId').val(),
+//                                 "poItem": $('#listpoItem').val()
+//                                }
+//                            };
+//                            var stringElement = '';
+//                            _fw_post('${pageContext.request.contextPath}/qc/hourlyinspection/product', data, function (res) {
+//                                if (res.length !== 0) {
+//                                    res.forEach(function (data) {
+//                                        stringElement += '<label class="btnQcProduct">' + data.joPpic + '<input id="idProduct" name="idProduct" type="radio" value="' + data.poNo + '" poItem="' + data.poItem + '" productCode="' + data.joPpic + '" hidden/></label>';
+//                                    });
+//                                }
+//
+//                                $product.html(stringElement);
+//                            });
+//                        })();
                         return false;
                     }
                 });
@@ -951,8 +951,8 @@
                     source: function (request, response) {
                         var payload = {
                             search: {
-//                                 "ncvs": $('#listNcvs').val(),
-//                                 "demand": $('#demandId').val(),
+                                 "ncvs": $('#listNcvs').val(),
+                                 "demand": $('#demandId').val(),
                                   term: request.term
                             }
                         };
@@ -990,13 +990,13 @@
                         var payload = {
                             search: {
                                  "poNo": $('#listpoNo').val(),
-                                 //"ncvs": $('#listNcvs').val(),
-                                 //"demand": $('#demandId').val(),
+                                 "ncvs": $('#listNcvs').val(),
+                                 "demand": $('#demandId').val(),
                                  term: request.term
                             }
                         };
                         $.ajax({
-                            url: "${pageContext.request.contextPath}/qc/hourlyinspection/po_item",//po_item_new",
+                            url: "${pageContext.request.contextPath}/qc/hourlyinspection/po_item_new",//po_item_new",
                             contentType: "application/json",
                             type: "post",
                             dataType: "json",
@@ -1009,7 +1009,7 @@
                             response(kanwil);
                         });
                     },
-                     minLength: 0,
+                     minLength: 1,
                     focus: function (event, ui) {
                         $("#listpoItem").val(ui.item.label);
                         return false;
@@ -1017,7 +1017,27 @@
                     select: function (event, ui) {
                         $("#listpoItem").val(ui.item.label);
                         
-                        $("#demandId").attr("disabled", false);
+//                        $("#demandId").attr("disabled", false);
+                        (function () {
+                            var data = {
+                                search: {
+                                 "poNo": $('#listpoNo').val(),
+                                 "ncvs": $('#listNcvs').val(),
+                                 "demand": $('#demandId').val(),
+                                 "poItem": $('#listpoItem').val()
+                                }
+                            };
+                            var stringElement = '';
+                            _fw_post('${pageContext.request.contextPath}/qc/hourlyinspection/product', data, function (res) {
+                                if (res.length !== 0) {
+                                    res.forEach(function (data) {
+                                        stringElement += '<label class="btnQcProduct">' + data.joPpic + '<input id="idProduct" name="idProduct" type="radio" value="' + data.poNo + '" poItem="' + data.poItem + '" productCode="' + data.joPpic + '" hidden/></label>';
+                                    });
+                                }
+
+                                $product.html(stringElement);
+                            });
+                        })();
                         return false;
                     }
                 });
@@ -1029,14 +1049,14 @@
                     source: function (request, response) {
                         var payload = {
                             search: {
-                                "poNo": $('#listpoNo').val(),
-                                "poItem": $('#listpoItem').val(),
-//                                ncvs: $("#listNcvs").val(),
+//                                "poNo": $('#listpoNo').val(),
+//                                "poItem": $('#listpoItem').val(),
+                                ncvs: $("#listNcvs").val(),
                                 term: request.term
                             }
                         };
                         $.ajax({
-                            url: "${pageContext.request.contextPath}/qc/hourlyinspection/get-demandClass",//get-demandClassNew",
+                            url: "${pageContext.request.contextPath}/qc/hourlyinspection/get-demandClassNew",//get-demandClassNew",
                             contentType: "application/json",
                             type: "post",
                             dataType: "json",
@@ -1049,14 +1069,14 @@
                             response(kanwil);
                         });
                     },
-                    minLength: 0,
+                    minLength: 1,
                     focus: function (event, ui) {
                         $("#demandId").val(ui.item.label);
                         return false;
                     },
                     select: function (event, ui) {
                         $("#demandId").val(ui.item.label);
-                        $("#listNcvs").attr('disabled', false);
+                        $("#listpoNo").attr('disabled', false);
                         return false;
                     }
                 });
@@ -1401,11 +1421,24 @@
                         <div class="col-md-12">
                             <div class="row">
                                 <div class="col-sm-2">
-                                <input id="dptId" type="hidden" value="${dptId}" />
-                                <input id="userType" type="hidden" value="${dptName}" />
+                                    <input id="dptId" type="hidden" value="${dptId}" />
+                                    <input id="userType" type="hidden" value="${dptName}" />
+                                    <div class="form-group">
+                                        <!--<label class="control-label" style="font-weight:bolder;font-size: 14px;">NCVS </label>-->
+                                        <input style="border-radius:10px;box-shadow: 2px 2px" type="text" placeholder="NCVS" id="listNcvs" name="listNcvs" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <div class="form-group">
+                                        <!--<label class="control-label" style="font-weight:bolder;font-size: 14px;">Bucket </label>-->
+                                        <input style="border-radius:10px;box-shadow: 2px 2px" disabled="true" type="text" placeholder="Bucket " id="demandId" name="demandClass" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                
                                 <div class="form-group" >
                                     <!--<label class="control-label" style="font-weight:bolder;font-size: 14px;">Po No </label>-->
-                                    <input style="border-radius:10px;box-shadow: 2px 2px" type="text" placeholder="Po No" id="listpoNo"  class="form-control">
+                                    <input style="border-radius:10px;box-shadow: 2px 2px" disabled="true" type="text" placeholder="Po No" id="listpoNo"  class="form-control">
                                 </div>
 
                                 </div>
@@ -1415,18 +1448,8 @@
                                         <input style="border-radius:10px;box-shadow: 2px 2px" disabled="true" type="text" placeholder="Po Item" id="listpoItem" class="form-control">
                                     </div>    
                                 </div>
-                                <div class="col-sm-2">
-                                    <div class="form-group">
-                                        <!--<label class="control-label" style="font-weight:bolder;font-size: 14px;">Bucket </label>-->
-                                        <input style="border-radius:10px;box-shadow: 2px 2px" disabled="true" type="text" placeholder="Bucket " id="demandId" name="demandClass" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="col-sm-2">
-                                    <div class="form-group">
-                                        <!--<label class="control-label" style="font-weight:bolder;font-size: 14px;">NCVS </label>-->
-                                        <input style="border-radius:10px;box-shadow: 2px 2px" disabled="true" type="text" placeholder="NCVS" id="listNcvs" name="listNcvs" class="form-control">
-                                    </div>
-                                </div>
+                                 
+                               
                                 <div class="col-sm-2 form-group">
                                     <div class="form-group">
                                         <i id="product"></i>

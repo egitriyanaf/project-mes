@@ -19,6 +19,8 @@
                         var season = $("#searchSeason").val();
                         var sample = $("#searchSample").val();
                         var sampleReq = $("#searchSampleReq").val();
+                        var itemNumber = $("#searchItemNumber").val();
+                        var workOrderNumber = $("#searchWorkOrderNumber").val();
 
                         aoData.push({"name": "etcStart", "value": etcStart});
                         aoData.push({"name": "etcEnd", "value": etcEnd});
@@ -28,6 +30,8 @@
                         aoData.push({"name": "season", "value": season});
                         aoData.push({"name": "sample", "value": sample});
                         aoData.push({"name": "sampleReq", "value": sampleReq});
+                        aoData.push({"name": "itemNumber", "value": itemNumber});
+                        aoData.push({"name": "workOrderNumber", "value": workOrderNumber});
 
                         jQuery.ajax({
                             "dataType": 'json',
@@ -41,6 +45,8 @@
                         {"mDataProp": "season"},
                         {"mDataProp": "category"},
                         {"mDataProp": "type_sample"},
+                        {"mDataProp": "itemNumber"},
+                        {"mDataProp": "workOrderNumber"},
                         {"mDataProp": "model"},
                         {"mDataProp": "size"},
                         {"mDataProp": "sample_req"},
@@ -74,7 +80,7 @@
                                 }
                                 return value;
                             },
-                            "aTargets": [18]
+                            "aTargets": [20]
                         }
                     ]
                 });
@@ -88,6 +94,8 @@
                     $("#searchSeason").val("");
                     $("#searchSample").val("");
                     $("#searchSampleReq").val("");
+                    $("#searchItemNumber").val("");
+                    $("#searchWorkOrderNumber").val("");
                     oTable.fnDraw();
                 });
 
@@ -96,6 +104,21 @@
                 });
             });
         </script>
+        <style>
+            .widget-header{
+                border-radius:10px 10px 0px 0px;
+                background-image: url('${pageContext.request.contextPath}/assets/login-template/images/bg.jpg');
+                background-origin: border-box;
+                background-attachment:fixed;
+                background-size:cover;
+                z-index:-1;
+                background-repeat:no-repeat;
+            }
+            
+            .widget{
+                border-radius:10px;
+            }
+        </style>
     </head>
 
     <body>
@@ -140,6 +163,16 @@
                                     <input type="text" id="searchSampleReq" maxlength="50" class="form-control" placeholder="Sample Request">
                                 </div>	
                             </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <input type="text" id="searchItemNumber" maxlength="50" class="form-control" placeholder="Item Number">
+                                </div>	
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <input type="text" id="searchWorkOrderNumber" maxlength="50" class="form-control" placeholder="Work Order Number">
+                                </div>	
+                            </div>
                             <div class="col-sm-10" style="padding: 0">
                                 <div class="col-sm-4">
                                     <div class="input-group">
@@ -180,19 +213,21 @@
                             </div>
                             <div class="col-sm-9">
                                 <div class="form-group">
-                                    <a id="btn-search" class="btn btn-primary" type="button"><i class="fa fa-search"></i> Search</a>
-                                    <a id="btn-reset" class="btn btn-default" type="button"><i class="fa fa-refresh"></i> Reset</a>
+                                    <a id="btn-search" class="btn btn-primary" type="button" style="border-radius:10px;"><i class="fa fa-search"></i> Search</a>
+                                    <a id="btn-reset" class="btn btn-default" type="button" style="border-radius:10px;"><i class="fa fa-refresh"></i> Reset</a>
                                 </div>
                             </div>
                         </div>
 
                         <div class="table-responsive border-white">
-                            <table id="dataTable" class="table table-striped table-hover table-bordered datatable" style="width: 100%">
+                            <table id="dataTable" class="table table-striped table-hover table-bordered datatable" style="width: 100%;">
                                 <thead>
                                     <tr>
                                         <th rowspan="2">Season</th>
                                         <th rowspan="2">Category</th>
                                         <th rowspan="2">Type Of Sample</th>
+                                        <th rowspan="2">Item Number</th>
+                                        <th rowspan="2">Work Order Number</th>
                                         <th rowspan="2">Model Name</th>
                                         <th rowspan="2">Size</th>
                                         <th rowspan="2">Sample Request</th>

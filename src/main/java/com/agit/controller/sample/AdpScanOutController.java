@@ -55,7 +55,7 @@ public class AdpScanOutController extends BaseController {
     @RequestMapping(value = "/save", method = RequestMethod.POST, headers = {"content-type=application/json"})
     public @ResponseBody
     AjaxResponse save(@RequestBody JdcAdpTxnbarcode model, HttpSession session) throws Exception {
-    	JdcAdpTxnbarcode data = adpBarcodeService.findValidasi(model.getQrCode(), model.getProductCode(), model.getSampleReq(), model.getQty(), model.getSize(), getDptIdFromSession(session),model.getType());
+    	JdcAdpTxnbarcode data = adpBarcodeService.findValidasi(model.getQrCode(), model.getProductCode(), model.getSampleReq(), model.getQty(), model.getSize(), getDptIdFromSession(session),model.getType(),model.getItemNumber(),model.getWorkOrderNumber());
         if (data != null) {
             return new AjaxResponse(false, "Data Already axist !");
         }

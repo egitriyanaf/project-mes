@@ -88,7 +88,40 @@ public class JdcAdpTxnbarcode implements Serializable {
 	
 	@Column(name="type")
 	private String type;
-
+        
+	@Column(name="organization_code")
+	private String organizationCode;
+        
+	@Column(name="work_order_number")
+	private String workOrderNumber;
+        
+	@Column(name="wo_status_code")
+	private String woStatusCode;
+	
+        @Column(name="item_number")
+	private String itemNumber;
+        
+        @Column(name="transaction_uom")
+	private String transactionUom;
+        
+        @Column(name="work_center_name")
+	private String workCenterName;
+        
+        @Column(name="operation_sequence_number")
+	private String operationSequenceNumber;
+        
+        @Column(name="operation_name")
+	private String operationName;
+        
+        @Column(name="subinventory_code")
+	private String subinventoryCode;
+        
+        @Column(name="lot_number")
+	private String lotNumber;
+        
+        @Column(name="opr_trx_reference")
+	private String oprTrxReference;
+        
     /**
      *
      * @return
@@ -328,6 +361,96 @@ public class JdcAdpTxnbarcode implements Serializable {
     public void setType(String type) {
 		this.type = type;
 	}
+
+    public String getOrganizationCode() {
+        return organizationCode;
+    }
+
+    public void setOrganizationCode(String organizationCode) {
+        this.organizationCode = organizationCode;
+    }
+
+    public String getWorkOrderNumber() {
+        return workOrderNumber;
+    }
+
+    public void setWorkOrderNumber(String workOrderNumber) {
+        this.workOrderNumber = workOrderNumber;
+    }
+
+    public String getWoStatusCode() {
+        return woStatusCode;
+    }
+
+    public void setWoStatusCode(String woStatusCode) {
+        this.woStatusCode = woStatusCode;
+    }
+
+    public String getItemNumber() {
+        return itemNumber;
+    }
+
+    public void setItemNumber(String itemNumber) {
+        this.itemNumber = itemNumber;
+    }
+
+    public String getTransactionUom() {
+        return transactionUom;
+    }
+
+    public void setTransactionUom(String transactionUom) {
+        this.transactionUom = transactionUom;
+    }
+
+    public String getWorkCenterName() {
+        return workCenterName;
+    }
+
+    public void setWorkCenterName(String workCenterName) {
+        this.workCenterName = workCenterName;
+    }
+
+    public String getOperationSequenceNumber() {
+        return operationSequenceNumber;
+    }
+
+    public void setOperationSequenceNumber(String operationSequenceNumber) {
+        this.operationSequenceNumber = operationSequenceNumber;
+    }
+
+    public String getOperationName() {
+        return operationName;
+    }
+
+    public void setOperationName(String operationName) {
+        this.operationName = operationName;
+    }
+
+    public String getSubinventoryCode() {
+        return subinventoryCode;
+    }
+
+    public void setSubinventoryCode(String subinventoryCode) {
+        this.subinventoryCode = subinventoryCode;
+    }
+
+    public String getLotNumber() {
+        return lotNumber;
+    }
+
+    public void setLotNumber(String lotNumber) {
+        this.lotNumber = lotNumber;
+    }
+
+    public String getOprTrxReference() {
+        return oprTrxReference;
+    }
+
+    public void setOprTrxReference(String oprTrxReference) {
+        this.oprTrxReference = oprTrxReference;
+    }
+    
+    
 
 
 }
